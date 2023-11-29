@@ -1,0 +1,19 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Introduction}{\reset@font\mtcSfont 55}{section.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Transformer models}{\reset@font\mtcSfont 55}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Adapters for Transformer based models}{\reset@font\mtcSfont 57}{section.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.1}Related work}{\reset@font\mtcSSfont 58}{subsection.4.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.1.A}Transformer model for children ASR}{\reset@font\mtcSSSfont 58}{subsubsection.4.3.1.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.1.B}Adapters}{\reset@font\mtcSSSfont 58}{subsubsection.4.3.1.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.1.C}Variational Auto-Encoders}{\reset@font\mtcSSSfont 59}{subsubsection.4.3.1.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.2}Variational adapters}{\reset@font\mtcSSfont 60}{subsection.4.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.3}Experiments}{\reset@font\mtcSSfont 61}{subsection.4.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.3.A}Corpus}{\reset@font\mtcSSSfont 61}{subsubsection.4.3.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.3.B}Implementation details}{\reset@font\mtcSSSfont 62}{subsubsection.4.3.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.3.C}Experiments description}{\reset@font\mtcSSSfont 62}{subsubsection.4.3.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.4}Results}{\reset@font\mtcSSfont 63}{subsection.4.3.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.4.A}Transfer learning experiments}{\reset@font\mtcSSSfont 63}{subsubsection.4.3.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.5}Adapters and Vadapters results}{\reset@font\mtcSSfont 63}{subsection.4.3.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.5.A}Adapters for children ASR}{\reset@font\mtcSSSfont 63}{subsubsection.4.3.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {4.3.5.B}Variational-adapters}{\reset@font\mtcSSSfont 64}{subsubsection.4.3.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.6}Discusion}{\reset@font\mtcSSfont 65}{subsection.4.3.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Summary}{\reset@font\mtcSfont 66}{section.4.4}}
