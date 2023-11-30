@@ -1,6 +1,8 @@
 \fancychapter{Introduction}
 \cleardoublepage
 \label{chapter:1}
+
+\section{Context}
 % What is language and speech
 The faculty of expressing or describing thoughts, feelings and needs by using language is a fundamental ability in our daily lives. As per by the Oxford dictionary,  \textit{language is defined as the system of communication in speech and writing that is used by people of a particular country or area}. Consequently, language can be conceptualised as a intricate and rule-governed system that empowers individuals to convey abstract concepts, share experiences, and take part in nuanced forms of communication. Effective communication through language begins with the conceptualization of the message to be transmitted (\textit{conceptualisation}), followed by the selection of appropriate lexical items and subsequent grammatical encoding, culminating by their meaningful organisation (\textit{formulation}). Subsequently, the linguistic representation is transformed into sound through the transmission of this representation from the brain to the muscles of the complex speech system including lips, larynx, glottis, lungs, jaw and tongue (\textit{articulation}) \cite{levelt1993speaking}. Unlike language, which encompasses both spoken and written forms, speech specifically refers to the spoken manifestation of language.
 
@@ -21,7 +23,6 @@ However, a prominent challenge arises concerning the accessibility and availabil
 
 Another obstacle pertains to the continuity and consistency of therapy. Children may experience interruptions in their therapeutic journey due to factors such as financial constraints, scheduling conflicts, or alterations in healthcare coverage. These disruptions have the potential to impede progress and undermine the effectiveness of the therapy. Lastly, it is imperative to acknowledge that, despite professional training, inter-expert variability in perceptual assessments may persist, resulting in disparate diagnostic conclusions. To address these challenges, adopting a hybrid approach that combines in-person therapy with technology holds potential benefits \cite{hilty2015new,barnett2011utilizing}. Teletherapy, for instance, has emerged as a promising avenue to bridge geographical gaps and deliver therapy services remotely \cite{hughes2019increasing}.
 
-
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{imgs/exampleSLT.png}
@@ -31,7 +32,7 @@ Another obstacle pertains to the continuity and consistency of therapy. Children
 \end{figure}
 
 % SLT could be the beginning of the answer and is already used in real life
-In this context, Speech and Language Technologies (SLT) have arisen as highly pertinent within the domain of speech therapy. These technologies encompass a spectrum of computational tools designed to analyse, understand and provide objective and precise automated assessments. Another benefit lies in their potential integration into gamification frameworks, thereby augmenting children's involvement during therapy. Moreover, the ability to record speech utter by the patient during a session using SLT enables post-session thorough analysis and long-term monitoring by the therapist. Due to the aforementioned reasons, the development of such tools has gained considerable attention, empowering patients to engage in exercises beyond therapy sessions, notably in a home setting. Several SLT examples developed within the scope of this thesis are illustrated in Figure \ref{fig:exSLT}.
+In this context, Speech and Language Technologies (SLT) have emerged as highly pertinent within the domain of speech therapy \cite{mendoza2022added}. These technologies encompass a spectrum of computational tools designed to analyse, understand and provide objective and precise automated assessments. Another benefit lies in their potential integration into gamification frameworks, thereby augmenting children's involvement during therapy \cite{brewer2013using}. Moreover, the ability to record speech utter by the patient during a session using SLT enables post-session thorough analysis and long-term monitoring by the therapist. Due to the aforementioned reasons, the development of such tools has gained considerable attention, empowering patients to engage in exercises beyond therapy sessions, notably in a home setting. Several SLT examples developed within the scope of this thesis are illustrated in Figure \ref{fig:exSLT}.
 
 \section{Problem statement}
 % Technologies are more and more present
@@ -59,6 +60,7 @@ In this thesis, we will undertake a comprehensive investigation into the intrica
 %\end{itemize}
 
 % Research question
+%TODO Redefine research questions
 Our work specificialy aims to answer the following research questions:
 \begin{enumerate}
 \item Which knowledge transfer approach is best for efficiently modelling and improving automatic recognition of children's speech? Can these approaches be used to efficiently exploit low-resource children's speech data from multiple languages?
@@ -68,10 +70,44 @@ Our work specificialy aims to answer the following research questions:
 \end{enumerate}
 
 \section{Contributions}
-% 
+% State of the art exploration
+%TODO Should it be here?
+This thesis began with a thorough exploration of the current state-of-the-art of children's ASR. The primary objective was to identify the various avenues by which improvements could be envisaged throughout this thesis. The state-of-the-art review constituted a thorough examination of existing literature, research papers, and technological advancements related to children's speech processing in general. The aim was to understand the fundamental determinants that contribute to the decline in ASR performance for children's speech. By meticulously assessing current research on children speech, we identified challenges and potential areas for possible impact.
 
+%HMM-DNN contribution
+Subsequent to the exhaustive literature review, our research transitioned into the implementation of Hidden Markov Model-Deep Neural Network (HMM-DNN) models for children ASR.  We explored different strategies to reduce the gap observed between childrren and adult in the context of both English and European Portuguese speech. We identified the effectiveness of knowledge transfer methods, specifically transfer learning and multi-task learning. Transfer learning adapt speech recognition adult models, fine-tuning them for children's speech. In the other hand, multi-task learning exposed models to both adult and children's speech datasets simultanously during training. In an innovative synthesis, we combined transfer learning and multi-task learning into a unified approach, the multi-task transfer learning framework. We applied this approach to multiple low-resource children's datasets from diverse language sources:
+\begin{itemize}
+    \item \textbf{Rolland, Thomas}, Alberto Abad, Catia Cucchiarini, and Helmer Strik. "Multilingual Transfer Learning for Children Automatic Speech Recognition." \textit{ Language Resources and Evaluation Conference} (2022).
+\end{itemize}
+
+% End-to-End contribution
+Thereafter, our research turned to the end-to-end paradigm, motivated by the encouraging improvements observed in the end-to-end children's ASR performance. By adopting a detailed transfer learning approach, we aimed to gain a comprehensive understanding of the specific components of the end-to-end architecture that proved most relevant and played a central role in these notable score enhancements. The identification of the most relevant components allowed the development of specific algorithms aimed at further improving the model. Particularly, we explored the integration of an additional set of parameters directly into the original ASR model. This integration facilitated a parameter-efficient approach to fine-tuning the model:
+
+\begin{itemize}
+    \item \textbf{Rolland, Thomas} and Alberto Abad. "Exploring adapters with conformers for children’s automatic speech recognition." \textit{ International Conference on Acoustics, Speech and Signal Processing} (2024) - IN REVIEW.
+\end{itemize}
+
+% TTS contribution
+In response to the scarcity of large children's speech datasets, we delved into the exploration of leveraging synthetic speech to augment the existing dataset. However, our investigation revealed that a mismatch between real and synthetic data hindered the results. To address this challenge, we introduced additional processing steps to efficiently incorporate synthetic data. We proposed a double-way approach, wherein the synthetic data underwent an additional set of parameters. This innovative methodology contributed to an enhanced ASR system tailored for children:
+
+\begin{itemize}
+    \item \textbf{Rolland, Thomas} and Alberto Abad. "Improved children’s automatic speech recognition combining adapters and synthetic data augmentation." \textit{International Conference on Acoustics, Speech and Signal Processing} (2024) - IN REVIEW.
+\end{itemize}
+
+% Pathology dectection contributation
+In tandem with the primary focus of enhancing children's ASR, this thesis extends its scope to the detection of pathologies from speech. This secondary investigation retains relevance within the broader context of the thesis, particularly as we aim to address the specific needs of children with pathological speech. We explored the use of embedding extracted from pre-trained model for the detection of differents pathologies such as Alzheimer, Parkinson's disease, obstructive sleep apnea and Covid-19:
+
+\begin{itemize}
+    \item Pompili, Anna, \textbf{Thomas Rolland}, and Alberto Abad. "The INESC-ID multi-modal system for the ADReSS 2020 challenge." \textit{Interspeech} (2020).
+    \item Botelho, Catarina, Francisco Teixeira, \textbf{Thomas Rolland}, Alberto Abad, and Isabel Trancoso. "Pathological speech detection using x-vector embeddings." \textit{arXiv preprint} arXiv:2003.00864 (2020).
+    \item Solera-Ureña, Rubén, Catarina Botelho, Francisco Teixeira, \textbf{Thomas Rolland}, Alberto Abad, and Isabel Trancoso. "Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19." \textit{Interspeech} (2021).
+\end{itemize}
 
 
 \section{Structure for the thesis}
+The structure of this thesis comprises five chapters. In Chapter \ref{chap:Chapter2}, a comprehensive review of related work is conducted to establish the context and understanding of the challenges associated with automatic children's speech recognition. Furthermore, we provides an overview of the history of automatic speech recognition systems, along with an examination of the latest approaches specifically tailored to address the unique challenges posed by children's ASR. Finally, a compilation of children's speech corpora, available online and referenced in prior literature, is presented.
 
-In Chapter \ref{chap:Chapter2}, we survey related work relevant to this proposal. First, we explain how children's speech differs from adults' speech in terms of frequency, language, and available data. We then present a brief summary of automatic speech recognition systems and the most recent approaches to solving children's automatic speech recognition challenges. In Chapter \ref{chapter:Hybrid}, we present our work done on the hybrid speech recognition framework, while in Chapter \ref{chap:e2e} we present the work based on end-to-end models. Finally, in Chapter \ref{chap:final} we discuss the current and future work and the associated timeline.
+Following this, Chapter \ref{chap:Chapter3} we present our work done on the hybrid speech recognition framework. 
+%TODO FINISH THIS WHEN ALL THESIS IS WRITTEN
+
+%In Chapter \ref{chap:Chapter2}, we survey related work relevant to this proposal. First, we explain how children's speech differs from adults' speech in terms of frequency, language, and available data. We then present a brief summary of automatic speech recognition systems and the most recent approaches to solving children's automatic speech recognition challenges. In Chapter \ref{chapter:Hybrid}, we present our work done on the hybrid speech recognition framework, while in Chapter \ref{chap:e2e} we present the work based on end-to-end models. Finally, in Chapter \ref{chap:final} we discuss the current and future work and the associated timeline.
