@@ -7,51 +7,54 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 13648 items from 5000.
+Reallocated field_info (elt_size=4) to 13970 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in king2017robust
+Warning--empty journal in clark1977psychology
 
 Done.
-You've used 188 entries,
+You've used 195 entries,
             4087 wiz_defined-function locations,
-            1782 strings with 47466 characters,
-and the built_in function-call counts, 144773 in all, are:
-= -- 11023
-> -- 4182
-< -- 1041
-+ -- 2239
-- -- 802
-* -- 6812
-:= -- 20777
-add.period$ -- 414
-call.type$ -- 188
-change.case$ -- 188
-chr.to.int$ -- 2508
-cite$ -- 188
-duplicate$ -- 10525
-empty$ -- 12269
-format.name$ -- 969
-if$ -- 34206
+            1813 strings with 48728 characters,
+and the built_in function-call counts, 148865 in all, are:
+= -- 11331
+> -- 4312
+< -- 1061
++ -- 2305
+- -- 829
+* -- 6998
+:= -- 21408
+add.period$ -- 428
+call.type$ -- 195
+change.case$ -- 194
+chr.to.int$ -- 2556
+cite$ -- 197
+duplicate$ -- 10833
+empty$ -- 12616
+format.name$ -- 1002
+if$ -- 35151
 int.to.chr$ -- 0
-int.to.str$ -- 188
-missing$ -- 1969
-newline$ -- 615
-num.names$ -- 188
-pop$ -- 5000
+int.to.str$ -- 195
+missing$ -- 2031
+newline$ -- 636
+num.names$ -- 195
+pop$ -- 5166
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 11175
+skip$ -- 11489
 stack$ -- 0
-substring$ -- 6140
-swap$ -- 8238
-text.length$ -- 205
+substring$ -- 6258
+swap$ -- 8457
+text.length$ -- 209
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 188
-warning$ -- 0
-while$ -- 570
-width$ -- 191
-write$ -- 1767
+type$ -- 195
+warning$ -- 2
+while$ -- 585
+width$ -- 198
+write$ -- 1825
+(There were 2 warnings)

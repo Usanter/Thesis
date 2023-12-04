@@ -100,10 +100,35 @@ M.~C. Hughes, J.~M. Gorman, Y.~Ren, S.~Khalid, and C.~Clayton, ``Increasing
   telepsychiatry.'' \emph{Journal of Rural Mental Health}, vol.~43, no.~1,
   p.~30, 2019.
 
+\bibitem{mendoza2022added}
+V.~Mendoza~Ramos, ``The added value of speech technology in clinical care of
+  patients with dysarthria,'' Ph.D. dissertation, University of Antwerp, 2022.
+
+\bibitem{brewer2013using}
+R.~Brewer, L.~Anthony, Q.~Brown, G.~Irwin, J.~Nias, and B.~Tate, ``Using
+  gamification to motivate children to complete empirical studies in lab
+  environments,'' in \emph{Proceedings of the 12th international conference on
+  interaction design and children}, 2013, pp. 388--391.
+
 \bibitem{childrenSpeechWorse}
 A.~Potamianos and S.~Narayanan, ``Robust recognition of children's speech,''
   \emph{IEEE Transactions on Speech and Audio Processing}, vol.~11, no.~6, pp.
   603--616, 2003.
+
+\bibitem{li2023asr}
+Y.~Li, Z.~Zhao, O.~Klejch, P.~Bell, and C.~Lai, ``Asr and emotional speech: A
+  word-level investigation of the mutual impact of speech and emotion
+  recognition,'' \emph{arXiv preprint arXiv:2305.16065}, 2023.
+
+\bibitem{li2014overview}
+J.~Li, L.~Deng, Y.~Gong, and R.~Haeb-Umbach, ``An overview of noise-robust
+  automatic speech recognition,'' \emph{IEEE/ACM Transactions on Audio, Speech,
+  and Language Processing}, vol.~22, no.~4, pp. 745--777, 2014.
+
+\bibitem{king2017robust}
+B.~King, I.-F. Chen, Y.~Vaizman, Y.~Liu, R.~Maas, S.~H.~K. Parthasarathi, and
+  B.~Hoffmeister, ``Robust speech recognition via anchor word
+  representations,'' 2017.
 
 \bibitem{first_vowel_study}
 \BIBentryALTinterwordspacing
@@ -123,11 +148,18 @@ D.~CRYSTAL, ``A dictionary of linguistics and phonetics (5th edn.). oxford:
   Blackwell publishing, 2003. pp. 508. isbn 0 631 22664 8,'' \emph{Journal of
   the International Phonetic Association}, vol.~34, pp. 100 -- 101, 01 2004.
 
+\bibitem{moats2000speech}
+L.~C. Moats and S.~Brady, \emph{Speech to print: Language essentials for
+  teachers}.\hskip 1em plus 0.5em minus 0.4em\relax Paul H. Brookes Pub., 2000.
+
 \bibitem{language_children}
 H.~Tulsiani, P.~Swarup, and P.~Rao, ``Acoustic and language modeling for
   children's read speech assessment,'' in \emph{2017 Twenty-third National
   Conference on Communications (NCC)}.\hskip 1em plus 0.5em minus 0.4em\relax
   IEEE, 2017, pp. 1--6.
+
+\bibitem{clark1977psychology}
+H.~H. Clark and E.~V. Clark, ``Psychology and language,'' 1977.
 
 \bibitem{language_children2}
 A.~Potamianos and S.~Narayanan, ``Spoken dialog systems for children,'' in

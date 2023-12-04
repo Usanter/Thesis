@@ -1,90 +1,91 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Problem statement}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Contributions}{6}{section.1.2}
-\contentsline {section}{\numberline {1.3}Structure for the thesis}{6}{section.1.3}
+\contentsline {section}{\numberline {1.1}Context}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problem statement}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contributions}{6}{section.1.3}
+\contentsline {section}{\numberline {1.4}Structure for the thesis}{8}{section.1.4}
 \contentsline {chapter}{\numberline {2}Background - Children automatic speech recognition}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Children speech recognition challenges}{11}{section.2.1}
+\contentsline {section}{\numberline {2.1}Children speech recognition challenges}{12}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Speech variability}{12}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Language and phonetic knowledge}{14}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Data scarcity}{15}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Introduction to automatic speech recognition}{16}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}A brief history of Automatic Speech Recognition}{16}{subsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.1.A}Early Days}{16}{subsubsection.2.2.1.1}
-\contentsline {subsubsection}{\numberline {2.2.1.B}The Speech Understanding Research program}{17}{subsubsection.2.2.1.2}
-\contentsline {subsubsection}{\numberline {2.2.1.C}From template matching to statistical modeling: HMM based models}{18}{subsubsection.2.2.1.3}
-\contentsline {subsection}{\numberline {2.2.2}Traditional automatic speech recognition systems}{19}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.A}Feature extraction}{20}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2.B}Acoustic model}{21}{subsubsection.2.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.C}Pronunciation model}{22}{subsubsection.2.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.2.D}Language model}{23}{subsubsection.2.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.2.E}Decoder}{23}{subsubsection.2.2.2.5}
-\contentsline {subsection}{\numberline {2.2.3}End-to-end automatic speech recognition}{25}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.A}Connectionist Temporal Classification}{25}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.B}Sequence to sequence}{26}{subsubsection.2.2.3.2}
-\contentsline {subsection}{\numberline {2.2.4}Automatic Speech Recognition metrics}{27}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Children automatic speech recognition}{28}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Feature extraction and adaptation}{28}{subsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.1.A}Feature extraction}{28}{subsubsection.2.3.1.1}
-\contentsline {subsubsection}{\numberline {2.3.1.B}Feature adaptation}{28}{subsubsection.2.3.1.2}
-\contentsline {subsubsection}{\numberline {2.3.1.C}Additional features}{29}{subsubsection.2.3.1.3}
-\contentsline {subsection}{\numberline {2.3.2}Detail of the annotation}{30}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Structure of the acoustic model}{30}{subsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.3.A}Hybrid models}{30}{subsubsection.2.3.3.1}
-\contentsline {subsubsection}{\numberline {2.3.3.B}End-to-end models}{31}{subsubsection.2.3.3.2}
-\contentsline {subsection}{\numberline {2.3.4}Data augmentation}{31}{subsection.2.3.4}
-\contentsline {subsubsection}{\numberline {2.3.4.A}Using external data}{32}{subsubsection.2.3.4.1}
-\contentsline {subsubsection}{\numberline {2.3.4.B}Using available data}{32}{subsubsection.2.3.4.2}
-\contentsline {subsection}{\numberline {2.3.5}Training procedure for children speech recognition}{33}{subsection.2.3.5}
-\contentsline {subsubsection}{\numberline {2.3.5.A}Transfer learning}{33}{subsubsection.2.3.5.1}
-\contentsline {subsubsection}{\numberline {2.3.5.B}Multi-task learning}{35}{subsubsection.2.3.5.2}
-\contentsline {section}{\numberline {2.4}Children Corpora}{36}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}LETSREAD}{36}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}PFSTAR\_SWEDISH}{38}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}ETLTDE}{38}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}CMU\_KIDS}{38}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}CHOREC}{38}{subsection.2.4.5}
-\contentsline {subsection}{\numberline {2.4.6}MyST}{39}{subsection.2.4.6}
-\contentsline {section}{\numberline {2.5}Summary}{39}{section.2.5}
-\contentsline {chapter}{\numberline {3}Hybrid models for children automatic speech recognition}{41}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{43}{section.3.1}
-\contentsline {section}{\numberline {3.2}Multi-task and Transfer learning using adult and children data}{43}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Methodology}{43}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Corpus}{44}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Experimental setup}{45}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Results}{45}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Summary and discussion}{46}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Multi-task and transfer learning using multilingual children data}{47}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Motivation}{47}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Proposed approach}{47}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Setup}{48}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Multilingual-transfer learning experiment}{49}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Cross-lingual validation}{50}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}Summary and discussion}{51}{subsection.3.3.6}
-\contentsline {section}{\numberline {3.4}Conclusion}{51}{section.3.4}
-\contentsline {chapter}{\numberline {4}End-to-End children automatic speech recognition}{53}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{55}{section.4.1}
-\contentsline {section}{\numberline {4.2}Transformer models}{55}{section.4.2}
-\contentsline {section}{\numberline {4.3}Adapters for Transformer based models}{57}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Related work}{58}{subsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.1.A}Transformer model for children ASR}{58}{subsubsection.4.3.1.1}
-\contentsline {subsubsection}{\numberline {4.3.1.B}Adapters}{58}{subsubsection.4.3.1.2}
-\contentsline {subsubsection}{\numberline {4.3.1.C}Variational Auto-Encoders}{59}{subsubsection.4.3.1.3}
-\contentsline {subsection}{\numberline {4.3.2}Variational adapters}{60}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Experiments}{61}{subsection.4.3.3}
-\contentsline {subsubsection}{\numberline {4.3.3.A}Corpus}{61}{subsubsection.4.3.3.1}
-\contentsline {subsubsection}{\numberline {4.3.3.B}Implementation details}{62}{subsubsection.4.3.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3.C}Experiments description}{62}{subsubsection.4.3.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Results}{63}{subsection.4.3.4}
-\contentsline {subsubsection}{\numberline {4.3.4.A}Transfer learning experiments}{63}{subsubsection.4.3.4.1}
-\contentsline {subsection}{\numberline {4.3.5}Adapters and Vadapters results}{63}{subsection.4.3.5}
-\contentsline {subsubsection}{\numberline {4.3.5.A}Adapters for children ASR}{63}{subsubsection.4.3.5.1}
-\contentsline {subsubsection}{\numberline {4.3.5.B}Variational-adapters}{64}{subsubsection.4.3.5.2}
-\contentsline {subsection}{\numberline {4.3.6}Discusion}{65}{subsection.4.3.6}
-\contentsline {section}{\numberline {4.4}Summary}{66}{section.4.4}
-\contentsline {chapter}{\numberline {5}Work Plan}{67}{chapter.5}
-\contentsline {section}{\numberline {5.1}Proposal summary}{69}{section.5.1}
-\contentsline {section}{\numberline {5.2}Ongoing and future work}{71}{section.5.2}
-\contentsline {section}{\numberline {5.3}Proposed timeline}{73}{section.5.3}
-\contentsline {chapter}{\numberline {6}Pathology detection from speech}{75}{chapter.6}
-\contentsline {chapter}{Bibliography}{79}{chapter.6}
+\contentsline {subsection}{\numberline {2.1.2}Language and phonetic knowledge}{16}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Data scarcity}{17}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Introduction to automatic speech recognition}{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}A brief history of Automatic Speech Recognition}{18}{subsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1.A}Early Days}{18}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.B}The Speech Understanding Research program}{19}{subsubsection.2.2.1.2}
+\contentsline {subsubsection}{\numberline {2.2.1.C}From template matching to statistical modeling: HMM based models}{20}{subsubsection.2.2.1.3}
+\contentsline {subsection}{\numberline {2.2.2}Traditional automatic speech recognition systems}{21}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.A}Feature extraction}{22}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.B}Acoustic model}{23}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.C}Pronunciation model}{24}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.D}Language model}{25}{subsubsection.2.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.2.E}Decoder}{25}{subsubsection.2.2.2.5}
+\contentsline {subsection}{\numberline {2.2.3}End-to-end automatic speech recognition}{27}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.A}Connectionist Temporal Classification}{27}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.B}Sequence to sequence}{28}{subsubsection.2.2.3.2}
+\contentsline {subsection}{\numberline {2.2.4}Automatic Speech Recognition metrics}{29}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Children automatic speech recognition}{30}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Feature extraction and adaptation}{30}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.A}Feature extraction}{30}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.B}Feature adaptation}{30}{subsubsection.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.1.C}Additional features}{31}{subsubsection.2.3.1.3}
+\contentsline {subsection}{\numberline {2.3.2}Detail of the annotation}{32}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Structure of the acoustic model}{32}{subsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.A}Hybrid models}{32}{subsubsection.2.3.3.1}
+\contentsline {subsubsection}{\numberline {2.3.3.B}End-to-end models}{33}{subsubsection.2.3.3.2}
+\contentsline {subsection}{\numberline {2.3.4}Data augmentation}{33}{subsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4.A}Using external data}{34}{subsubsection.2.3.4.1}
+\contentsline {subsubsection}{\numberline {2.3.4.B}Using available data}{34}{subsubsection.2.3.4.2}
+\contentsline {subsection}{\numberline {2.3.5}Training procedure for children speech recognition}{35}{subsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.5.A}Transfer learning}{35}{subsubsection.2.3.5.1}
+\contentsline {subsubsection}{\numberline {2.3.5.B}Multi-task learning}{37}{subsubsection.2.3.5.2}
+\contentsline {section}{\numberline {2.4}Children Corpora}{38}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}LETSREAD}{38}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}PFSTAR\_SWEDISH}{40}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}ETLTDE}{40}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}CMU\_KIDS}{40}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}CHOREC}{40}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}MyST}{41}{subsection.2.4.6}
+\contentsline {section}{\numberline {2.5}Summary}{41}{section.2.5}
+\contentsline {chapter}{\numberline {3}Hybrid models for children automatic speech recognition}{43}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{45}{section.3.1}
+\contentsline {section}{\numberline {3.2}Multi-task and Transfer learning using adult and children data}{45}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Methodology}{45}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Corpus}{46}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Experimental setup}{47}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Results}{47}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Summary and discussion}{48}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Multi-task and transfer learning using multilingual children data}{49}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Motivation}{49}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Proposed approach}{49}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Setup}{50}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Multilingual-transfer learning experiment}{51}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Cross-lingual validation}{52}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Summary and discussion}{53}{subsection.3.3.6}
+\contentsline {section}{\numberline {3.4}Conclusion}{53}{section.3.4}
+\contentsline {chapter}{\numberline {4}End-to-End children automatic speech recognition}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{57}{section.4.1}
+\contentsline {section}{\numberline {4.2}Transformer models}{57}{section.4.2}
+\contentsline {section}{\numberline {4.3}Adapters for Transformer based models}{59}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Related work}{60}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.A}Transformer model for children ASR}{60}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.B}Adapters}{60}{subsubsection.4.3.1.2}
+\contentsline {subsubsection}{\numberline {4.3.1.C}Variational Auto-Encoders}{61}{subsubsection.4.3.1.3}
+\contentsline {subsection}{\numberline {4.3.2}Variational adapters}{62}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Experiments}{63}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.A}Corpus}{63}{subsubsection.4.3.3.1}
+\contentsline {subsubsection}{\numberline {4.3.3.B}Implementation details}{64}{subsubsection.4.3.3.2}
+\contentsline {subsubsection}{\numberline {4.3.3.C}Experiments description}{64}{subsubsection.4.3.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Results}{65}{subsection.4.3.4}
+\contentsline {subsubsection}{\numberline {4.3.4.A}Transfer learning experiments}{65}{subsubsection.4.3.4.1}
+\contentsline {subsection}{\numberline {4.3.5}Adapters and Vadapters results}{65}{subsection.4.3.5}
+\contentsline {subsubsection}{\numberline {4.3.5.A}Adapters for children ASR}{65}{subsubsection.4.3.5.1}
+\contentsline {subsubsection}{\numberline {4.3.5.B}Variational-adapters}{66}{subsubsection.4.3.5.2}
+\contentsline {subsection}{\numberline {4.3.6}Discusion}{67}{subsection.4.3.6}
+\contentsline {section}{\numberline {4.4}Summary}{68}{section.4.4}
+\contentsline {chapter}{\numberline {5}Work Plan}{69}{chapter.5}
+\contentsline {section}{\numberline {5.1}Proposal summary}{71}{section.5.1}
+\contentsline {section}{\numberline {5.2}Ongoing and future work}{73}{section.5.2}
+\contentsline {section}{\numberline {5.3}Proposed timeline}{75}{section.5.3}
+\contentsline {chapter}{\numberline {6}Pathology detection from speech}{77}{chapter.6}
+\contentsline {chapter}{Bibliography}{81}{chapter.6}
