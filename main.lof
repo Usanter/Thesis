@@ -10,22 +10,22 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Segmental duration variability. Figures taken from \cite {Acoustic_change_children}\relax }}{15}{figure.caption.7}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Averaged-vowel duration across all vowels and subjects in each age group}}}{15}{figure.caption.7}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Within- and between-subject variations. The between-subject variation is reduced by a factor of 2.0}}}{15}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis et al. 1952\relax }}{19}{figure.caption.8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from [REFERENCE HERE]\relax }}{20}{figure.caption.9}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{21}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{22}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{27}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Examples of VTLN frequency warping functions\relax }}{31}{figure.caption.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Piecewise linear VTLN frequency scaling function for warp factors $\alpha $. $f_L$ and $f_U$ denote lower and upper threshold frequencies \cite {VTLN}}}}{31}{figure.caption.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {VTLN frequency warping functions for a) linear, b) mel, and c) inverse mel frequency scales \cite {VTLN_wfun}}}}{31}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces (a) TDNN layers with sub-sampling \& (b) Factorized TDNN layer from \cite {TDNN-F}\relax }}{32}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{32}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{32}{figure.caption.14}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Before-After specaugment augmentation with warping of the time and time steps and Mel frequency masking (figure from \cite {specaugment})\relax }}{35}{figure.caption.15}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{36}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{36}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{36}{figure.caption.16}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{37}{figure.caption.17}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis et al. 1952\relax }}{20}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from [REFERENCE HERE]\relax }}{21}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{28}{figure.caption.12}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Examples of VTLN frequency warping functions\relax }}{32}{figure.caption.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Piecewise linear VTLN frequency scaling function for warp factors $\alpha $. $f_L$ and $f_U$ denote lower and upper threshold frequencies \cite {VTLN}}}}{32}{figure.caption.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {VTLN frequency warping functions for a) linear, b) mel, and c) inverse mel frequency scales \cite {VTLN_wfun}}}}{32}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces (a) TDNN layers with sub-sampling \& (b) Factorized TDNN layer from \cite {TDNN-F}\relax }}{33}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{figure.caption.14}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Before-After specaugment augmentation with warping of the time and time steps and Mel frequency masking (figure from \cite {specaugment})\relax }}{36}{figure.caption.15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{37}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{37}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{37}{figure.caption.16}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{38}{figure.caption.17}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Hybrid models for children automatic speech recognition}{43}{chapter.3}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialized for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{50}{figure.caption.22}

@@ -132,24 +132,36 @@ Mispronunciations and disfluencies are not necessarily present in adult speech t
 \subsection{Data scarcity}%****************************************************************
 \label{section:data_scarcity}
 % Data is key in this deep learning time
-With the introduction of deep learning in recent years, increasing computational power and a large amount of data available have resulted in considerable improvements in the ASR area. This success has been attributed to deep neural networks (DNN) ability to better approximate the non-linear functions needed to model speech.
-% Explain complexity of data collection
-Despite recent efforts to collect larger children datasets \cite{MyST,singakids,ahmed2021auskidtalk}, the majority of publicly available children corpora include fewer than fifty hours of speech, whereas adult speech corpora containing hundreds, or even thousands, of hours can be easily accessible \cite{librispeech}. Furthermore, the majority of the accessible children's data are English corpus \cite{MyST,cmu,cslu,pf-star-british,ahmed2021auskidtalk}. However, English is a large-size, resource-rich pluricentric language which should be seen more as an exceptional case, rather than an average representative.
-% age problem, school recording -> noise, attention span of the children
-Furthermore, collecting speech data from children is a difficult and time-consuming task. Indeed, many factors severely reduce the quality of the gathered speech. These factors include children's short attention spans, recording environments that might be noisy (such as a classroom), and the quality of the speech, which is highly dependent on the task at hand (reading tasks are generally more complex for children).
+In recent years, the emergence of deep learning has brought about significant advancements in the ASR field. The combination of increased computational power and the abundance of available data has played a pivotal role in driving these improvements. The success deep learning is largely attributed to the deep neural networks (DNNs), which effectively approximate the complex non-linear functions. With the help of the capability, DNNs excel in capturing intricate patterns and representations in speech data, contributing to more accurate and robust ASR systems. However, the efficacy of a DNN in capturing intricate speech patterns depends a lot on the availability of a substantial amount of training data. The emphasis on accumulating expansive datasets is driven by the recognition that a large of diverse and comprehensive training data is pivotal for enhancing the capabilities and generalization of DNN-based ASR systems. Notably, top-performing ASR systems like Whisper have been trained on extensive datasets, surpassing 680,000 hours of data collected from the web \cite{radford2023robust}. There is a noticeable trend in the speech research community towards the collection of larger datasets, exemplified by initiatives such as the LibriSpeech dataset, which comprises around 1,000 hours of speech \cite{librispeech}, and the GigaSpeech dataset, featuring a staggering 10,000 hours \cite{chen2021gigaspeech}.
 
-% explain that with data, problem solved
-The need for a large database of children's speech to cover a higher variability has been proven by \cite{asr-google}.  In this work, the authors trained an automatic speech recognition model using a large in-house corpus of children's speech, comparable in size to an adult speech corpus. This resulted in state-of-the-art performance competitive with adult speech recognition systems.
-%The importance of having a large database of children's speech with high variability has been proved by \cite{asr-google}. Where the authors trained an automatic speech recognition model using a large in-house corpus of children's speech, comparable in size to an adult speech corpus. This system achieved state-of-the-art performances competitive with adult speech recognition systems.
+% Explain pb with children dataset
+Unfortunatly, despite rare recent efforts to collect larger children datasets \cite{MyST,singakids,ahmed2021auskidtalk}, the majority of publicly available children corpora include fewer than fifty hours of speech. This is significantly less than a typical adult speech corpora, which usually contains hundreds or even thousands of hours of data. Furthermore, the majority of the accessible children's data are English corpus \cite{MyST,cmu,cslu,pf-star-british,ahmed2021auskidtalk}. However, English is a large-size, resource-rich pluricentric language which should be seen more as an exceptional case, rather than an average representative. A compilation of existing datasets containing children's speech will be presented in \ref{section:children_corpora}.
+
+% Ethical problems
+The scarcity of children's speech datasets availability can be attributed to a combination of ethical, legal, and technical challenges. Collecting speech data from children raises ethical concerns related to obtaining informed consent, ensuring privacy, and protecting minors. The heightened awareness of online safety and security concerns further complicates the creation and sharing of datasets that include children's speech, as there is a need to safeguard against potential misuse and ensure the anonymity of participants.
+% Need of a diversity
+Beyond ethical and legal considerations, technical challenges also play a role. Children's speech patterns, language development, and pronunciation can vary significantly across different age groups, as explained in previously, making it challenging to create datasets that accurately represent the diversity of children's speech. Moreover, the resource-intensiveness of collecting high-quality speech data from children, which involves careful planning, recruitment efforts, and coordination with schools or parents, can further contribute to the limited availability of such datasets.
+% age problem, school recording -> noise, attention span of the children
+Finally, collecting speech data from children is a challenging and time-consuming task. Various factors can significantly impact the quality of the gathered speech. These include children's short attention spans, recording environments that might be noisy (such as a classroom), and the quality of the speech, which is highly dependent on the task at hand (reading tasks are generally more complex for children).
+
+% explain that with data, a lot of problems can be solved
+The importance of having a large database of children's speech to encompass greater variability has been emphasised in a study conducted by Liao in 2015 \cite{asr-google}. In this work, the researchers addressed the limited availability of extensive children's speech datasets by training an ASR model using a sizable in-house corpus of children's speech. Notably, this corpus was comparable in size to typical adult speech corpora. The result was the attainment of state-of-the-art performance by the ASR model, demonstrating competitiveness with adult speech recognition systems. This study underscores the crucial role of comprehensive and diverse children's speech datasets in developing robust and high-performance ASR models tailored to the distinctive characteristics of children's speech.
+%The need for a large database of children's speech to cover a higher variability has been proven by \cite{asr-google}.  In this work, the authors trained an automatic speech recognition model using a large in-house corpus of children's speech, comparable in size to an adult speech corpus. This resulted in state-of-the-art performance competitive with adult speech recognition systems.
+
 
 
 \newpage
 \section{Introduction to automatic speech recognition}%----------------------------------------------------------- ~11 pages
-In this section, we provide an overview of the main trends and modules of automatic speech recognition systems, as this understanding is necessary for the rest of this proposal. This overview is by no means exhaustive, and some subjects that are outside the scope of this thesis are excluded. More thorough information regarding ASR can be found in \cite{benzeghiba2007automatic,karpagavalli2016review,arora2012automatic}. This section is divided as follows: First, we will present traditional ASR systems, and then we will explain the end-to-end paradigm for ASR. Finally, we will present automatic speech recognition metrics.
+In this section, a brief historical overview of ASR is presented, laying the foundation for a subsequent exploration of predominant trends and modules within ASR systems. This comprehension is necessary for the following sections of this thesis. While not exhaustive, this overview provides essential insights, with certain topics falling beyond the scope of this thesis are intentionally omitted. For a more exhaustive understanding of ASR, readers are encouraged to consult references such as \cite{benzeghiba2007automatic, karpagavalli2016review, arora2012automatic}. The section is structured as follows: Firstly, we present the historical evolution of ASR, followed by an description of traditional ASR systems, succeeded by an explanation of the end-to-end paradigm. Concluding this section, a discussion on automatic speech recognition metrics is presented.
+
+%In this section, we provide an overview of the main trends and modules of automatic speech recognition systems, as this understanding is necessary for the rest of this proposal. This overview is by no means exhaustive, and some subjects that are outside the scope of this thesis are excluded. More thorough information regarding ASR can be found in \cite{benzeghiba2007automatic,karpagavalli2016review,arora2012automatic}. This section is divided as follows: First, we will present traditional ASR systems, and then we will explain the end-to-end paradigm for ASR. Finally, we will present automatic speech recognition metrics.
 \subsection{A brief history of Automatic Speech Recognition}
 
 \subsubsection{Early Days}
-The first projects for a technology that resembles to speech recognition date back to the 1950s-1960s. At this time, the work focused on isolated word in a speaker dependent context. The earliest project was a digit recognizer created at Bell Telephone Laboratories in 1952. This recognizer automatically recognize telephone-quality digits spoken at normal speech rates by a single adult-male individual, and obtained an accuracy up to 99\%. This system relied on formant frequency approximations to recognise whole word. No model of syllables, consonants, vowels or any other sub-word units are present in this recognizer. The word was treated as a single unit, and compared with ten standard digit patterns to find the best match. In order to do this the circuit extracted two frequency ranges, frequencies below and above 900 Hz. These two frequency ranges roughly approximate with the first two formants of speech. Then, these two formants approximation are plotted on a 2D-plot with a trace interruption period of 10ms. Finally, when a new audio is provided to the recognizer the newly generated plot is compared the to ten references plots of the ten digits and the closest match is return by computing the highest relative correlation coefficient. Figure \ref{Bell}  shown an example of the 2D representation of the ten digit.
+
+The origins of speech recognition technology can be traced back to the 1950s and 1960s, with initial projects focusing on isolated word recognition in a speaker-dependent context. One of the earliest projects in this domain was the creation of a digit recognizer at Bell Telephone Laboratories in 1952. This recogniser demonstrated the automatic recognition of telephone-quality digits spoken at normal speech rates by a single adult male, achieving an impressive accuracy of up to 99\%. The system relied on formant frequency approximations to recognise entire words, lacking the modelling of syllables, consonants, vowels, or any other sub-word units. Treating the word as a single unit, it was then compared with ten standard digit patterns to find the best match. The recognition process involved extracting two frequency ranges, below and above 900 Hz, approximating the first two formants of speech. These formant approximations were plotted on a 2D-plot with a trace interruption period of 10ms. When presented with new audio, the system generated a plot, compared it to the reference plots of the ten digits, and returned the closest match by computing the highest relative correlation coefficient. Figure \ref{Bell} illustrates an example of the 2D representation of the ten digits.
+
+%The first projects for a technology that resembles to speech recognition date back to the 1950s-1960s. At this time, the work focused on isolated word in a speaker dependent context. The earliest project was a digit recognizer created at Bell Telephone Laboratories in 1952. This recognizer automatically recognize telephone-quality digits spoken at normal speech rates by a single adult-male individual, and obtained an accuracy up to 99\%. This system relied on formant frequency approximations to recognise whole word. No model of syllables, consonants, vowels or any other sub-word units are present in this recognizer. The word was treated as a single unit, and compared with ten standard digit patterns to find the best match. In order to do this the circuit extracted two frequency ranges, frequencies below and above 900 Hz. These two frequency ranges roughly approximate with the first two formants of speech. Then, these two formants approximation are plotted on a 2D-plot with a trace interruption period of 10ms. Finally, when a new audio is provided to the recognizer the newly generated plot is compared the to ten references plots of the ten digits and the closest match is return by computing the highest relative correlation coefficient. Figure \ref{Bell}  shown an example of the 2D representation of the ten digit.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{imgs/bell.png}
@@ -540,9 +552,9 @@ As described in chapter \ref{section:data_scarcity}, notwithstanding recent effo
 \begin{table}
 %\centering
 \small
-\begin{tabular}{|l|l|l|l|l|l|l|} 
+\begin{tabular}{l|c|c|c|c|c|c} 
 \hline
-\multicolumn{1}{|c|}{\textbf{Corpus}} & \multicolumn{1}{c|}{\textbf{Languages}} & \multicolumn{1}{c|}{\textbf{\# Spkrs}} & \multicolumn{1}{c|}{\textbf{\# Utt}} & \multicolumn{1}{c|}{\textbf{Dur.}} & \multicolumn{1}{c|}{\textbf{Age Range}} & \multicolumn{1}{c|}{\textbf{Date}} \\ 
+\multicolumn{1}{c|}{\textbf{Corpus}} & \multicolumn{1}{c|}{\textbf{Languages}} & \multicolumn{1}{c|}{\textbf{\# Spkrs}} & \multicolumn{1}{c|}{\textbf{\# Utt}} & \multicolumn{1}{c|}{\textbf{Dur.}} & \multicolumn{1}{c|}{\textbf{Age Range}} & \multicolumn{1}{c}{\textbf{Date}} \\ 
 \hline
 Providence Corpus \cite{providence} & English & 6 &  & 363h & 1-3 & 2006 \\ 
 \hline
@@ -554,51 +566,53 @@ Demuth Sesotho Corpus \cite{demuth1992acquisition} & Sesotho & 4 & 13250 & 98h &
 \hline
 NITK Kids’ Speech Corpus \cite{nitk} & Kannada & 160 &  & 10h & 2-6 & 2019 \\ 
 \hline
-CHIEDE \cite{chiede} & Spanish & 59 & 15444 & 8h & 3-6 & 2008 \\ 
+CHIEDE \cite{chiede} & Spanish & 59 & 15,444 & 8h & 3-6 & 2008 \\ 
 \hline
-CUChild \cite{cuchild} & Cantonese & 1986 &  &  & 3-6 & 2020 \\ 
+CUChild \cite{cuchild} & Cantonese & 1,986 &  &  & 3-6 & 2020 \\ 
 \hline
-EmoChildRu \cite{emochildru} & Russian & 100 & 20000 & 30h & 3-7 & 2015 \\ 
+EmoChildRu \cite{emochildru} & Russian & 100 & 20,000 & 30h & 3-7 & 2015 \\ 
 \hline
 CNG Portuguese children\cite{hamalainen2013cng} & Portuguese & 510 &  & 21h & 3-10 & 2013 \\ 
 \hline
 AusKidTalk$^1$ \cite{ahmed2021auskidtalk} & English & 750 &  & 600h & 3-12 & 2021 \\ 
 \hline
 \textbf{PF-STAR-SWEDISH} \cite{pfstar}
-& Swedish & 198 & 8909 & 6h & 4-8 & 2005 \\ 
+& Swedish & 198 & 8,909 & 6h & 4-8 & 2005 \\ 
 \hline
 PF-STAR Children British \cite{pfstar,russell2006pf,pf-star-british} & English & 158 &  & 14.5h & 4-14 & 2006 \\ 
 \hline
 AD-child. RU \cite{ad-child_ru} & Russian & 278 &  &  & 4-16 & 2019 \\ 
 \hline
-TBALL \cite{tball} & English & 256 & 5000 & 40h & 5-8 & 2005 \\ 
+TBALL \cite{tball} & English & 256 & 5,000 & 40h & 5-8 & 2005 \\ 
 \hline
 SPECO \cite{speco} & Hungarian & 72 &  & 12h & 5-11 & 1999 \\ 
 \hline
-UltraSuite\cite{eshky2019ultrasuite} & English & 86 & 14456 & 37h & 5-14 & 2019 \\ 
+UltraSuite\cite{eshky2019ultrasuite} & English & 86 & 14,456 & 37h & 5-14 & 2019 \\ 
 \hline
 CID read speech corpus \cite{lee1999acoustics} & English & 436 &  &  & 5-18 & 1996 \\ 
 \hline
-\textbf{Letsread$^2$} \cite{letsread} & Portuguese & 284 & 4629 & 14h & 6-10 & 2016 \\ 
+Persian Kids Speech Corpus \cite{khanzadi2022persian} & Persian & 286 & 162,395 & 33h & 6-9 & 2022 \\ 
 \hline
-\textbf{CMU kids Corpus} \cite{cmu} & English & 76 & 5180 &  & 6-11 & 1997 \\ 
+\textbf{Letsread$^2$} \cite{letsread} & Portuguese & 284 & 4,629 & 14h & 6-10 & 2016 \\ 
+\hline
+\textbf{CMU kids Corpus} \cite{cmu} & English & 76 & 5,180 &  & 6-11 & 1997 \\ 
 \hline
 CFSC \cite{CFSC} & Filipino & 57 &  & 8h & 6-11 & 2012 \\ 
 \hline
-IESC-Child \cite{PEREZESPINOSA202055} & Spanish & 174 & 19793 & 34h & 6-11 & 2020 \\ 
+IESC-Child \cite{PEREZESPINOSA202055} & Spanish & 174 & 19,793 & 34h & 6-11 & 2020 \\ 
 \hline
 
 CU Children's read and prompted \cite{hagen2003children}& English & 663 & 66300 &  & K-G5 & 2001 \\ 
 \hline
-\textbf{Chorec$^2$} \cite{chorec} & Dutch & 400 & 3065 & 25h & 6-12 & 2008 \\ 
+\textbf{Chorec$^2$} \cite{chorec} & Dutch & 400 & 3,065 & 25h & 6-12 & 2008 \\ 
 \hline
-ChildIt2 \cite{childit2} & Italian & 96 &  4875 & 9h & 6-14 & 2016 \\ 
+ChildIt2 \cite{childit2} & Italian & 96 &  4,875 & 9h & 6-14 & 2016 \\ 
 \hline
 TIDIGITS \cite{leonard1993tidigits} & English & 101 &  &  & 6-15 & 1993 \\ 
 \hline
-CSLU Kids' Speech Corpus \cite{cslu} & English & 1100 & 1017 &  & K-G10 & 2007 \\ 
+CSLU Kids' Speech Corpus \cite{cslu} & English & 1,100 & 1,017 &  & K-G10 & 2007 \\ 
 \hline
-SingaKids-Mandarin \cite{singakids} & Mandarin & 255 & 79843 & 125h & 7-12 & 2016 \\ 
+SingaKids-Mandarin \cite{singakids} & Mandarin & 255 & 79,843 & 125h & 7-12 & 2016 \\ 
 \hline
 ChildIt corpus \cite{gerosa2006acoustic} & Italian & 171 &  &  & 7-13 & 2007 \\ 
 \hline
@@ -612,7 +626,7 @@ Tgr-child corpus \cite{gerosa2006acoustic} & Italian & 30 &  &  & 8-12 & 2007 \\
 \hline
 SponIt corpus \cite{gerosa2006acoustic} & Italian & 21 &  &  & 8-12 & 2007 \\ 
 \hline
-Swedish NICE Corpus \cite{bell2005swedish} & Swedish & 75 & 5580 &  & 8-15 & 2005 \\
+Swedish NICE Corpus \cite{bell2005swedish} & Swedish & 75 & 5,580 &  & 8-15 & 2005 \\
 \hline
 CHIMP spontaneous speech \cite{language_children2} & English & 160 &  &  & 8-14 & 2002 \\ 
 \hline
@@ -620,21 +634,21 @@ SpeeCon corpus  \cite{SPEECONS} & 20 Languages &  &  &  & 8-15 & 2002 \\
 \hline
 Rafael.0 telephone corpus \cite{linguistic-children} & Danish & 306 &  &  & 8-18 & 1996 \\ 
 \hline
-\textbf{Boulder Learning - MyST} \cite{MyST} & English & 1371 & 228874 & 384h & G3-G5 & 2019 \\ 
+\textbf{Boulder Learning - MyST} \cite{MyST} & English & 1,371 & 228,874 & 384h & G3-G5 & 2019 \\ 
 \hline
-CU Story Corpus \cite{hagen2003children} & English & 106 & 5000 & 40h & G3-G5 & 2003 \\ 
+CU Story Corpus \cite{hagen2003children} & English & 106 & 5,000 & 40h & G3-G5 & 2003 \\ 
 \hline
-\textbf{ETLT$^2$} \cite{etlt} & L2 German &  & 1674 & 6h & 9-16 & 2020 \\ 
+\textbf{ETLT$^2$} \cite{etlt} & L2 German &  & 1,674 & 6h & 9-16 & 2020 \\ 
 \hline
 Lesetest corpus \cite{grissemann2000zurcher} & German & 62 &  &  & 10-12 & 2000 \\ 
 \hline
-FAU Aibo Emotion Corpus \cite{steidl2009automatic} & German & 51 & 13642 & 9h & 10-13 & 2002 \\ 
+FAU Aibo Emotion Corpus \cite{steidl2009automatic} & German & 51 & 13,642 & 9h & 10-13 & 2002 \\ 
 \hline
-PIXIE corpus \cite{bell2003child} & Swedish & 2885 &  &  &  & 2003 \\ 
+PIXIE corpus \cite{bell2003child} & Swedish & 2,885 &  &  &  & 2003 \\ 
 \hline
-Takemaru-kun corpus \cite{takemaru} & Japanese & 17392 &  &  & & 2007 \\ 
+Takemaru-kun corpus \cite{takemaru} & Japanese & 17,392 &  &  & & 2007 \\ 
 \hline
-CALL-SLT \cite{callslt} & German &  & 5000 &  &  & 2014 \\ 
+CALL-SLT \cite{callslt} & German &  & 5,000 &  &  & 2014 \\ 
 \hline
 \multicolumn{7}{l}{$^1$ At the day of this proposal, data collection for this dataset is not complete.} \\
 \multicolumn{7}{l}{$^2$ Information displayed here correspond to a subset of the original data used in this proposal.}  \\

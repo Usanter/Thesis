@@ -177,6 +177,22 @@ S.~S. Gray, D.~Willett, J.~Lu, J.~Pinto, P.~Maergner, and N.~Bodenstab, ``Child
   automatic speech recognition for us english: child interaction with
   living-room-electronic-devices,'' in \emph{WOCCI}, 2014.
 
+\bibitem{radford2023robust}
+A.~Radford, J.~W. Kim, T.~Xu, G.~Brockman, C.~McLeavey, and I.~Sutskever,
+  ``Robust speech recognition via large-scale weak supervision,'' in
+  \emph{International Conference on Machine Learning}.\hskip 1em plus 0.5em
+  minus 0.4em\relax PMLR, 2023, pp. 28\,492--28\,518.
+
+\bibitem{librispeech}
+V.~Panayotov, G.~Chen, D.~Povey, and S.~Khudanpur, ``Librispeech: An asr corpus
+  based on public domain audio books,'' in \emph{ICASSP}, 2015, pp. 5206--5210.
+
+\bibitem{chen2021gigaspeech}
+G.~Chen, S.~Chai, G.~Wang, J.~Du, W.-Q. Zhang, C.~Weng, D.~Su, D.~Povey,
+  J.~Trmal, J.~Zhang \emph{et~al.}, ``Gigaspeech: An evolving, multi-domain asr
+  corpus with 10,000 hours of transcribed audio,'' \emph{arXiv preprint
+  arXiv:2106.06909}, 2021.
+
 \bibitem{MyST}
 W.~Ward, R.~Cole, D.~Bola{\~n}os, C.~Buchenroth-Martin, E.~Svirsky, and T.~B.
   Weston, ``My science tutor: A conversational multimedia virtual tutor.''
@@ -194,10 +210,6 @@ B.~Ahmed, K.~Ballard, D.~Burnham, T.~Sirojan, H.~Mehmood, D.~Estival, E.~Baker,
   \emph{Annual Conference of the International Speech Communication Association
   (22nd: 2021)}.\hskip 1em plus 0.5em minus 0.4em\relax International Speech
   Communication Association, 2021, pp. 3680--3684.
-
-\bibitem{librispeech}
-V.~Panayotov, G.~Chen, D.~Povey, and S.~Khudanpur, ``Librispeech: An asr corpus
-  based on public domain audio books,'' in \emph{ICASSP}, 2015, pp. 5206--5210.
 
 \bibitem{cmu}
 M.~Eskenazi, J.~Mostow, and D.~Graff, ``The cmu kids speech corpus,''
@@ -794,6 +806,12 @@ S.~Lee, A.~Potamianos, and S.~Narayanan, ``Acoustics of children’s speech:
   Developmental changes of temporal and spectral parameters,'' \emph{The
   Journal of the Acoustical Society of America}, vol. 105, no.~3, pp.
   1455--1468, 1999.
+
+\bibitem{khanzadi2022persian}
+M.~Khanzadi, H.~Veisi, R.~Alinaghizade, and Z.~Soleymani, ``Persian phoneme and
+  syllable recognition using recurrent neural networks for phonological
+  awareness assessment,'' \emph{Journal of AI and Data Mining}, vol.~10, no.~1,
+  pp. 117--126, 2022.
 
 \bibitem{letsread}
 J.~Proen{\c{c}}a, D.~Celorico, S.~Candeias, C.~Lopes, and F.~Perdig{\~a}o,

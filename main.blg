@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 13970 items from 5000.
+Reallocated field_info (elt_size=4) to 14108 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
@@ -16,45 +16,45 @@ Warning--empty journal in king2017robust
 Warning--empty journal in clark1977psychology
 
 Done.
-You've used 195 entries,
+You've used 198 entries,
             4087 wiz_defined-function locations,
-            1813 strings with 48728 characters,
-and the built_in function-call counts, 148865 in all, are:
-= -- 11331
-> -- 4312
-< -- 1061
-+ -- 2305
-- -- 829
-* -- 6998
-:= -- 21408
-add.period$ -- 428
-call.type$ -- 195
-change.case$ -- 194
-chr.to.int$ -- 2556
-cite$ -- 197
-duplicate$ -- 10833
-empty$ -- 12616
-format.name$ -- 1002
-if$ -- 35151
+            1827 strings with 49506 characters,
+and the built_in function-call counts, 151794 in all, are:
+= -- 11546
+> -- 4418
+< -- 1085
++ -- 2367
+- -- 856
+* -- 7146
+:= -- 21803
+add.period$ -- 435
+call.type$ -- 198
+change.case$ -- 197
+chr.to.int$ -- 2616
+cite$ -- 200
+duplicate$ -- 11033
+empty$ -- 12840
+format.name$ -- 1026
+if$ -- 35835
 int.to.chr$ -- 0
-int.to.str$ -- 195
-missing$ -- 2031
-newline$ -- 636
-num.names$ -- 195
-pop$ -- 5166
+int.to.str$ -- 198
+missing$ -- 2070
+newline$ -- 645
+num.names$ -- 198
+pop$ -- 5265
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 11489
+skip$ -- 11699
 stack$ -- 0
-substring$ -- 6258
-swap$ -- 8457
-text.length$ -- 209
+substring$ -- 6417
+swap$ -- 8630
+text.length$ -- 213
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 195
+type$ -- 198
 warning$ -- 2
-while$ -- 585
-width$ -- 198
-write$ -- 1825
+while$ -- 596
+width$ -- 201
+write$ -- 1853
 (There were 2 warnings)
