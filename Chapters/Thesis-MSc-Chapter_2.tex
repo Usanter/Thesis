@@ -159,7 +159,7 @@ In this section, a brief historical overview of ASR is presented, laying the fou
 
 \subsubsection{Early Days}
 
-The origins of speech recognition technology can be traced back to the 1950s and 1960s, with initial projects focusing on isolated word recognition in a speaker-dependent context. One of the earliest projects in this domain was the creation of a digit recognizer at Bell Telephone Laboratories in 1952. This recogniser demonstrated the automatic recognition of telephone-quality digits spoken at normal speech rates by a single adult male, achieving an impressive accuracy of up to 99\%. The system relied on formant frequency approximations to recognise entire words, lacking the modelling of syllables, consonants, vowels, or any other sub-word units. Treating the word as a single unit, it was then compared with ten standard digit patterns to find the best match. The recognition process involved extracting two frequency ranges, below and above 900 Hz, approximating the first two formants of speech. These formant approximations were plotted on a 2D-plot with a trace interruption period of 10ms. When presented with new audio, the system generated a plot, compared it to the reference plots of the ten digits, and returned the closest match by computing the highest relative correlation coefficient. Figure \ref{Bell} illustrates an example of the 2D representation of the ten digits.
+The origins of speech recognition technology can be traced back to the 1950s and 1960s, with initial projects focusing on isolated word recognition in a speaker-dependent context. One of the earliest project in this domain was the creation of a digit recognizer at Bell Telephone Laboratories in 1952. This recogniser demonstrated the automatic recognition of telephone-quality digits spoken at normal speech rates by a single adult male, achieving an impressive accuracy of up to 99\%. The system relied on formant frequency approximations to recognise entire words. It is impotant to underscore that within this recogniser, there was an absence of explicit modeling of syllables, consonants, vowels, or any other sub-word units. In this recogniser, a word was treated as a single unit, which was then compared with ten standard digit patterns to find the best match. The recognition process first involved extracting two frequency ranges, below and above 900 Hz. Motivated by the observation that these two frequency ranges approximately align with the frequencies of the first two formants in speech. Then, these formant approximations were plotted on a 2D-plot with a trace interruption period of 10ms. Finally, when presented with new audio, the system generated a plot, compared it to the reference plots of the ten digits, and returned the closest match by computing the highest relative correlation coefficient. Figure \ref{Bell} illustrates an example of the 2D representation of the ten digits.
 
 %The first projects for a technology that resembles to speech recognition date back to the 1950s-1960s. At this time, the work focused on isolated word in a speaker dependent context. The earliest project was a digit recognizer created at Bell Telephone Laboratories in 1952. This recognizer automatically recognize telephone-quality digits spoken at normal speech rates by a single adult-male individual, and obtained an accuracy up to 99\%. This system relied on formant frequency approximations to recognise whole word. No model of syllables, consonants, vowels or any other sub-word units are present in this recognizer. The word was treated as a single unit, and compared with ten standard digit patterns to find the best match. In order to do this the circuit extracted two frequency ranges, frequencies below and above 900 Hz. These two frequency ranges roughly approximate with the first two formants of speech. Then, these two formants approximation are plotted on a 2D-plot with a trace interruption period of 10ms. Finally, when a new audio is provided to the recognizer the newly generated plot is compared the to ten references plots of the ten digits and the closest match is return by computing the highest relative correlation coefficient. Figure \ref{Bell}  shown an example of the 2D representation of the ten digit.
 
@@ -168,11 +168,16 @@ The origins of speech recognition technology can be traced back to the 1950s and
 \caption{Example of a standard digit pattern from Davis et al. 1952}
 \label{Bell}
 \end{figure}
+%Later,in 1962, IBM developed Shoebox, a device that recognize 16 spoken words, the ten digits and command words such as "plus", "minus" and "total" using a similar pattern matching algorithm.
 
 
-Nonetheless, extended such a system would be not possible. This template-matching approach required each word representation to be saved on disk and compare the unknown spoken word with all this representations. When extend this approach to a larger vocabulary, the time and disk usage complexity become an issue. In addition, in order for the circuit to deliver an accuracy of the same range for a new speaker, a preliminary analysis of the speech of this individual and circuit adjustment is required.
+In 1962, IBM developed Shoebox, a device capable of recognising 16 spoken words, including the ten digits and command words such as "plus," "minus," and "total." This system employed a pattern-matching algorithm similar to the pattern-matching approach used in the Bell Telephone Laboratories's recogniser.
 
-Later,in 1962, IBM developed Shoebox, a device that recognize 16 spoken words, the ten digits and command words such as "plus", "minus" and "total" using a similar pattern matching algorithm.
+%Nonetheless, extended such a system for large vocabulary recognition would be not possible. This template-matching approach required each word representation to be saved on disk and compare the unknown spoken word with all this representations. When extend this approach to a larger vocabulary, the time and disk usage complexity become an issue. In addition, in order for the circuit to deliver an accuracy of the same range for a new speaker, a preliminary analysis of the speech of this individual and circuit adjustment is required.
+
+Nevertheless, extending such a system for a larger vocabulary would be impractical. Indeed, the template-matching approach necessitated saving each word representation on disk and comparing the unknown spoken word with all these representations. Therefore, when attempting to scale this approach to automatic large vocabulary recognition, issues of time and disk usage complexity emerged as significant challenges. Furthermore, in order for the circuit to deliver an accuracy of the same range for a new speaker, a preliminary analysis of the speech of that individual and subsequent circuit adjustments were necessary. These limitations underscored the need for more scalable and adaptive approaches and led the field of automatic speech recognition to continued to evolve.
+
+ 
 
 \subsubsection{The Speech Understanding Research program}
 
@@ -204,7 +209,7 @@ However, this probability is difficult to model directly, but using Bayes' Rules
 Here, the likelihood $P(\boldsymbol{Y}|\boldsymbol{w})$ is determined by the acoustic model component while $P(\boldsymbol{w})$ is determined by the language model component.
 The following sections describe the different components and process in more detail.
 \begin{figure}[h]
-\includegraphics[width=\textwidth]{imgs/HMM-GMM architecture.png}
+\includegraphics[width=\textwidth]{imgs/HMM-GMM_architecture.png}
 \caption{Architecture of a HMM-based speech recognition system}
 \label{HMM-GMM-model}
 \end{figure}
@@ -213,7 +218,7 @@ The following sections describe the different components and process in more det
 \subsection{Traditional automatic speech recognition systems} % ~4 pages %************************
 % HMM-DNN
 \begin{figure}
-\includegraphics[width=\textwidth]{imgs/HMM-GMM architecture.png}
+\includegraphics[width=\textwidth]{imgs/HMM-GMM_architecture.png}
 \caption{Architecture of a HMM-based speech recognition system}
 \label{HMM-GMM-model}
 \end{figure}
