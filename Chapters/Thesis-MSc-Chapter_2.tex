@@ -181,38 +181,32 @@ Nevertheless, extending such a system for a larger vocabulary would be impractic
 
 \subsubsection{The Speech Understanding Research program}
 
-In the early 1970s, after the initial success of pattern matching algorithms for single word recognition, the Advanced Research Program Agency of the U.S. department of Defense, ARPA, funded a five-year program Speech Understanding Research (SUR). The goal was to "obtain a breakthrough in speech understanding capability that could then be used toward the development of practical man-machine communication system ". It is in the context of this program that four different research groups have been funded: two groups from Carnegie-Mellon University (CMU), one from Bolt Beranek and Newman Inc. (BBN Hwim) and the last one from System Development Corporation (SDC). For each group, they were given a different task: Facts about ships, travel budget management and document retrieval. Where the  end goal task was to create a system that can recognize simple sentences in the context of the task from a vocabulary of 1,000 words with a 10\% WER in a reasonable time. 
+%In the early 1970s, after the initial success of pattern matching algorithms for single word recognition, the Advanced Research Program Agency of the U.S. department of Defense, ARPA, funded a five-year program Speech Understanding Research (SUR). The goal was to "obtain a breakthrough in speech understanding capability that could then be used toward the development of practical man-machine communication system ". It is in the context of this program that four different research groups have been funded: two groups from Carnegie-Mellon University (CMU), one from Bolt Beranek and Newman Inc. (BBN Hwim) and the last one from System Development Corporation (SDC). For each group, they were given a different task: Facts about ships, travel budget management and document retrieval. Where the  end goal task was to create a system that can recognize simple sentences in the context of the task from a vocabulary of 1,000 words with a 10\% WER in a reasonable time. 
 
-They realised that the pattern matching word identification strategy could not be applied to the problem of sentence understanding and they had to redesign the single word identification system. First of all, acoustic characteristics of words can vary considerably depending on the context of the sentence; the phonetic and phonological processes of English. Storing on disk each  words and all his different variations was not possible. In addition, discovering each words boundaries was almost impossible and compute the pattern-matching, even if the word boundaries were found, would be long and would not fit in the reasonable time requirement. Indeed, the system would compare the query word with each of the 1,000 words stored and all the possible variations. Secondly, output sentence length is variable and unknown, which is not the case in a single word identification. Therefore it was decided to use a smaller unit than the word to model speech, the phonemes. The phonemes are the smallest distinctive and meaningful unit that compose speech. For each language is associated a set of finite number of phoneme, usually under 50, that can be use to create words.
+In the early 1970s, subsequent to the initial success of pattern matching algorithms in single-word recognition, the Advanced Research Program Agency of the U.S. Department of Defense, ARPA, initiated funding for a five-year program called Speech Understanding Research (SUR). The overarching goal of SUR was to "obtain a breakthrough in speech understanding capability that could then be used toward the development of practical man-machine communication system ". Within the context of this program, four distinct research groups were funded: two from Carnegie-Mellon University (CMU), one from Bolt Beranek and Newman Inc. (BBN Hwim), and the last one from System Development Corporation (SDC). Each group was assigned a specific task, such as dealing with facts about ships, travel budget management, and document retrieval. The ultimate objective for each group was to create a system capable of recognising simple sentences within the context of their assigned task, from a vocabulary of 1,000 words, achieving a Word Error Rate (WER) of 10\% in a reasonable amount of time.
 
-Among all proposed systems of the project, the Harpy system, implemented by Lowerre (1976) for the Carnegie Mellon team, showed the best performances. Harpy is a speaker-specific  system, using pattern matching algorithm at the phoneme level instead of word level. The Harpy system  use a set of 98 phonemes and diphones, a pronunciations of all words and a graph where all accepted sentences are compiled using 15k states  When a new utterance arrived in the system, it is first low pass filtered at 5kHz, digitized at 10k samples per second, then a 14 linear prediction coefficients are computed with a 10ms shift and group it together similar adjacent acoustic segments to speed-up the decoding process. These audio segments are then compared against the 98 phonemes templates and the best path over the graph is returned. Figure \ref{harpy} show a decoding graph example.
+
+%They realised that the pattern matching word identification strategy could not be applied to the problem of sentence understanding and they had to redesign the single word identification system. First of all, acoustic characteristics of words can vary considerably depending on the context of the sentence; the phonetic and phonological processes of English. Storing on disk each  words and all his different variations was not possible. In addition, discovering each words boundaries was almost impossible and compute the pattern-matching, even if the word boundaries were found, would be long and would not fit in the reasonable time requirement. Indeed, the system would compare the query word with each of the 1,000 words stored and all the possible variations. Secondly, output sentence length is variable and unknown, which is not the case in a single word identification. Therefore it was decided to use a smaller unit than the word to model speech, the phonemes. The phonemes are the smallest distinctive and meaningful unit that compose speech. For each language is associated a set of finite number of phoneme, usually under 50, that can be use to create words.
+
+
+The realisation that the pattern-matching word identification strategy could not be directly applied to the challenge of sentence understanding prompted a redesign of the single-word identification system. In the first hand, one key recognition was that the acoustic characteristics of words can vary considerably based on the context of the sentence. The impracticality of storing each word and all its possible different variations on disk became apparent. Moreover, determining the boundaries of each word  was an almost impossible task, and even if these boundaries were identified, the pattern-matching computation, involving comparisons with each of the 1,000 stored words and all their possible variations, would be time-consuming and exceed the reasonable time requirement. Secondly, another crucial consideration in the redesign of the system was that the length of the spoken sentence is variable and unknown, in contrast to the relatively fixed length in single-word identification tasks. In sentence understanding, the system needed to handle variable sentence lengths, making it necessary to adopt a more flexible approach in modeling and recognizing speech.
+
+To address these challenges, a shift was made to a smaller unit than the word for modeling speech -namely, phonemes. Phonemes are the smallest distinctive and meaningful units that compose speech. Each language is associated with a finite set of phonemes, typically fewer than 50, which can be combined to form words. This shift enabled a more efficient and flexible representation of speech, accommodating the variability in the pronunciation of words.
+
+
+%Among all proposed systems of the project, the Harpy system, implemented by Lowerre in 1976 for the Carnegie Mellon team, showed the best performances. Harpy is a speaker-specific  system, using pattern matching algorithm at the phoneme level instead of word level. The Harpy system  use a set of 98 phonemes and diphones, a pronunciations of all words and a graph where all accepted sentences are compiled using 15k states.  When a new utterance arrived in the system, it is first low pass filtered at 5kHz, digitized at 10k samples per second, then a 14 linear prediction coefficients are computed with a 10ms shift and group it together similar adjacent acoustic segments to speed-up the decoding process. These audio segments are then compared against the 98 phonemes templates and the best path over the graph is returned. Figure \ref{harpy} show a decoding graph example.
+Among all the systems proposed in the project, the Harpy system implemented by Lowerre in 1976 by the Carnegie Mellon team exhibited the best performances \cite{klatt1977review}. Harpy is a speaker-specific system that use a pattern-matching algorithm at the phoneme level instead of the word level. The system employs a set of 98 phonemes and diphones -a pair of consecutive phonemes- , encompassing pronunciations of all words, along with a graph compiling all accepted sentences using 15,000 states. When a new spoken utterance is provided to the system, it undergoes an initial processing phase, involving low-pass filtering at 5 kHz, digitization at 10,000 samples per second, and computation of 14 linear prediction coefficients with a 10ms shift. To speed-up the decoding process, analogous adjacent acoustic segments are grouped together. Subsequently, these audio segments are compared against the 98 phoneme templates, and the system deduces the optimal path over the decoding graph. Figure \ref{harpy} provides an exemplar illustration of a decoding graph in the Harpy system.
+
+
+
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{imgs/harpy.png}
-\caption{Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from [REFERENCE HERE]}
+\caption{Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from \cite{klatt1977review}}
 \label{harpy}
 \end{figure}
 
-Despite the success of the Harpy system, it is a  speaker-specific system. For a new speaker, the system must be tuned over the 98 phonemes templates. In addition, this system can not understand more the 1,000 words and only use a simple handcrafted grammar, making this system not reliable for spontaneous speech. Finally, the decoding time was far from real time.
-
-
-\subsubsection{From template matching to statistical modeling: HMM based models}
-With the introduction of the Hidden Markov Models (HMMs) in the 1970's, Gaussian Mixture Models (GMMs) and statistical grammars in the 1980's, automatic speech recognition research shift from pattern matching approach toward  statistical modeling in the 1990's. All of these components were successfully combined into the Hidden Markov Model Toolkit (HTK), with first benchmark on the DARPA's Resource Management task in 1992 [CITATION]. The components introduced in the HTK toolkit shown in figure \ref{HMM-GMM-model} are still at the core of modern HMM-GMM systems for speech recognition. 
-
-In this statistical framework, the continuous speech audio waveform is converted to a sequence of fixed size acoustic vector $\boldsymbol{Y_{1:T}=y_1,...,y_T}$. Then the decoder try to find the sequence of word $\boldsymbol{W_{1:L}=w_1,...,w_L}$ which is most likely to have generated $\boldsymbol{Y}$. More formally:
-\begin{align}\mathbf{
-    \hat{w} = \argmax_w \{P(w|Y)\}
-}\end{align}
-However, this probability is difficult to model directly, but using Bayes' Rules gives:
-\begin{align}\mathbf{
-    \hat{w} = \argmax_w \{P(Y|w)P(w)\}
-}\end{align}
-Here, the likelihood $P(\boldsymbol{Y}|\boldsymbol{w})$ is determined by the acoustic model component while $P(\boldsymbol{w})$ is determined by the language model component.
-The following sections describe the different components and process in more detail.
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{imgs/HMM-GMM_architecture.png}
-\caption{Architecture of a HMM-based speech recognition system}
-\label{HMM-GMM-model}
-\end{figure}
+%Despite the success of the Harpy system, it is a  speaker-specific system. For a new speaker, the system must be tuned over the 98 phonemes templates. In addition, this system can not understand more the 1,000 words and only use a simple handcrafted grammar, making this system not reliable for spontaneous speech. Finally, the decoding time was far from real time.
+Notwithstanding the achievements and success of the Harpy system, it has limitations that hinder its broader applicability. As a speaker-specific system, it requires tuning for each new speaker over the 98 phoneme templates. Additionally, the system is constrained to recognising a vocabulary of no more than 1,000 words and relies on a simple handcrafted grammar, making it less reliable for handling spontaneous speech. Moreover, the decoding time of the system falls short of real-time requirements. These constraints highlight the need for more generalisable and efficient speech recognition systems, especially for handling diverse speakers and spontaneous speech scenarios. Therefore, as research progressed, the limitations of template-based approaches became apparent. This realisation prompted the exploration of probabilistic modeling techniques, marking a shift towards more sophisticated and adaptable approaches in automatic speech recognition. 
 
 
 \subsection{Traditional automatic speech recognition systems} % ~4 pages %************************
@@ -222,24 +216,51 @@ The following sections describe the different components and process in more det
 \caption{Architecture of a HMM-based speech recognition system}
 \label{HMM-GMM-model}
 \end{figure}
-The introduction of Hidden Markov Models (HMMs) in the 1970s, Gaussian Mixture Models (GMMs) in the 1980s, and statistical grammars in the 1990s, pushed automated speech recognition research away from pattern matching toward statistical modelling \cite{first_asr}. For example, the Hidden Markov Model Toolkit (HTK) \cite{htk_book}, a toolkit extensively adopted by the community, proposed the first benchmark on DARPA's Resource Management challenge in 1992  \cite{darpa1992}. Those components of the traditional ASR, illustrated in figure \ref{HMM-GMM-model}, are still at the core of modern HMM-based speech recognition systems. Later, ASR systems performances improved significantly as a result of the transition from HMM-GMM to the deep neural networks paradigm HMM-DNN  \cite{hmm-dnn}, called hybrid models.
+%The introduction of Hidden Markov Models (HMMs) in the 1970s, Gaussian Mixture Models (GMMs) in the 1980s, and statistical grammars in the 1990s, pushed automated speech recognition research away from pattern matching toward statistical modelling \cite{first_asr}. For example, the Hidden Markov Model Toolkit (HTK) \cite{htk_book}, a toolkit extensively adopted by the community, proposed the first benchmark on DARPA's Resource Management challenge in 1992  \cite{darpa1992}. Those components of the traditional ASR, illustrated in figure \ref{HMM-GMM-model}, are still at the core of modern HMM-based speech recognition systems. Later, ASR systems performances improved significantly as a result of the transition from HMM-GMM to the deep neural networks paradigm HMM-DNN  \cite{hmm-dnn}, called hybrid models.
 
-In this statistical framework, the continuous speech audio waveform is converted to a sequence of fixed size acoustic vectors $\boldsymbol{X}=x_1,...,x_T$. Then the ASR system tries to find the sequence of words $\boldsymbol{w}=w_1,...,w_L$ which is most likely to have generated $\boldsymbol{X}$. More formally:
+%What are HMM
+In the 1970s, the introduction of Hidden Markov Models (HMMs) led to a paradigm shift in ASR research, moving away from traditional pattern-matching methods towards statistical modelling \cite{first_asr}. Indeed, HMMs are particularly effective at capturing the sequential and temporal nature of speech. They assume that speech can be represented as a sequence of hidden states, each state corresponding to a distinct phonetic unit. HMMs model the transitions between these states and, at each state, generate observable acoustic features. The hidden aspect refers to the fact that the underlying states are not directly observed but inferred from the observable features. HMMs are particularly well suited to modelling speech dynamics, as they can represent the variability of speech sounds over time. In the context of ASR, HMMs have been widely used to model phonemes, words or sub-word units.
+
+%What are GMM
+Building on this foundation, the 1980s saw the emergence of Gaussian Mixture Models (GMMs), which further enhanced the statistical modeling capabilities of ASR \cite{htk_book}. GMMs allowed for a more flexible representation of the probability distributions underlying speech features.
+GMMs are used to model the statistical distribution of acoustic features associated with each hidden state in an HMM. They assume that the distribution of features can be approximated by a mixture of several Gaussian distributions. GMMs are versatile in capturing the variability of speech sounds, allowing a more flexible representation of the acoustic units. In ASR, GMMs are commonly used to model the emission probabilities associated with each state in an HMM. This means that given a particular state, the GMM provides the likelihood of observing a specific set of acoustic features. By combining the temporal modeling capabilities of HMMs with the statistical representation power of GMMs, this framework effectively captures the complex relationship between acoustic features and phonetic units.
+
+% What are statistical grammars
+Finally, in the 1990s, statistical grammars also played a crucial role, providing a structured framework for incorporating linguistic into ASR systems \cite{darpa1992}. Statistical grammars represent a category of grammars that integrate statistical information to characterise the probability of diverse linguistic structures. In contrast to traditional rule-based grammars, which articulate a language's syntax through explicit rules, statistical grammars adopt a data-driven methodology. They assign probabilities to various linguistic constructions based on observed frequencies within a designated corpus.
+
+%What are DNN
+The components illustrated in Figure \ref{HMM-GMM-model} represent the traditional ASR pipeline. These components continue to form the core of modern HMM-based ASR systems. However, in more recent times, the field of ASR has witnessed a transformative shift with the adoption of deep neural networks (DNNs) instead of GMM. Called hybrid models, they combining the strengths of HMMs and DNNs and  have further improved the ASR system performance \cite{hmm-dnn}. A DNN is a subtype of artificial neural networks consisting of multiple layers of interconnected neurons. These neurons, organised in layers, receive an input signals, and each connection between neurons is characterised by a weight that signifies its strength. In addition, each neuron is associated with a bias, provide an additional learnable parameter. During training, the network adjusts these weights and biases to minimise the difference between predicted and actual outputs, a process known as backpropagation. Moreover, there is a non-linear activation functions within neurons, as it enables the network to model intricate, non-linear patterns of the data. The weights, biases and non-linearity allow DNNs to capture complex relationships and representations from the data,learning hierarchical features and abstracting information across multiple layers of the network.
+
+%Math formulation
+In this statistical framework, the continuous speech audio waveform is transformed into a sequence of fixed-size acoustic vectors, denoted as $\boldsymbol{X}=x_1,...,x_T$. The goal of the Automatic Speech Recognition (ASR) system is to determine the sequence of words, $\boldsymbol{w}=w_1,...,w_L$ ​, that is most likely to have produced the observed acoustic vector sequence $\boldsymbol{X}$. This is formulated as finding the word sequence $\hat{w}$ that maximises the conditional probability $P(\boldsymbol{w}|X)$. More formally:
+%In this statistical framework, the continuous speech audio waveform is converted to a sequence of fixed size acoustic vectors $\boldsymbol{X}=x_1,...,x_T$. Then the ASR system tries to find the sequence of words $\boldsymbol{w}=w_1,...,w_L$ which is most likely to have generated $\boldsymbol{X}$. More formally:
 \begin{equation} \label{equation:asr_0}
     \boldsymbol{\hat{w}} = \argmax_{\boldsymbol{w}} \{P(\boldsymbol{w}|X)\}
 \end{equation}
-However, this probability is difficult to model directly, but using Bayes' Rules gives:
+However, directly modeling the conditional probability $P(\boldsymbol{w}|X)$ can be challenging. Bayes' Rule offers a way to express this probability in terms of more manageable components, specifically by decomposing it into the product of the likelihood of the observed acoustic vector sequence given the word sequence $P(X|\boldsymbol{w})$ and the prior probability of the word sequence $P(\boldsymbol{w})$. Therefore, equation \ref{equation:asr_0} became:
+%However, this probability is difficult to model directly, but using Bayes' Rules gives:
 \begin{equation}  \label{equation:asr}
     \hat{\boldsymbol{w}} = \argmax_{\boldsymbol{w}} \{\frac{P(X|\boldsymbol{w})P(\boldsymbol{w})}{P(X)}\} =\argmax_{\boldsymbol{w}} \{P(X|\boldsymbol{w})P(\boldsymbol{w})\}
 \end{equation}
-Here, the likelihood $P(\boldsymbol{X}|\boldsymbol{w})$ is determined by the acoustic model component while $P(\boldsymbol{w})$ is determined by the language model component.  As $P(X)$ is not required to determine the maximum, it can be omitted. The following sections describe the different components and processes in more detail.
+Here,  the likelihood $P(\boldsymbol{X}|\boldsymbol{w})$ is determined by the acoustic model component, capturing the probability of observing the acoustic vector sequence $\boldsymbol{X}$ given the word sequence $\boldsymbol{w}$. In parallel,  the prior probability $P(\boldsymbol{w})$ is determined by the language model component. The term $P(X)$ is not essential for determining the maximum probability and can be omitted in the context of finding the most likely word sequence. Subsequent sections will provide a more in-depth exploration of these distinct components and their processes.
+%Here, the likelihood $P(\boldsymbol{X}|\boldsymbol{w})$ is determined by the acoustic model component while $P(\boldsymbol{w})$ is determined by the language model component.  As $P(X)$ is not required to determine the maximum, it can be omitted. The following sections describe the different components and processes in more detail.
 
 % Feature extraction 
 \subsubsection{Feature extraction}%*********************************************************
-The feature extraction component's purpose is to extract useful information about the speech's linguistic content. To this end, at each time step, the continuous waveform is transformed into a small fixed-size vector. An acceptable approximation is that speech is considered stationary on the period covered by a single vector. As a result, feature vectors are generally generated every 10-milliseconds with a 25-millisecond overlapping window.
+%The feature extraction component's purpose is to extract useful information about the speech's linguistic content. To this end, at each time step, the continuous waveform is transformed into a small fixed-size vector. An acceptable approximation is that speech is considered stationary on the period covered by a single vector. As a result, feature vectors are generally generated every 10-milliseconds with a 25-millisecond overlapping window.
+The feature extraction component plays a crucial role in capturing pertinent information about the linguistic content of speech. Its primary objective is to transform the continuous waveform of speech into a compact sequence of fixed-size vectors. A common assumption is that speech can be treated as stationary within the time span covered by a single vector. Consequently, feature vectors are typically computed at intervals of 10 milliseconds, often with a 25-millisecond overlapping window.
+
+\begin{figure}
+    \begin{center}
+    \includegraphics[scale=0.3]{imgs/features.png}
+    \caption{Principal block scheme of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite{kiktova2013comparison}}
+    \label{feature_block}    
+    \end{center}
+\end{figure}
 
 % MFCC
 Mel-frequency cepstral coefficients (MFCCs) \cite{mfcc} are the most widely used features for speech recognition on HMM-GMM and HMM-DNN systems. These are generated by: i) Computing the spectrum of the windowed speech signal by using a discrete-time Fourier transform. ii) Then convoluted with triangular Mel filters (usually 20, called filterbanks), where those filters are narrow in the lower frequencies and wider in higher frequencies, which is similar to the human cochlea. iii) A log transformation is applied. iv) In order to decorrelate the filterbank energies a discrete cosine transform (DCT) is used. Note that some HMM-DNN models are using the filterbanks from ii) directly as input features.
+% 
 
 %Delta features and concatenation
 For each time step, the feature vector only contains information about the current speech window. It does not, however, provide information on the dynamics of the signal. To bring to these spectral coefficients some context, the first and second-order derivatives are concatenated ($Delta$ and $Delta$, respectively). These first-order derivative coefficients are calculated as follows:
@@ -265,6 +286,68 @@ The idea of hybrid models emerged in the 1990's with the usage of multi-layer pe
 
 \subsubsection{Pronunciation model} %******************************************************
 The role of the pronunciation model, also known as a dictionary or lexicon, is to map phonemes into words. This mapping takes the form of an entry where all possible words are associated with their corresponding sequence of a basic unit (phones). Traditionally, this mapping is obtained manually, based on phonetic and linguistic knowledge. Note that it is possible to have many different pronunciations for a single word. In addition, statistical grapheme-to-phoneme (G2P) tools \cite{g2p} allow to generate pronunciations for words that are not included in the dictionary.
+
+\begin{figure}
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \begin{tabular}{ccc}
+            \hline
+            Phoneme & Example & Translation \\
+            \hline
+            AA & odd & AA D \\
+            AE & at & AE T \\
+            AH & hut & HH AH T \\
+            AO & ought & AO T \\
+            AW & cow & K AW \\
+            AY & hide & HH AY D \\
+            B & be & B IY \\
+            CH & cheese & CH IY Z \\
+            D & dee & D IY \\
+            DH & thee & DH IY \\
+            EH & Ed & EH D \\
+            ER & hurt & HH ER T \\
+            EY & ate & EY T \\
+            F & fee & F IY \\
+            G & green & G R IY N \\
+            HH & he & HH IY \\
+            IH & it & IH T \\
+            IY & eat & IY T \\
+            JH & gee & JH IY \\
+            K & key & K IY \\
+            \hline
+        \end{tabular}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \begin{tabular}{ccc}
+            \hline
+            Phoneme & Example & Translation \\
+            \hline
+            L & lee & L IY \\
+            M & me & M IY \\
+            N & knee & N IY \\
+            NG & ping & P IH NG \\
+            OW & oat & OW T \\
+            OY & toy & T OY \\
+            P & pee & P IY \\
+            R & read & R IY D \\
+            S & sea & S IY \\
+            SH & she & SH IY \\
+            T & tea & T IY \\
+            TH & theta & TH EY T AH \\
+            UH & hood & HH UH D \\
+            UW & two & T UW \\
+            V & vee & V IY \\
+            W & we & W IY \\
+            Y & yield & Y IY L D \\
+            Z & zee & Z IY \\
+            ZH & seizure & S IY ZH ER \\
+            \hline
+        \end{tabular}
+    \end{minipage}
+    \caption{Phoneme set and examples of CMU dictionary using 39 phonemes from \cite{weide1998carnegie}}
+\end{figure}
+
 
 \subsubsection{Language model}%****************************************************************
 % Role of language model

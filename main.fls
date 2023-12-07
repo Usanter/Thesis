@@ -692,6 +692,7 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lof
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lof
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
@@ -723,7 +724,6 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc1
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/adobe/bookman/pbkd8t.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/bookman/pbkd8r.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/exampleSLT.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/exampleSLT.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/exampleSLT.png
@@ -758,6 +758,9 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/bell.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
@@ -766,17 +769,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End architeccture.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End architeccture.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfunc_htk.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfunc_htk.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfunc_htk.png
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfun.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfun.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfun.png
@@ -833,6 +833,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/ratio_delta.png
@@ -848,9 +849,9 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc5
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc5
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Timeline.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Timeline.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Timeline.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_6.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_6.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc6

@@ -3,31 +3,230 @@
 % !TEX root = ../main.tex
 % #############################################################################
 % Change the Name of the Chapter i the following line
-\fancychapter{Work Plan}
-\label{chap:final}
+\fancychapter{Use of synthetic speech as data augmentation}
+\label{chap:TTS}
 \cleardoublepage
-This chapter is structured as follows: First, we summarise the contribution of this proposal in section \ref{section:proposal_summary}. Then, section \ref{section:ongoing} provides an overview of the current subjects we intend to address in the future of this thesis, as well as a brief review of related work. Finally, Section \ref{secction:timeline} outlines tasks and milestones for the work proposed in the previous section, as well as a timeline for completion.
-\section{Proposal summary} %~2 pages
-\label{section:proposal_summary}
+Children's automatic speech recognition (ASR) poses a significant challenge due to the high variability nature of children's speech. The limited availability of training datasets hampers the effective modelling of this variability, which can be partially addressed using a text-to-speech (TTS) system for data augmentation. However, generated data may contain imperfections, potentially impacting performance. In this work, we use Adapters to handle the domain mismatch when fine-tuning with TTS data. This involves a two-step training process: training adapter layers with a frozen pre-trained model using synthetic data, then fine-tuning both adapters and the entire model with a mix of synthetic and real data, where only synthetic data passes through the adapters. Experimental results demonstrate up to 6\% relative reduction in WER compared to the straightforward use of synthetic data, indicating the effectiveness of adapter-based architectures in learning from imperfect synthetic data.
 
-% General
-In this proposal, we have introduced the difficulties inherent in children's automatic speech recognition, namely inter- and intra- speaker variability, as well as the lack of data. We defined the purpose of this thesis: Improve children's automatic speech recognition as an oracle for pathological speech applications for children. It is in that direction, that the work described in chapters \ref{chapter:Hybrid} and \ref{chap:e2e} proposed to improve children's ASR in different settings.
+%Children automatic speech recognition (ASR) presents a significant challenge mainly due to the high variability present in children's speech, encompassing acoustic and linguistic factors. The limited availability of training datasets limits the effective modelling of these variabilities by an ASR system. In this work, we use a text-to-speech (TTS) system for data augmentation. Nevertheless, generated data are subject to imperfections from the inherent variability observed in children's speech during the training process of the TTS system. Consequently, employing the generated data directly may result in a decline in performance. Therefore, we propose to use Adapter layers to reduce the domain mismatch between real and synthetically generated data during fine-tuning. Our approach utilises adapter layers to address the domain mismatch when handling synthetic data during fine-tuning. This is achieved through a two-step training procedure. Initially, the adapter layers are trained using synthetic data while keeping the pre-trained model frozen. Subsequently, both the trained adapters and the entire model are fine-tuned using a combination of synthetic and real data, with only the synthetic data passing through the adapter layers. Results of our experiments indicate that adapter-based architectures can effectively learn from imperfect synthetic data, resulting in up to 6\% relative reduction in WER compared to the straightforward use of the synthetic data.
+%Regardless of substantial advancements in automatic speech recognition (ASR), children's speech poses a significant challenge resulting in a score degradation. The primary cause for the score disparity between adult and children's speech recognition can be attributed to the considerable variability present in children's speech, encompassing acoustic and linguistic factors. Furthermore, the limited availability of training datasets limits the effective modelling of these variabilities by an ASR system. In this work, we use a text-to-speech (TTS) system for data augmentation. Nevertheless, generated data are subject to imperfections from the inherent variability observed in children's speech during the training process of the TTS system. Consequently, employing the generated data directly may result in a decline in performance. Therefore, we propose to use Adapter layers to reduce the domain mismatch between real and synthetically generated data during finetuning. Results of our experiments indicate that adapter-based architectures can effectively learn from imperfect synthetic data, resulting in up to 6\% relative reduction in WER compared to the straightforward use of the synthetic data.
 
-% Chapter 2
-In chapter \ref{chap:Chapter2}, we reviewed the different children's ASR challenges, including acoustic variability due to the developmental changes in the child's speech production apparatus, the limited linguistic knowledge and the lack of available data. Later, we presented the different approaches to tackle the aforementioned challenges, distributed in different aspects of the speech recognition pipeline: robust feature extraction and adaptation, data augmentation, detail of the annotation, the structure of the acoustic model and finally, the use of new training procedures. We identified knowledge transfer, with transfer and multi-task learning, as the most promising technique to reduce the performance gap between adult and children ASR.
+\section{Introduction}
+% Challenge in children speech
+Advances in deep learning and large amounts of training data have greatly improved automatic speech recognition (ASR). ASR is now widely used in applications like automatic transcription and home assistants. However, the recognition of children's speech remains challenging. This is because children's speech differs significantly from adults due to developmental changes in their speech production apparatus \cite{asr-review}. These changes lead to shifts in fundamental frequencies, altered temporal and spectral characteristics, and increased disfluencies \cite{Acoustic_change_children,language_children}. Additionally, children's limited linguistic and phonetic knowledge further complicates speech recognition \cite{linguistic-children}. Finally, the scarcity of children's speech data also limits the robustness of ASR models to these variabilities.
 
-% Chapter 3
-The experiments on hybrid speech recognition models, especially HMM-DNN, are presented in Chapter \ref{chapter:Hybrid}. We started by investigating how we can exploit adult data to improve children's speech recognition, even in a low-resource setting. The objective was to answer to the research question: \textit{Which knowledge transfer approach is best for efficiently modelling and improving automatic recognition of children's speech?} To this end, we first created two separate acoustic models, each trained solely on either adult or child data. We observed that adult speech recognition outperformed that of children. Additionally, when we used the opposite model to decode child and adult speech, we found a significant drop in recognition score, demonstrating the acoustic mismatch between adult and child speech. We then used transfer learning and multi-task learning to train two additional acoustic models. The goal was to see if using an inductive bias for the model's weights would be beneficial in a low-resource task. In this experiment,  we discovered that transfer learning produced the highest speech recognition score for children. The fitted model, however, no longer works on adults due to the catastrophic forgetting problem of transfer learning. It is in this case that multi-tasking learning comes in handy. Indeed, combined parallel learning of adult and child data allows the adult- and child-specific parts of the model to make effective use of the intrinsic speech characteristics captured by the model's shared component. However, because of parallel learning, children's performances are slightly lower, since they compete with adult recognition in the training.
+% Improvement of children ASR
+To bridge the gap between adult and children's automatic speech recognition, significant improvements have been made to the ASR pipeline. These advancements include techniques like Vocal Tract Length Normalization (VTLN) \cite{VTLN}, pitch and formant modification \cite{pitchnorm}, and adversarial multi-task learning \cite{adversarial-adapt1}. %NEW paragraph
+In \cite{liao2015large}, a large dataset of children's speech, comparable in size to an adult corpus, was used to train an ASR model. This system achieved state-of-the-art performance, showcasing that neural networks can effectively learn from diverse and variable children's speech data when there is ample training data. However,
+% TTS for children and Challenge in TTS for children
+acquiring and annotating datasets for training speech recognition models can be notably challenging and costly, especially for children, as their attention span is limited, and they may not consistently follow prompts during reading tasks. An alternative approach is to generate synthetic datasets using a text-to-speech (TTS) model. TTS can bypass the difficulties of collecting and annotating real children's speech data. Some studies have explored TTS for ASR, either by directly using synthetic speech for training or as a form of data augmentation \cite{laptev2020you}. However, synthesizing children's speech is challenging due to their inherent substandard and imprecise pronunciation \cite{wang2021towards}. Therefore, using synthetic data directly could lead to a performance decrease \cite{wang2021towards, hu2022synt++}. %NEW added references
 
-With this in mind, we explored whether we could improve children's ASR using only data from children. Indeed, in most previous work in the literature, most of the work has been done in English, a language well endowed with resources. But this is not the case for most languages, where even data on adults may be lacking. In this experiment, we decided to use small children's speech datasets from different languages, none of which exceeded 30 hours. We then evaluated the performances of the different knowledge transfer methods mentioned above. Like the previous experiment, we observed that multi-task learning did not improve the model trained only on each corpus independently. The reason is that all small corpora competed during multi-task learning, which leads to changes in the learned pattern in the shared component, making the task of language-specific layers more challenging. In contrast, transfer learning from any pre-trained child language consistently increased recognition score. It confirms that transfer learning is still relevant, even when the source task is low-resource, because the model eventually observed more children data, hence more variability. This experiment answered our research question: \textit{Can these knowledge transfer approaches be used to efficiently exploit low-resource children's speech data from multiple languages?
-}
 
-Finally, motivated by the consistency of the different observations, we proposed our multilingual transfer learning strategy (MTL). MTL is a two step procedure that combines multi-task learning and transfer learning. During the first step, a model is trained using multi-task learning. It enables the shared component of the model to be supplied with as much kid data as possible. Then, in a second stage, we fine-tuned the multi-task model for a single target language using transfer learning. We demonstrated experimentally that this strategy still exceeds the best transfer learning of a model trained on a single task - language - alone. Furthermore, when we removed the target language from the multi-task learning stage, we discovered that our technique used the pre-trained shared component of the model efficiently.
+% Our Approach
+In this paper, we introduce a novel technique called "Adapter double-way fine-tuning" to enhance ASR models for children, even when using imperfect data augmentation. Our approach involves adding additional adapter layers to the existing ASR model during fine-tuning, similar to \cite{fan2022draft}. These adapter layers are customised to address the domain mismatch between real and synthetic data. We achieve this through a two-step training procedure. In the first step, the adapter layers are trained exclusively using synthetic data while keeping the pre-trained model frozen. In the second step, we fine-tune both the trained adapters and the entire model using a combination of synthetic and real data. Crucially, our approach differentiates between synthetic and real data during fine-tuning. Synthetic data passes through the adapter layers, while real data bypasses them. This approach enables the effective use of imperfect synthetic data to enhance ASR performance for children.
 
-% Chapter 4
-In Chapter \ref{chap:e2e}, we shifted our research to the end-to-end paradigm because of its recent success in the field of child speech recognition \cite{sri_end2end,gelin2021endtoend}. We presented the Transformer, the most state-of-the-art end-to-end speech recognition architecture. Transformer is a sequence-to-sequence design that relies only on the self-attention mechanism. Our initial approach was to investigate transfer learning for children using a pre-trained adult model. However, in prior literature, the weights of the entire model were modified during the children transfer learning. Therefore, the origin of the improvement was not clear. Hence our research question: \textit{Why do end-to-end automatic speech recognition models achieve state-of-the-art results for children's ASR? Particularly, what are the components that are most important to fine-tune?} As a result, we decided to study transfer learning for children using Transformer by modifying only a portion of each Transformer layer. The feed-forward network was discovered to be the most significant module on which to perform transfer learning (which consists of an up-projection followed by a down-projection).
 
-As highlighted in previous work, age- or speaker-dependent systems perform best for automatic recognition of children's speech, as speaker variability is reduced within the same group. However, an end-to-end model can be expensive both in terms of training and storage. As a result, applying transfer learning to the entire model may not be the best solution. Especially with the catastrophic forgetting problem of transfer learning requires training and storage for each group. To solve these problems, we propose to use adapters for children \cite{houlsby,pfeiffer}. An adapter is a new set of weights inserted into the layers of a transformation model. Adapters offer an alternative to full model fine-tuning for each downstream task while preserving performance. Adapter transfer consists of training only the adapter weights while keeping the original model fixed. As a result, all previously discussed issues such as storage, training time and catastrophic forgetting are eliminated. Knowing the role of the position-wise feed-forward network during fine-tuning we decided, for each transformer layer, to place an adapter immediately after them. We demonstrated that adapter transfer produces marginally worse results than complete fine-tuning in the context of children's ASR, but it required less than 20\% of the original amount of parameters. This achievement inspired us to develop our own adapter architecture, the variational adapter. Unlike a typical adapter, which consists of a linear down-projection followed by a linear up-projection, we proposed using a variational auto-encoder architecture instead of the linear down-projection. It consists of two linear down-projection, giving a mean and variance vector respectively and a sampling approach based on a Gaussian distribution parameterized with this mean and variance. When utilized in the Transformer model encoder, the variational adapter outperformed the regular adapter. This confirms our hypothesis that Transformer encoder represents more audio information, but the decoder is more linguistic ones. These experiences on Adapters allow us to start answering positively to our research question: \textit{Is it possible to develop an age-based, parameter-efficient automatic speech recognition model?}
+\section{Related work}
+\subsection{TTS data augmentation}
+%TTS data augmentation
+The advancement of TTS systems, achieving human-like quality, enables effective TTS-based data augmentation in ASR. This approach, as shown in studies like \cite{ laptev2020you}, involves generating synthetic speech from text using TTS models, then combining it with real speech for training, resulting in performance enhancements. Notably, this approach is not limited to well-resourced tasks and has succeeded in low-resource scenarios, as demonstrated in \cite{casanova2022asr}. Nevertheless, TTS data augmentation offers only modest improvement due to the domain mismatch between synthetic and real speech. 
+% To this end, \cite{9688218} proposed to use discrete representations based on VQ-wav2vec, allowing to mitigate the mismatch with real data and reducing speaker dependency.
+In order to mitigate the mismatch with real data and to reduce speaker dependency,  the use of discrete representations based on VQ-wav2vec has been proposed \cite{9688218}.
+
+
+% Children data selection
+Another approach to mitigate the domain mismatch between synthetic and real speech is through the use of data selection techniques, as suggested by \cite{wang2021towards}. By selectively choosing high-quality synthetic speech data. This data selection process ensures that only the most reliable and accurate synthetic speech samples are used during data augmentation. The results presented in \cite{wang2021towards} demonstrate the effectiveness of employing i-vector speaker-embedding cosine similarity as a metric for data selection, compared to metrics like error rate, acoustic posterior, and synthetic discriminator.
+
+% Synth++
+In Synth++ \cite{hu2022synt++}, an extension to the data selection technique is proposed, by incorporating separate batch normalization statistics for real and synthetic samples. While data selection handles artefacts and over/under-sampling, double batch normalization aims to further bridge the synthetic-real data gap during training. This approach uses rejection sampling based on a DNN's output. Where the DNN is trained on a 5-dimensional features vector derived from a pre-trained ASR model, including cross-entropy loss, CTC loss \cite{CTC}, word error rate (WER), lengths of tokens in prediction text, and length of tokens in target text, offering valuable insights into speech quality and characteristics.
+% However, we find out that it may not be working. HERE?
+\subsection{Adapters}
+% Explain adapters
+Adapters were first introduced for natural language processing (NLP) tasks as a simpler alternative to full model fine-tuning \cite{houlsby}. They involve adding a small number of extra parameters to each layer of the transformer model. Unlike full fine-tuning, which modifies the entire model, adapters enable targeted adjustments within specific layers while keeping pre-trained parameters intact. These adapters typically follow a bottleneck architecture with down-projection and up-projection, as seen in Figure \ref{fig:overall}-b. The bottleneck architecture's purpose is to introduce non-linear transformations, enabling Adapters to capture task-specific features and learn task-specific modifications effectively.
+
+Since their proposal, adapters have demonstrated effectiveness in diverse NLP tasks, including language understanding and neural machine translation \cite{philip2020monolingual}. Additionally, there is a growing interest in applying adapters to automatic speech recognition. For instance, \cite{tomanek2021residual} explored adapters for atypical speech, focusing on pathological and accented speech.
+% Draft
+In children's ASR, Adapters are employed within the Draft framework \cite{fan2022draft}. This approach inserts and trains Adapters at each block of a pre-trained self-supervised learning (SSL) model using an SSL loss. Subsequently, the entire model, including the Adapters, undergoes fine-tuning with ASR losses. By combining SSL pre-training, Adapters, and full fine-tuning, this approach uses the advantages of SSL, the adaptability of adapters, and task-specific fine-tuning to enhance the recognition accuracy of ASR systems for children's speech.
+
+\section{Method}
+\begin{figure*}
+    \centering
+    \includegraphics[width=\textwidth]{imgs/Overall_system.png}
+    \caption{Overview of a) double way fine-tuning and b) Adapter layer architecture}
+    \label{fig:overall}
+\end{figure*}
+
+% Motivation
+Expanding on the achievements of the Draft Framework and Synth++, our approach utilizes Adapters as a substitute for the double batch normalization layer of the Synth++ framework. Our aim is to improve the performance of a pre-trained ASR model through data augmentation using synthetic data. In our methodology, we employed filtered synthetic data, implementing a speaker-embedding cosine similarity metric to retain synthetic utterances that exhibited high-quality generation. Our approach introduces two extra steps following the standard ASR model training (Step 0).%NEW
+Figure \ref{fig:overall}-a provides an overview of our proposed methodology.
+
+% Step 1
+Step 1 entails training Adapter layers while keeping the ASR model parameters fixed. These Adapter layers are placed after the transformer layers' feed-forward component, aiming to learn a projection that aligns synthetic children's speech with real children's speech within the transformer layers. This step is crucial as Adapter layers require this learning process. Without it, the subsequent fine-tuning in Step 2 could be more challenging and less effective.
+
+%Step2
+In Step 2, we fine-tune both the adapters from Step 1 and the pre-trained ASR model using a mix of synthetic and real data. A crucial aspect of our approach is how we handle data flow within the model. Real samples bypass the adapter layers as they don't need further adjustments, directly passing through the original ASR model components. Synthetic data, on the other hand, goes through the adapter layers for necessary modifications to align better with real children's speech characteristics. This differential treatment of data optimises adapter usage, potentially improving the ASR system's overall performance.
+
+% Inference
+During inference, the Adapter layers become unnecessary and are discarded because the test data only contains real samples. It is important to mention that Steps 1 and 2 can be iteratively repeated with newly generated synthetic data, although this aspect is not investigated in this paper and is a subject for future research.
+ 
+% Recap
+In summary, our approach uses adapter modules to improve the performance of a pre-trained ASR model through the integration of filtered synthetic data augmentation.
+
+
+
+
+\section{System description}
+\label{section:SOA}
+\subsection{Transformer architecture for ASR}
+% Motivation children E2E
+The Transformer architecture, initially developed for tasks like machine translation \cite{Transformer}, was found to be highly effective and widely used in various domains, including computer vision \cite{VIT} and language understanding \cite{Bert}. In speech recognition, it takes acoustic features as input, processes them through an encoder to create high-level representations, and uses these for token prediction in a decoder. Training typically combines a sequence-to-sequence approach with a CTC loss \cite{CTC}.
+Recent studies, such as \cite{sri_end2end}, demonstrate that fine-tuning adult pre-trained Transformer-based models with children's speech data yield better results than traditional HMM-DNN based models, making the Transformer-based and End-to-end models a suitable choice for children's ASR.
+
+In our experiments, we employed the SpeechBrain toolkit \cite{speechbrain} for the ASR part of our system, using a pre-trained Transformer model\footnote{https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech}, trained on the LibriSpeech dataset \cite{librispeech}. This model includes 12 encoder layers and 6 decoder layers, each having a dimension of 512. Additionally, we incorporated a Transformer language model trained on a 10 million-word corpus.
+
+\subsection{Multi-speaker text-to-speech: YourTTS}
+
+In this work, we used the pre-trained YourTTS\footnote{https://coqui.ai/blog/tts/yourtts-zero-shot-text-synthesis-low-resource-languages} model proposed by \cite{casanova2022yourtts} based on the  Coqui toolkit. YourTTS is a TTS model that is built upon the Variational Inference with adversarial learning for end-to-end Text-to-Speech (VITS). It incorporates several novel modifications to enable zero-shot multi-speaker and multilingual synthesis. 
+% Architecture
+YourTTS use a 10-layer Transformer-based text encoder with 196 hidden channels. It can be used in a multilingual fashion by using a 4-dimensional language embedding concatenated with the embedding of each input character, for the purpose of our experiment, the multi-lingual aspect was discarded to only keep the English language. The decoder has four affine coupling layers, each with four WaveNet blocks for high-quality speech generation. YourTTS uses an external H/ASP speaker encoder to generate 512-dimensional speaker embeddings for individual speakers, serving as reference speakers for the model. Additionally, YourTTS incorporates a HifiGAN vocoder \cite{kong2020hifi}. As YourTTS is an end-to-end model, the vocoder is connected to the TTS model using a variational autoencoder (VAE). For a comprehensive understanding of the YourTTS architecture and training, detailed information can be found in the original paper \cite{casanova2022yourtts}.
+
+
+\section{Experimental setup}
+\label{section:methods}
+
+\subsection{Real speech corpus}
+\begin{table}[h!]
+\caption{My Science Tutor Children Speech Corpus statistics}
+
+\begin{center}
+\begin{tabular}{r|c|c|c}
+\hline
+ & Training & Validation     & Test   \\ \hline
+\# of utterances & 60897   & 10044    & 4079  \\ 
+\# of speakers & 566   & 79    & 91  \\ 
+\# of hours & 113   & 18    & 13  \\ \hline
+\end{tabular}
+\label{tab:statistics}
+\end{center}
+\end{table}
+In this study, we used the My Science Tutor (MyST) Children Speech Corpus, referred to as the "Real" set. This corpus contains around 400 hours of speech collected from 1,372 students in grades three to five. It comprises conversations with a virtual tutor spanning eight scientific domains. 
+%To ensure equitable domain representation, the corpus has been partitioned, with each student's data in a single partition. 
+Notably, only 45\% of the utterances in the corpus are transcribed. For our experiments, we filtered out utterances shorter than one second and longer than 30 seconds due to GPU memory constraints. Additional details on the filtered corpora are provided in Table \ref{tab:statistics}.
+
+\subsection{Synthetic data}
+% Finetune YourTTS with MyST train set
+To adapt YourTTS for generating children's speech, we fine-tuned YourTTS using the MyST training set. In this study, we developed two TTS systems with different parameter settings to investigate their performance and output quality under varying conditions.
+
+The first model, referred to as TTS$_1$, underwent fine-tuning for 250 epochs without including the speaker encoder loss. In contrast, the second system, labelled TTS$_2$, was fine-tuned for 50 epochs while incorporating the speaker encoder loss. This incorporation improved the alignment between the generated speech and the reference speaker embedding provided to the model.
+
+% Use randomly selected speaker utterances from the training set, d-vector -> TTS
+
+The first TTS model, TTS$_1$, was used to generate 300 hours of synthetic data referred to as \textit{Synth$_1$}. The second TTS model, TTS$_2$, was employed to generate a larger volume of synthetic data, up to 1,000 hours, denoted as \textit{Synth$_2$}. To compare the performance of \textit{Synth$_1$} and \textit{Synth$_2$}, a subset of 300 hours was extracted from the \textit{Synth$_2$} dataset. The full 1,000-hour set was exclusively used to evaluate the impact of different amounts of synthetic data, both reduced and increased.
+
+In both \textit{Synth$_1$} and \textit{Synth$_2$}, we used randomly selected d-vectors and text transcriptions from the MyST training set. Notably, the selected d-vectors did not match the associated transcriptions to introduce variability into the synthetic data.
+% Use a randomly selected text transcription in order to fit the transcription style of MyST, "UM" for hesitations
+We used MyST transcriptions to generate synthetic data, exposing the TTS model to its unique transcription style, including elements like "UM" hesitations. This approach helps the model learn and reproduce the specific transcription characteristics of the MyST data.
+To assess the filtering effect, we generated an extra 300-hour set for both \textit{Synth$_1$} and \textit{Synth$_2$} without using speaker embedding data selection. Our data selection method relied on cosine similarity using x-vectors from a pre-trained x-vector extractor\footnote{https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb}. We applied a cosine similarity threshold of 0.75 to discard bad synthetic utterances. We also explored the data selection mechanism suggested by \cite{hu2022synt++} but found it unsatisfactory, opting instead for speaker-embedding similarity as the selection criterion.
+
+\subsection{Experiments}
+We evaluated our Adapter double-way fine-tuning approach in a series of experiments, comparing it to existing methods. We started with baseline models fine-tuning an adult model to children's speech using real data for 20 and 25 epochs (step 0 in Figure \ref{fig:overall}-a).
+Next, we assessed the TTS models' performances using only \textit{Synth$_1$} and \textit{Synth$_2$} data. We also explored data filtering's impact by comparing models trained on filtered and unfiltered versions of \textit{Synth$_1$} and \textit{Synth$_2$}, along with their combination with \textit{Real} data. These models were trained for 20 epochs.
+We also explored double-way normalization inspired by Synt++. In one scenario, we fine-tuned the adult model for 20 epochs using a mix of filtered synthetic and real data with double-way normalization (\textit{Norm double-way from adult} in Table \ref{tab:res}). In another scenario, we trained the double-way normalization model for 5 epochs with the baseline model as initialization, referred to as \textit{Norm double-way from children}.
+Finally, we implemented our \textit{Adapter double-way} approach, training the models for 5 epochs with the baseline model as initialisation. Different hyper-parameter configurations will be explored in section \ref{section:exp}.
+\section{Results and discussion}
+\label{section:exp}
+
+\subsection{Comparison with existing approaches}
+
+\begin{table}[t]
+\centering
+\begin{tabular}{ccc}
+\hline
+ Method & Synth$_1$ & Synth$_2$  \\ \hline
+\multicolumn{1}{l}{\textit{Real (20 epochs)}} & \multicolumn{2}{c}{12.99\%}\\ 
+\multicolumn{1}{l}{\textit{Real (25 epochs)}} & \multicolumn{2}{c}{13.15\%}\\ \hline
+\multicolumn{1}{l}{\textit{Real} + Non filtered \textit{Synth}}  &   13.41\%  & 13.24\% \\ 
+\multicolumn{1}{l}{\textit{Real} + \textit{Synth} \cite{wang2021towards}} & 13.09\% & 12.98\% \\
+\multicolumn{1}{l}{\textit{Synth} alone}    & 40.58\%  & 40.21\%  \\ \hline
+\multicolumn{1}{l}{Norm double-way (from adult)} & 12.89\% & 13.04\% \\ 
+\multicolumn{1}{l}{Norm double-way (from children)} & 13.56\% & 13.87\% \\ \hline
+\multicolumn{1}{l}{Adapter double-way (Ours)} &\textbf{ 12.42\%} & \textbf{12.31\%} \\ \hline
+\end{tabular}
+
+\caption{Results of the different approaches (in WER).}
+\label{tab:res}
+\end{table}
+
+% Baseline
+The results of the various approaches are summarized in Table \ref{tab:res}. Our baseline models achieved a WER score of 12.99\%. Training for 25 epochs led to over-fitting and a decrease in performance.
+%Filtered and TTS alone
+Filtered \textit{Synth$_1$} and \textit{Synth$_2$} data improved WER by 2\% compared to unfiltered data, but using only filtered TTS speech (\textit{Synth} alone) resulted in a significant 40\% WER on the \textit{Real} test set, highlighting the domain mismatch between real and synthetic.
+% Double-norm 
+Our experiments found that double batch normalization did not improve the baseline model's performance and even led to a 5\% relative decrease in WER  performance when evaluated with the baseline model as initialisation. This highlights the need for alternative methods to address the domain mismatch between real and synthetic speech data.
+% Adapter Double-way
+Our double-way adapter fine-tuning approach, initialised with the baseline model (step 0 in Figure \ref{fig:overall}), outperformed all other methods. It achieved a 4\% and 5\% relative WER improvement over the baseline on \textit{Synth$_1$} and \textit{Synth$_2$} respectively, demonstrating the effectiveness of our approach compared to longer training on the \textit{Real} set.
+
+% TTS robustness
+%In conclusion, the experiments reveal that both double-way adapters, trained using data augmentation from \textit{Synth$_1$} and \textit{Synth$_2$}, outperformed the baseline and previous works. These results demonstrate the robustness of our approach, showcasing its effectiveness across different TTS configurations.
+
+\subsection{Effect of the number of hours}
+\begin{table}[t]
+\centering
+\begin{tabular}{cc}
+\hline
+ Amount of TTS data & WER    \\ \hline
+\multicolumn{1}{c}{0h} & 12.99\% \\ \hline
+\multicolumn{1}{c}{10h}  &   12.73\%   \\ 
+\multicolumn{1}{c}{50h}    & 12.54\%   \\ 
+\multicolumn{1}{c}{100h} & 12.49\%  \\ 
+\multicolumn{1}{c}{300h} & \textbf{12.31\%}  \\ 
+\multicolumn{1}{c}{600h} & 12.57\%  \\ 
+\multicolumn{1}{c}{1000h} & 13.14\%  \\ \hline
+
+\end{tabular}
+
+\caption{Results of the different number of hours in our Adapter double-way approach with \textit{Synth$_2$} data}
+\label{tab:hours}
+\end{table}
+
+%Time experiments
+Table \ref{tab:hours} summarizes the impact of varying amounts of synthetic data from \textit{Synth$_2$} on our adapter double-way approach. Using a small amount of synthesized speech (10 to 50 hours) yields limited ASR performance improvement. While excessive TTS data (600 to 1,000 hours) can introduce noise. Thus, it's crucial to use an appropriate amount (100 to 300 hours) to balance between robustness and avoiding noise introduction.
+\subsection{Effect of the Adapters hyper-parameters}
+
+\begin{table}[t]
+\centering
+\begin{tabular}{cccc}
+\hline
+ Location &  Bottleneck size &  5 epochs &  20 epochs     \\ \hline
+\multicolumn{1}{c}{Encoder} & 64 & 12.58\% & 12.24\% \\ 
+\multicolumn{1}{c}{Encoder} & 128 &  12.31\% & 12.45\%  \\ 
+\multicolumn{1}{c}{Encoder} & 256  & \textbf{12.25\%} & 12.32\%  \\ 
+\multicolumn{1}{c}{Encoder} & 1024 & 12.42\% & \textbf{12.22\%} \\ 
+\multicolumn{1}{c}{Encoder} & 2048 & 12.57\% & 12.47\% \\ \hline
+\multicolumn{1}{c}{Encoder-Decoder} & 128 & 12.45\% & 12.48\% \\ \hline
+\multicolumn{1}{c}{Skip step 0} & 256 & 12.30\% & - \\ 
+\multicolumn{1}{c}{Skip step 0 and 1} & 256 & 13.28\% & - \\ \hline
+
+\end{tabular}
+
+\caption{Results of the different configurations of Adapter double-way approach on 300h of \textit{Synth$_2$}}
+\label{tab:config}
+\end{table}
+
+To assess the robustness of our approach, we assessed the Double-way adapter in diverse configurations. This involved experimenting with different bottleneck sizes (ranging from 64 to 2048), varying the number of training epochs (5 and 20), exploring the use of Adapters in the decoder of the transformer model, and conducting an ablation study by skipping step 0 and step 0 and 1.
+
+% Best config
+Table \ref{tab:config} summarizes the results, highlighting that the optimal configuration uses adapters with a size of 1024 in the encoder only, coupled with 20 training epochs, resulting in a  6\% relative WER reduction when compared to the baseline. Importantly, all configurations demonstrated superior performance to the baseline, underscoring the effectiveness of our approach.
+
+% Other results
+Our findings suggest that extended training periods were beneficial for larger Adapter bottleneck sizes, without indications of overfitting. Moreover, adding Adapters to the decoder did not significantly improve results. Finally, skipping step 0 (pre-training) did not significantly degrade results, but skipping both step 0 and step 1 (pre-training and Adapter pre-training) led to performance degradation, indicating the importance of Adapter pre-training for improved performance.
+
+\section{Conclusions and future work}
+\label{section:conclusions_tts}
+We introduced the combined use of Adapters and synthetic data augmentation for children's speech recognition. Our two-step training procedure, involving training Adapter layers %with a frozen pre-trained model
+using synthetic data and subsequent fine-tuning of Adapters and the entire model with a combination of synthetic and real data, yielded improvements over the baseline and previous approaches in various configurations.
+%Our approach demonstrated robustness across various configurations, including TTS models, Adapter sizes, epochs, and synthetic data hours. 
+or future work, we will explore an iterative approach with newly generated TTS data and varying the amount of real data used.%, and move to the Conformer architecture for ASR.
 
 \section{Ongoing and future work} %~2-3 pages
 \label{section:ongoing}
@@ -61,14 +260,3 @@ HuBert Large & \textbf{6.03\%} & \textbf{15.41\%} \\
 
 Where Base, and Large represent the same model with different number of parameters (in the order Base $<$ Large).
 Even though we did not use a language model in this pilot experiment, the results are of the same order as those reported in section \ref{section:exp} obtained with a transformer and a transformer language model. Such results demonstrate that SSL learns substantial speech characteristics. For future research, we aim to explore in depth what information is encoded in SSL models and why they work well on children, and how we may use this knowledge to enhance children's ASR.
-
-\section{Proposed timeline}
-\label{secction:timeline}
-
-A chronogram with the proposed time-span of each of the research direction can be found in Figure \ref{fig:timeline}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=1\textwidth]{imgs/Timeline.png}
-    \caption{Proposed timeline - November 2022 - September 2023.}
-    \label{fig:timeline}
-\end{figure}

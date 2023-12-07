@@ -11,31 +11,32 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Averaged-vowel duration across all vowels and subjects in each age group}}}{15}{figure.caption.7}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Within- and between-subject variations. The between-subject variation is reduced by a factor of 2.0}}}{15}{figure.caption.7}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis et al. 1952\relax }}{20}{figure.caption.8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from [REFERENCE HERE]\relax }}{21}{figure.caption.9}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{22}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{23}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{28}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Examples of VTLN frequency warping functions\relax }}{32}{figure.caption.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Piecewise linear VTLN frequency scaling function for warp factors $\alpha $. $f_L$ and $f_U$ denote lower and upper threshold frequencies \cite {VTLN}}}}{32}{figure.caption.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {VTLN frequency warping functions for a) linear, b) mel, and c) inverse mel frequency scales \cite {VTLN_wfun}}}}{32}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces (a) TDNN layers with sub-sampling \& (b) Factorized TDNN layer from \cite {TDNN-F}\relax }}{33}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{33}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{33}{figure.caption.14}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Before-After specaugment augmentation with warping of the time and time steps and Mel frequency masking (figure from \cite {specaugment})\relax }}{36}{figure.caption.15}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{37}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{37}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{37}{figure.caption.16}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{38}{figure.caption.17}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from \cite {klatt1977review}\relax }}{22}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{23}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Principal block scheme of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite {kiktova2013comparison}\relax }}{25}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Phoneme set and examples of CMU dictionary using 39 phonemes from \cite {weide1998carnegie}\relax }}{27}{figure.caption.12}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{29}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Examples of VTLN frequency warping functions\relax }}{33}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Piecewise linear VTLN frequency scaling function for warp factors $\alpha $. $f_L$ and $f_U$ denote lower and upper threshold frequencies \cite {VTLN}}}}{33}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {VTLN frequency warping functions for a) linear, b) mel, and c) inverse mel frequency scales \cite {VTLN_wfun}}}}{33}{figure.caption.14}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces (a) TDNN layers with sub-sampling \& (b) Factorized TDNN layer from \cite {TDNN-F}\relax }}{34}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{34}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{34}{figure.caption.15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Before-After specaugment augmentation with warping of the time and time steps and Mel frequency masking (figure from \cite {specaugment})\relax }}{37}{figure.caption.16}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{38}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{38}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{38}{figure.caption.17}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{39}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Hybrid models for children automatic speech recognition}{43}{chapter.3}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialized for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{50}{figure.caption.22}
+\contentsline {xchapter}{Hybrid models for children automatic speech recognition}{45}{chapter.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialized for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{52}{figure.caption.23}
 \addvspace {10\p@ }
-\contentsline {xchapter}{End-to-End children automatic speech recognition}{55}{chapter.4}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }}{58}{figure.caption.25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces a) Example of a Transformer layer with an adapter layer (adapted from \cite {pfeiffer}); b) Adapter layer; c) Vadapter layer\relax }}{61}{figure.caption.26}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Relative WER delta over the ratio (\%) of trainable parameters compared to full fine-tuned model.\relax }}{67}{figure.caption.30}
+\contentsline {xchapter}{End-to-End children automatic speech recognition}{57}{chapter.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }}{60}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces a) Example of a Transformer layer with an adapter layer (adapted from \cite {pfeiffer}); b) Adapter layer; c) Vadapter layer\relax }}{63}{figure.caption.27}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Relative WER delta over the ratio (\%) of trainable parameters compared to full fine-tuned model.\relax }}{69}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Work Plan}{69}{chapter.5}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Proposed timeline - November 2022 - September 2023.\relax }}{75}{figure.caption.32}
+\contentsline {xchapter}{Use of synthetic speech as data augmentation}{71}{chapter.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{75}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathology detection from speech}{77}{chapter.6}
+\contentsline {xchapter}{Pathology detection from speech}{85}{chapter.6}
