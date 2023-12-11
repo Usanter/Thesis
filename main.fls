@@ -772,8 +772,12 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End architeccture.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End architeccture.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM_monophone.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM_monophone.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM_monophone.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End_architeccture.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End_architeccture.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End_architeccture.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfunc_htk.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfunc_htk.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wfunc_htk.png

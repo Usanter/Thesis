@@ -301,6 +301,19 @@ A.~L. Bizzocchi, ``How many phonemes does the english language have?''
   \emph{International Journal on Studies in English Language and Literature
   (IJSELL)}, vol.~5, no.~10, pp. 36--46, 2017.
 
+\bibitem{schwartz1985context}
+R.~Schwartz, Y.~Chow, O.~Kimball, S.~Roucos, M.~Krasner, and J.~Makhoul,
+  ``Context-dependent modeling for acoustic-phonetic recognition of continuous
+  speech,'' in \emph{ICASSP'85. IEEE International Conference on Acoustics,
+  Speech, and Signal Processing}, vol.~10.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 1985, pp. 1205--1208.
+
+\bibitem{bahl1991context}
+L.~R. Bahl, P.~V. deSouza, P.~Gopalakrishnan, D.~Nahamoo, and M.~Picheny,
+  ``Context dependent modeling of phones in continuous speech using decision
+  trees,'' in \emph{Speech and Natural Language: Proceedings of a Workshop Held
+  at Pacific Grove, California, February 19-22, 1991}, 1991.
+
 \bibitem{bourlard2012connectionist}
 H.~A. Bourlard and N.~Morgan, \emph{Connectionist speech recognition: a hybrid
   approach}.\hskip 1em plus 0.5em minus 0.4em\relax Springer Science \&
@@ -311,6 +324,21 @@ H.~Meinedo, D.~Caseiro, J.~Neto, and I.~Trancoso, ``Audimus. media: a broadcast
   news speech recognition system for the european portuguese language,'' in
   \emph{International Workshop on Computational Processing of the Portuguese
   Language}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2003, pp. 9--17.
+
+\bibitem{lang1990time}
+K.~J. Lang, A.~H. Waibel, and G.~E. Hinton, ``A time-delay neural network
+  architecture for isolated word recognition,'' \emph{Neural networks}, vol.~3,
+  no.~1, pp. 23--43, 1990.
+
+\bibitem{sak2014long}
+H.~Sak, A.~W. Senior, and F.~Beaufays, ``Long short-term memory recurrent
+  neural network architectures for large scale acoustic modeling,'' 2014.
+
+\bibitem{waibel2013phoneme}
+A.~Waibel, T.~Hanazawa, G.~Hinton, K.~Shikano, and K.~J. Lang, ``Phoneme
+  recognition using time-delay neural networks,'' in
+  \emph{Backpropagation}.\hskip 1em plus 0.5em minus 0.4em\relax Psychology
+  Press, 2013, pp. 35--61.
 
 \bibitem{g2p}
 K.~Yao and G.~Zweig, ``Sequence-to-sequence neural net models for
@@ -349,6 +377,12 @@ S.~Chen and R.~Rosenfeld, ``A survey of smoothing techniques for me models,''
 J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova, ``Bert: Pre-training of deep
   bidirectional transformers for language understanding,'' 2019.
 
+\bibitem{brown2020language}
+T.~Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~D. Kaplan, P.~Dhariwal,
+  A.~Neelakantan, P.~Shyam, G.~Sastry, A.~Askell \emph{et~al.}, ``Language
+  models are few-shot learners,'' \emph{Advances in neural information
+  processing systems}, vol.~33, pp. 1877--1901, 2020.
+
 \bibitem{viterbi_decoder}
 A.~Viterbi, ``Error bounds for convolutional codes and an asymptotically
   optimum decoding algorithm,'' \emph{IEEE Transactions on Information Theory},
@@ -379,6 +413,12 @@ D.~Povey, A.~Ghoshal, G.~Boulianne, L.~Burget, O.~Glembek, N.~Goel,
   speech recognition toolkit,'' in \emph{IEEE 2011 workshop on automatic speech
   recognition and understanding}, no. CONF.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE Signal Processing Society, 2011.
+
+\bibitem{richardson1995lattice}
+F.~Richardson, M.~Ostendorf, and J.~R. Rohlicek, ``Lattice-based search
+  strategies for large vocabulary speech recognition,'' in \emph{1995
+  International Conference on Acoustics, Speech, and Signal Processing},
+  vol.~1.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 1995, pp. 576--579.
 
 \bibitem{hannun2014deep}
 A.~Hannun, C.~Case, J.~Casper, B.~Catanzaro, G.~Diamos, E.~Elsen, R.~Prenger,
@@ -435,6 +475,21 @@ L.~Dong, S.~Xu, and B.~Xu, ``Speech-transformer: a no-recurrence
   sequence-to-sequence model for speech recognition,'' in \emph{2018 IEEE
   International Conference on Acoustics, Speech and Signal Processing
   (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 5884--5888.
+
+\bibitem{tuske2021limit}
+Z.~T{\"u}ske, G.~Saon, and B.~Kingsbury, ``On the limit of english
+  conversational speech recognition,'' \emph{arXiv preprint arXiv:2105.00982},
+  2021.
+
+\bibitem{bermuth2021scribosermo}
+D.~Bermuth, A.~Poeppel, and W.~Reif, ``Scribosermo: fast speech-to-text models
+  for german and other languages,'' \emph{arXiv preprint arXiv:2110.07982},
+  2021.
+
+\bibitem{chan2021speechstew}
+W.~Chan, D.~Park, C.~Lee, Y.~Zhang, Q.~Le, and M.~Norouzi, ``Speechstew: Simply
+  mix all available speech recognition data to train one large neural
+  network,'' \emph{arXiv preprint arXiv:2104.02133}, 2021.
 
 \bibitem{Hermansky1990PerceptualLP}
 H.~Hermansky, ``Perceptual linear predictive (plp) analysis of speech.''

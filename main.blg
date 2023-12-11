@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 14660 items from 5000.
+Reallocated field_info (elt_size=4) to 15120 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Warning--I didn't find a database entry for "asr-review"
 Warning--I didn't find a database entry for "liao2015large"
@@ -22,47 +22,48 @@ Warning--I didn't find a database entry for "kong2020hifi"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in king2017robust
 Warning--empty journal in clark1977psychology
+Warning--empty journal in sak2014long
 
 Done.
-You've used 202 entries,
+You've used 212 entries,
             4087 wiz_defined-function locations,
-            1855 strings with 50304 characters,
-and the built_in function-call counts, 154694 in all, are:
-= -- 11767
-> -- 4502
-< -- 1107
-+ -- 2413
-- -- 872
-* -- 7278
-:= -- 22221
-add.period$ -- 444
-call.type$ -- 202
-change.case$ -- 201
-chr.to.int$ -- 2670
-cite$ -- 204
-duplicate$ -- 11245
-empty$ -- 13079
-format.name$ -- 1045
-if$ -- 36514
+            1899 strings with 52420 characters,
+and the built_in function-call counts, 162150 in all, are:
+= -- 12324
+> -- 4743
+< -- 1157
++ -- 2539
+- -- 920
+* -- 7637
+:= -- 23297
+add.period$ -- 467
+call.type$ -- 212
+change.case$ -- 211
+chr.to.int$ -- 2790
+cite$ -- 215
+duplicate$ -- 11793
+empty$ -- 13702
+format.name$ -- 1103
+if$ -- 38259
 int.to.chr$ -- 0
-int.to.str$ -- 202
-missing$ -- 2110
-newline$ -- 657
-num.names$ -- 202
-pop$ -- 5367
+int.to.str$ -- 212
+missing$ -- 2215
+newline$ -- 687
+num.names$ -- 212
+pop$ -- 5641
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 11919
+skip$ -- 12481
 stack$ -- 0
-substring$ -- 6547
-swap$ -- 8796
-text.length$ -- 217
+substring$ -- 6837
+swap$ -- 9216
+text.length$ -- 227
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 202
-warning$ -- 2
-while$ -- 608
-width$ -- 205
-write$ -- 1888
-(There were 10 warnings)
+type$ -- 212
+warning$ -- 3
+while$ -- 638
+width$ -- 215
+write$ -- 1977
+(There were 11 warnings)
