@@ -55,11 +55,6 @@ E.~Kiktova, M.~Lojka, M.~Pleva, J.~Juhar, and A.~Cizmar, ``Comparison of
 R.~Weide \emph{et~al.}, ``The carnegie mellon pronouncing dictionary,''
   \emph{release 0.6, www. cs. cmu. edu}, 1998.
 
-\bibitem{TDNN-F}
-D.~Povey, G.~Cheng, Y.~Wang, K.~Li, H.~Xu, M.~Yarmohammadi, and S.~Khudanpur,
-  ``Semi-orthogonal low-rank matrix factorization for deep neural networks.''
-  in \emph{Interspeech}, 2018, pp. 3743--3747.
-
 \bibitem{specaugment}
 D.~S. Park, W.~Chan, Y.~Zhang, C.-C. Chiu, B.~Zoph, E.~D. Cubuk, and Q.~V. Le,
   ``Specaugment: A simple augmentation method for automatic speech
@@ -491,10 +486,25 @@ W.~Chan, D.~Park, C.~Lee, Y.~Zhang, Q.~Le, and M.~Norouzi, ``Speechstew: Simply
   mix all available speech recognition data to train one large neural
   network,'' \emph{arXiv preprint arXiv:2104.02133}, 2021.
 
+\bibitem{ghai2009exploring}
+S.~Ghai and R.~Sinha, ``Exploring the role of spectral smoothing in context of
+  children's speech recognition,'' in \emph{Tenth Annual Conference of the
+  International Speech Communication Association}, 2009.
+
+\bibitem{ghai2011addressing}
+S.~Ghai, ``Addressing pitch mismatch for children's automatic speech
+  recognition,'' Ph.D. dissertation, 2011.
+
 \bibitem{Hermansky1990PerceptualLP}
 H.~Hermansky, ``Perceptual linear predictive (plp) analysis of speech.''
   \emph{The Journal of the Acoustical Society of America}, vol. 87 4, pp.
   1738--52, 1990.
+
+\bibitem{shahnawazuddin2023gammatone}
+S.~Shahnawazuddin, Ankita, A.~Kumar, and H.~K. Kathania, ``Gammatone-filterbank
+  based pitch-normalized cepstral coefficients for zero-resource children’s
+  asr,'' in \emph{International Conference on Speech and Computer}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 2023, pp. 494--505.
 
 \bibitem{feat_ext_from_raw}
 S.~P. Dubagunta, S.~Hande~Kabil, and M.~Magimai.-Doss, ``Improving children
@@ -517,26 +527,26 @@ L.~Lee and R.~C. Rose, ``Speaker normalization using efficient frequency
   Acoustics, Speech, and Signal Processing Conference Proceedings},
   vol.~1.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 1996, pp. 353--356.
 
-\bibitem{VTLN_wfun}
-Y.~Saito, S.~Takamichi, and H.~Saruwatari, ``Vocoder-free text-to-speech
-  synthesis incorporating generative adversarial networks using
-  low-/multi-frequency stft amplitude spectra,'' \emph{Computer Speech \&
-  Language}, vol.~58, 06 2019.
-
 \bibitem{VTLN2}
 R.~Serizel and D.~Giuliani, ``Vocal tract length normalisation approaches to
   dnn-based children's and adults' speech recognition,'' in \emph{SLT
   Workshop}, 2014, pp. 135--140.
 
-\bibitem{pronunciation}
-P.~G. Shivakumar, A.~Potamianos, S.~Lee, and S.~S. Narayanan, ``Improving
-  speech recognition for children using acoustic adaptation and pronunciation
-  modeling.'' in \emph{WOCCI}, 2014, pp. 15--19.
+\bibitem{claus2013survey}
+F.~Claus, H.~Gamboa~Rosales, R.~Petrick, H.-U. Hain, and R.~Hoffmann, ``A
+  survey about asr for children,'' in \emph{Speech and Language Technology in
+  Education}, 2013.
 
-\bibitem{asr-improved2}
-D.~Elenius and M.~Blomberg, ``Adaptation and normalization experiments in
-  speech recognition for 4 to 8 year old children.'' in \emph{Interspeech},
-  2005, pp. 2749--2752.
+\bibitem{potamianos1997automatic}
+A.~Potamianos, S.~Narayanan, and S.~Lee, ``Automatic speech recognition for
+  children,'' in \emph{Fifth European Conference on Speech Communication and
+  Technology}, 1997.
+
+\bibitem{potamianos1997combining}
+A.~Potamianos and R.~C. Rose, ``On combining frequency warping and spectral
+  shaping in hmm based speech recognition,'' in \emph{1997 IEEE International
+  Conference on Acoustics, Speech, and Signal Processing}, vol.~2.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, 1997, pp. 1275--1278.
 
 \bibitem{f0norm}
 G.~Yeung and A.~Alwan, ``A frequency normalization technique for kindergarten
@@ -556,6 +566,12 @@ S.~Shahnawazuddin, A.~Dey, and R.~Sinha, ``Pitch-adaptive front-end features
 H.~Kathania, S.~Kadiri, P.~Alku, and M.~Kurimo, ``A formant modification method
   for improved asr of children’s speech,'' \emph{Speech Communication}, vol.
   136, pp. 98--106, 01 2022.
+
+\bibitem{kumar2023effect}
+U.~L. Kumar, M.~Kurimo, and H.~K. Kathania, ``Effect of linear prediction order
+  to modify formant locations for children speech recognition,'' in
+  \emph{International Conference on Speech and Computer}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer, 2023, pp. 483--493.
 
 \bibitem{speaking_rate}
 H.~K. Kathania, S.~Shahnawazuddin, W.~Ahmad, N.~Adiga, S.~K. Jana, and A.~B.
@@ -579,15 +595,32 @@ L.~Rumberg, H.~Ehlert, U.~L{\"u}dtke, and J.~Ostermann, ``Age-invariant
 A.~Senior and I.~Lopez-Moreno, ``Improving dnn speaker independence with
   i-vector inputs,'' in \emph{ICASSP}, 2014, pp. 225--229.
 
+\bibitem{shivakumar2020transfer}
+P.~G. Shivakumar and P.~Georgiou, ``Transfer learning from adult to children
+  for speech recognition: Evaluation, analysis and recommendations,''
+  \emph{Computer speech \& language}, vol.~63, p. 101077, 2020.
+
 \bibitem{prosody_feat}
 H.~K. Kathania, S.~Shahnawazuddin, N.~Adiga, and W.~Ahmad, ``Role of prosodic
   features on children's speech recognition,'' in \emph{2018 IEEE International
   Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 2018, pp.
   5519--5523.
 
+\bibitem{kadyan2023prosody}
+V.~Kadyan, T.~Hasija, and A.~Singh, ``Prosody features based low resource
+  punjabi children asr and t-nt classifier using data augmentation,''
+  \emph{Multimedia Tools and Applications}, vol.~82, no.~3, pp. 3973--3994,
+  2023.
+
 \bibitem{linguistic-children}
 J.~Wilpon and C.~Jacobsen, ``A study of speech recognition for children and the
   elderly,'' in \emph{ICASSP}, vol.~1, 1996, pp. 349--352 vol. 1.
+
+\bibitem{gale2019improving}
+R.~Gale, L.~Chen, J.~Dolata, J.~Van~Santen, and M.~Asgari, ``Improving asr
+  systems for children with autism and language impairment using domain-focused
+  dnn transfer techniques,'' in \emph{Interspeech}, vol. 2019.\hskip 1em plus
+  0.5em minus 0.4em\relax NIH Public Access, 2019, p.~11.
 
 \bibitem{subwords}
 \BIBentryALTinterwordspacing
@@ -598,16 +631,38 @@ A.~Hagen, B.~Pellom, and R.~Cole, ``Highly accurate children’s speech
   \url{https://www.sciencedirect.com/science/article/pii/S0167639307000878}
 \BIBentrySTDinterwordspacing
 
+\bibitem{pronunciation}
+P.~G. Shivakumar, A.~Potamianos, S.~Lee, and S.~S. Narayanan, ``Improving
+  speech recognition for children using acoustic adaptation and pronunciation
+  modeling.'' in \emph{WOCCI}, 2014, pp. 15--19.
+
 \bibitem{pronunciation2}
 Q.~Li and M.~J. Russell, ``An analysis of the causes of increased error rates
   in children's speech recognition,'' in \emph{Seventh International Conference
   on Spoken Language Processing}, 2002.
+
+\bibitem{bhardwaj2022automatic}
+V.~Bhardwaj, M.~T. Ben~Othman, V.~Kukreja, Y.~Belkhier, M.~Bajaj, B.~S. Goud,
+  A.~U. Rehman, M.~Shafiq, and H.~Hamam, ``Automatic speech recognition (asr)
+  systems for children: A systematic literature review,'' \emph{Applied
+  Sciences}, vol.~12, no.~9, p. 4419, 2022.
 
 \bibitem{tdnn}
 V.~Peddinti, D.~Povey, and S.~Khudanpur, ``A time delay neural network
   architecture for efficient modeling of long temporal contexts,'' in
   \emph{Sixteenth annual conference of the international speech communication
   association}, 2015.
+
+\bibitem{kumar2020leveraging}
+M.~Kumar, S.~H. Kim, C.~Lord, T.~D. Lyon, and S.~Narayanan, ``Leveraging
+  linguistic context in dyadic interactions to improve automatic speech
+  recognition for children,'' \emph{Computer speech \& language}, vol.~63, p.
+  101101, 2020.
+
+\bibitem{TDNN-F}
+D.~Povey, G.~Cheng, Y.~Wang, K.~Li, H.~Xu, M.~Yarmohammadi, and S.~Khudanpur,
+  ``Semi-orthogonal low-rank matrix factorization for deep neural networks.''
+  in \emph{Interspeech}, 2018, pp. 3743--3747.
 
 \bibitem{tdnnf-children}
 F.~Wu, L.~P. Garc{\'\i}a-Perera, D.~Povey, and S.~Khudanpur, ``Advances in
@@ -635,10 +690,17 @@ S.-I. Ng, W.~Liu, Z.~Peng, S.~Feng, H.-P. Huang, O.~Scharenborg, and T.~Lee,
   ``The cuhk-tudelft system for the slt 2021 children speech recognition
   challenge,'' \emph{arXiv preprint arXiv:2011.06239}, 2020.
 
-\bibitem{xu21c_interspeech}
-G.~Xu, S.~Yang, L.~Ma, C.~Li, and Z.~Wu, ``{The TAL System for the
-  INTERSPEECH2021 Shared Task on Automatic Speech Recognition for Non-Native
-  Childrens Speech},'' in \emph{Proc. Interspeech 2021}, 2021, pp. 1294--1298.
+\bibitem{chan2015listen}
+W.~Chan, N.~Jaitly, Q.~V. Le, and O.~Vinyals, ``Listen, attend and spell,''
+  \emph{arXiv preprint arXiv:1508.01211}, 2015.
+
+\bibitem{targ2016resnet}
+S.~Targ, D.~Almeida, and K.~Lyman, ``Resnet in resnet: Generalizing residual
+  architectures,'' \emph{arXiv preprint arXiv:1603.08029}, 2016.
+
+\bibitem{Transformer}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+  L.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' 2017.
 
 \bibitem{adultAUGMENT1}
 M.~Qian, I.~McLoughlin, W.~Quo, and L.~Dai, ``Mismatched training data
@@ -730,6 +792,11 @@ L.~Gelin, T.~Pellegrini, J.~Pinquier, and M.~Daniel, ``Simulating reading
   mistakes for child speech transformer-based phone recognition,'' in
   \emph{Annual Conference of the International Speech Communication Association
   (INTERSPEECH)}, 2021.
+
+\bibitem{asr-improved2}
+D.~Elenius and M.~Blomberg, ``Adaptation and normalization experiments in
+  speech recognition for 4 to 8 year old children.'' in \emph{Interspeech},
+  2005, pp. 2749--2752.
 
 \bibitem{tfbased}
 Y.~Bengio, A.~Courville, and P.~Vincent, ``Representation learning: A review
@@ -1095,21 +1162,12 @@ M.~Ravanelli, T.~Parcollet, P.~Plantinga, A.~Rouhe, S.~Cornell, L.~Lugosch,
 M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
   are key-value memories,'' \emph{arXiv preprint arXiv:2012.14913}, 2020.
 
-\bibitem{shivakumar2020transfer}
-P.~G. Shivakumar and P.~Georgiou, ``Transfer learning from adult to children
-  for speech recognition: Evaluation, analysis and recommendations,''
-  \emph{Computer speech \& language}, vol.~63, p. 101077, 2020.
-
 \bibitem{hu2022synt++}
 T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
   O.~Tuzel, ``Synt++: Utilizing imperfect synthetic data to improve speech
   recognition,'' in \emph{ICASSP 2022-2022 IEEE International Conference on
   Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE, 2022, pp. 7682--7686.
-
-\bibitem{Transformer}
-A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
-  L.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' 2017.
 
 \bibitem{pfeiffer2020adapterfusion}
 J.~Pfeiffer, A.~Kamath, A.~R{\"u}ckl{\'e}, K.~Cho, and I.~Gurevych,

@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 15120 items from 5000.
+Reallocated field_info (elt_size=4) to 15626 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Warning--I didn't find a database entry for "asr-review"
 Warning--I didn't find a database entry for "liao2015large"
@@ -23,47 +23,48 @@ Warning--I didn't find a database entry for "kong2020hifi"
 Warning--empty journal in king2017robust
 Warning--empty journal in clark1977psychology
 Warning--empty journal in sak2014long
+Warning--missing school in ghai2011addressing
 
 Done.
-You've used 212 entries,
+You've used 223 entries,
             4087 wiz_defined-function locations,
-            1899 strings with 52420 characters,
-and the built_in function-call counts, 162150 in all, are:
-= -- 12324
-> -- 4743
-< -- 1157
-+ -- 2539
-- -- 920
-* -- 7637
-:= -- 23297
-add.period$ -- 467
-call.type$ -- 212
-change.case$ -- 211
-chr.to.int$ -- 2790
-cite$ -- 215
-duplicate$ -- 11793
-empty$ -- 13702
-format.name$ -- 1103
-if$ -- 38259
+            1944 strings with 54501 characters,
+and the built_in function-call counts, 169530 in all, are:
+= -- 12901
+> -- 4943
+< -- 1195
++ -- 2641
+- -- 961
+* -- 7979
+:= -- 24400
+add.period$ -- 493
+call.type$ -- 223
+change.case$ -- 222
+chr.to.int$ -- 2868
+cite$ -- 227
+duplicate$ -- 12363
+empty$ -- 14357
+format.name$ -- 1154
+if$ -- 40002
 int.to.chr$ -- 0
-int.to.str$ -- 212
-missing$ -- 2215
-newline$ -- 687
-num.names$ -- 212
-pop$ -- 5641
+int.to.str$ -- 223
+missing$ -- 2325
+newline$ -- 720
+num.names$ -- 223
+pop$ -- 5917
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 12481
+skip$ -- 13066
 stack$ -- 0
-substring$ -- 6837
-swap$ -- 9216
-text.length$ -- 227
+substring$ -- 7054
+swap$ -- 9632
+text.length$ -- 239
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 212
-warning$ -- 3
-while$ -- 638
-width$ -- 215
-write$ -- 1977
-(There were 11 warnings)
+type$ -- 223
+warning$ -- 4
+while$ -- 664
+width$ -- 226
+write$ -- 2077
+(There were 12 warnings)
