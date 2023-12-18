@@ -19,18 +19,20 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Children automatic speech recognition}{\reset@font\mtcSfont 35}{section.2.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Feature extraction stage}{\reset@font\mtcSSfont 35}{subsection.2.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Pronunciation and language model}{\reset@font\mtcSSfont 37}{subsection.2.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Design of acoustic models}{\reset@font\mtcSSfont 38}{subsection.2.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Design of acoustic models}{\reset@font\mtcSSfont 37}{subsection.2.3.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.4}End-to-end models}{\reset@font\mtcSSfont 38}{subsection.2.3.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.5}Data augmentation}{\reset@font\mtcSSfont 39}{subsection.2.3.5}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.5.A}Using available data}{\reset@font\mtcSSSfont 40}{subsubsection.2.3.5.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.6}Training procedure for children speech recognition}{\reset@font\mtcSSfont 40}{subsection.2.3.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.5.A}Using external data}{\reset@font\mtcSSSfont 39}{subsubsection.2.3.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.5.B}Using available data}{\reset@font\mtcSSSfont 40}{subsubsection.2.3.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.6}Training procedure for children speech recognition}{\reset@font\mtcSSfont 41}{subsection.2.3.6}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.6.A}Transfer learning}{\reset@font\mtcSSSfont 41}{subsubsection.2.3.6.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.6.B}Multi-task learning}{\reset@font\mtcSSSfont 42}{subsubsection.2.3.6.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Children Corpora}{\reset@font\mtcSfont 44}{section.2.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}LETSREAD}{\reset@font\mtcSSfont 44}{subsection.2.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}PFSTAR\_SWEDISH}{\reset@font\mtcSSfont 44}{subsection.2.4.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}ETLTDE}{\reset@font\mtcSSfont 44}{subsection.2.4.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.4}CMU\_KIDS}{\reset@font\mtcSSfont 46}{subsection.2.4.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.5}CHOREC}{\reset@font\mtcSSfont 46}{subsection.2.4.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.6}MyST}{\reset@font\mtcSSfont 46}{subsection.2.4.6}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Summary}{\reset@font\mtcSfont 46}{section.2.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.6.B}Multi-task learning}{\reset@font\mtcSSSfont 44}{subsubsection.2.3.6.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.6.C}Self-supervised Learning}{\reset@font\mtcSSSfont 45}{subsubsection.2.3.6.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Children Corpora}{\reset@font\mtcSfont 46}{section.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.1}LETSREAD}{\reset@font\mtcSSfont 48}{subsection.2.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.2}PFSTAR\_SWEDISH}{\reset@font\mtcSSfont 48}{subsection.2.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.3}ETLTDE}{\reset@font\mtcSSfont 48}{subsection.2.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.4}CMU\_KIDS}{\reset@font\mtcSSfont 48}{subsection.2.4.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.5}CHOREC}{\reset@font\mtcSSfont 49}{subsection.2.4.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.4.6}MyST}{\reset@font\mtcSSfont 49}{subsection.2.4.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.5}Summary}{\reset@font\mtcSfont 49}{section.2.5}}

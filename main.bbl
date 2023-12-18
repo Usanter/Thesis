@@ -55,11 +55,6 @@ E.~Kiktova, M.~Lojka, M.~Pleva, J.~Juhar, and A.~Cizmar, ``Comparison of
 R.~Weide \emph{et~al.}, ``The carnegie mellon pronouncing dictionary,''
   \emph{release 0.6, www. cs. cmu. edu}, 1998.
 
-\bibitem{specaugment}
-D.~S. Park, W.~Chan, Y.~Zhang, C.-C. Chiu, B.~Zoph, E.~D. Cubuk, and Q.~V. Le,
-  ``Specaugment: A simple augmentation method for automatic speech
-  recognition,'' in \emph{INTERSPEECH}, 2019.
-
 \bibitem{TFchildren}
 P.~G. Shivakumar and P.~Georgiou, ``Transfer learning from adult to children
   for speech recognition: Evaluation, analysis and recommendations,'' 2018.
@@ -719,6 +714,29 @@ M.~Matassoni, R.~Gretter, D.~Falavigna, and D.~Giuliani, ``Non-native children
   speech recognition through transfer learning,'' in \emph{ICASSP}, 2018, pp.
   6229--6233.
 
+\bibitem{nagano2019data}
+T.~Nagano, T.~Fukuda, M.~Suzuki, and G.~Kurata, ``Data augmentation based on
+  vowel stretch for improving children's speech recognition,'' in \emph{2019
+  IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)}.\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 2019, pp. 502--508.
+
+\bibitem{yeung2021fundamental}
+G.~Yeung, R.~Fan, and A.~Alwan, ``Fundamental frequency feature normalization
+  and data augmentation for child speech recognition,'' in \emph{ICASSP
+  2021-2021 IEEE International Conference on Acoustics, Speech and Signal
+  Processing (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2021, pp.
+  6993--6997.
+
+\bibitem{dua2022spectral}
+M.~Dua, V.~Kadyan, N.~Banthia, A.~Bansal, and T.~Agarwal, ``Spectral warping
+  and data augmentation for low resource language asr system under mismatched
+  conditions,'' \emph{Applied Acoustics}, vol. 190, p. 108643, 2022.
+
+\bibitem{shuyangdata}
+Z.~Shuyang, M.~Singh, A.~Woubie, and R.~Karhila, ``Data augmentation for
+  children asr and child-adult speaker classification using voice conversion
+  methods.''
+
 \bibitem{GANS}
 P.~Sheng, Z.~Yang, and Y.~Qian, ``Gans for children: A generative data
   augmentation strategy for children speech recognition,'' in \emph{2019 IEEE
@@ -782,10 +800,25 @@ J.~Malek, J.~Zdansky, and P.~Cerva, ``Robust automatic recognition of speech
   Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE, 2017, pp. 5210--5214.
 
+\bibitem{lo2020ntnu}
+T.-H. Lo, F.-A. Chao, S.-Y. Weng, and B.~Chen, ``The ntnu system at the
+  interspeech 2020 non-native children's speech asr challenge,'' \emph{arXiv
+  preprint arXiv:2005.08433}, 2020.
+
+\bibitem{singh2022spectral}
+V.~P. Singh, H.~Sailor, S.~Bhattacharya, and A.~Pandey, ``Spectral modification
+  based data augmentation for improving end-to-end asr for children's speech,''
+  \emph{arXiv preprint arXiv:2203.06600}, 2022.
+
 \bibitem{VTLP}
 N.~Jaitly and G.~E. Hinton, ``Vocal tract length perturbation (vtlp) improves
   speech recognition,'' in \emph{Proc. ICML Workshop on Deep Learning for
   Audio, Speech and Language}, vol. 117, 2013, p.~21.
+
+\bibitem{specaugment}
+D.~S. Park, W.~Chan, Y.~Zhang, C.-C. Chiu, B.~Zoph, E.~D. Cubuk, and Q.~V. Le,
+  ``Specaugment: A simple augmentation method for automatic speech
+  recognition,'' in \emph{INTERSPEECH}, 2019.
 
 \bibitem{gelin2021simulating}
 L.~Gelin, T.~Pellegrini, J.~Pinquier, and M.~Daniel, ``Simulating reading
@@ -860,6 +893,78 @@ L.~Wei, W.~Dong, B.~Lin, and J.~Zhang, ``Multi-task based mispronunciation
   \emph{APSIPA ASC}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2019, pp.
   1791--1794.
 
+\bibitem{zavaliagkos1998utilizing}
+G.~Zavaliagkos and T.~Colthurst, ``Utilizing untranscribed training data to
+  improve perfomance.'' in \emph{LREC}.\hskip 1em plus 0.5em minus 0.4em\relax
+  Citeseer, 1998, pp. 317--322.
+
+\bibitem{ma2006unsupervised}
+J.~Ma, S.~Matsoukas, O.~Kimball, and R.~Schwartz, ``Unsupervised training on
+  large amounts of broadcast news data,'' in \emph{2006 IEEE International
+  Conference on Acoustics Speech and Signal Processing Proceedings},
+  vol.~3.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2006, pp. III--III.
+
+\bibitem{sarzynska2021detecting}
+J.~Sarzynska-Wawer, A.~Wawer, A.~Pawlak, J.~Szymanowska, I.~Stefaniak,
+  M.~Jarkiewicz, and L.~Okruszek, ``Detecting formal thought disorder by deep
+  contextualized word representations,'' \emph{Psychiatry Research}, vol. 304,
+  p. 114135, 2021.
+
+\bibitem{henaff2020data}
+O.~Henaff, ``Data-efficient image recognition with contrastive predictive
+  coding,'' in \emph{International conference on machine learning}.\hskip 1em
+  plus 0.5em minus 0.4em\relax PMLR, 2020, pp. 4182--4192.
+
+\bibitem{baevski2020wav2vec}
+A.~Baevski, Y.~Zhou, A.~Mohamed, and M.~Auli, ``wav2vec 2.0: A framework for
+  self-supervised learning of speech representations,'' \emph{Advances in
+  Neural Information Processing Systems}, vol.~33, pp. 12\,449--12\,460, 2020.
+
+\bibitem{hsu2021hubert}
+W.-N. Hsu, B.~Bolte, Y.-H.~H. Tsai, K.~Lakhotia, R.~Salakhutdinov, and
+  A.~Mohamed, ``Hubert: Self-supervised speech representation learning by
+  masked prediction of hidden units,'' \emph{IEEE/ACM Transactions on Audio,
+  Speech, and Language Processing}, vol.~29, pp. 3451--3460, 2021.
+
+\bibitem{riviere2020unsupervised}
+M.~Riviere, A.~Joulin, P.-E. Mazar{\'e}, and E.~Dupoux, ``Unsupervised
+  pretraining transfers well across languages,'' in \emph{ICASSP 2020-2020 IEEE
+  International Conference on Acoustics, Speech and Signal Processing
+  (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2020, pp. 7414--7418.
+
+\bibitem{wang2022wav2vec}
+Y.~Wang, J.~Li, H.~Wang, Y.~Qian, C.~Wang, and Y.~Wu, ``Wav2vec-switch:
+  Contrastive learning from original-noisy speech pairs for robust speech
+  recognition,'' in \emph{ICASSP 2022-2022 IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2022, pp. 7097--7101.
+
+\bibitem{li2021accent}
+J.~Li, V.~Manohar, P.~Chitkara, A.~Tjandra, M.~Picheny, F.~Zhang, X.~Zhang, and
+  Y.~Saraf, ``Accent-robust automatic speech recognition using supervised and
+  unsupervised wav2vec embeddings,'' \emph{arXiv preprint arXiv:2110.03520},
+  2021.
+
+\bibitem{xu2021tal}
+G.~Xu, S.~Yang, L.~Ma, C.~Li, and Z.~Wu, ``The tal system for the
+  interspeech2021 shared task on automatic speech recognition for non-native
+  childrens speech.'' in \emph{Interspeech}, 2021, pp. 1294--1298.
+
+\bibitem{jain2023wav2vec2}
+R.~Jain, A.~Barcovschi, M.~Yiwere, D.~Bigioi, P.~Corcoran, and H.~Cucu, ``A
+  wav2vec2-based experimental study on self-supervised learning methods to
+  improve child speech recognition.'' \emph{IEEE Access}, 2023.
+
+\bibitem{jain2023adaptation}
+R.~Jain, A.~Barcovschi, M.~Yiwere, P.~Corcoran, and H.~Cucu, ``Adaptation of
+  whisper models to child speech recognition,'' \emph{arXiv preprint
+  arXiv:2307.13008}, 2023.
+
+\bibitem{fan2022draft}
+R.~Fan and A.~Alwan, ``Draft: A novel framework to reduce domain shifting in
+  self-supervised learning and its application to children's asr,'' \emph{arXiv
+  preprint arXiv:2206.07931}, 2022.
+
 \bibitem{providence}
 K.~Demuth, J.~Culbertson, and J.~Alter, ``Word-minimality, epenthesis and coda
   licensing in the early acquisition of english,'' \emph{Language and speech},
@@ -907,9 +1012,21 @@ A.~H{\"a}m{\"a}l{\"a}inen, S.~Rodrigues, A.~J{\'u}dice, S.~M. Silva, A.~Calado,
   Dialogue}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2013, pp.
   544--551.
 
+\bibitem{yeung2019robotic}
+G.~Yeung, A.~L. Bailey, A.~Afshan, M.~Tinkler, M.~Q. P{\'e}rez, A.~Martin,
+  A.~A. Pogossian, S.~Spaulding, H.~W. Park, M.~Muco \emph{et~al.}, ``A robotic
+  interface for the administration of language, literacy, and speech pathology
+  assessments for children.'' in \emph{SLaTE}, 2019, pp. 41--42.
+
 \bibitem{pfstar}
 M.~Russell, S.~D'Arcy, M.~Wong, A.~Batliner, M.~Blomberg, and M.~Gerosa, ``The
   pf-star children's speech corpus,'' in \emph{Interspeech 2005}, 2005.
+
+\bibitem{yu2021slt}
+F.~Yu, Z.~Yao, X.~Wang, K.~An, L.~Xie, Z.~Ou, B.~Liu, X.~Li, and G.~Miao, ``The
+  slt 2021 children speech recognition challenge: Open datasets, rules and
+  baselines,'' in \emph{2021 IEEE Spoken Language Technology Workshop
+  (SLT)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2021, pp. 1117--1123.
 
 \bibitem{russell2006pf}
 M.~Russell, ``The pf-star british english childrens speech corpus,'' \emph{The
@@ -1135,11 +1252,6 @@ K.~Tomanek, V.~Zayats, D.~Padfield, K.~Vaillancourt, and F.~Biadsy, ``Residual
   adapters for parameter-efficient asr adaptation to atypical and accented
   speech,'' \emph{arXiv preprint arXiv:2109.06952}, 2021.
 
-\bibitem{fan2022draft}
-R.~Fan and A.~Alwan, ``Draft: A novel framework to reduce domain shifting in
-  self-supervised learning and its application to children's asr,'' \emph{arXiv
-  preprint arXiv:2206.07931}, 2022.
-
 \bibitem{vae_transformation}
 M.~Blaauw and J.~Bonada, ``Modeling and transforming speech using variational
   autoencoders,'' \emph{Morgan N, editor. Interspeech 2016; 2016 Sep 8-12; San
@@ -1195,17 +1307,6 @@ E.~Cooper, C.-I. Lai, Y.~Yasuda, F.~Fang, X.~Wang, N.~Chen, and J.~Yamagishi,
 I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
   A.~Courville, and Y.~Bengio, ``Generative adversarial nets,'' \emph{Advances
   in neural information processing systems}, vol.~27, 2014.
-
-\bibitem{baevski2020wav2vec}
-A.~Baevski, Y.~Zhou, A.~Mohamed, and M.~Auli, ``wav2vec 2.0: A framework for
-  self-supervised learning of speech representations,'' \emph{Advances in
-  Neural Information Processing Systems}, vol.~33, pp. 12\,449--12\,460, 2020.
-
-\bibitem{hsu2021hubert}
-W.-N. Hsu, B.~Bolte, Y.-H.~H. Tsai, K.~Lakhotia, R.~Salakhutdinov, and
-  A.~Mohamed, ``Hubert: Self-supervised speech representation learning by
-  masked prediction of hidden units,'' \emph{IEEE/ACM Transactions on Audio,
-  Speech, and Language Processing}, vol.~29, pp. 3451--3460, 2021.
 
 \bibitem{tera}
 A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of

@@ -17,21 +17,20 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Three-state Hidden Markov Model for modelling phones\relax }}{26}{figure.caption.12}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Phoneme set and examples of CMU dictionary using 39 phonemes from \cite {weide1998carnegie}\relax }}{28}{figure.caption.13}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{31}{figure.caption.14}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Before-After specaugment augmentation with warping of the time and time steps and Mel frequency masking (figure from \cite {specaugment})\relax }}{40}{figure.caption.15}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{42}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{42}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{42}{figure.caption.16}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{43}{figure.caption.17}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{42}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{42}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{42}{figure.caption.15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{44}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Hybrid models for children automatic speech recognition}{49}{chapter.3}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialized for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{56}{figure.caption.22}
+\contentsline {xchapter}{Hybrid models for children automatic speech recognition}{51}{chapter.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialized for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{58}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {xchapter}{End-to-End children automatic speech recognition}{61}{chapter.4}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }}{64}{figure.caption.25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces a) Example of a Transformer layer with an adapter layer (adapted from \cite {pfeiffer}); b) Adapter layer; c) Vadapter layer\relax }}{67}{figure.caption.26}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Relative WER delta over the ratio (\%) of trainable parameters compared to full fine-tuned model.\relax }}{73}{figure.caption.30}
+\contentsline {xchapter}{End-to-End children automatic speech recognition}{63}{chapter.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }}{66}{figure.caption.24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces a) Example of a Transformer layer with an adapter layer (adapted from \cite {pfeiffer}); b) Adapter layer; c) Vadapter layer\relax }}{69}{figure.caption.25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Relative WER delta over the ratio (\%) of trainable parameters compared to full fine-tuned model.\relax }}{75}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Use of synthetic speech as data augmentation}{75}{chapter.5}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{79}{figure.caption.31}
+\contentsline {xchapter}{Use of synthetic speech as data augmentation}{77}{chapter.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{81}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathology detection from speech}{89}{chapter.6}
+\contentsline {xchapter}{Pathology detection from speech}{91}{chapter.6}
