@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 16454 items from 5000.
+Reallocated field_info (elt_size=4) to 16822 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Warning--I didn't find a database entry for "asr-review"
 Warning--I didn't find a database entry for "liao2015large"
@@ -28,45 +28,45 @@ Warning--empty journal in shuyangdata
 Warning--empty year in shuyangdata
 
 Done.
-You've used 241 entries,
+You've used 249 entries,
             4087 wiz_defined-function locations,
-            2023 strings with 58449 characters,
-and the built_in function-call counts, 184277 in all, are:
-= -- 13990
-> -- 5417
-< -- 1300
-+ -- 2889
-- -- 1053
-* -- 8666
-:= -- 26425
-add.period$ -- 537
-call.type$ -- 241
-change.case$ -- 240
-chr.to.int$ -- 3138
-cite$ -- 247
-duplicate$ -- 13428
-empty$ -- 15610
-format.name$ -- 1263
-if$ -- 43507
+            2057 strings with 60197 characters,
+and the built_in function-call counts, 190820 in all, are:
+= -- 14445
+> -- 5672
+< -- 1340
++ -- 3023
+- -- 1106
+* -- 8978
+:= -- 27317
+add.period$ -- 556
+call.type$ -- 249
+change.case$ -- 248
+chr.to.int$ -- 3246
+cite$ -- 255
+duplicate$ -- 13898
+empty$ -- 16164
+format.name$ -- 1324
+if$ -- 45052
 int.to.chr$ -- 0
-int.to.str$ -- 241
-missing$ -- 2524
-newline$ -- 774
-num.names$ -- 241
-pop$ -- 6458
+int.to.str$ -- 249
+missing$ -- 2621
+newline$ -- 798
+num.names$ -- 249
+pop$ -- 6728
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 14184
+skip$ -- 14665
 stack$ -- 0
-substring$ -- 7726
-swap$ -- 10467
-text.length$ -- 254
+substring$ -- 7986
+swap$ -- 10828
+text.length$ -- 258
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 241
+type$ -- 249
 warning$ -- 6
-while$ -- 724
-width$ -- 244
-write$ -- 2234
+while$ -- 748
+width$ -- 252
+write$ -- 2302
 (There were 14 warnings)

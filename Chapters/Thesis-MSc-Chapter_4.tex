@@ -9,12 +9,17 @@
 \section{Introduction}
 \label{chap:implement}
 % End2End better and better
-With the growing popularity of deep learning, numerous successful attempts to apply it to ASR have been made. It was only recently, that end-to-end models have shown their capability to outperform hybrid HMM-DNN systems for a variety of speech recognition tasks, including children's ASR. The major advantage of end-to-end speech recognition systems is the merging of the whole training process into a single neural network that eliminates the possibility of behavioural incompatibilities between modules that have been trained independently. However, because of the problem of children's data scarcity, the application of the end-to-end paradigm for children's ASR is relatively new and has not been extensively investigated \cite{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}. In addition, end-to-end models often require more parameters to provide such robustness and flexibility. As a result, training on small datasets becomes increasingly difficult \cite{luscher2019rwth}.
+The growing popularity of deep learning has witnessed numerous successful applications in ASR. NIt was only recently, that end-to-end models have shown their capability to outperform hybrid HMM-DNN systems for a variety of speech recognition tasks, including children's ASR. The primary advantage of end-to-end speech recognition systems lies in merging the entire training process within a single neural network, thereby eliminating potential behavioral incompatibilities that may arise between independently trained modules.
 
-With the recent increased interest in end-to-end speech recognition, several architectures have been developed, including recurrent neural networks \cite{soltau2016neural} and neural transducers \cite{battenberg2017exploring}. However, one architecture stands out and consistently provides state-of-the-art results in large-vocabulary speech recognition for both adults and children, the Transformer.
+However, the application of the end-to-end paradigm for children's ASR is a relatively recent development and has not been extensively explored, mainly due to the challenge of data scarcity in the context of children's speech \cite{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}. Additionally, end-to-end models often necessitate a larger number of parameters to achieve the desired robustness and flexibility. Consequently, training them on small datasets becomes increasingly challenging \cite{luscher2019rwth}. Despite these challenges, the exploration of end-to-end models holds promise for advancing the state-of-the-art in children's ASR.
 
-This section dives more into details of the Transformer design as well as the adapter transfer for children ASR, a  parameter-efficient transfer for Transformer models that we have recently proposed.
-\section{Transformer models}
+%With the growing popularity of deep learning, numerous successful attempts to apply it to ASR have been made. It was only recently, that end-to-end models have shown their capability to outperform hybrid HMM-DNN systems for a variety of speech recognition tasks, including children's ASR. The major advantage of end-to-end speech recognition systems is the merging of the whole training process into a single neural network that eliminates the possibility of behavioural incompatibilities between modules that have been trained independently. However, because of the problem of children's data scarcity, the application of the end-to-end paradigm for children's ASR is relatively new and has not been extensively investigated \cite{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}. In addition, end-to-end models often require more parameters to provide such robustness and flexibility. As a result, training on small datasets becomes increasingly difficult \cite{luscher2019rwth}.
+
+As mentioned in section \ref{section:SOTAE2E}, the recent increased interest in end-to-end speech recognition, has led development the  several architecture, encompassing recurrent neural networks \cite{soltau2016neural}, neural transducers \cite{battenberg2017exploring}, and the Transformer architecture \cite{vaswani2017attention}. Among these, the Transformer architecture stands out as it consistently delivers state-of-the-art results in large-vocabulary speech recognition, demonstrating its efficacy across both adult and children's speech domains \cite{gelin2021endtoend}.
+%With the recent increased interest in end-to-end speech recognition, several architectures have been developed, including recurrent neural networks \cite{soltau2016neural} and neural transducers \cite{battenberg2017exploring}. However, one architecture stands out and consistently provides state-of-the-art results in large-vocabulary speech recognition for both adults and children, the Transformer.
+
+This chapter will dives into more details of the Transformer design as well as the adapter transfer for children ASR, a  parameter-efficient transfer for Transformer models that we have recently proposed.
+\section{Transformer model}
 \label{sec:trans_archi}
 
 \begin{figure}[ht]
@@ -24,33 +29,178 @@ This section dives more into details of the Transformer design as well as the ad
     \label{fig:transformer_archi}
 \end{figure}
 % Explain transformer
-First proposed in 2017 \cite{vaswani2017attention}, the Transformer architecture is a sequence-to-sequence encoder-decoder architecture that relies entirely on self-attention, eliminating recurrence, convolutions entirely and vanishing gradient issues. Another notable difference with recurrent neural networks is that the Transformer computes the dependencies between each pair of positions simultaneously, rather than one by one, by encoding the symbol position in the sequence. This, enables more parallelisation, resulting in faster training. Since its release, the Transformer architecture had tremendous impact in various areas, including NLP \cite{Bert}, computer vision \cite{dosovitskiy2020image}, and speech \cite{dong2018speech}.
-The transformer encoder-decoder architecture is presented in figure \ref{fig:transformer_archi}, with c) the encoder and d) the decoder. The encoder's role is to transform an input sequence $X = x_1, \dots,x_T$ into a series of continuous representations $Z = z_1, \dots,z_T$ which are then fed into a decoder. The decoder, constructs an output sequence $Y = y_1, \dots, y_N$, one element at a time. At each time step, the decoder receives the encoder outputs together with the last decoder output, in an auto-regressive manner.
+Introduced in 2017 by Vaswani et al. \cite{vaswani2017attention}, the Transformer architecture is a sequence-to-sequence encoder-decoder model that relies solely on self-attention mechanisms, completely discarding the use of recurrence and convolutions. This design choice addresses challenges such as vanishing gradient issues commonly associated with recurrent neural networks. Another notable difference with recurrent neural networks is that the Transformer computes the dependencies between each pair of positions simultaneously, rather than one by one, by directly encoding the position in the sequence. This enables more parallelisation and therefore a faster training process.
 
-The information about the relative position of the tokens in the sequence is given by the summation between the input/output embedding and the positional embedding. Although there are many choices of positional encodings, \cite{vaswani2017attention} proposed to use sine and cosine of different frequencies as follows:
+Since its introduction, the Transformer architecture had a tremendous impact across various domains, including Natural Language Processing (NLP) \cite{Bert,brown2020language}, computer vision \cite{dosovitskiy2020image}, and speech processing \cite{dong2018speech}. The Transformer's capacity to capture intricate dependencies and patterns in sequences has established it as a popular architecture in the deep learning field, contributing to advancements and breakthroughs across various applications, such as ChatGPT \cite{bahrini2023chatgpt} or Dall-E \cite{ramesh2021zero}.
+%First proposed in 2017 \cite{vaswani2017attention}, the Transformer architecture is a sequence-to-sequence encoder-decoder architecture that relies entirely on self-attention, eliminating recurrence, convolutions entirely and vanishing gradient issues. Another notable difference with recurrent neural networks is that the Transformer computes the dependencies between each pair of positions simultaneously, rather than one by one, by encoding the symbol position in the sequence. This, enables more parallelisation, resulting in faster training. Since its release, the Transformer architecture had tremendous impact in various areas, including NLP \cite{Bert}, computer vision \cite{dosovitskiy2020image}, and speech \cite{dong2018speech}.
+
+The Transformer encoder-decoder architecture, as depicted in Figure \ref{fig:transformer_archi}, consists of an encoder (c) and a decoder (d). Prior to entering the encoder or decoder, both inputs and targets undergo processing through an embedding layer. This involves the use of learned embeddings to convert input tokens and output tokens into vectors of dimension $d_{\text{model}}$. 
+% Positional embedding
+Since the transformer model contains no recurrence and no convolution mechanisms, information about the relative or absolute position of the tokens must be injected in the sequence to allow the model to make use of the order of the sequence. To achieve this, information about the relative or absolute position of the tokens is obtained through the summation of the input/output embedding and the positional embedding. While various alternatives for positional encodings were used , Vaswani et al. \cite{vaswani2017attention} proposed the use of sinusoidal and cosine functions with different frequencies, as follows:
+%Since the transformer model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, some information about the relative or absolute position of the tokens are injected in the sequence.
+%The information about the relative position of the tokens in the sequence is given by the summation between the input/output embedding and the positional embedding. Although there are many choices of positional encodings, \cite{vaswani2017attention} proposed to use sine and cosine of different frequencies as follows:
 \begin{align}
     PosEnc_{(pos,2i)} = \sin(pos/10000^{2i/d_{\text{model}}})\\
     PosEnc_{(pos,2i+1)} = \cos(pos/10000^{2i/d_{\text{model}}})
 \end{align}
 Where $pos$ is the current token or label position and $i$ is the dimension.
+ 
 
-The encoder is composed of a stack of N identical Transformer layers. Each layer consists of a multi-head self-attention module and a feed-forward fully connected neural network module. Each of these modules are followed by a normalization with a residual connection.
-A multi-head self-attention (MHA) modules relies on the scaled dot-product attention \cite{vaswani2017attention}, illustrated in figure \ref{fig:transformer_archi}.a). Scale dot-product attention focuses on how relevant a particular token is with respect to other tokens in the sequence. And is defined as follows:
+%Encoder
+The encoder's primary objective is to transform the input sequence $X = x_1, \dots, x_T$ into a series of continuous representations $Z = z_1, \dots, z_T$. The encoder is structured as a stack of $L$ identical layers, each comprising two sub-modules: the multi-head self-attention (MHSA) and the position-wise fully connected feed-forward network (FFN). Each of these modules are followed by a normalisation with a residual connection.
+
+%Decoder
+Subsequently, the continuous representations $Z$ are fed into the decoder. The decoder is responsible for constructing an output sequence $Y = y_1, \dots, y_N$ one element at a time. At each time step, the decoder receives both the encoder outputs and the last decoder output in an auto-regressive manner. Similar to the encoder, the decoder is composed of a stack of $J$ identical layers. Nevertheless,in comparison to the encoder, the decoder encompasses a third sub-module, which performs multi-head attention (MHA) over the output of the encoder stack. The self-attention sub-module in the decoder stack is modified to prevent positions from attending to subsequent positions. This masking combined with a modified MHA prevents the attention to use subsequent positions, ensuring that the prediction at time-step $i$ solely depends on the previous $< i$ time-steps.
+
+
+%The transformer encoder-decoder architecture is presented in figure \ref{fig:transformer_archi}, with c) the encoder and d) the decoder. The encoder's role is to transform an input sequence $X = x_1, \dots,x_T$ into a series of continuous representations $Z = z_1, \dots,z_T$ which are then fed into a decoder. The decoder, constructs an output sequence $Y = y_1, \dots, y_N$, one element at a time. At each time step, the decoder receives the encoder outputs together with the last decoder output, in an auto-regressive manner.
+% Input embedding
+
+
+
+%The encoder is composed of a stack of N identical Transformer layers. Each layer consists of a multi-head self-attention module and a feed-forward fully connected neural network module. Each of these modules are followed by a normalization with a residual connection.
+%In comparison to the encoder, the decoder contains a third sub-layer, which performs MHA over the output of the encoder using the prior sub-layer of the decoder as the query. The decoder's inputs, which are targets during training and the previously decoded label during inference, are offset by one position. This combined with a modified MHA prevents the attention to use subsequent positions, ensuring that the prediction at time-step $i$ solely depends on the previous $< i$ time-steps.
+%MHSA 
+The MHA module relies on scaled dot-product attention \cite{vaswani2017attention}, as illustrated in Figure \ref{fig:transformer_archi}(a). Scaled dot-product attention focuses on determining how relevant a particular token is with respect to other tokens in the sequence and is defined as follows:
+
 \begin{align}
-    \text{Attention}(Q,K,V) = \text{softmax}(\frac{QK^T}{\sqrt{d_k}})V
-    \label{equation:attention}
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\label{equation:attention}
 \end{align}
-Where the input consists of queries Q, keys K of dimension $d_k$ and values V of dimension $d_v$. The dot product of the query with all keys is each divided by $\sqrt{d_k}$, then passes through a softmax function to obtain attention weights on the values. When $d_k$ is large, the scaling  $\frac{1}{\sqrt{d_k}}$ restrains the dot product from growing large in magnitude.
 
-Instead of performing a single scaled dot-product attention, the MHA module linearly projects $h$ times K, V and Q with different, learned, linear projections to dimensions $d_k$,$d_k$ and $d_v$ respectively. On each of $h$ projected versions is performed the attention function \ref{equation:attention} in parallel. The output of each of the $h$ attention function, of dimension $d_v$ is concatenated and projected one last time as pictured in figure \ref{fig:transformer_archi}.b). More formally:
+
+Here, the input consists of queries $Q$, keys $K$ of dimension $d_k$, and values $V$ of dimension $d_v$. The dot product of the query with all keys is divided by $\sqrt{d_k}$, and the result passes through a softmax function to obtain attention weights. The attention weights are then multiply with the values. When $d_k$ is large, the scaling  $\frac{1}{\sqrt{d_k}}$ restrains the dot product from growing large in magnitude. Note that the Multi-Head Self-Attention (MHSA) is a specific case of MHA where $K$, $V$, and $Q$ are all the same input of the module.
+
+Instead of performing a single scaled dot-product attention, the MHA module linearly projects $h$ times $K$, $V$, and $Q$ with different, learned, linear projections to dimensions $d_k$, $d_k$, and $d_v$ respectively. The attention function \ref{equation:attention} is then applied in parallel to each of the $h$ projected versions. The output of each of the $h$ attention functions, of dimension $d_v$, is concatenated and projected one final time, as depicted in Figure \ref{fig:transformer_archi}(b). Each of the $h$ attention functions is called a head, while the overall is called Multi-head attention (MHA) or Multi-Head self-attention (MHSA) if $K$, $V$ and $Q$ are the same. More formally:
+
 \begin{align}
-    \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h)W^O \\
-    \text{where } head_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)   \nonumber
+\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h)W^O
 \end{align}
-Where the different projections matrices are $W_i^Q \in \mathbb{R}^{d_{\text{model}}\times d_k}$, $W_i^K \in \mathbb{R}^{d_{\text{model}}\times d_k}$, $W_i^V \in \mathbb{R}^{d_{\text{model}}\times d_v}$ and $W^O \in \mathbb{R}^{hd_{v}\times d_{model}}$.
+where
+\begin{align}
+\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)
+\end{align}
+and the different projection matrices are $W_i^Q \in \mathbb{R}^{d_{\text{model}} \times d_k}$, $W_i^K \in \mathbb{R}^{d_{\text{model}} \times d_k}$, $W_i^V \in \mathbb{R}^{d_{\text{model}} \times d_v}$, and $W^O \in \mathbb{R}^{hd_{v} \times d_{\text{model}}}$.
 
 
-In comparison to the encoder, the decoder contains a third sub-layer, which performs MHA over the output of the encoder using the prior sub-layer of the decoder as the query. The decoder's inputs, which are targets during training and the previously decoded label during inference, are offset by one position. This combined with a modified MHA prevents the attention to use subsequent positions, ensuring that the prediction at time-step $i$ solely depends on the previous $< i$ time-steps.
+
+
+%A MHA modules relies on the scaled dot-product attention \cite{vaswani2017attention}, illustrated in figure \ref{fig:transformer_archi}.a). Scale dot-product attention focuses on how relevant a particular token is with respect to other tokens in the sequence. And is defined as follows:
+%\begin{align}
+%    \text{Attention}(Q,K,V) = \text{softmax}(\frac{QK^T}{\sqrt{d_k}})V
+%    \label{equation:attention}
+%\end{align}
+%Where the input consists of queries Q, keys K of dimension $d_k$ and values V of dimension $d_v$. The dot product of the query with all keys is each divided by $\sqrt{d_k}$, then passes through a softmax function to obtain attention weights on the values. When $d_k$ is large, the scaling  $\frac{1}{\sqrt{d_k}}$ restrains the dot product from growing large in magnitude. Note that the MHSA is a particular case of MHA where K,V and Q are all the input of the module.
+
+%Instead of performing a single scaled dot-product attention, the MHA module linearly projects $h$ times K, V and Q with different, learned, linear projections to dimensions $d_k$,$d_k$ and $d_v$ respectively. On each of $h$ projected versions is performed the attention function \ref{equation:attention} in parallel. The output of each of the $h$ attention function, of dimension $d_v$ is concatenated and projected one last time as pictured in figure \ref{fig:transformer_archi}.b). More formally:
+%\begin{align}
+%    \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h)W^O \\
+%    \text{where } head_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)   \nonumber
+%\end{align}
+%Where the different projections matrices are $W_i^Q \in \mathbb{R}^{d_{\text{model}}\times d_k}$, $W_i^K \in \mathbb{R}^{d_{\text{model}}\times d_k}$, $W_i^V \in \mathbb{R}^{d_{\text{model}}\times d_v}$ and $W^O \in \mathbb{R}^{hd_{v}\times d_{model}}$.
+
+
+% FFN
+Furthermore, in addition to the attention modules, each layer within the encoder and decoder encompasses a FFN module. This network is applied to each position separately and identically, and it consists of two linear transformations with a Rectified Linear Unit (ReLU) activation in between. While attention capture interdependencies between the element of the sequence regardless of their position, the FFN non-linearly transform each input token independently:
+
+\begin{align}
+    FFN(x) = max(0,xW_1 + b_1)W_2 + b_2
+\end{align}
+With $W_1 \in \mathbb{R}^{d_{model} \times d_{ffn}}$, $b_1 \in \mathbb{R}^{d_{ffn}}$, $W_2 \in \mathbb{R}^{d_{ffn} \times d_{model}}$ and $b_2 \in \mathbb{R}^{d_{model}}$. Typically $d_{ffn}$ is usually set to $4 \times d_{model}$.
+
+\section{Conformer model}
+\label{sec:conformer}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.4]{imgs/ConformerLayer.png}
+    \caption{Architecture of a Conformer layer}
+    \label{fig:conformer_archi}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imgs/ConvolutionModule.png}
+    \caption{Convolution module in the context of a conformer layer}
+    \label{fig:convModule}
+\end{figure}
+Transformers are recognised for their effectiveness in capturing global information within sequential tasks, thanks to the attention mechanism. Conversely, CNNs excel in capturing local features within data. To leverage the complementary strengths of both architectures, various approaches have been explored \cite{bello2019attention,yang2019convolutional}, and the Conformer architecture \cite{gulati2020conformer} stands out as a notable combination of Transformers and CNNs.
+
+This combination involves incorporating CNNs into the conventional Transformer architecture, as depicted in Figure \ref{fig:conformer_archi}. Specifically, a Conformer block comprises four modules arranged sequentially: a FFN module, a MHSA module, a convolution module, and a second FFN module. Notably, the Conformer block features two FFN modules sandwiching the MHSA module and the Convolution module. This design is inspired by Macaron-Net \cite{lu2019understanding}, which advocates replacing the original FFN in the Transformer block with two half-step FFN modules—one before the attention layer and one after. Similar to Macaron-Net, half-step residual weights is employed for the FFN modules. More formally, for an input $x_i$ to a Conformer block $i$, the output $y_i$ of the block is defined as follows:
+
+%While Transformers are known for their effectiveness in capturing global interactions within data, especially in sequential tasks, with the help of the attention mechanism, CNNs excel at capturing local features within data. Consequently, different appraoches tried to use combining Transformer and CNNs, among these the Conformer architecture was introduced to effectively combine the strengths of both Transformers and CNNs. This is achieved by integrating CNNs into the conventional Transformer architecture as shown in figure \ref{fig:conformer_archi}. More specifically, a Conformer block consists of four modules arranged sequentially: a feed-forward module, a self-attention module, a convolution module, and a second feed-forward module. It is important to note that the Conformer block contains two FFN modules sandwiching the MHSA module and the Convolution module, inspired by Macaron-Net, which proposes replacing the original feed-forward layer in the Transformer block into two half-step feed-forward layers, one before the attention layer and one after. As in Macron-Net, we employ half-step residual weights in our feed-forward (FFN) modules.  Mathematically, for input $x_i$ to a Conformer block $i$, the output $y_i$ of the block is:
+\begin{align}
+    \begin{split}
+    \tilde{x_i} = x_i + \frac{1}{2}FFN(x) \\
+    x_i^{\prime} =\tilde{x_i} + MHSA(\tilde{x_i}) \\
+    x_i^{\prime\prime} = x_i^{\prime} + Conv(x_i^{\prime}) \\
+    y_i = LayerNorm(x_i^{\prime\prime} + \frac{1}{2}FFN(x_i^{\prime\prime}))
+    \end{split}
+\end{align}
+
+More specifically,the convolution modules , inspired by \cite{wu2020lite} and illustrated in Figure \ref{fig:convModule}., starts with a gating mechanism \cite{dauphin2017language} involving a pointwise convolution and a gated linear unit (GLU). Subsequently, a single 1-D depthwise convolution layer is employed. Finally, this 1-D depthwise convolution is followed by a Batchnorm iand then a Swish activation layer.
+
+
+\section{Understand transfer learning efficacy for transformer based models}
+% Explain motivation 
+Motivated by the scarcity of child speech data, TL emerges as a promising strategy to address this challenge in children's ASR. TL involves leveraging pre-trained models trained on extensive out-of-domain datasets, typically adult speech, and adapting them for the specific characteristics of child speech through retraining on a smaller, in-domain dataset of children data. This approach has demonstrated efficacy in both the traditional HMM-DNN paradigm and the modern end-to-end ASR paradigm \cite{sri_end2end,gelin2021endtoend}. We also presented the effectiveness of TL in improving HMM-DNN models for both European-Portuguese and English in Chapter \ref{chap:Chapter3}. Building on these successful applications of TL, we propose to extend our exploration of TL for Transformer by also including the Conformer architecture, a variant of the Transformer designed for speech-related tasks.
+
+% Over param of transformer models
+Nevertheless, various studies in NLP have highlighted the issue of overparameterisation in models like BERT, which are based on the Transformer architecture. Overparameterisation refers to the situation where models have more parameters than necessary for the given task. Notably, observations indicate that certain components of the architecture can be removed without compromising performances, and in some cases, even achieving slight gains in performances. This insight has fueled the success of compression studies, including pruning techniques.
+
+The recognition of overparameterisation in Transformer-based models raises questions about the efficiency and computational cost of these architectures. Ablation studies, which involve systematically removing components of the model, have been instrumental in understanding which parts contribute significantly to the model's performance. These studies, mostly explored in the computer vision field, explored what is formulate by Frankle and Carbin as the Loterry Ticket hypothesis: \textit{``A randomly-initialized, dense neural network contains a subnetwork that is initialized such that—when trained in isolation—it can match the test accuracy of the original network after training for at most the same number of iterations''}.
+
+This understanding not only aids in optimising model architectures for specific tasks but also reduces the computational demands of training and inference. This is particularly relevant in scenarios with resource constraints, such as limited computational power, memory, and training data.
+
+While these ablation works have been extensively studied in NLP and computer vision, this approach remains underexplored for speech tasks. Specifically, pruning techniques, already successfully used for speech models, suggest that overparameterisation may also be present in ASR models. Therefore, since the Transformer and Conformer architectures have shown promising results, exploring the implications of overparameterisation could be an interesting avenue of research, especially in situations where training data is limited, such as in children's ASR.
+
+
+\subsection{Subnetwork Transfer learning}
+% Explain experiments
+Similar to previous study [!!!!], we aim to explore the application of TL in the context of children's ASR. While prior work was focused on the HMM-DNN paradigm, there is no similar work for the end-to-end paradigm. Therefore, we propose to study the contribution of the fine-tuning of Encoder and Decoder parts separately, compared to the entire model fine-tuning. The Encoder is expected to capture more acoustic information, while the Decoder should focus on linguistic information. Given that acoustic variations are prominent in children's speech, our goal is to investigate which layers of the Encoder would be more relevant for TL.
+
+Additionally, we aim to explore the specific contributions of different modules within the model architecture when fine-tuning an adult pre-trained model to children's speech. For the Transformer model, we will investigate the roles of the MHSA module, the FFN, and the normalisation layers. Similarly, for the Conformer model, we will explore the significance of the MHSA, FFN, normalization, and convolution modules. This comprehensive exploration aims to highlight the critical components that plays a more critical role when finetuning an adult pre-trained model to children's speech.
+
+%Similarly to [!!!!], we want to explore how to use TL in the context of children ASR. While these previous work has been realised on HMM-DNN model, there is no similar work for the end-to-end paradigm. Therefore, we propose to investigate, the contribution of the Encoder and Decoder separately, compared to the entire model finetuning. The Encoder, should model more acoustic information while the decoder shoud model more linguistic informations. As acoustic often contain the most variation in children speech, we would like to investigate which layers of the Encoder are more relavant to finetune. In the same way, we would like to investigate which modules, between MHSA,FFN or normalisation for the Transformer and MHSA, FFN, normalisation or convolution for the Conformer plays a more critical role when finetuning an adult pre-trained model to children's speech. 
+
+\subsection{Experimental setup}
+\label{section:methods}
+
+\subsection{Corpus}
+\begin{table}[ht]
+\centering
+\begin{tabular}{c|c|c}
+\hline
+ Training & Validation     & Test   \\ \hline
+60897 utterances  & 10044 utterances   & 4079 utterances \\ 
+ 566 speakers  & 79 speakers   & 91 speakers \\ 
+ 113 hours  & 18 hours   & 13 hours \\ \hline
+
+\end{tabular}
+\caption{My Science Tutor Children Speech Corpus statistics}
+\label{tab:statistics_myst}
+\end{table}
+In this experiment, we decided to used  the Boulder Learning My Science Tutor (MyST) corpus, as detailed in section \ref{section:children_corpora}. This choice aligns with the nature of the task assigned to the children in the MyST corpus, which involves spontaneous speech. The the end-to-end paradigm, by encapsulating both the acoustic model and language model within the same network, requires careful consideration. Indeed, if the model is trained on a limited set of prompts, from a dataset focused on reading tasks for example, it may learn and overfit to those specific prompts, yielding unreliable results.
+
+For the purposes of our experiments, we decided to remove all utterances shorter than one second and longer than 20 seconds and shorter than one second. Typically, utterances shorter than one second were found to predominantly contain silence alone, while those longer than 20 seconds were constrained by our GPU limitations. The details of the filtered corpora used in our work are presented in Table \ref{tab:statistics_myst}. 
+
+%In this work, we decided to use the Boulder Learning My Science Tutor (MyST) corpus, described in section \ref{section:children_corpora} given the task assigned to the children, which is to speak spontaneously. Indeed, the end-to-end model encapsulates the acoustic model and language model in the same network. As a result, if we train a model with a restricted amount of prompts on a data set of reading tasks, the model will learn and overfit the prompts. Thus, yielding unreliable results. Furthermore, for the purposes of our experiments, we decided to remove all utterances shorter than one second and longer than 20 seconds. The details of the filtered corpora used in our work are presented in Table \ref{tab:statistics_myst}. 
+\subsection{Implementation details}
+
+% Transformer  and Conformer model description
+All experiments were conducted using the SpeechBrain toolkit \cite{speechbrain}. The Transformer model encompasses 12 Transformer layers in the encoder and 6 Transformer layers in the decoder, all with a hidden dimension of 512. Similarly, the Conformer architecture featured 12 Conformer layers in the encoder and 6 Transformer layers in the decoder, with a hidden dimension of 512. Both configurations used 8 heads for all MHSA, a FFN hidden dimension of 2048, and a dropout rate of 0.1. These models were pre-trained on a large English adult speech corpus, specifically the LibriSpeech dataset \cite{librispeech}, and are publicly available\footnote{https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech\\ https://huggingface.co/speechbrain/asr-conformer-transformerlm-librispeech}. Furthermore, for all experiments, the same Transformer language model was employed, trained on 10 million words from LibriSpeech transcriptions. Our training involved 30 epochs with a learning rate of 8e-5. In line with findings by \cite{gelin2021endtoend}, a combination of CTC and Seq2Seq losses was used, with weights of 0.3 and 0.7 respectively.
+
+% TODO Should the url being citation with "last check on XX/12/23"?
+
+
+%All experiments were performed using the SpeechBrain toolkit \cite{speechbrain}. We used  12 Transformer or Conformer layers for the encoder, for the Transformer and Conformer model respectively, and 6 Transformer layers for the decoder, all with dimensions 512. These models have been pre-trained using the LibriSpeech dataset \cite{librispeech} and are publicly available\footnote{https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech\\ https://huggingface.co/speechbrain/asr-conformer-transformerlm-librispeech}. Furthermore, for all of our experiments, we used the same Transformer language model, trained on 10 million words. All models were trained for 30 epochs, with a learning rate of 8e-5.
+
+\section{Encoder-Decoder Transfer learning}
+% Encoder - Decoder
+% Layers wise
+
+\section{Modules Transfer learning}
+% Block wise
+% FFN wise
 
 \section{Adapters for Transformer based models}
 
@@ -146,29 +296,6 @@ Then, we inject this regularisation loss into the E2E ASR loss defined in equati
 \end{equation}
 where $\beta$ is an hyper-parameter to control the regularization's contribution.
 
-\subsection{Experiments}
-\label{section:methods}
-
-\subsubsection{Corpus}
-\begin{table}[ht]
-\centering
-\begin{tabular}{c|c|c}
-\hline
- Training & Validation     & Test   \\ \hline
-60897 utterances  & 10044 utterances   & 4079 utterances \\ 
- 566 speakers  & 79 speakers   & 91 speakers \\ 
- 113 hours  & 18 hours   & 13 hours \\ \hline
-
-\end{tabular}
-\caption{My Science Tutor Children Speech Corpus statistics}
-\label{tab:statistics_myst}
-\end{table}
-In this work, we decided to use the Boulder Learning My Science Tutor (MyST) corpus, described in section \ref{section:children_corpora} given the task assigned to the children, which is to speak spontaneously. Indeed, the end-to-end model encapsulates the acoustic model and language model in the same network. As a result, if we train a model with a restricted amount of prompts on a data set of reading tasks, the model will learn and overfit the prompts. Thus, yielding unreliable results. Furthermore, for the purposes of our experiments, we decided to remove all utterances shorter than one second and longer than 20 seconds. . The details of the filtered corpora used in our work are presented in Table \ref{tab:statistics_myst}. 
-\subsubsection{Implementation details}
-
-% Model description
-All experiments were performed using the SpeechBrain toolkit \cite{speechbrain}. We used  12 Transformer layers for the encoder and 6 Transformer layers for the decoder, all with dimensions 512. This model has been pre-trained using the LibriSpeech dataset\cite{librispeech} and is publicly available\footnote{https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech}. Furthermore, for all of our experiments, we used the same Transformer language model, trained on 10 million words in order to only evaluate the contribution of the E2E model. The adapter architecture consists of a linear layer down-projection from dimension 512 to 256 with a ReLu activation, followed by a linear layer up-projection from dimension 256 back to 512. We analysed the influence of the latent dimension, i.e. the number of parameters, on the ASR performance in more detail in section \ref{section:exp}. The Vadapters $\sigma$ and $\mu$ branches consist of a linear layer down-projection from 512 to 256 each, while the up-projection remains the same as the aforementioned traditional adapters. For all the experiments,  models were trained with a batch size of 16, $\lambda_{ctc} = 0.3$ and the same decoding hyper-parameters.
-All models were trained with a learning rate of 1.5e-4, for 40 epochs. Finally, for all our Vadapter experiments we choose $\beta = 1.0$.
 
 \subsubsection{Experiments description}
 In our first experiment, we will attempt to determine which component of the transformer model is most important to ASR children. As a result, this information will be used to determine the best location of the adapters in the transformer layer. Indeed, the adapter should come after the most important component since it will project the output of that component into the expected transformer space. In order to do this, we studied the role of each transformer layer sub-module by fine-tuning one or two of them with the children's speech data.

@@ -61,42 +61,47 @@
 \contentsline {section}{\numberline {3.4}Conclusion}{61}{section.3.4}
 \contentsline {chapter}{\numberline {4}End-to-End children automatic speech recognition}{63}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{65}{section.4.1}
-\contentsline {section}{\numberline {4.2}Transformer models}{65}{section.4.2}
-\contentsline {section}{\numberline {4.3}Adapters for Transformer based models}{67}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Related work}{68}{subsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.1.A}Transformer model for children ASR}{68}{subsubsection.4.3.1.1}
-\contentsline {subsubsection}{\numberline {4.3.1.B}Adapters}{68}{subsubsection.4.3.1.2}
-\contentsline {subsubsection}{\numberline {4.3.1.C}Variational Auto-Encoders}{69}{subsubsection.4.3.1.3}
-\contentsline {subsection}{\numberline {4.3.2}Variational adapters}{70}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Experiments}{71}{subsection.4.3.3}
-\contentsline {subsubsection}{\numberline {4.3.3.A}Corpus}{71}{subsubsection.4.3.3.1}
-\contentsline {subsubsection}{\numberline {4.3.3.B}Implementation details}{72}{subsubsection.4.3.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3.C}Experiments description}{72}{subsubsection.4.3.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Results}{73}{subsection.4.3.4}
-\contentsline {subsubsection}{\numberline {4.3.4.A}Transfer learning experiments}{73}{subsubsection.4.3.4.1}
-\contentsline {subsection}{\numberline {4.3.5}Adapters and Vadapters results}{73}{subsection.4.3.5}
-\contentsline {subsubsection}{\numberline {4.3.5.A}Adapters for children ASR}{73}{subsubsection.4.3.5.1}
-\contentsline {subsubsection}{\numberline {4.3.5.B}Variational-adapters}{74}{subsubsection.4.3.5.2}
-\contentsline {subsection}{\numberline {4.3.6}Discusion}{75}{subsection.4.3.6}
-\contentsline {section}{\numberline {4.4}Summary}{76}{section.4.4}
-\contentsline {chapter}{\numberline {5}Use of synthetic speech as data augmentation}{77}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{79}{section.5.1}
-\contentsline {section}{\numberline {5.2}Related work}{80}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}TTS data augmentation}{80}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Adapters}{81}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Method}{82}{section.5.3}
-\contentsline {section}{\numberline {5.4}System description}{82}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Transformer architecture for ASR}{82}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Multi-speaker text-to-speech: YourTTS}{83}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Experimental setup}{83}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Real speech corpus}{83}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Synthetic data}{84}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Experiments}{84}{subsection.5.5.3}
-\contentsline {section}{\numberline {5.6}Results and discussion}{85}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Comparison with existing approaches}{85}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Effect of the number of hours}{86}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Effect of the Adapters hyper-parameters}{86}{subsection.5.6.3}
-\contentsline {section}{\numberline {5.7}Conclusions and future work}{87}{section.5.7}
-\contentsline {section}{\numberline {5.8}Ongoing and future work}{87}{section.5.8}
-\contentsline {chapter}{\numberline {6}Pathology detection from speech}{91}{chapter.6}
-\contentsline {chapter}{Bibliography}{95}{chapter.6}
+\contentsline {section}{\numberline {4.2}Transformer model}{65}{section.4.2}
+\contentsline {section}{\numberline {4.3}Conformer model}{68}{section.4.3}
+\contentsline {section}{\numberline {4.4}Understand transfer learning efficacy for transformer based models}{70}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Subnetwork Transfer learning}{71}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Experimental setup}{71}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Corpus}{71}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Implementation details}{72}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Encoder-Decoder Transfer learning}{72}{section.4.5}
+\contentsline {section}{\numberline {4.6}Modules Transfer learning}{72}{section.4.6}
+\contentsline {section}{\numberline {4.7}Adapters for Transformer based models}{72}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Related work}{73}{subsection.4.7.1}
+\contentsline {subsubsection}{\numberline {4.7.1.A}Transformer model for children ASR}{73}{subsubsection.4.7.1.1}
+\contentsline {subsubsection}{\numberline {4.7.1.B}Adapters}{73}{subsubsection.4.7.1.2}
+\contentsline {subsubsection}{\numberline {4.7.1.C}Variational Auto-Encoders}{74}{subsubsection.4.7.1.3}
+\contentsline {subsection}{\numberline {4.7.2}Variational adapters}{75}{subsection.4.7.2}
+\contentsline {subsubsection}{\numberline {4.7.2.A}Experiments description}{76}{subsubsection.4.7.2.1}
+\contentsline {subsection}{\numberline {4.7.3}Results}{77}{subsection.4.7.3}
+\contentsline {subsubsection}{\numberline {4.7.3.A}Transfer learning experiments}{77}{subsubsection.4.7.3.1}
+\contentsline {subsection}{\numberline {4.7.4}Adapters and Vadapters results}{77}{subsection.4.7.4}
+\contentsline {subsubsection}{\numberline {4.7.4.A}Adapters for children ASR}{77}{subsubsection.4.7.4.1}
+\contentsline {subsubsection}{\numberline {4.7.4.B}Variational-adapters}{78}{subsubsection.4.7.4.2}
+\contentsline {subsection}{\numberline {4.7.5}Discusion}{79}{subsection.4.7.5}
+\contentsline {section}{\numberline {4.8}Summary}{80}{section.4.8}
+\contentsline {chapter}{\numberline {5}Use of synthetic speech as data augmentation}{81}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{83}{section.5.1}
+\contentsline {section}{\numberline {5.2}Related work}{84}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}TTS data augmentation}{84}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Adapters}{85}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Method}{86}{section.5.3}
+\contentsline {section}{\numberline {5.4}System description}{86}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Transformer architecture for ASR}{86}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Multi-speaker text-to-speech: YourTTS}{87}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Experimental setup}{87}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Real speech corpus}{87}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Synthetic data}{88}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Experiments}{88}{subsection.5.5.3}
+\contentsline {section}{\numberline {5.6}Results and discussion}{89}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Comparison with existing approaches}{89}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Effect of the number of hours}{90}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Effect of the Adapters hyper-parameters}{90}{subsection.5.6.3}
+\contentsline {section}{\numberline {5.7}Conclusions and future work}{91}{section.5.7}
+\contentsline {section}{\numberline {5.8}Ongoing and future work}{91}{section.5.8}
+\contentsline {chapter}{\numberline {6}Pathology detection from speech}{95}{chapter.6}
+\contentsline {chapter}{Bibliography}{99}{chapter.6}
