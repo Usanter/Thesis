@@ -1265,6 +1265,10 @@ Y.~N. Dauphin, A.~Fan, M.~Auli, and D.~Grangier, ``Language modeling with gated
   convolutional networks,'' in \emph{International conference on machine
   learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2017, pp. 933--941.
 
+\bibitem{frankle2018lottery}
+J.~Frankle and M.~Carbin, ``The lottery ticket hypothesis: Finding sparse,
+  trainable neural networks,'' \emph{arXiv preprint arXiv:1803.03635}, 2018.
+
 \bibitem{speechbrain}
 M.~Ravanelli, T.~Parcollet, P.~Plantinga, A.~Rouhe, S.~Cornell, L.~Lugosch,
   C.~Subakan, N.~Dawalatabad, A.~Heba, J.~Zhong, J.-C. Chou, S.-L. Yeh, S.-W.

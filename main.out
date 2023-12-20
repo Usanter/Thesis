@@ -73,22 +73,22 @@
 \BOOKMARK [2][]{subsection.4.4.2}{4.4.2 Experimental setup}{section.4.4}% 73
 \BOOKMARK [2][]{subsection.4.4.3}{4.4.3 Corpus}{section.4.4}% 74
 \BOOKMARK [2][]{subsection.4.4.4}{4.4.4 Implementation details}{section.4.4}% 75
-\BOOKMARK [1][]{section.4.5}{4.5 Encoder-Decoder Transfer learning}{chapter.4}% 76
-\BOOKMARK [1][]{section.4.6}{4.6 Modules Transfer learning}{chapter.4}% 77
-\BOOKMARK [1][]{section.4.7}{4.7 Adapters for Transformer based models}{chapter.4}% 78
-\BOOKMARK [2][]{subsection.4.7.1}{4.7.1 Related work}{section.4.7}% 79
-\BOOKMARK [3][]{subsubsection.4.7.1.1}{4.7.1.A Transformer model for children ASR}{subsection.4.7.1}% 80
-\BOOKMARK [3][]{subsubsection.4.7.1.2}{4.7.1.B Adapters}{subsection.4.7.1}% 81
-\BOOKMARK [3][]{subsubsection.4.7.1.3}{4.7.1.C Variational Auto-Encoders}{subsection.4.7.1}% 82
-\BOOKMARK [2][]{subsection.4.7.2}{4.7.2 Variational adapters}{section.4.7}% 83
-\BOOKMARK [3][]{subsubsection.4.7.2.1}{4.7.2.A Experiments description}{subsection.4.7.2}% 84
-\BOOKMARK [2][]{subsection.4.7.3}{4.7.3 Results}{section.4.7}% 85
-\BOOKMARK [3][]{subsubsection.4.7.3.1}{4.7.3.A Transfer learning experiments}{subsection.4.7.3}% 86
-\BOOKMARK [2][]{subsection.4.7.4}{4.7.4 Adapters and Vadapters results}{section.4.7}% 87
-\BOOKMARK [3][]{subsubsection.4.7.4.1}{4.7.4.A Adapters for children ASR}{subsection.4.7.4}% 88
-\BOOKMARK [3][]{subsubsection.4.7.4.2}{4.7.4.B Variational-adapters}{subsection.4.7.4}% 89
-\BOOKMARK [2][]{subsection.4.7.5}{4.7.5 Discusion}{section.4.7}% 90
-\BOOKMARK [1][]{section.4.8}{4.8 Summary}{chapter.4}% 91
+\BOOKMARK [2][]{subsection.4.4.5}{4.4.5 Encoder-Decoder Transfer learning}{section.4.4}% 76
+\BOOKMARK [2][]{subsection.4.4.6}{4.4.6 Modules Transfer learning}{section.4.4}% 77
+\BOOKMARK [1][]{section.4.5}{4.5 Adapters for Transformer based models}{chapter.4}% 78
+\BOOKMARK [2][]{subsection.4.5.1}{4.5.1 Related work}{section.4.5}% 79
+\BOOKMARK [3][]{subsubsection.4.5.1.1}{4.5.1.A Transformer model for children ASR}{subsection.4.5.1}% 80
+\BOOKMARK [3][]{subsubsection.4.5.1.2}{4.5.1.B Adapters}{subsection.4.5.1}% 81
+\BOOKMARK [3][]{subsubsection.4.5.1.3}{4.5.1.C Variational Auto-Encoders}{subsection.4.5.1}% 82
+\BOOKMARK [2][]{subsection.4.5.2}{4.5.2 Variational adapters}{section.4.5}% 83
+\BOOKMARK [3][]{subsubsection.4.5.2.1}{4.5.2.A Experiments description}{subsection.4.5.2}% 84
+\BOOKMARK [2][]{subsection.4.5.3}{4.5.3 Results}{section.4.5}% 85
+\BOOKMARK [3][]{subsubsection.4.5.3.1}{4.5.3.A Transfer learning experiments}{subsection.4.5.3}% 86
+\BOOKMARK [2][]{subsection.4.5.4}{4.5.4 Adapters and Vadapters results}{section.4.5}% 87
+\BOOKMARK [3][]{subsubsection.4.5.4.1}{4.5.4.A Adapters for children ASR}{subsection.4.5.4}% 88
+\BOOKMARK [3][]{subsubsection.4.5.4.2}{4.5.4.B Variational-adapters}{subsection.4.5.4}% 89
+\BOOKMARK [2][]{subsection.4.5.5}{4.5.5 Discusion}{section.4.5}% 90
+\BOOKMARK [1][]{section.4.6}{4.6 Summary}{chapter.4}% 91
 \BOOKMARK [0][]{chapter.5}{5 Use of synthetic speech as data augmentation}{}% 92
 \BOOKMARK [1][]{section.5.1}{5.1 Introduction}{chapter.5}% 93
 \BOOKMARK [1][]{section.5.2}{5.2 Related work}{chapter.5}% 94

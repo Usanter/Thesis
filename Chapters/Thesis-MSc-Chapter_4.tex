@@ -105,6 +105,7 @@ Furthermore, in addition to the attention modules, each layer within the encoder
 
 \begin{align}
     FFN(x) = max(0,xW_1 + b_1)W_2 + b_2
+    \label{equation:FFN}
 \end{align}
 With $W_1 \in \mathbb{R}^{d_{model} \times d_{ffn}}$, $b_1 \in \mathbb{R}^{d_{ffn}}$, $W_2 \in \mathbb{R}^{d_{ffn} \times d_{model}}$ and $b_2 \in \mathbb{R}^{d_{model}}$. Typically $d_{ffn}$ is usually set to $4 \times d_{model}$.
 
@@ -142,28 +143,30 @@ More specifically,the convolution modules , inspired by \cite{wu2020lite} and il
 
 \section{Understand transfer learning efficacy for transformer based models}
 % Explain motivation 
-Motivated by the scarcity of child speech data, TL emerges as a promising strategy to address this challenge in children's ASR. TL involves leveraging pre-trained models trained on extensive out-of-domain datasets, typically adult speech, and adapting them for the specific characteristics of child speech through retraining on a smaller, in-domain dataset of children data. This approach has demonstrated efficacy in both the traditional HMM-DNN paradigm and the modern end-to-end ASR paradigm \cite{sri_end2end,gelin2021endtoend}. We also presented the effectiveness of TL in improving HMM-DNN models for both European-Portuguese and English in Chapter \ref{chap:Chapter3}. Building on these successful applications of TL, we propose to extend our exploration of TL for Transformer by also including the Conformer architecture, a variant of the Transformer designed for speech-related tasks.
+Motivated by the scarcity of child speech data, TL emerges as a promising strategy to address this challenge in children's ASR. TL involves leveraging pre-trained models trained on extensive out-of-domain datasets, typically adult speech, and adapting them for the specific characteristics of child speech through retraining on a smaller, in-domain dataset of children data. This approach has demonstrated efficacy in both the traditional HMM-DNN paradigm \cite{shivakumar2020transfer} and the modern end-to-end ASR paradigm \cite{sri_end2end,gelin2021endtoend}. We also presented the effectiveness of TL in improving HMM-DNN models for both European-Portuguese and English in Chapter \ref{chap:Chapter3}. Building on these successful applications of TL, we propose to extend our exploration of TL for Transformer by also including the Conformer architecture, a variant of the Transformer designed for speech-related tasks.
 
 % Over param of transformer models
-Nevertheless, various studies in NLP have highlighted the issue of overparameterisation in models like BERT, which are based on the Transformer architecture. Overparameterisation refers to the situation where models have more parameters than necessary for the given task. Notably, observations indicate that certain components of the architecture can be removed without compromising performances, and in some cases, even achieving slight gains in performances. This insight has fueled the success of compression studies, including pruning techniques.
+Nevertheless, various studies in NLP have highlighted the issue of overparameterisation in models like BERT, which are based on the Transformer architecture. Overparameterisation refers to the situation where models have more parameters than necessary for the given task. Notably, observations indicate that certain components of the architecture can be removed without compromising performances, and in some cases, even achieving slight gains in performances. This insight has fueled the success of compression studies, including pruning and distilation techniques.
 
-The recognition of overparameterisation in Transformer-based models raises questions about the efficiency and computational cost of these architectures. Ablation studies, which involve systematically removing components of the model, have been instrumental in understanding which parts contribute significantly to the model's performance. These studies, mostly explored in the computer vision field, explored what is formulate by Frankle and Carbin as the Loterry Ticket hypothesis: \textit{``A randomly-initialized, dense neural network contains a subnetwork that is initialized such that—when trained in isolation—it can match the test accuracy of the original network after training for at most the same number of iterations''}.
+The recognition of overparameterisation in Transformer-based models raises questions about the efficiency and computational cost of these architectures. Ablation studies, which involve systematically removing components of the model, have been instrumental in understanding which parts contribute significantly to the model's performance. These studies, mostly explored in the computer vision field, explored what is formulate by Frankle and Carbin \cite{frankle2018lottery} as the Loterry Ticket hypothesis: \textit{``A randomly-initialized, dense neural network contains a subnetwork that is initialized such that—when trained in isolation—it can match the test accuracy of the original network after training for at most the same number of iterations''}.
 
 This understanding not only aids in optimising model architectures for specific tasks but also reduces the computational demands of training and inference. This is particularly relevant in scenarios with resource constraints, such as limited computational power, memory, and training data.
 
-While these ablation works have been extensively studied in NLP and computer vision, this approach remains underexplored for speech tasks. Specifically, pruning techniques, already successfully used for speech models, suggest that overparameterisation may also be present in ASR models. Therefore, since the Transformer and Conformer architectures have shown promising results, exploring the implications of overparameterisation could be an interesting avenue of research, especially in situations where training data is limited, such as in children's ASR.
+While these ablation works have been extensively studied in NLP and computer vision, this approach remains underexplored for speech tasks. Specifically, distilation and pruning techniques, already successfully used for speech models, suggest that overparameterisation may also be present in ASR models. Therefore, since the Transformer and Conformer architectures have shown promising results, exploring the implications of overparameterisation could be an interesting avenue of research, especially in situations where training data is limited, such as in children's ASR.
 
 
 \subsection{Subnetwork Transfer learning}
 % Explain experiments
-Similar to previous study [!!!!], we aim to explore the application of TL in the context of children's ASR. While prior work was focused on the HMM-DNN paradigm, there is no similar work for the end-to-end paradigm. Therefore, we propose to study the contribution of the fine-tuning of Encoder and Decoder parts separately, compared to the entire model fine-tuning. The Encoder is expected to capture more acoustic information, while the Decoder should focus on linguistic information. Given that acoustic variations are prominent in children's speech, our goal is to investigate which layers of the Encoder would be more relevant for TL.
+Our aim is to undertake a comprehensive exploration of TL, specifically on end-to-end ASR for children's speech. Notably, the previous research in this field has been focused on HMM-DNN models, as illustrated by the work of Shivakumar et al. \cite{shivakumar2020transfer}. It is noteworthy that the existing works on the end-to-end paradigm have primarily centered on the complete model fine-tuning, leaving a notable gap in the understanding of the impact of fine-tuning on individual components.
 
-Additionally, we aim to explore the specific contributions of different modules within the model architecture when fine-tuning an adult pre-trained model to children's speech. For the Transformer model, we will investigate the roles of the MHSA module, the FFN, and the normalisation layers. Similarly, for the Conformer model, we will explore the significance of the MHSA, FFN, normalization, and convolution modules. This comprehensive exploration aims to highlight the critical components that plays a more critical role when finetuning an adult pre-trained model to children's speech.
+Firstly, we perform a meticulous examination of the fine-tuning process, specifically isolating the effects on individual components of the Encoder and Decoder, in comparison to the fine-tuning of the entire model. The prevailing hypothesis asserts that the Encoder is  capturing acoustic information, while the Decoder more linguistic informations. Given the inherent prominence of acoustic variability in children's speech, we extend our investigation to discern which layers of the Encoder are more pertinent for achieving effective TL.
+
+Subsequently, our focus shifts to delineating the distinctive contributions of modules within both the Transformer and Conformer architectures during the fine-tuning process of adapting a pre-trained adult model to children's speech. Within the Transformer model, a granular analysis will be conducted to asses the roles of the MHSA module, the FFN, and the normalisation layers independently. Similarly, within the Conformer model, we evaluate the significance of the MHSA, FFN, normalisation, and convolution modules. This exhaustive examination is meticulously designed to identify the components that play a pivotal role in the fine-tuning process when adapting an adult pre-trained model to children's speech.
 
 %Similarly to [!!!!], we want to explore how to use TL in the context of children ASR. While these previous work has been realised on HMM-DNN model, there is no similar work for the end-to-end paradigm. Therefore, we propose to investigate, the contribution of the Encoder and Decoder separately, compared to the entire model finetuning. The Encoder, should model more acoustic information while the decoder shoud model more linguistic informations. As acoustic often contain the most variation in children speech, we would like to investigate which layers of the Encoder are more relavant to finetune. In the same way, we would like to investigate which modules, between MHSA,FFN or normalisation for the Transformer and MHSA, FFN, normalisation or convolution for the Conformer plays a more critical role when finetuning an adult pre-trained model to children's speech. 
 
 \subsection{Experimental setup}
-\label{section:methods}
+\label{section:methods_chapter4}
 
 \subsection{Corpus}
 \begin{table}[ht]
@@ -194,13 +197,74 @@ All experiments were conducted using the SpeechBrain toolkit \cite{speechbrain}.
 
 %All experiments were performed using the SpeechBrain toolkit \cite{speechbrain}. We used  12 Transformer or Conformer layers for the encoder, for the Transformer and Conformer model respectively, and 6 Transformer layers for the decoder, all with dimensions 512. These models have been pre-trained using the LibriSpeech dataset \cite{librispeech} and are publicly available\footnote{https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech\\ https://huggingface.co/speechbrain/asr-conformer-transformerlm-librispeech}. Furthermore, for all of our experiments, we used the same Transformer language model, trained on 10 million words. All models were trained for 30 epochs, with a learning rate of 8e-5.
 
-\section{Encoder-Decoder Transfer learning}
+\subsection{Encoder-Decoder Transfer learning}
 % Encoder - Decoder
+\begin{table}
+    \begin{center}
+        \begin{tabular}{lcc}\hline
+            Conformer    & WER $\downarrow$    & Trained parameters \\ \hline
+            Full model          & 12.28\% & 109M   \\
+            Encoder only & \textbf{11.24\%} & 75.9M  \\
+            Decoder only & 16.94\% & 25.2M  \\ \hline \hline
+            Transformer    &      &  \\ \hline
+            Full model          & 12.99\% & 71.5M   \\
+            Encoder only & \textbf{TODO\%} & 37.8M  \\
+            Decoder only & TODO\% & 25.2M  \\ \hline 
+        \end{tabular}
+    \end{center}
+    \caption{Encoder-Decoder experiment}
+\end{table}
 % Layers wise
-
-\section{Modules Transfer learning}
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.7]{imgs/layerTL.png}
+    \end{center}
+    \caption{Up-way and down-way transfer learning experiment}
+\end{figure}
+\subsection{Modules Transfer learning}
 % Block wise
+\begin{table}
+    \begin{center}
+        \begin{tabular}{lcc}\hline
+            \textbf{Transformer}    & WER  $\downarrow$   & Trained parameters \\ \hline
+            None & 25.04\% & -   \\
+            Full model   & 12.99\% & 71.5M   \\ \hline
+            Normalisation & 17.00\% & 57.9K  \\
+            MHSA & 12.19\% & 25.2M  \\
+            FFN    & \textbf{11.84\%}     &  37.8M \\ \hline \hline
+            \textbf{Conformer}    &     & \\ \hline
+            None & 21.75\% & -   \\
+            Full model   & 12.28\% & 109M   \\ \hline
+            Normalisation & 15.61\% & 63.7K  \\
+            MHSA & 11.90\% & 15.7M  \\
+            Convolution Module & 11.67\% & 9.7M \\
+            FFN    & \textbf{11.11\%}     &  63M \\
+            \quad $\hookrightarrow$ Module 1    & 11.44\%     &  25.2M \\
+            \quad $\hookrightarrow$ Module 2    & 11.48\%     &  25.2M \\
+            \quad $\hookrightarrow$ Up-linear ($W_1$)    & 11.47\%     &  31.5M \\
+            \quad $\hookrightarrow$ Down-linear ($W_2$)    & 11.40\%     &  31.5M \\ \hline
+        \end{tabular}
+    \end{center}
+    \caption{Modules fine-tuning experiment}
+    \label{table:ModulesTL}
+\end{table}
+The results  of the transfer learning experiments, focusing on fine-tuning specific components of the Transformer and Conformer ASR models for children's speech, are presented in Table \ref{table:ModulesTL}. In addition of the WER evaluation metric, we also display the number of trained parameters. 
+
+% Transformer
+The baseline performance of the Transformer pre-trained model without any fine-tuning (corresponding to \textit{None} line) yields a WER of 25.04\%. In contrast, the fine-tuning of the full Transformer model exhibits a noteworthy improvement, achieving a WER of 12.99\% with 71.5 million parameters trained.
+
+The fine-tuning of specific components reveals valuable observations. Applying normalisation alone results in a modest improvement WER of 17.00\% compared to keeping the pre-trained model, this using 57.9 thousand parameters. The MHSA module outperforms normalisation and full fine-tuning, achieving a WER of 12.19\% with a parameter count of 25.2 million. However, the most important improvement is observed with the FFN module, which attains a remarkable WER of 11.84\% with 37.8 million parameters. Remarkably, both MHSA and the FFN modules, when fine-tuned individually, already outperform the full model performance. This implies that the decrease in the number of parameters, coupled with the significance of these modules, may play a substantial role in the enhanced performances.
+
+%Conformer
+Turning to the Conformer model, the baseline WER without fine-tuning is 21.75\%, with no additional parameters. The full fine-tuning of the Conformer model improved performance, yielding a WER of 12.28\% with 109 million parameters.
+
+Fine-tuning specific Conformer modules offers further granularity. First, the normalisation finetuning, in a similar way as observed in the Transformer configuration, yield a score of 15.61\% WER, with 63.7 thousand parameters. Then,  the MHSA module proves effective by already providing better result than the full full-tuning with a WER of 11.90\%, this by fine-tuning 15.7 million parameters. The convolution modules outperform the MHSA with a WER of 11.67\% with less parameters used, 9.7\%. Howver, as in the Transformer model, the FFN module stands out prominently, demonstrating a WER of 11.11\% with a parameter count of 63 million. Notably, the MHSA, convolution modules and FFN modules, when fine-tuned in isolation, surpass the performance of the full Conformer model.
+
 % FFN wise
+As FFN, consistently proved to be the most relevant component to fine-tune for children ASR, no matter the configuration. We decided to delve deeper into the FFN submodule. There is two way to see this subdivision, first using the macaron style of the Conformer FFn layer, including two modules, one before the MHSA and one after the convolution module will be respectively called Module 1 and Module 2. The second approach to subdivde the FFN layers would be to only look at the up-linear and down-linear, respectively $W_1$ and $W_2$ equation \ref{equation:FFN}. Module 1 and Module 2 achieve WERs of 11.44\% and 11.48\%, respectively, each by fine-tuning 25.2 million parameters. The Up-linear and Down-linear  submodules exhibit WERs of 11.47\% and 11.40\%, respectively, with parameter counts of 31.5 million. The subdivision of the FFN modules do not allow to perform better than their coupled usage. This show the importance of the full FFN modules in Transformer based end-to-end models. 
+
+These comprehensive study not only highlight the importance of the various components within Transformer and Conformer ASR models but also underscore the effectiveness of fine-tuning only specific modules compared to the full model fine-tuning, especially the FFN module, in achieving improved performance.
+
 
 \section{Adapters for Transformer based models}
 

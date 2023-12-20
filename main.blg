@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 16822 items from 5000.
+Reallocated field_info (elt_size=4) to 16868 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Warning--I didn't find a database entry for "asr-review"
 Warning--I didn't find a database entry for "liao2015large"
@@ -28,45 +28,45 @@ Warning--empty journal in shuyangdata
 Warning--empty year in shuyangdata
 
 Done.
-You've used 249 entries,
+You've used 250 entries,
             4087 wiz_defined-function locations,
-            2057 strings with 60197 characters,
-and the built_in function-call counts, 190820 in all, are:
-= -- 14445
-> -- 5672
+            2061 strings with 60355 characters,
+and the built_in function-call counts, 191214 in all, are:
+= -- 14477
+> -- 5681
 < -- 1340
-+ -- 3023
-- -- 1106
-* -- 8978
-:= -- 27317
-add.period$ -- 556
-call.type$ -- 249
-change.case$ -- 248
++ -- 3027
+- -- 1108
+* -- 8994
+:= -- 27389
+add.period$ -- 558
+call.type$ -- 250
+change.case$ -- 249
 chr.to.int$ -- 3246
-cite$ -- 255
-duplicate$ -- 13898
-empty$ -- 16164
-format.name$ -- 1324
-if$ -- 45052
+cite$ -- 256
+duplicate$ -- 13934
+empty$ -- 16201
+format.name$ -- 1327
+if$ -- 45140
 int.to.chr$ -- 0
-int.to.str$ -- 249
-missing$ -- 2621
-newline$ -- 798
-num.names$ -- 249
-pop$ -- 6728
+int.to.str$ -- 250
+missing$ -- 2627
+newline$ -- 801
+num.names$ -- 250
+pop$ -- 6745
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 14665
+skip$ -- 14696
 stack$ -- 0
-substring$ -- 7986
-swap$ -- 10828
+substring$ -- 7987
+swap$ -- 10847
 text.length$ -- 258
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 249
+type$ -- 250
 warning$ -- 6
-while$ -- 748
-width$ -- 252
-write$ -- 2302
+while$ -- 749
+width$ -- 253
+write$ -- 2310
 (There were 14 warnings)
