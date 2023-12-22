@@ -202,18 +202,24 @@ All experiments were conducted using the SpeechBrain toolkit \cite{speechbrain}.
 \begin{table}
     \begin{center}
         \begin{tabular}{lcc}\hline
-            Conformer    & WER $\downarrow$    & Trained parameters \\ \hline
-            Full model          & 12.28\% & 109M   \\
-            Encoder only & \textbf{11.24\%} & 75.9M  \\
-            Decoder only & 16.94\% & 25.2M  \\ \hline \hline
-            Transformer    &      &  \\ \hline
+            Transformer    &   WER $\downarrow$    & Trained parameters  \\ \hline
             Full model          & 12.99\% & 71.5M   \\
             Encoder only & \textbf{TODO\%} & 37.8M  \\
-            Decoder only & TODO\% & 25.2M  \\ \hline 
+            Decoder only & 15.95\% & 25.2M  \\ \hline \hline
+            Conformer    &    & \\ \hline
+            Full model          & 12.28\% & 109M   \\
+            Encoder only & \textbf{11.24\%} & 75.9M  \\
+            Decoder only & 16.94\% & 25.2M  \\ \hline 
+
         \end{tabular}
     \end{center}
     \caption{Encoder-Decoder experiment}
+    \label{tab:EncoderDecoder}
 \end{table}
+Table \ref{tab:EncoderDecoder} summarises the results of the impact of isolating fine-tuning of the encoder and decoder components within Transformer and Conformer ASR models. For the Transformer model, using fine-tuning then entire model exhibits a WER of 12.99\% using 71.5 million parameters. Isolating the encoder component leads to a significant improvement in WER, with TODO\% WER with a reduced parameter count of 37.8 million. Parallely, fine-tuning the decoder underperform compared to both full model and Encoder only fine-tuning by achieving a WER score of 15.95\% training 25.2 million parameters. 
+
+Turning to the Conformer model, the full model achieves a WER of 12.28\% with 109 million parameters updated. Isolating the transfer learning on the encoder component only  yields a remarkable improvement, resulting in a WER of 11.24\% with a parameter count of 75.9 million. Conversely, when the decoder only is fine-tuned the performances degrade with a higher WER of 16.94\% using a parameter count of 25.2 million. Notably, the Conformer architecture consistently outperform the Transformer across all configurations, emphasising its effectiveness for speech related tasks. In addition, these results underscore the important role of the encoder in both Transformer and Conformer ASR models, highlighting its importance in capturing the inherent variabilities in children's acoustics. It confirms that the acoustics variabilities represent the most important source of variabilities as suggested by \cite{TFchildren}.
+
 % Layers wise
 \begin{figure}
     \begin{center}
@@ -221,6 +227,7 @@ All experiments were conducted using the SpeechBrain toolkit \cite{speechbrain}.
     \end{center}
     \caption{Up-way and down-way transfer learning experiment}
 \end{figure}
+Recognising the important role of the Encoder in the fine-tuning process for children ASR, our investigation further look to determine the specific layers that are the most relevant during this TL process. To this end, we adopt a meticulous approach of fine-tuning the Encoder incrementally, adding one layer at a time. This step-by-step TL procedure is executed in each directionally, one commencing from the input layer while the other one from the output layer of the encoder,the up-way and down-way respectively. In other words, the up-way, incremental fine-tuning begining with the input layer and progressively incorporating subsequent layers towards the output layer. While, the down-way initiates fine-tuning from the output layer, systematically integrating preceding layers towards the input layer.
 \subsection{Modules Transfer learning}
 % Block wise
 \begin{table}
@@ -265,7 +272,7 @@ As FFN, consistently proved to be the most relevant component to fine-tune for c
 
 These comprehensive study not only highlight the importance of the various components within Transformer and Conformer ASR models but also underscore the effectiveness of fine-tuning only specific modules compared to the full model fine-tuning, especially the FFN module, in achieving improved performance.
 
-
+\begin{comment}
 \section{Adapters for Transformer based models}
 
 Age-dependent acoustic models have shown promising improvements, as children's age is highly correlated with acoustic variability \cite{children_language_model2, reviewASRchildren}. In particular, some studies found that variability decrease with the age, reaching the adult level at 15 years old \cite{Acoustic_change_children}.
@@ -456,7 +463,7 @@ In this work, we demonstrate the usefulness of adapter transfer in the context o
 %This work is our first step towards the development age-dependent E2E ASR.
 %In future work, we would like to train age-dependent adapters %and fuse them using attention.
 %as well as investigate the behavior of new adapter architectures on children's speech.
-
+\end{comment}
 \section{Summary}
 We covered the state-of-the-art for end-to-end children's speech recognition in this chapter. Particularly, the usage of the Transformer architecture in conjunction with transfer learning. In a similar way as chapter \ref{chapter:Hybrid}, to avoid a drop in performances attributable to an acoustic mismatch between children and adults, the end-to-end model should be trained with children's data. In contrast to previous work, we demonstrated that fine-tuning only a portion of the transformer modules, particularly the FFN sub-module, yields better results since it serves as a key-value memory. As a result, we placed our adapter subsequent to it. The adapter's role is to accomplish knowledge transfer, which is related to transfer learning. Rather than updating the complete model's weights, we just tweak an extra module, hence fewer parameters. This adapter transfer achieves almost identical results as the entire model fine-tuning. In addition, adapters are useful in the context of customized models, where training and storing a whole model for each age group or each child can be expensive and time-consuming.
 

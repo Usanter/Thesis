@@ -2,5 +2,3 @@
 {\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{\reset@font\mlffont 68}{figure.caption.25}}
 {\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.3}{\ignorespaces Convolution module in the context of a conformer layer\relax }}{\reset@font\mlffont 69}{figure.caption.26}}
 {\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.4}{\ignorespaces Up-way and down-way transfer learning experiment\relax }}{\reset@font\mlffont 73}{figure.caption.29}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.5}{\ignorespaces a) Example of a Transformer layer with an adapter layer (adapted from \cite {pfeiffer}); b) Adapter layer; c) Vadapter layer\relax }}{\reset@font\mlffont 76}{figure.caption.31}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.6}{\ignorespaces Relative WER delta over the ratio (\%) of trainable parameters compared to full fine-tuned model.\relax }}{\reset@font\mlffont 81}{figure.caption.34}}

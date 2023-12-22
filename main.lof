@@ -30,10 +30,13 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{68}{figure.caption.25}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a conformer layer\relax }}{69}{figure.caption.26}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Up-way and down-way transfer learning experiment\relax }}{73}{figure.caption.29}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces a) Example of a Transformer layer with an adapter layer (adapted from \cite {pfeiffer}); b) Adapter layer; c) Vadapter layer\relax }}{76}{figure.caption.31}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Relative WER delta over the ratio (\%) of trainable parameters compared to full fine-tuned model.\relax }}{81}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Use of synthetic speech as data augmentation}{85}{chapter.5}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{89}{figure.caption.35}
+\contentsline {xchapter}{Exploring parameters-efficient transfer learning for end-to-end children ASR}{77}{chapter.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Conformer block with various residual adapter configurations.\relax }}{80}{figure.caption.31}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{85}{figure.caption.34}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{86}{figure.caption.35}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathology detection from speech}{99}{chapter.6}
+\contentsline {xchapter}{Use of synthetic speech as data augmentation}{89}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{93}{figure.caption.37}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Pathology detection from speech}{103}{chapter.7}

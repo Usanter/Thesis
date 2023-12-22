@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 16868 items from 5000.
+Reallocated field_info (elt_size=4) to 16822 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Warning--I didn't find a database entry for "asr-review"
 Warning--I didn't find a database entry for "liao2015large"
@@ -28,45 +28,45 @@ Warning--empty journal in shuyangdata
 Warning--empty year in shuyangdata
 
 Done.
-You've used 250 entries,
+You've used 249 entries,
             4087 wiz_defined-function locations,
-            2061 strings with 60355 characters,
-and the built_in function-call counts, 191214 in all, are:
-= -- 14477
-> -- 5681
-< -- 1340
-+ -- 3027
-- -- 1108
-* -- 8994
-:= -- 27389
-add.period$ -- 558
-call.type$ -- 250
-change.case$ -- 249
-chr.to.int$ -- 3246
-cite$ -- 256
-duplicate$ -- 13934
-empty$ -- 16201
-format.name$ -- 1327
-if$ -- 45140
+            2060 strings with 60490 characters,
+and the built_in function-call counts, 191761 in all, are:
+= -- 14505
+> -- 5710
+< -- 1349
++ -- 3044
+- -- 1113
+* -- 9034
+:= -- 27421
+add.period$ -- 556
+call.type$ -- 249
+change.case$ -- 250
+chr.to.int$ -- 3273
+cite$ -- 255
+duplicate$ -- 13947
+empty$ -- 16246
+format.name$ -- 1332
+if$ -- 45283
 int.to.chr$ -- 0
-int.to.str$ -- 250
-missing$ -- 2627
-newline$ -- 801
-num.names$ -- 250
-pop$ -- 6745
+int.to.str$ -- 249
+missing$ -- 2634
+newline$ -- 802
+num.names$ -- 251
+pop$ -- 6764
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 14696
+skip$ -- 14731
 stack$ -- 0
-substring$ -- 7987
-swap$ -- 10847
+substring$ -- 8049
+swap$ -- 10880
 text.length$ -- 258
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 250
+type$ -- 249
 warning$ -- 6
-while$ -- 749
-width$ -- 253
-write$ -- 2310
+while$ -- 752
+width$ -- 252
+write$ -- 2309
 (There were 14 warnings)

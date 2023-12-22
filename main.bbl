@@ -64,14 +64,6 @@ A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,''
   \emph{Advances in neural information processing systems}, vol.~30, 2017.
 
-\bibitem{pfeiffer}
-J.~Pfeiffer, I.~Vuli{\'c}, I.~Gurevych, and S.~Ruder, ``{MAD-X}: {A}n
-  {A}dapter-{B}ased {F}ramework for {M}ulti-{T}ask {C}ross-{L}ingual
-  {T}ransfer,'' in \emph{Proceedings of the 2020 Conference on Empirical
-  Methods in Natural Language Processing (EMNLP)}.\hskip 1em plus 0.5em minus
-  0.4em\relax Online: Association for Computational Linguistics, Nov. 2020, pp.
-  7654--7673.
-
 \bibitem{levelt1993speaking}
 W.~J. Levelt, \emph{Speaking: From intention to articulation}.\hskip 1em plus
   0.5em minus 0.4em\relax MIT press, 1993.
@@ -1282,41 +1274,67 @@ N.~Houlsby, A.~Giurgiu, S.~Jastrzebski, B.~Morrone, Q.~De~Laroussilhe,
   learning for nlp,'' in \emph{International Conference on Machine
   Learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2019, pp. 2790--2799.
 
-\bibitem{VAE}
-D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' \emph{CoRR},
-  vol. abs/1312.6114, 2014.
+\bibitem{pfeiffer}
+J.~Pfeiffer, I.~Vuli{\'c}, I.~Gurevych, and S.~Ruder, ``{MAD-X}: {A}n
+  {A}dapter-{B}ased {F}ramework for {M}ulti-{T}ask {C}ross-{L}ingual
+  {T}ransfer,'' in \emph{Proceedings of the 2020 Conference on Empirical
+  Methods in Natural Language Processing (EMNLP)}.\hskip 1em plus 0.5em minus
+  0.4em\relax Online: Association for Computational Linguistics, Nov. 2020, pp.
+  7654--7673.
 
-\bibitem{philip2020monolingual}
-J.~Philip, A.~Berard, M.~Gall{\'e}, and L.~Besacier, ``Monolingual adapters for
-  zero-shot neural machine translation,'' in \emph{Proceedings of the 2020
-  Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  2020, pp. 4465--4470.
+\bibitem{chen2023efficient}
+N.~Chen, I.~Shafran, Y.~Zhang, C.-C. Chiu, H.~Soltau, J.~Qin, and Y.~Wu,
+  ``Efficient adapters for giant speech models,'' \emph{arXiv preprint
+  arXiv:2306.08131}, 2023.
 
-\bibitem{kannan2019large}
-A.~Kannan, A.~Datta, T.~N. Sainath, E.~Weinstein, B.~Ramabhadran, Y.~Wu,
-  A.~Bapna, Z.~Chen, and S.~Lee, ``Large-scale multilingual speech recognition
-  with a streaming end-to-end model,'' \emph{arXiv preprint arXiv:1909.05330},
-  2019.
+\bibitem{10095837}
+S.~V. Eeckt and H.~Van~Hamme, ``Using adapters to overcome catastrophic
+  forgetting in end-to-end automatic speech recognition,'' in \emph{ICASSP 2023
+  - 2023 IEEE International Conference on Acoustics, Speech and Signal
+  Processing (ICASSP)}, 2023, pp. 1--5.
 
-\bibitem{tomanek2021residual}
-K.~Tomanek, V.~Zayats, D.~Padfield, K.~Vaillancourt, and F.~Biadsy, ``Residual
-  adapters for parameter-efficient asr adaptation to atypical and accented
-  speech,'' \emph{arXiv preprint arXiv:2109.06952}, 2021.
+\bibitem{ruckle2020adapterdrop}
+\BIBentryALTinterwordspacing
+A.~R{\"u}ckl{\'e}, G.~Geigle, M.~Glockner, T.~Beck, J.~Pfeiffer, N.~Reimers,
+  and I.~Gurevych, ``{AdapterDrop}: {O}n the efficiency of adapters in
+  transformers,'' in \emph{Proceedings of the 2021 Conference on Empirical
+  Methods in Natural Language Processing}, M.-F. Moens, X.~Huang, L.~Specia,
+  and S.~W.-t. Yih, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Online and
+  Punta Cana, Dominican Republic: Association for Computational Linguistics,
+  Nov. 2021, pp. 7930--7946. [Online]. Available:
+  \url{https://aclanthology.org/2021.emnlp-main.626}
+\BIBentrySTDinterwordspacing
 
-\bibitem{vae_transformation}
-M.~Blaauw and J.~Bonada, ``Modeling and transforming speech using variational
-  autoencoders,'' \emph{Morgan N, editor. Interspeech 2016; 2016 Sep 8-12; San
-  Francisco, CA.[place unknown]: ISCA; 2016. p. 1770-4.}, 2016.
+\bibitem{he2021towards}
+\BIBentryALTinterwordspacing
+J.~He, C.~Zhou, X.~Ma, T.~Berg-Kirkpatrick, and G.~Neubig, ``Towards a unified
+  view of parameter-efficient transfer learning,'' in \emph{International
+  Conference on Learning Representations}, 2022. [Online]. Available:
+  \url{https://openreview.net/forum?id=0RDcd5Axok}
+\BIBentrySTDinterwordspacing
 
-\bibitem{vae_enh}
-S.~Leglaive, L.~Girin, and R.~Horaud, ``A variance modeling framework based on
-  variational autoencoders for speech enhancement,'' in \emph{2018 IEEE 28th
-  International Workshop on Machine Learning for Signal Processing
-  (MLSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 1--6.
+\bibitem{snyder2018x}
+D.~Snyder, D.~Garcia-Romero, G.~Sell, D.~Povey, and S.~Khudanpur, ``X-vectors:
+  Robust dnn embeddings for speaker recognition,'' in \emph{2018 IEEE
+  international conference on acoustics, speech and signal processing
+  (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 5329--5333.
 
-\bibitem{geva2020transformer}
-M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
-  are key-value memories,'' \emph{arXiv preprint arXiv:2012.14913}, 2020.
+\bibitem{tera}
+A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
+  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
+  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
+
+\bibitem{chi2021audio}
+\BIBentryALTinterwordspacing
+P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
+  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
+  representation,'' 2020. [Online]. Available:
+  \url{https://arxiv.org/abs/2005.08575}
+\BIBentrySTDinterwordspacing
+
+\bibitem{chang2022distilhubert}
+H.-J. Chang, S.~wen Yang, and H.~yi~Lee, ``Distilhubert: Speech representation
+  learning by layer-wise distillation of hidden-unit bert,'' 2022.
 
 \bibitem{hu2022synt++}
 T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
@@ -1324,6 +1342,17 @@ T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
   recognition,'' in \emph{ICASSP 2022-2022 IEEE International Conference on
   Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE, 2022, pp. 7682--7686.
+
+\bibitem{philip2020monolingual}
+J.~Philip, A.~Berard, M.~Gall{\'e}, and L.~Besacier, ``Monolingual adapters for
+  zero-shot neural machine translation,'' in \emph{Proceedings of the 2020
+  Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  2020, pp. 4465--4470.
+
+\bibitem{tomanek2021residual}
+K.~Tomanek, V.~Zayats, D.~Padfield, K.~Vaillancourt, and F.~Biadsy, ``Residual
+  adapters for parameter-efficient asr adaptation to atypical and accented
+  speech,'' \emph{arXiv preprint arXiv:2109.06952}, 2021.
 
 \bibitem{pfeiffer2020adapterfusion}
 J.~Pfeiffer, A.~Kamath, A.~R{\"u}ckl{\'e}, K.~Cho, and I.~Gurevych,
@@ -1352,23 +1381,6 @@ I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
   A.~Courville, and Y.~Bengio, ``Generative adversarial nets,'' \emph{Advances
   in neural information processing systems}, vol.~27, 2014.
 
-\bibitem{tera}
-A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
-  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
-  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
-
-\bibitem{chi2021audio}
-\BIBentryALTinterwordspacing
-P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
-  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
-  representation,'' 2020. [Online]. Available:
-  \url{https://arxiv.org/abs/2005.08575}
-\BIBentrySTDinterwordspacing
-
-\bibitem{chang2022distilhubert}
-H.-J. Chang, S.~wen Yang, and H.~yi~Lee, ``Distilhubert: Speech representation
-  learning by layer-wise distillation of hidden-unit bert,'' 2022.
-
 \bibitem{hauptman2019identifying}
 Y.~Hauptman, R.~Aloni-Lavi, I.~Lapidot, T.~Gurevich, Y.~Manor, S.~Naor,
   N.~Diamant, and I.~Opher, ``Identifying distinctive acoustic and spectral
@@ -1385,12 +1397,6 @@ M.~C. Botelho, I.~Trancoso, A.~Abad, and T.~Paiva, ``Speech as a biomarker for
 C.~Botelho, F.~Teixeira, T.~Rolland, A.~Abad, and I.~Trancoso, ``Pathological
   speech detection using x-vector embeddings,'' \emph{arXiv preprint
   arXiv:2003.00864}, 2020.
-
-\bibitem{snyder2018x}
-D.~Snyder, D.~Garcia-Romero, G.~Sell, D.~Povey, and S.~Khudanpur, ``X-vectors:
-  Robust dnn embeddings for speaker recognition,'' in \emph{2018 IEEE
-  international conference on acoustics, speech and signal processing
-  (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 5329--5333.
 
 \bibitem{pompili2020inesc}
 A.~Pompili, T.~Rolland, and A.~Abad, ``The inesc-id multi-modal system for the
