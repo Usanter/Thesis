@@ -29,16 +29,18 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }}{66}{figure.caption.24}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{68}{figure.caption.25}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a conformer layer\relax }}{69}{figure.caption.26}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Up-way and down-way transfer learning experiment\relax }}{73}{figure.caption.29}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Up-way and down-way transfer learning experiment\relax }}{74}{figure.caption.29}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Exploring parameters-efficient transfer learning for end-to-end children ASR}{77}{chapter.5}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{80}{figure.caption.31}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Conformer block with various residual adapter configurations.\relax }}{82}{figure.caption.32}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{86}{figure.caption.35}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{87}{figure.caption.36}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{88}{figure.caption.37}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{82}{figure.caption.32}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{82}{figure.caption.33}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{87}{figure.caption.36}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{89}{figure.caption.37}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{90}{figure.caption.38}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{91}{figure.caption.39}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Use of synthetic speech as data augmentation}{89}{chapter.6}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{93}{figure.caption.39}
+\contentsline {xchapter}{Use of synthetic speech as data augmentation}{93}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{97}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathology detection from speech}{103}{chapter.7}
+\contentsline {xchapter}{Pathology detection from speech}{107}{chapter.7}

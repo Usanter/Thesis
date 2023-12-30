@@ -850,9 +850,14 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png
@@ -916,7 +921,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
@@ -928,6 +935,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

@@ -12,20 +12,20 @@
 \contentsline {table}{\numberline {3.4}{\ignorespaces WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out\relax }}{59}{table.caption.23}
 \addvspace {10\p@ }
 \contentsline {xchapter}{End-to-End children automatic speech recognition}{63}{chapter.4}
-\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{71}{table.caption.27}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{72}{table.caption.28}
+\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{72}{table.caption.27}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{73}{table.caption.28}
 \contentsline {table}{\numberline {4.3}{\ignorespaces Modules fine-tuning experiment\relax }}{74}{table.caption.30}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Exploring parameters-efficient transfer learning for end-to-end children ASR}{77}{chapter.5}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Results of the different Adapters configurations in both Transformer and Conformer.\relax }}{84}{table.caption.33}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Results of the clustering approach.\relax }}{86}{table.caption.34}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Results without language model of Self-supervised front-end\relax }}{88}{table.caption.38}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Results of the different Adapters configurations in both Transformer and Conformer.\relax }}{85}{table.caption.34}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Results of the clustering approach.\relax }}{86}{table.caption.35}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Results without language model of Self-supervised front-end\relax }}{91}{table.caption.40}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Use of synthetic speech as data augmentation}{89}{chapter.6}
-\contentsline {table}{\numberline {6.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{95}{table.caption.40}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Results of the different approaches (in WER).\relax }}{97}{table.caption.41}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Results of the different number of hours in our Adapter double-way approach with \textit {Synth$_2$} data\relax }}{98}{table.caption.42}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Results of the different configurations of Adapter double-way approach on 300h of \textit {Synth$_2$}\relax }}{98}{table.caption.43}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Results without language model of Self-supervised front-end\relax }}{100}{table.caption.44}
+\contentsline {xchapter}{Use of synthetic speech as data augmentation}{93}{chapter.6}
+\contentsline {table}{\numberline {6.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{99}{table.caption.42}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Results of the different approaches (in WER).\relax }}{101}{table.caption.43}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Results of the different number of hours in our Adapter double-way approach with \textit {Synth$_2$} data\relax }}{102}{table.caption.44}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Results of the different configurations of Adapter double-way approach on 300h of \textit {Synth$_2$}\relax }}{102}{table.caption.45}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Results without language model of Self-supervised front-end\relax }}{104}{table.caption.46}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathology detection from speech}{103}{chapter.7}
+\contentsline {xchapter}{Pathology detection from speech}{107}{chapter.7}

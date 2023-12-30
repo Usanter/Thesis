@@ -64,47 +64,46 @@
 \contentsline {section}{\numberline {4.2}Transformer model}{65}{section.4.2}
 \contentsline {section}{\numberline {4.3}Conformer model}{68}{section.4.3}
 \contentsline {section}{\numberline {4.4}Understand transfer learning efficacy for transformer based models}{70}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Subnetwork Transfer learning}{71}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Experimental setup}{71}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Corpus}{71}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.1}Partial Transfer learning}{71}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Experimental setup}{72}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Corpus}{72}{subsection.4.4.3}
 \contentsline {subsection}{\numberline {4.4.4}Implementation details}{72}{subsection.4.4.4}
 \contentsline {subsection}{\numberline {4.4.5}Encoder-Decoder Transfer learning}{72}{subsection.4.4.5}
-\contentsline {subsection}{\numberline {4.4.6}Modules Transfer learning}{74}{subsection.4.4.6}
-\contentsline {section}{\numberline {4.5}Summary}{75}{section.4.5}
+\contentsline {subsection}{\numberline {4.4.6}Modules Transfer learning}{73}{subsection.4.4.6}
+\contentsline {section}{\numberline {4.5}Summary}{76}{section.4.5}
 \contentsline {chapter}{\numberline {5}Exploring parameters-efficient transfer learning for end-to-end children ASR}{77}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{79}{section.5.1}
 \contentsline {section}{\numberline {5.2}Adapters}{80}{section.5.2}
-\contentsline {section}{\numberline {5.3}Investigating Adapters for children ASR}{81}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Relation to prior work}{83}{subsection.5.3.1}
-\contentsline {section}{\numberline {5.4}Implementation details}{83}{section.5.4}
-\contentsline {section}{\numberline {5.5}Results}{84}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Configurations}{84}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Unsupervised Clustering of utterances}{85}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.3}Investigating Adapters for children ASR}{82}{section.5.3}
+\contentsline {section}{\numberline {5.4}Implementation details}{84}{section.5.4}
+\contentsline {section}{\numberline {5.5}Results}{85}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Configurations}{85}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Unsupervised Clustering of utterances}{86}{subsection.5.5.2}
 \contentsline {section}{\numberline {5.6}Additional parameter-efficient procedures}{87}{section.5.6}
 \contentsline {subsection}{\numberline {5.6.1}Scaled Adapters}{87}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Convolution based Adapters}{87}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}BitFit}{87}{subsection.5.6.3}
-\contentsline {subsection}{\numberline {5.6.4}Scale and Shift features}{87}{subsection.5.6.4}
-\contentsline {subsection}{\numberline {5.6.5}AdapterBias}{87}{subsection.5.6.5}
-\contentsline {section}{\numberline {5.7}Shared Adapter}{87}{section.5.7}
-\contentsline {chapter}{\numberline {6}Use of synthetic speech as data augmentation}{89}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{91}{section.6.1}
-\contentsline {section}{\numberline {6.2}Related work}{92}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}TTS data augmentation}{92}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Adapters}{93}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Method}{94}{section.6.3}
-\contentsline {section}{\numberline {6.4}System description}{94}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{94}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{95}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}Experimental setup}{95}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Real speech corpus}{95}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Synthetic data}{96}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Experiments}{96}{subsection.6.5.3}
-\contentsline {section}{\numberline {6.6}Results and discussion}{97}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{97}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Effect of the number of hours}{98}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}Effect of the Adapters hyper-parameters}{98}{subsection.6.6.3}
-\contentsline {section}{\numberline {6.7}Conclusions and future work}{99}{section.6.7}
-\contentsline {section}{\numberline {6.8}Ongoing and future work}{99}{section.6.8}
-\contentsline {chapter}{\numberline {7}Pathology detection from speech}{103}{chapter.7}
-\contentsline {chapter}{Bibliography}{107}{chapter.7}
+\contentsline {subsection}{\numberline {5.6.2}Convolution based Adapters}{88}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}BitFit}{88}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {5.6.4}Scale and Shift features}{88}{subsection.5.6.4}
+\contentsline {subsection}{\numberline {5.6.5}AdapterBias}{89}{subsection.5.6.5}
+\contentsline {section}{\numberline {5.7}Shared Adapter}{91}{section.5.7}
+\contentsline {chapter}{\numberline {6}Use of synthetic speech as data augmentation}{93}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{95}{section.6.1}
+\contentsline {section}{\numberline {6.2}Related work}{96}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}TTS data augmentation}{96}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Adapters}{97}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Method}{98}{section.6.3}
+\contentsline {section}{\numberline {6.4}System description}{98}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{98}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{99}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Experimental setup}{99}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Real speech corpus}{99}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Synthetic data}{100}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Experiments}{100}{subsection.6.5.3}
+\contentsline {section}{\numberline {6.6}Results and discussion}{101}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{101}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Effect of the number of hours}{102}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Effect of the Adapters hyper-parameters}{102}{subsection.6.6.3}
+\contentsline {section}{\numberline {6.7}Conclusions and future work}{103}{section.6.7}
+\contentsline {section}{\numberline {6.8}Ongoing and future work}{103}{section.6.8}
+\contentsline {chapter}{\numberline {7}Pathology detection from speech}{107}{chapter.7}
+\contentsline {chapter}{Bibliography}{111}{chapter.7}

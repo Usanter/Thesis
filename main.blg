@@ -7,8 +7,9 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 17052 items from 5000.
+Reallocated field_info (elt_size=4) to 17880 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "asr-review"
 Warning--I didn't find a database entry for "liao2015large"
 Warning--I didn't find a database entry for "casanova2022asr"
@@ -28,45 +29,45 @@ Warning--empty journal in shuyangdata
 Warning--empty year in shuyangdata
 
 Done.
-You've used 254 entries,
+You've used 272 entries,
             4087 wiz_defined-function locations,
-            2080 strings with 61563 characters,
-and the built_in function-call counts, 195354 in all, are:
-= -- 14769
-> -- 5841
-< -- 1370
-+ -- 3112
-- -- 1140
-* -- 9205
-:= -- 27941
-add.period$ -- 567
-call.type$ -- 254
-change.case$ -- 255
-chr.to.int$ -- 3327
-cite$ -- 260
-duplicate$ -- 14213
-empty$ -- 16538
-format.name$ -- 1364
-if$ -- 46120
+            2171 strings with 65719 characters,
+and the built_in function-call counts, 209657 in all, are:
+= -- 15841
+> -- 6283
+< -- 1468
++ -- 3340
+- -- 1225
+* -- 9905
+:= -- 29990
+add.period$ -- 607
+call.type$ -- 272
+change.case$ -- 279
+chr.to.int$ -- 3570
+cite$ -- 278
+duplicate$ -- 15240
+empty$ -- 17753
+format.name$ -- 1470
+if$ -- 49474
 int.to.chr$ -- 0
-int.to.str$ -- 254
-missing$ -- 2686
-newline$ -- 817
-num.names$ -- 256
-pop$ -- 6905
+int.to.str$ -- 272
+missing$ -- 2890
+newline$ -- 879
+num.names$ -- 280
+pop$ -- 7435
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 14997
+skip$ -- 16070
 stack$ -- 0
-substring$ -- 8180
-swap$ -- 11080
-text.length$ -- 261
+substring$ -- 8764
+swap$ -- 11881
+text.length$ -- 278
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 254
+type$ -- 272
 warning$ -- 6
-while$ -- 765
-width$ -- 257
-write$ -- 2352
+while$ -- 826
+width$ -- 275
+write$ -- 2526
 (There were 14 warnings)

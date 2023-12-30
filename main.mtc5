@@ -1,15 +1,14 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.1}Introduction}{\reset@font\mtcSfont 79}{section.5.1}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.2}Adapters}{\reset@font\mtcSfont 80}{section.5.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}Investigating Adapters for children ASR}{\reset@font\mtcSfont 81}{section.5.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.3.1}Relation to prior work}{\reset@font\mtcSSfont 83}{subsection.5.3.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.4}Implementation details}{\reset@font\mtcSfont 83}{section.5.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.5}Results}{\reset@font\mtcSfont 84}{section.5.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.5.1}Configurations}{\reset@font\mtcSSfont 84}{subsection.5.5.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.5.2}Unsupervised Clustering of utterances}{\reset@font\mtcSSfont 85}{subsection.5.5.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.3}Investigating Adapters for children ASR}{\reset@font\mtcSfont 82}{section.5.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.4}Implementation details}{\reset@font\mtcSfont 84}{section.5.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.5}Results}{\reset@font\mtcSfont 85}{section.5.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.5.1}Configurations}{\reset@font\mtcSSfont 85}{subsection.5.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.5.2}Unsupervised Clustering of utterances}{\reset@font\mtcSSfont 86}{subsection.5.5.2}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.6}Additional parameter-efficient procedures}{\reset@font\mtcSfont 87}{section.5.6}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.1}Scaled Adapters}{\reset@font\mtcSSfont 87}{subsection.5.6.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.2}Convolution based Adapters}{\reset@font\mtcSSfont 87}{subsection.5.6.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.3}BitFit}{\reset@font\mtcSSfont 87}{subsection.5.6.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.4}Scale and Shift features}{\reset@font\mtcSSfont 87}{subsection.5.6.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.5}AdapterBias}{\reset@font\mtcSSfont 87}{subsection.5.6.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.7}Shared Adapter}{\reset@font\mtcSfont 87}{section.5.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.2}Convolution based Adapters}{\reset@font\mtcSSfont 88}{subsection.5.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.3}BitFit}{\reset@font\mtcSSfont 88}{subsection.5.6.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.4}Scale and Shift features}{\reset@font\mtcSSfont 88}{subsection.5.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {5.6.5}AdapterBias}{\reset@font\mtcSSfont 89}{subsection.5.6.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {5.7}Shared Adapter}{\reset@font\mtcSfont 91}{section.5.7}}

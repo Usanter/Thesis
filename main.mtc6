@@ -1,18 +1,18 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Introduction}{\reset@font\mtcSfont 91}{section.6.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Related work}{\reset@font\mtcSfont 92}{section.6.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}TTS data augmentation}{\reset@font\mtcSSfont 92}{subsection.6.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.2}Adapters}{\reset@font\mtcSSfont 93}{subsection.6.2.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}Method}{\reset@font\mtcSfont 94}{section.6.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.4}System description}{\reset@font\mtcSfont 94}{section.6.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.1}Transformer architecture for ASR}{\reset@font\mtcSSfont 94}{subsection.6.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{\reset@font\mtcSSfont 95}{subsection.6.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.5}Experimental setup}{\reset@font\mtcSfont 95}{section.6.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.1}Real speech corpus}{\reset@font\mtcSSfont 95}{subsection.6.5.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.2}Synthetic data}{\reset@font\mtcSSfont 96}{subsection.6.5.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.3}Experiments}{\reset@font\mtcSSfont 96}{subsection.6.5.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.6}Results and discussion}{\reset@font\mtcSfont 97}{section.6.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.1}Comparison with existing approaches}{\reset@font\mtcSSfont 97}{subsection.6.6.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.2}Effect of the number of hours}{\reset@font\mtcSSfont 98}{subsection.6.6.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.3}Effect of the Adapters hyper-parameters}{\reset@font\mtcSSfont 98}{subsection.6.6.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.7}Conclusions and future work}{\reset@font\mtcSfont 99}{section.6.7}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.8}Ongoing and future work}{\reset@font\mtcSfont 99}{section.6.8}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Introduction}{\reset@font\mtcSfont 95}{section.6.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Related work}{\reset@font\mtcSfont 96}{section.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}TTS data augmentation}{\reset@font\mtcSSfont 96}{subsection.6.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.2}Adapters}{\reset@font\mtcSSfont 97}{subsection.6.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}Method}{\reset@font\mtcSfont 98}{section.6.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.4}System description}{\reset@font\mtcSfont 98}{section.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.1}Transformer architecture for ASR}{\reset@font\mtcSSfont 98}{subsection.6.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{\reset@font\mtcSSfont 99}{subsection.6.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.5}Experimental setup}{\reset@font\mtcSfont 99}{section.6.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.1}Real speech corpus}{\reset@font\mtcSSfont 99}{subsection.6.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.2}Synthetic data}{\reset@font\mtcSSfont 100}{subsection.6.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.3}Experiments}{\reset@font\mtcSSfont 100}{subsection.6.5.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.6}Results and discussion}{\reset@font\mtcSfont 101}{section.6.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.1}Comparison with existing approaches}{\reset@font\mtcSSfont 101}{subsection.6.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.2}Effect of the number of hours}{\reset@font\mtcSSfont 102}{subsection.6.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.3}Effect of the Adapters hyper-parameters}{\reset@font\mtcSSfont 102}{subsection.6.6.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.7}Conclusions and future work}{\reset@font\mtcSfont 103}{section.6.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.8}Ongoing and future work}{\reset@font\mtcSfont 103}{section.6.8}}

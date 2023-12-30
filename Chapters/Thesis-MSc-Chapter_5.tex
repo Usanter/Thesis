@@ -8,18 +8,18 @@
 \cleardoublepage
 
 \section{Introduction}
-The use of increasingly larger models coupled with the abundance of massive datasets is driving rapid advancements in many domains of machine learning, encompassing NLP and computer vision. In the context of ASR, this trend of scalling up models is exemplified by state-of-the-art models such as Whisper and HuBert \cite{hsu2021hubert}, where the number of parameters exceeds 1 billion. Research has underscored the interconnected nature of the training dataset size and the number of model parameters, identifying them as mutual bottlenecks that influence the performances of machine learning models. This observation accentuates the significance of scaling these two dimensions in tandem for the development of more effective ASR models. Typically, to scalling up the model size a combination of an increased number of layers and an expansion of the model's hidden dimensions is used.
+The use of increasingly larger models coupled with the abundance of massive datasets is driving rapid advancements in many domains of machine learning, encompassing NLP \cite{brown2020language} and computer vision \cite{ramesh2021zero}. In the context of ASR, this trend of scalling up models is exemplified by state-of-the-art models such as Whisper \cite{radford2023robust} and HuBert \cite{hsu2021hubert}, where the number of parameters exceeds 1 billion. Research has underscored the interconnected nature of the training dataset size and the number of model parameters, identifying them as mutual bottlenecks that influence the performances of machine learning models. This observation accentuates the significance of scaling these two dimensions in tandem for the development of more robust and effective ASR models \cite{Kaplan2020ScalingLF}. Typically, to scalling up the model size a combination of an increased number of layers and an expansion of the model's hidden dimensions is used \cite{zheng22d_interspeech}.
 
-However, the challenge arises when only a limited amount of data is available, making it challenging to train these large models from scratch, as highlighted by recent studies \cite{sri_end2end, gelin2021endtoend}. Hence, as discussed in the preceding chapter, transfer learning emerges as a well-established and effective paradigm to tackle to problematic of limited dataset. Nevertheless, despite its efficacy, we emphasised certain limitations that may potentially impede the performance of fine-tuning. Specifically, attempting to fine-tune these large models using a downstream dataset limited in size can be challenging. Indeed, in addition to be an expensive process, using small amount of data on such big model could potentially result in overfitting. This issue necessitates careful consideration, particularly in light of the recent evolution towards ever-growing pre-trained model sizes. Additionally, even following last chapter highlights where only specific parts of the model were fine-tuned, the different part of the model could be intricately linked to the overall model size. For example, FFN modules usually represent around $\frac{2}{3}$ of the total number of parameters. Finally, TL on large amount of parameters is memory-storage-inefficient, especially when there is a need to store a replicas of the billion of parameters models for many different small tasks.
+However, the challenge arises when only a limited amount of data is available, making it challenging to train these large models from scratch, as highlighted by recent studies \cite{sri_end2end, gelin2021endtoend}. Hence, as discussed in the preceding chapter, transfer learning emerges as a well-established and effective paradigm to tackle to problematic of limited dataset. Nevertheless, despite its efficacy, we emphasised certain limitations that may potentially impede the performance of fine-tuning. Specifically, attempting to fine-tune these large models using a downstream dataset limited in size can be challenging. Indeed, in addition to be an expensive process, using small amount of data on such big model could potentially result in overfitting. This issue necessitates careful consideration, particularly in light of the recent evolution towards ever-growing pre-trained model sizes. Additionally, even following last chapter highlights where only specific parts of the model were fine-tuned, the different part of the model could be intricately linked to the overall model size. For example, FFN modules usually represent substantial portion, around 70\% of the total number of parameters. This insight underscores the persistence of the challenge associated with model size, even when fine-tuning only specific components. Finally, TL on large amount of parameters is memory-storage-inefficient, especially when there is a need to store a replicas of the billion of parameters models for many different small tasks.
 
 Consequently, there is a growing need for more parameter-efficient transfer learning (PETL) as lightweight alternatives.
  %The use of increasingly bigger models in conjunction with the availability of massive datasets is driving rapid advancements across various domains of machine learning, including NLP and computer vision. In the context of ASR, this scaling up evolution is illustrated by state-of-the-art models such as Whisper and HuBert, where the number of parameters surpass 1 billion. Some research underscored the interconnected nature of the size of the training dataset and the number of parameters in model, as they both act as mutual bottlenecks in the pursuit of enhancing machine learning models. This critical observation highlight the importance of scaling these two dimensions in tandem for the development of better ASR models. Typically, the augmentation of the model's size results from a combination of an increased number of layers and an expansion of the model's hidden dimensions.
 %However, when only limited amount of data is available it can be challenging to train these model from sratch \cite{sri_end2end,gelin2021endtoend}. Therefore, as discussed in the previous chapter, transfer learning emerges as a well-established and effective paradigm in this comtext. Nevertheless, despite its effectiveness, we underscored certain limitations that may potentially impede the efficacy of fine-tuning. Notably, challenges arise when fine-tuning large models using a downstream dataset limited in size. This is a crucial issue that requires careful consideration, particularly in light of the recent evolution of ever-growing size of pre-trained model. In addition, the process of fine-tuning specific parts of the model, such as the FFN modules for the Transformer, is intricately linked to the model size, as FFN modules often represents $\frac{2}{3}$ of the total amount of parameters.There is, then, a need for more parameters efficent approaches. Furthermore, TL from the large amount of parameters is storage-inefficient, especially when fine-tuning a model of billion of parameters for a lot of different small tasks. 
 %In this context, the research community has introduced several parameter-efficient transfer learning (PETL) as a lightweight alternatives.
- Among the approaches introduced by the research community, residual Adapter modules stand out as the most popular and promising. Specifically tailored for Transformer-based systems, Adapters integrate a compact set of additional layers into a pre-trained source model \cite{houlsby, pfeiffer}. This design enables Adapters to enhance computational efficiency, resulting in faster training and addressing the challenge of catastrophic forgetting. Diverging from conventional transfer learning methods, where the source pre-trained model's weights are entirely replaced, Adapters transfer maintains the integrity of the backbone model. Therefore, when the Adapter modules are removed, the initial pre-trained model remains unchanged. This preservation of the backbone model is a crucial advantage  as it offer increased flexibility. Furthermore, owing to their limited number of trainable parameters, Adapters demonstrate a decreased susceptibility to overfitting, thereby contributing to improved generalisation performance.
+ Among the approaches introduced by the research community, residual Adapter modules stand out as the most popular and promising \cite{houlsby, pfeiffer}. Specifically tailored for Transformer-based systems, Adapters integrate a compact set of additional layers into a pre-trained source model. This design enables Adapters to enhance computational efficiency, resulting in faster training and addressing the challenge of catastrophic forgetting. Diverging from conventional transfer learning methods, where the source pre-trained model's weights are entirely replaced, Adapter-transfer maintains the integrity of the backbone model. Therefore, when the Adapter modules are removed, the initial pre-trained model remains unchanged. This preservation of the backbone model is a crucial advantage  as it offer increased flexibility. Furthermore, owing to their limited number of trainable parameters, Adapters demonstrate a decreased susceptibility to overfitting, thereby contributing to improved generalisation performance.
 
 
- In this chapter, motivated by these promising characteristics, our investigation will delve into the use of Adapters in the specific context of children's ASR. We will explore different Adapter configurations within both Transformer and Conformer architectures. Additionally, as a comparative analysis to Adapters, we will explore the application of other PETL approaches in the context of children's ASR. Lastly, we will introduce a novel type of Adapter, referred to as shared-Adapters, leveraging the overparameterisation inherent in Transformer-based models.
+ In this chapter, motivated by these promising characteristics, our investigation will delve into the use of Adapters in the specific context of children's ASR. We will explore different Adapter configurations within both Transformer and Conformer architectures. Additionally, as a comparative analysis to Adapters, we will explore the application of other PETL approaches in the context of children's ASR. Lastly, we will introduce a novel type of Adapter, referred to as shared-Adapters, taking advantage from the overparameterisation inherent in Transformer-based models.
 
 
 %In this context, the research community has introduced several parameter-efficient transfer learning (PETL) as a lightweight alternative.  Among these differents approaches, residual Adapter modules represents the most popular and promising PETL. Specifically designed for Transformer-based systems, Adapters integrate a compact set of additional layers into a pre-trained source model \cite{houlsby, pfeiffer}. This design allows Adapters to enhance computational efficiency, facilitating faster training and mitigating the issue of catastrophic forgetting.
@@ -47,7 +47,7 @@ Consequently, there is a growing need for more parameter-efficient transfer lear
     \end{figure*}
 
 
-Adapters were initially introduced in the NLP field to efficiently adapt large models, such as Transformers, for tasks like text classification \cite{houlsby}. As an alternative to full model fine-tuning of pre-trained models, Adapter-transfer involves training an extra small number of task-specific parameters while keeping the original model frozen. This is done for each Transformer layer, usually plugged after the Multi-Head Attention (MHA) and Feedforward Neural Network (FFN) modules, a setup often referred to as the \textit{Houlsby} configuration. Subsequently, \cite{pfeiffer} demonstrated that Adapters placed only after the FFN modules were sufficient for achieving efficient performances, referred to as the \textit{Pfeiffer} configuration. Generally, Adapters employ a bottleneck architecture, consisting of a normalisation layer followed by a projection-down linear layer with a non-linear activation, and subsequently a projection-up linear layer. Finally, a residual connection is applied by summing the input of the Adapter with its output. The overall structure is illustrated in Figure \ref{fig:Adapter_architecture}. Research suggests that the hidden dimension, between the down and up projections, may not always benefit from a bottleneck structure, where $d_{hidden} < d_{model}$, and the optimal design may vary depending on the downstream task. In somne tasks, an hidden dimension larger than the model size itself, in other words $d_{hidden} > d_{model}$, has been proven more effitive \cite{fan2022draft}.
+Adapters were initially introduced in the NLP field to efficiently adapt large models, such as Transformers, using minimal amount of parameters for text classification \cite{houlsby}. As an alternative to full model fine-tuning, Adapter-transfer involves training an extra small number of task-specific parameters while keeping the original model frozen. This is done at each Transformer layer level by plugging them after the Multi-Head Attention (MHA) and Feedforward Neural Network (FFN) modules, a setup often referred to as the \textit{Houlsby} configuration. Subsequently, \cite{pfeiffer} demonstrated that Adapters placed only after the FFN modules were sufficient for achieving efficient performances, referred to as the \textit{Pfeiffer} configuration. Generally, Adapters employ a bottleneck architecture, consisting of a normalisation layer followed by a projection-down linear layer with a non-linear activation, and subsequently a projection-up linear layer. Finally, a residual connection is applied by summing the input of the Adapter with its output. The overall structure is illustrated in Figure \ref{fig:Adapter_architecture}. Research suggests that the hidden dimension, between the down and up projections, may not always benefit from a bottleneck structure, where $d_{hidden} < d_{model}$, and the optimal design may vary depending on the downstream task. In some tasks, an hidden dimension larger than the model size itself, in other words $d_{hidden} > d_{model}$, has been proven more effitive \cite{fan2022draft}.
 
 Some of the main advantages of Adapters are their parameter efficiency and modularity. This efficiency is particularly interesting when working with large pre-trained models, while the modularity is valuable when a large number of tasks need to be trained.
 Mathematically, the structure of an Adapter can be expressed as follows:
@@ -59,63 +59,100 @@ Where $W_{down}$ and $W_{up}$ denote the weights of the projection-down and proj
 
 In terms of computation, Adapters offer the advantage of faster training, given that they update fewer parameters compared to fully fine-tuning models. However, there might be a slight processing delay during inference due to the addition of extra parameters introduced by the Adapters, this difference is generally minimal and can be well-managed \cite{ruckle2020adapterdrop}.
 
-%In terms of computation, Adapters offer faster training as they update fewer parameters. However, they might introduce a slight processing delay compared to fully fine-tuned models at inference, but this difference is typically minimal and can be well-managed \cite{ruckle2020adapterdrop}.
 % Adapter ASR
-Adapter-transfer has garnered heightened interest in ASR tasks \cite{cappellazzo2023parameter,chen2023efficient,10095837}, particularly owing to its modular nature, which has proven advantageous in the context of multi-lingual ASR \cite{kannan2019large, hou2021exploiting, kulkarni2023adapting}. In these studies, distinct Adapters were trained for each language, contributing to enhanced performance compared to a monolingual model and mitigating certain challenges associated with transfer learning, such as overfitting. This modular approach offers a tailored solution as each Adapters for a particular language can capture the diverse acoustic characteristics of each languages.
+Adapter-transfer has gained increased attention in the context of ASR tasks \cite{cappellazzo2023parameter,chen2023efficient,10095837}, particularly owing to its modular nature, which has proven advantageous in the context of multi-lingual ASR \cite{kannan2019large, hou2021exploiting, kulkarni2023adapting}. In these studies, distinct Adapters were trained for each language, contributing to enhanced performance compared to a monolingual model and mitigating certain challenges associated with transfer learning, such as overfitting. This modular approach provides a tailored solution, as each Adapter designed for a specific language can effectively capture the diverse acoustic characteristics unique to that language.
 
-In addition, researchers have used Adapters in the context of SSL. Where larger model sizes are typically employed \cite{thomas2022efficient, fan2022draft}. The use of Adapters in SSL models aligns with the need for efficient adaptation for learning from limited labeled data. 
+
+
+In addition, researchers have explored the use of Adapters in the context of SSL. In SSL, larger model are typically employed to capture a wide range of information from speech for application in a broad spectrum of tasks \cite{thomas2022efficient, fan2022draft}. However, the computational cost and scalability to multiple tasks can pose a challenge. Notably, once the model is fine-tuned for a specific task, the entire model is fixed for that task, and re-loading and re-training the base model are necessary for transferring to a different task. Therefore, the use of Adapters has proven effective in addressing these challenges by providing a modular and parameter-efficient task-specific adaptation.
+
 
 Additionally, the effectiveness of Adapters has been demonstrated in addressing challenges related to low-resource and atypical speech recognition scenarios \cite{tomanek2021residual}
+
+Finally, the effectiveness of Adapters has also been demonstrated in addressing challenges related to low-resource and atypical speech recognition scenarios \cite{tomanek2021residual}. In such scenarios, similarly to children's speech, there is limited availability of labeled data and atypical speech characteristics. As a result, Adapters provide a valuable solution by efficiently adapting large pre-trained models to these challenging tasks. 
+
 % Adapter children
-However, the application of Adapters in the context of children's ASR has received limited attention, with only one notable study by \cite{fan2022draft}. In this study, the authors proposed integrating and training Adapters within SSL models, followed by fine-tuning the entire model, including the adapter weights for better modelling of children's speech.
+However, the application of Adapters in the context of children's ASR has received limited attention, with only one notable study by \cite{fan2022draft}. In this study, the authors proposed integrating and training Adapters within SSL models, followed by fine-tuning the entire model, including the adapter weights, for better modeling of children's speech. This represents a pioneering effort to leverage Adapters for adapting large-scale models to the unique characteristics of children's speech.
 %Finally, Adapters in the context of children's ASR have received limited attention, with only one notable study by \cite{fan2022draft}, who proposed integrating and train Adapters into SSL models and subsequently fine-tuning the entire model, including the adapter weights for better modelling of children's speech. 
 %In contrast, our primary objective is to update only the adapter weights during supervised training, maintaining the parameter efficiency and modularity of adapters, without relying on semi-supervised pre-training.
 
 \section{Investigating Adapters for children ASR}
 
+
 \begin{figure*}[t]
     \begin{center}
     \includegraphics[scale=0.27]{imgs/Adapter_conformer.png}
-    \caption{Conformer block with various residual adapter configurations.}
-    \label{fig:all}
+    \caption{Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure}
+    \label{fig:transformer_config}
     \end{center}
-    \end{figure*}
-In this section, we investigate the application of Adapters in both Transformer and Conformer architectures. For the Transformer, we examine two integration methods: parallel and serial placement with the Feed-Forward Network (FFN) component \cite{he2021towards}. Within the Conformer architecture, we explore six Adapter configurations, as illustrated in Figure \ref{fig:all}. The first two configurations mirror our Transformer investigation, involving both parallel and serial placements, either after or in parallel with the second FFN layer \cite{chen2023efficient}. Furthermore, we assess the configuration that incorporates an Adapter following the convolution module, referred to as the ``serial-conv'' setup used in \cite{10095837}. Furthermore, \cite{chen2023efficient} introduces two variants of the parallel setup: ``parallel-conv,'' where the Adapter operates in parallel with the convolution module, and ``TPA,'' which deploys two adapters in parallel with both FFN modules in the Conformer layer. 
+\end{figure*}
+\begin{figure*}[t]
+    \begin{center}
+    \includegraphics[scale=0.27]{imgs/Adapter_conformer.png}
+    \caption{Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure}
+    \label{fig:conformer_config}
+    \end{center}
+\end{figure*}
 
-In the case of serial configurations, we integrate the adapter information with the preceding component denoted as $P$. The specific component $P$ varies depending on the configuration and can be either the FFN or the convolution modules. This integration is accomplished through the following process:
+In this section, we delve into the application of Adapter-transfer as PETL for both Transformer and Conformer architectures in the domain of children's ASR. Building upon our findings from the previous chapter, where we identified the FFN modules as the most relevant component to fine-tuning in a Transformer-based model, we opt to leverage Adapters for modifying the output of these FFN modules. Additionally, considering our results that underscore the significance of fine-tuning the Encoder, our primary emphasis will be on investigating the implementation of Adapters within the Encoder. Specifically, for the Transformer architecture, we investigate two integration methods: parallel and serial placement with the FFN component. Such configurations were used in prior work \cite{he2021towards} and are depicted in Figure \ref{fig:transformer_config}.
+
+In the case of the Conformer architecture, we explore six distinct Adapter configurations, as illustrated in Figure \ref{fig:conformer_config}. The initial two configurations mirror our Transformer investigation, involving both parallel and serial placements, either after or in parallel with the second FFN layer \cite{chen2023efficient}. Additionally, we assess a configuration that introduces an Adapter following the convolution module, denoted as the "serial-conv" setup used in \cite{10095837}. Notably, although the FFN component has been identified as the most crucial for fine-tuning, promising results have also been observed by fine-tuning the convolution modules \cite{chen2023efficient}. Furthermore, \cite{chen2023efficient} introduces two variants of the parallel setup: "parallel-conv," where the Adapter operates in parallel with the convolution module, and "TPA," which deploys two adapters in parallel with both FFN modules in the Conformer layer. This comprehensive exploration of Adapter configurations within both architectures aims to discern the most effective adaptation strategies for children's speech in the context of ASR. 
+
+
+In the case of serial configurations, the integration of adapter information is performed with the preceding component denoted as $P$. The specific component $P$ varies depending on the configuration and can be either FFN or convolution modules. This integration is realised through the following process:
+
 \begin{equation}
     output =  Adapter(P(x))
 \end{equation}
-In the parallel configurations, the integration process differs slightly. Here, we combine the adapter's output with the output of component $P$ as follows:
-\begin{equation}
-    output = x + 0.5 * P(x) + (Adapter(x) - x)
-\end{equation}
-where $x$ is the input of the component $P$. In order to comprehensively explore all feasible configurations, we introduce a novel one called ``TSA,'' which stands for Two Serial Adapters. In this configuration, one Adapter is positioned sequentially after each FFN component.
 
-Additionally, for a comprehensive assessment of Adapter behaviour, we consider four distinct configurations where Adapters are placed in the Decoder. Note that in the Conformer architecture, the decoder is a regular Transformer. Therefore, we initially evaluate the ``Serial''and ``Parallel''setups. Subsequently, we investigate the combination of the most effective encoder Adapter configuration with both Decoder configurations. To the best of our knowledge, there is no prior research that formally investigates the influence of Adapters within an ASR decoder.
+where $x$ represents the input of component $P$.
+
+For parallel configurations, the integration process varies slightly. In this scenario, the adapter's output is combined with the output of component $P$ as follows:
+
+\begin{equation}
+    output = x + 0.5 \cdot P(x) + (Adapter(x) - x)
+\end{equation}
+
+where $x$ is the input of component $P$.
+
+To comprehensively explore all feasible configurations, we introduce two novel setups. The first one is referred to as "Two Serial Adapters" or "TSA," where two Adapters are sequentially positioned after each FFN component in all layers. The second configuration combines TPA and TSA, resulting in the integration of four Adapter modules both in parallel and serially at the two FFN modules level. 
+%To fully explore all feasible configurations, we introduce two novel configurations respectively called Two Serial Adapters or "TSA" where two Adapters are positioned sequentially after each FFN component in all layers. The second configuration is the combination of the TPA and TSA where four Adapters modules are integrated both in parallel and serial at the two FFN modules level.
+
+Moreover, we consider three distinct configurations where Adapters are placed in the Decoder. It is important to note that in the Conformer architecture, the decoder is a regular Transformer. Therefore, we evaluate the "Serial" and "Parallel" setups. Subsequently, we investigate the combination of the most effective encoder Adapter configuration with both Decoder configurations. To the best of our knowledge, there is no prior research that formally investigates the influence of Adapters within an ASR decoder. 
+%In the case of serial configurations, we integrate the adapter information with the preceding component denoted as $P$. The specific component $P$ varies depending on the configuration and can be either the FFN or the convolution modules. This integration is accomplished through the following process:
+%\begin{equation}
+%    output =  Adapter(P(x))
+%\end{equation}
+%In the parallel configurations, the integration process differs slightly. Here, we combine the adapter's output with the output of component $P$ as follows:
+%\begin{equation}
+%    output = x + 0.5 * P(x) + (Adapter(x) - x)
+%\end{equation}
+%where $x$ is the input of the component $P$. In order to comprehensively explore all feasible configurations, we introduce a novel one called ``TSA,'' which stands for Two Serial Adapters. In this configuration, one Adapter is positioned sequentially after each FFN component.
+
+%Additionally, for a comprehensive assessment of Adapter behaviour, we consider three distinct configurations where Adapters are placed in the Decoder. Note that in the Conformer architecture, the decoder is a regular Transformer. Therefore, we initially evaluate the ``Serial''and ``Parallel''setups. Subsequently, we investigate the combination of the most effective encoder Adapter configuration with both Decoder configurations. To the best of our knowledge, there is no prior research that formally investigates the influence of Adapters within an ASR decoder.%
 
 % Finally, we explore the use of unsupervised clustering of utterances, motivated by the strong correlation between children's speech variability and age. Our aim is to create clusters of utterances that exhibit similar acoustic characteristics. This process employs a k-means clustering algorithm on the x-vector representation \cite{snyder2018x} of each training utterance. The primary objective is to investigate whether Adapters trained on comparable speech characteristics yield improvements over a general Adapter on the entire training set. To evaluate this approach, we use this clustering in the test set, where test utterances are decoded with their respective cluster Adapters.
-Finally, motivated by the strong correlation between children's speech variability and age, we investigate the possibility of 
-training specialized Adapters for groups of speakers exhibiting similar acoustic characteristics based on unsupervised clustering. In practice, we apply a k-means clustering algorithm on the x-vector representation \cite{snyder2018x} of each training utterance. Then, a different adapter model is trained for each  speaker cluster. During test, the closest speaker cluster is found for each test utterance and the corresponding Adapter weights are used for decoding.
-The primary objective of these experiments is to investigate whether Adapters trained on comparable speech characteristics yield improvements over a general Adapter on the entire training set. 
 
-\subsection{Relation to prior work}
-\label{sec:prior}
+Finally, motivated by the observed strong correlation between children's speech variability and age, we explore the possibility of training specialised Adapters. However, considering the high inter-speaker variabilities in children's speech, using age directly may not effectively capture children with similar acoustic characteristics. Additionally, in many children's speech datasets, precise age information is often not provided. To address this, we partition the training dataset into groups of speakers with similar acoustic characteristics based on unsupervised clustering.
+In practice, we apply a k-means clustering algorithm on the x-vector representation \cite{snyder2018x} of all training utterances. Subsequently, distinct Adapters are trained for each speaker cluster separately. During the testing phase, the closest clusters of group of speaker is determined for each test utterance, and the corresponding Adapters specific to that group are employed for decoding.
+
+%Finally, motivated by the strong correlation between children's speech variability and age, we investigate the possibility of training specialized Adapters for groups of speakers exhibiting similar acoustic characteristics based on unsupervised clustering. In practice, we apply a k-means clustering algorithm on the x-vector representation \cite{snyder2018x} of each training utterance. Then, a different adapter model is trained for each  speaker cluster. During test, the closest speaker cluster is found for each test utterance and the corresponding Adapter weights are used for decoding.
+The primary objective of these experiments is to investigate whether Adapters trained on comparable speech characteristics yield improvements over a general Adapter on the entire training set. Indeed,
+%\subsection{Relation to prior work}
+%\label{sec:prior}
 % No work fully compared Adapter vs Conformer in Children speech
-Children's speech is inherently atypical and displays a significant degree of variability, making it imperative to assess the efficacy of existing methods in modelling children's speech. This paper introduces several contributions to the field of automatic children's speech recognition. Firstly, the paper conducts a comparative analysis between traditional Transformer and Conformer-based models. Secondly, we propose the use of residual adapters to tackle the challenges associated with children's ASR in large models. This study conducts a comprehensive and systematic evaluation of various adapter configurations designed explicitly for Conformer models extending prior work \cite{chen2023efficient,10095837}, pinpointing the most effective setups for children's ASR tasks. Indeed, in prior work different configurations were employed resulting in a lack of standardised evaluation. Additionally, a new adapter configuration called the Two Serial Adapter (TSA) is proposed to cover all conceivable configurations. Furthermore, to the best of our knowledge, there has been no work exploring Adapters in the decoder of an ASR model. Lastly, a cluster-based training strategy is proposed as an innovative approach to further enhance children's ASR by leveraging speaker-dependent acoustic characteristics. Altogether, these contributions advance the state of children's ASR and provide valuable insights for future research in this domain. 
+children's speech is inherently atypical and displays a significant degree of variability, making it imperative to assess the efficacy of existing methods. In prior work, different configurations were employed resulting in a lack of standardised evaluation.
 
 \section{Implementation details}
 
 All experiments were performed using the SpeechBrain toolkit \cite{speechbrain}. We used  12 Transformer or Conformer layers for the encoder, for the Transformer and Conformer model respectively, and 6 Transformer layers for the decoder, all with dimensions 512. These models have been pre-trained using the LibriSpeech dataset \cite{librispeech} and are publicly available\footnote{https://huggingface.co/speechbrain/asr-transformer-transformerlm-librispeech} \footnote{https://huggingface.co/speechbrain/asr-conformer-transformerlm-librispeech}. Furthermore, for all of our experiments, we used the same Transformer language model, trained on 10 million words 
 %CAMERA-READY (Add Information about the Language model training)
 on the LibriSpeech transcriptions.
-The adapter architecture consists of a  first linear layer projection to dimension 512 with a ReLu activation, followed by another linear layer projection to dimension 512 with a residual connection of the adapter input. 
-%CAMERA-READY (Comemnt this)
-%We would like to emphasise that previous research has investigated the exploration of hidden-dimension size, consistently demonstrating that larger dimensions tend to yield improved performance scores \cite{chen2023efficient}. 
-%CAMERA-READY (Instead this:)
+The adapter architecture consists of a  first linear layer projection to dimension 512 with a ReLu activation, followed by another linear layer projection to dimension 512 with a residual connection of the adapter input. For all Adapters, in the initialisation process, we set $W_{down}$ to all zeros, and $W_{up}$, $b_{down}$, $b_{up}$ are initialised using Xavier initialisation \cite{glorot2010understanding}.
+
+
 The use of a hidden-dimension size equal to the model size (instead of a bottleneck) was motivated by previous research exploring hidden-dimension size, that consistently demonstrated that larger dimensions tend to yield improved performance scores \cite{chen2023efficient}.
 All models were trained for 30 epochs, with a learning rate of $8\cdot10^{-4}$ for Adapters experiments and of $8\cdot10^{-5}$ for fine-tuning the entire model.
-%CAMERA-READY (Add information about the training)
 For the clustering experiments, we use the k-means clustering algorithm on the speaker-embedding of each utterance. The speaker embeddings were extracted using a publicly pre-trained ECAPA-TDNN model, trained on adult speech\footnote{https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb}.
 
 \section{Results}
@@ -205,13 +242,59 @@ In this section, we present the outcomes of our clustering approach, as summaris
     \end{center}
 \end{figure}
 \subsection{Scaled Adapters}
+% Explain the idea has been used in many example
+Scaled or Gated Adapters are a extension of the traditional residual Adapters \cite{hou2021exploiting}. A couple of works used it in different context, 
+% The one we are intersted in is the Scalling one inspired by LORA
 \subsection{Convolution based Adapters}
 \subsection{BitFit}
+Bias-Term Fine-Tuning, known as BitFit, is a PETL method introduced by \cite{ben-zaken-etal-2022-bitfit} for NLP tasks. The main idea behind BitFit is to fine-tune only the bias terms and the task-specific classification layer while keeping the rest of the model frozen. This approach aims to achieve efficient fine-tuning with reduced computational requirements in a similar way as our partial fine-tuning experiments in chapter \ref{chap:e2e}. The fine-tuning of bias terms can be seen as introducing a task-specific shift to the token representations.
+
+%Advantages of Bitfit
+The authors highlight three key properties of BitFit. Firstly, it matches of a fully fine-tuned model, showcasing its ability to maintain comparable results while significantly reducing the number of parameters to be trained. Secondly, BitFit is designed to adapt to tasks arriving sequentially, eliminating the need for simultaneous access to all datasets. This adaptability enhances the model's versatility in handling diverse tasks with varying data distributions over time. Thirdly, BitFit exhibits parameter efficiency by fine-tuning only a small subset of the model's parameters.
+
+%Experimental setup
+In our experiment, the pre-trained model and children's ASR task shared the same output dimensions and character encoding. In consequence, we excluded the fine-tuning of the task-specific classification layer. The training process consisted of 30 epochs with a learning rate of $8 \times 10^{-4}$.
+
 \subsection{Scale and Shift features}
+% Define SSF
+Scale and Shift features (SSF) was introduced an PETL alternative approach by Lian and al. \cite{lian2022scaling} for image classification. The primary objective of SSF is to establish a generalised method for efficient model fine-tuning without the introduction of task-specific inference parameters. Drawing inspiration from feature modulation techniques such as \cite{wu2018group,huang2017arbitrary}, the SSF method modulate deep features extracted by a pre-trained model by scaling and shifting them to match the distribution of a target dataset. 
+The intuition behind SSF comes from the inherent disparities in data distributions between upstream and downstream datasets. Directly applying model weights trained on an upstream dataset to a downstream dataset frequently leads to a performance degradation due to the disparities between the two datasets \cite{sun2016return}. The SSF method addresses this challenge by introducing scale $\gamma$ and shift $\beta$ parameters, which could be considered as the variance and mean used to modulate the features extracted from the pre-trained model. This modulation ensures that the adapted features align with the characteristics of the upstream dataset. Formally, given an input $x$, the modulated output $y$ is calculated by:
 \begin{align}
     y = \gamma \odot x + \beta
 \end{align}
+
+Notably, the scale and shift parameters in SSF remain independent on any input and have a unified learnable parameter-space for different tasks. Another noteworthy advantage of SSF is its reliance on linear transformations, which can be seamlessly merged into the original pre-trained weights during model re-parameterization in the inference phase. This integration avoid the need for additional parameters removing the extra-computation time of other PETL such as Adapters.
+
+% How to put it in a model
+In practical terms, SSF are introduced after each modules within the Conformer architecutre (FFNs, MHSA and Convolution modules). In the original paper, they also finetuned the Head-layers as the task is a image classification task, as our both upstream and downstream tasks, respectively adult and children ASR, share the same output dimension and character encoding, we do not finetune this extra layer and only use the SSF method. 
+
+%Experimental setup
+In practice, the SSF modulation is integrated after each operations of the neural network. For our experiments, each operations corespond the different modules within the Conformer architecture, specifically the FFNs, MHSA and Convolution modules. It is noteworthy that, in the original paper, the authors also fine-tuned an Head-layer, as the output of the upstream and downstream image classification tasks are different. However, in our experiment, both the upstream and downstream tasks involve English ASR with shared output dimensions and characters encoding. Therefore,we did not include the head-layer fine-tuning and exclusively employed the SSF method. Our training compromise 30 epochs with a learning rate of $8\cdot10^{-4}$.
+
+
 \subsection{AdapterBias}
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.4]{imgs/AdapterBias.png}
+        \caption{ AdapterBias, consisting of a linear layer $L_\alpha$ and a vector $\mathcal{V}$, is added after the second feed-forward layer only in each FFN module.}
+        \label{fig:AdapterBias}
+    \end{center}
+\end{figure}
+% Link to Bitfit
+Following the success of BitFit \cite{ben-zaken-etal-2022-bitfit}, which aims to introduce task-specific shifts to each output representation by selectively fine-tuning only the bias terms of a pre-trained model, recent research has suggested that certain tokens may hold more significance than others for specific tasks. While BitFit uniformly applies the same shift across all tokens regardless of their relevance to the task, \cite{fu-etal-2022-adapterbias} proposes AdapterBias to address this limitation.
+
+% What is AdapterBias
+AdapterBias comprises two essential modules: a vector $\mathcal{V}$ and a linear layer $L_\alpha$. The vector $\mathcal{V}$ represents a task-specific shift added to the output of each FFN modules, acknowledging that tokens more closely related to the task should be assigned to larger representation shifts than others. On the other hand, the linear layer $L_\alpha$ generates a token-dependent weight vector $\alpha = [\alpha_1, \alpha_2, ..., \alpha_m]^T$, where $\alpha_i$ is the weight associated with the representation shift of the $i^{th}$ token. By applying these token-specific weights to the task-specific representation shift $\mathcal{V}$, AdapterBias focuses on tokens which are more crucial to the task, allowing efficient and fine adaptation to various downstream tasks.
+
+The output of AdapterBias is defined as the bias (B), represented as the outer product of $\mathcal{V}$ and the learned weights vector $\alpha$. Mathematically, the output of AdapterBias is expressed as follows:
+
+\begin{equation}
+    B = \mathcal{V} \otimes \alpha^T    
+\end{equation}
+
+Here, \(\otimes\) denotes the element-wise multiplication of the task-specific shift vector \(\mathcal{V}\) and the token-dependent weight vector \(\alpha\).
+% Experimental seting
+In our experimental setup, we conducted the training for AdapterBias by integrating them into the second linear layer of each of the two FFN modules within the Conformer architecture. We trained AdapterBias for 30 epochs, employing a learning rate of $8 \times 10^{-4}$.
 \section{Shared Adapter}
 \begin{figure}
     \begin{center}

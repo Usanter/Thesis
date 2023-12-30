@@ -69,7 +69,7 @@
 \BOOKMARK [1][]{section.4.2}{4.2 Transformer model}{chapter.4}% 69
 \BOOKMARK [1][]{section.4.3}{4.3 Conformer model}{chapter.4}% 70
 \BOOKMARK [1][]{section.4.4}{4.4 Understand transfer learning efficacy for transformer based models}{chapter.4}% 71
-\BOOKMARK [2][]{subsection.4.4.1}{4.4.1 Subnetwork Transfer learning}{section.4.4}% 72
+\BOOKMARK [2][]{subsection.4.4.1}{4.4.1 Partial Transfer learning}{section.4.4}% 72
 \BOOKMARK [2][]{subsection.4.4.2}{4.4.2 Experimental setup}{section.4.4}% 73
 \BOOKMARK [2][]{subsection.4.4.3}{4.4.3 Corpus}{section.4.4}% 74
 \BOOKMARK [2][]{subsection.4.4.4}{4.4.4 Implementation details}{section.4.4}% 75
@@ -80,37 +80,36 @@
 \BOOKMARK [1][]{section.5.1}{5.1 Introduction}{chapter.5}% 80
 \BOOKMARK [1][]{section.5.2}{5.2 Adapters}{chapter.5}% 81
 \BOOKMARK [1][]{section.5.3}{5.3 Investigating Adapters for children ASR}{chapter.5}% 82
-\BOOKMARK [2][]{subsection.5.3.1}{5.3.1 Relation to prior work}{section.5.3}% 83
-\BOOKMARK [1][]{section.5.4}{5.4 Implementation details}{chapter.5}% 84
-\BOOKMARK [1][]{section.5.5}{5.5 Results}{chapter.5}% 85
-\BOOKMARK [2][]{subsection.5.5.1}{5.5.1 Configurations}{section.5.5}% 86
-\BOOKMARK [2][]{subsection.5.5.2}{5.5.2 Unsupervised Clustering of utterances}{section.5.5}% 87
-\BOOKMARK [1][]{section.5.6}{5.6 Additional parameter-efficient procedures}{chapter.5}% 88
-\BOOKMARK [2][]{subsection.5.6.1}{5.6.1 Scaled Adapters}{section.5.6}% 89
-\BOOKMARK [2][]{subsection.5.6.2}{5.6.2 Convolution based Adapters}{section.5.6}% 90
-\BOOKMARK [2][]{subsection.5.6.3}{5.6.3 BitFit}{section.5.6}% 91
-\BOOKMARK [2][]{subsection.5.6.4}{5.6.4 Scale and Shift features}{section.5.6}% 92
-\BOOKMARK [2][]{subsection.5.6.5}{5.6.5 AdapterBias}{section.5.6}% 93
-\BOOKMARK [1][]{section.5.7}{5.7 Shared Adapter}{chapter.5}% 94
-\BOOKMARK [0][]{chapter.6}{6 Use of synthetic speech as data augmentation}{}% 95
-\BOOKMARK [1][]{section.6.1}{6.1 Introduction}{chapter.6}% 96
-\BOOKMARK [1][]{section.6.2}{6.2 Related work}{chapter.6}% 97
-\BOOKMARK [2][]{subsection.6.2.1}{6.2.1 TTS data augmentation}{section.6.2}% 98
-\BOOKMARK [2][]{subsection.6.2.2}{6.2.2 Adapters}{section.6.2}% 99
-\BOOKMARK [1][]{section.6.3}{6.3 Method}{chapter.6}% 100
-\BOOKMARK [1][]{section.6.4}{6.4 System description}{chapter.6}% 101
-\BOOKMARK [2][]{subsection.6.4.1}{6.4.1 Transformer architecture for ASR}{section.6.4}% 102
-\BOOKMARK [2][]{subsection.6.4.2}{6.4.2 Multi-speaker text-to-speech: YourTTS}{section.6.4}% 103
-\BOOKMARK [1][]{section.6.5}{6.5 Experimental setup}{chapter.6}% 104
-\BOOKMARK [2][]{subsection.6.5.1}{6.5.1 Real speech corpus}{section.6.5}% 105
-\BOOKMARK [2][]{subsection.6.5.2}{6.5.2 Synthetic data}{section.6.5}% 106
-\BOOKMARK [2][]{subsection.6.5.3}{6.5.3 Experiments}{section.6.5}% 107
-\BOOKMARK [1][]{section.6.6}{6.6 Results and discussion}{chapter.6}% 108
-\BOOKMARK [2][]{subsection.6.6.1}{6.6.1 Comparison with existing approaches}{section.6.6}% 109
-\BOOKMARK [2][]{subsection.6.6.2}{6.6.2 Effect of the number of hours}{section.6.6}% 110
-\BOOKMARK [2][]{subsection.6.6.3}{6.6.3 Effect of the Adapters hyper-parameters}{section.6.6}% 111
-\BOOKMARK [1][]{section.6.7}{6.7 Conclusions and future work}{chapter.6}% 112
-\BOOKMARK [1][]{section.6.8}{6.8 Ongoing and future work}{chapter.6}% 113
-\BOOKMARK [0][]{chapter.7}{7 Pathology detection from speech}{}% 114
-\BOOKMARK [0][]{bib.0}{Bibliography}{}% 115
-\BOOKMARK [0][]{chapter.7}{Bibliography}{}% 116
+\BOOKMARK [1][]{section.5.4}{5.4 Implementation details}{chapter.5}% 83
+\BOOKMARK [1][]{section.5.5}{5.5 Results}{chapter.5}% 84
+\BOOKMARK [2][]{subsection.5.5.1}{5.5.1 Configurations}{section.5.5}% 85
+\BOOKMARK [2][]{subsection.5.5.2}{5.5.2 Unsupervised Clustering of utterances}{section.5.5}% 86
+\BOOKMARK [1][]{section.5.6}{5.6 Additional parameter-efficient procedures}{chapter.5}% 87
+\BOOKMARK [2][]{subsection.5.6.1}{5.6.1 Scaled Adapters}{section.5.6}% 88
+\BOOKMARK [2][]{subsection.5.6.2}{5.6.2 Convolution based Adapters}{section.5.6}% 89
+\BOOKMARK [2][]{subsection.5.6.3}{5.6.3 BitFit}{section.5.6}% 90
+\BOOKMARK [2][]{subsection.5.6.4}{5.6.4 Scale and Shift features}{section.5.6}% 91
+\BOOKMARK [2][]{subsection.5.6.5}{5.6.5 AdapterBias}{section.5.6}% 92
+\BOOKMARK [1][]{section.5.7}{5.7 Shared Adapter}{chapter.5}% 93
+\BOOKMARK [0][]{chapter.6}{6 Use of synthetic speech as data augmentation}{}% 94
+\BOOKMARK [1][]{section.6.1}{6.1 Introduction}{chapter.6}% 95
+\BOOKMARK [1][]{section.6.2}{6.2 Related work}{chapter.6}% 96
+\BOOKMARK [2][]{subsection.6.2.1}{6.2.1 TTS data augmentation}{section.6.2}% 97
+\BOOKMARK [2][]{subsection.6.2.2}{6.2.2 Adapters}{section.6.2}% 98
+\BOOKMARK [1][]{section.6.3}{6.3 Method}{chapter.6}% 99
+\BOOKMARK [1][]{section.6.4}{6.4 System description}{chapter.6}% 100
+\BOOKMARK [2][]{subsection.6.4.1}{6.4.1 Transformer architecture for ASR}{section.6.4}% 101
+\BOOKMARK [2][]{subsection.6.4.2}{6.4.2 Multi-speaker text-to-speech: YourTTS}{section.6.4}% 102
+\BOOKMARK [1][]{section.6.5}{6.5 Experimental setup}{chapter.6}% 103
+\BOOKMARK [2][]{subsection.6.5.1}{6.5.1 Real speech corpus}{section.6.5}% 104
+\BOOKMARK [2][]{subsection.6.5.2}{6.5.2 Synthetic data}{section.6.5}% 105
+\BOOKMARK [2][]{subsection.6.5.3}{6.5.3 Experiments}{section.6.5}% 106
+\BOOKMARK [1][]{section.6.6}{6.6 Results and discussion}{chapter.6}% 107
+\BOOKMARK [2][]{subsection.6.6.1}{6.6.1 Comparison with existing approaches}{section.6.6}% 108
+\BOOKMARK [2][]{subsection.6.6.2}{6.6.2 Effect of the number of hours}{section.6.6}% 109
+\BOOKMARK [2][]{subsection.6.6.3}{6.6.3 Effect of the Adapters hyper-parameters}{section.6.6}% 110
+\BOOKMARK [1][]{section.6.7}{6.7 Conclusions and future work}{chapter.6}% 111
+\BOOKMARK [1][]{section.6.8}{6.8 Ongoing and future work}{chapter.6}% 112
+\BOOKMARK [0][]{chapter.7}{7 Pathology detection from speech}{}% 113
+\BOOKMARK [0][]{bib.0}{Bibliography}{}% 114
+\BOOKMARK [0][]{chapter.7}{Bibliography}{}% 115

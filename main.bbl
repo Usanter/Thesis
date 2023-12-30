@@ -1257,9 +1257,67 @@ Y.~N. Dauphin, A.~Fan, M.~Auli, and D.~Grangier, ``Language modeling with gated
   convolutional networks,'' in \emph{International conference on machine
   learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2017, pp. 933--941.
 
+\bibitem{kovaleva-etal-2019-revealing}
+\BIBentryALTinterwordspacing
+O.~Kovaleva, A.~Romanov, A.~Rogers, and A.~Rumshisky, ``Revealing the dark
+  secrets of {BERT},'' in \emph{Proceedings of the 2019 Conference on Empirical
+  Methods in Natural Language Processing and the 9th International Joint
+  Conference on Natural Language Processing (EMNLP-IJCNLP)}, K.~Inui, J.~Jiang,
+  V.~Ng, and X.~Wan, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Hong Kong,
+  China: Association for Computational Linguistics, Nov. 2019, pp. 4365--4374.
+  [Online]. Available: \url{https://aclanthology.org/D19-1445}
+\BIBentrySTDinterwordspacing
+
+\bibitem{michel2019sixteen}
+P.~Michel, O.~Levy, and G.~Neubig, ``Are sixteen heads really better than
+  one?'' \emph{Advances in neural information processing systems}, vol.~32,
+  2019.
+
+\bibitem{ye2023partial}
+P.~Ye, Y.~Huang, C.~Tu, M.~Li, T.~Chen, T.~He, and W.~Ouyang, ``Partial
+  fine-tuning: A successor to full fine-tuning for vision transformers,'' 2023.
+
+\bibitem{mccarley2019structured}
+J.~McCarley, R.~Chakravarti, and A.~Sil, ``Structured pruning of a bert-based
+  question answering model,'' \emph{arXiv preprint arXiv:1910.06360}, 2019.
+
+\bibitem{sanh2019distilbert}
+V.~Sanh, L.~Debut, J.~Chaumond, and T.~Wolf, ``Distilbert, a distilled version
+  of bert: smaller, faster, cheaper and lighter,'' \emph{arXiv preprint
+  arXiv:1910.01108}, 2019.
+
+\bibitem{zheng22d_interspeech}
+W.~Zheng, A.~Xiao, G.~Keren, D.~Le, F.~Zhang, C.~Fuegen, O.~Kalinli, Y.~Saraf,
+  and A.~Mohamed, ``{Scaling ASR Improves Zero and Few Shot Learning},'' in
+  \emph{Proc. Interspeech 2022}, 2022, pp. 5135--5139.
+
+\bibitem{shen2021partial}
+Z.~Shen, Z.~Liu, J.~Qin, M.~Savvides, and K.-T. Cheng, ``Partial is better than
+  all: revisiting fine-tuning strategy for few-shot learning,'' in
+  \emph{Proceedings of the AAAI Conference on Artificial Intelligence},
+  vol.~35, no.~11, 2021, pp. 9594--9602.
+
+\bibitem{wang2021fine}
+Y.~Wang, A.~Boumadane, and A.~Heba, ``A fine-tuned wav2vec 2.0/hubert benchmark
+  for speech emotion recognition, speaker verification and spoken language
+  understanding,'' \emph{arXiv preprint arXiv:2111.02735}, 2021.
+
 \bibitem{frankle2018lottery}
 J.~Frankle and M.~Carbin, ``The lottery ticket hypothesis: Finding sparse,
   trainable neural networks,'' \emph{arXiv preprint arXiv:1803.03635}, 2018.
+
+\bibitem{gandhi2023distilwhisper}
+S.~Gandhi, P.~von Platen, and A.~M. Rush, ``Distil-whisper: Robust knowledge
+  distillation via large-scale pseudo labelling,'' 2023.
+
+\bibitem{chang2022distilhubert}
+H.-J. Chang, S.~wen Yang, and H.~yi~Lee, ``Distilhubert: Speech representation
+  learning by layer-wise distillation of hidden-unit bert,'' 2022.
+
+\bibitem{peng23c_interspeech}
+Y.~Peng, Y.~Sudo, S.~Muhammad, and S.~Watanabe, ``{DPHuBERT: Joint Distillation
+  and Pruning of Self-Supervised Speech Models},'' in \emph{Proc. INTERSPEECH
+  2023}, 2023, pp. 62--66.
 
 \bibitem{speechbrain}
 M.~Ravanelli, T.~Parcollet, P.~Plantinga, A.~Rouhe, S.~Cornell, L.~Lugosch,
@@ -1267,6 +1325,14 @@ M.~Ravanelli, T.~Parcollet, P.~Plantinga, A.~Rouhe, S.~Cornell, L.~Lugosch,
   Fu, C.-F. Liao, E.~Rastorgueva, F.~Grondin, W.~Aris, H.~Na, Y.~Gao, R.~D.
   Mori, and Y.~Bengio, ``{SpeechBrain}: A general-purpose speech toolkit,''
   2021, arXiv:2106.04624.
+
+\bibitem{Kaplan2020ScalingLF}
+\BIBentryALTinterwordspacing
+J.~Kaplan, S.~McCandlish, T.~J. Henighan, T.~B. Brown, B.~Chess, R.~Child,
+  S.~Gray, A.~Radford, J.~Wu, and D.~Amodei, ``Scaling laws for neural language
+  models,'' \emph{ArXiv}, vol. abs/2001.08361, 2020. [Online]. Available:
+  \url{https://api.semanticscholar.org/CorpusID:210861095}
+\BIBentrySTDinterwordspacing
 
 \bibitem{houlsby}
 N.~Houlsby, A.~Giurgiu, S.~Jastrzebski, B.~Morrone, Q.~De~Laroussilhe,
@@ -1353,6 +1419,55 @@ D.~Snyder, D.~Garcia-Romero, G.~Sell, D.~Povey, and S.~Khudanpur, ``X-vectors:
   international conference on acoustics, speech and signal processing
   (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 5329--5333.
 
+\bibitem{glorot2010understanding}
+X.~Glorot and Y.~Bengio, ``Understanding the difficulty of training deep
+  feedforward neural networks,'' in \emph{Proceedings of the thirteenth
+  international conference on artificial intelligence and statistics}.\hskip
+  1em plus 0.5em minus 0.4em\relax JMLR Workshop and Conference Proceedings,
+  2010, pp. 249--256.
+
+\bibitem{ben-zaken-etal-2022-bitfit}
+\BIBentryALTinterwordspacing
+E.~Ben~Zaken, Y.~Goldberg, and S.~Ravfogel, ``{B}it{F}it: Simple
+  parameter-efficient fine-tuning for transformer-based masked
+  language-models,'' in \emph{Proceedings of the 60th Annual Meeting of the
+  Association for Computational Linguistics (Volume 2: Short Papers)},
+  S.~Muresan, P.~Nakov, and A.~Villavicencio, Eds.\hskip 1em plus 0.5em minus
+  0.4em\relax Dublin, Ireland: Association for Computational Linguistics, May
+  2022, pp. 1--9. [Online]. Available:
+  \url{https://aclanthology.org/2022.acl-short.1}
+\BIBentrySTDinterwordspacing
+
+\bibitem{lian2022scaling}
+D.~Lian, D.~Zhou, J.~Feng, and X.~Wang, ``Scaling \& shifting your features: A
+  new baseline for efficient model tuning,'' \emph{Advances in Neural
+  Information Processing Systems}, vol.~35, pp. 109--123, 2022.
+
+\bibitem{wu2018group}
+Y.~Wu and K.~He, ``Group normalization,'' in \emph{Proceedings of the European
+  conference on computer vision (ECCV)}, 2018, pp. 3--19.
+
+\bibitem{huang2017arbitrary}
+X.~Huang and S.~Belongie, ``Arbitrary style transfer in real-time with adaptive
+  instance normalization,'' in \emph{Proceedings of the IEEE international
+  conference on computer vision}, 2017, pp. 1501--1510.
+
+\bibitem{sun2016return}
+B.~Sun, J.~Feng, and K.~Saenko, ``Return of frustratingly easy domain
+  adaptation,'' in \emph{Proceedings of the AAAI conference on artificial
+  intelligence}, vol.~30, no.~1, 2016.
+
+\bibitem{fu-etal-2022-adapterbias}
+\BIBentryALTinterwordspacing
+C.-L. Fu, Z.-C. Chen, Y.-R. Lee, and H.-y. Lee, ``{A}dapter{B}ias:
+  Parameter-efficient token-dependent representation shift for adapters in
+  {NLP} tasks,'' in \emph{Findings of the Association for Computational
+  Linguistics: NAACL 2022}, M.~Carpuat, M.-C. de~Marneffe, and I.~V. Meza~Ruiz,
+  Eds.\hskip 1em plus 0.5em minus 0.4em\relax Seattle, United States:
+  Association for Computational Linguistics, Jul. 2022, pp. 2608--2621.
+  [Online]. Available: \url{https://aclanthology.org/2022.findings-naacl.199}
+\BIBentrySTDinterwordspacing
+
 \bibitem{tera}
 A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
   transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
@@ -1365,10 +1480,6 @@ P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
   representation,'' 2020. [Online]. Available:
   \url{https://arxiv.org/abs/2005.08575}
 \BIBentrySTDinterwordspacing
-
-\bibitem{chang2022distilhubert}
-H.-J. Chang, S.~wen Yang, and H.~yi~Lee, ``Distilhubert: Speech representation
-  learning by layer-wise distillation of hidden-unit bert,'' 2022.
 
 \bibitem{hu2022synt++}
 T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
