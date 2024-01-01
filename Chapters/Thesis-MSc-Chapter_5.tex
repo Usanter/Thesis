@@ -243,8 +243,14 @@ In this section, we present the outcomes of our clustering approach, as summaris
 \end{figure}
 \subsection{Scaled Adapters}
 % Explain the idea has been used in many example
-Scaled or Gated Adapters are a extension of the traditional residual Adapters \cite{hou2021exploiting}. A couple of works used it in different context, 
-% The one we are intersted in is the Scalling one inspired by LORA
+Scaled or Gated Adapters represent an extension of the conventional residual Adapters, introducing a scaling mechanism to the output activations of the injected adapter modules. The concept of scaled-Adapters was initially introduced by \cite{he2022towards} and is formally expressed as:
+\begin{equation}
+    adapter(x) = x + s \cdot (W_{up}(f(W_{down}g(x) + b_{down})) + b_{up})    
+\end{equation}
+
+Here, $s$ is a tunable scalar hyperparameter. Notably, some research has proposed the idea of learning this scalar value directly during training as a gate mechanism \cite{mao-etal-2022-unipelt}.  The intuition behind this approach is to allow the network to gradually learn to assign weights to the target domain, achieving fine-grained control of submodule activation or deactivation. The scaled learning process facilitates the regulation of contributions from the Adapters, enabling the model to adapt and refine its responses based on the specific characteristics of the data encountered during training.
+
+
 \subsection{Convolution based Adapters}
 \subsection{BitFit}
 Bias-Term Fine-Tuning, known as BitFit, is a PETL method introduced by \cite{ben-zaken-etal-2022-bitfit} for NLP tasks. The main idea behind BitFit is to fine-tune only the bias terms and the task-specific classification layer while keeping the rest of the model frozen. This approach aims to achieve efficient fine-tuning with reduced computational requirements in a similar way as our partial fine-tuning experiments in chapter \ref{chap:e2e}. The fine-tuning of bias terms can be seen as introducing a task-specific shift to the token representations.

@@ -2629,3 +2629,35 @@ url={https://openreview.net/forum?id=0RDcd5Axok}
     pages = "2608--2621",
     abstract = "Transformer-based pre-trained models with millions of parameters require large storage. Recent approaches tackle this shortcoming by training adapters, but these approaches still require a relatively large number of parameters. In this study, AdapterBias, a surprisingly simple yet effective adapter architecture, is proposed. AdapterBias adds a token-dependent shift to the hidden output of transformer layers to adapt to downstream tasks with only a vector and a linear layer. Extensive experiments are conducted to demonstrate the effectiveness of AdapterBias. The experiments show that our proposed method can dramatically reduce the trainable parameters compared to the previous works with a minimal decrease in task performances compared with fine-tuned pre-trained models. We further find that AdapterBias automatically learns to assign more significant representation shifts to the tokens related to the task in consideration.",
 }
+
+@inproceedings{he2022towards,
+title={Towards a Unified View of Parameter-Efficient Transfer Learning},
+author={Junxian He and Chunting Zhou and Xuezhe Ma and Taylor Berg-Kirkpatrick and Graham Neubig},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=0RDcd5Axok}
+}
+
+@inproceedings{mao-etal-2022-unipelt,
+    title = "{U}ni{PELT}: A Unified Framework for Parameter-Efficient Language Model Tuning",
+    author = "Mao, Yuning  and
+      Mathias, Lambert  and
+      Hou, Rui  and
+      Almahairi, Amjad  and
+      Ma, Hao  and
+      Han, Jiawei  and
+      Yih, Scott  and
+      Khabsa, Madian",
+    editor = "Muresan, Smaranda  and
+      Nakov, Preslav  and
+      Villavicencio, Aline",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.433",
+    doi = "10.18653/v1/2022.acl-long.433",
+    pages = "6253--6264",
+    abstract = "Recent parameter-efficient language model tuning (PELT) methods manage to match the performance of fine-tuning with much fewer trainable parameters and perform especially well when training data is limited. However, different PELT methods may perform rather differently on the same task, making it nontrivial to select the most appropriate method for a specific task, especially considering the fast-growing number of new PELT methods and tasks. In light of model diversity and the difficulty of model selection, we propose a unified framework, UniPELT, which incorporates different PELT methods as submodules and learns to activate the ones that best suit the current data or task setup via gating mechanism. On the GLUE benchmark, UniPELT consistently achieves 1 4{\%} gains compared to the best individual PELT method that it incorporates and even outperforms fine-tuning under different setups. Moreover, UniPELT generally surpasses the upper bound that takes the best performance of all its submodules used individually on each task, indicating that a mixture of multiple PELT methods may be inherently more effective than single methods.",
+}

@@ -1426,6 +1426,25 @@ X.~Glorot and Y.~Bengio, ``Understanding the difficulty of training deep
   1em plus 0.5em minus 0.4em\relax JMLR Workshop and Conference Proceedings,
   2010, pp. 249--256.
 
+\bibitem{he2022towards}
+\BIBentryALTinterwordspacing
+J.~He, C.~Zhou, X.~Ma, T.~Berg-Kirkpatrick, and G.~Neubig, ``Towards a unified
+  view of parameter-efficient transfer learning,'' in \emph{International
+  Conference on Learning Representations}, 2022. [Online]. Available:
+  \url{https://openreview.net/forum?id=0RDcd5Axok}
+\BIBentrySTDinterwordspacing
+
+\bibitem{mao-etal-2022-unipelt}
+\BIBentryALTinterwordspacing
+Y.~Mao, L.~Mathias, R.~Hou, A.~Almahairi, H.~Ma, J.~Han, S.~Yih, and M.~Khabsa,
+  ``{U}ni{PELT}: A unified framework for parameter-efficient language model
+  tuning,'' in \emph{Proceedings of the 60th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, S.~Muresan, P.~Nakov,
+  and A.~Villavicencio, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Dublin,
+  Ireland: Association for Computational Linguistics, May 2022, pp. 6253--6264.
+  [Online]. Available: \url{https://aclanthology.org/2022.acl-long.433}
+\BIBentrySTDinterwordspacing
+
 \bibitem{ben-zaken-etal-2022-bitfit}
 \BIBentryALTinterwordspacing
 E.~Ben~Zaken, Y.~Goldberg, and S.~Ravfogel, ``{B}it{F}it: Simple
