@@ -243,15 +243,17 @@ In this section, we present the outcomes of our clustering approach, as summaris
 \end{figure}
 \subsection{Scaled Adapters}
 % Explain the idea has been used in many example
-Scaled or Gated Adapters represent an extension of the conventional residual Adapters, introducing a scaling mechanism to the output activations of the injected adapter modules. The concept of scaled-Adapters was initially introduced by \cite{he2022towards} and is formally expressed as:
+Scaled or Gated Adapters extend the conventional residual Adapters by introducing a scaling mechanism to the output of the Adapter modules. The concept of scaled-Adapters was initially introduced by \cite{he2022towards} and is formally expressed as:
 \begin{equation}
     adapter(x) = x + s \cdot (W_{up}(f(W_{down}g(x) + b_{down})) + b_{up})    
 \end{equation}
-
-Here, $s$ is a tunable scalar hyperparameter. Notably, some research has proposed the idea of learning this scalar value directly during training as a gate mechanism \cite{mao-etal-2022-unipelt}.  The intuition behind this approach is to allow the network to gradually learn to assign weights to the target domain, achieving fine-grained control of submodule activation or deactivation. The scaled learning process facilitates the regulation of contributions from the Adapters, enabling the model to adapt and refine its responses based on the specific characteristics of the data encountered during training.
-
+% Tunable parameters
+Here, $s$ is a tunable scalar hyperparameter. Notably, some research has proposed the to learn directly this scalar value during training as a gate mechanism \cite{mao-etal-2022-unipelt}. The intuition behind this approach is to allow the network to gradually learn to assign weights to the target domain, achieving more fine-grained control of the Adapter activation or deactivation. The scaled learning process facilitates the regulation of contributions from the Adapters from differents layers, enabling the model to adapt and refine its responses based on the specific characteristics of the data encountered during training.
+% Experimental setup
+Within the context of our experiments, we decided to use a trainable scalar associated to each Adapter modules. This scaling parameters and all Adapter modules were optimised through a 30 epochs training using a learning rate of $8 \times 10^{-4}$.
 
 \subsection{Convolution based Adapters}
+CNNs have been widely recognized for their efficacy in exploiting local information, particularly in the context of computer vision tasks. These networks learn shared position-based kernels over a local window. The key advantage lies in their ability to capturing features such as edges and shapes effectively. Notably, CNNs have demonstrated success in various speech-related tasks, as exemplified by the Conformer architecture \cite{gulati2020conformer}.CNNs can effectively fuse channel-wise information within a local receptive field while learning task-specific details. This capability makes them adept at distilling knowledge encoded in pre-trained model parameters. Drawing inspiration from these properties, convolutional layers have found their way into the architecture of Adapter models. This integration allows Adapters to leverage the spatial processing capabilities of convolutional modules, further enhancing their ability to capture and adapt to intricate patterns within the data.
 \subsection{BitFit}
 Bias-Term Fine-Tuning, known as BitFit, is a PETL method introduced by \cite{ben-zaken-etal-2022-bitfit} for NLP tasks. The main idea behind BitFit is to fine-tune only the bias terms and the task-specific classification layer while keeping the rest of the model frozen. This approach aims to achieve efficient fine-tuning with reduced computational requirements in a similar way as our partial fine-tuning experiments in chapter \ref{chap:e2e}. The fine-tuning of bias terms can be seen as introducing a task-specific shift to the token representations.
 
