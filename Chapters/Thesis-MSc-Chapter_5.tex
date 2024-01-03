@@ -204,9 +204,8 @@ Next, we investigated the Conformer model, we once again explored \textit{Frozen
 
 In addition, we evaluated the use of  Adapters in the decoder. As the decoder of the Conformer architecture is a regular Transformer, we only evaluate the ``Serial''and ``Parallel'' setup, which respectively reached 18.09\%  and 17.76\% WER with 3.2 million parameters. Results showed that Adapters are more relevant when plugged into the encoder. It confirms that acoustic variability plays a critical role in the degradation of children's ASR performance. Finally, combining ``TPA''in the encoder layers with ``Parallel''Adapters in the decoder outperforms Adapters in the encoder only, with 11.47\% WER. Consequently, this configuration stands as the most effective model. 
 
-%CAMERA-READY (Add small paragraph on the statistical test)
+%statistical tests
 We performed statistical tests (Matched Pairs Sentence-Segment Word Error) across all Adapter setups in comparison to the full fine-tuning configuration using SCTK, the NIST Scoring Toolkit \footnote{https://github.com/usnistgov/SCTK/tree/master}. 
-%ALBERTO - Add a referene or link to this toolkit
 The results reveal that, in all scenarios, the \textit{p}-value is less than or equal to 0.001. This observation denotes statistical significance, indicating evidence against the null hypothesis. 
 
 These results collectively illustrate the versatility and effectiveness of different Adapter configurations within the Transformer and  Conformer model for the children's ASR task. ``TPA''Adapters in the Encoder combined with ``Parallel''Adapters in the Decoder showcased outstanding performance, highlighting their potential as a fine-tuning replacement in large model children ASR scenarios.
@@ -233,7 +232,9 @@ These results collectively illustrate the versatility and effectiveness of diffe
 
 In this section, we present the outcomes of our clustering approach, as summarised in Table \ref{tab:res_clusters}. We investigated the influence of varying cluster numbers on ASR performance, ranging from 1 to 4 clusters using the ``TPA''in the encoder-only configuration. Notably, when the data remained unclustered (one cluster), the ASR system exhibited a WER of 11.58\%. However, the two-cluster configuration surpassed the others, achieving a superior performance of 11.50\%. This result suggests that partitioning the data into two distinct clusters enables the Adapters to more effectively capture underlying patterns intricately linked to their respective clusters, consequently enhancing the recognition scores. Furthermore, we explored the impact of increasing the number of clusters to three and four, revealing only marginal differences in performance, with WERs of 11.57\% and 11.51\%, respectively. These findings underscore the role of data clustering in children's ASR systems.
 
-\section{Additional parameter-efficient procedures}
+\section{Exploring PETL alternative approaches}
+In this section, we provide a systematic review of alternative PETL methods. Indeed, with the increased demand for scalable models that operate within constrained computational resources, the exploration of novel techniques arised. As there is a lot of different new architecture beyond the conventional Adapters, we analyse them in the context of children ASR. In the following pages, we present a meticulous review of these advanced approaches, meticulously dissecting their theoretical underpinnings, implementation nuances, and empirical outcomes. Through this comprehensive analysis, we aim to provide a rigorous understanding of the efficacy and potential applications of alternative parameter-efficient transfer learning methodologies.  As the field continues to evolve, this section serves as a scholarly guide to the forefront of research, offering insights that contribute to the ongoing discourse surrounding efficient knowledge transfer in machine learning.
+
 \begin{figure}
     \begin{center}
         \includegraphics[width=\textwidth]{imgs/Adapter_compare_withoutWide.png}
@@ -253,7 +254,39 @@ Here, $s$ is a tunable scalar hyperparameter. Notably, some research has propose
 Within the context of our experiments, we decided to use a trainable scalar associated to each Adapter modules. This scaling parameters and all Adapter modules were optimised through a 30 epochs training using a learning rate of $8 \times 10^{-4}$.
 
 \subsection{Convolution based Adapters}
-CNNs have been widely recognized for their efficacy in exploiting local information, particularly in the context of computer vision tasks. These networks learn shared position-based kernels over a local window. The key advantage lies in their ability to capturing features such as edges and shapes effectively. Notably, CNNs have demonstrated success in various speech-related tasks, as exemplified by the Conformer architecture \cite{gulati2020conformer}.CNNs can effectively fuse channel-wise information within a local receptive field while learning task-specific details. This capability makes them adept at distilling knowledge encoded in pre-trained model parameters. Drawing inspiration from these properties, convolutional layers have found their way into the architecture of Adapter models. This integration allows Adapters to leverage the spatial processing capabilities of convolutional modules, further enhancing their ability to capture and adapt to intricate patterns within the data.
+% CNN make sense for speech
+Convolutional Neural Networks have been widely recognised for their effectiveness in exploiting local information, particularly for computer vision tasks. These networks learn shared kernels based on position within localised windows, giving them the ability to capture features such as edges and shapes. This characteristic has also been demonstrated in the field of speech-related tasks, as demonstrated by the success of the Conformer architecture \cite{gulati2020conformer}.
+
+%Then CNN in Adapter is a normal step
+As a result of this success, CNNs have been naturaly incorporated into Adapter modules. This strategic fusion enables Adapters to leverage the spatial processing capabilities inherent in convolutional modules, thereby enhancing their capacity to capture and adapt to different patterns present in the data. The initial approach involved using CNNs as feature extractors, in conjunction with a linear transformation, as detailed by \cite{yang23p_interspeech}, we denoted this approach as Conv-Adapter. We experimented two version of Conv-Adapters, where a 1-dimensional CNN is used as replacement of either the first of second linear of the traditional Adapters. More formally, the \textit{$\text{Conv-Adapter}_{down}$} expressed as followed:
+\begin{equation}
+    \text{Conv-adapter}_{Down}(x) = x + (W_{up}(\text{CNN}_{1D}(x))+ b_{up})
+\end{equation}
+While \textit{$\text{Conv-Adapter}_{up}$} is defined as:
+\begin{equation}
+    \text{Conv-adapter}_{up}(x) = x + \text{CNN}_{1D}(W_{down}(x)+ b_{down})
+\end{equation}
+We also investigated, the \cite{muthuchamyselvaraj23_interspeech} Conv-Adapter where the CNN is integrated in between the Up and Down projection of the traditional Adapter, denoted \textit{$\text{Conv-Adapter}_{Middle}$}, mathematically expressed as:
+\begin{equation}
+    \text{Conv-adapter}_{Middle}(x) = x + W_{up}(\text{CNN}_{1D}(W_{down}(x)+ b_{down})+ b_{up})
+\end{equation}
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.4]{imgs/ConvPass.png}
+        \caption{Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.}
+        \label{fig:convpass}
+    \end{center}
+\end{figure}
+
+% Adapter fully CNN based
+An alternative approach involves the use of a fully CNN-based Adapter known as ConvPass, which has demonstrated effectiveness in computer vision tasks \cite{jie2022convolutional}. Diverging from conventional Adapters and the previously mentioned Conv-Adapter, ConvPass distinguishes itself by the removal of the up and down linear layers, replaced instead by three CNN layers. In \cite{jie2022convolutional}, these layers comprise a $1 \times 1$ convolution, followed by a $3 \times 3$ convolution, and another $1 \times 1$ convolution. Notably, GELU activation functions are interposed between these convolutional layers.
+
+For speech-related tasks, a comparable approach was introduced by \cite{li2023evaluating}. The speech-specific ConvPass, illustrated in Figure \ref{fig:convpass}, incorporates a layer normalisation layer, followed by three lightweight 1-dimensional CNN layers with kernel sizes of 3, 5, and 3, respectively. Additionally, a squeeze and excite module is integrated into the architecture. The squeeze and excite module, as proposed by \cite{hu2018squeeze}, facilitates feature recalibration. It consists of a global pooling operation, followed by a linear layer, a Rectified Linear Unit (ReLU) activation, a second linear layer, and concludes with a Sigmoid activation.
+
+During our experiments, all Conv-Adapters and ConvPass configurations were trained for 30 epochs with a learning rate of $8 \times 10^{-4}$.
+%Alternatively is possibe to use a fully CNN-based Adapter. Called ConvPass, it was found effective for computer vision tasks \cite{jie2022convolutional}. ConvPass differ from regular Adapter and previously mentioned Conv-Adapter as the up and down linear layers were removed and replaced with three CNN layers, a $1 \times 1$ followed by a $3 \times 3$ and finally a $1 \times 1$ with GELU activation in between them. In speech, a similar approach was proposed by  \cite{li2023evaluating}. The speech ConvPass, presented in figure \ref{fig:convpass}, consist of layer normalisation layer, followed by 3 lightweight 1-dimensional CNN with kernel size of 3, 5 and 3 respectively along with a squeeze and excite module. Squeeze and excite module \cite{hu2018squeeze} allows a feature recalibration and is consisted of a global pooling, one linear layer, a Relu activation and second linear layer followed by a Sigmoid.
+
 \subsection{BitFit}
 Bias-Term Fine-Tuning, known as BitFit, is a PETL method introduced by \cite{ben-zaken-etal-2022-bitfit} for NLP tasks. The main idea behind BitFit is to fine-tune only the bias terms and the task-specific classification layer while keeping the rest of the model frozen. This approach aims to achieve efficient fine-tuning with reduced computational requirements in a similar way as our partial fine-tuning experiments in chapter \ref{chap:e2e}. The fine-tuning of bias terms can be seen as introducing a task-specific shift to the token representations.
 

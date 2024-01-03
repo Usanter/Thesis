@@ -1445,6 +1445,30 @@ Y.~Mao, L.~Mathias, R.~Hou, A.~Almahairi, H.~Ma, J.~Han, S.~Yih, and M.~Khabsa,
   [Online]. Available: \url{https://aclanthology.org/2022.acl-long.433}
 \BIBentrySTDinterwordspacing
 
+\bibitem{yang23p_interspeech}
+L.-J. Yang, C.-H.~H. Yang, and J.-T. Chien, ``{Parameter-Efficient Learning for
+  Text-to-Speech Accent Adaptation},'' in \emph{Proc. INTERSPEECH 2023}, 2023,
+  pp. 4354--4358.
+
+\bibitem{muthuchamyselvaraj23_interspeech}
+N.~{Muthuchamy Selvaraj}, X.~Guo, A.~Kong, B.~Shen, and A.~Kot, ``{Adapter
+  Incremental Continual Learning of Efficient Audio Spectrogram
+  Transformers},'' in \emph{Proc. INTERSPEECH 2023}, 2023, pp. 909--913.
+
+\bibitem{jie2022convolutional}
+S.~Jie and Z.-H. Deng, ``Convolutional bypasses are better vision transformer
+  adapters,'' \emph{arXiv preprint arXiv:2207.07039}, 2022.
+
+\bibitem{li2023evaluating}
+Y.~Li, A.~Mehrish, S.~Zhao, R.~Bhardwaj, A.~Zadeh, N.~Majumder, R.~Mihalcea,
+  and S.~Poria, ``Evaluating parameter-efficient transfer learning approaches
+  on sure benchmark for speech understanding,'' in \emph{ICASSP}, 2023.
+
+\bibitem{hu2018squeeze}
+J.~Hu, L.~Shen, and G.~Sun, ``Squeeze-and-excitation networks,'' in
+  \emph{Proceedings of the IEEE conference on computer vision and pattern
+  recognition}, 2018, pp. 7132--7141.
+
 \bibitem{ben-zaken-etal-2022-bitfit}
 \BIBentryALTinterwordspacing
 E.~Ben~Zaken, Y.~Goldberg, and S.~Ravfogel, ``{B}it{F}it: Simple

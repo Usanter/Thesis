@@ -35,12 +35,13 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{80}{figure.caption.31}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{82}{figure.caption.32}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{82}{figure.caption.33}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{87}{figure.caption.36}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{90}{figure.caption.37}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{91}{figure.caption.38}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{92}{figure.caption.39}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{88}{figure.caption.36}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.\relax }}{89}{figure.caption.37}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{91}{figure.caption.38}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{93}{figure.caption.39}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{93}{figure.caption.40}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Use of synthetic speech as data augmentation}{93}{chapter.6}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{97}{figure.caption.41}
+\contentsline {xchapter}{Use of synthetic speech as data augmentation}{95}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{99}{figure.caption.42}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathology detection from speech}{107}{chapter.7}
+\contentsline {xchapter}{Pathology detection from speech}{109}{chapter.7}
