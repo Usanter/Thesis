@@ -78,32 +78,33 @@
 \contentsline {section}{\numberline {5.4}Implementation details}{84}{section.5.4}
 \contentsline {section}{\numberline {5.5}Results}{85}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1}Configurations}{85}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Unsupervised Clustering of utterances}{86}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.2}Unsupervised Clustering of utterances}{87}{subsection.5.5.2}
 \contentsline {section}{\numberline {5.6}Exploring PETL alternative approaches}{87}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Scaled Adapters}{87}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.1}Scaled Adapters}{88}{subsection.5.6.1}
 \contentsline {subsection}{\numberline {5.6.2}Convolution based Adapters}{88}{subsection.5.6.2}
 \contentsline {subsection}{\numberline {5.6.3}BitFit}{90}{subsection.5.6.3}
 \contentsline {subsection}{\numberline {5.6.4}Scale and Shift features}{90}{subsection.5.6.4}
 \contentsline {subsection}{\numberline {5.6.5}AdapterBias}{91}{subsection.5.6.5}
-\contentsline {section}{\numberline {5.7}Shared Adapter}{92}{section.5.7}
-\contentsline {chapter}{\numberline {6}Use of synthetic speech as data augmentation}{95}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{97}{section.6.1}
-\contentsline {section}{\numberline {6.2}Related work}{98}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}TTS data augmentation}{98}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Adapters}{99}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Method}{100}{section.6.3}
-\contentsline {section}{\numberline {6.4}System description}{100}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{100}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{101}{subsection.6.4.2}
-\contentsline {section}{\numberline {6.5}Experimental setup}{101}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Real speech corpus}{101}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Synthetic data}{102}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Experiments}{102}{subsection.6.5.3}
-\contentsline {section}{\numberline {6.6}Results and discussion}{103}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{103}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Effect of the number of hours}{104}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}Effect of the Adapters hyper-parameters}{104}{subsection.6.6.3}
-\contentsline {section}{\numberline {6.7}Conclusions and future work}{105}{section.6.7}
-\contentsline {section}{\numberline {6.8}Ongoing and future work}{105}{section.6.8}
-\contentsline {chapter}{\numberline {7}Pathology detection from speech}{109}{chapter.7}
-\contentsline {chapter}{Bibliography}{113}{chapter.7}
+\contentsline {section}{\numberline {5.7}Results of the different PETL methods}{93}{section.5.7}
+\contentsline {section}{\numberline {5.8}Shared Adapter}{93}{section.5.8}
+\contentsline {chapter}{\numberline {6}Use of synthetic speech as data augmentation}{97}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{99}{section.6.1}
+\contentsline {section}{\numberline {6.2}Related work}{100}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}TTS data augmentation}{100}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Adapters}{101}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Method}{101}{section.6.3}
+\contentsline {section}{\numberline {6.4}System description}{102}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{102}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{103}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Experimental setup}{103}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Real speech corpus}{103}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Synthetic data}{104}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Experiments}{104}{subsection.6.5.3}
+\contentsline {section}{\numberline {6.6}Results and discussion}{105}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{105}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Effect of the number of hours}{106}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Effect of the Adapters hyper-parameters}{106}{subsection.6.6.3}
+\contentsline {section}{\numberline {6.7}Conclusions and future work}{107}{section.6.7}
+\contentsline {section}{\numberline {6.8}Ongoing and future work}{107}{section.6.8}
+\contentsline {chapter}{\numberline {7}Pathology detection from speech}{111}{chapter.7}
+\contentsline {chapter}{Bibliography}{115}{chapter.7}

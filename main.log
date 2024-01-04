@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  3 JAN 2024 18:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  4 JAN 2024 12:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2348,7 +2348,7 @@ Package minitoc(hints) Warning: W0023
 \c@Changes@ReplaceCountPT=\count386
 )
 TextBlockOrigin set to -5mm x 0mm
-<./imgs/IST_A_RGB_POS.png, id=467, 509.905pt x 198.7425pt>
+<./imgs/IST_A_RGB_POS.png, id=471, 509.905pt x 198.7425pt>
 File: ./imgs/IST_A_RGB_POS.png Graphic file (type png)
 <use ./imgs/IST_A_RGB_POS.png>
 Package pdftex.def Info: ./imgs/IST_A_RGB_POS.png  used on input line 53.
@@ -2544,7 +2544,7 @@ l.2 \cleardoublepage
                      [2
 
 ] [3]
-<imgs/exampleSLT.png, id=787, 1134.2375pt x 307.1475pt>
+<imgs/exampleSLT.png, id=792, 1134.2375pt x 307.1475pt>
 File: imgs/exampleSLT.png Graphic file (type png)
 <use imgs/exampleSLT.png>
 Package pdftex.def Info: imgs/exampleSLT.png  used on input line 28.
@@ -2572,28 +2572,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 5637) has occurred while \output is active []
 
  [13]
-<imgs/f1f2children.png, id=870, 684.5575pt x 542.025pt>
+<imgs/f1f2children.png, id=875, 684.5575pt x 542.025pt>
 File: imgs/f1f2children.png Graphic file (type png)
 <use imgs/f1f2children.png>
 Package pdftex.def Info: imgs/f1f2children.png  used on input line 67.
 (pdftex.def)             Requested size: 218.51521pt x 173.0132pt.
-<imgs/intraspeakervariability.png, id=871, 681.54625pt x 530.98375pt>
+<imgs/intraspeakervariability.png, id=876, 681.54625pt x 530.98375pt>
 File: imgs/intraspeakervariability.png Graphic file (type png)
 <use imgs/intraspeakervariability.png>
 Package pdftex.def Info: imgs/intraspeakervariability.png  used on input line 68.
 (pdftex.def)             Requested size: 218.51521pt x 170.24234pt.
-<imgs/children_vowel_duration.png, id=874, 460.72125pt x 423.5825pt>
+<imgs/children_vowel_duration.png, id=879, 460.72125pt x 423.5825pt>
 File: imgs/children_vowel_duration.png Graphic file (type png)
 <use imgs/children_vowel_duration.png>
 Package pdftex.def Info: imgs/children_vowel_duration.png  used on input line 74.
 (pdftex.def)             Requested size: 218.51521pt x 200.9pt.
-<imgs/Intra_inter_duration.png, id=875, 460.72125pt x 423.5825pt>
+<imgs/Intra_inter_duration.png, id=880, 460.72125pt x 423.5825pt>
 File: imgs/Intra_inter_duration.png Graphic file (type png)
 <use imgs/Intra_inter_duration.png>
 Package pdftex.def Info: imgs/Intra_inter_duration.png  used on input line 75.
 (pdftex.def)             Requested size: 218.51521pt x 200.9pt.
  [14 </Users/thomasrolland/Documents/PhD/Thesis/imgs/f1f2children.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/intraspeakervariability.png>] [15 </Users/thomasrolland/Documents/PhD/Thesis/imgs/children_vowel_duration.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Intra_inter_duration.png>] [16] [17] [18]
-<imgs/bell.png, id=946, 997.7275pt x 450.68375pt>
+<imgs/bell.png, id=951, 997.7275pt x 450.68375pt>
 File: imgs/bell.png Graphic file (type png)
 <use imgs/bell.png>
 Package pdftex.def Info: imgs/bell.png  used on input line 167.
@@ -2603,7 +2603,7 @@ Package pdftex.def Info: imgs/bell.png  used on input line 167.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19] [20 </Users/thomasrolland/Documents/PhD/Thesis/imgs/bell.png>]
-<imgs/harpy.png, id=961, 1460.45625pt x 685.56125pt>
+<imgs/harpy.png, id=967, 1460.45625pt x 685.56125pt>
 File: imgs/harpy.png Graphic file (type png)
 <use imgs/harpy.png>
 Package pdftex.def Info: imgs/harpy.png  used on input line 203.
@@ -2612,7 +2612,7 @@ Package pdftex.def Info: imgs/harpy.png  used on input line 203.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imgs/HMM-GMM_architecture.png, id=964, 936.49875pt x 380.42125pt>
+<imgs/HMM-GMM_architecture.png, id=970, 936.49875pt x 380.42125pt>
 File: imgs/HMM-GMM_architecture.png Graphic file (type png)
 <use imgs/HMM-GMM_architecture.png>
 Package pdftex.def Info: imgs/HMM-GMM_architecture.png  used on input line 215.
@@ -2621,7 +2621,7 @@ Package pdftex.def Info: imgs/HMM-GMM_architecture.png  used on input line 215.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21] [22 </Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png>] [23 </Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png>]
-<imgs/features.png, id=991, 635.37375pt x 847.165pt>
+<imgs/features.png, id=996, 635.37375pt x 847.165pt>
 File: imgs/features.png Graphic file (type png)
 <use imgs/features.png>
 Package pdftex.def Info: imgs/features.png  used on input line 256.
@@ -2630,7 +2630,7 @@ Package pdftex.def Info: imgs/features.png  used on input line 256.
 Underfull \vbox (badness 1810) has occurred while \output is active []
 
  [25 </Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png>]
-<imgs/HMM_monophone.png, id=1015, 734.745pt x 371.3875pt>
+<imgs/HMM_monophone.png, id=1020, 734.745pt x 371.3875pt>
 File: imgs/HMM_monophone.png Graphic file (type png)
 <use imgs/HMM_monophone.png>
 Package pdftex.def Info: imgs/HMM_monophone.png  used on input line 294.
@@ -2642,7 +2642,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29] [30]
-<imgs/End2End_architeccture.png, id=1092, 929.4725pt x 218.8175pt>
+<imgs/End2End_architeccture.png, id=1097, 929.4725pt x 218.8175pt>
 File: imgs/End2End_architeccture.png Graphic file (type png)
 <use imgs/End2End_architeccture.png>
 Package pdftex.def Info: imgs/End2End_architeccture.png  used on input line 447.
@@ -2654,12 +2654,12 @@ Underfull \vbox (badness 5741) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36] [37] [38] [39] [40] [41]
-<imgs/tf_children.png, id=1315, 1055.945pt x 744.7825pt>
+<imgs/tf_children.png, id=1320, 1055.945pt x 744.7825pt>
 File: imgs/tf_children.png Graphic file (type png)
 <use imgs/tf_children.png>
 Package pdftex.def Info: imgs/tf_children.png  used on input line 778.
 (pdftex.def)             Requested size: 218.51521pt x 154.11331pt.
-<imgs/pronunciation_adapt.png, id=1316, 1055.945pt x 744.7825pt>
+<imgs/pronunciation_adapt.png, id=1321, 1055.945pt x 744.7825pt>
 File: imgs/pronunciation_adapt.png Graphic file (type png)
 <use imgs/pronunciation_adapt.png>
 Package pdftex.def Info: imgs/pronunciation_adapt.png  used on input line 779.
@@ -2671,7 +2671,7 @@ Underfull \vbox (badness 4072) has occurred while \output is active []
 Underfull \vbox (badness 1668) has occurred while \output is active []
 
  [43]
-<imgs/MTL.png, id=1357, 461.725pt x 307.1475pt>
+<imgs/MTL.png, id=1362, 461.725pt x 307.1475pt>
 File: imgs/MTL.png Graphic file (type png)
 <use imgs/MTL.png>
 Package pdftex.def Info: imgs/MTL.png  used on input line 812.
@@ -2700,7 +2700,7 @@ Chapter 3.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56] [57]
-<imgs/Ours_final.png, id=1597, 417.56pt x 269.005pt>
+<imgs/Ours_final.png, id=1602, 417.56pt x 269.005pt>
 File: imgs/Ours_final.png Graphic file (type png)
 <use imgs/Ours_final.png>
 Package pdftex.def Info: imgs/Ours_final.png  used on input line 140.
@@ -2717,7 +2717,7 @@ Chapter 4.
 ] [64
 
 ]
-<imgs/transformer_archi.png, id=1651, 1286.8075pt x 796.9775pt>
+<imgs/transformer_archi.png, id=1656, 1286.8075pt x 796.9775pt>
 File: imgs/transformer_archi.png Graphic file (type png)
 <use imgs/transformer_archi.png>
 Package pdftex.def Info: imgs/transformer_archi.png  used on input line 27.
@@ -2729,12 +2729,12 @@ Underfull \vbox (badness 1490) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
-<imgs/ConformerLayer.png, id=1693, 265.99374pt x 653.44125pt>
+<imgs/ConformerLayer.png, id=1698, 265.99374pt x 653.44125pt>
 File: imgs/ConformerLayer.png Graphic file (type png)
 <use imgs/ConformerLayer.png>
 Package pdftex.def Info: imgs/ConformerLayer.png  used on input line 116.
 (pdftex.def)             Requested size: 106.3956pt x 261.37187pt.
-<imgs/ConvolutionModule.png, id=1694, 1021.8175pt x 147.55125pt>
+<imgs/ConvolutionModule.png, id=1699, 1021.8175pt x 147.55125pt>
 File: imgs/ConvolutionModule.png Graphic file (type png)
 <use imgs/ConvolutionModule.png>
 Package pdftex.def Info: imgs/ConvolutionModule.png  used on input line 123.
@@ -2749,7 +2749,7 @@ Underfull \vbox (badness 2617) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71] [72]
-<imgs/layerTL.png, id=1776, 650.43pt x 372.39125pt>
+<imgs/layerTL.png, id=1781, 650.43pt x 372.39125pt>
 File: imgs/layerTL.png Graphic file (type png)
 <use imgs/layerTL.png>
 Package pdftex.def Info: imgs/layerTL.png  used on input line 230.
@@ -2772,147 +2772,152 @@ Chapter 5.
 ] [78
 
 ] [79]
-<imgs/Adapter_alone.png, id=1831, 360.34625pt x 424.58624pt>
+<imgs/Adapter_alone.png, id=1837, 360.34625pt x 424.58624pt>
 File: imgs/Adapter_alone.png Graphic file (type png)
 <use imgs/Adapter_alone.png>
 Package pdftex.def Info: imgs/Adapter_alone.png  used on input line 43.
 (pdftex.def)             Requested size: 108.1047pt x 127.37685pt.
  [80 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png>] [81]
-<imgs/Adapter_conformer.png, id=1863, 1665.22125pt x 546.04pt>
-File: imgs/Adapter_conformer.png Graphic file (type png)
-<use imgs/Adapter_conformer.png>
-Package pdftex.def Info: imgs/Adapter_conformer.png  used on input line 84.
-(pdftex.def)             Requested size: 449.61575pt x 147.43277pt.
+<imgs/Adapter_Transformer.png, id=1869, 573.14125pt x 374.39874pt>
+File: imgs/Adapter_Transformer.png Graphic file (type png)
+<use imgs/Adapter_Transformer.png>
+Package pdftex.def Info: imgs/Adapter_Transformer.png  used on input line 84.
+(pdftex.def)             Requested size: 154.7502pt x 101.089pt.
+<imgs/Adapter_conformer.png, id=1870, 1665.22125pt x 546.04pt>
 File: imgs/Adapter_conformer.png Graphic file (type png)
 <use imgs/Adapter_conformer.png>
 Package pdftex.def Info: imgs/Adapter_conformer.png  used on input line 91.
 (pdftex.def)             Requested size: 449.61575pt x 147.43277pt.
- [82 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png>] [83]
-Underfull \vbox (badness 6380) has occurred while \output is active []
+ [82 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_Transformer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png>] [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84]
-Underfull \vbox (badness 1389) has occurred while \output is active []
+ [84] [85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [85] [86]
-<imgs/Adapter_compare_withoutWide.png, id=1915, 722.7pt x 433.62pt>
-File: imgs/Adapter_compare_withoutWide.png Graphic file (type png)
-<use imgs/Adapter_compare_withoutWide.png>
-Package pdftex.def Info: imgs/Adapter_compare_withoutWide.png  used on input line 240.
-(pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
- [87] [88 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png>]
-<imgs/ConvPass.png, id=1935, 360.34625pt x 464.73625pt>
+ [86]
+Underfull \vbox (badness 8189) has occurred while \output is active []
+
+ [87] [88]
+<imgs/ConvPass.png, id=1942, 360.34625pt x 464.73625pt>
 File: imgs/ConvPass.png Graphic file (type png)
 <use imgs/ConvPass.png>
-Package pdftex.def Info: imgs/ConvPass.png  used on input line 276.
+Package pdftex.def Info: imgs/ConvPass.png  used on input line 275.
 (pdftex.def)             Requested size: 144.13594pt x 185.8912pt.
 
-Underfull \vbox (badness 1939) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [89 </Users/thomasrolland/Documents/PhD/Thesis/imgs/ConvPass.png>] [90]
-<imgs/AdapterBias.png, id=1969, 541.02126pt x 334.24875pt>
+<imgs/AdapterBias.png, id=1975, 502.87875pt x 339.2675pt>
 File: imgs/AdapterBias.png Graphic file (type png)
 <use imgs/AdapterBias.png>
-Package pdftex.def Info: imgs/AdapterBias.png  used on input line 319.
-(pdftex.def)             Requested size: 216.40466pt x 133.69713pt.
+Package pdftex.def Info: imgs/AdapterBias.png  used on input line 318.
+(pdftex.def)             Requested size: 201.14793pt x 135.70459pt.
  [91 </Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png>]
-<imgs/Adapters_compare.png, id=1981, 722.7pt x 433.62pt>
+<imgs/Adapter_compare_withoutWide.png, id=1987, 722.7pt x 433.62pt>
+File: imgs/Adapter_compare_withoutWide.png Graphic file (type png)
+<use imgs/Adapter_compare_withoutWide.png>
+Package pdftex.def Info: imgs/Adapter_compare_withoutWide.png  used on input line 343.
+(pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [92 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png>] [93]
+<imgs/Adapters_compare.png, id=2004, 722.7pt x 433.62pt>
 File: imgs/Adapters_compare.png Graphic file (type png)
 <use imgs/Adapters_compare.png>
-Package pdftex.def Info: imgs/Adapters_compare.png  used on input line 342.
+Package pdftex.def Info: imgs/Adapters_compare.png  used on input line 379.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
-<imgs/Shared_Adapters.png, id=1982, 508.90125pt x 579.16376pt>
+<imgs/Shared_Adapters.png, id=2005, 508.90125pt x 579.16376pt>
 File: imgs/Shared_Adapters.png Graphic file (type png)
 <use imgs/Shared_Adapters.png>
-Package pdftex.def Info: imgs/Shared_Adapters.png  used on input line 349.
+Package pdftex.def Info: imgs/Shared_Adapters.png  used on input line 386.
 (pdftex.def)             Requested size: 152.67155pt x 173.75046pt.
-) [92] [93 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Shared_Adapters.png>] [94] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_6.tex
+) [94 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png>] [95 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Shared_Adapters.png>] [96
+
+] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_6.tex
 Chapter 6.
 \openout5 = `main.mtc'.
 
 \openout5 = `main.mtc'.
 
-(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc6) [95
+(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc6) [97
 
-
-] [96
+] [98
 
 ]
 
-LaTeX Warning: Citation `asr-review' on page 97 undefined on input line 16.
+LaTeX Warning: Citation `asr-review' on page 99 undefined on input line 16.
 
 
-LaTeX Warning: Citation `liao2015large' on page 97 undefined on input line 20.
+LaTeX Warning: Citation `liao2015large' on page 99 undefined on input line 20.
 
-[97]
+[99]
 
-LaTeX Warning: Citation `casanova2022asr' on page 98 undefined on input line 32.
-
-
-LaTeX Warning: Citation `9688218' on page 98 undefined on input line 34.
+LaTeX Warning: Citation `casanova2022asr' on page 100 undefined on input line 32.
 
 
-LaTeX Warning: Citation `CTC' on page 98 undefined on input line 41.
+LaTeX Warning: Citation `9688218' on page 100 undefined on input line 34.
+
+
+LaTeX Warning: Citation `CTC' on page 100 undefined on input line 41.
 
 
 Underfull \vbox (badness 1292) has occurred while \output is active []
 
- [98]
-<imgs/Overall_system.png, id=2057, 1424.32124pt x 671.50874pt>
+ [100]
+<imgs/Overall_system.png, id=2080, 1114.1625pt x 648.4225pt>
 File: imgs/Overall_system.png Graphic file (type png)
 <use imgs/Overall_system.png>
 Package pdftex.def Info: imgs/Overall_system.png  used on input line 54.
-(pdftex.def)             Requested size: 455.24408pt x 214.62077pt.
+(pdftex.def)             Requested size: 455.24408pt x 264.93478pt.
+ [101]
 
+LaTeX Warning: Citation `VIT' on page 102 undefined on input line 82.
+
+
+LaTeX Warning: Citation `CTC' on page 102 undefined on input line 82.
+
+[102 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png>]
+
+LaTeX Warning: Citation `casanova2022yourtts' on page 103 undefined on input line 89.
+
+
+LaTeX Warning: Citation `kong2020hifi' on page 103 undefined on input line 91.
+
+
+LaTeX Warning: Citation `casanova2022yourtts' on page 103 undefined on input line 91.
+
+[103] [104]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [99 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png>]
+ [105] [106]
 
-LaTeX Warning: Citation `VIT' on page 100 undefined on input line 82.
+LaTeX Warning: Reference `Vadapters' on page 107 undefined on input line 234.
 
-
-LaTeX Warning: Citation `CTC' on page 100 undefined on input line 82.
-
-[100]
-
-LaTeX Warning: Citation `casanova2022yourtts' on page 101 undefined on input line 89.
-
-
-LaTeX Warning: Citation `kong2020hifi' on page 101 undefined on input line 91.
-
-
-LaTeX Warning: Citation `casanova2022yourtts' on page 101 undefined on input line 91.
-
-[101] [102]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [103] [104]
-
-LaTeX Warning: Reference `Vadapters' on page 105 undefined on input line 234.
-
-[105]) [106] [107] [108
+[107]) [108] [109] [110
 
 ] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_7.tex
 Chapter 7.
 Package minitoc Info: I0006
 (minitoc)             main.mtc7 is empty on input line 6.
-[109
+[111
 
-] [110
+] [112
 
 ])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [111] [112] (/Users/thomasrolland/Documents/PhD/Thesis/main.bbl [113
+ [113] [114] (/Users/thomasrolland/Documents/PhD/Thesis/main.bbl [115
 
 
-] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-1.def
+] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125] [126] (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-) [125] [126] [127] [128] [129] [130] [131] [132] [133]
+) [127] [128] [129] [130] [131] [132] [133] [134] [135]
 Underfull \hbox (badness 2608) in paragraph at lines 1404--1407
 \OT1/cmr/m/n/10 for parameter-efficient asr adap-ta-tion to atyp-i-cal and ac-cented speech,'' \OT1/cmr/m/it/10 arXiv preprint
  []
 
-[134] [135] [136]) [137] [138
+[136] [137] [138]) [139] [140
 
 ]
 \Changes@OutFile=\write10
@@ -2944,7 +2949,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-[139]
+[141]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
  (/Users/thomasrolland/Documents/PhD/Thesis/main.aux
@@ -2953,7 +2958,7 @@ Package cleveref Info: loaded `english' language definitions on input line 22.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4CC37838C06648A0E5E012A0E2CD9DD3;8876.
+(rerunfilecheck)             Checksum: D9BDD09271B569D72F099AA7ADCB8A1E;8964.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2967,18 +2972,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 42237 strings out of 492649
- 769710 string characters out of 6129622
- 936898 words of memory out of 5000000
- 44503 multiletter control sequences out of 15000+600000
+ 42252 strings out of 492649
+ 770010 string characters out of 6129622
+ 936982 words of memory out of 5000000
+ 44510 multiletter control sequences out of 15000+600000
  546908 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,15n,77p,10542b,843s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb>
-Output written on /Users/thomasrolland/Documents/PhD/Thesis/main.pdf (151 pages, 3778949 bytes).
+Output written on /Users/thomasrolland/Documents/PhD/Thesis/main.pdf (153 pages, 3809629 bytes).
 PDF statistics:
- 2545 PDF objects out of 2984 (max. 8388607)
- 2280 compressed objects within 23 object streams
- 640 named destinations out of 1000 (max. 500000)
- 1073 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2569 PDF objects out of 2984 (max. 8388607)
+ 2300 compressed objects within 23 object streams
+ 647 named destinations out of 1000 (max. 500000)
+ 1086 words of extra memory for PDF output out of 10000 (max. 10000000)
 

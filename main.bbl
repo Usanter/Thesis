@@ -1511,6 +1511,15 @@ C.-L. Fu, Z.-C. Chen, Y.-R. Lee, and H.-y. Lee, ``{A}dapter{B}ias:
   [Online]. Available: \url{https://aclanthology.org/2022.findings-naacl.199}
 \BIBentrySTDinterwordspacing
 
+\bibitem{pires2023one}
+T.~P. Pires, A.~V. Lopes, Y.~Assogba, and H.~Setiawan, ``One wide feedforward
+  is all you need,'' \emph{arXiv preprint arXiv:2309.01826}, 2023.
+
+\bibitem{geva2020transformer}
+M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
+  are key-value memories,'' in \emph{Empirical Methods in Natural Language
+  Processing (EMNLP)}, 2021.
+
 \bibitem{tera}
 A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
   transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions

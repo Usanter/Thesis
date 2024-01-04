@@ -81,8 +81,8 @@ However, the application of Adapters in the context of children's ASR has receiv
 
 \begin{figure*}[t]
     \begin{center}
-    \includegraphics[scale=0.27]{imgs/Adapter_conformer.png}
-    \caption{Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure}
+    \includegraphics[scale=0.27]{imgs/Adapter_Transformer.png}
+    \caption{Transformer block with various residual adapter configurations. Normalisation layers are not display in this figure}
     \label{fig:transformer_config}
     \end{center}
 \end{figure*}
@@ -233,15 +233,14 @@ These results collectively illustrate the versatility and effectiveness of diffe
 In this section, we present the outcomes of our clustering approach, as summarised in Table \ref{tab:res_clusters}. We investigated the influence of varying cluster numbers on ASR performance, ranging from 1 to 4 clusters using the ``TPA''in the encoder-only configuration. Notably, when the data remained unclustered (one cluster), the ASR system exhibited a WER of 11.58\%. However, the two-cluster configuration surpassed the others, achieving a superior performance of 11.50\%. This result suggests that partitioning the data into two distinct clusters enables the Adapters to more effectively capture underlying patterns intricately linked to their respective clusters, consequently enhancing the recognition scores. Furthermore, we explored the impact of increasing the number of clusters to three and four, revealing only marginal differences in performance, with WERs of 11.57\% and 11.51\%, respectively. These findings underscore the role of data clustering in children's ASR systems.
 
 \section{Exploring PETL alternative approaches}
-In this section, we provide a systematic review of alternative PETL methods. Indeed, with the increased demand for scalable models that operate within constrained computational resources, the exploration of novel techniques arised. As there is a lot of different new architecture beyond the conventional Adapters, we analyse them in the context of children ASR. In the following pages, we present a meticulous review of these advanced approaches, meticulously dissecting their theoretical underpinnings, implementation nuances, and empirical outcomes. Through this comprehensive analysis, we aim to provide a rigorous understanding of the efficacy and potential applications of alternative parameter-efficient transfer learning methodologies.  As the field continues to evolve, this section serves as a scholarly guide to the forefront of research, offering insights that contribute to the ongoing discourse surrounding efficient knowledge transfer in machine learning.
+As PETL gains more and more attention from the research community, an array of novel architectures and methodologies has emerged, extending beyond the conventional Adapters. These innovative approaches have been extensively explored in various domains such as NLP and image processing but remain relatively unexplored in the domains of speech processing and, notably, children's ASR.
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{imgs/Adapter_compare_withoutWide.png}
-        \caption{Different paramter efficent procedure for children ASR in conformer model}
-        \label{fig:adapter_compared_withoutWide}
-    \end{center}
-\end{figure}
+The objective of this section is to analyze these emerging PETL methods specifically in the context of children's ASR. Drawing from our prior findings, which underscored the significance of fine-tuning FFN modules, we have curated a selection of PETL approaches designed to be integrated with FFN. Notably, we excluded PETL approaches centered around the MHSA modules, such as LORA, as well as any prompt-related PETL strategies like prompt tuning.
+
+This section starts with a in-depth presentation of the selected PETL. Each chosen methodology is thoroughly described, elucidating its underlying principles, architectural intricacies, and key characteristics conpared to the traditional Adapter. 
+Following, we assess the performances of these selected PETL methodologies  in the specific context of children's ASR. The evaluation encompasses various dimensions, including performances compared to the full-finetuning and parameter-efficiency. By systematically benchmarking these alternative PETL methodologies against the conventional Adapter models, our objective is to not only understand the individual strengths and limitations of these approaches but also to evaluate their relative effectiveness in tackling the specific challenges presented by children's ASR.
+
+
 \subsection{Scaled Adapters}
 % Explain the idea has been used in many example
 Scaled or Gated Adapters extend the conventional residual Adapters by introducing a scaling mechanism to the output of the Adapter modules. The concept of scaled-Adapters was initially introduced by \cite{he2022towards} and is formally expressed as:
@@ -249,7 +248,7 @@ Scaled or Gated Adapters extend the conventional residual Adapters by introducin
     adapter(x) = x + s \cdot (W_{up}(f(W_{down}g(x) + b_{down})) + b_{up})    
 \end{equation}
 % Tunable parameters
-Here, $s$ is a tunable scalar hyperparameter. Notably, some research has proposed the to learn directly this scalar value during training as a gate mechanism \cite{mao-etal-2022-unipelt}. The intuition behind this approach is to allow the network to gradually learn to assign weights to the target domain, achieving more fine-grained control of the Adapter activation or deactivation. The scaled learning process facilitates the regulation of contributions from the Adapters from differents layers, enabling the model to adapt and refine its responses based on the specific characteristics of the data encountered during training.
+Here, $s \in \mathbb{R}$ is a tunable scalar hyperparameter. Notably, some research has proposed the to learn directly this scalar value during training as a gate mechanism \cite{mao-etal-2022-unipelt}. The intuition behind this approach is to allow the network to gradually learn to assign weights to the target domain, achieving more fine-grained control of the Adapter activation or deactivation. The scaled learning process facilitates the regulation of contributions from the Adapters from differents layers, enabling the model to adapt and refine its responses based on the specific characteristics of the data encountered during training.
 % Experimental setup
 Within the context of our experiments, we decided to use a trainable scalar associated to each Adapter modules. This scaling parameters and all Adapter modules were optimised through a 30 epochs training using a learning rate of $8 \times 10^{-4}$.
 
@@ -336,7 +335,45 @@ The output of AdapterBias is defined as the bias (B), represented as the outer p
 Here, \(\otimes\) denotes the element-wise multiplication of the task-specific shift vector \(\mathcal{V}\) and the token-dependent weight vector \(\alpha\).
 % Experimental seting
 In our experimental setup, we conducted the training for AdapterBias by integrating them into the second linear layer of each of the two FFN modules within the Conformer architecture. We trained AdapterBias for 30 epochs, employing a learning rate of $8 \times 10^{-4}$.
+
+\section{Results of the different PETL methods}
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=\textwidth]{imgs/Adapter_compare_withoutWide.png}
+        \caption{Different paramter efficent procedure for children ASR in conformer model}
+        \label{fig:adapter_compared_withoutWide}
+    \end{center}
+\end{figure}
+
+
+
+
 \section{Shared Adapter}
+% Goal PETL- Good score, small |param|
+The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed. In previous sections, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, with our experiments we highlighted the drawback and presence of overparameterisation in Transformer-based models.
+
+% FFN redundancy
+Leveraging this understanding, we propose a novel PETL methodology developed on the concept of sharing residual Adapters. The inspiration for this approach draws from the insights provided by the work of \cite{pires2023one}, which focus on the FFN modules. Despite representing a significant proportion of the model's parameters, the FFN was identified as highly redundant. This affirmation is confirmed by the work of \cite{geva2020transformer}, which  establishes a connection between the FFN and attention mechanisms by proposing that the FFN corresponds to learnable key-value pairs. In this conceptualisation, the weights of the first layer of the FFN represent the keys, while those of the second layer correspond to the values. These keys are proficient at capturing salient patterns at each layer. Interestingly, they observed that the classes of patterns tend to overlap between neighboring layers, indicating redundancy in the representation. This observation underscores the potential for optimising PETL methods by addressing and mitigating redundancy within the FFN, ultimately contributing to more parameter-efficient transfer learning processes.
+
+% Shared FFN work
+Building upon this insightful observation, \cite{pires2023one} modified the conventional Transformer architecture by sharing and dropping the FFN across different layers. Their investigation confirms the substantial degree of redundancy between the FFNs of the encoder and decoder components. Consequently, they successfully eliminate the decoder FFN while sharing a single FFN across the encoder, achieving a noteworthy reduction in model parameters without significant compromise to accuracy.
+
+Formally, denoting the number of encoder layers as $N_{enc}$, the sharing of the FFN modules in the encoder can be expressed as follows:
+
+\begin{equation}
+    \text{FFN}_{i}^{enc}(.) = \text{FFN}^{enc}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
+\end{equation}
+
+%Shared Adapter motivation
+In light of the success observed with the shared FFN in the encoder, we hypothesise that the presence of redundancy within the FFN might lead to a similar redundancy issue when employing one Adapter per FFN layer. In other words, employing separate Adapters for different layers might also exhibit redundancy. To address this concern, we introduced the Shared Adapter approach, wherein a singular Adapter is used across all layers. This approach aims to alleviate redundancy in the context of multiple FFN layers while reducing the total amount of parameters used in Adapter-transfer. The formal expression of the Shared Adapter is presented as follows:
+
+\begin{equation}
+    \text{Adapter}_{i}(.) = \text{Adapter}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
+\end{equation}
+
+% Experimental seting for shared Adapters
+
 \begin{figure}
     \begin{center}
         \includegraphics[width=\textwidth]{imgs/Adapters_compare.png}

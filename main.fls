@@ -847,14 +847,12 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc5
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_Transformer.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_Transformer.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_Transformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/ConvPass.png
@@ -863,6 +861,9 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/ConvPass.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png
