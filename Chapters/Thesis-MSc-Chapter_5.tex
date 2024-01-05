@@ -345,34 +345,66 @@ In our experimental setup, we conducted the training for AdapterBias by integrat
         \label{fig:adapter_compared_withoutWide}
     \end{center}
 \end{figure}
+\begin{table}
+    \centering
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Method} & \textbf{WER $\downarrow$} & \textbf{Trained Parameters} \\
+        \midrule
+        Adapter & 11.58\% & 12.6M \\
+        Scaled Adapter & 11.74\% & 12.6M \\
+        ConvAdapter(Down) & 12.03\% & 6.4M \\
+        ConvAdapter (Middle) & 11.62\% & 12.7M \\
+        ConvAdapter (Up) & 11.78\% & 6.4M \\
+        ConvPass & 15.13\% & 946.2K \\
+        BitFit & 15.04\% & 192K \\
+        SSF & 15.55\% & 73.7K \\
+        AdapterBias & 14.81\% & 159.8K \\
+        \bottomrule
+    \end{tabular}
+    \caption{Model Performance and Parameters}
+    \label{tab:PETL_alternatives}
+\end{table}
+% Adapter and Scaled Adapter
+The results of various PETL methods are summarised in Table \ref{tab:PETL_alternatives}. Notably, the traditional residual Adapter approach using the TPA configuration emerges as the most effective, achieving a 11.58\% WER with 12.6 million parameters. The Scaled Adapter method exhibits a slightly reduced WER performance at 11.74\%, while maintaining the same parameter count of 12.6 million.
 
+%ConvAdapter and ConvPass
+Turning attention to convolution-based Adapters, the replacement of either linear layer ($W_{down}$ and $W_{up}$) results in decreased performance, yielding WERs of 12.02\% and 11.78\%, respectively, using both 6.4 million parameters. Interestingly, introducing a convolutional layer between these two linear layers proves to be the best-performing convolutional system, approaching the scores of the regular Adapter with 11.62\% WER and using a slightly increased amount of parameters of 12.7 million. It is noteworthy that all these Conv-Adapter setups and the Scaled Adapters approach continue to outperform the fine-tuning of the entire model and are therefore valuable appraoches for children's ASR PETL.
+On the other hand, the ConvPass method, where all linear layers of the Adapter are replaced by convolution layers, does not surpass the full fine-tuning, yielding a WER of 15.13\% with 946.2 thousand parameters.
 
+% Bitfit, SSF and AdapterBias
+Moving to bias shift methods, including BitFit, SSF, and AdapterBias, these approaches underperform compared to the entire model fine-tuning, with respective WERs of 15.04\%, 15.55\%, and 14.81\%. However, it's important to note that these methods use significantly fewer parameters, with 192, 73.7, and 159.8 thousand parameters, respectively.
 
+% Summary
+In summary, the traditional residual Adapter emerges as the most effective PETL approach for children's ASR. This finding aligns with recent research, as highlighted in studies such as \cite{li2023evaluating} and \cite{cappellazzo2023parameter}, which also affirm the superior performance of Adapters in PETL for ASR tasks. Moreover, our findings highlight a noticeable trade-off between the number of parameters and the WER. Specifically, approaches employing fewer than a million parameters do not exhibit comparable performances to entire model fine-tuning, as illustrated explicitly in Figure \ref{fig:adapter_compared_withoutWide}. This trade-off emphasises the need for ongoing research and development of PETL methods that can effectively use fewer parameters while simultaneously maintaining or enhancing performance in the domain of children's ASR.
 
 \section{Shared Adapter}
 % Goal PETL- Good score, small |param|
-The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed. In previous sections, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, with our experiments we highlighted the drawback and presence of overparameterisation in Transformer-based models.
+The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed during training. In previous sections, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, our experiments highlighted the drawback of overparameterisation present in Transformer-based models.
 
 % FFN redundancy
-Leveraging this understanding, we propose a novel PETL methodology developed on the concept of sharing residual Adapters. The inspiration for this approach draws from the insights provided by the work of \cite{pires2023one}, which focus on the FFN modules. Despite representing a significant proportion of the model's parameters, the FFN was identified as highly redundant. This affirmation is confirmed by the work of \cite{geva2020transformer}, which  establishes a connection between the FFN and attention mechanisms by proposing that the FFN corresponds to learnable key-value pairs. In this conceptualisation, the weights of the first layer of the FFN represent the keys, while those of the second layer correspond to the values. These keys are proficient at capturing salient patterns at each layer. Interestingly, they observed that the classes of patterns tend to overlap between neighboring layers, indicating redundancy in the representation. This observation underscores the potential for optimising PETL methods by addressing and mitigating redundancy within the FFN, ultimately contributing to more parameter-efficient transfer learning processes.
+Leveraging this understanding, we propose a novel PETL methodology developed on the concept of sharing one residual Adapters across alll layers. The inspiration for this approach draws from the insights provided by the work of \cite{pires2023one}, which focus on the FFN modules. Despite representing a significant proportion of the model's parameters, the FFN was identified as highly redundant. This affirmation is confirmed by the work of \cite{geva2020transformer}, which  establishes a connection between the FFN and attention mechanisms by proposing that the FFN corresponds to learnable key-value memories. In this conceptualisation, the weights of the first layer of the FFN represent the keys, while those of the second layer correspond to the values. These keys are proficient at capturing salient patterns at each layer. Interestingly, they observed that the classes of patterns tend to overlap between neighboring layers, indicating redundancy in the representation. This observation underscores the potential for optimising PETL methods by addressing and mitigating redundancy within FFN modules, ultimately contributing to more parameter-efficient transfer learning processes.
 
 % Shared FFN work
-Building upon this insightful observation, \cite{pires2023one} modified the conventional Transformer architecture by sharing and dropping the FFN across different layers. Their investigation confirms the substantial degree of redundancy between the FFNs of the encoder and decoder components. Consequently, they successfully eliminate the decoder FFN while sharing a single FFN across the encoder, achieving a noteworthy reduction in model parameters without significant compromise to accuracy.
+Building upon this observation, \cite{pires2023one} modified the conventional Transformer architecture by sharing and dropping the FFN across different layers. Their investigation confirms the substantial degree of redundancy between the FFNs of the encoder and decoder components. Consequently, they successfully eliminate the decoder FFN while sharing a single FFN across the encoder, achieving a noteworthy reduction in model parameters without significant compromise to accuracy.
 
-Formally, denoting the number of encoder layers as $N_{enc}$, the sharing of the FFN modules in the encoder can be expressed as follows:
+Formally, with $N_{enc}$ denoting the number of encoder layers, the sharing of the FFN modules in the encoder can be expressed as follows:
 
 \begin{equation}
-    \text{FFN}_{i}^{enc}(.) = \text{FFN}^{enc}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
+    \text{FFN}_{i}^{enc}(.) \stackrel{\text{tied}}{=} \text{FFN}^{enc}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
 \end{equation}
 
 %Shared Adapter motivation
-In light of the success observed with the shared FFN in the encoder, we hypothesise that the presence of redundancy within the FFN might lead to a similar redundancy issue when employing one Adapter per FFN layer. In other words, employing separate Adapters for different layers might also exhibit redundancy. To address this concern, we introduced the Shared Adapter approach, wherein a singular Adapter is used across all layers. This approach aims to alleviate redundancy in the context of multiple FFN layers while reducing the total amount of parameters used in Adapter-transfer. The formal expression of the Shared Adapter is presented as follows:
+In light of the success observed with the shared FFN in the encoder, we hypothesise that the presence of redundancy within the FFN might lead to a similar redundancy issue when employing one Adapter per FFN layer. In other words, employing separate Adapters plugged to redundant FFN modules for different layers might also exhibit redundancy. To address this concern, we introduced the \textit{Shared Adapter} approach, wherein a single residual Adapter is used across all layers as shown in figure \ref{fig:adapter_compared}. This approach aims to use the redundancy present in FFN layers modules to reduce the total amount of parameters used in Adapter-transfer. The formal expression of the Shared Adapter is presented as follows:
 
 \begin{equation}
-    \text{Adapter}_{i}(.) = \text{Adapter}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
+    \text{Adapter}_{i}(.) \stackrel{\text{tied}}{=} \text{Shared-Adapter}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
 \end{equation}
 
 % Experimental seting for shared Adapters
+\subsection{Experimental setup}
+
+\subsection{Results}
 
 \begin{figure}
     \begin{center}

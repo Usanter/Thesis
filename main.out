@@ -92,25 +92,27 @@
 \BOOKMARK [2][]{subsection.5.6.5}{5.6.5 AdapterBias}{section.5.6}% 92
 \BOOKMARK [1][]{section.5.7}{5.7 Results of the different PETL methods}{chapter.5}% 93
 \BOOKMARK [1][]{section.5.8}{5.8 Shared Adapter}{chapter.5}% 94
-\BOOKMARK [0][]{chapter.6}{6 Use of synthetic speech as data augmentation}{}% 95
-\BOOKMARK [1][]{section.6.1}{6.1 Introduction}{chapter.6}% 96
-\BOOKMARK [1][]{section.6.2}{6.2 Related work}{chapter.6}% 97
-\BOOKMARK [2][]{subsection.6.2.1}{6.2.1 TTS data augmentation}{section.6.2}% 98
-\BOOKMARK [2][]{subsection.6.2.2}{6.2.2 Adapters}{section.6.2}% 99
-\BOOKMARK [1][]{section.6.3}{6.3 Method}{chapter.6}% 100
-\BOOKMARK [1][]{section.6.4}{6.4 System description}{chapter.6}% 101
-\BOOKMARK [2][]{subsection.6.4.1}{6.4.1 Transformer architecture for ASR}{section.6.4}% 102
-\BOOKMARK [2][]{subsection.6.4.2}{6.4.2 Multi-speaker text-to-speech: YourTTS}{section.6.4}% 103
-\BOOKMARK [1][]{section.6.5}{6.5 Experimental setup}{chapter.6}% 104
-\BOOKMARK [2][]{subsection.6.5.1}{6.5.1 Real speech corpus}{section.6.5}% 105
-\BOOKMARK [2][]{subsection.6.5.2}{6.5.2 Synthetic data}{section.6.5}% 106
-\BOOKMARK [2][]{subsection.6.5.3}{6.5.3 Experiments}{section.6.5}% 107
-\BOOKMARK [1][]{section.6.6}{6.6 Results and discussion}{chapter.6}% 108
-\BOOKMARK [2][]{subsection.6.6.1}{6.6.1 Comparison with existing approaches}{section.6.6}% 109
-\BOOKMARK [2][]{subsection.6.6.2}{6.6.2 Effect of the number of hours}{section.6.6}% 110
-\BOOKMARK [2][]{subsection.6.6.3}{6.6.3 Effect of the Adapters hyper-parameters}{section.6.6}% 111
-\BOOKMARK [1][]{section.6.7}{6.7 Conclusions and future work}{chapter.6}% 112
-\BOOKMARK [1][]{section.6.8}{6.8 Ongoing and future work}{chapter.6}% 113
-\BOOKMARK [0][]{chapter.7}{7 Pathology detection from speech}{}% 114
-\BOOKMARK [0][]{bib.0}{Bibliography}{}% 115
-\BOOKMARK [0][]{chapter.7}{Bibliography}{}% 116
+\BOOKMARK [2][]{subsection.5.8.1}{5.8.1 Experimental setup}{section.5.8}% 95
+\BOOKMARK [2][]{subsection.5.8.2}{5.8.2 Results}{section.5.8}% 96
+\BOOKMARK [0][]{chapter.6}{6 Use of synthetic speech as data augmentation}{}% 97
+\BOOKMARK [1][]{section.6.1}{6.1 Introduction}{chapter.6}% 98
+\BOOKMARK [1][]{section.6.2}{6.2 Related work}{chapter.6}% 99
+\BOOKMARK [2][]{subsection.6.2.1}{6.2.1 TTS data augmentation}{section.6.2}% 100
+\BOOKMARK [2][]{subsection.6.2.2}{6.2.2 Adapters}{section.6.2}% 101
+\BOOKMARK [1][]{section.6.3}{6.3 Method}{chapter.6}% 102
+\BOOKMARK [1][]{section.6.4}{6.4 System description}{chapter.6}% 103
+\BOOKMARK [2][]{subsection.6.4.1}{6.4.1 Transformer architecture for ASR}{section.6.4}% 104
+\BOOKMARK [2][]{subsection.6.4.2}{6.4.2 Multi-speaker text-to-speech: YourTTS}{section.6.4}% 105
+\BOOKMARK [1][]{section.6.5}{6.5 Experimental setup}{chapter.6}% 106
+\BOOKMARK [2][]{subsection.6.5.1}{6.5.1 Real speech corpus}{section.6.5}% 107
+\BOOKMARK [2][]{subsection.6.5.2}{6.5.2 Synthetic data}{section.6.5}% 108
+\BOOKMARK [2][]{subsection.6.5.3}{6.5.3 Experiments}{section.6.5}% 109
+\BOOKMARK [1][]{section.6.6}{6.6 Results and discussion}{chapter.6}% 110
+\BOOKMARK [2][]{subsection.6.6.1}{6.6.1 Comparison with existing approaches}{section.6.6}% 111
+\BOOKMARK [2][]{subsection.6.6.2}{6.6.2 Effect of the number of hours}{section.6.6}% 112
+\BOOKMARK [2][]{subsection.6.6.3}{6.6.3 Effect of the Adapters hyper-parameters}{section.6.6}% 113
+\BOOKMARK [1][]{section.6.7}{6.7 Conclusions and future work}{chapter.6}% 114
+\BOOKMARK [1][]{section.6.8}{6.8 Ongoing and future work}{chapter.6}% 115
+\BOOKMARK [0][]{chapter.7}{7 Pathology detection from speech}{}% 116
+\BOOKMARK [0][]{bib.0}{Bibliography}{}% 117
+\BOOKMARK [0][]{chapter.7}{Bibliography}{}% 118
