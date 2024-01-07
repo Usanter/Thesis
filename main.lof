@@ -38,10 +38,14 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.\relax }}{89}{figure.caption.36}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{91}{figure.caption.37}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{92}{figure.caption.38}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{95}{figure.caption.40}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{96}{figure.caption.41}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{94}{figure.caption.40}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{96}{figure.caption.41}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Use of synthetic speech as data augmentation}{97}{chapter.6}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{102}{figure.caption.43}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{102}{figure.caption.42}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Pathology detection from speech}{111}{chapter.7}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{141}{appendix.A}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's ASR}{143}{appendix.B}

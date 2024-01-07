@@ -379,6 +379,14 @@ Moving to bias shift methods, including BitFit, SSF, and AdapterBias, these appr
 In summary, the traditional residual Adapter emerges as the most effective PETL approach for children's ASR. This finding aligns with recent research, as highlighted in studies such as \cite{li2023evaluating} and \cite{cappellazzo2023parameter}, which also affirm the superior performance of Adapters in PETL for ASR tasks. Moreover, our findings highlight a noticeable trade-off between the number of parameters and the WER. Specifically, approaches employing fewer than a million parameters do not exhibit comparable performances to entire model fine-tuning, as illustrated explicitly in Figure \ref{fig:adapter_compared_withoutWide}. This trade-off emphasises the need for ongoing research and development of PETL methods that can effectively use fewer parameters while simultaneously maintaining or enhancing performance in the domain of children's ASR.
 
 \section{Shared Adapter}
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.3]{imgs/Shared_Adapters.png}
+        \caption{Shared-Adapter setup in a Conformer model}
+        \label{fig:Shared_adapter}
+    \end{center}
+\end{figure}
+
 % Goal PETL- Good score, small |param|
 The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed during training. In previous sections, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, our experiments highlighted the drawback of overparameterisation present in Transformer-based models.
 
@@ -403,6 +411,13 @@ In light of the success observed with the shared FFN in the encoder, we hypothes
 
 % Experimental seting for shared Adapters
 \subsection{Experimental setup}
+In our analysis, we focus on evaluating the performance of the Shared-Adapter using the same setting as the TPA configuration for traditional Adapters. Specifically, we assess the Shared-Adapter within a Conformer ASR model, where the two Shared-Adapters are directly integrated into the two FFN modules at each layer. The hidden dimension of the Shared-Adapters is set to 512. The Conformer model comprises 12 conformer layers followed by 6 Transformer layers, and for this experiment, we exclusively evaluate the Shared-Adapter in the Encoder.
+To quantify the reduction ofn umber of parameters used in the Shared-Adapter compared to the traditional Adapter, the following formula is used:
+\begin{equation}
+    \text{Number of Parameters in Shared-Adapter} = \frac{\text{Number of Parameters of all traditional Adapters}}{\text{Number of Layers}}
+\end{equation}
+In our experimental setup, the traditional Adapter use approximately 12.6 million parameters. Therefore, the number of parameters used for the Shared-Adapter is about 1.1 million. This corresponds to a significant reduction, as the Shared-Adapter utilizes only 1\% of the parameter count compared to the traditional Adapter, which already represented approximately 11\% of the total parameters used in the entire model fine-tuning.
+For training the model, we use 30 epochs with a learning rate set to $8 \times 10^{-4}$. 
 
 \subsection{Results}
 
@@ -413,38 +428,6 @@ In light of the success observed with the shared FFN in the encoder, we hypothes
         \label{fig:adapter_compared}
     \end{center}
 \end{figure}
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.3]{imgs/Shared_Adapters.png}
-        \caption{Shared-Adapter setup in a Conformer model}
-        \label{fig:Shared_adapter}
-    \end{center}
-\end{figure}
 
 
-%  SSL
 
-The final research direction we want to explore in this thesis is self-supervised learning (SSL) as a front-end feature rather than typical filter banks or MFCCs. For these models, the training process is separated into two stages. The first phase of training is self-supervised, which implies that no labels are used during training. The objective of this first phase is to present a large amount of unlabelled data to the system so that it learns a good speech representation. The second stage of learning is supervised fine-tuning, in which the model is taught to predict specific phonemes using the robust representation acquired in the previous stage with the help of a small amount of labelled data. In this category, two models stand out as state-of-the-art: Wav2Vec 2.0 \cite{baevski2020wav2vec} and HuBert \cite{hsu2021hubert}. As a preliminary experiment, to asses the usability of such frameworks for children ASR, we trained a BiLSTM model using the output of a variety of frozen self-supervised systems. For this experiment we used a subset of 50h of the Myst corpus \cite{MyST}, and the preliminary findings are displayed in the table \ref{tab:ssl}
-\begin{table}[ht]
-\centering
-\begin{tabular}{lcc} 
-\hline
-Front-end & UER & WER \\ 
-\hline
-Fbanks & 12.29\% & 35.14\% \\ 
-\hline
-TERA \cite{tera} & 11.31\% & 31.80\% \\
-Audio Albert \cite{chi2021audio} & 12.28\% & 34.69\% \\
-Wav2Vec2.0 Base & 7.37\% & 19.76\% \\
-Wav2Vec2.0 Large~ & 7.00\% & 18.76\% \\
-Distill HuBert \cite{chang2022distilhubert} & 9.22\% & 25.75\% \\
-HuBert Base & 7.40\% & 19.77\% \\
-HuBert Large & \textbf{6.03\%} & \textbf{15.41\%} \\
-\hline
-\end{tabular}
-\caption{Results without language model of Self-supervised front-end}
-\label{tab:ssl}
-\end{table}
-
-Where Base, and Large represent the same model with different number of parameters (in the order Base $<$ Large).
-Even though we did not use a language model in this pilot experiment, the results are of the same order as those reported in section \ref{section:exp} obtained with a transformer and a transformer language model. Such results demonstrate that SSL learns substantial speech characteristics. For future research, we aim to explore in depth what information is encoded in SSL models and why they work well on children, and how we may use this knowledge to enhance children's ASR.

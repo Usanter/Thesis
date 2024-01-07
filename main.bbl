@@ -1520,19 +1520,6 @@ M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
   are key-value memories,'' in \emph{Empirical Methods in Natural Language
   Processing (EMNLP)}, 2021.
 
-\bibitem{tera}
-A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
-  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
-  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
-
-\bibitem{chi2021audio}
-\BIBentryALTinterwordspacing
-P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
-  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
-  representation,'' 2020. [Online]. Available:
-  \url{https://arxiv.org/abs/2005.08575}
-\BIBentrySTDinterwordspacing
-
 \bibitem{hu2022synt++}
 T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
   O.~Tuzel, ``Synt++: Utilizing imperfect synthetic data to improve speech
@@ -1572,6 +1559,19 @@ E.~Cooper, C.-I. Lai, Y.~Yasuda, F.~Fang, X.~Wang, N.~Chen, and J.~Yamagishi,
 I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
   A.~Courville, and Y.~Bengio, ``Generative adversarial nets,'' \emph{Advances
   in neural information processing systems}, vol.~27, 2014.
+
+\bibitem{tera}
+A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
+  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
+  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
+
+\bibitem{chi2021audio}
+\BIBentryALTinterwordspacing
+P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
+  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
+  representation,'' 2020. [Online]. Available:
+  \url{https://arxiv.org/abs/2005.08575}
+\BIBentrySTDinterwordspacing
 
 \bibitem{hauptman2019identifying}
 Y.~Hauptman, R.~Aloni-Lavi, I.~Lapidot, T.~Gurevich, Y.~Manor, S.~Naor,

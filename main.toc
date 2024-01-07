@@ -88,7 +88,7 @@
 \contentsline {section}{\numberline {5.7}Results of the different PETL methods}{93}{section.5.7}
 \contentsline {section}{\numberline {5.8}Shared Adapter}{94}{section.5.8}
 \contentsline {subsection}{\numberline {5.8.1}Experimental setup}{95}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}Results}{95}{subsection.5.8.2}
+\contentsline {subsection}{\numberline {5.8.2}Results}{96}{subsection.5.8.2}
 \contentsline {chapter}{\numberline {6}Use of synthetic speech as data augmentation}{97}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{99}{section.6.1}
 \contentsline {section}{\numberline {6.2}Related work}{100}{section.6.2}
@@ -110,3 +110,13 @@
 \contentsline {section}{\numberline {6.8}Ongoing and future work}{107}{section.6.8}
 \contentsline {chapter}{\numberline {7}Pathology detection from speech}{111}{chapter.7}
 \contentsline {chapter}{Bibliography}{115}{chapter.7}
+\contentsline {chapter}{\numberline {A}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{141}{appendix.A}
+\contentsline {section}{\numberline {A.1}Introduction}{141}{section.A.1}
+\contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's ASR}{143}{appendix.B}
+\contentsline {section}{\numberline {B.1}Introduction}{143}{section.B.1}
+\contentsline {section}{\numberline {B.2}Generative modeling}{144}{section.B.2}
+\contentsline {section}{\numberline {B.3}Discriminative modeling}{144}{section.B.3}
+\contentsline {section}{\numberline {B.4}Wav2Vec2}{144}{section.B.4}
+\contentsline {section}{\numberline {B.5}HuBert}{144}{section.B.5}
+\contentsline {section}{\numberline {B.6}Experimental setup}{144}{section.B.6}
+\contentsline {section}{\numberline {B.7}Results}{144}{section.B.7}
