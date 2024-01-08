@@ -49,3 +49,6 @@
 \contentsline {xchapter}{Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{141}{appendix.A}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's ASR}{143}{appendix.B}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBert models\relax }}{145}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{145}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBert architecture taken from \cite {hsu2021hubert}}}}{145}{figure.caption.50}

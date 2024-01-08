@@ -1594,4 +1594,19 @@ C.~Botelho, F.~Teixeira, T.~Rolland, A.~Abad, and I.~Trancoso, ``Pathological
 A.~Pompili, T.~Rolland, and A.~Abad, ``The inesc-id multi-modal system for the
   adress 2020 challenge,'' \emph{arXiv preprint arXiv:2005.14646}, 2020.
 
+\bibitem{yang21c_interspeech}
+S.~wen Yang, P.-H. Chi, Y.-S. Chuang, C.-I.~J. Lai, K.~Lakhotia, Y.~Y. Lin,
+  A.~T. Liu, J.~Shi, X.~Chang, G.-T. Lin, T.-H. Huang, W.-C. Tseng, K.~tik Lee,
+  D.-R. Liu, Z.~Huang, S.~Dong, S.-W. Li, S.~Watanabe, A.~Mohamed, and
+  H.~yi~Lee, ``{SUPERB: Speech Processing Universal PERformance Benchmark},''
+  in \emph{Proc. Interspeech 2021}, 2021, pp. 1194--1198.
+
+\bibitem{chang2021exploration}
+X.~Chang, T.~Maekaku, P.~Guo, J.~Shi, Y.-J. Lu, A.~S. Subramanian, T.~Wang,
+  S.-w. Yang, Y.~Tsao, H.-y. Lee \emph{et~al.}, ``An exploration of
+  self-supervised pretrained representations for end-to-end speech
+  recognition,'' in \emph{2021 IEEE Automatic Speech Recognition and
+  Understanding Workshop (ASRU)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2021, pp. 228--235.
+
 \end{thebibliography}

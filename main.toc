@@ -114,9 +114,8 @@
 \contentsline {section}{\numberline {A.1}Introduction}{141}{section.A.1}
 \contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's ASR}{143}{appendix.B}
 \contentsline {section}{\numberline {B.1}Introduction}{143}{section.B.1}
-\contentsline {section}{\numberline {B.2}Generative modeling}{144}{section.B.2}
-\contentsline {section}{\numberline {B.3}Discriminative modeling}{144}{section.B.3}
-\contentsline {section}{\numberline {B.4}Wav2Vec2}{144}{section.B.4}
-\contentsline {section}{\numberline {B.5}HuBert}{144}{section.B.5}
-\contentsline {section}{\numberline {B.6}Experimental setup}{144}{section.B.6}
-\contentsline {section}{\numberline {B.7}Results}{144}{section.B.7}
+\contentsline {section}{\numberline {B.2}Self-supervised pre-trained models}{144}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{144}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Discriminative modeling}{145}{subsection.B.2.2}
+\contentsline {section}{\numberline {B.3}Experimental setup}{146}{section.B.3}
+\contentsline {section}{\numberline {B.4}Results}{147}{section.B.4}

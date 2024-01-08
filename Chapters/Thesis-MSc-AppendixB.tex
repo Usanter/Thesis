@@ -6,53 +6,83 @@
 \label{chapter:appendixB}
 
 \section{Introduction}
-% SSL short introduction
-Self-Supervised Learning (SSL) has witnessed significant advancements and an increased interest in recent years. SSL, as a training paradigm, involves a model learning representations from unlabeled speech data without relying on explicit labels or annotations. Unlike supervised learning, where models are trained on labeled examples, SSL leverages the inherent structures present in the data itself. The key advantage of SSL lies in its ability to efficiently use large amounts of unlabeled speech data, which is often more abundant than labeled data.
+% Very short intro SSL
+In light of the increasing availability of large amount of unlabeled speech data, there has been a need to efficiently extract general-purpose knowledge from it. Consequently, SSL has experience notable advances and has gained substantial attention in recent years especially in the context of low-resource tasks. SSL refers to a training paradigm where a model learns representations from unlabeled speech data without relying on explicit labels or annotations. This approach yields discernible enhancements in performance across various applications such as speech recognition, speaker identification, and emotion recognition \cite{baevski2020wav2vec}. Traditionally, SSL models can be used in two manners: firstly, as a feature extraction to replace human-designed features \cite{yang21c_interspeech,chang2021exploration}, and secondly, as a model initialisation accomplished by concatenating prediction layers and fine-tuning the entire model \cite{fan2022draft,jain2023wav2vec2,wang2021fine,li2021accent}.
 
-%In SSL, a model is pre-trained on such unlabeled data, and the learned representations can subsequently be fine-tuned for downstream tasks that have limited labeled data. This approach has shown considerable success in enhancing performance across various tasks, including speech recognition, speaker identification, and emotion recognition \cite{baevski2020wav2vec}. Models trained with SSL objectives can be employed in two primary ways: 1) as feature extractors, serving as replacements for hand-crafted speech features \cite{15}\cite{16}\cite{17}; or 2) as model initializations for fine-tuning in downstream tasks \cite{18}\cite{19}\cite{20}.
-
-Given the recent success of using SSL as initialization for fine-tuning in children's ASR, the motivation now extends to exploring SSL as a front-end feature, challenging the traditional use of hand-crafted features like filter banks or MFCCs.
-\section{Generative modeling}
-\section{Discriminative modeling}
+% Children ASR SSL
+In recent years, an incrase number of research focus on using SSL models for children ASR. One notable avenue observed in the literature involves the fine-tuning of SSL models exclusively using children's data [] or through a combination of adult and children's data []. These efforts have yielded improved performances, showcasing the adaptability of SSL models to the nuances inherent in the speech patterns of children. Conversely, an alternative strategy has emerged by using Adapters to adapt SSL models specifically to children's speech characteristics subsequently followed by the full model, Adapters included, fine-tuning \cite{fan2022draft}. This initial training, allow to reduce the complexity associated with the conventional process of fine-tuning the entire model directly with children speech.
+%  Our motivation
+The observed successes of SSL as an initialisation for fine-tuning in the context of children's ASR underscore its efficacy as a new training paradigm. However, the exploration of SSL models as front-end feature extractors, compared to the conventional hand-crafted features, despite its use and success for adult speech \cite{yang21c_interspeech,chang2021exploration} remains unexplored for childen's ASR. Motivated by these considerations, this chapter undertakes a comprehensive review of various SSL models, evaluating their potential as novel feature extractors in the domain of children's ASR.
+\section{Self-supervised pre-trained models}
 
 \begin{table}[htbp]
     \centering
-    \caption{Method Comparison}
-    \label{tab:methods}
     \begin{tabular}{ccccccc}
       \toprule
-      Method & Network & \#Params & Stride & Input & Corpus & Pretraining \\
+      Method & Architecture & \#Params & Stride & Input & Corpus & \\%Pretraining \\ 
       \midrule
-      FBANK & - & 0 & 10ms & waveform & - & - \\
-      APC [7] & 3-GRU & 4.11M & 10ms & FBANK & LS & 360 hr F-G \\
-      VQ-APC [32] & 3-GRU & 4.63M & 10ms & FBANK & LS & 360 hr F-G + VQ \\
-      NPC [33] & 4-Conv, 4-Masked Conv & 19.38M & 10ms & FBANK & LS & 360 hr M-G + VQ \\
-      Mockingjay [8] & 12-Trans & 85.12M & 10ms & FBANK & LS & 360 hr time M-G \\
-      TERA [9] & 3-Trans & 21.33M & 10ms & FBANK & LS & 960 hr time/freq M-G \\
-      wav2vec 2.0 Base [14] & 7-Conv, 12-Trans & 95.04M & 20ms & waveform & LS & 960 hr M-C + VQ \\
-      wav2vec 2.0 Large [14] & 7-Conv, 24-Trans & 317.38M & 20ms & waveform & LL & 60k hr M-C + VQ \\
-      HuBERT Base [35] & 7-Conv, 12-Trans & 94.68M & 20ms & waveform & LS & 960 hr M-P + VQ \\
-      HuBERT Large [35] & 7-Conv, 24-Trans & 316.61M & 20ms & waveform & LL & 60k hr M-P + VQ \\
+      FBANK & - & 0 & 10ms & waveform & - & \\%- \\
+      APC [7] & 3-GRU & 4.11M & 10ms & FBANK & LS 360 hr \\%& 360 hr F-G \\
+      VQ-APC [32] & 3-GRU & 4.63M & 10ms & FBANK & LS 360 hr \\%& 360 hr F-G + VQ \\
+      NPC [33] & 4-Conv, 4-Masked Conv & 19.38M & 10ms & FBANK & LS 360 hr \\%& 360 hr M-G + VQ \\
+      Mockingjay [8] & 12-Trans & 85.12M & 10ms & FBANK & LS 360 hr \\%& 360 hr time M-G \\
+      TERA [9] & 3-Trans & 21.33M & 10ms & FBANK & LS 960 hr\\%& 960 hr time/freq M-G \\
+      wav2vec 2.0 Base [14] & 7-Conv, 12-Trans & 95.04M & 20ms & waveform & LS 960 hr\\%& 960 hr M-C + VQ \\
+      wav2vec 2.0 Large [14] & 7-Conv, 24-Trans & 317.38M & 20ms & waveform & LL 60k hr\\%& 60k hr M-C + VQ \\
+      HuBERT Base [35] & 7-Conv, 12-Trans & 94.68M & 20ms & waveform 960 hr& LS 960 hr \\%& 960 hr M-P + VQ \\
+      HuBERT Large [35] & 7-Conv, 24-Trans & 316.61M & 20ms & waveform & LL 60k hr\\%& 60k hr M-P + VQ \\
       \bottomrule
     \end{tabular}
-  \end{table}
-\section{Wav2Vec2}
-\section{HuBert}
+    \caption{Overview of different SSL architectures used in this chapter}
+    \label{tab:SSL_models}
 
+  \end{table}
+
+
+Traditionally, SSL models can be categorised into two distinct approaches: generative modeling and discriminative modeling. In this section, we will focus on summarising a selection of SSL models, presented in Table \ref{tab:SSL_models}, with a particular emphasis on their differences.
+
+\subsection{Generative modeling}
+% List a couple of model and explain their differences
+Generative modeling has emerged as a prevalent approach for learning speech representations for SSL. Generally, generative models are trained to generate speech frames based on their learned speech representations with or without the help of context. For instance, the Autoregressive Predictive Coding (APC) model adopts a language model-like training paradigm, where a Recurrent Neural Network (RNN) generates future frames predicted from the past frames. Building upon this foundation, the Vector-Quantized APC (VQ-APC) model enhances the generative process by incorporating vector-quantization layers for more compact representations.
+The Mockingjay model takes inspiration from BERT-like pretraining techniques by masking input acoustic features along the time axis and subsequently regenerating the masked frames. Expanding upon this concept, the Temporal Encoder Representations from Acoustics (TERA) model introduces an additional layer of complexity by masking bins in the frequency axis alongside the temporal axis. Finally, the Non-autoregressive Predictive Coding (NPC) model combines elements from both APC and Mockingjay by substituting the RNN in APC with a CNN layers and modifying the future frames generation process into a masked reconstruction.
+
+\subsection{Discriminative modeling}
+\begin{figure}[ht]
+    \centering
+    \subfigure[Illustration of the Wav2vec2 architecture taken from \cite{baevski2020wav2vec}]{\label{fig:wav2vec2}\includegraphics[width=0.48\textwidth]{imgs/wav2vec2.png}}
+    \subfigure[Illustration of the HuBert architecture taken from \cite{hsu2021hubert}]{\label{fig:Hubert}\includegraphics[width=0.48\textwidth]{imgs/Hubert.png}}
+    \caption{Overview of the discriminative SSL Wav2vec2 and HuBert models}
+\end{figure}
+% Explain Wav2Vec2 and Hubert    
+The success of discriminative modeling has been notably pronounced with the introduction of the contrastive loss, a technique where the model discerns between correlated positive samples and negative samples. The underlying intuition is that positive samples should exhibit closer representations in comparison to their negative counterparts. A prominent exemplar of this approach is evident in the Wav2Vec2 model, which has demonstrated promising potential in learning speech representations. The Wav2Vec2 model achieves this by masking latent representations of the raw waveform and formulating a contrastive task over quantized speech representations. A more detailed representation of Wav2Vec2 architecture is displayed in figure!!!. Later, moving away from the contrastive loss, the work of [] proposed the HuBert model. This model introduces a novel methodology by incorporating BERT's token prediction via offline clustering on representations. Specifically, the HuBert model use a BERT-like training that consumes masked continuous speech features to predict pre-determined cluster assignments. The labels assigned to the masked locations during clustering serve as the predicted targets. Importantly, the predictive loss is selectively applied solely over the masked regions, compelling the model to learn robust high-level representations of unmasked inputs in order to accurately infer the targets of the masked ones. The HuBert architecture is shown in figure!!!.
 \section{Experimental setup}
+In our experimental setup, we used the Self-Supervised Speech Pre-training and Representation Learning (s3prl) toolkit\footnote{https://github.com/s3prl/s3prl}. The s3prl allow the modular use of pre-trained SSL models, called upstream, to perform various downstream tasks. In order to evaluate the efficiency of different SSL models as features extractor for children's ASR, we froze the pre-trained models's weight to extract embedding representation of the speech signal as new acoustic features. All the differents SSL upstream models used in our experiments are listed along with detailed informations regarding their architectures in table \ref{tab:SSL_models}. Notably, each of these models underwent self-supervised pre-training on either 360 or 960 hours of LibriSpeech \cite{librispeech} (denoted as LS 360hr and LS 960hr, respectively) or on an extensive 60 thousand hours of LibriLight data [!!!!] (referred to as LL 60k hr) . 
+Subsequently, as the downstream task, we conducted ASR utilising a 2-layered Bidirectional Long Short-Term Memory (BiLSTM) architecture with 1024 units, optimising with CTC loss.  The training spanned 800 thousand iterations, with a learning rate set at $1.0\dot 10^{-4}$. Additionally, a dropout rate of $0.2$ was applied to the BiLSTM architecture to increase robustness. Limited  by the large size of some SSL model, we decided used a smaller version of the Myst \cite{MyST} dataset, with 77 hours of speech for training, by removing the longest utterances in the train and validation sets. A detailed description of the filtered Myst data is provided in table \ref{tab:ssl_myst}.
+\begin{table}[h!]
+    \caption{My Science Tutor Children Speech Subset Corpus statistics}
+    
+    \begin{center}
+    \begin{tabular}{r|c|c|c}
+    \hline
+     & Training & Validation     & Test   \\ \hline
+    \# of utterances & 23594   & 3959    & 4079  \\ 
+    \# of speakers & 559  & 79    & 91  \\ 
+    \# of hours & 77   & 12    & 13  \\ \hline
+    \end{tabular}
+    \label{tab:ssl_myst}
+    \end{center}
+    \end{table}
+
 \section{Results}
 
-Self-supervised learning (SSL) has known a lot of advances and interest in the past few years. SSL refers to a training paradigm where a model learns representations from unlabeled speech data without relying on explicit labels or annotations. Unlike supervised learning, where a model is trained on labeled examples, self-supervised learning leverages the inherent structures present in the data itself. The advantage of SSL lies in its ability to leverage large amounts of unlabeled speech data, which is often more abundant than labeled data. By pre-training a model on such data, the learned representations can be fine-tuned for downstream tasks with limited labeled data, leading to improved performance on tasks like speech recognition, speaker identification, or emotion recognition \cite{baevski2020wav2vec}.
-Models learned with SSL objectives can be used in two manners: 1) feature extraction as a replacement of hand-crafted speech features [15–17]; or 2)model initialisation for fine-tuning downstream tasks [18–20].
-%  Our motivation
-With the recent success of SSL as initialisation for fine-tuning for chidlren's ASR, we want to explore it as a front-end feature rather than typical hand-crafted such as filter banks or MFCCs. 
+
 %For these models, the training process is separated into two stages. The first phase of training is self-supervised, which implies that no labels are used during training. The objective of this first phase is to present a large amount of unlabelled data to the system so that it learns a good speech representation. The second stage of learning is supervised fine-tuning, in which the model is taught to predict specific phonemes using the robust representation acquired in the previous stage with the help of a small amount of labelled data.
 In this category, two models stand out as state-of-the-art: Wav2Vec 2.0 \cite{baevski2020wav2vec} and HuBert \cite{hsu2021hubert}. As a preliminary experiment, to asses the usability of such frameworks for children ASR, we trained a BiLSTM model using the output of a variety of frozen self-supervised systems. For this experiment we used a subset of 50h of the Myst corpus \cite{MyST}, and the preliminary findings are displayed in the table \ref{tab:ssl}
 \begin{table}[ht]
 \centering
 \begin{tabular}{lcc} 
 \hline
-Front-end & UER & WER \\ 
+SSL upsteam & UER $\downarrow$ & WER $\downarrow$ \\ 
 \hline
 Fbanks & 12.29\% & 35.14\% \\ 
 \hline

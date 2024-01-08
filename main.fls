@@ -901,6 +901,12 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixA.
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixA.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixB.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixB.tex
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec2.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec2.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec2.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Hubert.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Hubert.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Hubert.png
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.soc
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.maf
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc
