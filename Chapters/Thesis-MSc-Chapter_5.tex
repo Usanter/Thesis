@@ -4,7 +4,7 @@
 % #############################################################################
 % Change the Name of the Chapter i the following line
 \fancychapter{Exploring parameters-efficient transfer learning for end-to-end children ASR}
-\label{chap:Adapters_exp}
+\label{chap:5}
 \cleardoublepage
 
 \section{Introduction}
@@ -164,7 +164,7 @@ For the clustering experiments, we use the k-means clustering algorithm on the s
 \begin{center}    
 \begin{tabular}{ccc}
 \hline
- Method & WER     & Trained params    \\ \hline \hline
+ Method & WER $\downarrow$     & Trained params    \\ \hline \hline
 \multicolumn{3}{c}{Transformer} \\ \hline
 \multicolumn{1}{l}{\textit{Frozen}} & 25.04\%   & - \\
 \multicolumn{1}{l}{\textit{Full fine-tuning}} & 12.99\% & 71.5M \\ \hline
@@ -216,7 +216,7 @@ These results collectively illustrate the versatility and effectiveness of diffe
 \begin{center}    
 \begin{tabular}{cc}
 \hline
-  \# of clusters & Average WER     \\ \hline
+  \# of clusters & Average WER $\downarrow$    \\ \hline
 \multicolumn{1}{c}{1} & 11.58\%  \\% OR 11.70%  If we consider 40 epochs instead of 30 here
 \multicolumn{1}{c}{2} & \textbf{11.50\%}  \\
 \multicolumn{1}{c}{3} & 11.57\%  \\
@@ -232,202 +232,7 @@ These results collectively illustrate the versatility and effectiveness of diffe
 
 In this section, we present the outcomes of our clustering approach, as summarised in Table \ref{tab:res_clusters}. We investigated the influence of varying cluster numbers on ASR performance, ranging from 1 to 4 clusters using the ``TPA''in the encoder-only configuration. Notably, when the data remained unclustered (one cluster), the ASR system exhibited a WER of 11.58\%. However, the two-cluster configuration surpassed the others, achieving a superior performance of 11.50\%. This result suggests that partitioning the data into two distinct clusters enables the Adapters to more effectively capture underlying patterns intricately linked to their respective clusters, consequently enhancing the recognition scores. Furthermore, we explored the impact of increasing the number of clusters to three and four, revealing only marginal differences in performance, with WERs of 11.57\% and 11.51\%, respectively. These findings underscore the role of data clustering in children's ASR systems.
 
-\section{Exploring PETL alternative approaches}
-As PETL gains more and more attention from the research community, an array of novel architectures and methodologies has emerged, extending beyond the conventional Adapters. These innovative approaches have been extensively explored in various domains such as NLP and image processing but remain relatively unexplored in the domains of speech processing and, notably, children's ASR.
 
-The objective of this section is to analyze these emerging PETL methods specifically in the context of children's ASR. Drawing from our prior findings, which underscored the significance of fine-tuning FFN modules, we have curated a selection of PETL approaches designed to be integrated with FFN. Notably, we excluded PETL approaches centered around the MHSA modules, such as LORA, as well as any prompt-related PETL strategies like prompt tuning.
-
-This section starts with a in-depth presentation of the selected PETL. Each chosen methodology is thoroughly described, elucidating its underlying principles, architectural intricacies, and key characteristics conpared to the traditional Adapter. 
-Following, we assess the performances of these selected PETL methodologies  in the specific context of children's ASR. The evaluation encompasses various dimensions, including performances compared to the full-finetuning and parameter-efficiency. By systematically benchmarking these alternative PETL methodologies against the conventional Adapter models, our objective is to not only understand the individual strengths and limitations of these approaches but also to evaluate their relative effectiveness in tackling the specific challenges presented by children's ASR.
-
-
-\subsection{Scaled Adapters}
-% Explain the idea has been used in many example
-Scaled or Gated Adapters extend the conventional residual Adapters by introducing a scaling mechanism to the output of the Adapter modules. The concept of scaled-Adapters was initially introduced by \cite{he2022towards} and is formally expressed as:
-\begin{equation}
-    adapter(x) = x + s \cdot (W_{up}(f(W_{down}g(x) + b_{down})) + b_{up})    
-\end{equation}
-% Tunable parameters
-Here, $s \in \mathbb{R}$ is a tunable scalar hyperparameter. Notably, some research has proposed the to learn directly this scalar value during training as a gate mechanism \cite{mao-etal-2022-unipelt}. The intuition behind this approach is to allow the network to gradually learn to assign weights to the target domain, achieving more fine-grained control of the Adapter activation or deactivation. The scaled learning process facilitates the regulation of contributions from the Adapters from differents layers, enabling the model to adapt and refine its responses based on the specific characteristics of the data encountered during training.
-% Experimental setup
-Within the context of our experiments, we decided to use a trainable scalar associated to each Adapter modules. This scaling parameters and all Adapter modules were optimised through a 30 epochs training using a learning rate of $8 \times 10^{-4}$.
-
-\subsection{Convolution based Adapters}
-% CNN make sense for speech
-Convolutional Neural Networks have been widely recognised for their effectiveness in exploiting local information, particularly for computer vision tasks. These networks learn shared kernels based on position within localised windows, giving them the ability to capture features such as edges and shapes. This characteristic has also been demonstrated in the field of speech-related tasks, as demonstrated by the success of the Conformer architecture \cite{gulati2020conformer}.
-
-%Then CNN in Adapter is a normal step
-As a result of this success, CNNs have been naturaly incorporated into Adapter modules. This strategic fusion enables Adapters to leverage the spatial processing capabilities inherent in convolutional modules, thereby enhancing their capacity to capture and adapt to different patterns present in the data. The initial approach involved using CNNs as feature extractors, in conjunction with a linear transformation, as detailed by \cite{yang23p_interspeech}, we denoted this approach as Conv-Adapter. We experimented two version of Conv-Adapters, where a 1-dimensional CNN is used as replacement of either the first of second linear of the traditional Adapters. More formally, the \textit{$\text{Conv-Adapter}_{down}$} expressed as followed:
-\begin{equation}
-    \text{Conv-adapter}_{Down}(x) = x + (W_{up}(\text{CNN}_{1D}(x))+ b_{up})
-\end{equation}
-While \textit{$\text{Conv-Adapter}_{up}$} is defined as:
-\begin{equation}
-    \text{Conv-adapter}_{up}(x) = x + \text{CNN}_{1D}(W_{down}(x)+ b_{down})
-\end{equation}
-We also investigated, the \cite{muthuchamyselvaraj23_interspeech} Conv-Adapter where the CNN is integrated in between the Up and Down projection of the traditional Adapter, denoted \textit{$\text{Conv-Adapter}_{Middle}$}, mathematically expressed as:
-\begin{equation}
-    \text{Conv-adapter}_{Middle}(x) = x + W_{up}(\text{CNN}_{1D}(W_{down}(x)+ b_{down})+ b_{up})
-\end{equation}
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.4]{imgs/ConvPass.png}
-        \caption{Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.}
-        \label{fig:convpass}
-    \end{center}
-\end{figure}
-
-% Adapter fully CNN based
-An alternative approach involves the use of a fully CNN-based Adapter known as ConvPass, which has demonstrated effectiveness in computer vision tasks \cite{jie2022convolutional}. Diverging from conventional Adapters and the previously mentioned Conv-Adapter, ConvPass distinguishes itself by the removal of the up and down linear layers, replaced instead by three CNN layers. In \cite{jie2022convolutional}, these layers comprise a $1 \times 1$ convolution, followed by a $3 \times 3$ convolution, and another $1 \times 1$ convolution. Notably, GELU activation functions are interposed between these convolutional layers.
-
-For speech-related tasks, a comparable approach was introduced by \cite{li2023evaluating}. The speech-specific ConvPass, illustrated in Figure \ref{fig:convpass}, incorporates a layer normalisation layer, followed by three lightweight 1-dimensional CNN layers with kernel sizes of 3, 5, and 3, respectively. Additionally, a squeeze and excite module is integrated into the architecture. The squeeze and excite module, as proposed by \cite{hu2018squeeze}, facilitates feature recalibration. It consists of a global pooling operation, followed by a linear layer, a Rectified Linear Unit (ReLU) activation, a second linear layer, and concludes with a Sigmoid activation.
-
-During our experiments, all Conv-Adapters and ConvPass configurations were trained for 30 epochs with a learning rate of $8 \times 10^{-4}$.
-%Alternatively is possibe to use a fully CNN-based Adapter. Called ConvPass, it was found effective for computer vision tasks \cite{jie2022convolutional}. ConvPass differ from regular Adapter and previously mentioned Conv-Adapter as the up and down linear layers were removed and replaced with three CNN layers, a $1 \times 1$ followed by a $3 \times 3$ and finally a $1 \times 1$ with GELU activation in between them. In speech, a similar approach was proposed by  \cite{li2023evaluating}. The speech ConvPass, presented in figure \ref{fig:convpass}, consist of layer normalisation layer, followed by 3 lightweight 1-dimensional CNN with kernel size of 3, 5 and 3 respectively along with a squeeze and excite module. Squeeze and excite module \cite{hu2018squeeze} allows a feature recalibration and is consisted of a global pooling, one linear layer, a Relu activation and second linear layer followed by a Sigmoid.
-
-\subsection{BitFit}
-Bias-Term Fine-Tuning, known as BitFit, is a PETL method introduced by \cite{ben-zaken-etal-2022-bitfit} for NLP tasks. The main idea behind BitFit is to fine-tune only the bias terms and the task-specific classification layer while keeping the rest of the model frozen. This approach aims to achieve efficient fine-tuning with reduced computational requirements in a similar way as our partial fine-tuning experiments in chapter \ref{chap:e2e}. The fine-tuning of bias terms can be seen as introducing a task-specific shift to the token representations.
-
-%Advantages of Bitfit
-The authors highlight three key properties of BitFit. Firstly, it matches of a fully fine-tuned model, showcasing its ability to maintain comparable results while significantly reducing the number of parameters to be trained. Secondly, BitFit is designed to adapt to tasks arriving sequentially, eliminating the need for simultaneous access to all datasets. This adaptability enhances the model's versatility in handling diverse tasks with varying data distributions over time. Thirdly, BitFit exhibits parameter efficiency by fine-tuning only a small subset of the model's parameters.
-
-%Experimental setup
-In our experiment, the pre-trained model and children's ASR task shared the same output dimensions and character encoding. In consequence, we excluded the fine-tuning of the task-specific classification layer. The training process consisted of 30 epochs with a learning rate of $8 \times 10^{-4}$.
-
-\subsection{Scale and Shift features}
-% Define SSF
-Scale and Shift features (SSF) was introduced an PETL alternative approach by Lian and al. \cite{lian2022scaling} for image classification. The primary objective of SSF is to establish a generalised method for efficient model fine-tuning without the introduction of task-specific inference parameters. Drawing inspiration from feature modulation techniques such as \cite{wu2018group,huang2017arbitrary}, the SSF method modulate deep features extracted by a pre-trained model by scaling and shifting them to match the distribution of a target dataset. 
-The intuition behind SSF comes from the inherent disparities in data distributions between upstream and downstream datasets. Directly applying model weights trained on an upstream dataset to a downstream dataset frequently leads to a performance degradation due to the disparities between the two datasets \cite{sun2016return}. The SSF method addresses this challenge by introducing scale $\gamma$ and shift $\beta$ parameters, which could be considered as the variance and mean used to modulate the features extracted from the pre-trained model. This modulation ensures that the adapted features align with the characteristics of the upstream dataset. Formally, given an input $x$, the modulated output $y$ is calculated by:
-\begin{align}
-    y = \gamma \odot x + \beta
-\end{align}
-
-Notably, the scale and shift parameters in SSF remain independent on any input and have a unified learnable parameter-space for different tasks. Another noteworthy advantage of SSF is its reliance on linear transformations, which can be seamlessly merged into the original pre-trained weights during model re-parameterization in the inference phase. This integration avoid the need for additional parameters removing the extra-computation time of other PETL such as Adapters.
-
-% How to put it in a model
-In practical terms, SSF are introduced after each modules within the Conformer architecutre (FFNs, MHSA and Convolution modules). In the original paper, they also finetuned the Head-layers as the task is a image classification task, as our both upstream and downstream tasks, respectively adult and children ASR, share the same output dimension and character encoding, we do not finetune this extra layer and only use the SSF method. 
-
-%Experimental setup
-In practice, the SSF modulation is integrated after each operations of the neural network. For our experiments, each operations corespond the different modules within the Conformer architecture, specifically the FFNs, MHSA and Convolution modules. It is noteworthy that, in the original paper, the authors also fine-tuned an Head-layer, as the output of the upstream and downstream image classification tasks are different. However, in our experiment, both the upstream and downstream tasks involve English ASR with shared output dimensions and characters encoding. Therefore,we did not include the head-layer fine-tuning and exclusively employed the SSF method. Our training compromise 30 epochs with a learning rate of $8\cdot10^{-4}$.
-
-
-\subsection{AdapterBias}
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.4]{imgs/AdapterBias.png}
-        \caption{ AdapterBias, consisting of a linear layer $L_\alpha$ and a vector $\mathcal{V}$, is added after the second feed-forward layer only in each FFN module.}
-        \label{fig:AdapterBias}
-    \end{center}
-\end{figure}
-% Link to Bitfit
-Following the success of BitFit \cite{ben-zaken-etal-2022-bitfit}, which aims to introduce task-specific shifts to each output representation by selectively fine-tuning only the bias terms of a pre-trained model, recent research has suggested that certain tokens may hold more significance than others for specific tasks. While BitFit uniformly applies the same shift across all tokens regardless of their relevance to the task, \cite{fu-etal-2022-adapterbias} proposes AdapterBias to address this limitation.
-
-% What is AdapterBias
-AdapterBias comprises two essential modules: a vector $\mathcal{V}$ and a linear layer $L_\alpha$. The vector $\mathcal{V}$ represents a task-specific shift added to the output of each FFN modules, acknowledging that tokens more closely related to the task should be assigned to larger representation shifts than others. On the other hand, the linear layer $L_\alpha$ generates a token-dependent weight vector $\alpha = [\alpha_1, \alpha_2, ..., \alpha_m]^T$, where $\alpha_i$ is the weight associated with the representation shift of the $i^{th}$ token. By applying these token-specific weights to the task-specific representation shift $\mathcal{V}$, AdapterBias focuses on tokens which are more crucial to the task, allowing efficient and fine adaptation to various downstream tasks.
-
-The output of AdapterBias is defined as the bias (B), represented as the outer product of $\mathcal{V}$ and the learned weights vector $\alpha$. Mathematically, the output of AdapterBias is expressed as follows:
-
-\begin{equation}
-    B = \mathcal{V} \otimes \alpha^T    
-\end{equation}
-
-Here, \(\otimes\) denotes the element-wise multiplication of the task-specific shift vector \(\mathcal{V}\) and the token-dependent weight vector \(\alpha\).
-% Experimental seting
-In our experimental setup, we conducted the training for AdapterBias by integrating them into the second linear layer of each of the two FFN modules within the Conformer architecture. We trained AdapterBias for 30 epochs, employing a learning rate of $8 \times 10^{-4}$.
-
-\section{Results of the different PETL methods}
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{imgs/Adapter_compare_withoutWide.png}
-        \caption{Different paramter efficent procedure for children ASR in conformer model}
-        \label{fig:adapter_compared_withoutWide}
-    \end{center}
-\end{figure}
-\begin{table}
-    \centering
-    \begin{tabular}{lccc}
-        \toprule
-        \textbf{Method} & \textbf{WER $\downarrow$} & \textbf{Trained Parameters} \\
-        \midrule
-        Adapter & 11.58\% & 12.6M \\
-        Scaled Adapter & 11.74\% & 12.6M \\
-        ConvAdapter(Down) & 12.03\% & 6.4M \\
-        ConvAdapter (Middle) & 11.62\% & 12.7M \\
-        ConvAdapter (Up) & 11.78\% & 6.4M \\
-        ConvPass & 15.13\% & 946.2K \\
-        BitFit & 15.04\% & 192K \\
-        SSF & 15.55\% & 73.7K \\
-        AdapterBias & 14.81\% & 159.8K \\
-        \bottomrule
-    \end{tabular}
-    \caption{Model Performance and Parameters}
-    \label{tab:PETL_alternatives}
-\end{table}
-% Adapter and Scaled Adapter
-The results of various PETL methods are summarised in Table \ref{tab:PETL_alternatives}. Notably, the traditional residual Adapter approach using the TPA configuration emerges as the most effective, achieving a 11.58\% WER with 12.6 million parameters. The Scaled Adapter method exhibits a slightly reduced WER performance at 11.74\%, while maintaining the same parameter count of 12.6 million.
-
-%ConvAdapter and ConvPass
-Turning attention to convolution-based Adapters, the replacement of either linear layer ($W_{down}$ and $W_{up}$) results in decreased performance, yielding WERs of 12.02\% and 11.78\%, respectively, using both 6.4 million parameters. Interestingly, introducing a convolutional layer between these two linear layers proves to be the best-performing convolutional system, approaching the scores of the regular Adapter with 11.62\% WER and using a slightly increased amount of parameters of 12.7 million. It is noteworthy that all these Conv-Adapter setups and the Scaled Adapters approach continue to outperform the fine-tuning of the entire model and are therefore valuable appraoches for children's ASR PETL.
-On the other hand, the ConvPass method, where all linear layers of the Adapter are replaced by convolution layers, does not surpass the full fine-tuning, yielding a WER of 15.13\% with 946.2 thousand parameters.
-
-% Bitfit, SSF and AdapterBias
-Moving to bias shift methods, including BitFit, SSF, and AdapterBias, these approaches underperform compared to the entire model fine-tuning, with respective WERs of 15.04\%, 15.55\%, and 14.81\%. However, it's important to note that these methods use significantly fewer parameters, with 192, 73.7, and 159.8 thousand parameters, respectively.
-
-% Summary
-In summary, the traditional residual Adapter emerges as the most effective PETL approach for children's ASR. This finding aligns with recent research, as highlighted in studies such as \cite{li2023evaluating} and \cite{cappellazzo2023parameter}, which also affirm the superior performance of Adapters in PETL for ASR tasks. Moreover, our findings highlight a noticeable trade-off between the number of parameters and the WER. Specifically, approaches employing fewer than a million parameters do not exhibit comparable performances to entire model fine-tuning, as illustrated explicitly in Figure \ref{fig:adapter_compared_withoutWide}. This trade-off emphasises the need for ongoing research and development of PETL methods that can effectively use fewer parameters while simultaneously maintaining or enhancing performance in the domain of children's ASR.
-
-\section{Shared Adapter}
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.3]{imgs/Shared_Adapters.png}
-        \caption{Shared-Adapter setup in a Conformer model}
-        \label{fig:Shared_adapter}
-    \end{center}
-\end{figure}
-
-% Goal PETL- Good score, small |param|
-The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed during training. In previous sections, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, our experiments highlighted the drawback of overparameterisation present in Transformer-based models.
-
-% FFN redundancy
-Leveraging this understanding, we propose a novel PETL methodology developed on the concept of sharing one residual Adapters across alll layers. The inspiration for this approach draws from the insights provided by the work of \cite{pires2023one}, which focus on the FFN modules. Despite representing a significant proportion of the model's parameters, the FFN was identified as highly redundant. This affirmation is confirmed by the work of \cite{geva2020transformer}, which  establishes a connection between the FFN and attention mechanisms by proposing that the FFN corresponds to learnable key-value memories. In this conceptualisation, the weights of the first layer of the FFN represent the keys, while those of the second layer correspond to the values. These keys are proficient at capturing salient patterns at each layer. Interestingly, they observed that the classes of patterns tend to overlap between neighboring layers, indicating redundancy in the representation. This observation underscores the potential for optimising PETL methods by addressing and mitigating redundancy within FFN modules, ultimately contributing to more parameter-efficient transfer learning processes.
-
-% Shared FFN work
-Building upon this observation, \cite{pires2023one} modified the conventional Transformer architecture by sharing and dropping the FFN across different layers. Their investigation confirms the substantial degree of redundancy between the FFNs of the encoder and decoder components. Consequently, they successfully eliminate the decoder FFN while sharing a single FFN across the encoder, achieving a noteworthy reduction in model parameters without significant compromise to accuracy.
-
-Formally, with $N_{enc}$ denoting the number of encoder layers, the sharing of the FFN modules in the encoder can be expressed as follows:
-
-\begin{equation}
-    \text{FFN}_{i}^{enc}(.) \stackrel{\text{tied}}{=} \text{FFN}^{enc}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
-\end{equation}
-
-%Shared Adapter motivation
-In light of the success observed with the shared FFN in the encoder, we hypothesise that the presence of redundancy within the FFN might lead to a similar redundancy issue when employing one Adapter per FFN layer. In other words, employing separate Adapters plugged to redundant FFN modules for different layers might also exhibit redundancy. To address this concern, we introduced the \textit{Shared Adapter} approach, wherein a single residual Adapter is used across all layers as shown in figure \ref{fig:adapter_compared}. This approach aims to use the redundancy present in FFN layers modules to reduce the total amount of parameters used in Adapter-transfer. The formal expression of the Shared Adapter is presented as follows:
-
-\begin{equation}
-    \text{Adapter}_{i}(.) \stackrel{\text{tied}}{=} \text{Shared-Adapter}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
-\end{equation}
-
-% Experimental seting for shared Adapters
-\subsection{Experimental setup}
-In our analysis, we focus on evaluating the performance of the Shared-Adapter using the same setting as the TPA configuration for traditional Adapters. Specifically, we assess the Shared-Adapter within a Conformer ASR model, where the two Shared-Adapters are directly integrated into the two FFN modules at each layer. The hidden dimension of the Shared-Adapters is set to 512. The Conformer model comprises 12 conformer layers followed by 6 Transformer layers, and for this experiment, we exclusively evaluate the Shared-Adapter in the Encoder.
-To quantify the reduction ofn umber of parameters used in the Shared-Adapter compared to the traditional Adapter, the following formula is used:
-\begin{equation}
-    \text{Number of Parameters in Shared-Adapter} = \frac{\text{Number of Parameters of all traditional Adapters}}{\text{Number of Layers}}
-\end{equation}
-In our experimental setup, the traditional Adapter use approximately 12.6 million parameters. Therefore, the number of parameters used for the Shared-Adapter is about 1.1 million. This corresponds to a significant reduction, as the Shared-Adapter utilizes only 1\% of the parameter count compared to the traditional Adapter, which already represented approximately 11\% of the total parameters used in the entire model fine-tuning.
-For training the model, we use 30 epochs with a learning rate set to $8 \times 10^{-4}$. 
-
-\subsection{Results}
-
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=\textwidth]{imgs/Adapters_compare.png}
-        \caption{Different paramter efficent procedure for children ASR in conformer model with shared-Adapters}
-        \label{fig:adapter_compared}
-    \end{center}
-\end{figure}
 
 
 

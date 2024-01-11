@@ -4,7 +4,7 @@
 % #############################################################################
 % Change the Name of the Chapter i the following line
 \fancychapter{Use of synthetic speech as data augmentation}
-\label{chap:TTS}
+\label{chap:6}
 \cleardoublepage
 Children's automatic speech recognition (ASR) poses a significant challenge due to the high variability nature of children's speech. The limited availability of training datasets hampers the effective modelling of this variability, which can be partially addressed using a text-to-speech (TTS) system for data augmentation. However, generated data may contain imperfections, potentially impacting performance. In this work, we use Adapters to handle the domain mismatch when fine-tuning with TTS data. This involves a two-step training process: training adapter layers with a frozen pre-trained model using synthetic data, then fine-tuning both adapters and the entire model with a mix of synthetic and real data, where only synthetic data passes through the adapters. Experimental results demonstrate up to 6\% relative reduction in WER compared to the straightforward use of synthetic data, indicating the effectiveness of adapter-based architectures in learning from imperfect synthetic data.
 
@@ -221,6 +221,9 @@ Table \ref{tab:config} summarizes the results, highlighting that the optimal con
 % Other results
 Our findings suggest that extended training periods were beneficial for larger Adapter bottleneck sizes, without indications of overfitting. Moreover, adding Adapters to the decoder did not significantly improve results. Finally, skipping step 0 (pre-training) did not significantly degrade results, but skipping both step 0 and step 1 (pre-training and Adapter pre-training) led to performance degradation, indicating the importance of Adapter pre-training for improved performance.
 
+\section{Extension to Conformer architecture}
+
+
 \section{Conclusions and future work}
 \label{section:conclusions_tts}
 We introduced the combined use of Adapters and synthetic data augmentation for children's speech recognition. Our two-step training procedure, involving training Adapter layers %with a frozen pre-trained model
@@ -234,29 +237,3 @@ In order to answer the following research questions: \textit{Is it possible to d
 we want to pursue three research directions in the future work of this thesis: As a first direction, we want to keep exploring adapter transfer. For example, as proposed by Pfeiffer \cite{pfeiffer2020adapterfusion}, employing multiple adapters trained on different age groups or children corpus and combining them with an attention mechanism. It may also be interesting to investigate the use of explicit speaker information for robust adapter transfer \cite{gong2022layer}. Furthermore, as explained in section \ref{Vadapters}, Adapter module is structurally similar to an auto-encoder, thus it would be interesting to modify the structure of the adapter to follow the latest development in auto-encoder research. For instance, using neural discrete representations with the help of vector-quantized codebook\cite{van2017neural} at the end of the adapter's down-projection.
 
 As a second direction we want to investigate on the use of Text-to-speech (TTS) data augmentation. Indeed, as mentioned in section \ref{section:data_scarcity}, one of the most significant obstacles in children automatic speech recognition is the lack of training data. One solution to this problem is voice conversion, in which the adult speech is transformed to child speech and then used for augmentation. However, the modified adult data can only capture a subset of the aspects of children's speech. As a result, it is important to generate children voice data directly from text \cite{wang2021towards}. A multi-speaker TTS system using speaker embeddings and  text  as input can be used to produce a synthesized utterance with the variability of child speaker. Indeed, the speaker embedding includes acoustic variability informations, which we want to find in the output utterance \cite{cooper2020zero,kim2021conditional}. One of the most challenging aspects of this approach is that the TTS model for children produces unequal quality speech due mainly to acoustic variability, and hence the ASR system suffers when trained with this additional synthetic data. Furthermore, because we intend to augment the original data with TTS data, there may be a domain shift that worsens the ASR performance. To address both of these concerns, a speaker embedding-based data selection method has been suggested, based on the computation of the cosine-similarity between the input speaker embedding and the speaker embedding obtained from the output utterance. \cite{wang2021towards}. More recently, in order to minimise domain shift, two separate normalisation layers have been employed, one for the original data and one for the TTS data. \cite{hu2022synt++}. In our research, we want to combine these two approaches to maximise the contribution of TTS data during training. In addition, we want to investigate whether the use of a GAN \cite{goodfellow2014generative}, which could create an artificial children embedding, could alleviate the problem of the limited number of speakers during training.
-%  SSL
-
-The final research direction we want to explore in this thesis is self-supervised learning (SSL) as a front-end feature rather than typical filter banks or MFCCs. For these models, the training process is separated into two stages. The first phase of training is self-supervised, which implies that no labels are used during training. The objective of this first phase is to present a large amount of unlabelled data to the system so that it learns a good speech representation. The second stage of learning is supervised fine-tuning, in which the model is taught to predict specific phonemes using the robust representation acquired in the previous stage with the help of a small amount of labelled data. In this category, two models stand out as state-of-the-art: Wav2Vec 2.0 \cite{baevski2020wav2vec} and HuBert \cite{hsu2021hubert}. As a preliminary experiment, to asses the usability of such frameworks for children ASR, we trained a BiLSTM model using the output of a variety of frozen self-supervised systems. For this experiment we used a subset of 50h of the Myst corpus \cite{MyST}, and the preliminary findings are displayed in the table \ref{tab:ssl}
-\begin{table}[ht]
-\centering
-\begin{tabular}{lcc} 
-\hline
-Front-end & UER & WER \\ 
-\hline
-Fbanks & 12.29\% & 35.14\% \\ 
-\hline
-TERA \cite{tera} & 11.31\% & 31.80\% \\
-Audio Albert \cite{chi2021audio} & 12.28\% & 34.69\% \\
-Wav2Vec2.0 Base & 7.37\% & 19.76\% \\
-Wav2Vec2.0 Large~ & 7.00\% & 18.76\% \\
-Distill HuBert \cite{chang2022distilhubert} & 9.22\% & 25.75\% \\
-HuBert Base & 7.40\% & 19.77\% \\
-HuBert Large & \textbf{6.03\%} & \textbf{15.41\%} \\
-\hline
-\end{tabular}
-\caption{Results without language model of Self-supervised front-end}
-\label{tab:ssl}
-\end{table}
-
-Where Base, and Large represent the same model with different number of parameters (in the order Base $<$ Large).
-Even though we did not use a language model in this pilot experiment, the results are of the same order as those reported in section \ref{section:exp} obtained with a transformer and a transformer language model. Such results demonstrate that SSL learns substantial speech characteristics. For future research, we aim to explore in depth what information is encoded in SSL models and why they work well on children, and how we may use this knowledge to enhance children's ASR.

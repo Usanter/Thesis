@@ -2,12 +2,119 @@
 % This is Appendix A
 % !TEX root = ../main.tex
 % #############################################################################
-\chapter{Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}
+\chapter{Pathological speech detection through pre-trained models}
 \label{chapter:appendixA}
-Work done by: Rubén Solera-Ureña$^1$, Catarina Botelho$^{1,2}$, Francisco Teixeira$^{1,2}$, Thomas Rolland$^{1,2}$, \\Alberto Abad$^{1,2}$, Isabel Trancoso$^{1,2}$\\
- $^1$INESC-ID, Lisbon, Portugal\\
-  $^2$Instituto Superior Técnico, University of Lisbon (IST-UL), Portugal
 
 \section{Introduction}
-In the last months, there has been an increasing interest in developing reliable, cost-effective, immediate and easy to use machine learning based tools that can help health care operators, institutions, companies, etc. to optimize their screening campaigns. In this line, several initiatives emerged aimed at the automatic detection of COVID-19 from speech, breathing and coughs, with inconclusive preliminary results. The ComParE 2021 COVID-19 Cough Sub-challenge provides researchers from all over the world a suitable test-bed for the evaluation and comparison of their work. In this paper, we present the INESC-ID contribution to the ComParE 2021 COVID-19 Cough Sub-challenge. We leverage transfer learning to develop a set of three expert classifiers based on deep cough representation extractors. 
-A calibrated decision-level fusion system provides the final classification of coughs recordings as either COVID-19 positive or negative. Results show unweighted average recalls of 72.3\% and 69.3\% in the development and test sets, respectively. Overall, the experimental assessment shows the potential of this approach although much more research on extended respiratory sounds datasets is needed.
+In the domain of speech therapy, and specifically paediatric speech therapy, advancements in speech and language technologies hold significant promise by providing automated tools for assessing pronunciation quality and identifying pathological conditions. While the primary focus of this thesis was to improve ASR for children, we also contributed into the identification of pathological conditions from speech. This annex provides a overview of these contributions.
+
+
+\section{Pathological speech detection using x-vector embeddings}
+\subsection{Introduction}
+Speech has been proposed as a valuable biomarker for detecting various diseases, including neurological conditions, mood disorders, and respiratory diseases \cite{hauptman2019identifying,botelho2019speech}. However, challenges such as temporal and financial constraints, lack of medical community awareness, ethical concerns, and patient privacy laws impede the acquisition of medical data, posing significant obstacles to the development of health-related speech-based classifiers, especially for deep learning models.
+
+Most existing systems rely on knowledge-based (KB) features, often limited in capturing subtle symptoms and variations in disease severity. To address this limitation, some studies focus on speaker representation models, such as Gaussian Supervectors and i-vectors. For instance, \cite{hauptman2019identifying} proposed i-vectors for Parkinson's disease classification, while \cite{laaridh17_interspeech} applied the i-vector paradigm to predict dysarthric speech evaluation metrics. The rationale behind using these representations lies in their ability to model speaker variability, which should also including disease symptoms \cite{hauptman2019identifying}.
+
+X-vectors are discriminative DNN-based speaker embeddings, surpassing i-vectors in tasks like speaker and language recognition \cite{snyder2018x}. Despite initial doubts about the usability of such discriminative representations for disease detection as they have been trained on general datasets without diseased patients, recent studies have demonstrated their effectiveness. X-vectors have been successfully applied to paralinguistic tasks such as emotion recognition \cite{pappagari2020x}, obstructive sleep apnea detection \cite{perero2019modeling}, and as a complement to Alzheimer’s Disease detection \cite{zargarbashi2019multi}. In our work \cite{botelho2020pathological}, we investigate the hypothesis that speaker characteristics embedded in x-vectors, obtained from a single network trained for speaker identification using general data, contain sufficient information for the detection of multiple diseases. Furthermore, we aim to assess whether this information persists even in the presence of language mismatch, a phenomenon previously observed in speaker recognition \cite{snyder2017deep}. Specifically, we employ the x-vector model as a feature extractor to train Support Vector Machines (SVM) for detecting two speech-affecting diseases: Parkinson’s disease (PD) and obstructive sleep apnea (OSA).
+
+\subsection{Speaker embeddings: i-vector and x-vector}
+Speaker embeddings serve as fixed-length representations of variable-length speech signals, capturing essential information about the speaker. Traditional methods, such as Gaussian Supervectors \cite{kenny2007joint} derived from MAP-adapted GMM-UBM \cite{reynolds2000speaker} and i-vectors \cite{dehak2010front}, have been fundamental in speaker recognition.
+
+I-vectors, until recently considered state-of-the-art, extend the GMM Supervector approach by modeling total variability as a low-rank space through factor analysis. \cite{hauptman2019identifying} observed that i-vectors, capturing total variability and speaker variability, also encompass information about speech disorders. For classification, they used reference i-vectors for healthy and PD populations.
+
+In contrast, x-vectors, proposed as an alternative to i-vectors, aim to discriminate between speakers by modeling specific characteristics. Unlike i-vectors, x-vectors exhibit robustness to data variability and domain mismatches, requiring shorter temporal segments for optimal performance. Typically, the x-vector system comprises three main blocks: TDNN layers operating at the frame level, a statistical pooling layer for temporal aggregation (employing an attentive mechanism for importance weighting), and fully connected (FC) layers for x-vector extraction.
+
+\subsection{Experimental setup}
+In our experiments, we used four corpora to determine the presence or absence of PD and OSA. With one of the  European Portuguese corpus was employed to train the i-vector and x-vector extractors. For each disease-related dataset, we compared three representations: KB features, i-vectors, and x-vectors. All disease classifications were conducted using a SVM classifier using leave-one-speaker-out cross validation
+as an alternative to partitioning the corpora into train, development and test sets. Further details on the corpora, data representations, and classification method are provided below.
+
+Our classification process operates at the segment level, assigning speakers a final classification through a weighted majority voting mechanism. In this approach, predictions obtained for each segment uttered by the speaker are weighted based on the corresponding number of speech frames.
+\subsubsection{Corpora}
+In this section, we provide a description of the datasets employed in our study.
+The Speaker Recognition - Portuguese (PT-EASR) Corpus is a subset of the EASR (Elderly Automatic Speech Recognition) corpus \cite{hamalainen2014easr}. It comprises recordings of European Portuguese read sentences and was used for training both i-vector and x-vector models for speaker recognition tasks. The dataset encompasses speakers aged 24 to 91, with 91\% falling within the 60-80 age range. This specific age distribution was chosen with the intention of generating reliable speaker embeddings for this age group, particularly relevant to the diseases addressed in our study. The corpus was partitioned into training, development, and test sets in a ratio of 0.70:0.15:0.15, respectively.
+For PD Detection - Portuguese PD (PPD) Corpus, a subset of the FraLusoPark corpus \cite{pinto2016dysarthria} was employed. This subset includes speech recordings of both French and European Portuguese healthy volunteers and PD patients. The selected utterances consist of European Portuguese speakers reading prosodic sentences.
+The PD Detection - Spanish PD (SPD) Corpus corresponds to a subset of the New Spanish Parkinson’s Disease Corpus, collected at the Universidad de Antioquia, Colombia \cite{orozco2014new}. For this experiment, we only used the read sentences subset. This corpus serves the purpose of investigating whether x-vector representations trained in one language (European Portuguese) can generalise effectively to another language, namely Spanish.
+The OSA Detection - PSD Corpus is an extended version of the Portuguese Sleep Disorders (PSD) corpus \cite{botelho2019speech}. This corpus introduces tasks in European Portuguese, including reading a phonetically rich text, read sentences recorded during a cognitive load assessment task, and spontaneous descriptions of an image. All utterances were segmented into 4-second-long segments using overlapping windows with a 2-second shift. Further details about each of these datasets can be found in Table \ref{tab:xvect_data}.
+\begin{table}[h]
+  \centering
+  \begin{tabular}{cccccc}
+  \hline
+  Language & Task & Group & Speakers & Segments & Duration (h) \\
+    \hline
+  \multirow{5}{*}{PT} & Spk. Rcg. & - & 919 & 290,690 & 171.81  \\ \cline{2-6}
+  & \multirow{2}{*}{PD} & Patient & 75 & 1,838 & 1.24 \\
+  & & Control & 65 & 1,527 & 1.07 \\ \cline{2-6}
+  & \multirow{2}{*}{OSA} & Patient & 30 & 1,793 & 1.10 \\
+  &  & Control & 30 & 1,702 & 1.05 \\
+  \hline
+  \multirow{2}{*}{SP} & \multirow{2}{*}{PD} & Patient & 50 & 661 & 0.49 \\
+  & & Control & 50 & 655 & 0.50 \\
+
+  \hline
+  \end{tabular}
+  \caption{Description of Speakers and Segments}
+  \label{tab:xvect_data}
+  \end{table}
+  
+
+\subsubsection{Knowledge based features}
+For PD classification, the KB feature set proposed by Pompili et al. \cite{pompili2017automatic} comprises 36 features from the eGeMAPS \cite{eyben2015geneva}, along with the mean and standard deviation (std) of 12 MFCCs and log-energy. Additionally, the set includes the first and second derivatives of these coefficients, resulting in a 114-dimensional feature vector.
+
+In the case of OSA classification, the KB feature set, as proposed in \cite{botelho2019speech}, includes the mean of 12 MFCCs, along with their first and second order derivatives, and 48 linear prediction cepstral coefficients. The set also covers the mean and std of the frequency and bandwidth of formant 1, 2, and 3, as well as the mean and std of Harmonics-to-noise ratio, jitter, F0 at percentiles 20, 50, and 100, and mean and std values for all frames and only voiced frames of Spectral Flux. All KB features were extracted using openSMILE \cite{eyben2013recent}.
+
+\subsubsection{Speaker embeddings}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{ccccc}
+  \hline
+  Layer & Contex & Total Contex & In $\times$ Out \\
+  \hline
+  TDNN1 & $[t-2, t+2]$ & 5 & $5F \times 256$ & \\
+  TDNN2 & $\{t-2, t, t+2\}$ & 9 & $768 \times 256$ & \\
+  TDNN3 & $\{t-3, t, t+3\}$ & 15 & $768 \times 256$ & \\
+  TDNN4 & $\{t\}$ & 15 & $256 \times 256$ & \\
+  TDNN5 & $\{t\}$ & 15 & $256 \times 512$ & \\
+  stats pooling & $[0, T)$ & $T$ & $512T \times 1024$ & \\
+  FC 6 & $\{0\}$ & $T$ & $1024 \times 512$ & \\
+  FC 7 & $\{0\}$ & $T$ & $512 \times 512$ & \\
+  softmax & $\{0\}$ & $T$ & $512 \times S$ & \\
+  \hline
+  \end{tabular}
+  \caption{X-vector network Description}
+  \label{tab:xvect_description}
+  \end{table}
+  In the i-vector system, 19 MFCCs plus log-energy are given as input  with non-speech frames removed using energy-based Voice Activity Detection (VAD). Utterances are modeled with a 512-component full-covariance GMM, resulting in 180-dimensional i-vectors. The entire process is implemented using Kaldi \cite{kaldi} over the PT-EASR corpus.
+
+  For x-vectors, the network architecture, detailed in Table \ref{tab:xvect_description}, extracts x-vectors from segment layer 6. Using 24-dimensional fbanks as input features, with non-speech frames filtered out using energy-based VAD. The extractor network, trained on the PT-EASR corpus for speaker identification, using 100 epochs, cross-entropy loss, a learning rate of 0.001, a learning rate decay of 0.05 with a 30-epoch period, a batch size of 512, and a dropout value of 0.001.
+
+\subsection{Results}
+\begin{table}[h]
+  \begin{tabular}{cc|ccc|ccc|ccc}
+                            &     & \multicolumn{3}{c|}{PD - Portuguese} & \multicolumn{3}{c|}{OSA}                      & \multicolumn{3}{c}{PD - Spanish} \\ \hline
+  Features                  &     & Prec.        & Recall           & F1 Score        & Prec.     & Recall        & F1 Score      & Prec.       & Recall         & F1 Score       \\ \hline
+  \multirow{2}{*}{KB}       & Seg & 64.5             & 64.6             & 64.5            & 64.8          & 64.9          & 64.8          & \textbf{79.0}   & \textbf{79.0}  & \textbf{79.0}  \\
+                            & Spk & 72.2             & 72.3             & 72.1            & \textbf{82.0} & \textbf{81.7} & 81.6          & \textbf{87.1}   & \textbf{87.0}  & \textbf{87.0}  \\ \hline
+  \multirow{2}{*}{i-vector} & Seg & 66.6             & 66.6             & 66.6            & 65.6          & 65.6          & 65.6          & 75.7            & 75.7           & 75.7           \\
+                            & Spk & \textbf{75.6}    & \textbf{75.7}    & \textbf{75.6}   & 72.3          & 75.0          & 75.0          & 85.1            & 85.0           & 85.0           \\ \hline
+  \multirow{2}{*}{x-vector} & Seg & \textbf{66.7}    & \textbf{66.8}    & \textbf{66.7}   & \textbf{73.3} & \textbf{73.3} & \textbf{73.3} & 77.2            & 77.2           & 77.1           \\
+                            & Spk & 74.4             & 74.5             & 74.3            & 81.7          & \textbf{81.7} & \textbf{81.7} & 86.0            & 86.0           & 86.0     
+  \end{tabular}
+  \caption{Results of the different tasks}
+  \label{tab:xvect_results}
+  \end{table}
+The results of the different task are summarised in Table \ref{tab:xvect_results}. For PD with Portuguese data, the findings indicate that speaker representations learned from out-of-domain data surpass the performance of KB features. This supports our hypothesis that speaker discriminative representations not only capture information about speech pathologies but also model symptoms of the disease that KB features may overlook.
+
+It is notable that x-vectors and i-vectors yield very similar results, with a slight advantage for x-vectors at the segment level and slightly better results for i-vectors at the speaker level. This observation suggests that while x-vectors offer stronger representations for short segments, i-vectors may perform better for longer segments. The application of a majority vote weighted by the duration of speech segments may favor the i-vector approach at the speaker level.
+
+In the context of OSA task, x-vectors demonstrate superior performance compared to all other approaches at the segment level. Notably, they exhibit a substantial ∼8\% improvement over KB features, providing further support for our hypothesis. However, it is essential to highlight that both x-vectors and i-vectors perform similarly at the speaker level. Interestingly, i-vectors, in this scenario, perform less effectively than KB features. One possible explanation could be attributed to the fact that the PSD corpus incorporates tasks, such as spontaneous speech, which diverge from the read sentences included in the corpus used to train the i-vector and x-vector extractors. These tasks might be considered out-of-domain, elucidating why x-vectors outperform the i-vector approach
+
+The objective of the PD Spanish experiment was to evaluate the efficacy of x-vectors trained in one language when applied to disease classification in a different language. Our findings reveal that KB features outperform both speaker representations, possibly due to the language mismatch between the Spanish PD corpus and the European Portuguese training corpus. However, it is noteworthy that, akin to the previous task, x-vectors demonstrate the ability to surpass i-vectors in an out-of-domain corpus.
+
+%The potential of speech as a non-invasive biomarker for evaluating a speaker's health for both physical and psychological disorders has repeatedly been proven by the results of several works  \cite{hauptman2019identifying,botelho2019speech}. Traditional speech-based disease classification systems have focused on carefully researched, knowledge-based features. However, these features do not always capture the full disease's symptomatology and may even ignore some of its more subtle signs. This has led research to move towards generic representations that intrinsically model the symptoms. However, there are not enough pathological speech data available to train a large model directly. In our work \cite{botelho2020pathological}, we proposed to assess speaker embedding, such as \textit{i-vectors} \cite{ivector} and \textit{x-vectors} \cite{snyder2018x}, applicability as a generic feature extraction method to the detection of Parkinson’s disease (PD) and Obstructive Sleep Apnea (OSA). All disease classifications were performed with a support-vector-machine (SVM) classifier. Our experiments with European Portuguese datasets support the hypothesis that discriminative speaker embeddings contain information relevant to disease detection. In particular, we found evidence that these embeddings contain information that hand-crafted features fail to represent, thus proving the validity of our approach. It was also observed that x-vectors are more suitable than i-vectors for tasks whose domain does not match the training data, such as verbal task mismatch and cross-lingual. This indicates that x-vectors embeddings are a strong contender in the replacement of knowledge-based feature sets for PD and OSA detection.
+
+\section{The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}
+Later, in \cite{pompili2020inesc}, we proposed to extend the aforementioned work by classifying Alzheimer's disease with the conjunction of both acoustic and textual feature embeddings. In this end, speech signals are encoded into \textit{x-vector} using pre-trained models. For textual input, contextual embedding vectors are first extracted using an English Bert model \cite{Bert} and then used to feed a bidirectional recurrent neural network with attention. This multi-model system, based on the combination of linguistic and acoustic information, attained a classification accuracy of 81.25\%. Results have shown the importance of linguistic features in the classification of Alzheimer’s disease, which outperforms the acoustic ones in terms of accuracy.
+
+
+\section{Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}
+Finally, we further extend the idea of using pre-trained representation to automatically detect COVID-19 from cough recordings. We leverage transfer learning to develop a set of COVID-19 classification subsystems based on deep cough representation extractors called experts. Individual decisions of three experts are fed to a calibrated decision-level fusion system. This ensemble of expert subsystems based on cough representations is expected to produce well-calibrated log-likelihood scores over a wide range of operating points. The output can be more easily interpreted by a human expert and incorporated into the decision-making process. Our results show competitive performance compared to hand-crafted features, although they are still far from those required to become a reliable tool to assist COVID-19 screening.

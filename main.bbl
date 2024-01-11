@@ -1426,6 +1426,46 @@ X.~Glorot and Y.~Bengio, ``Understanding the difficulty of training deep
   1em plus 0.5em minus 0.4em\relax JMLR Workshop and Conference Proceedings,
   2010, pp. 249--256.
 
+\bibitem{hu2022synt++}
+T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
+  O.~Tuzel, ``Synt++: Utilizing imperfect synthetic data to improve speech
+  recognition,'' in \emph{ICASSP 2022-2022 IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2022, pp. 7682--7686.
+
+\bibitem{philip2020monolingual}
+J.~Philip, A.~Berard, M.~Gall{\'e}, and L.~Besacier, ``Monolingual adapters for
+  zero-shot neural machine translation,'' in \emph{Proceedings of the 2020
+  Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  2020, pp. 4465--4470.
+
+\bibitem{pfeiffer2020adapterfusion}
+J.~Pfeiffer, A.~Kamath, A.~R{\"u}ckl{\'e}, K.~Cho, and I.~Gurevych,
+  ``Adapterfusion: Non-destructive task composition for transfer learning,''
+  \emph{arXiv preprint arXiv:2005.00247}, 2020.
+
+\bibitem{gong2022layer}
+X.~Gong, Y.~Lu, Z.~Zhou, and Y.~Qian, ``Layer-wise fast adaptation for
+  end-to-end multi-accent speech recognition,'' \emph{arXiv preprint
+  arXiv:2204.09883}, 2022.
+
+\bibitem{van2017neural}
+A.~Van Den~Oord, O.~Vinyals \emph{et~al.}, ``Neural discrete representation
+  learning,'' \emph{Advances in neural information processing systems},
+  vol.~30, 2017.
+
+\bibitem{cooper2020zero}
+E.~Cooper, C.-I. Lai, Y.~Yasuda, F.~Fang, X.~Wang, N.~Chen, and J.~Yamagishi,
+  ``Zero-shot multi-speaker text-to-speech with state-of-the-art neural speaker
+  embeddings,'' in \emph{ICASSP 2020-2020 IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2020, pp. 6184--6188.
+
+\bibitem{goodfellow2014generative}
+I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
+  A.~Courville, and Y.~Bengio, ``Generative adversarial nets,'' \emph{Advances
+  in neural information processing systems}, vol.~27, 2014.
+
 \bibitem{he2022towards}
 \BIBentryALTinterwordspacing
 J.~He, C.~Zhou, X.~Ma, T.~Berg-Kirkpatrick, and G.~Neubig, ``Towards a unified
@@ -1520,59 +1560,6 @@ M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
   are key-value memories,'' in \emph{Empirical Methods in Natural Language
   Processing (EMNLP)}, 2021.
 
-\bibitem{hu2022synt++}
-T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
-  O.~Tuzel, ``Synt++: Utilizing imperfect synthetic data to improve speech
-  recognition,'' in \emph{ICASSP 2022-2022 IEEE International Conference on
-  Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2022, pp. 7682--7686.
-
-\bibitem{philip2020monolingual}
-J.~Philip, A.~Berard, M.~Gall{\'e}, and L.~Besacier, ``Monolingual adapters for
-  zero-shot neural machine translation,'' in \emph{Proceedings of the 2020
-  Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  2020, pp. 4465--4470.
-
-\bibitem{pfeiffer2020adapterfusion}
-J.~Pfeiffer, A.~Kamath, A.~R{\"u}ckl{\'e}, K.~Cho, and I.~Gurevych,
-  ``Adapterfusion: Non-destructive task composition for transfer learning,''
-  \emph{arXiv preprint arXiv:2005.00247}, 2020.
-
-\bibitem{gong2022layer}
-X.~Gong, Y.~Lu, Z.~Zhou, and Y.~Qian, ``Layer-wise fast adaptation for
-  end-to-end multi-accent speech recognition,'' \emph{arXiv preprint
-  arXiv:2204.09883}, 2022.
-
-\bibitem{van2017neural}
-A.~Van Den~Oord, O.~Vinyals \emph{et~al.}, ``Neural discrete representation
-  learning,'' \emph{Advances in neural information processing systems},
-  vol.~30, 2017.
-
-\bibitem{cooper2020zero}
-E.~Cooper, C.-I. Lai, Y.~Yasuda, F.~Fang, X.~Wang, N.~Chen, and J.~Yamagishi,
-  ``Zero-shot multi-speaker text-to-speech with state-of-the-art neural speaker
-  embeddings,'' in \emph{ICASSP 2020-2020 IEEE International Conference on
-  Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2020, pp. 6184--6188.
-
-\bibitem{goodfellow2014generative}
-I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
-  A.~Courville, and Y.~Bengio, ``Generative adversarial nets,'' \emph{Advances
-  in neural information processing systems}, vol.~27, 2014.
-
-\bibitem{tera}
-A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
-  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
-  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
-
-\bibitem{chi2021audio}
-\BIBentryALTinterwordspacing
-P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
-  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
-  representation,'' 2020. [Online]. Available:
-  \url{https://arxiv.org/abs/2005.08575}
-\BIBentrySTDinterwordspacing
-
 \bibitem{hauptman2019identifying}
 Y.~Hauptman, R.~Aloni-Lavi, I.~Lapidot, T.~Gurevich, Y.~Manor, S.~Naor,
   N.~Diamant, and I.~Opher, ``Identifying distinctive acoustic and spectral
@@ -1585,10 +1572,97 @@ M.~C. Botelho, I.~Trancoso, A.~Abad, and T.~Paiva, ``Speech as a biomarker for
   International Conference on Acoustics, Speech and Signal Processing
   (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2019, pp. 5851--5855.
 
+\bibitem{laaridh17_interspeech}
+I.~Laaridh, W.~B. Kheder, C.~Fredouille, and C.~Meunier, ``{Automatic
+  Prediction of Speech Evaluation Metrics for Dysarthric Speech},'' in
+  \emph{Proc. Interspeech 2017}, 2017, pp. 1834--1838.
+
+\bibitem{pappagari2020x}
+R.~Pappagari, T.~Wang, J.~Villalba, N.~Chen, and N.~Dehak, ``x-vectors meet
+  emotions: A study on dependencies between emotion and speaker recognition,''
+  in \emph{ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech
+  and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2020, pp. 7169--7173.
+
+\bibitem{perero2019modeling}
+J.~M. Perero-Codosero, F.~Espinoza-Cuadros, J.~Ant{\'o}n-Mart{\'\i}n, M.~A.
+  Barbero-Alvarez, and L.~A. Hern{\'a}ndez-G{\'o}mez, ``Modeling obstructive
+  sleep apnea voices using deep neural network embeddings and
+  domain-adversarial training,'' \emph{IEEE Journal of Selected Topics in
+  Signal Processing}, vol.~14, no.~2, pp. 240--250, 2019.
+
+\bibitem{zargarbashi2019multi}
+S.~Zargarbashi and B.~Babaali, ``A multi-modal feature embedding approach to
+  diagnose alzheimer disease from spoken language,'' \emph{arXiv preprint
+  arXiv:1910.00330}, 2019.
+
 \bibitem{botelho2020pathological}
 C.~Botelho, F.~Teixeira, T.~Rolland, A.~Abad, and I.~Trancoso, ``Pathological
   speech detection using x-vector embeddings,'' \emph{arXiv preprint
   arXiv:2003.00864}, 2020.
+
+\bibitem{snyder2017deep}
+D.~Snyder, D.~Garcia-Romero, D.~Povey, and S.~Khudanpur, ``Deep neural network
+  embeddings for text-independent speaker verification.'' in
+  \emph{Interspeech}, vol. 2017, 2017, pp. 999--1003.
+
+\bibitem{kenny2007joint}
+P.~Kenny, G.~Boulianne, P.~Ouellet, and P.~Dumouchel, ``Joint factor analysis
+  versus eigenchannels in speaker recognition,'' \emph{IEEE Transactions on
+  Audio, Speech, and Language Processing}, vol.~15, no.~4, pp. 1435--1447,
+  2007.
+
+\bibitem{reynolds2000speaker}
+D.~A. Reynolds, T.~F. Quatieri, and R.~B. Dunn, ``Speaker verification using
+  adapted gaussian mixture models,'' \emph{Digital signal processing}, vol.~10,
+  no. 1-3, pp. 19--41, 2000.
+
+\bibitem{dehak2010front}
+N.~Dehak, P.~J. Kenny, R.~Dehak, P.~Dumouchel, and P.~Ouellet, ``Front-end
+  factor analysis for speaker verification,'' \emph{IEEE Transactions on Audio,
+  Speech, and Language Processing}, vol.~19, no.~4, pp. 788--798, 2010.
+
+\bibitem{hamalainen2014easr}
+A.~H{\"a}m{\"a}l{\"a}inen, J.~Avelar, S.~Rodrigues, J.~Dias, A.~Kolesinski,
+  T.~Fegy{\'o}, G.~N{\'e}meth, P.~Csob{\'a}nka, K.~Ting, and D.~Hewson, ``The
+  easr corpora of european portuguese, french, hungarian and polish elderly
+  speech,'' \emph{The EASR Corpora of European Portuguese, French, Hungarian
+  and Polish elderly speech}, pp. 1458--1464, 2014.
+
+\bibitem{pinto2016dysarthria}
+S.~Pinto, R.~Cardoso, J.~Sadat, I.~Guimar{\~a}es, C.~Mercier, H.~Santos,
+  C.~Atkinson-Clement, J.~Carvalho, P.~Welby, P.~Oliveira \emph{et~al.},
+  ``Dysarthria in individuals with parkinson's disease: a protocol for a
+  binational, cross-sectional, case-controlled study in french and european
+  portuguese (fralusopark),'' \emph{BMJ open}, vol.~6, no.~11, p. e012885,
+  2016.
+
+\bibitem{orozco2014new}
+J.~R. Orozco-Arroyave, J.~D. Arias-Londo{\~n}o, J.~F. Vargas-Bonilla, M.~C.
+  Gonzalez-R{\'a}tiva, and E.~N{\"o}th, ``New spanish speech corpus database
+  for the analysis of people suffering from parkinson's disease.'' in
+  \emph{LREC}, 2014, pp. 342--347.
+
+\bibitem{pompili2017automatic}
+A.~Pompili, A.~Abad, P.~Romano, I.~P. Martins, R.~Cardoso, H.~Santos,
+  J.~Carvalho, I.~Guimaraes, and J.~J. Ferreira, ``Automatic detection of
+  parkinson’s disease: an experimental analysis of common speech production
+  tasks used for diagnosis,'' in \emph{International Conference on Text,
+  Speech, and Dialogue}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2017,
+  pp. 411--419.
+
+\bibitem{eyben2015geneva}
+F.~Eyben, K.~R. Scherer, B.~W. Schuller, J.~Sundberg, E.~Andr{\'e}, C.~Busso,
+  L.~Y. Devillers, J.~Epps, P.~Laukka, S.~S. Narayanan \emph{et~al.}, ``The
+  geneva minimalistic acoustic parameter set (gemaps) for voice research and
+  affective computing,'' \emph{IEEE transactions on affective computing},
+  vol.~7, no.~2, pp. 190--202, 2015.
+
+\bibitem{eyben2013recent}
+F.~Eyben, F.~Weninger, F.~Gross, and B.~Schuller, ``Recent developments in
+  opensmile, the munich open-source multimedia feature extractor,'' in
+  \emph{Proceedings of the 21st ACM international conference on Multimedia},
+  2013, pp. 835--838.
 
 \bibitem{pompili2020inesc}
 A.~Pompili, T.~Rolland, and A.~Abad, ``The inesc-id multi-modal system for the
@@ -1608,5 +1682,43 @@ X.~Chang, T.~Maekaku, P.~Guo, J.~Shi, Y.-J. Lu, A.~S. Subramanian, T.~Wang,
   recognition,'' in \emph{2021 IEEE Automatic Speech Recognition and
   Understanding Workshop (ASRU)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2021, pp. 228--235.
+
+\bibitem{librilight}
+J.~{Kahn}, M.~{Rivière}, W.~{Zheng}, E.~{Kharitonov}, Q.~{Xu}, P.~E.
+  {Mazaré}, J.~{Karadayi}, V.~{Liptchinsky}, R.~{Collobert}, C.~{Fuegen},
+  T.~{Likhomanenko}, G.~{Synnaeve}, A.~{Joulin}, A.~{Mohamed}, and E.~{Dupoux},
+  ``Libri-light: A benchmark for asr with limited or no supervision,'' in
+  \emph{ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech
+  and Signal Processing (ICASSP)}, 2020, pp. 7669--7673,
+  \url{https://github.com/facebookresearch/libri-light}.
+
+\bibitem{tera}
+A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
+  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
+  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
+
+\bibitem{chi2021audio}
+\BIBentryALTinterwordspacing
+P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
+  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
+  representation,'' 2020. [Online]. Available:
+  \url{https://arxiv.org/abs/2005.08575}
+\BIBentrySTDinterwordspacing
+
+\bibitem{mcauliffe2017montreal}
+M.~McAuliffe, M.~Socolof, S.~Mihuc, M.~Wagner, and M.~Sonderegger, ``Montreal
+  forced aligner: Trainable text-speech alignment using kaldi.'' in
+  \emph{Interspeech}, vol. 2017, 2017, pp. 498--502.
+
+\bibitem{phdthesis}
+L.~Gelin, ``Reconnaissance automatique de la parole d'enfants apprenant·e·s
+  lecteur·ice·s en salle de classe : modélisation acoustique de phonèmes,''
+  Ph.D. dissertation, 02 2022.
+
+\bibitem{babu2021xlsr}
+A.~Babu, C.~Wang, A.~Tjandra, K.~Lakhotia, Q.~Xu, N.~Goyal, K.~Singh, P.~von
+  Platen, Y.~Saraf, J.~Pino, A.~Baevski, A.~Conneau, and M.~Auli, ``Xls-r:
+  Self-supervised cross-lingual speech representation learning at scale,''
+  \emph{arXiv}, vol. abs/2111.09296, 2021.
 
 \end{thebibliography}

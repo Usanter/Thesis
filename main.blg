@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 18386 items from 5000.
+Reallocated field_info (elt_size=4) to 19214 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--I didn't find a database entry for "asr-review"
@@ -27,47 +27,48 @@ Warning--empty journal in sak2014long
 Warning--missing school in ghai2011addressing
 Warning--empty journal in shuyangdata
 Warning--empty year in shuyangdata
+Warning--missing school in phdthesis
 
 Done.
-You've used 283 entries,
+You've used 301 entries,
             4087 wiz_defined-function locations,
-            2215 strings with 68241 characters,
-and the built_in function-call counts, 219438 in all, are:
-= -- 16516
-> -- 6654
-< -- 1530
-+ -- 3535
-- -- 1301
-* -- 10381
-:= -- 31298
-add.period$ -- 631
-call.type$ -- 283
-change.case$ -- 292
-chr.to.int$ -- 3738
-cite$ -- 289
-duplicate$ -- 15926
-empty$ -- 18605
-format.name$ -- 1558
-if$ -- 51796
+            2303 strings with 73251 characters,
+and the built_in function-call counts, 236888 in all, are:
+= -- 17838
+> -- 7253
+< -- 1680
++ -- 3860
+- -- 1417
+* -- 11229
+:= -- 33667
+add.period$ -- 669
+call.type$ -- 301
+change.case$ -- 311
+chr.to.int$ -- 4098
+cite$ -- 308
+duplicate$ -- 17124
+empty$ -- 19947
+format.name$ -- 1691
+if$ -- 55926
 int.to.chr$ -- 0
-int.to.str$ -- 283
-missing$ -- 3036
-newline$ -- 916
-num.names$ -- 293
-pop$ -- 7839
+int.to.str$ -- 301
+missing$ -- 3272
+newline$ -- 970
+num.names$ -- 311
+pop$ -- 8414
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 16800
+skip$ -- 18132
 stack$ -- 0
-substring$ -- 9167
-swap$ -- 12415
-text.length$ -- 284
+substring$ -- 10040
+swap$ -- 13457
+text.length$ -- 314
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 283
-warning$ -- 6
-while$ -- 862
-width$ -- 286
-write$ -- 2627
-(There were 14 warnings)
+type$ -- 301
+warning$ -- 7
+while$ -- 936
+width$ -- 304
+write$ -- 2802
+(There were 15 warnings)

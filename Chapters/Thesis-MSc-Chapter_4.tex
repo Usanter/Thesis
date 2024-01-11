@@ -4,7 +4,7 @@
 % #############################################################################
 % Change the Name of the Chapter i the following line
 \fancychapter{End-to-End children automatic speech recognition}
-\label{chap:e2e}
+\label{chap:4}
 \cleardoublepage
 \section{Introduction}
 \label{chap:implement}
@@ -208,7 +208,7 @@ All experiments were conducted using the SpeechBrain toolkit \cite{speechbrain}.
         \begin{tabular}{lcc}\hline
             Transformer    &   WER $\downarrow$    & Trained parameters  \\ \hline
             Full model          & 12.99\% & 71.5M   \\
-            Encoder only & \textbf{TODO\%} & 37.8M  \\
+            Encoder only & \textbf{12.55\%} & 37.8M  \\
             Decoder only & 15.95\% & 25.2M  \\ \hline \hline
             Conformer    &    & \\ \hline
             Full model          & 12.28\% & 109M   \\
@@ -225,12 +225,19 @@ Table \ref{tab:EncoderDecoder} summarises the results of the impact of isolating
 Turning to the Conformer model, the full model achieves a WER of 12.28\% with 109 million parameters updated. Isolating the transfer learning on the encoder component only  yields a remarkable improvement, resulting in a WER of 11.24\% with a parameter count of 75.9 million. Conversely, when the decoder only is fine-tuned the performances degrade with a higher WER of 16.94\% using a parameter count of 25.2 million. Notably, the Conformer architecture consistently outperform the Transformer across all configurations, emphasising its effectiveness for speech related tasks. In addition, these results underscore the important role of the encoder in both Transformer and Conformer ASR models, highlighting its importance in capturing the inherent variabilities in children's acoustics. It confirms that the acoustics variabilities represent the most important source of variabilities as suggested by \cite{TFchildren}.
 
 % Layers wise
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.7]{imgs/layerTL.png}
-    \end{center}
-    \caption{Up-way and down-way transfer learning experiment}
+\begin{figure}[ht]
+    \centering
+    \subfigure[Results of the transfer learning layer wise for the Transformer model]{\label{fig:transferTLTransformer}\includegraphics[width=0.49\textwidth]{imgs/layerTL_transformer.png}}
+    \subfigure[Results of the transfer learning layer wise for the Conformer model]{\label{fig:transferTLConformer}\includegraphics[width=0.49\textwidth]{imgs/layerTL_conformer.png}}
+    \caption{Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture}
 \end{figure}
+
+%\begin{figure}
+%    \begin{center}
+%        \includegraphics[scale=0.7]{imgs/layerTL.png}
+%    \end{center}
+%    \caption{Up-way and down-way transfer learning experiment}
+%\end{figure}
 Recognising the important role of the Encoder in the fine-tuning process for children ASR, our investigation further look to determine the specific layers that are the most relevant during this TL process. To this end, we adopt a meticulous approach of fine-tuning the Encoder incrementally, adding one layer at a time. This step-by-step TL procedure is executed in each directionally, one commencing from the input layer while the other one from the output layer of the encoder,the up-way and down-way respectively. In other words, the up-way, incremental fine-tuning begining with the input layer and progressively incorporating subsequent layers towards the output layer. While, the down-way initiates fine-tuning from the output layer, systematically integrating preceding layers towards the input layer.
 \subsection{Modules Transfer learning}
 % Block wise
@@ -242,18 +249,27 @@ Recognising the important role of the Encoder in the fine-tuning process for chi
             Full model   & 12.99\% & 71.5M   \\ \hline
             Normalisation & 17.00\% & 57.9K  \\
             MHSA & 12.19\% & 25.2M  \\
-            FFN    & \textbf{11.84\%}     &  37.8M \\ \hline \hline
+            FFN    & \textbf{11.84\%}     &  37.8M \\ \hline
+            MHSA + FFN & 12.39\% & 63.0M \\
+            Normalisation + FFN & 12.19\% & 37.9M \\
+            Normalisation + MHSA & 12.29\% & 25.3M\\ \hline \hline
             \textbf{Conformer}    &     & \\ \hline
             None & 21.75\% & -   \\
             Full model   & 12.28\% & 109M   \\ \hline
             Normalisation & 15.61\% & 63.7K  \\
-            MHSA & 11.90\% & 15.7M  \\
+            MHSA & 11.74\% & 28.4M  \\
             Convolution Module & 11.67\% & 9.7M \\
             FFN    & \textbf{11.11\%}     &  63M \\
             \quad $\hookrightarrow$ Module 1    & 11.44\%     &  25.2M \\
             \quad $\hookrightarrow$ Module 2    & 11.48\%     &  25.2M \\
             \quad $\hookrightarrow$ Up-linear ($W_1$)    & 11.47\%     &  31.5M \\
             \quad $\hookrightarrow$ Down-linear ($W_2$)    & 11.40\%     &  31.5M \\ \hline
+            FFN + MHSA & 11.20\% & 91.4M \\
+            FFN + Convolution Module & 11.11\% & 72.7M \\
+            FFN + Normalisation & 11.15\% & 63.1M \\
+            MHSA + Normalisation & 11.67\% & 28.4M \\
+            MHSA + Convolution Module & 11.44\% & 38.0M \\
+            Convolution Module + Normalisation & 11.62\% & 9.7M\\ \hline
         \end{tabular}
     \end{center}
     \caption{Modules fine-tuning experiment}
@@ -269,7 +285,7 @@ The fine-tuning of specific components reveals valuable observations. Applying n
 %Conformer
 Turning to the Conformer model, the baseline WER without fine-tuning is 21.75\%, with no additional parameters. The full fine-tuning of the Conformer model improved performance, yielding a WER of 12.28\% with 109 million parameters.
 
-Fine-tuning specific Conformer modules offers further granularity. First, the normalisation finetuning, in a similar way as observed in the Transformer configuration, yield a score of 15.61\% WER, with 63.7 thousand parameters. Then,  the MHSA module proves effective by already providing better result than the full full-tuning with a WER of 11.90\%, this by fine-tuning 15.7 million parameters. The convolution modules outperform the MHSA with a WER of 11.67\% with less parameters used, 9.7\%. Howver, as in the Transformer model, the FFN module stands out prominently, demonstrating a WER of 11.11\% with a parameter count of 63 million. Notably, the MHSA, convolution modules and FFN modules, when fine-tuned in isolation, surpass the performance of the full Conformer model.
+Fine-tuning specific Conformer modules offers further granularity. First, the normalisation finetuning, in a similar way as observed in the Transformer configuration, yield a score of 15.61\% WER, with 63.7 thousand parameters. Then,  the MHSA module proves effective by already providing better result than the full full-tuning with a WER of 11.74\%, this by fine-tuning 28.4 million parameters. The convolution modules outperform the MHSA with a WER of 11.67\% with less parameters used, 9.7\%. Howver, as in the Transformer model, the FFN module stands out prominently, demonstrating a WER of 11.11\% with a parameter count of 63 million. Notably, the MHSA, convolution modules and FFN modules, when fine-tuned in isolation, surpass the performance of the full Conformer model.
 
 % FFN wise
 As FFN, consistently proved to be the most relevant component to fine-tune for children ASR, no matter the configuration. We decided to delve deeper into the FFN submodule. There is two way to see this subdivision, first using the macaron style of the Conformer FFn layer, including two modules, one before the MHSA and one after the convolution module will be respectively called Module 1 and Module 2. The second approach to subdivde the FFN layers would be to only look at the up-linear and down-linear, respectively $W_1$ and $W_2$ equation \ref{equation:FFN}. Module 1 and Module 2 achieve WERs of 11.44\% and 11.48\%, respectively, each by fine-tuning 25.2 million parameters. The Up-linear and Down-linear  submodules exhibit WERs of 11.47\% and 11.40\%, respectively, with parameter counts of 31.5 million. The subdivision of the FFN modules do not allow to perform better than their coupled usage. This show the importance of the full FFN modules in Transformer based end-to-end models. 

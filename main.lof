@@ -29,26 +29,35 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }}{66}{figure.caption.24}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{68}{figure.caption.25}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a conformer layer\relax }}{69}{figure.caption.26}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Up-way and down-way transfer learning experiment\relax }}{74}{figure.caption.29}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{73}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer wise for the Transformer model}}}{73}{figure.caption.29}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer wise for the Conformer model}}}{73}{figure.caption.29}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Exploring parameters-efficient transfer learning for end-to-end children ASR}{77}{chapter.5}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{80}{figure.caption.31}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Transformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{82}{figure.caption.32}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{82}{figure.caption.33}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.\relax }}{89}{figure.caption.36}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{91}{figure.caption.37}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{92}{figure.caption.38}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{94}{figure.caption.40}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{96}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Use of synthetic speech as data augmentation}{97}{chapter.6}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{102}{figure.caption.42}
+\contentsline {xchapter}{Use of synthetic speech as data augmentation}{89}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{94}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathology detection from speech}{111}{chapter.7}
+\contentsline {xchapter}{Parameters efficent transfer learning alternative approaches}{101}{chapter.7}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.\relax }}{105}{figure.caption.41}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{107}{figure.caption.42}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model\relax }}{108}{figure.caption.43}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Shared-Adapter setup in a Conformer model\relax }}{110}{figure.caption.45}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{112}{figure.caption.46}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{141}{appendix.A}
+\contentsline {xchapter}{Conclusions}{113}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's ASR}{143}{appendix.B}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBert models\relax }}{145}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{145}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBert architecture taken from \cite {hsu2021hubert}}}}{145}{figure.caption.50}
+\contentsline {xchapter}{Pathological speech detection through pre-trained models}{143}{appendix.A}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's ASR}{149}{appendix.B}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBert models\relax }}{151}{figure.caption.52}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{151}{figure.caption.52}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBert architecture taken from \cite {hsu2021hubert}}}}{151}{figure.caption.52}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces (a) Fbanks (b) TERA (c) Wav2Vec 2.0 (d) HuBERT T-SNE plot of the different extracted features using the same speech data using phoneme labels\relax }}{154}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{154}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{154}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{154}{figure.caption.55}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{154}{figure.caption.55}
