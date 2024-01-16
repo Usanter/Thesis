@@ -1,1 +1,3 @@
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {6.1}{\ignorespaces Overview of a) double way fine-tuning and b) Adapter layer architecture\relax }}{\reset@font\mlffont 94}{figure.caption.36}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Transformer model\relax }}{\reset@font\mlffont 93}{figure.caption.36}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {6.2}{\ignorespaces Architecture of the YourTTS model taken from \cite {casanova2022yourtts}\relax }}{\reset@font\mlffont 96}{figure.caption.37}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {6.3}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Conformer architecture\relax }}{\reset@font\mlffont 102}{figure.caption.42}}

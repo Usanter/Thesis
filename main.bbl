@@ -64,6 +64,18 @@ A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,''
   \emph{Advances in neural information processing systems}, vol.~30, 2017.
 
+\bibitem{casanova2022yourtts}
+\BIBentryALTinterwordspacing
+E.~Casanova, J.~Weber, C.~D. Shulby, A.~C. Junior, E.~G{\"o}lge, and M.~A.
+  Ponti, ``{Y}our{TTS}: Towards zero-shot multi-speaker {TTS} and zero-shot
+  voice conversion for everyone,'' in \emph{Proceedings of the 39th
+  International Conference on Machine Learning}, ser. Proceedings of Machine
+  Learning Research, K.~Chaudhuri, S.~Jegelka, L.~Song, C.~Szepesvari, G.~Niu,
+  and S.~Sabato, Eds., vol. 162.\hskip 1em plus 0.5em minus 0.4em\relax PMLR,
+  17--23 Jul 2022, pp. 2709--2720. [Online]. Available:
+  \url{https://proceedings.mlr.press/v162/casanova22a.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{levelt1993speaking}
 W.~J. Levelt, \emph{Speaking: From intention to articulation}.\hskip 1em plus
   0.5em minus 0.4em\relax MIT press, 1993.
@@ -1426,6 +1438,11 @@ X.~Glorot and Y.~Bengio, ``Understanding the difficulty of training deep
   1em plus 0.5em minus 0.4em\relax JMLR Workshop and Conference Proceedings,
   2010, pp. 249--256.
 
+\bibitem{fazel21_interspeech}
+A.~Fazel, W.~Yang, Y.~Liu, R.~Barra-Chicote, Y.~Meng, R.~Maas, and J.~Droppo,
+  ``{SynthASR: Unlocking Synthetic Data for Speech Recognition},'' in
+  \emph{Proc. Interspeech 2021}, 2021, pp. 896--900.
+
 \bibitem{hu2022synt++}
 T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
   O.~Tuzel, ``Synt++: Utilizing imperfect synthetic data to improve speech
@@ -1433,11 +1450,75 @@ T.-Y. Hu, M.~Armandpour, A.~Shrivastava, J.-H.~R. Chang, H.~Koppula, and
   Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE, 2022, pp. 7682--7686.
 
+\bibitem{casanova2022asr}
+E.~Casanova, C.~Shulby, A.~Korolev, A.~C. Junior, A.~da~Silva~Soares,
+  S.~Aluísio, and M.~A. Ponti, ``{ASR data augmentation in low-resource
+  settings using cross-lingual multi-speaker TTS and cross-lingual voice
+  conversion},'' in \emph{Proc. INTERSPEECH 2023}, 2023, pp. 1244--1248.
+
+\bibitem{9688218}
+S.~Ueno, M.~Mimura, S.~Sakai, and T.~Kawahara, ``Data augmentation for asr
+  using tts via a discrete representation,'' in \emph{2021 IEEE Automatic
+  Speech Recognition and Understanding Workshop (ASRU)}, 2021, pp. 68--75.
+
 \bibitem{philip2020monolingual}
 J.~Philip, A.~Berard, M.~Gall{\'e}, and L.~Besacier, ``Monolingual adapters for
   zero-shot neural machine translation,'' in \emph{Proceedings of the 2020
   Conference on Empirical Methods in Natural Language Processing (EMNLP)},
   2020, pp. 4465--4470.
+
+\bibitem{mao-etal-2022-unipelt}
+\BIBentryALTinterwordspacing
+Y.~Mao, L.~Mathias, R.~Hou, A.~Almahairi, H.~Ma, J.~Han, S.~Yih, and M.~Khabsa,
+  ``{U}ni{PELT}: A unified framework for parameter-efficient language model
+  tuning,'' in \emph{Proceedings of the 60th Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, S.~Muresan, P.~Nakov,
+  and A.~Villavicencio, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Dublin,
+  Ireland: Association for Computational Linguistics, May 2022, pp. 6253--6264.
+  [Online]. Available: \url{https://aclanthology.org/2022.acl-long.433}
+\BIBentrySTDinterwordspacing
+
+\bibitem{45819}
+\BIBentryALTinterwordspacing
+L.~Dinh, J.~Sohl-Dickstein, and S.~Bengio, ``Density estimation using real
+  nvp,'' 2017. [Online]. Available: \url{https://arxiv.org/abs/1605.08803}
+\BIBentrySTDinterwordspacing
+
+\bibitem{45774}
+\BIBentryALTinterwordspacing
+A.~van~den Oord, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves,
+  N.~Kalchbrenner, A.~Senior, and K.~Kavukcuoglu, ``Wavenet: A generative model
+  for raw audio,'' in \emph{Arxiv}, 2016. [Online]. Available:
+  \url{https://arxiv.org/abs/1609.03499}
+\BIBentrySTDinterwordspacing
+
+\bibitem{kong2020hifi}
+J.~Kong, J.~Kim, and J.~Bae, ``Hifi-gan: Generative adversarial networks for
+  efficient and high fidelity speech synthesis,'' \emph{Advances in Neural
+  Information Processing Systems}, vol.~33, pp. 17\,022--17\,033, 2020.
+
+\bibitem{VAE}
+D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' \emph{CoRR},
+  vol. abs/1312.6114, 2014.
+
+\bibitem{heo2020clova}
+H.~S. Heo, B.-J. Lee, J.~Huh, and J.~S. Chung, ``Clova baseline system for the
+  voxceleb speaker recognition challenge 2020,'' 2020.
+
+\bibitem{veaux2016superseded}
+C.~Veaux, J.~Yamagishi, K.~MacDonald \emph{et~al.}, ``Superseded-cstr vctk
+  corpus: English multi-speaker corpus for cstr voice cloning toolkit,'' 2016.
+
+\bibitem{casanova2022tts}
+E.~Casanova, A.~C. Junior, C.~Shulby, F.~S.~d. Oliveira, J.~P. Teixeira, M.~A.
+  Ponti, and S.~Alu{\'\i}sio, ``Tts-portuguese corpus: a corpus for speech
+  synthesis in brazilian portuguese,'' \emph{Language Resources and
+  Evaluation}, vol.~56, no.~3, pp. 1043--1055, 2022.
+
+\bibitem{mailabs}
+{Munich Artificial Intelligence Laboratories GmbH}, ``The mailabs speech
+  dataset – caito,'' 2017, accessed January 15, 2024.
+  \url{https://www.caito.de/2019/01/03/the-m-ailabs-speech-dataset/}.
 
 \bibitem{pfeiffer2020adapterfusion}
 J.~Pfeiffer, A.~Kamath, A.~R{\"u}ckl{\'e}, K.~Cho, and I.~Gurevych,
@@ -1472,17 +1553,6 @@ J.~He, C.~Zhou, X.~Ma, T.~Berg-Kirkpatrick, and G.~Neubig, ``Towards a unified
   view of parameter-efficient transfer learning,'' in \emph{International
   Conference on Learning Representations}, 2022. [Online]. Available:
   \url{https://openreview.net/forum?id=0RDcd5Axok}
-\BIBentrySTDinterwordspacing
-
-\bibitem{mao-etal-2022-unipelt}
-\BIBentryALTinterwordspacing
-Y.~Mao, L.~Mathias, R.~Hou, A.~Almahairi, H.~Ma, J.~Han, S.~Yih, and M.~Khabsa,
-  ``{U}ni{PELT}: A unified framework for parameter-efficient language model
-  tuning,'' in \emph{Proceedings of the 60th Annual Meeting of the Association
-  for Computational Linguistics (Volume 1: Long Papers)}, S.~Muresan, P.~Nakov,
-  and A.~Villavicencio, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Dublin,
-  Ireland: Association for Computational Linguistics, May 2022, pp. 6253--6264.
-  [Online]. Available: \url{https://aclanthology.org/2022.acl-long.433}
 \BIBentrySTDinterwordspacing
 
 \bibitem{yang23p_interspeech}
@@ -1667,6 +1737,153 @@ F.~Eyben, F.~Weninger, F.~Gross, and B.~Schuller, ``Recent developments in
 \bibitem{pompili2020inesc}
 A.~Pompili, T.~Rolland, and A.~Abad, ``The inesc-id multi-modal system for the
   adress 2020 challenge,'' \emph{arXiv preprint arXiv:2005.14646}, 2020.
+
+\bibitem{konig2015automatic}
+A.~K{\"o}nig, A.~Satt, A.~Sorin, R.~Hoory, O.~Toledo-Ronen, A.~Derreumaux,
+  V.~Manera, F.~Verhey, P.~Aalten, P.~H. Robert \emph{et~al.}, ``Automatic
+  speech analysis for the assessment of patients with predementia and
+  alzheimer's disease,'' \emph{Alzheimer's \& Dementia: Diagnosis, Assessment
+  \& Disease Monitoring}, vol.~1, no.~1, pp. 112--124, 2015.
+
+\bibitem{fraser2016linguistic}
+K.~C. Fraser, J.~A. Meltzer, and F.~Rudzicz, ``Linguistic features identify
+  alzheimer’s disease in narrative speech,'' \emph{Journal of Alzheimer's
+  Disease}, vol.~49, no.~2, pp. 407--422, 2016.
+
+\bibitem{gosztolya2019identifying}
+G.~Gosztolya, V.~Vincze, L.~T{\'o}th, M.~P{\'a}k{\'a}ski, J.~K{\'a}lm{\'a}n,
+  and I.~Hoffmann, ``Identifying mild cognitive impairment and mild
+  alzheimer’s disease based on spontaneous speech using asr and linguistic
+  features,'' \emph{Computer Speech \& Language}, vol.~53, pp. 181--197, 2019.
+
+\bibitem{warnita18_interspeech}
+T.~Warnita, N.~Inoue, and K.~Shinoda, ``{Detecting Alzheimer’s Disease Using
+  Gated Convolutional Neural Network from Audio Data},'' in \emph{Proc.
+  Interspeech 2018}, 2018, pp. 1706--1710.
+
+\bibitem{karlekar-etal-2018-detecting}
+\BIBentryALTinterwordspacing
+S.~Karlekar, T.~Niu, and M.~Bansal, ``Detecting linguistic characteristics of
+  {A}lzheimer{'}s dementia by interpreting neural models,'' in
+  \emph{Proceedings of the 2018 Conference of the North {A}merican Chapter of
+  the Association for Computational Linguistics: Human Language Technologies,
+  Volume 2 (Short Papers)}, M.~Walker, H.~Ji, and A.~Stent, Eds.\hskip 1em plus
+  0.5em minus 0.4em\relax New Orleans, Louisiana: Association for Computational
+  Linguistics, Jun. 2018, pp. 701--707. [Online]. Available:
+  \url{https://aclanthology.org/N18-2110}
+\BIBentrySTDinterwordspacing
+
+\bibitem{goodglass2001bdae}
+H.~Goodglass, E.~Kaplan, and S.~Weintraub, \emph{BDAE: The Boston diagnostic
+  aphasia examination}.\hskip 1em plus 0.5em minus 0.4em\relax Lippincott
+  Williams \& Wilkins Philadelphia, PA, 2001.
+
+\bibitem{luz2020alzheimer}
+S.~Luz, F.~Haider, S.~de~la Fuente, D.~Fromm, and B.~MacWhinney, ``Alzheimer's
+  dementia recognition through spontaneous speech: The adress challenge,''
+  \emph{arXiv preprint arXiv:2004.06833}, 2020.
+
+\bibitem{nagrani17_interspeech}
+A.~Nagrani, J.~S. Chung, and A.~Zisserman, ``{VoxCeleb: A Large-Scale Speaker
+  Identification Dataset},'' in \emph{Proc. Interspeech 2017}, 2017, pp.
+  2616--2620.
+
+\bibitem{schuller2020interspeech}
+B.~W. Schuller, A.~Batliner, C.~Bergler, E.-M. Messner, A.~Hamilton,
+  S.~Amiriparian, A.~Baird, G.~Rizos, M.~Schmitt, L.~Stappen \emph{et~al.},
+  ``{The INTERSPEECH 2020 Computational Paralinguistics Challenge: Elderly
+  Emotion, Breathing \& Masks},'' \emph{Proceedings INTERSPEECH. Shanghai,
+  China: ISCA}, 2020.
+
+\bibitem{SoleraUrea2021TransferLC}
+\BIBentryALTinterwordspacing
+R.~Solera-Ure{\~n}a, C.~Botelho, F.~Teixeira, T.~Rolland, A.~Abad, and
+  I.~Trancoso, ``Transfer learning-based cough representations for automatic
+  detection of covid-19,'' in \emph{Interspeech}, 2021. [Online]. Available:
+  \url{https://api.semanticscholar.org/CorpusID:237489901}
+\BIBentrySTDinterwordspacing
+
+\bibitem{schuller21_interspeech}
+B.~W. Schuller, A.~Batliner, C.~Bergler, C.~Mascolo, J.~Han, I.~Lefter,
+  H.~Kaya, S.~Amiriparian, A.~Baird, L.~Stappen, S.~Ottl, M.~Gerczuk,
+  P.~Tzirakis, C.~Brown, J.~Chauhan, A.~Grammenos, A.~Hasthanasombat,
+  D.~Spathis, T.~Xia, P.~Cicuta, L.~J. Rothkrantz, J.~A. Zwerts, J.~Treep, and
+  C.~S. Kaandorp, ``{The INTERSPEECH 2021 Computational Paralinguistics
+  Challenge: COVID-19 Cough, COVID-19 Speech, Escalation and Primates},'' in
+  \emph{Proc. Interspeech 2021}, 2021, pp. 431--435.
+
+\bibitem{pramono2016cough}
+R.~X.~A. Pramono, S.~A. Imtiaz, and E.~Rodriguez-Villegas, ``A cough-based
+  algorithm for automatic diagnosis of pertussis,'' \emph{PloS one}, vol.~11,
+  no.~9, p. e0162128, 2016.
+
+\bibitem{Hershey2017}
+S.~{Hershey}, S.~{Chaudhuri}, D.~P.~W. {Ellis}, J.~F. {Gemmeke}, A.~{Jansen},
+  R.~C. {Moore}, M.~{Plakal}, D.~{Platt}, R.~A. {Saurous}, B.~{Seybold},
+  M.~{Slaney}, R.~J. {Weiss}, and K.~{Wilson}, ``{CNN architectures for
+  large-scale audio classification},'' in \emph{{2017 IEEE International
+  Conference on Acoustics, Speech and Signal Processing (ICASSP)}}, 2017, pp.
+  131--135.
+
+\bibitem{Chloe2020}
+C.~Brown, J.~Chauhan, A.~Grammenos, J.~Han, A.~Hasthanasombat, D.~Spathis,
+  T.~Xia, P.~Cicuta, and C.~Mascolo, ``{Exploring Automatic Diagnosis of
+  COVID-19 from Crowdsourced Respiratory Sound Data},'' in \emph{Proceedings of
+  the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data
+  Mining}, Virtual Event, CA, USA, 2020, p. 3474–3484.
+
+\bibitem{Bagad2020}
+P.~Bagad, A.~Dalmia, J.~Doshi, A.~Nagrani, P.~Bhamare, A.~Mahale, S.~Rane,
+  N.~Agarwal, and R.~Panicker, ``{Cough Against COVID: Evidence of COVID-19
+  Signature in Cough Sounds},'' \emph{preprint arXiv:2009.08790}, 2020.
+
+\bibitem{Imran2020}
+A.~Imran, I.~Posokhova, H.~N. Qureshi, U.~Masood, M.~S. Riaz, K.~Ali, C.~N.
+  John, M.~I. Hussain, and M.~Nabeel, ``{AI4COVID-19: AI enabled preliminary
+  diagnosis for COVID-19 from cough samples via an app},'' \emph{Informatics in
+  Medicine Unlocked}, vol.~20, p. 100378, 2020.
+
+\bibitem{Chaudhari2021}
+G.~Chaudhari, X.~Jiang, A.~Fakhry, A.~Han, J.~Xiao, S.~Shen, and A.~Khanzada,
+  ``{Virufy: Global Applicability of Crowdsourced and Clinical Datasets for AI
+  Detection of COVID-19 from Cough},'' \emph{preprint arXiv:2011.13320}, 2021.
+
+\bibitem{Han2021}
+J.~Han, C.~Brown, J.~Chauhan, A.~Grammenos, A.~Hasthanasombat, D.~Spathis,
+  T.~Xia, P.~Cicuta, and C.~Mascolo, ``{Exploring Automatic COVID-19 Diagnosis
+  via Voice and Symptoms from Crowdsourced Data},'' in \emph{2021 IEEE
+  International Conference on Acoustics, Speech and Signal Processing
+  (ICASSP)}, 2021, pp. 8328--8332.
+
+\bibitem{Orlandic2020}
+L.~Orlandic, T.~Teijeiro, and D.~Atienza, ``{The COUGHVID crowdsourcing
+  dataset: A corpus for the study of large-scale cough analysis algorithms},''
+  \emph{preprint arXiv:2009.11644}, 2020.
+
+\bibitem{villalbaSRE182020}
+J.~Villalba, N.~Chen, D.~Snyder, D.~Garcia-Romero, A.~McCree, G.~Sell,
+  J.~Borgstrom, L.~P. García-Perera, F.~Richardson, R.~Dehak, P.~A.
+  Torres-Carrasquillo, and N.~Dehak, ``{State-of-the-art speaker recognition
+  with neural network embeddings in NIST SRE18 and Speakers in the Wild
+  evaluations},'' \emph{{Computer Speech \& Language}}, vol.~60, p. 101026,
+  2020.
+
+\bibitem{Simonyan2015}
+K.~Simonyan and A.~Zisserman, ``{Very Deep Convolutional Networks for
+  Large-Scale Image Recognition},'' in \emph{{3rd International Conference on
+  Learning Representations, ICLR 2015}}, San Diego, CA, USA, 2015.
+
+\bibitem{Pascual2019}
+S.~Pascual, M.~Ravanelli, J.~Serrà, A.~Bonafonte, and Y.~Bengio, ``{Learning
+  Problem-Agnostic Speech Representations from Multiple Self-Supervised
+  Tasks},'' in \emph{Proceedings of Interspeech 2019}, Graz, Austria, 2019, pp.
+  161--165.
+
+\bibitem{Ravanelli2020}
+M.~Ravanelli, J.~Zhong, S.~Pascual, P.~Swietojanski, J.~Monteiro, J.~Trmal, and
+  Y.~Bengio, ``{Multi-Task Self-Supervised Learning for Robust Speech
+  Recognition},'' in \emph{{2020 IEEE International Conference on Acoustics,
+  Speech and Signal Processing (ICASSP)}}, 2020, pp. 6989--6993.
 
 \bibitem{yang21c_interspeech}
 S.~wen Yang, P.-H. Chi, Y.-S. Chuang, C.-I.~J. Lai, K.~Lakhotia, Y.~Y. Lin,

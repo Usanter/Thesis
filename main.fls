@@ -878,6 +878,12 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc6
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc6
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/yourtts.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/yourtts.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/yourtts.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
@@ -918,8 +924,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-1.def
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-1.def
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixA.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixA.tex
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-34.def
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-34.def
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/ADReSS.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/ADReSS.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/ADReSS.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixB.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixB.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec2.png
@@ -982,6 +990,7 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb

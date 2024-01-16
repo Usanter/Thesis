@@ -29,7 +29,7 @@ The observed successes of SSL as an initialisation for fine-tuning in the contex
       TERA [9] & 3-Trans & 21.33M & 10ms & FBANK & LS 960 hr\\%& 960 hr time/freq M-G \\
       wav2vec 2.0 Base [14] & 7-Conv, 12-Trans & 95.04M & 20ms & waveform & LS 960 hr\\%& 960 hr M-C + VQ \\
       wav2vec 2.0 Large [14] & 7-Conv, 24-Trans & 317.38M & 20ms & waveform & LL 60k hr\\%& 60k hr M-C + VQ \\
-      HuBERT Base [35] & 7-Conv, 12-Trans & 94.68M & 20ms & waveform 960 hr& LS 960 hr \\%& 960 hr M-P + VQ \\
+      HuBERT Base [35] & 7-Conv, 12-Trans & 94.68M & 20ms & waveform & LS 960 hr \\%& 960 hr M-P + VQ \\
       HuBERT Large [35] & 7-Conv, 24-Trans & 316.61M & 20ms & waveform & LL 60k hr\\%& 60k hr M-P + VQ \\
       \bottomrule
     \end{tabular}
@@ -62,7 +62,7 @@ The ASR downstream task was conducted using a 2-layered Bidirectional Long Short
     \caption{My Science Tutor Children Speech Subset Corpus statistics}
     
     \begin{center}
-    \begin{tabular}{r|c|c|c}
+    \begin{tabular}{r|ccc}
     \hline
      & Training & Validation     & Test   \\ \hline
     \# of utterances & 23594   & 3959    & 4079  \\ 

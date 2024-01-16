@@ -1,8 +1,8 @@
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBert models\relax }}{\reset@font\mlffont 151}{figure.caption.52}}
-{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{\reset@font\mlfSfont 151}{figure.caption.52}}
-{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(b)}{\ignorespaces {Illustration of the HuBert architecture taken from \cite {hsu2021hubert}}}}{\reset@font\mlfSfont 151}{figure.caption.52}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {B.2}{\ignorespaces (a) Fbanks (b) TERA (c) Wav2Vec 2.0 (d) HuBERT T-SNE plot of the different extracted features using the same speech data using phoneme labels\relax }}{\reset@font\mlffont 154}{figure.caption.55}}
-{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(a)}{\ignorespaces {}}}{\reset@font\mlfSfont 154}{figure.caption.55}}
-{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(b)}{\ignorespaces {}}}{\reset@font\mlfSfont 154}{figure.caption.55}}
-{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(c)}{\ignorespaces {}}}{\reset@font\mlfSfont 154}{figure.caption.55}}
-{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(d)}{\ignorespaces {}}}{\reset@font\mlfSfont 154}{figure.caption.55}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBert models\relax }}{\reset@font\mlffont 167}{figure.caption.61}}
+{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{\reset@font\mlfSfont 167}{figure.caption.61}}
+{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(b)}{\ignorespaces {Illustration of the HuBert architecture taken from \cite {hsu2021hubert}}}}{\reset@font\mlfSfont 167}{figure.caption.61}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {B.2}{\ignorespaces (a) Fbanks (b) TERA (c) Wav2Vec 2.0 (d) HuBERT T-SNE plot of the different extracted features using the same speech data using phoneme labels\relax }}{\reset@font\mlffont 170}{figure.caption.64}}
+{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(a)}{\ignorespaces {}}}{\reset@font\mlfSfont 170}{figure.caption.64}}
+{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(b)}{\ignorespaces {}}}{\reset@font\mlfSfont 170}{figure.caption.64}}
+{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(c)}{\ignorespaces {}}}{\reset@font\mlfSfont 170}{figure.caption.64}}
+{\reset@font\mlfSfont\mtc@string\contentsline{subfigure}{\noexpand \leavevmode \numberline {(d)}{\ignorespaces {}}}{\reset@font\mlfSfont 170}{figure.caption.64}}

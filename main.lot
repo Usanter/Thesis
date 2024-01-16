@@ -16,27 +16,33 @@
 \contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{73}{table.caption.28}
 \contentsline {table}{\numberline {4.3}{\ignorespaces Modules fine-tuning experiment\relax }}{74}{table.caption.30}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Exploring parameters-efficient transfer learning for end-to-end children ASR}{77}{chapter.5}
+\contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Child-Focused ASR Systems}{77}{chapter.5}
 \contentsline {table}{\numberline {5.1}{\ignorespaces Results of the different Adapters configurations in both Transformer and Conformer.\relax }}{85}{table.caption.34}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Results of the clustering approach.\relax }}{86}{table.caption.35}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Use of synthetic speech as data augmentation}{89}{chapter.6}
-\contentsline {table}{\numberline {6.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{95}{table.caption.37}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Results of the different approaches (in WER).\relax }}{97}{table.caption.38}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Results of the different number of hours in our Adapter double-way approach with \textit {Synth$_2$} data\relax }}{98}{table.caption.39}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Results of the different configurations of Adapter double-way approach on 300h of \textit {Synth$_2$}\relax }}{98}{table.caption.40}
+\contentsline {xchapter}{Integration of synthetic speech for data augmentation}{89}{chapter.6}
+\contentsline {table}{\numberline {6.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{97}{table.caption.38}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Results of the different approaches (in WER).\relax }}{99}{table.caption.39}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Results of the different number of hours influence in our DWAT approach with \textit {Large Synth$_2$} data\relax }}{100}{table.caption.40}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Results of the different configurations of Adapter double-way approach on 300h of \textit {Synth$_2$}\relax }}{101}{table.caption.41}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Scores for the different methods within the Conformer architecture\relax }}{102}{table.caption.43}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Parameters efficent transfer learning alternative approaches}{101}{chapter.7}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Model Performance and Parameters\relax }}{109}{table.caption.44}
+\contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{105}{chapter.7}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Model Performance and Parameters\relax }}{113}{table.caption.47}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusions}{113}{chapter.8}
+\contentsline {xchapter}{Conclusions}{117}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathological speech detection through pre-trained models}{143}{appendix.A}
-\contentsline {table}{\numberline {A.1}{\ignorespaces Description of Speakers and Segments\relax }}{146}{table.caption.48}
-\contentsline {table}{\numberline {A.2}{\ignorespaces X-vector network Description\relax }}{146}{table.caption.49}
-\contentsline {table}{\numberline {A.3}{\ignorespaces Results of the different tasks\relax }}{147}{table.caption.50}
+\contentsline {xchapter}{Pathological speech detection through pre-trained models}{149}{appendix.A}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Description of Speakers and Segments\relax }}{152}{table.caption.51}
+\contentsline {table}{\numberline {A.2}{\ignorespaces X-vector network Description\relax }}{152}{table.caption.52}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Results of the different tasks with KB and speaker embeddings\relax }}{153}{table.caption.53}
+\contentsline {table}{\numberline {A.4}{\ignorespaces Statistical information on the ADReSS corpus\relax }}{155}{table.caption.54}
+\contentsline {table}{\numberline {A.5}{\ignorespaces Results of different acoustic approaches on the development set\relax }}{157}{table.caption.56}
+\contentsline {table}{\numberline {A.6}{\ignorespaces Results of different linguistic approaches on the development set\relax }}{157}{table.caption.57}
+\contentsline {table}{\numberline {A.7}{\ignorespaces Results of different acoustic and linguistic approaches on the test set\relax }}{158}{table.caption.58}
+\contentsline {table}{\numberline {A.8}{\ignorespaces Performance results (unweighted average recall-UAR) on the COVID-19 COUGH (C19C) corpus\relax }}{162}{table.caption.59}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's ASR}{149}{appendix.B}
-\contentsline {table}{\numberline {B.1}{\ignorespaces Overview of different SSL architectures used in this chapter\relax }}{150}{table.caption.51}
-\contentsline {table}{\numberline {B.2}{\ignorespaces My Science Tutor Children Speech Subset Corpus statistics\relax }}{152}{table.caption.53}
-\contentsline {table}{\numberline {B.3}{\ignorespaces Results without language model of different Self-supervised models as feature extractors\relax }}{153}{table.caption.54}
+\contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's ASR}{165}{appendix.B}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Overview of different SSL architectures used in this chapter\relax }}{166}{table.caption.60}
+\contentsline {table}{\numberline {B.2}{\ignorespaces My Science Tutor Children Speech Subset Corpus statistics\relax }}{168}{table.caption.62}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Results without language model of different Self-supervised models as feature extractors\relax }}{169}{table.caption.63}

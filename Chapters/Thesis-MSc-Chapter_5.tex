@@ -3,7 +3,7 @@
 % !TEX root = ../main.tex
 % #############################################################################
 % Change the Name of the Chapter i the following line
-\fancychapter{Exploring parameters-efficient transfer learning for end-to-end children ASR}
+\fancychapter{Exploring Parameter-Efficient Strategies in Transfer Learning for Child-Focused ASR Systems}
 \label{chap:5}
 \cleardoublepage
 
@@ -36,7 +36,7 @@ Consequently, there is a growing need for more parameter-efficient transfer lear
 
 %In this chapter, we extend research presented in \cite{chen2023efficient} and \cite{10095837} by conducting a comprehensive evaluation of various adapter  and other PETL configurations specifically designed for Conformer models in the domain of children's speech recognition. Furthermore, we introduce a two adapter configurations, the Two Serial Adapter (TSA) and Shared-Adapter. We also considering the potential benefits of age-dependent acoustic models, and given the strong correlation between children's age and acoustic variability \cite{gale2019improving, shivakumar2020transfer}, we propose a novel cluster-based strategy for training adapters.
 
-\section{Adapters}
+\section{Adapter tuning}
 
 \begin{figure*}[t]
     \begin{center}
@@ -76,7 +76,7 @@ However, the application of Adapters in the context of children's ASR has receiv
 %Finally, Adapters in the context of children's ASR have received limited attention, with only one notable study by \cite{fan2022draft}, who proposed integrating and train Adapters into SSL models and subsequently fine-tuning the entire model, including the adapter weights for better modelling of children's speech. 
 %In contrast, our primary objective is to update only the adapter weights during supervised training, maintaining the parameter efficiency and modularity of adapters, without relying on semi-supervised pre-training.
 
-\section{Investigating Adapters for children ASR}
+\section{Investigating ASR for Child Speech with Adapters}
 
 
 \begin{figure*}[t]
@@ -228,9 +228,13 @@ These results collectively illustrate the versatility and effectiveness of diffe
 \label{tab:res_clusters}
 \end{table}
 
+In this section, we present the outcomes of our clustering approach, as summarised in Table \ref{tab:res_clusters}. The investigation focused on the influence of varying the number of cluster on the ASR performance, ranging from 1 to 4 clusters, using the "TPA" configuration in an encoder-only setup. First, when the data remained unclustered (one cluster), the ASR system exhibited a 
+WER of 11.58\%. Notably, the two-cluster configuration outperformed the other setups, achieving a superior performance with a WER of 11.50\%. This result suggests that partitioning the data into two distinct clusters allows the different Adapters to more effectively capture underlying patterns intricately linked to their respective clusters, consequently enhancing the recognition scores.
+Furthermore, we explored the impact of increasing the number of clusters to three and four, revealing only marginal differences in performance. Specifically, the three-cluster configuration yielded a WER of 11.57\%, and the four-cluster configuration resulted in a WER of 11.51\%. These findings underscore the role of data clustering in children's ASR systems by grouping shared speaker characteristics in different clusters.
 
+In summary, our investigation underscores the significance of data clustering in children's ASR systems. The optimal performance was achieved with a two-cluster configuration, suggesting that this approach enables the Adapters to capture cluster-specific patterns effectively. The marginal differences observed with three and four clusters highlight a potential saturation point where further partitioning offers diminishing returns in terms of ASR performance improvement.
 
-In this section, we present the outcomes of our clustering approach, as summarised in Table \ref{tab:res_clusters}. We investigated the influence of varying cluster numbers on ASR performance, ranging from 1 to 4 clusters using the ``TPA''in the encoder-only configuration. Notably, when the data remained unclustered (one cluster), the ASR system exhibited a WER of 11.58\%. However, the two-cluster configuration surpassed the others, achieving a superior performance of 11.50\%. This result suggests that partitioning the data into two distinct clusters enables the Adapters to more effectively capture underlying patterns intricately linked to their respective clusters, consequently enhancing the recognition scores. Furthermore, we explored the impact of increasing the number of clusters to three and four, revealing only marginal differences in performance, with WERs of 11.57\% and 11.51\%, respectively. These findings underscore the role of data clustering in children's ASR systems.
+%In this section, we present the outcomes of our clustering approach, as summarised in Table \ref{tab:res_clusters}. We investigated the influence of varying cluster numbers on ASR performance, ranging from 1 to 4 clusters using the ``TPA''in the encoder-only configuration. Notably, when the data remained unclustered (one cluster), the ASR system exhibited a WER of 11.58\%. However, the two-cluster configuration surpassed the others, achieving a superior performance of 11.50\%. This result suggests that partitioning the data into two distinct clusters enables the Adapters to more effectively capture underlying patterns intricately linked to their respective clusters, consequently enhancing the recognition scores. Furthermore, we explored the impact of increasing the number of clusters to three and four, revealing only marginal differences in performance, with WERs of 11.57\% and 11.51\%, respectively. These findings underscore the role of data clustering in children's ASR systems.
 
 
 
