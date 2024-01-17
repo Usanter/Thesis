@@ -7,9 +7,10 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 20456 items from 5000.
+Reallocated field_info (elt_size=4) to 20502 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--I didn't find a database entry for "!!"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -26,7 +27,7 @@ Warning--missing school in phdthesis
 Done.
 You've used 336 entries,
             4087 wiz_defined-function locations,
-            2476 strings with 82902 characters,
+            2477 strings with 82904 characters,
 and the built_in function-call counts, 266797 in all, are:
 = -- 20018
 > -- 8362
@@ -65,4 +66,4 @@ warning$ -- 9
 while$ -- 1041
 width$ -- 339
 write$ -- 3131
-(There were 9 warnings)
+(There were 10 warnings)

@@ -26,6 +26,7 @@ The observed successes of SSL as an initialisation for fine-tuning in the contex
       VQ-APC [32] & 3-GRU & 4.63M & 10ms & FBANK & LS 360 hr \\%& 360 hr F-G + VQ \\
       NPC [33] & 4-Conv, 4-Masked Conv & 19.38M & 10ms & FBANK & LS 360 hr \\%& 360 hr M-G + VQ \\
       Mockingjay [8] & 12-Trans & 85.12M & 10ms & FBANK & LS 360 hr \\%& 360 hr time M-G \\
+      Audio ALBERT & 3-Trans & 7.15M  & 10ms & FBANK & LS 960 hr \\
       TERA [9] & 3-Trans & 21.33M & 10ms & FBANK & LS 960 hr\\%& 960 hr time/freq M-G \\
       wav2vec 2.0 Base [14] & 7-Conv, 12-Trans & 95.04M & 20ms & waveform & LS 960 hr\\%& 960 hr M-C + VQ \\
       wav2vec 2.0 Large [14] & 7-Conv, 24-Trans & 317.38M & 20ms & waveform & LL 60k hr\\%& 60k hr M-C + VQ \\
@@ -73,33 +74,54 @@ The ASR downstream task was conducted using a 2-layered Bidirectional Long Short
     \end{center}
     \end{table}
 
-% Phoneme based experiments
-Additionally, we evaluated the  
 
 \section{Results}
 
 %For these models, the training process is separated into two stages. The first phase of training is self-supervised, which implies that no labels are used during training. The objective of this first phase is to present a large amount of unlabelled data to the system so that it learns a good speech representation. The second stage of learning is supervised fine-tuning, in which the model is taught to predict specific phonemes using the robust representation acquired in the previous stage with the help of a small amount of labelled data.
 %In this category, two models stand out as state-of-the-art: Wav2Vec 2.0 \cite{baevski2020wav2vec} and HuBert \cite{hsu2021hubert}. As a preliminary experiment, to asses the usability of such frameworks for children ASR, we trained a BiLSTM model using the output of a variety of frozen self-supervised systems. For this experiment we used a subset of 50h of the Myst corpus \cite{MyST}, and the preliminary findings are displayed in the table \ref{tab:ssl}
+%\begin{table}[ht]
+%\centering
+%\begin{tabular}{lcc} 
+%\hline
+%SSL upstream & UER $\downarrow$ & WER $\downarrow$ \\ 
+%\hline
+%Fbanks & 12.29\% & 35.14\% \\ 
+%\hline
+%Mockingjay & 12.49\% & 35.08\% \\
+%APC & 11.88\% & 32.84\% \\
+%TERA \cite{tera} & 11.31\% & 31.80\% \\
+%Audio Albert \cite{chi2021audio} & 12.28\% & 34.69\% \\
+%Wav2Vec2.0 Base & 7.37\% & 19.76\% \\
+%Wav2Vec2.0 Large & 7.00\% & 18.76\% \\
+%Distill HuBERT \cite{chang2022distilhubert} & 9.22\% & 25.75\% \\
+%HuBERT Base & 7.40\% & 19.77\% \\
+%HuBERT Large & \textbf{6.03\%} & \textbf{15.41\%} \\
+%\hline
+%\end{tabular}
+%\caption{Results without language model of different Self-supervised models as feature extractors}
+%\label{tab:ssl}
+%\end{table}
+
 \begin{table}[ht]
-\centering
-\begin{tabular}{lcc} 
-\hline
-SSL upsteam & UER $\downarrow$ & WER $\downarrow$ \\ 
-\hline
-Fbanks & 12.29\% & 35.14\% \\ 
-\hline
-TERA \cite{tera} & 11.31\% & 31.80\% \\
-Audio Albert \cite{chi2021audio} & 12.28\% & 34.69\% \\
-Wav2Vec2.0 Base & 7.37\% & 19.76\% \\
-Wav2Vec2.0 Large & 7.00\% & 18.76\% \\
-Distill HuBERT \cite{chang2022distilhubert} & 9.22\% & 25.75\% \\
-HuBERT Base & 7.40\% & 19.77\% \\
-HuBERT Large & \textbf{6.03\%} & \textbf{15.41\%} \\
-\hline
-\end{tabular}
-\caption{Results without language model of different Self-supervised models as feature extractors}
+  \centering
+  \begin{tabular}{clcc}
+  \hline
+  Model type                      & SSL upsteam    & UER$\downarrow$ & WER $\downarrow$ \\ \hline
+  Hand-crafted                    & Fbanks         & 12.29\%                                                           & 35.14            \\ \hline
+  \multirow{4}{*}{Generative}     & Mockingjay     & 12.49\%                                                           & 35.08\%          \\
+                                  & APC            & 11.88\%                                                           & 32.84\%          \\
+                                  & TERA           & 11.31\%                                                           & 31.80\%          \\
+                                  & Audio Albert   & 12.28\%                                                           & 34.69\%          \\ \hline
+  \multirow{5}{*}{Discriminative} & Wav2Vec2 Base  & 7.37\%                                                            & 19.76\%          \\
+                                  & Wav2Vec2 Large & 7.00\%                                                            & 18.76\%          \\
+                                  & Distill HuBERT & 9.22\%                                                            & 25.75\%          \\
+                                  & HuBERT Base    & 7.40\%                                                            & 19.77\%          \\
+                                  & HuBERT Large   & \textbf{6.03\%}                                                   & \textbf{15.41\%} \\ \hline
+  \end{tabular}
+  \caption{Results without language model of different Self-supervised models as feature extractors}
 \label{tab:ssl}
-\end{table}
+  \end{table}
+
 Table \ref{tab:ssl} present the results of the comparaison between various SSL pre-trained model as feature extractors for children's ASR. We provide Unit error rate (UER) as well as WER. Fbanks are established as a baseline, yielding a UER of 12.29\% and a WER of 35.14\%. In terms of generative SSL models, TERA \cite{tera} and Audio Albert \cite{chi2021audio} surpass Fbanks, exhibiting improvements in both UER ,11.31\% and 12.28\% respectively and WER with 31.80\% and 34.69\% respectively. Turning to discriminative SSL, the Wav2Vec2.0 Base and Wav2Vec2.0 Large demonstrate substantial enhancements in performance, achieving UER values of 7.37\% and 7.00\%, and WER of 19.76\% and 18.76\%, respectively. The distilled version of HuBERT \cite{chang2022distilhubert} outperforms Fbanks but falls behind the Wav2Vec2.0 models in terms of both UER and WER with 9.22\% UER and 25.75\% WER. Finally, HuBERT Base and HuBERT Large emerge as the top-performing SSL models, boasting the lowest UER with respectively 7.40\% and 6.03\% and WER of 19.77\% and 15.41\%. We observed that the best performing models are the large discriminative pre-trained on a large amount of speech data.
 
 The results suggest that large Discriminative models, particularly HuBert Large, demonstrate superior performance compared to other SSL models and Fbanks as featuress extractor for children ASR. Notably, even though no language model where used in this experiment, the results are of the same order as those reported in previous the different chapters of the thesis obtained with a transformer and a transformer language model. Showing the benefic of using frozen pre-trained SSL models as feature extractor for children ASR.
