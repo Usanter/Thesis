@@ -12,10 +12,10 @@ Indeed, the gowing attention towards PETL from the research community has led th
 
 The objective of this section is to analyse these emerging PETL methods specifically in the context of children's ASR. Drawing from our prior findings, which underscored the significance of fine-tuning FFN modules, we have curated a selection of PETL approaches designed to be integrated with FFN. Notably, we excluded PETL approaches centered around the MHSA modules, such as LORA, as well as any prompt-related PETL strategies like prompt tuning.
 
-This chapter starts with a in-depth presentation of the selected PETL. Each chosen methodology is thoroughly described, elucidating its underlying principles, architectural intricacies, and key characteristics conpared to the traditional Adapter. 
+This chapter starts with a in-depth presentation of the selected PETL in order to answer the following research question: \textit{Can we further improve the parameter-efficiency with other architectures? } Each chosen methodology is thoroughly described, elucidating its underlying principles, architectural intricacies, and key characteristics conpared to the traditional Adapter. 
 Following, we assess the performances of these selected PETL methodologies  in the specific context of children's ASR. The evaluation encompasses various dimensions, including performances compared to the full-finetuning and parameter-efficiency. By systematically benchmarking these alternative PETL methodologies against the conventional Adapter models, our objective is to not only understand the individual strengths and limitations of these approaches but also to evaluate their relative effectiveness in tackling the specific challenges presented by children's ASR.
 
-\section{Exploring literature alternatives}
+\section{Exploring PETL literature alternatives}
 % general introduction of the two different type of new PETL (mention here why LORA and prompt based methods are not here) 
 \subsection{Scaled Adapters}
 % Explain the idea has been used in many example
@@ -155,17 +155,10 @@ Moving to bias shift methods, including BitFit, SSF, and AdapterBias, these appr
 In summary, the traditional residual Adapter emerges as the most effective PETL approach for children's ASR. This finding aligns with recent research, as highlighted in studies such as \cite{li2023evaluating} and \cite{cappellazzo2023parameter}, which also affirm the superior performance of Adapters in PETL for ASR tasks. Moreover, our findings highlight a noticeable trade-off between the number of parameters and the WER. Specifically, approaches employing fewer than a million parameters do not exhibit comparable performances to entire model fine-tuning, as illustrated explicitly in Figure \ref{fig:adapter_compared_withoutWide}. This trade-off emphasises the need for more research on the development of PETL methods that can effectively use fewer parameters while simultaneously maintaining or enhancing performance in the domain of children's ASR.
 
 \section{New type of Adapter: The Shared Adapter}
-\subsection{Motivation}
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.3]{imgs/Shared_Adapters.png}
-        \caption{Shared-Adapter setup in a Conformer model}
-        \label{fig:Shared_adapter}
-    \end{center}
-\end{figure}
 
+\subsection{Motivation}
 % Goal PETL- Good score, small |param|
-The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed during training. In previous sections, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, our experiments highlighted the drawback of overparameterisation present in Transformer-based models.
+The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed during training. In previous section, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, our experiments highlighted the drawback of overparameterisation present in Transformer-based models.
 
 % FFN redundancy
 Leveraging this understanding, we propose a novel PETL methodology developed on the concept of sharing one residual Adapters across alll layers. The inspiration for this approach draws from the insights provided by the work of \cite{pires2023one}, which focus on the FFN modules. Despite representing a significant proportion of the model's parameters, the FFN was identified as highly redundant. This affirmation is confirmed by the work of \cite{geva2020transformer}, which  establishes a connection between the FFN and attention mechanisms by proposing that the FFN corresponds to learnable key-value memories. In this conceptualisation, the weights of the first layer of the FFN represent the keys, while those of the second layer correspond to the values. These keys are proficient at capturing salient patterns at each layer. Interestingly, they observed that the classes of patterns tend to overlap between neighboring layers, indicating redundancy in the representation. This observation underscores the potential for optimising PETL methods by addressing and mitigating redundancy within FFN modules, ultimately contributing to more parameter-efficient transfer learning processes.
@@ -186,9 +179,15 @@ In light of the success observed with the shared FFN in the encoder, we hypothes
     \text{Adapter}_{i}(.) \stackrel{\text{tied}}{=} \text{Shared-Adapter}_{all}(.) , \forall i: 1 \leq i \leq N_{enc}
 \end{equation}
 
-% Experimental seting for shared Adapters
 \subsection{Experimental setup}
-In our analysis, we focus on evaluating the performance of the Shared-Adapter using the same setting as the TPA configuration for traditional Adapters. Specifically, we assess the Shared-Adapter within a Conformer ASR model, where the two Shared-Adapters are directly integrated into the two FFN modules at each layer. The hidden dimension of the Shared-Adapters is set to 512. The Conformer model comprises 12 conformer layers followed by 6 Transformer layers, and for this experiment, we exclusively evaluate the Shared-Adapter in the Encoder.
+\begin{figure}
+    \begin{center}
+        \includegraphics[scale=0.3]{imgs/Shared_Adapters.png}
+        \caption{Shared-Adapter setup in a Conformer model}
+        \label{fig:Shared_adapter}
+    \end{center}
+\end{figure}
+In our analysis, we focus on evaluating the performance of the Shared-Adapter using the same setting as the TPA configuration for traditional Adapters. Specifically, we assess the Shared-Adapter within a Conformer ASR model, where the two Shared-Adapters are directly integrated into the two FFN modules at each layer as shown in Figure \ref{fig:Shared_adapter}.  The hidden dimension of the Shared-Adapters is set to 512. The Conformer model comprises 12 conformer layers followed by 6 Transformer layers, and for this experiment, we exclusively evaluate the Shared-Adapter in the Encoder.
 To quantify the reduction ofn umber of parameters used in the Shared-Adapter compared to the traditional Adapter, the following formula is used:
 \begin{equation}
     \text{Number of Parameters in Shared-Adapter} = \frac{\text{Number of Parameters of all traditional Adapters}}{\text{Number of Layers}}
@@ -205,3 +204,16 @@ For training the model, we use 30 epochs with a learning rate set to $8 \times 1
         \label{fig:adapter_compared}
     \end{center}
 \end{figure}
+
+
+\section{Summary and discussion}
+% Summary
+In this chapter we addressed to the following research question: \textit{Can we further improve the parameter-efficiency with other architectures?}. The comprehensive evaluation of various parameter-efficient transfer learning alternatives from the existing literature revealed that these alternatives did not surpass the performance achieved by traditional Adapter modules. Our results on children's ASR highlighted the presence of a tradeoff between accuracy and parameter efficiency.
+
+Crucially, the optimal balance was observed when PETL methods used approximately 10\% of the total parameters in the pre-trained model. This parameter-efficient configuration consistently resulted in WER scores below those obtained through the full-model fine-tuning. However, reducing the proportion of parameters trained to less than 10\% of the enitre model led to a notable deterioration in WER scores, underlining the tradeoff between efficiency gains and preservation of accuracy in children's ASR systems.
+
+
+Additionally, we introduced a novel PETL approach, the Shared-Adapter. Leveraging the inherent redundancy of FFN modules in between in the different Transformer layers. Our experimental evaluations demonstrated that Shared-Adapters represent a breakthrough in parameter efficiency while maintaining high accuracy in children's ASR. Notably, while conventional PETL methods typically required around 10\% of the total model parameters, Shared-Adapters excelled by achieving comparable accuracy with only 1\% of the parameters. Pushing the boundaries even further, we explored the extreme scenario of using the Extreme Shared-Adapters configuration with a mere 0.5\% of the model's total parameters, yet still achieving performance levels similar to full-model fine-tuning. Our approach eliminates the need of the aforementioned tradeoff, offering a pathway to obtain superior parameter efficiency without compromising accuracy.
+
+% Discussion
+The remarkable success of the Shared-Adapter approach underscores the significant redundancy inherent in the FFN modules across different layers. This new understanding is pivotal for advancing the development of more efficient, computationally compact ASR models. Future research directions could explore the creation of a novel Transformer architecture designed to address the observed redundancy, providing an architecture that is inherently more easy to fine-tuning for children's ASR or even in speaker-specific tasks. Additionally, investigating a new approach that incorporates both Shared and non-Shared Adapters represents another avenue for potential advancements in the field. These avenues hold promise for enhancing the efficiency and robustness of ASR models, particularly in contexts with limited data, such as children's speech recognition.

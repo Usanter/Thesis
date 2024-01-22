@@ -28,6 +28,7 @@
 \citation{kiktova2013comparison}
 \citation{weide1998carnegie}
 \citation{TFchildren}
+\citation{tdnnf-children}
 \citation{vaswani2017attention}
 \@writefile{@@@}{\chapterbegin }
 \citation{casanova2022yourtts}
@@ -53,7 +54,7 @@
 \newlabel{fig:exSLT}{{1.1}{5}{Illustrated herein are some examples of children's Speech and Language Technology applications that were developed during the course of this thesis. On the left is a running platformer game, where the user's voice controls the character. Pitch dictates running and jumping actions, while energy modulates the velocity of these actions. On the right, a reading task game is depicted, wherein a robot instructs the user to read designated words.\relax }{figure.caption.5}{}}
 \newlabel{fig:exSLT@cref}{{[figure][1][1]1.1}{[1][4][]5}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Problem statement}{5}{section.1.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Contributions}{6}{section.1.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Contributions}{7}{section.1.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Structure for the thesis}{8}{section.1.4}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Background - Children automatic speech recognition}{9}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -119,3 +120,648 @@
 \citation{asr-google}
 \citation{benzeghiba2007automatic,karpagavalli2016review,arora2012automatic}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Introduction to automatic speech recognition}{19}{section.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}A brief history of Automatic Speech Recognition}{19}{subsection.2.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.A}Early Days}{19}{subsubsection.2.2.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis et al. 1952\relax }}{20}{figure.caption.8}}
+\newlabel{Bell}{{2.3}{20}{Example of a standard digit pattern from Davis et al. 1952\relax }{figure.caption.8}{}}
+\newlabel{Bell@cref}{{[figure][3][2]2.3}{[1][19][]20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1.B}The Speech Understanding Research program}{20}{subsubsection.2.2.1.2}}
+\citation{klatt1977review}
+\citation{klatt1977review}
+\citation{klatt1977review}
+\citation{first_asr}
+\citation{htk_book}
+\citation{darpa1992}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from \cite  {klatt1977review}\relax }}{22}{figure.caption.9}}
+\newlabel{harpy}{{2.4}{22}{Example of a decoding graph from the Harpy system for the sentence "GIVE ME" from \cite {klatt1977review}\relax }{figure.caption.9}{}}
+\newlabel{harpy@cref}{{[figure][4][2]2.4}{[1][21][]22}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Traditional automatic speech recognition systems}{22}{subsection.2.2.2}}
+\citation{hmm-dnn}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{23}{figure.caption.10}}
+\newlabel{HMM-GMM-model}{{2.5}{23}{Architecture of a HMM-based speech recognition system\relax }{figure.caption.10}{}}
+\newlabel{HMM-GMM-model@cref}{{[figure][5][2]2.5}{[1][21][]23}}
+\citation{kiktova2013comparison}
+\citation{kiktova2013comparison}
+\citation{mfcc}
+\newlabel{equation:asr_0}{{2.1}{24}{Traditional automatic speech recognition systems}{equation.2.2.1}{}}
+\newlabel{equation:asr_0@cref}{{[equation][1][2]2.1}{[1][23][]24}}
+\newlabel{equation:asr}{{2.2}{24}{Traditional automatic speech recognition systems}{equation.2.2.2}{}}
+\newlabel{equation:asr@cref}{{[equation][2][2]2.2}{[1][24][]24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.A}Feature extraction}{24}{subsubsection.2.2.2.1}}
+\newlabel{subsection:features}{{2.2.2.A}{24}{Feature extraction}{subsubsection.2.2.2.1}{}}
+\newlabel{subsection:features@cref}{{[subsubsection][1][2,2,2]2.2.2.A}{[1][24][]24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Principal block scheme of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite  {kiktova2013comparison}\relax }}{25}{figure.caption.11}}
+\newlabel{feature_block}{{2.6}{25}{Principal block scheme of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite {kiktova2013comparison}\relax }{figure.caption.11}{}}
+\newlabel{feature_block@cref}{{[figure][6][2]2.6}{[1][24][]25}}
+\newlabel{equation:delta}{{2.3}{25}{Feature extraction}{equation.2.2.3}{}}
+\newlabel{equation:delta@cref}{{[equation][3][2]2.3}{[1][25][]25}}
+\citation{Dragon_system}
+\citation{bizzocchi2017many}
+\citation{schwartz1985context}
+\citation{bahl1991context}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Three-state Hidden Markov Model for modelling phones\relax }}{26}{figure.caption.12}}
+\newlabel{HMM_monophone}{{2.7}{26}{Three-state Hidden Markov Model for modelling phones\relax }{figure.caption.12}{}}
+\newlabel{HMM_monophone@cref}{{[figure][7][2]2.7}{[1][26][]26}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.B}Acoustic model}{26}{subsubsection.2.2.2.2}}
+\citation{bourlard2012connectionist,meinedo2003audimus}
+\citation{hmm-dnn}
+\citation{lang1990time}
+\citation{sak2014long}
+\citation{waibel2013phoneme}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.C}Pronunciation model}{27}{subsubsection.2.2.2.3}}
+\citation{g2p}
+\citation{weide1998carnegie}
+\citation{weide1998carnegie}
+\citation{n-grams-NLP}
+\citation{n-grams-computational_biology}
+\citation{n-gram-compression}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Phoneme set and examples of CMU dictionary using 39 phonemes from \cite  {weide1998carnegie}\relax }}{28}{figure.caption.13}}
+\newlabel{CMU_DICT}{{2.8}{28}{Phoneme set and examples of CMU dictionary using 39 phonemes from \cite {weide1998carnegie}\relax }{figure.caption.13}{}}
+\newlabel{CMU_DICT@cref}{{[figure][8][2]2.8}{[1][28][]28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.D}Language model}{28}{subsubsection.2.2.2.4}}
+\citation{n-grams-smoothing}
+\citation{Bert}
+\citation{brown2020language}
+\citation{viterbi_decoder}
+\citation{valtchev1994novel}
+\citation{aubert1995large}
+\citation{mohri1997finite,caseiro2002using}
+\citation{kaldi}
+\citation{richardson1995lattice}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.E}Decoder}{30}{subsubsection.2.2.2.5}}
+\citation{hannun2014deep,hmmvse2e}
+\citation{hmm-end2end}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{31}{figure.caption.14}}
+\newlabel{fig:e2e_archi}{{2.9}{31}{Architecture of an end-to-end speech recognition system\relax }{figure.caption.14}{}}
+\newlabel{fig:e2e_archi@cref}{{[figure][9][2]2.9}{[1][31][]31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}End-to-end automatic speech recognition}{31}{subsection.2.2.3}}
+\newlabel{section:SOTAE2E}{{2.2.3}{31}{End-to-end automatic speech recognition}{subsection.2.2.3}{}}
+\newlabel{section:SOTAE2E@cref}{{[subsection][3][2,2]2.2.3}{[1][31][]31}}
+\citation{First_End2End}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.A}Connectionist Temporal Classification}{32}{subsubsection.2.2.3.1}}
+\citation{sutskever2014sequence}
+\citation{bahdanau2014neural}
+\citation{seq2seq_imagecaption}
+\citation{vinyals2015neural}
+\citation{nallapati2016abstractive}
+\citation{dong2018speech}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.B}Sequence to sequence}{33}{subsubsection.2.2.3.2}}
+\citation{tuske2021limit}
+\citation{bermuth2021scribosermo}
+\citation{chan2021speechstew}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Automatic Speech Recognition metrics}{34}{subsection.2.2.4}}
+\citation{ghai2009exploring,ghai2011addressing}
+\citation{Hermansky1990PerceptualLP}
+\citation{ghai2009exploring}
+\citation{shahnawazuddin2023gammatone}
+\citation{feat_ext_from_raw}
+\citation{feat_ext_from_raw}
+\citation{sincnet_adapt}
+\citation{Sincnet}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Children automatic speech recognition}{35}{section.2.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Feature extraction stage}{35}{subsection.2.3.1}}
+\citation{VTLN,VTLN2}
+\citation{claus2013survey,potamianos1997automatic}
+\citation{potamianos1997combining}
+\citation{f0norm,pitchnorm,pitch_adapt_norm,shahnawazuddin2023gammatone}
+\citation{formant_norm,kumar2023effect}
+\citation{speaking_rate}
+\citation{adversarial-adapt1,adversarial-adapt2}
+\citation{ivector}
+\citation{shivakumar2020transfer}
+\citation{prosody_feat,kadyan2023prosody}
+\citation{linguistic-children,gale2019improving}
+\citation{subwords}
+\citation{pronunciation,pronunciation2}
+\citation{children_language_model2,Children_language_model}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Pronunciation and language model}{37}{subsection.2.3.2}}
+\citation{potamianos1997automatic,language_children2}
+\citation{bhardwaj2022automatic}
+\citation{bhardwaj2022automatic}
+\citation{TFchildren}
+\citation{tdnn}
+\citation{kumar2020leveraging}
+\citation{TDNN-F}
+\citation{tdnnf-children}
+\citation{gelin2021endtoend}
+\citation{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}
+\citation{chan2015listen}
+\citation{targ2016resnet}
+\citation{Transformer}
+\citation{gelin2021endtoend}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Design of acoustic models}{38}{subsection.2.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}End-to-end models}{38}{subsection.2.3.4}}
+\citation{adultAUGMENT1,adultAUGMENT2}
+\citation{nonnative}
+\citation{nagano2019data}
+\citation{yeung2021fundamental}
+\citation{dua2022spectral}
+\citation{shuyangdata}
+\citation{GANS}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.5}Data augmentation}{39}{subsection.2.3.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.5.A}Using external data}{39}{subsubsection.2.3.5.1}}
+\citation{shen2018natural}
+\citation{kim2021conditional}
+\citation{laptev2020you}
+\citation{wang2021towards}
+\citation{liu2003noise,whitenoise,gelin2020babble,couvreur2000use,malek2017robust}
+\citation{lo2020ntnu}
+\citation{singh2022spectral}
+\citation{VTLP}
+\citation{specaugment}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.5.B}Using available data}{40}{subsubsection.2.3.5.2}}
+\citation{gelin2021simulating}
+\citation{pronunciation,asr-improved2,children_language_model2,reviewASRchildren}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.6}Training procedure for children speech recognition}{41}{subsection.2.3.6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.6.A}Transfer learning}{41}{subsubsection.2.3.6.1}}
+\newlabel{section:TL}{{2.3.6.A}{41}{Transfer learning}{subsubsection.2.3.6.1}{}}
+\newlabel{section:TL@cref}{{[subsubsection][1][2,3,6]2.3.6.A}{[1][41][]41}}
+\citation{tfbased,yosinski2014transferable}
+\citation{TFchildren}
+\citation{TFchildren}
+\citation{Bert}
+\citation{tfcharacter}
+\citation{tfpathology}
+\citation{TFchildren}
+\newlabel{fig:acoustics_adapt}{{2.10(a)}{42}{Subfigure 2 2.10(a)}{subfigure.2.10.1}{}}
+\newlabel{fig:acoustics_adapt@cref}{{[subfigure][1][2,10]2.10(a)}{[1][42][]42}}
+\newlabel{sub@fig:acoustics_adapt}{{(a)}{42}{Subfigure 2 2.10(a)\relax }{subfigure.2.10.1}{}}
+\newlabel{fig:pronunciation_adapt}{{2.10(b)}{42}{Subfigure 2 2.10(b)}{subfigure.2.10.2}{}}
+\newlabel{fig:pronunciation_adapt@cref}{{[subfigure][2][2,10]2.10(b)}{[1][42][]42}}
+\newlabel{sub@fig:pronunciation_adapt}{{(b)}{42}{Subfigure 2 2.10(b)\relax }{subfigure.2.10.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Transfer learning approaches. Figures from \cite  {TFchildren}\relax }}{42}{figure.caption.15}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Acoustic adaptation}}}{42}{figure.caption.15}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Pronunciation adaptation}}}{42}{figure.caption.15}}
+\citation{TFchildren}
+\citation{TransferLF}
+\citation{TFchildren}
+\citation{Bert}
+\citation{tfcharacter}
+\citation{tfpathology}
+\citation{TFchildren}
+\citation{TFchildren}
+\citation{TransferLF}
+\citation{TFchildren}
+\citation{sri_end2end,gelin2021endtoend}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{44}{figure.caption.16}}
+\newlabel{fig:MTL}{{2.11}{44}{Multilingual approach using each language as a task in a multi-task learning context.\relax }{figure.caption.16}{}}
+\newlabel{fig:MTL@cref}{{[figure][11][2]2.11}{[1][44][]44}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.6.B}Multi-task learning}{44}{subsubsection.2.3.6.2}}
+\newlabel{section:MTL}{{2.3.6.B}{44}{Multi-task learning}{subsubsection.2.3.6.2}{}}
+\newlabel{section:MTL@cref}{{[subsubsection][2][2,3,6]2.3.6.B}{[1][44][]44}}
+\citation{zhang2018overview}
+\citation{multi-nlp}
+\citation{mtl_computervision}
+\citation{bioinfo}
+\citation{MTL-LFMMI}
+\citation{abad2020}
+\citation{TransferLF}
+\citation{2019multi}
+\citation{zavaliagkos1998utilizing,ma2006unsupervised}
+\citation{radford2023robust}
+\citation{sarzynska2021detecting}
+\citation{henaff2020data}
+\newlabel{equation:MT}{{2.12}{45}{Multi-task learning}{equation.2.3.12}{}}
+\newlabel{equation:MT@cref}{{[equation][12][2]2.12}{[1][45][]45}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.6.C}Self-supervised Learning}{45}{subsubsection.2.3.6.3}}
+\citation{baevski2020wav2vec}
+\citation{hsu2021hubert}
+\citation{riviere2020unsupervised}
+\citation{wang2022wav2vec}
+\citation{li2021accent}
+\citation{xu2021tal}
+\citation{jain2023wav2vec2,jain2023adaptation,fan2022draft}
+\citation{providence}
+\citation{LyonSC}
+\citation{cass_child}
+\citation{demuth1992acquisition}
+\citation{nitk}
+\citation{chiede}
+\citation{cuchild}
+\citation{emochildru}
+\citation{hamalainen2013cng}
+\citation{ahmed2021auskidtalk}
+\citation{yeung2019robotic}
+\citation{pfstar}
+\citation{yu2021slt}
+\citation{pfstar,russell2006pf,pf-star-british}
+\citation{ad-child_ru}
+\citation{tball}
+\citation{speco}
+\citation{eshky2019ultrasuite}
+\citation{lee1999acoustics}
+\citation{khanzadi2022persian}
+\citation{letsread}
+\citation{cmu}
+\citation{CFSC}
+\citation{PEREZESPINOSA202055}
+\citation{hagen2003children}
+\citation{chorec}
+\citation{childit2}
+\citation{leonard1993tidigits}
+\citation{cslu}
+\citation{singakids}
+\citation{gerosa2006acoustic}
+\citation{burkhardt2010database}
+\citation{burkhardt2010database}
+\citation{JASMIN}
+\citation{gerosa2006acoustic}
+\citation{gerosa2006acoustic}
+\citation{bell2005swedish}
+\citation{language_children2}
+\citation{SPEECONS}
+\citation{linguistic-children}
+\citation{MyST}
+\citation{hagen2003children}
+\citation{etlt}
+\citation{grissemann2000zurcher}
+\citation{steidl2009automatic}
+\citation{bell2003child}
+\citation{takemaru}
+\citation{callslt}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Children Corpora}{46}{section.2.4}}
+\newlabel{section:children_corpora}{{2.4}{46}{Children Corpora}{section.2.4}{}}
+\newlabel{section:children_corpora@cref}{{[section][4][2]2.4}{[1][46][]46}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Non-exhaustive comparison of children's speech corpora. This table has been sorted by age range. Blanks indicate unavailable information. Entries highlighted in bold correspond to the corpora used in the experiments presented in this thesis. K: Kindergarden. G: Grade\relax }}{47}{table.caption.17}}
+\newlabel{table:children_corpora}{{2.1}{47}{Non-exhaustive comparison of children's speech corpora. This table has been sorted by age range. Blanks indicate unavailable information. Entries highlighted in bold correspond to the corpora used in the experiments presented in this thesis. K: Kindergarden. G: Grade\relax }{table.caption.17}{}}
+\newlabel{table:children_corpora@cref}{{[table][1][2]2.1}{[1][46][]47}}
+\citation{letsread}
+\citation{pfstar}
+\citation{etlt}
+\citation{cmu}
+\citation{sphinx2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}LETSREAD}{48}{subsection.2.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}PFSTAR\_SWEDISH}{48}{subsection.2.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}ETLTDE}{48}{subsection.2.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}CMU\_KIDS}{48}{subsection.2.4.4}}
+\citation{chorec}
+\citation{MyST}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.5}CHOREC}{49}{subsection.2.4.5}}
+\newlabel{subsection:chorec}{{2.4.5}{49}{CHOREC}{subsection.2.4.5}{}}
+\newlabel{subsection:chorec@cref}{{[subsection][5][2,4]2.4.5}{[1][49][]49}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.6}MyST}{49}{subsection.2.4.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Summary}{49}{section.2.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Hybrid models for children automatic speech recognition}{51}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Hybrid models for children automatic speech recognition}{51}{chapter.3}}
+\@writefile{lot}{\contentsline {xchapter}{Hybrid models for children automatic speech recognition}{51}{chapter.3}}
+\newlabel{chap:Chapter3}{{3}{52}{Hybrid models for children automatic speech recognition}{chapter.3}{}}
+\newlabel{chap:Chapter3@cref}{{[chapter][3][]3}{[1][52][]52}}
+\citation{!!}
+\citation{TransferLF}
+\citation{big_review_childASR}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{53}{section.3.1}}
+\citation{tdnnf-children}
+\citation{tdnnf-children}
+\citation{tdnnf-children}
+\citation{tdnn}
+\citation{TDNN-F}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Factorised Time Delay Neural Network for children ASR}{54}{section.3.2}}
+\newlabel{sec:TDNNF}{{3.2}{54}{Factorised Time Delay Neural Network for children ASR}{section.3.2}{}}
+\newlabel{sec:TDNNF@cref}{{[section][2][3]3.2}{[1][54][]54}}
+\newlabel{fig:tdnn}{{3.1(a)}{54}{Subfigure 3 3.1(a)}{subfigure.3.1.1}{}}
+\newlabel{fig:tdnn@cref}{{[subfigure][1][3,1]3.1(a)}{[1][54][]54}}
+\newlabel{sub@fig:tdnn}{{(a)}{54}{Subfigure 3 3.1(a)\relax }{subfigure.3.1.1}{}}
+\newlabel{fig:tdnnf}{{3.1(b)}{54}{Subfigure 3 3.1(b)}{subfigure.3.1.2}{}}
+\newlabel{fig:tdnnf@cref}{{[subfigure][2][3,1]3.1(b)}{[1][54][]54}}
+\newlabel{sub@fig:tdnnf}{{(b)}{54}{Subfigure 3 3.1(b)\relax }{subfigure.3.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces TDDN and TDNN-F taken from \cite  {tdnnf-children}\relax }}{54}{figure.caption.18}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {TDNN with sub-sampling}}}{54}{figure.caption.18}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Factorised TDNN layer}}}{54}{figure.caption.18}}
+\citation{TFchildren,TransferLF,2019multi}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Assessing the efficacy of multi-task and transfer learning from adult to children}{55}{section.3.3}}
+\newlabel{section:HMMDNNADULT2CHILD}{{3.3}{55}{Assessing the efficacy of multi-task and transfer learning from adult to children}{section.3.3}{}}
+\newlabel{section:HMMDNNADULT2CHILD@cref}{{[section][3][3]3.3}{[1][55][]55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Methodology}{55}{subsection.3.3.1}}
+\citation{tribus}
+\citation{bdpublico}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Corpus}{56}{subsection.3.3.2}}
+\newlabel{sec:corpus}{{3.3.2}{56}{Corpus}{subsection.3.3.2}{}}
+\newlabel{sec:corpus@cref}{{[subsection][2][3,3]3.3.2}{[1][56][]56}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Number of utterances and duration of the different corpora for multi-task and transfer learning experiments using adult and children data\relax }}{56}{table.caption.19}}
+\newlabel{tab:statistics_exp1}{{3.1}{56}{Number of utterances and duration of the different corpora for multi-task and transfer learning experiments using adult and children data\relax }{table.caption.19}{}}
+\newlabel{tab:statistics_exp1@cref}{{[table][1][3]3.1}{[1][56][]56}}
+\citation{kaldi}
+\citation{ssc}
+\citation{ivector}
+\citation{specaugment}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Experimental setup}{57}{subsection.3.3.3}}
+\newlabel{section:exp_setup}{{3.3.3}{57}{Experimental setup}{subsection.3.3.3}{}}
+\newlabel{section:exp_setup@cref}{{[subsection][3][3,3]3.3.3}{[1][57][]57}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Results}{57}{subsection.3.3.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces WER results using adult data for knowledge transfer methods\relax }}{57}{table.caption.21}}
+\newlabel{tab:res_exp1}{{3.2}{57}{WER results using adult data for knowledge transfer methods\relax }{table.caption.21}{}}
+\newlabel{tab:res_exp1@cref}{{[table][2][3]3.2}{[1][57][]57}}
+\citation{TransferLF,TFchildren}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}Summary and discussion}{58}{subsection.3.3.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Combining multi-task and transfer learning using multilingual children data}{59}{section.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Motivation}{59}{subsection.3.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}The Multilingual-transfer learning approach}{59}{subsection.3.4.2}}
+\newlabel{section:method}{{3.4.2}{59}{The Multilingual-transfer learning approach}{subsection.3.4.2}{}}
+\newlabel{section:method@cref}{{[subsection][2][3,4]3.4.2}{[1][59][]59}}
+\citation{TransferLF}
+\citation{2019multi}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialised for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{60}{figure.caption.22}}
+\newlabel{fig:MLTL1}{{3.2}{60}{Multilingual transfer learning approach. Language-specific layers can be randomly initialised for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }{figure.caption.22}{}}
+\newlabel{fig:MLTL1@cref}{{[figure][2][3]3.2}{[1][60][]60}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Experimental Setup}{61}{subsection.3.4.3}}
+\newlabel{section:corpus}{{3.4.3}{61}{Experimental Setup}{subsection.3.4.3}{}}
+\newlabel{section:corpus@cref}{{[subsection][3][3,4]3.4.3}{[1][60][]61}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Statistics on the different corpora of children's speech.\relax }}{61}{table.caption.23}}
+\newlabel{tab:statistics}{{3.3}{61}{Statistics on the different corpora of children's speech.\relax }{table.caption.23}{}}
+\newlabel{tab:statistics@cref}{{[table][3][3]3.3}{[1][61][]61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Multilingual-transfer learning experiment}{61}{subsection.3.4.4}}
+\citation{TFchildren}
+\citation{TransferLF}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out\relax }}{62}{table.caption.24}}
+\newlabel{tab:result-TL4epoch}{{3.4}{62}{WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out\relax }{table.caption.24}{}}
+\newlabel{tab:result-TL4epoch@cref}{{[table][4][3]3.4}{[1][61][]62}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Cross-lingual validation}{63}{subsection.3.4.5}}
+\newlabel{section:olo}{{3.4.5}{63}{Cross-lingual validation}{subsection.3.4.5}{}}
+\newlabel{section:olo@cref}{{[subsection][5][3,4]3.4.5}{[1][63][]63}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Summary and discussion}{64}{section.3.5}}
+\citation{tdnnf-children}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}End-to-End children automatic speech recognition}{67}{chapter.4}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{End-to-End children automatic speech recognition}{67}{chapter.4}}
+\@writefile{lot}{\contentsline {xchapter}{End-to-End children automatic speech recognition}{67}{chapter.4}}
+\newlabel{chap:4}{{4}{68}{End-to-End children automatic speech recognition}{chapter.4}{}}
+\newlabel{chap:4@cref}{{[chapter][4][]4}{[1][68][]68}}
+\citation{zeyer2019comparison,zeineldeen2022conformer}
+\citation{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}
+\citation{luscher2019rwth}
+\citation{soltau2016neural}
+\citation{battenberg2017exploring}
+\citation{vaswani2017attention}
+\citation{gelin2021endtoend}
+\citation{gelin2021endtoend}
+\citation{vaswani2017attention}
+\citation{vaswani2017attention}
+\citation{vaswani2017attention}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introduction}{69}{section.4.1}}
+\newlabel{chap:implement}{{4.1}{69}{Introduction}{section.4.1}{}}
+\newlabel{chap:implement@cref}{{[section][1][4]4.1}{[1][69][]69}}
+\citation{Bert,brown2020language}
+\citation{dosovitskiy2020image}
+\citation{dong2018speech}
+\citation{bahrini2023chatgpt}
+\citation{ramesh2021zero}
+\citation{vaswani2017attention}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite  {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }}{70}{figure.caption.25}}
+\newlabel{fig:transformer_archi}{{4.1}{70}{Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-encoder, d) Transformer-decoder.\relax }{figure.caption.25}{}}
+\newlabel{fig:transformer_archi@cref}{{[figure][1][4]4.1}{[1][69][]70}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Transformer model}{70}{section.4.2}}
+\newlabel{sec:trans_archi}{{4.2}{70}{Transformer model}{section.4.2}{}}
+\newlabel{sec:trans_archi@cref}{{[section][2][4]4.2}{[1][69][]70}}
+\citation{vaswani2017attention}
+\newlabel{equation:attention}{{4.3}{71}{Transformer model}{equation.4.2.3}{}}
+\newlabel{equation:attention@cref}{{[equation][3][4]4.3}{[1][71][]71}}
+\citation{bello2019attention,yang2019convolutional}
+\citation{gulati2020conformer}
+\citation{lu2019understanding}
+\newlabel{equation:FFN}{{4.6}{72}{Transformer model}{equation.4.2.6}{}}
+\newlabel{equation:FFN@cref}{{[equation][6][4]4.6}{[1][72][]72}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Conformer model}{72}{section.4.3}}
+\newlabel{sec:conformer}{{4.3}{72}{Conformer model}{section.4.3}{}}
+\newlabel{sec:conformer@cref}{{[section][3][4]4.3}{[1][72][]72}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{73}{figure.caption.26}}
+\newlabel{fig:conformer_archi}{{4.2}{73}{Architecture of a Conformer layer\relax }{figure.caption.26}{}}
+\newlabel{fig:conformer_archi@cref}{{[figure][2][4]4.2}{[1][72][]73}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a conformer layer\relax }}{73}{figure.caption.27}}
+\newlabel{fig:convModule}{{4.3}{73}{Convolution module in the context of a conformer layer\relax }{figure.caption.27}{}}
+\newlabel{fig:convModule@cref}{{[figure][3][4]4.3}{[1][72][]73}}
+\citation{wu2020lite}
+\citation{dauphin2017language}
+\citation{shivakumar2020transfer}
+\citation{sri_end2end,gelin2021endtoend}
+\citation{Bert}
+\citation{kovaleva-etal-2019-revealing,michel2019sixteen}
+\citation{kovaleva-etal-2019-revealing,michel2019sixteen,ye2023partial}
+\citation{mccarley2019structured,sanh2019distilbert}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Understand transfer learning efficacy for transformer based models}{74}{section.4.4}}
+\citation{zheng22d_interspeech}
+\citation{shen2021partial,wang2021fine}
+\citation{ye2023partial}
+\citation{frankle2018lottery}
+\citation{gandhi2023distilwhisper,chang2022distilhubert,peng23c_interspeech}
+\citation{shivakumar2020transfer}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Partial Transfer learning}{75}{subsection.4.4.1}}
+\citation{speechbrain}
+\citation{librispeech}
+\citation{gelin2021endtoend}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Experimental setup}{76}{subsection.4.4.2}}
+\newlabel{section:methods_chapter4}{{4.4.2}{76}{Experimental setup}{subsection.4.4.2}{}}
+\newlabel{section:methods_chapter4@cref}{{[subsection][2][4,4]4.4.2}{[1][76][]76}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Corpus}{76}{subsection.4.4.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{76}{table.caption.28}}
+\newlabel{tab:statistics_myst}{{4.1}{76}{My Science Tutor Children Speech Corpus statistics\relax }{table.caption.28}{}}
+\newlabel{tab:statistics_myst@cref}{{[table][1][4]4.1}{[1][76][]76}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}Implementation details}{76}{subsection.4.4.4}}
+\citation{TFchildren}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{77}{table.caption.29}}
+\newlabel{tab:EncoderDecoder}{{4.2}{77}{Encoder-Decoder experiment\relax }{table.caption.29}{}}
+\newlabel{tab:EncoderDecoder@cref}{{[table][2][4]4.2}{[1][77][]77}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.5}Encoder-Decoder Transfer learning}{77}{subsection.4.4.5}}
+\newlabel{fig:transferTLTransformer}{{4.4(a)}{78}{Subfigure 4 4.4(a)}{subfigure.4.4.1}{}}
+\newlabel{fig:transferTLTransformer@cref}{{[subfigure][1][4,4]4.4(a)}{[1][77][]78}}
+\newlabel{sub@fig:transferTLTransformer}{{(a)}{78}{Subfigure 4 4.4(a)\relax }{subfigure.4.4.1}{}}
+\newlabel{fig:transferTLConformer}{{4.4(b)}{78}{Subfigure 4 4.4(b)}{subfigure.4.4.2}{}}
+\newlabel{fig:transferTLConformer@cref}{{[subfigure][2][4,4]4.4(b)}{[1][77][]78}}
+\newlabel{sub@fig:transferTLConformer}{{(b)}{78}{Subfigure 4 4.4(b)\relax }{subfigure.4.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{78}{figure.caption.30}}
+\newlabel{fig:layerWISE}{{4.4}{78}{Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }{figure.caption.30}{}}
+\newlabel{fig:layerWISE@cref}{{[figure][4][4]4.4}{[1][77][]78}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Results of the transfer learning layer wise for the Transformer model}}}{78}{figure.caption.30}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Results of the transfer learning layer wise for the Conformer model}}}{78}{figure.caption.30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.6}Modules Transfer learning}{79}{subsection.4.4.6}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Modules fine-tuning experiment\relax }}{80}{table.caption.31}}
+\newlabel{table:ModulesTL}{{4.3}{80}{Modules fine-tuning experiment\relax }{table.caption.31}{}}
+\newlabel{table:ModulesTL@cref}{{[table][3][4]4.3}{[1][79][]80}}
+\citation{TFchildren}
+\citation{geva2020transformer}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Summary and discussion}{82}{section.4.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Exploring Parameter-Efficient Strategies in Transfer Learning for Child-Focused ASR Systems}{85}{chapter.5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Child-Focused ASR Systems}{85}{chapter.5}}
+\@writefile{lot}{\contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Child-Focused ASR Systems}{85}{chapter.5}}
+\newlabel{chap:5}{{5}{86}{Exploring Parameter-Efficient Strategies in Transfer Learning for Child-Focused ASR Systems}{chapter.5}{}}
+\newlabel{chap:5@cref}{{[chapter][5][]5}{[1][86][]86}}
+\citation{brown2020language}
+\citation{ramesh2021zero}
+\citation{radford2023robust}
+\citation{hsu2021hubert}
+\citation{Kaplan2020ScalingLF}
+\citation{zheng22d_interspeech}
+\citation{sri_end2end,gelin2021endtoend}
+\citation{houlsby,pfeiffer}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{87}{section.5.1}}
+\citation{houlsby}
+\citation{pfeiffer}
+\citation{fan2022draft}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{88}{figure.caption.32}}
+\newlabel{fig:Adapter_architecture}{{5.1}{88}{Residual Adapter architecture\relax }{figure.caption.32}{}}
+\newlabel{fig:Adapter_architecture@cref}{{[figure][1][5]5.1}{[1][88][]88}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Adapter tuning}{88}{section.5.2}}
+\citation{ruckle2020adapterdrop}
+\citation{cappellazzo2023parameter,chen2023efficient,10095837}
+\citation{kannan2019large,hou2021exploiting,kulkarni2023adapting}
+\citation{thomas2022efficient,fan2022draft}
+\citation{tomanek2021residual}
+\citation{tomanek2021residual}
+\citation{fan2022draft}
+\citation{he2021towards}
+\citation{chen2023efficient}
+\citation{10095837}
+\citation{chen2023efficient}
+\citation{chen2023efficient}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Transformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{90}{figure.caption.33}}
+\newlabel{fig:transformer_config}{{5.2}{90}{Transformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }{figure.caption.33}{}}
+\newlabel{fig:transformer_config@cref}{{[figure][2][5]5.2}{[1][90][]90}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{90}{figure.caption.34}}
+\newlabel{fig:conformer_config}{{5.3}{90}{Conformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }{figure.caption.34}{}}
+\newlabel{fig:conformer_config@cref}{{[figure][3][5]5.3}{[1][90][]90}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Investigating ASR for Child Speech with Adapters}{90}{section.5.3}}
+\citation{snyder2018x}
+\citation{speechbrain}
+\citation{librispeech}
+\citation{glorot2010understanding}
+\citation{chen2023efficient}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Implementation details}{92}{section.5.4}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Results of the different Adapters configurations in both Transformer and Conformer.\relax }}{93}{table.caption.35}}
+\newlabel{tab:res}{{5.1}{93}{Results of the different Adapters configurations in both Transformer and Conformer.\relax }{table.caption.35}{}}
+\newlabel{tab:res@cref}{{[table][1][5]5.1}{[1][92][]93}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results}{93}{section.5.5}}
+\newlabel{sec:results}{{5.5}{93}{Results}{section.5.5}{}}
+\newlabel{sec:results@cref}{{[section][5][5]5.5}{[1][92][]93}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Configurations}{93}{subsection.5.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Effect of the Adapter hidden dimension}{94}{subsection.5.5.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension size within the Conformer architecture \relax }}{95}{figure.caption.36}}
+\newlabel{fig:HiddenDim}{{5.4}{95}{Experimental Adapter transfer using different hidden dimension size within the Conformer architecture \relax }{figure.caption.36}{}}
+\newlabel{fig:HiddenDim@cref}{{[figure][4][5]5.4}{[1][94][]95}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Results of the clustering approach.\relax }}{95}{table.caption.37}}
+\newlabel{tab:res_clusters}{{5.2}{95}{Results of the clustering approach.\relax }{table.caption.37}{}}
+\newlabel{tab:res_clusters@cref}{{[table][2][5]5.2}{[1][95][]95}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}Unsupervised clustering for grouped-speaker Adapters}{95}{subsection.5.5.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Summary and discussion}{96}{section.5.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Integration of synthetic speech for data augmentation}{99}{chapter.6}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Integration of synthetic speech for data augmentation}{99}{chapter.6}}
+\@writefile{lot}{\contentsline {xchapter}{Integration of synthetic speech for data augmentation}{99}{chapter.6}}
+\newlabel{chap:6}{{6}{100}{Integration of synthetic speech for data augmentation}{chapter.6}{}}
+\newlabel{chap:6@cref}{{[chapter][6][]6}{[1][100][]100}}
+\citation{asr-google}
+\citation{laptev2020you,fazel21_interspeech}
+\citation{wang2021towards}
+\citation{wang2021towards,hu2022synt++}
+\citation{fan2022draft}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Introduction}{101}{section.6.1}}
+\citation{laptev2020you}
+\citation{casanova2022asr}
+\citation{9688218}
+\citation{wang2021towards}
+\citation{wang2021towards}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Enhancing ASR Performance through TTS Data Augmentation}{102}{section.6.2}}
+\citation{hu2022synt++}
+\citation{pfeiffer,philip2020monolingual,mao-etal-2022-unipelt}
+\citation{fan2022draft}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Closing the synthetic and real mismatch gap with Adapters}{103}{section.6.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Transformer model\relax }}{104}{figure.caption.38}}
+\newlabel{fig:overall}{{6.1}{104}{Overview of ``Double way Adapter fine-tuning" within th context of an Transformer model\relax }{figure.caption.38}{}}
+\newlabel{fig:overall@cref}{{[figure][1][6]6.1}{[1][103][]104}}
+\citation{speechbrain}
+\citation{librispeech}
+\citation{casanova2022yourtts}
+\citation{casanova2022yourtts}
+\citation{casanova2022yourtts}
+\citation{45819}
+\citation{45774}
+\citation{kong2020hifi}
+\citation{VAE}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Overview of the automatic speech recognition and text-to-speechs systems}{105}{section.6.4}}
+\newlabel{section:SOA}{{6.4}{105}{Overview of the automatic speech recognition and text-to-speechs systems}{section.6.4}{}}
+\newlabel{section:SOA@cref}{{[section][4][6]6.4}{[1][105][]105}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{105}{subsection.6.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{105}{subsection.6.4.2}}
+\citation{heo2020clova}
+\citation{targ2016resnet}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Architecture of the YourTTS model taken from \cite  {casanova2022yourtts}\relax }}{106}{figure.caption.39}}
+\newlabel{fig:yourtts}{{6.2}{106}{Architecture of the YourTTS model taken from \cite {casanova2022yourtts}\relax }{figure.caption.39}{}}
+\newlabel{fig:yourtts@cref}{{[figure][2][6]6.2}{[1][105][]106}}
+\citation{veaux2016superseded}
+\citation{casanova2022tts}
+\citation{mailabs}
+\citation{casanova2022yourtts}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Experimental setup}{107}{section.6.5}}
+\newlabel{section:methods}{{6.5}{107}{Experimental setup}{section.6.5}{}}
+\newlabel{section:methods@cref}{{[section][5][6]6.5}{[1][107][]107}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Real speech corpus}{107}{subsection.6.5.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{107}{table.caption.40}}
+\newlabel{tab:statistics}{{6.1}{107}{My Science Tutor Children Speech Corpus statistics\relax }{table.caption.40}{}}
+\newlabel{tab:statistics@cref}{{[table][1][6]6.1}{[1][107][]107}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Synthetic data}{107}{subsection.6.5.2}}
+\citation{wang2021towards}
+\citation{hu2022synt++}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.3}Experiments}{108}{subsection.6.5.3}}
+\citation{hu2022synt++}
+\citation{wang2021towards}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Results of the different approaches (in WER).\relax }}{109}{table.caption.41}}
+\newlabel{tab:res_DWAT}{{6.2}{109}{Results of the different approaches (in WER).\relax }{table.caption.41}{}}
+\newlabel{tab:res_DWAT@cref}{{[table][2][6]6.2}{[1][109][]109}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Results and discussion}{109}{section.6.6}}
+\newlabel{section:exp_DWAT}{{6.6}{109}{Results and discussion}{section.6.6}{}}
+\newlabel{section:exp_DWAT@cref}{{[section][6][6]6.6}{[1][109][]109}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{109}{subsection.6.6.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Results of the different number of hours influence in our DWAT approach with \textit  {Large Synth$_2$} data\relax }}{110}{table.caption.42}}
+\newlabel{tab:hours}{{6.3}{110}{Results of the different number of hours influence in our DWAT approach with \textit {Large Synth$_2$} data\relax }{table.caption.42}{}}
+\newlabel{tab:hours@cref}{{[table][3][6]6.3}{[1][110][]110}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}Influence of synthetic number of hours}{110}{subsection.6.6.2}}
+\citation{hu2022synt++}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Results of the different configurations of Adapter double-way approach on 300h of \textit  {Synth$_2$}\relax }}{111}{table.caption.43}}
+\newlabel{tab:config}{{6.4}{111}{Results of the different configurations of Adapter double-way approach on 300h of \textit {Synth$_2$}\relax }{table.caption.43}{}}
+\newlabel{tab:config@cref}{{[table][4][6]6.4}{[1][111][]111}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.3}Impact of DWAT different hyper-parameters}{111}{subsection.6.6.3}}
+\newlabel{sec:hyperparameter}{{6.6.3}{111}{Impact of DWAT different hyper-parameters}{subsection.6.6.3}{}}
+\newlabel{sec:hyperparameter@cref}{{[subsection][3][6,6]6.6.3}{[1][111][]111}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{111}{subsection.6.6.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Conformer architecture\relax }}{112}{figure.caption.44}}
+\newlabel{fig:tts_conformer}{{6.3}{112}{Overview of ``Double way Adapter fine-tuning" within th context of an Conformer architecture\relax }{figure.caption.44}{}}
+\newlabel{fig:tts_conformer@cref}{{[figure][3][6]6.3}{[1][111][]112}}
+\citation{wang2021towards}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Scores for the different methods within the Conformer architecture\relax }}{113}{table.caption.45}}
+\newlabel{tab:DWAT_conformer}{{6.5}{113}{Scores for the different methods within the Conformer architecture\relax }{table.caption.45}{}}
+\newlabel{tab:DWAT_conformer@cref}{{[table][5][6]6.5}{[1][112][]113}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Summary and discussion}{113}{section.6.7}}
+\newlabel{section:conclusions_tts}{{6.7}{113}{Summary and discussion}{section.6.7}{}}
+\newlabel{section:conclusions_tts@cref}{{[section][7][6]6.7}{[1][113][]113}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Alternative approaches to parameter-efficient transfer learning}{115}{chapter.7}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{115}{chapter.7}}
+\@writefile{lot}{\contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{115}{chapter.7}}
+\newlabel{chap:7}{{7}{116}{Alternative approaches to parameter-efficient transfer learning}{chapter.7}{}}
+\newlabel{chap:7@cref}{{[chapter][7][]7}{[1][116][]116}}
+\citation{he2022towards}
+\citation{mao-etal-2022-unipelt}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Introduction}{117}{section.7.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Exploring PETL literature alternatives}{117}{section.7.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Scaled Adapters}{117}{subsection.7.2.1}}
+\citation{gulati2020conformer}
+\citation{yang23p_interspeech}
+\citation{muthuchamyselvaraj23_interspeech}
+\citation{jie2022convolutional}
+\citation{jie2022convolutional}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Convolution based Adapters}{118}{subsection.7.2.2}}
+\citation{li2023evaluating}
+\citation{hu2018squeeze}
+\citation{ben-zaken-etal-2022-bitfit}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.\relax }}{119}{figure.caption.46}}
+\newlabel{fig:convpass}{{7.1}{119}{Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.\r

@@ -9,16 +9,17 @@
 \section{Introduction}
 \label{chap:implement}
 % End2End better and better
-The growing popularity of deep learning has witnessed numerous successful applications in ASR. NIt was only recently, that end-to-end models have shown their capability to outperform hybrid HMM-DNN systems for a variety of speech recognition tasks, including children's ASR. The primary advantage of end-to-end speech recognition systems lies in merging the entire training process within a single neural network, thereby eliminating potential behavioral incompatibilities that may arise between independently trained modules.
+The growing popularity of deep learning has witnessed numerous successful applications in ASR.. Notably, end-to-end models have recently demonstrated their capability to surpass hybrid HMM-DNN systems across diverse speech recognition tasks \cite{zeyer2019comparison,zeineldeen2022conformer}. The primary advantage of end-to-end speech recognition systems lies in the merging of the entire training pipeline within a single neural network, mitigating potential behavioral inconsistencies that may arise between independently trained modules.
+However, the application of the end-to-end paradigm in the realm of children's ASR is a relatively recent development and has encountered limited exploration \cite{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}. Indeed, end-to-end models require a larger amount of data to achieve the desired robustness and flexibility, a condition that is often not met in the case of children's speech. The merging of different components within end-to-end models contributes to an increased demand for trainable parameters. Consequently, training them on small datasets becomes more challenging \cite{luscher2019rwth}. Despite these challenges, the exploration of end-to-end models holds promise for pushing the boundaries of the state-of-the-art in children's ASR.
 
-However, the application of the end-to-end paradigm for children's ASR is a relatively recent development and has not been extensively explored, mainly due to the challenge of data scarcity in the context of children's speech \cite{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}. Additionally, end-to-end models often necessitate a larger number of parameters to achieve the desired robustness and flexibility. Consequently, training them on small datasets becomes increasingly challenging \cite{luscher2019rwth}. Despite these challenges, the exploration of end-to-end models holds promise for advancing the state-of-the-art in children's ASR.
 
 %With the growing popularity of deep learning, numerous successful attempts to apply it to ASR have been made. It was only recently, that end-to-end models have shown their capability to outperform hybrid HMM-DNN systems for a variety of speech recognition tasks, including children's ASR. The major advantage of end-to-end speech recognition systems is the merging of the whole training process into a single neural network that eliminates the possibility of behavioural incompatibilities between modules that have been trained independently. However, because of the problem of children's data scarcity, the application of the end-to-end paradigm for children's ASR is relatively new and has not been extensively investigated \cite{gelin2021endtoend,sri_end2end,chen2020data,ng2020cuhk}. In addition, end-to-end models often require more parameters to provide such robustness and flexibility. As a result, training on small datasets becomes increasingly difficult \cite{luscher2019rwth}.
 
-As mentioned in section \ref{section:SOTAE2E}, the recent increased interest in end-to-end speech recognition, has led development the  several architecture, encompassing recurrent neural networks \cite{soltau2016neural}, neural transducers \cite{battenberg2017exploring}, and the Transformer architecture \cite{vaswani2017attention}. Among these, the Transformer architecture stands out as it consistently delivers state-of-the-art results in large-vocabulary speech recognition, demonstrating its efficacy across both adult and children's speech domains \cite{gelin2021endtoend}.
+As discussed in Section \ref{section:SOTAE2E}, the increased interest in end-to-end speech recognition has led to the development of several architectures, including recurrent neural networks \cite{soltau2016neural}, neural transducers \cite{battenberg2017exploring}, and the Transformer architecture \cite{vaswani2017attention}. Notably, among these architectures, the Transformer stands out, consistently yielding state-of-the-art results in large-vocabulary speech recognition. Its effectiveness extends across both adult and children's speech domains \cite{gelin2021endtoend}. This indicates the Transformer's adaptability and robustness, making it a noteworthy candidate for advancing the field of end-to-end speech recognition, particularly in the context of children's ASR.
+
 %With the recent increased interest in end-to-end speech recognition, several architectures have been developed, including recurrent neural networks \cite{soltau2016neural} and neural transducers \cite{battenberg2017exploring}. However, one architecture stands out and consistently provides state-of-the-art results in large-vocabulary speech recognition for both adults and children, the Transformer.
 
-This chapter will dives into more details of the Transformer design as well as the adapter transfer for children ASR, a  parameter-efficient transfer for Transformer models that we have recently proposed.
+In this chapter, we will delve into more details of the Transformer design, as well as the Conformer, a improved Transformer architecture tailored for speech-related tasks. Building on prior research that demonstrated the efficacy of Transformer-based models in children's ASR \cite{gelin2021endtoend}, particularly when fine-tuned from pre-trained adult models, we aim to provide a comprehensive understanding of the different components within these architectures and their roles in achieving optimal performances. To this end, we introduce the concept of \textit{partial fine-tuning}, a method where only specific components of the architecture are tuned during transfer learning. This approach aims to highlight the key elements contributing to the Transformer based models successes for children's ASR. The objective of this chapter is to address the following research questions:: \textit{How do end-to-end automatic speech recognition models achieve state-of-the-art results for children's ASR when finetuned from an adult model?  Particularly, what are the components that are most important to fine-tune?}
 \section{Transformer model}
 \label{sec:trans_archi}
 
@@ -143,29 +144,30 @@ More specifically,the convolution modules , inspired by \cite{wu2020lite} and il
 
 \section{Understand transfer learning efficacy for transformer based models}
 % Explain motivation 
-Motivated by the limited availability of children's speech data, TL emerges as a promising strategy to overcome this challenge in children's ASR. TL involves leveraging pre-trained models, typically trained on extensive out-of-domain datasets of adult speech, and adapting them to the specific characteristics of children's speech through a re-training phase using a smaller, in-domain dataset of children's speech. This approach has shown effectiveness in both traditional HMM-DNN approaches \cite{shivakumar2020transfer} and modern end-to-end ASR paradigms\cite{sri_end2end,gelin2021endtoend}. In chapter \ref{chap:Chapter3}, we presented the effectiveness of TL in improving HMM-TDNN-F models for both European-Portuguese and English children's speech.
+Motivated by the limited availability of children's speech data, TL emerges as a promising strategy to address this challenge in children's ASR. TL involves leveraging pre-trained models, typically trained on extensive datasets of adult speech, and adapting them to the specific characteristics of children's speech through a re-training phase using a smaller, in-domain dataset of children's speech. This approach has demonstrated effectiveness not only in traditional HMM-DNN approaches, as illustrated in the previous chapter \ref{chap:Chapter3} and corroborated by literature \cite{shivakumar2020transfer}, but also in modern end-to-end ASR paradigms \cite{sri_end2end,gelin2021endtoend}.
 
-While the end-to-end paradigm has become state-of-the-art for some children's datasets, particularly when adapted from pre-trained adult models using TL, it involves merging all components of traditional ASR (acoustic, pronunciation, and language models) into a single neural network. This unique neural network design leads to an increased number of parameters for end-to-end models. Therefore, there is a need to understand how these large pre-trained models behave when fine-tuned with limited downstream data. To address this, we propose to explore TL for children's speech using both Transformer models and the Conformer architecture, a variant of the Transformer specifically designed for speech tasks.
-
-
+While the end-to-end paradigm has become state-of-the-art for some children's datasets, particularly when adapted from pre-trained adult models using TL, it involves merging all components of traditional HMM-based ASR pipeline, including acoustic, pronunciation, and language models, into a single neural network. This unique neural network design results in an increased number of parameters. Therefore, there is a need to understand how these large pre-trained models behave when fine-tuned with limited downstream data, as training on a large number of parameters with a small dataset could potentially lead to decreased performances. To address this, we propose a more granular investigation of TL for children's speech using both Transformer and the Conformer architecture.
 % Over param of transformer models
-Investigating TL for large-size models is a crucial step in the development of robust children's ASR, given the widely acknowledged issue of overparameterisation in large Transformer-like models. For example, models like BERT \cite{Bert} have been widely recognised as overparameterised in various studies within the Natural Language Processing (NLP) field \cite{kovaleva-etal-2019-revealing,michel2019sixteen}. Overparameterisation occurs when models have more parameters than necessary for a given task. Notably, observations suggest that certain components or layers of the architecture can be removed without compromising performance and, in some cases, may even lead to slight performance gains \cite{kovaleva-etal-2019-revealing,michel2019sixteen,ye2023partial}. This recognition has fueled successful compression studies, including pruning and distillation techniques \cite{mccarley2019structured,sanh2019distilbert}.
-
-
+Indeed, investigating TL for large-size models is a crucial step in the development of robust children's ASR, given the widely acknowledged issue of overparameterisation in large Transformer-like models. Notably, models like BERT \cite{Bert} have been widely recognised as overparameterised in various studies within the Natural Language Processing (NLP) field \cite{kovaleva-etal-2019-revealing,michel2019sixteen}. Overparameterisation occurs when models have more parameters than necessary for a given task. Observations suggest that certain components or layers of the architecture can be removed without compromising performance, and in some cases, may even lead to slight performance gains \cite{kovaleva-etal-2019-revealing,michel2019sixteen,ye2023partial}. This recognition has fueled successful compression studies, including pruning and distillation techniques \cite{mccarley2019structured,sanh2019distilbert}. 
 
 % Overfitting of large model and loterry ticket hypothesis
-Furthermore, the acknowledgment of overparameterisation in Transformer-based models raises questions about the efficiency and computational cost of these architectures. Larger models tend to be more prone to overfitting, as demonstrated in a study where an ASR model was scaled up to 10 billion parameters \cite{zheng22d_interspeech}. Overfitting can be a concern when applying TL as using a overfitted pre-trained model could potentially leading to decreased performances. Therefore, there is a need for ablation studies, involving the systematic removal of components of the model, to understand which parts contribute significantly to the performances \cite{shen2021partial,wang2021fine}. These studies, predominantly explored in the field of computer vision \cite{ye2023partial}, align with the Lottery Ticket hypothesis formulated by Frankle and Carbin \cite{frankle2018lottery}: \textit{``A randomly-initialized, dense neural network contains a subnetwork that is initialized such that—when trained in isolation—it can match the test accuracy of the original network after training for at most the same number of iterations''}.
+Furthermore, the acknowledgment of overparameterisation in Transformer-based models raises questions about the efficiency and computational cost of these architectures. Larger models tend to be more prone to overfitting, as demonstrated in a study where an ASR model was scaled up to 10 billion parameters \cite{zheng22d_interspeech}. Overfitting can be a concern when applying TL as using a overfitted pre-trained model could potentially  leading to decreased performances. Therefore, there is a need for ablation studies, involving the systematic removal of components of the model, to understand which parts contribute significantly to the performances \cite{shen2021partial,wang2021fine}. These studies, predominantly explored in the field of computer vision \cite{ye2023partial}, align with the Lottery Ticket hypothesis formulated by Frankle and Carbin \cite{frankle2018lottery}: 
+
+\begin{quote}
+    \textit{``A randomly-initialized, dense neural network contains a subnetwork that is initialized such that—when trained in isolation—it can match the test accuracy of the original network after training for at most the same number of iterations''}.
+\end{quote}
 
 Understanding the contribution of the different components of the large-size model not only helps optimise model architectures for specific tasks but also reduces the computational demands of training and inference. This is particularly relevant in scenarios with resource constraints, such as limited computational power, memory, and training data. 
 
 
 % This work investigate it on children ASR
-While these ablation works have been extensively studied in NLP and computer vision, this approach remains under-explored for speech tasks. Specifically, the recent successes of distilation and pruning techniques for speech models \cite{gandhi2023distilwhisper,chang2022distilhubert,peng23c_interspeech}, suggest that overparameterisation may also be present in ASR models. In the context of children's ASR, where data scarcity is a significant challenge, understanding and addressing overparameterisation could paves the way for the development of more tailored and efficient models, with improved performances. Notably, the Transformer and Conformer architectures have exhibited promising results in ASR applications, making them particularly compelling subjects for further investigation.
+While these ablation works have been extensively studied in NLP and computer vision, this approach remains under-explored for speech tasks. Specifically, the recent successes of distilation and pruning techniques for speech models \cite{gandhi2023distilwhisper,chang2022distilhubert,peng23c_interspeech}, suggest that overparameterisation is also present in ASR models. In the context of children's ASR, where data scarcity is a significant challenge, understanding and addressing overparameterisation could paves the way for the development of more tailored and efficient models, with improved performances. Notably, the Transformer and Conformer architectures have exhibited promising results in ASR applications, making them particularly compelling subjects for further investigation.
 
 
 \subsection{Partial Transfer learning}
 % Explain experiments
-Our aim is to undertake a comprehensive exploration of TL, specifically on end-to-end ASR for children's speech. Notably, the previous research in this field has been focused on HMM-DNN models, as illustrated by the work of Shivakumar et al. \cite{shivakumar2020transfer}. It is noteworthy that the existing works on the end-to-end paradigm have only centered on the entire model fine-tuning, leaving a notable gap in the understanding of the impact of fine-tuning individual components.
+
+Our aim is to undertake a comprehensive exploration of TL, specifically on end-to-end ASR for children's speech. Notably, previous research in this field has solely been focused on HMM-DNN models, as illustrated by the work of Shivakumar et al. \cite{shivakumar2020transfer}. This previous work provided recommendations for the development of better children's ASR systems, but such a study is currently missing for the end-to-end paradigm, which  further motivated our investigation. It is noteworthy that existing works on the end-to-end paradigm have only centered on the entire model fine-tuning, leaving a notable gap in the understanding of the impact of fine-tuning individual components.
 
 Firstly, we perform a meticulous examination of the TL process, specifically isolating the effects on individual components of the Encoder and Decoder, in comparison to the fine-tuning of the entire model. The prevailing hypothesis asserts that the Encoder is  capturing acoustic information, while the Decoder more linguistic informations. Considering the important presence of acoustic variability in children's speech, our investigation extended to discern which layers of the Encoder are more relevant for achieving effective TL.
 
@@ -225,11 +227,12 @@ Table \ref{tab:EncoderDecoder} summarises the results of the impact of isolating
 Turning to the Conformer model, the full model achieves a WER of 12.28\% with 109 million parameters updated. Isolating the transfer learning on the encoder component only  yields a remarkable improvement, resulting in a WER of 11.24\% with a parameter count of 75.9 million. Conversely, when the decoder only is fine-tuned the performances degrade with a higher WER of 16.94\% using a parameter count of 25.2 million. Notably, the Conformer architecture consistently outperform the Transformer across all configurations, emphasising its effectiveness for speech related tasks. In addition, these results underscore the important role of the encoder in both Transformer and Conformer ASR models, highlighting its importance in capturing the inherent variabilities in children's acoustics. It confirms that the acoustics variabilities represent the most important source of variabilities as suggested by \cite{TFchildren}.
 
 % Layers wise
-\begin{figure}[ht]
+\begin{figure}
     \centering
-    \subfigure[Results of the transfer learning layer wise for the Transformer model]{\label{fig:transferTLTransformer}\includegraphics[width=0.49\textwidth]{imgs/layerTL_transformer.png}}
-    \subfigure[Results of the transfer learning layer wise for the Conformer model]{\label{fig:transferTLConformer}\includegraphics[width=0.49\textwidth]{imgs/layerTL_conformer.png}}
+    \subfigure[Results of the transfer learning layer wise for the Transformer model]{\label{fig:transferTLTransformer}\includegraphics[width=0.7\textwidth]{imgs/layerTL_transformer.png}}
+    \subfigure[Results of the transfer learning layer wise for the Conformer model]{\label{fig:transferTLConformer}\includegraphics[width=0.7\textwidth]{imgs/layerTL_conformer.png}}
     \caption{Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture}
+    \label{fig:layerWISE}
 \end{figure}
 
 %\begin{figure}
@@ -238,7 +241,11 @@ Turning to the Conformer model, the full model achieves a WER of 12.28\% with 10
 %    \end{center}
 %    \caption{Up-way and down-way transfer learning experiment}
 %\end{figure}
-Recognising the important role of the Encoder in the fine-tuning process for children ASR, our investigation further look to determine the specific layers that are the most relevant during this TL process. To this end, we adopt a meticulous approach of fine-tuning the Encoder incrementally, adding one layer at a time. This step-by-step TL procedure is executed in each directionally, one commencing from the input layer while the other one from the output layer of the encoder,the up-way and down-way respectively. In other words, the up-way, incremental fine-tuning begining with the input layer and progressively incorporating subsequent layers towards the output layer. While, the down-way initiates fine-tuning from the output layer, systematically integrating preceding layers towards the input layer.
+Recognising the pivotal role of the Encoder in the success of the fine-tuning process for children's ASR, our investigation delves deeper to determine the specific layers that are the most important during this TL process. To this end, we adopt a meticulous approach where we incrementally fine-tuned the Encoder by adding one layer at a time for each fine-tuning experiment. This layer-wise fine-tuning procedure is executed bidirectionally, encompassing both an up-ward trajectory, commencing from the input layer, and a down-ward trajectory, starting from the output layer of the Encoder. In other words, the up-ward trajectory involves progressively fine-tuning by adding one layer at a time for each experiment, starting from the input layer and systematically integrating subsequent layers towards the output layer of the Encoder. Conversely, the down-ward trajectory initiates fine-tuning from the output layer, systematically incorporating preceding layers towards the input layer at each experiments. The results of this layer-wise fine-tuning procedure for both the Transformer and Conformer architectures are presented in Figure \ref{fig:layerWISE}.
+
+In both the Transformer and Conformer scenarios, a consistent pattern emerged. The incremental addition of more layers was found to be consistently beneficial, with optimal performance stabilisation occurring when 10 layers out of the 12 are employed. we observed the advantage of utilising TL from the top layers in the down-ward direction (i.e., those close to the output of the Encoder) compared to the bottom layers in the up-ward direction (i.e., those close to the input of the Encoder). The success of the up-ward trajectory, in contrast to the down-ward trajectory, indicates that the top layers of the Encoder are the most relevant for fine-tuning in the context of children's speech. This exploration of layer-wise fine-tuning sheds light on the intricate dynamics of TL within the Encoder, offering valuable insights into the targeted layers that significantly contribute to optimising the performance of children's ASR models. 
+%Recognising the important role of the Encoder in the fine-tuning process for children ASR, our investigation further look to determine the specific layers that are the most relevant during this TL process. To this end, we adopt a meticulous approach of fine-tuning the Encoder incrementally, adding one more layer for each experiment. This incremental TL procedure is executed in each directionally, one commencing from the input layer while the other one from the output layer of the encoder,the up-way and down-way respectively. In other words, the up-way, for each experiments we incrementally fine-tuning by adding one layere a the time. Begining with the input layer and progressively incorporating subsequent layers towards the output layer. While, the down-way initiates fine-tuning from the output layer, systematically integrating preceding layers towards the input layer at each experiment. We present the results of this layer-wise fine-tuning for both Transformer and Conformer in Figure \ref{fig:layerWISE}.
+%In both the Transformer adn Conformer scenario, we observed a similar behavior. Adding more layers was found always beneficial, with a stabilisation of the best performances when 10 layers out of the 12  are used to fine-tuned the model. An interesting observation, was the fact that using transfer learning from the top layers (i.e. close to the output of the Encoder) was found more beneficial than from using transfer learning from the bottom layers (i.e. close to the input of the Encoder). The success of the Up-way compared to the Down-way indicates that the top layers of the Encoder are the most relevant to fine-tune in the context of Children's speech.
 \subsection{Modules Transfer learning}
 % Block wise
 \begin{table}
@@ -259,7 +266,7 @@ Recognising the important role of the Encoder in the fine-tuning process for chi
             Normalisation & 15.61\% & 63.7K  \\
             MHSA & 11.74\% & 28.4M  \\
             Convolution Module & 11.67\% & 9.7M \\
-            FFN    & \textbf{11.11\%}     &  63M \\
+            FFN    & \textbf{11.10\%}     &  63M \\
             \quad $\hookrightarrow$ Module 1    & 11.44\%     &  25.2M \\
             \quad $\hookrightarrow$ Module 2    & 11.48\%     &  25.2M \\
             \quad $\hookrightarrow$ Up-linear ($W_1$)    & 11.47\%     &  31.5M \\
@@ -285,206 +292,32 @@ The fine-tuning of specific components reveals valuable observations. Applying n
 %Conformer
 Turning to the Conformer model, the baseline WER without fine-tuning is 21.75\%, with no additional parameters. The full fine-tuning of the Conformer model improved performance, yielding a WER of 12.28\% with 109 million parameters.
 
-Fine-tuning specific Conformer modules offers further granularity. First, the normalisation finetuning, in a similar way as observed in the Transformer configuration, yield a score of 15.61\% WER, with 63.7 thousand parameters. Then,  the MHSA module proves effective by already providing better result than the full full-tuning with a WER of 11.74\%, this by fine-tuning 28.4 million parameters. The convolution modules outperform the MHSA with a WER of 11.67\% with less parameters used, 9.7\%. Howver, as in the Transformer model, the FFN module stands out prominently, demonstrating a WER of 11.11\% with a parameter count of 63 million. Notably, the MHSA, convolution modules and FFN modules, when fine-tuned in isolation, surpass the performance of the full Conformer model.
+Fine-tuning specific Conformer modules offers further granularity. First, the normalisation finetuning, in a similar way as observed in the Transformer configuration, yield a score of 15.61\% WER, with 63.7 thousand parameters. Then,  the MHSA module proves effective by already providing better result than the full full-tuning with a WER of 11.74\%, this by fine-tuning 28.4 million parameters. The convolution modules outperform the MHSA with a WER of 11.67\% with less parameters used, 9.7\%. Howver, as in the Transformer model, the FFN module stands out prominently, demonstrating a WER of 11.10\% with a parameter count of 63 million. Notably, the MHSA, convolution modules and FFN modules, when fine-tuned in isolation, surpass the performance of the full Conformer model.
 
 % FFN wise
 As FFN, consistently proved to be the most relevant component to fine-tune for children ASR, no matter the configuration. We decided to delve deeper into the FFN submodule. There is two way to see this subdivision, first using the macaron style of the Conformer FFn layer, including two modules, one before the MHSA and one after the convolution module will be respectively called Module 1 and Module 2. The second approach to subdivde the FFN layers would be to only look at the up-linear and down-linear, respectively $W_1$ and $W_2$ equation \ref{equation:FFN}. Module 1 and Module 2 achieve WERs of 11.44\% and 11.48\%, respectively, each by fine-tuning 25.2 million parameters. The Up-linear and Down-linear  submodules exhibit WERs of 11.47\% and 11.40\%, respectively, with parameter counts of 31.5 million. The subdivision of the FFN modules do not allow to perform better than their coupled usage. This show the importance of the full FFN modules in Transformer based end-to-end models. 
 
-These comprehensive study not only highlight the importance of the various components within Transformer and Conformer ASR models but also underscore the effectiveness of fine-tuning only specific modules compared to the full model fine-tuning, especially the FFN module, in achieving improved performance.
+%Combination of different components
+Furthermore, our investigation delved into the impact of combining different components within both the Transformer and Conformer architectures. In the case of the Transformer model, the results consistently demonstrated that while all combinations improved the 12.99\% WER achieved through full model fine-tuning, they consistently underperformed the score of the FFN component alone of 11.84\% WER. The most promising combination attained a WER score of 12.19\%, by using the Normalisation and the FFN in combination.
+Similarly, within the Conformer architecture, a comparable trend emerged. While all combinations exhibited improvements compared to full model fine-tuning score of 12.28\%, they still lagged behind the performance achieved with the FFN-only scenario of 11.10\%. A noteworthy result was the observation that the combination of the FFN and convolution modules proved to be as effective as the FFN in isolation, yielding a WER score of 11.11\%. This particular experiment accentuates the notion that employing a single component is more advantageous than utilising combinations, thereby suggesting the merits of a more parsimonious use of parameters.
 
-\begin{comment}
-\section{Adapters for Transformer based models}
+This observation aligns with the concept of the Lottery Ticket Hypothesis, which posits that within a neural network, there exist subnetworks (winning tickets) that, when isolated, can perform equally well as the full network. In the context of transfer learning for children's end-to-end ASR, the findings underscore the effectiveness of a focused and selective utilisation of components, reflecting a nuanced and strategic approach to optimising model performance.
 
-Age-dependent acoustic models have shown promising improvements, as children's age is highly correlated with acoustic variability \cite{children_language_model2, reviewASRchildren}. In particular, some studies found that variability decrease with the age, reaching the adult level at 15 years old \cite{Acoustic_change_children}.
-%End2End and transfer learning
-In parallel, research on End-to-end (E2E) architectures has shown equivalent or even superior performance in a large number of speech recognition tasks compared to traditional hidden Markov models approaches \cite{hmm-end2end}. E2E architectures propose to combine different modules of the ASR pipeline into a single deep neural network (DNN), resulting in benefits to avoid error accumulation and mismatch between components.
-However, for these models to work properly, they need to be trained with a large amount of data, which is not commonly available for children's speech. Thus, to overcome children's data sparsity issue for E2E models training, \cite{sri_end2end,gelin2021endtoend} successfully used transfer learning by fine-tuning an adult pre-trained model on children's speech.
-%Motivation for adapter
+\section{Summary and discussion}
 
-In this work, we propose to apply adapter modules on top of an adult acoustic model as an alternative to the transfer learning strategy for automatic children's speech recognition. Adapters are a method recently proposed for Transformer-based systems that consist of a small set of additional layers that are attached to a source model \cite{houlsby,pfeiffer}. Adapters are typically less expensive both in terms of training speed and storage cost, which is a desirable property in the case of aiming at the development of children's age-dependent models.  In addition, adapters overcome the problem of catastrophic forgetting. Indeed, after using transfer learning, the source model is completely overwritten by the newly trained weights, leading to a drop of performance on the source task. Whereas in adapter transfer, the backbone model remains frozen, thus preserved if adapter layers are removed. Adapters are therefore very practical in the context of small device computing where it can be expensive to load and store a large number of models for adults and children of different ages. Finally, in this work, we also propose a novel version of adapter layers inspired by variational auto-encoders (VAE)\cite{VAE}, so-called variational adapters or Vadapters. We hypothesize that the ability of VAEs to estimate variability can be applied in adapters to make them more suitable for parameter-efficient automatic children's speech recognition.
+% Research question
+In this chapter, we delve into the end-to-end paradigm for children's ASR, particularly using transfer learning from a pre-trained adult model. We aimed to answer the following research questions: \textit{How do end-to-end automatic speech recognition models achieve state-of-the-art results for children's ASR when finetuned from an adult model? Particularly, what are the components that are most important to fine-tune?}
 
+In contrast to prior research where fine-tuning involved the entire network, our detailed evaluation of different level of fine-tuning provides insights into the underlying behavior of the model when adapted to children's ASR. This research offers valuable recommendations for the future development of children's end-to-end ASR systems. Initially, we identified the Encoder as the most crucial part of the model to fine-tune compared to the Decoder. This aligns with the hypothesis that the substantial variability in children's speech is present in the acoustics and can be effectively captured in the Encoder, echoing similar findings in transfer learning experiments for HMM-DNN framework \cite{TFchildren}.
 
+Addressing the second research question, our proposed partial fine-tuning procedure sheds the light on the most important components for adaptation in both Transformer and Conformer architectures. This experiment unveiled the presence of the Lottery Ticket Hypothesis in such end-to-end architectures, indicating over-parameterization. Through our partial fine-tuning approach, the FFN module emerged as the most critical component to fine-tune, outperforming all other configurations, even the entire model fine-tuning. Previous research \cite{geva2020transformer} has revealed that FFN layers exhibit key-value memory properties, offering a plausible explanation for their success in the transfer learning procedure. Moreover, we observed that combining these submodules can potentially deteriorate ASR results, underscoring the challenge of over-parameterisation and the need of training on smaller amount of parameters. This emphasises the effectiveness of our granular partial fine-tuning process for end-to-end models with small datasets.
 
- %The structure of this work is organized as follows. Section \ref{section:SOA} reviews end-to-end ASR and adapters. In Section \ref{Vadapters}, we introduce our Vadapter architecture for children adapter transfer. The experimental setup is described in Section \ref{section:methods}. Section \ref{section:exp} presents  experimental results for the different adapter architectures. Finally, in Section \ref{section:conclusions} we conclude this paper and present potential perspectives for future work.
+% Discussion
+As the ASR field advances, one notable trend is the ever-increasing size of models, where parameters in neural networks are reaching unprecedented scales. Within these expansive architectures, the FFN often constitute a substantial portion of the model's overall parameter count. The FFN component, responsible for processing and transforming information through hidden layers, contributes significantly to the model's complexity.
 
+The widespread adoption of massive models has raised concerns regarding computational efficiency, optimal resource utilisation, and the potential risk of overfitting when these models are fine-tuned with limited data. Given that FFNs modules constitute a substantial portion of these large-scale models, there is an gained interest in developing parameter-efficient transfer learning strategies. Efficient utilisation of parameters during training is not only crucial for mitigating computational costs but also for enhancing the practicality of deploying these models in real-world scenarios where limited resources may exist.
+The next chapter of this thesis will delve into the feasibility of employing such parameter-efficient approaches for children's ASR. Such parameter-efficient approach could be highly beneficial in the context of speaker-based ASR systems for children. 
 
-\subsection{Related work}
-\label{section:SOA}
-\subsubsection{Transformer model for children ASR}
-% Motivation children E2E
-Recently, E2E-based ASR models have demonstrated their ability to achieve state-of-the-art performance on a wide variety of speech recognition tasks \cite{hmm-end2end}. This fact motivated the assessment and comparison of different E2E architectures for children ASR \cite{sri_end2end,gelin2021endtoend}. These works found that Transformer-based architectures, described in the previous section \ref{sec:trans_archi}, yield the best results when an adult pre-trained model is fine-tuned for children using transfer learning with the help of the joint attention and CTC objectives \cite{First_End2End}. Usually, these two objectives are combined  as follows:
-% Transformer 
-%Transformers were first introduced in Natural Language Processing (NLP) for machine translation task \cite{vaswani2017attention}. Due to its success, it has been used in many other areas such as computer vision \cite{VIT}, language understanding \cite{Bert} and speech  \cite{dong2018speech}. Transformer is a neural sequence transducer based on an encoder-decoder architecture that relies solely on attention mechanism. Acoustic features are given to the encoder that maps them into a high-level representation. The encoder output is then fed to the decoder that predicts tokens, usually characters. As showed by \cite{gelin2021endtoend}, the best way to train and infer children's speech by using Transformer is by jointly using the attention objective with a Connectionist Temporal Classification (CTC) objective \cite{First_End2End}. Usually, attention and CTC objectives are combined  as follows:
-\begin{equation} \label{equa:loss_asr}
-    \mathcal{L}_{ASR} = \lambda_{ctc} \mathcal{L}_{ctc} + (1- \lambda_{ctc})\mathcal{L}_{s2s}
-\end{equation}
-where $\mathcal{L}_{ctc}$ and $\mathcal{L}_{s2s}$ are the CTC and attention losses, respectively. A hyper-parameter $\lambda_{ctc} \in [0,1]$ is used to control contribution of each loss. 
-\subsubsection{Adapters}
-\begin{figure}[t]
-\begin{center}
-\includegraphics[scale=0.3]{imgs/Adapters.png}
-\caption{a) Example of a Transformer layer with an adapter layer (adapted from \cite{pfeiffer}); b) Adapter layer; c) Vadapter layer}
-\label{fig:all}
-\end{center}
-\end{figure}
+%We covered the state-of-the-art for end-to-end children's speech recognition in this chapter. Particularly, the usage of the Transformer architecture in conjunction with transfer learning. In a similar way as chapter \ref{chap:Chapter3}, to avoid a drop in performances attributable to an acoustic mismatch between children and adults, the end-to-end model should be trained with children's data. In contrast to previous work, we demonstrated that fine-tuning only a portion of the transformer modules, particularly the FFN sub-module, yields better results since it serves as a key-value memory. As a result, we placed our adapter subsequent to it. The adapter's role is to accomplish knowledge transfer, which is related to transfer learning. Rather than updating the complete model's weights, we just tweak an extra module, hence fewer parameters. This adapter transfer achieves almost identical results as the entire model fine-tuning. In addition, adapters are useful in the context of customized models, where training and storing a whole model for each age group or each child can be expensive and time-consuming.
 
-% Adapters
-Adapters were first introduced in the NLP field, motivated by the need for a parameter-efficient adaptation to fine-tune large models, like Transformer, on various text classification tasks \cite{houlsby}. They are a simple alternative to full model fine-tuning, as they involve only a small number of newly inserted parameters at each layer of the transformer.
-While different positions have been proposed \cite{houlsby,pfeiffer}, they are generally plugged after the feed-forward layer (see Figure \ref{fig:all}.a). The key idea for training adapters is to freeze the backbone model's parameters and only update the adapter's parameters. Adapter modules are based on a bottleneck architecture (projection-down followed by a projection-up) as shown in Figure \ref{fig:all}.b.  Adapters solve a number of drawbacks associated with full model fine-tuning, such as parameter efficiency, faster learning iterations and a highly modular design
-
-Since it was first proposed, adapters have been successfully used in a wide range of NLP tasks such as language understanding \cite{pfeiffer} and neural machine translation \cite{philip2020monolingual}. Some researchers proposed to use adapters for ASR tasks, such as in multilingual ASR \cite{kannan2019large}. More recently, \cite{tomanek2021residual} studied adapters for atypical speech, in particular pathological and accented speech. More recently, \cite{fan2022draft} proposed to use adapters inside of self-supervised models for children ASR by refining the whole model together with the weights of the adapters. Our work differs because our aim is to update only the adapters' weights in order to keep both the parameter efficiency and modular properties of adapters.
-
-\subsubsection{Variational Auto-Encoders}
-Variational auto-encoders (VAE) \cite{VAE} are a probabilistic generative models, that has been successfully applied in different speech tasks such as transformation \cite{vae_transformation} and enhancement \cite{vae_enh}. The main strength of VAE is their ability to learn a smooth representation of the latent space. Indeed, rather than producing a single value to describe each element of the latent space, as a standard auto-encoder, VAE provides a probability distribution: 
-\begin{equation}
-    p_{\theta}(\vb{x},\vb{z}) =  p_{\theta}(\vb{x}|\vb{z}) p_{\theta}(\vb{z})
-\end{equation}
-where $\vb{x}$ is the observed data generated by a random process using latent data $\vb{z}$ and $\theta$ denotes the distribution parameters. In this model, the likelihood function $ p_{\theta}(\vb{x}|\vb{z})$ quantifies   how the generation of $\vb{x}$ is conditioned by $\vb{z}$, while the prior $p_{\theta}(\vb{z})$ is used to regularize the latent data $\vb{z}$. Typically, a standard Gaussian distribution is used for the prior distribution
-\begin{equation}
-    p_{\theta}(\vb{z}) = \mathcal{N}(\vb{z}; 0, I)
-\end{equation}
-while the likelihood is defined as a multivariate Gaussian distribution:
-\begin{equation}
-     p_{\theta}(\vb{x}|\vb{z}) = \mathcal{N}(\vb{x}; \mu_{\theta}(\vb{z}), \sigma^2_{\theta}(\vb{z}))
-\end{equation}
-where $\mu_{\theta}(\vb{z})$ and $\sigma^2_{\theta}(\vb{z})$ are obtained using $\vb{z}$. However, since the posterior distribution $p_{\theta}(\vb{x}| \vb{z})$ is intractable, it is approximated with the auxiliary distribution $q_{\phi}(\vb{z}| \vb{x})$ that plays the role of an encoder:
-\begin{equation}
-    q_{\phi}(\vb{z}|\vb{x})= \mathcal{N}(\vb{z}; \Tilde{\mu}_{\phi}(\vb{x}), \Tilde{\sigma}^2_{\phi}(\vb{x}))
-\end{equation}
- We also want to ensure that the approximate posterior $q_{\phi}(\vb{z}|\vb{x})$ and the true posterior $ p_{\theta}(\vb{z}|\vb{x})$ are similar by minimizing the Kullback-Leibler (KL) divergence between the two distributions. 
-\begin{equation} \label{equa:minKL}
-     \min KL(q_{\phi}(\vb{z}|\vb{x})|| p_{\theta}(\vb{z}| \vb{x}))
-\end{equation}
-It is possible to minimize expression (\ref{equa:minKL}) by maximizing the following expression as shown in \cite{vae_transformation}:
-\begin{equation}
-    \mathbb{E}_{q_{\phi}(\vb{z}| \vb{x})} \log p_{\theta}(\vb{x}|\vb{z}) - KL(q_{\phi}(\vb{z}|\vb{x})|| p_{\theta}(\vb{z}))
-\end{equation}
-Where the first term is the reconstruction error and the second term a regularisation. %Generally, we choose $p_{\theta}$ to be a standard normal distribution $\mathcal{N}(0,1)$.
-
-Thus, the VAE loss function can be define as followed:
-\begin{align}
-\mathcal{L}_{VAE} & = \mathcal{L}_{recons}+ \mathcal{L}_{KL} \\
-                  & = \mathcal{L}_{recons}+ \sum_j KL((q_{\phi}^{(j)}(\vb{z}|\vb{x})|| p_{\theta}(\vb{z}))
-\end{align}
-for each dimension $j$ of the latent space. 
-
-\subsection{Variational adapters}
-\label{Vadapters}
-% Motivation (latent space more continuous)
-Adapters and auto-encoders (AE) share a similar encoder-decoder structure. Although the purpose of these two architectures is different, the role of their encoders is similar: map relevant characteristics of the input into a unique latent vector. On the other hand, their architecture differs in the decoders: AEs use the decoder to reconstruct the input, while adapters project the information contained in the latent vector to be processed by the next layer. Consequently, adapters suffer from the same problems as AEs, a poor capability to model variability.
-In order to be more robust to the high variability of children's speech, we propose to represent each latent value in probabilistic terms. To this end, we propose Vadapter, a new adapter architecture in which the encoder structure of the adapter is replaced with the structure of a VAE's encoder as shown in Figure \ref{fig:all}.c.    
-
-Consequently, during training, instead of a down-projection that maps the input into the latent representation, we now have two branches, producing the mean $\mu$ and variance $\sigma$. During inference, $\mu$ is used directly as a deterministic latent vector, discarding $\sigma$. We hypothesise that this deterministic inference allows Vadapters to capture variability in the $\sigma$ branch while keeping the $\mu$ more robust. In addition, dropping the $\sigma$ branch during inference keeps the number of parameters equivalent to normal adapters, thus preserving the parameter efficiency.
-
-Similarly to VAEs, the regularisation term which ensures that the distribution of $q_{i}(\vb{z}| \vb{x})$ for each Vadapter at layer $i$ is similar to the standard normal distribution $p(\vb{z})$ is required. However, as there are many Vadapter layers we normalise the sum of all regularization terms by the number of Vadapter layers: 
-\begin{equation}
-    \mathcal{L}_{KL_{all}}  = \frac{\sum_L^iKL(q_{i}(\vb{z}|\vb{x})|| p(\vb{z}))}{L} \\
-\end{equation}
-where $L$ is the total number of Vadapters in the model. 
-Then, we inject this regularisation loss into the E2E ASR loss defined in equation (\ref{equa:loss_asr}) as follows:
-\begin{equation}\label{loss}
-    \mathcal{L}_{ASR} = \lambda_{ctc} \mathcal{L}_{ctc} + (1- \lambda_{ctc})\mathcal{L}_{s2s}  + \beta \mathcal{L}_{KL_{all}} 
-\end{equation}
-where $\beta$ is an hyper-parameter to control the regularization's contribution.
-
-
-\subsubsection{Experiments description}
-In our first experiment, we will attempt to determine which component of the transformer model is most important to ASR children. As a result, this information will be used to determine the best location of the adapters in the transformer layer. Indeed, the adapter should come after the most important component since it will project the output of that component into the expected transformer space. In order to do this, we studied the role of each transformer layer sub-module by fine-tuning one or two of them with the children's speech data.
-
-
-% Experiments description
-Secondly, we analyze the performance of adapters in three scenarios: i) Adapters in all layers of the E2E model, ii) adapters only  present in the encoder layers, and iii) adapters only in the decoder layers. These experiments are motivated by the fact that the encoder is closely related to the acoustics generating a high-level representation of speech, while the decoder generates output tokens related to the linguistic domain. The objective is then to evaluate which components, the encoder  (acoustics) or the decoder (linguistics), benefit more from the adapter transfer.
-In order to compare our new architecture with traditional adapters, we reproduce the three scenarios mentioned above by replacing the adapters with our Vadapters. Furthermore,  we evaluate the combination of Vadapter and traditional adapter in two scenarios, Vadaper in the encoder and adapter in the decoder, and vice versa.
-
-\subsection{Results}
-\label{section:exp}
-
-\subsubsection{Transfer learning experiments}
-\begin{table}[ht]
-\centering
-\begin{tabular}{lcc} \toprule
-Fine-tuned part & WER $\downarrow$  & Trained parameters\\\hline
-None & 25.04\% & - \\
-Full model & 13.50\% & 71.5M\\ \hline
-Norm & 18.08\% & 57.9K\\
-MHA & 13.40\% & 25.2M \\
-FFN & \textbf{12.57\%} & 37.8M \\ \hline
-MHA + FFN & 12.78\%  & 63.0M\\
-Norm + FFN & 12.92\% & 37.9M \\
-Norm + MHA & 13.52\%  & 25.3M\\ \hline
-\end{tabular}
-\caption{Results of the fine-tuning on part of the model only}
-\label{tab:result_TL_transformer}
-\end{table}
-Table \ref{tab:result_TL_transformer} shows results of the transfer learning on sub-modules of the Transformer model. Fine-tuning all the transformer's parameters, in the same way as the previous work \cite{sri_end2end,gelin2021endtoend}, gives better results than using the model trained only on adult data with 13.76\% compared to 25.04\% WER respectively. The fine-tuning of all normalisation weights improved the score compared to the adult model with 18.04\% but still under-perform compared to the full fine-tuning. Thus, the normalisation contribution in the children's transfer learning is limited. In contrast, fine-tuning the MHA or FFN yields better, results compared to the full transfer learning with 13.40\% and 12.57\% WER respectively. While always outperforming a full model update, the use of transfer learning on a combination of different model components reduces performance when compared to FFN alone. Transfer learning becomes more difficult by updating the weights of all components of the transformer as well as the non-transformer weights (i.e., Convolution blocks and embedding blocks), which explains why the entire fine-tuning produces worse results. In conclusion, FFN modules are the most relevant to fine-tune using transfer learning. This is because transformer feed-forward layers are key-value memories \cite{geva2020transformer}, where each key correlates with patterns in the training examples, and each value produces a distribution over the outputs. Consequently, adapters should be placed after the FFN sub-modules in order to achieve better results. This is consistent with Pfeiffer's work for NLP tasks \cite{pfeiffer}.
-
-\subsection{Adapters and Vadapters results}
-\begin{table}[t]
-\begin{tabular}{ccc}
-\hline
- Method & WER     & Trained parameters   \\ \hline
-\multicolumn{1}{l}{No fine-tune} & 25.04\%   & - \\ 
-\multicolumn{1}{l}{Fine-tune} & 13.50\% & 71.5M \\ \hline
-\multicolumn{1}{l}{Adapter}  &   14.33\% & 4.8M  \\ 
-\multicolumn{1}{l}{Adapter encoder only }    & 14.56\% & 3.2M  \\ 
-\multicolumn{1}{l}{Adapter decoder only} & 20.10\%      & 1.6M  \\ \hline
-\multicolumn{1}{l}{Vadapter} & 14.19\%     & 7.1M (4.8M)  \\
-\multicolumn{1}{l}{Vadapter-enc + Adapter-dec } & 14.05\%     & 6.3M (4.8M)  \\
-\multicolumn{1}{l}{Adapter-enc + Vadapter-dec } & 14.35\%     & 5.5M (4.8M)  \\
-\multicolumn{1}{l}{Vadapter encoder only} & 14.51\%     & 4.7M (3.2M)  \\ 
-\multicolumn{1}{l}{Vadapter decoder only} & 20.23\%     & 2.4M (1.6M)  \\ \hline
-
-\end{tabular}
-
-\caption{Results of the different approaches; In parenthesis are shown the number of parameters needed for inference after dropping the $\sigma$ branch.}
-\label{tab:res}
-\end{table}
-\subsubsection{Adapters for children ASR}
-Table \ref{tab:res} presents the word error rate (WER) results of the different approaches.
-Firstly, the pre-trained Transformer adult model without any adaptation gives the worst result, with a WER of 25.04\%, while adult performances on Librispeech corpus are usually less than 6\%. 
-This result shows the impact of the variability in child speech.
-% ALBERTO: This result shows the impact of the variability in child speech. : DONE
-Secondly, the adaptation of all 71.5 million parameters for children's speech resulted in a considerable improvement, with 13.50\% WER. This result correctly reflects the state-of-the-art performance obtained in the literature for the MyST corpus \cite{sri_end2end}. 
-Regarding adapters, similarly to previous work in NLP \cite{houlsby} and ASR \cite{tomanek2021residual}, we observe that they perform slightly worse than fine-tuning, with a score of 14.33\% WER. However, it is important to note that adapters require less than 10\% of all parameters of the full fine-tuning. We also investigate adapter transfer for encoder and decoder only. Table \ref{tab:res} shows that adapters are more relevant when plugged into the encoder with 14.56\% WER while compared to the decoder with 20.10\% WER. This result confirms that acoustic variability plays a critical role in the degradation of children ASR performance \cite{shivakumar2020transfer}. 
-
-Additionally, we also evaluated how different adapter hidden-dimension, i.e. the number of parameters, influence the speech recognition performance compared to the fine-tuning model.
-Figure \ref{fig:ratio} displays the relative WER delta over the ratio of trainable parameters compared to the fine-tuned model. As a reference, the relative WER delta of the adult model with respect to fine-tuning is 85.5\%.
-% ALBERTO: Add here: "As a reference, the relative WER delta of the adult model with respect to fine-tuning is 85.5\%.": Done
-%We observe that the delta increases as the number of trainable parameters decreases.
-We observe that the performance difference between fine-tuning and adapters decreases as the number of trainable parameters increases.
-% ALBERTO: This observation is in reverse order of the Figure. I think it would be more clear so say: "We observe that the performance difference between fine-tuning and adapters decreases as the number of trainable parameters increases."
-% ALBERTO: Can this figure show 2 constant lines? The fine-tuning performance and the adult model performance? Because this will allow saying something like: "While with only 2\% of the trainable parameters, adapters manage to surpass by a large margin the source model performance, adapters need a minimum amount of parameters to get close to the fine-tuning performance" Then, the 2 following sentences disappear and you would continue in "Nevertheless, ...": DONE
-While with only 2\% of trainable parameters, adapters manage to surpass by a large margin the source model performance, adapters need a minimum amount of parameters to get close to the fine-tuning performance. Nevertheless, adapter transfer outperforms full fine-tuning, when the number of parameters used is around 30\% of the number of the entire model. There is therefore a trade-off between performance and parameter efficiency. A similar observation has been made in \cite{fan2022draft}.
-%This degradation can be explained by the fact that in order to process children's speech, adapters need a certain amount of parameters. The model cannot be robust to children's speech variability when there are not enough parameters.
-
-\begin{figure}[t]
-\begin{center}
-\includegraphics[scale=0.3]{imgs/ratio_delta.png}
-\caption{Relative WER delta over the ratio (\%) of trainable parameters compared to full fine-tuned model.}
-\label{fig:ratio}
-\end{center}
-\end{figure}
-\vspace{-0.35cm}
-\subsubsection{Variational-adapters}
-Concerning the Vadapter architecture, with the exception of the cases where the Vadapters are placed in the decoder, all the scores are higher than their conventional counterpart, approaching the full fine-tuning score. The best configuration, Vadapter in the encoder and adapters in the decoder, reaches 14.05\% WER. In the same way, as for the conventional adapters, we can see that the Vadapters are more advantageous when placed in the encoder since the score is 14.51\% WER for Vadapters in the encoder only and 20.23\% WER for the decoder only. We believe that this is because Vadapters are designed to be more robust to acoustic variability, 
-% ALBERTO: "We believe that this is because Vadapters...": Done
-which is mainly present at the encoder level. Thus, the Vadapters in the decoder does not manage to improve the score of their conventional counterpart. 
-
-Thus, we tested several possible combinations between Vadapter and adapters. We observe that the configurations with Vadapters in the encoder are giving the best results, with 14.19\% WER for Vadapters in both the encoder and the decoder, as well as 14.05\% for Vadapters in the encoder and adapters in the decoder. However, when Vadapters are placed in the decoder in combination with adapters in the encoder the result is not as good as adapters everywhere with 14.35\% WER. We believe again that this is due to the variability being more present in the acoustic than in the linguistic component.
-% ALBERTO: "We believe again that this is due to ...: Done
-
-Finally, as shown in Figure \ref{fig:ratio}, Vadapter outperforms conventional adapters when the number of parameters is less than 15\% of the full model. Indeed, the Vadapters are always under 10\% relative WER delta compared to full fine-tuning and reach under 5\% with less than 4\% of the ratio of trainable parameters, where conventional adapters start above 15\% relative WER delta and need more than 10\% of the ratio of trainable parameters to be under 5\% relative WER delta. These results confirm the proposed Vadapter architecture as a more convenient alternative for parameter-efficient transfer learning. However, when the number of parameters increases,  the results drop compared to conventional adapters. We hypothesize that this is due to the more complex and subject to variability sampling  of $\vb{z}$ during Vadapters training.
-
-
-\subsection{Discusion}
-\label{section:conclusions}
-% Train age dependent variational-adapter and use AdapterFusion
-In this work, we demonstrate the usefulness of adapter transfer in the context of children's speech. With less than 10\% of the total number of fine-tuning parameters, adapters are able to efficiently model children's speech. Noticeably, the adapter performance approaches fine-tuning, as the number of parameters increases. Furthermore, our Vadapter architecture outperforms conventional adapters in terms of acoustic variability robustness in a parameter-efficient setting. Using a combination of Vadapters in the encoder and conventional adapters in the decoder allows for further improvement, getting closer to the fine-tuning performance while keeping a small number of parameters.  This seems to demonstrate their effectiveness in modelling highly variable data, such as children's speech.
-%This work is our first step towards the development age-dependent E2E ASR.
-%In future work, we would like to train age-dependent adapters %and fuse them using attention.
-%as well as investigate the behavior of new adapter architectures on children's speech.
-\end{comment}
-\section{Summary}
-We covered the state-of-the-art for end-to-end children's speech recognition in this chapter. Particularly, the usage of the Transformer architecture in conjunction with transfer learning. In a similar way as chapter \ref{chapter:Hybrid}, to avoid a drop in performances attributable to an acoustic mismatch between children and adults, the end-to-end model should be trained with children's data. In contrast to previous work, we demonstrated that fine-tuning only a portion of the transformer modules, particularly the FFN sub-module, yields better results since it serves as a key-value memory. As a result, we placed our adapter subsequent to it. The adapter's role is to accomplish knowledge transfer, which is related to transfer learning. Rather than updating the complete model's weights, we just tweak an extra module, hence fewer parameters. This adapter transfer achieves almost identical results as the entire model fine-tuning. In addition, adapters are useful in the context of customized models, where training and storing a whole model for each age group or each child can be expensive and time-consuming.
-
-In addition, we proposed the variational adapter, a variant of the traditional adapter based on variational auto-encoders. Compared to the adapter, which takes a bottleneck encoder-decoder structure with a linear layer as encoder and a linear layer as decoder, the variational adapter's encoder consists of two branches, $\mu$ and $\sigma$. The outputs of these two branches are used as the mean and variance vector to sample the input of the decoder. By doing so, we enforce the adapter's input variability to be contained in the $\sigma$ branch. A branch which is suppressed during inference. As a result, we reduce input variability while maintaining the same size as standard adapters.
+%In addition, we proposed the variational adapter, a variant of the traditional adapter based on variational auto-encoders. Compared to the adapter, which takes a bottleneck encoder-decoder structure with a linear layer as encoder and a linear layer as decoder, the variational adapter's encoder consists of two branches, $\mu$ and $\sigma$. The outputs of these two branches are used as the mean and variance vector to sample the input of the decoder. By doing so, we enforce the adapter's input variability to be contained in the $\sigma$ branch. A branch which is suppressed during inference. As a result, we reduce input variability while maintaining the same size as standard adapters.

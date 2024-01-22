@@ -22,16 +22,16 @@ The observed successes of SSL as an initialisation for fine-tuning in the contex
       Method & Architecture & \#Params & Stride & Input & Corpus & \\%Pretraining \\ 
       \midrule
       FBANK & - & 0 & 10ms & waveform & - & \\%- \\
-      APC [7] & 3-GRU & 4.11M & 10ms & FBANK & LS 360 hr \\%& 360 hr F-G \\
-      VQ-APC [32] & 3-GRU & 4.63M & 10ms & FBANK & LS 360 hr \\%& 360 hr F-G + VQ \\
-      NPC [33] & 4-Conv, 4-Masked Conv & 19.38M & 10ms & FBANK & LS 360 hr \\%& 360 hr M-G + VQ \\
-      Mockingjay [8] & 12-Trans & 85.12M & 10ms & FBANK & LS 360 hr \\%& 360 hr time M-G \\
+      Mockingjay & 12-Trans & 85.12M & 10ms & FBANK & LS 360 hr \\%& 360 hr time M-G \\
       Audio ALBERT & 3-Trans & 7.15M  & 10ms & FBANK & LS 960 hr \\
-      TERA [9] & 3-Trans & 21.33M & 10ms & FBANK & LS 960 hr\\%& 960 hr time/freq M-G \\
-      wav2vec 2.0 Base [14] & 7-Conv, 12-Trans & 95.04M & 20ms & waveform & LS 960 hr\\%& 960 hr M-C + VQ \\
-      wav2vec 2.0 Large [14] & 7-Conv, 24-Trans & 317.38M & 20ms & waveform & LL 60k hr\\%& 60k hr M-C + VQ \\
-      HuBERT Base [35] & 7-Conv, 12-Trans & 94.68M & 20ms & waveform & LS 960 hr \\%& 960 hr M-P + VQ \\
-      HuBERT Large [35] & 7-Conv, 24-Trans & 316.61M & 20ms & waveform & LL 60k hr\\%& 60k hr M-P + VQ \\
+      NPC & 4-Conv, 4-Masked Conv & 19.38M & 10ms & FBANK & LS 360 hr \\%& 360 hr M-G + VQ \\
+      APC  & 3-GRU & 4.11M & 10ms & FBANK & LS 360 hr \\%& 360 hr F-G \\
+      TERA & 3-Trans & 21.33M & 10ms & FBANK & LS 960 hr\\%& 960 hr time/freq M-G \\
+      wav2vec 2.0 Base  & 7-Conv, 12-Trans & 95.04M & 20ms & waveform & LS 960 hr\\%& 960 hr M-C + VQ \\
+      wav2vec 2.0 Large & 7-Conv, 24-Trans & 317.38M & 20ms & waveform & LL 60k hr\\%& 60k hr M-C + VQ \\
+      Distill HuBERT \cite{chang2022distilhubert} & 7-Conv, 3-Trans & 23.49M & 20ms & waveform & LS 960 hr \\%& 960 hr M-P + VQ \\
+      HuBERT Base & 7-Conv, 12-Trans & 94.68M & 20ms & waveform & LS 960 hr \\%& 960 hr M-P + VQ \\
+      HuBERT Large & 7-Conv, 24-Trans & 316.61M & 20ms & waveform & LL 60k hr\\%& 60k hr M-P + VQ \\
       \bottomrule
     \end{tabular}
     \caption{Overview of different SSL architectures used in this chapter}
@@ -48,7 +48,7 @@ Generative modeling has emerged as a prevalent approach for learning speech repr
 The Mockingjay model takes inspiration from BERT-like pretraining techniques by masking input acoustic features along the time axis and subsequently regenerating the masked frames. Expanding upon this concept, the Temporal Encoder Representations from Acoustics (TERA) model introduces an additional layer of complexity by masking bins in the frequency axis alongside the temporal axis. Finally, the Non-autoregressive Predictive Coding (NPC) model combines elements from both APC and Mockingjay by substituting the RNN in APC with a CNN layers and modifying the future frames generation process into a masked reconstruction.
 
 \subsection{Discriminative modeling}
-\begin{figure}[ht]
+\begin{figure}[t]
     \centering
     \subfigure[Illustration of the Wav2vec2 architecture taken from \cite{baevski2020wav2vec}]{\label{fig:wav2vec2}\includegraphics[width=0.48\textwidth]{imgs/wav2vec2.png}}
     \subfigure[Illustration of the HuBert architecture taken from \cite{hsu2021hubert}]{\label{fig:Hubert}\includegraphics[width=0.48\textwidth]{imgs/Hubert.png}}
@@ -109,9 +109,10 @@ The ASR downstream task was conducted using a 2-layered Bidirectional Long Short
   Model type                      & SSL upsteam    & UER$\downarrow$ & WER $\downarrow$ \\ \hline
   Hand-crafted                    & Fbanks         & 12.29\%                                                           & 35.14            \\ \hline
   \multirow{4}{*}{Generative}     & Mockingjay     & 12.49\%                                                           & 35.08\%          \\
+                                  & Audio Albert   & 12.28\%                                                           & 34.69\%          \\
+                                  & NPC   & 11.99\%                                                           & 33.07\%          \\
                                   & APC            & 11.88\%                                                           & 32.84\%          \\
-                                  & TERA           & 11.31\%                                                           & 31.80\%          \\
-                                  & Audio Albert   & 12.28\%                                                           & 34.69\%          \\ \hline
+                                  & TERA           & 11.31\%                                                           & 31.80\%          \\ \hline
   \multirow{5}{*}{Discriminative} & Wav2Vec2 Base  & 7.37\%                                                            & 19.76\%          \\
                                   & Wav2Vec2 Large & 7.00\%                                                            & 18.76\%          \\
                                   & Distill HuBERT & 9.22\%                                                            & 25.75\%          \\

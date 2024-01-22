@@ -19,7 +19,7 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Children automatic speech recognition}{\reset@font\mtcSfont 35}{section.2.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Feature extraction stage}{\reset@font\mtcSSfont 35}{subsection.2.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.2}Pronunciation and language model}{\reset@font\mtcSSfont 37}{subsection.2.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Design of acoustic models}{\reset@font\mtcSSfont 37}{subsection.2.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.3}Design of acoustic models}{\reset@font\mtcSSfont 38}{subsection.2.3.3}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.4}End-to-end models}{\reset@font\mtcSSfont 38}{subsection.2.3.4}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.5}Data augmentation}{\reset@font\mtcSSfont 39}{subsection.2.3.5}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.3.5.A}Using external data}{\reset@font\mtcSSSfont 39}{subsubsection.2.3.5.1}}

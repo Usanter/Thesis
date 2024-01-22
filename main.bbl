@@ -59,6 +59,11 @@ R.~Weide \emph{et~al.}, ``The carnegie mellon pronouncing dictionary,''
 P.~G. Shivakumar and P.~Georgiou, ``Transfer learning from adult to children
   for speech recognition: Evaluation, analysis and recommendations,'' 2018.
 
+\bibitem{tdnnf-children}
+F.~Wu, L.~P. Garc{\'\i}a-Perera, D.~Povey, and S.~Khudanpur, ``Advances in
+  automatic speech recognition for child speech using factored time delay
+  neural network.'' in \emph{Interspeech}, 2019, pp. 1--5.
+
 \bibitem{vaswani2017attention}
 A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,''
@@ -663,11 +668,6 @@ D.~Povey, G.~Cheng, Y.~Wang, K.~Li, H.~Xu, M.~Yarmohammadi, and S.~Khudanpur,
   ``Semi-orthogonal low-rank matrix factorization for deep neural networks.''
   in \emph{Interspeech}, 2018, pp. 3743--3747.
 
-\bibitem{tdnnf-children}
-F.~Wu, L.~P. Garc{\'\i}a-Perera, D.~Povey, and S.~Khudanpur, ``Advances in
-  automatic speech recognition for child speech using factored time delay
-  neural network.'' in \emph{Interspeech}, 2019, pp. 1--5.
-
 \bibitem{gelin2021endtoend}
 L.~Gelin, M.~Daniel, J.~Pinquier, and T.~Pellegrini, ``End-to-end acoustic
   modelling for phone recognition of young readers,'' \emph{Speech
@@ -1205,6 +1205,19 @@ J.~P. Neto, C.~A. Martins, H.~Meinedo, and L.~B. Almeida, ``The design of a
 K.~Paliwal, ``Spectral subband centroid features for speech recognition,'' in
   \emph{ICASSP}, vol.~2, 1998, pp. 617--620 vol.2.
 
+\bibitem{zeyer2019comparison}
+A.~Zeyer, P.~Bahar, K.~Irie, R.~Schl{\"u}ter, and H.~Ney, ``A comparison of
+  transformer and lstm encoder decoder models for asr,'' in \emph{2019 IEEE
+  Automatic Speech Recognition and Understanding Workshop (ASRU)}.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, 2019, pp. 8--15.
+
+\bibitem{zeineldeen2022conformer}
+M.~Zeineldeen, J.~Xu, C.~L{\"u}scher, W.~Michel, A.~Gerstenberger,
+  R.~Schl{\"u}ter, and H.~Ney, ``Conformer-based hybrid asr system for
+  switchboard dataset,'' in \emph{ICASSP 2022-2022 IEEE International
+  Conference on Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, 2022, pp. 7437--7441.
+
 \bibitem{luscher2019rwth}
 C.~L{\"u}scher, E.~Beck, K.~Irie, M.~Kitza, W.~Michel, A.~Zeyer,
   R.~Schl{\"u}ter, and H.~Ney, ``Rwth asr systems for librispeech: Hybrid vs
@@ -1323,8 +1336,11 @@ S.~Gandhi, P.~von Platen, and A.~M. Rush, ``Distil-whisper: Robust knowledge
   distillation via large-scale pseudo labelling,'' 2023.
 
 \bibitem{chang2022distilhubert}
-H.-J. Chang, S.~wen Yang, and H.~yi~Lee, ``Distilhubert: Speech representation
-  learning by layer-wise distillation of hidden-unit bert,'' 2022.
+H.-J. Chang, S.-w. Yang, and H.-y. Lee, ``Distilhubert: Speech representation
+  learning by layer-wise distillation of hidden-unit bert,'' in \emph{ICASSP
+  2022-2022 IEEE International Conference on Acoustics, Speech and Signal
+  Processing (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2022, pp.
+  7087--7091.
 
 \bibitem{peng23c_interspeech}
 Y.~Peng, Y.~Sudo, S.~Muhammad, and S.~Watanabe, ``{DPHuBERT: Joint Distillation
@@ -1337,6 +1353,11 @@ M.~Ravanelli, T.~Parcollet, P.~Plantinga, A.~Rouhe, S.~Cornell, L.~Lugosch,
   Fu, C.-F. Liao, E.~Rastorgueva, F.~Grondin, W.~Aris, H.~Na, Y.~Gao, R.~D.
   Mori, and Y.~Bengio, ``{SpeechBrain}: A general-purpose speech toolkit,''
   2021, arXiv:2106.04624.
+
+\bibitem{geva2020transformer}
+M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
+  are key-value memories,'' in \emph{Empirical Methods in Natural Language
+  Processing (EMNLP)}, 2021.
 
 \bibitem{Kaplan2020ScalingLF}
 \BIBentryALTinterwordspacing
@@ -1520,33 +1541,6 @@ E.~Casanova, A.~C. Junior, C.~Shulby, F.~S.~d. Oliveira, J.~P. Teixeira, M.~A.
   dataset – caito,'' 2017, accessed January 15, 2024.
   \url{https://www.caito.de/2019/01/03/the-m-ailabs-speech-dataset/}.
 
-\bibitem{pfeiffer2020adapterfusion}
-J.~Pfeiffer, A.~Kamath, A.~R{\"u}ckl{\'e}, K.~Cho, and I.~Gurevych,
-  ``Adapterfusion: Non-destructive task composition for transfer learning,''
-  \emph{arXiv preprint arXiv:2005.00247}, 2020.
-
-\bibitem{gong2022layer}
-X.~Gong, Y.~Lu, Z.~Zhou, and Y.~Qian, ``Layer-wise fast adaptation for
-  end-to-end multi-accent speech recognition,'' \emph{arXiv preprint
-  arXiv:2204.09883}, 2022.
-
-\bibitem{van2017neural}
-A.~Van Den~Oord, O.~Vinyals \emph{et~al.}, ``Neural discrete representation
-  learning,'' \emph{Advances in neural information processing systems},
-  vol.~30, 2017.
-
-\bibitem{cooper2020zero}
-E.~Cooper, C.-I. Lai, Y.~Yasuda, F.~Fang, X.~Wang, N.~Chen, and J.~Yamagishi,
-  ``Zero-shot multi-speaker text-to-speech with state-of-the-art neural speaker
-  embeddings,'' in \emph{ICASSP 2020-2020 IEEE International Conference on
-  Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2020, pp. 6184--6188.
-
-\bibitem{goodfellow2014generative}
-I.~Goodfellow, J.~Pouget-Abadie, M.~Mirza, B.~Xu, D.~Warde-Farley, S.~Ozair,
-  A.~Courville, and Y.~Bengio, ``Generative adversarial nets,'' \emph{Advances
-  in neural information processing systems}, vol.~27, 2014.
-
 \bibitem{he2022towards}
 \BIBentryALTinterwordspacing
 J.~He, C.~Zhou, X.~Ma, T.~Berg-Kirkpatrick, and G.~Neubig, ``Towards a unified
@@ -1624,11 +1618,6 @@ C.-L. Fu, Z.-C. Chen, Y.-R. Lee, and H.-y. Lee, ``{A}dapter{B}ias:
 \bibitem{pires2023one}
 T.~P. Pires, A.~V. Lopes, Y.~Assogba, and H.~Setiawan, ``One wide feedforward
   is all you need,'' \emph{arXiv preprint arXiv:2309.01826}, 2023.
-
-\bibitem{geva2020transformer}
-M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
-  are key-value memories,'' in \emph{Empirical Methods in Natural Language
-  Processing (EMNLP)}, 2021.
 
 \bibitem{hauptman2019identifying}
 Y.~Hauptman, R.~Aloni-Lavi, I.~Lapidot, T.~Gurevich, Y.~Manor, S.~Naor,

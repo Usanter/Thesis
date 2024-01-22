@@ -49,6 +49,9 @@ All of these objectives require the implementation of a robust automatic speech 
 % In this work we propose....
 In this thesis, we will undertake a comprehensive investigation into the intricacies of children's speech, closely examining the inherent differences between children and adults in the domain of ASR. Through this examination, the objective is to analyse the constraints associated with the application of adult-based systems to children's speech and, subsequently, to outline methodologies for enhancing ASR systems specifically designed to accommodate the variability present in children's speech. The overarching aim is to establish a robust foundational system that effectively addresses the recognition of children's speech characteristics.
 
+% Explain that there is no Pathological speech dataset
+%TODO change that
+The context of this thesis initially aimed at addressing pathological speech for children. However, due to constraints in data availability, specifically the absence of a meaningful pathological children's speech dataset, experiments related to pathological speech in children were not included in this thesis. The primary focus shifted towards enhancing ASR for healthy children, acknowledging the critical need for robust foundational ASR models in this demographic group. Despite the pivot towards healthy children speech, this thesis encompass an investigation into adult pathological speech detection, as detailed in Annex \ref{chapter:appendixA}.
 
 % In this thesis, we will explore why does children speech represent a significant challenge compare to  adult. How different the performer between them are and how realisable is the application of adult based methods when applied to children speech. The aim of this thesis will be to explore ways to enhance childen's ASR in order to deveelop a robust foindational system that can be deployed effectively for children with speech pathologies.
 %Therefore, the aim of this thesis is to explore ways to enhance children's ASR in order to develop a robust foundational system that can be deployed effectively for children with speech pathologies.
@@ -62,16 +65,15 @@ In this thesis, we will undertake a comprehensive investigation into the intrica
 % Research question
 %TODO Redefine research questions
 Our work specificialy aims to answer the following research questions:
-\begin{enumerate}
+\begin{enumerate} 
 \item Which knowledge transfer approach is best for efficiently modelling and improving automatic recognition of children's speech? Can these approaches be used to efficiently exploit low-resource children's speech data from multiple languages?
 \item  How do end-to-end automatic speech recognition models achieve state-of-the-art results for children's ASR when finetuned from an adult model? Particularly, what are the components that are most important to fine-tune?
-\item Is it possible to develop an speaker-based, parameter-efficient automatic speech recognition model?
+\item Is it possible to develop an parameter-efficient automatic speech recognition model for children? Can we further improve the parameter-efficiency with other architectures? 
 \item Is it possible to use children's synthetic speech to extend the amount of children's data? How can we control the quality and speakers’ variability?
 \end{enumerate}
 
 \section{Contributions}
 % State of the art exploration
-%TODO Should it be here?
 This thesis began with a thorough exploration of the current state-of-the-art of children's ASR. The primary objective was to identify the various avenues by which improvements could be envisaged throughout this thesis. The state-of-the-art review constituted a thorough examination of existing literature, research papers, and technological advancements related to children's speech processing in general. The aim was to understand the fundamental determinants that contribute to the decline in ASR performance for children's speech. By meticulously assessing current research on children speech, we identified challenges and potential areas for possible impact.
 
 %HMM-DNN contribution
