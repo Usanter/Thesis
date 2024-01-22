@@ -1589,26 +1589,6 @@ Dans ce papier, nous nous proposons d'évaluer et de comparer différentes méth
   year={2020}
 }
 
-@ARTICLE{tera,  author={Liu, Andy T. and Li, Shang-Wen and Lee, Hung-yi},  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},   title={TERA: Self-Supervised Learning of Transformer Encoder Representation for Speech},   year={2021},  volume={29},  number={},  pages={2351-2366},  doi={10.1109/TASLP.2021.3095662}}
-
-@misc{chi2021audio,
-  doi = {10.48550/ARXIV.2005.08575},
-  
-  url = {https://arxiv.org/abs/2005.08575},
-  
-  author = {Chi, Po-Han and Chung, Pei-Hung and Wu, Tsung-Han and Hsieh, Chun-Cheng and Chen, Yen-Hao and Li, Shang-Wen and Lee, Hung-yi},
-  
-  keywords = {Audio and Speech Processing (eess.AS), Computation and Language (cs.CL), Sound (cs.SD), FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {Audio ALBERT: A Lite BERT for Self-supervised Learning of Audio Representation},
-  
-  publisher = {arXiv},
-  
-  year = {2020},
-  
-  copyright = {arXiv.org perpetual, non-exclusive license}
-}
-
 @inproceedings{caseiro2002using,
   title={Using dynamic WFST composition for recognizing broadcast news},
   author={Caseiro, Diamantino and Trancoso, Isabel},
@@ -2371,13 +2351,6 @@ Dans ce papier, nous nous proposons d'évaluer et de comparer différentes méth
     doi = "10.18653/v1/2021.emnlp-main.626",
     pages = "7930--7946",
     abstract = "Transformer models are expensive to fine-tune, slow for inference, and have large storage requirements. Recent approaches tackle these shortcomings by training smaller models, dynamically reducing the model size, and by training light-weight adapters. In this paper, we propose AdapterDrop, removing adapters from lower transformer layers during training and inference, which incorporates concepts from all three directions. We show that AdapterDrop can dynamically reduce the computational overhead when performing inference over multiple tasks simultaneously, with minimal decrease in task performances. We further prune adapters from AdapterFusion, which improves the inference efficiency while maintaining the task performances entirely.",
-}
-@inproceedings{he2021towards,
-title={Towards a Unified View of Parameter-Efficient Transfer Learning},
-author={Junxian He and Chunting Zhou and Xuezhe Ma and Taylor Berg-Kirkpatrick and Graham Neubig},
-booktitle={International Conference on Learning Representations},
-year={2022},
-url={https://openreview.net/forum?id=0RDcd5Axok}
 }
 
 @article{chen2023efficient,
@@ -3222,5 +3195,54 @@ year = {2015},
   booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   pages={7087--7091},
   year={2022},
+  organization={IEEE}
+}
+
+@article{liu2021tera,
+  title={Tera: Self-supervised learning of transformer encoder representation for speech},
+  author={Liu, Andy T and Li, Shang-Wen and Lee, Hung-yi},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  volume={29},
+  pages={2351--2366},
+  year={2021},
+  publisher={IEEE}
+}
+
+@article{mockingjay,
+   title={Mockingjay: Unsupervised Speech Representation Learning with Deep Bidirectional Transformer Encoders},
+   ISBN={9781509066315},
+   url={http://dx.doi.org/10.1109/ICASSP40776.2020.9054458},
+   DOI={10.1109/icassp40776.2020.9054458},
+   journal={ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+   publisher={IEEE},
+   author={Liu, Andy T. and Yang, Shu-wen and Chi, Po-Han and Hsu, Po-chun and Lee, Hung-yi},
+   year={2020},
+   month={May}
+}
+
+@inproceedings{chung19_interspeech,
+  author={Yu-An Chung and Wei-Ning Hsu and Hao Tang and James Glass},
+  title={{An Unsupervised Autoregressive Model for Speech Representation Learning}},
+  year=2019,
+  booktitle={Proc. Interspeech 2019},
+  pages={146--150},
+  doi={10.21437/Interspeech.2019-1473}
+}
+
+@inproceedings{liu21l_interspeech,
+  author={Alexander H. Liu and Yu-An Chung and James Glass},
+  title={{Non-Autoregressive Predictive Coding for Learning Speech Representations from Local Dependencies}},
+  year=2021,
+  booktitle={Proc. Interspeech 2021},
+  pages={3730--3734},
+  doi={10.21437/Interspeech.2021-349}
+}
+
+@inproceedings{chi2021audio,
+  title={Audio albert: A lite bert for self-supervised learning of audio representation},
+  author={Chi, Po-Han and Chung, Pei-Hung and Wu, Tsung-Han and Hsieh, Chun-Cheng and Chen, Yen-Hao and Li, Shang-Wen and Lee, Hung-yi},
+  booktitle={2021 IEEE Spoken Language Technology Workshop (SLT)},
+  pages={344--350},
+  year={2021},
   organization={IEEE}
 }

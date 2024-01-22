@@ -3,7 +3,7 @@
 % !TEX root = ../main.tex
 % #############################################################################
 % Change the Name of the Chapter i the following line
-\fancychapter{Exploring Parameter-Efficient Strategies in Transfer Learning for Child-Focused ASR Systems}
+\fancychapter{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}
 \label{chap:5}
 \cleardoublepage
 
@@ -75,8 +75,7 @@ However, the application of Adapters in the context of children's ASR has receiv
 %Finally, Adapters in the context of children's ASR have received limited attention, with only one notable study by \cite{fan2022draft}, who proposed integrating and train Adapters into SSL models and subsequently fine-tuning the entire model, including the adapter weights for better modelling of children's speech. 
 %In contrast, our primary objective is to update only the adapter weights during supervised training, maintaining the parameter efficiency and modularity of adapters, without relying on semi-supervised pre-training.
 
-\section{Investigating ASR for Child Speech with Adapters}
-
+\section{Investigating Adapters for Children's ASR}
 
 \begin{figure*}[t]
     \begin{center}
@@ -93,7 +92,7 @@ However, the application of Adapters in the context of children's ASR has receiv
     \end{center}
 \end{figure*}
 
-In this section, we delve into the application of Adapter-transfer as PETL for both Transformer and Conformer architectures in the domain of children's ASR. Building upon our findings from the previous chapter, where we identified the FFN modules as the most relevant component to fine-tuning in a Transformer-based model, we opt to leverage Adapters for modifying the output of these FFN modules. Additionally, considering our results that underscore the significance of fine-tuning the Encoder, our primary emphasis will be on investigating the implementation of Adapters within the Encoder. Specifically, for the Transformer architecture, we investigate two integration methods: parallel and serial placement with the FFN component. Such configurations were used in prior work \cite{he2021towards} and are depicted in Figure \ref{fig:transformer_config}.
+In this section, we delve into the application of Adapter-transfer as PETL for both Transformer and Conformer architectures in the domain of children's ASR. Building upon our findings from the previous chapter, where we identified the FFN modules as the most relevant component to fine-tuning in a Transformer-based model, we opt to leverage Adapters for modifying the output of these FFN modules. Additionally, considering our results that underscore the significance of fine-tuning the Encoder, our primary emphasis will be on investigating the implementation of Adapters within the Encoder. Specifically, for the Transformer architecture, we investigate two integration methods: parallel and serial placement with the FFN component. Such configurations were used in prior work \cite{he2022towards} and are depicted in Figure \ref{fig:transformer_config}.
 
 In the case of the Conformer architecture, we explore six distinct Adapter configurations, as illustrated in Figure \ref{fig:conformer_config}. The initial two configurations mirror our Transformer investigation, involving both parallel and serial placements, either after or in parallel with the second FFN layer \cite{chen2023efficient}. Additionally, we assess a configuration that introduces an Adapter following the convolution module, denoted as the "serial-conv" setup used in \cite{10095837}. Notably, although the FFN component has been identified as the most crucial for fine-tuning, promising results have also been observed by fine-tuning the convolution modules \cite{chen2023efficient}. Furthermore, \cite{chen2023efficient} introduces two variants of the parallel setup: "parallel-conv," where the Adapter operates in parallel with the convolution module, and "TPA," which deploys two adapters in parallel with both FFN modules in the Conformer layer. This comprehensive exploration of Adapter configurations within both architectures aims to discern the most effective adaptation strategies for children's speech in the context of ASR. 
 

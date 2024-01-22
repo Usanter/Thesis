@@ -1,16 +1,16 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Introduction}{\reset@font\mtcSfont 101}{section.6.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Enhancing ASR Performance through TTS Data Augmentation}{\reset@font\mtcSfont 102}{section.6.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}Closing the synthetic and real mismatch gap with Adapters}{\reset@font\mtcSfont 103}{section.6.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.4}Overview of the automatic speech recognition and text-to-speechs systems}{\reset@font\mtcSfont 105}{section.6.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.1}Transformer architecture for ASR}{\reset@font\mtcSSfont 105}{subsection.6.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{\reset@font\mtcSSfont 105}{subsection.6.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.5}Experimental setup}{\reset@font\mtcSfont 107}{section.6.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.1}Real speech corpus}{\reset@font\mtcSSfont 107}{subsection.6.5.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.2}Synthetic data}{\reset@font\mtcSSfont 107}{subsection.6.5.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.3}Experiments}{\reset@font\mtcSSfont 108}{subsection.6.5.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.6}Results and discussion}{\reset@font\mtcSfont 109}{section.6.6}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.1}Comparison with existing approaches}{\reset@font\mtcSSfont 109}{subsection.6.6.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.2}Influence of synthetic number of hours}{\reset@font\mtcSSfont 110}{subsection.6.6.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.3}Impact of DWAT different hyper-parameters}{\reset@font\mtcSSfont 111}{subsection.6.6.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.4}Extension DWAT to the Conformer architecture}{\reset@font\mtcSSfont 111}{subsection.6.6.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.7}Summary and discussion}{\reset@font\mtcSfont 113}{section.6.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Introduction}{\reset@font\mtcSfont 103}{section.6.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Enhancing ASR Performance through TTS Data Augmentation}{\reset@font\mtcSfont 104}{section.6.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}Closing the synthetic and real mismatch gap with Adapters}{\reset@font\mtcSfont 105}{section.6.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.4}Overview of the automatic speech recognition and text-to-speechs systems}{\reset@font\mtcSfont 107}{section.6.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.1}Transformer architecture for ASR}{\reset@font\mtcSSfont 107}{subsection.6.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{\reset@font\mtcSSfont 107}{subsection.6.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.5}Experimental setup}{\reset@font\mtcSfont 109}{section.6.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.1}Real speech corpus}{\reset@font\mtcSSfont 109}{subsection.6.5.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.2}Synthetic data}{\reset@font\mtcSSfont 109}{subsection.6.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.5.3}Experiments}{\reset@font\mtcSSfont 110}{subsection.6.5.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.6}Results and discussion}{\reset@font\mtcSfont 111}{section.6.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.1}Comparison with existing approaches}{\reset@font\mtcSSfont 111}{subsection.6.6.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.2}Influence of synthetic number of hours}{\reset@font\mtcSSfont 112}{subsection.6.6.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.3}Impact of DWAT different hyper-parameters}{\reset@font\mtcSSfont 113}{subsection.6.6.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.6.4}Extension DWAT to the Conformer architecture}{\reset@font\mtcSSfont 113}{subsection.6.6.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.7}Summary and discussion}{\reset@font\mtcSfont 115}{section.6.7}}

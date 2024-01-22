@@ -1,26 +1,26 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.1}Introduction}{\reset@font\mtcSfont 161}{section.A.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.2}Pathological speech detection using x-vector embeddings}{\reset@font\mtcSfont 162}{section.A.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.1}Introduction}{\reset@font\mtcSSfont 162}{subsection.A.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.2}Speaker embeddings: i-vector and x-vector}{\reset@font\mtcSSfont 162}{subsection.A.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.3}Experimental setup}{\reset@font\mtcSSfont 163}{subsection.A.2.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.2.3.A}Corpora}{\reset@font\mtcSSSfont 163}{subsubsection.A.2.3.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.2.3.B}Knowledge based features}{\reset@font\mtcSSSfont 164}{subsubsection.A.2.3.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.2.3.C}Speaker embeddings}{\reset@font\mtcSSSfont 164}{subsubsection.A.2.3.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.4}Results}{\reset@font\mtcSSfont 165}{subsection.A.2.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{\reset@font\mtcSfont 166}{section.A.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.1}Introduction}{\reset@font\mtcSSfont 166}{subsection.A.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.2}Corpus}{\reset@font\mtcSSfont 167}{subsection.A.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.3}Proposed system}{\reset@font\mtcSSfont 167}{subsection.A.3.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.3.3.A}Acoustics modality}{\reset@font\mtcSSSfont 167}{subsubsection.A.3.3.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.3.3.B}Linguistic modality}{\reset@font\mtcSSSfont 168}{subsubsection.A.3.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.4}Results}{\reset@font\mtcSSfont 169}{subsection.A.3.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{\reset@font\mtcSfont 171}{section.A.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.1}Introduction}{\reset@font\mtcSSfont 171}{subsection.A.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.2}Corpora}{\reset@font\mtcSSfont 172}{subsection.A.4.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.3}Proposed system}{\reset@font\mtcSSfont 172}{subsection.A.4.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.A}TDNN-F embedddings}{\reset@font\mtcSSSfont 172}{subsubsection.A.4.3.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.B}CNN embedddings}{\reset@font\mtcSSSfont 173}{subsubsection.A.4.3.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.C}PASE+ embedddings}{\reset@font\mtcSSSfont 173}{subsubsection.A.4.3.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.D}COVID-19 condition classification}{\reset@font\mtcSSSfont 174}{subsubsection.A.4.3.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.4}Results}{\reset@font\mtcSSfont 174}{subsection.A.4.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.5}Conclusion and future work}{\reset@font\mtcSfont 175}{section.A.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.1}Introduction}{\reset@font\mtcSfont 167}{section.A.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.2}Pathological speech detection using x-vector embeddings}{\reset@font\mtcSfont 168}{section.A.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.1}Introduction}{\reset@font\mtcSSfont 168}{subsection.A.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.2}Speaker embeddings: i-vector and x-vector}{\reset@font\mtcSSfont 168}{subsection.A.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.3}Experimental setup}{\reset@font\mtcSSfont 169}{subsection.A.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.2.3.A}Corpora}{\reset@font\mtcSSSfont 169}{subsubsection.A.2.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.2.3.B}Knowledge based features}{\reset@font\mtcSSSfont 170}{subsubsection.A.2.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.2.3.C}Speaker embeddings}{\reset@font\mtcSSSfont 170}{subsubsection.A.2.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.2.4}Results}{\reset@font\mtcSSfont 171}{subsection.A.2.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{\reset@font\mtcSfont 172}{section.A.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.1}Introduction}{\reset@font\mtcSSfont 172}{subsection.A.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.2}Corpus}{\reset@font\mtcSSfont 173}{subsection.A.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.3}Proposed system}{\reset@font\mtcSSfont 173}{subsection.A.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.3.3.A}Acoustics modality}{\reset@font\mtcSSSfont 173}{subsubsection.A.3.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.3.3.B}Linguistic modality}{\reset@font\mtcSSSfont 174}{subsubsection.A.3.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.3.4}Results}{\reset@font\mtcSSfont 175}{subsection.A.3.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{\reset@font\mtcSfont 177}{section.A.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.1}Introduction}{\reset@font\mtcSSfont 177}{subsection.A.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.2}Corpora}{\reset@font\mtcSSfont 178}{subsection.A.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.3}Proposed system}{\reset@font\mtcSSfont 178}{subsection.A.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.A}TDNN-F embedddings}{\reset@font\mtcSSSfont 178}{subsubsection.A.4.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.B}CNN embedddings}{\reset@font\mtcSSSfont 179}{subsubsection.A.4.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.C}PASE+ embedddings}{\reset@font\mtcSSSfont 179}{subsubsection.A.4.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {A.4.3.D}COVID-19 condition classification}{\reset@font\mtcSSSfont 180}{subsubsection.A.4.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {A.4.4}Results}{\reset@font\mtcSSfont 180}{subsection.A.4.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {A.5}Conclusion and future work}{\reset@font\mtcSfont 181}{section.A.5}}

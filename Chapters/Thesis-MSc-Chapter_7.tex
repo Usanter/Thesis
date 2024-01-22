@@ -63,7 +63,7 @@ During our experiments, all Conv-Adapters and ConvPass configurations were train
 %Alternatively is possibe to use a fully CNN-based Adapter. Called ConvPass, it was found effective for computer vision tasks \cite{jie2022convolutional}. ConvPass differ from regular Adapter and previously mentioned Conv-Adapter as the up and down linear layers were removed and replaced with three CNN layers, a $1 \times 1$ followed by a $3 \times 3$ and finally a $1 \times 1$ with GELU activation in between them. In speech, a similar approach was proposed by  \cite{li2023evaluating}. The speech ConvPass, presented in figure \ref{fig:convpass}, consist of layer normalisation layer, followed by 3 lightweight 1-dimensional CNN with kernel size of 3, 5 and 3 respectively along with a squeeze and excite module. Squeeze and excite module \cite{hu2018squeeze} allows a feature recalibration and is consisted of a global pooling, one linear layer, a Relu activation and second linear layer followed by a Sigmoid.
 
 \subsection{BitFit}
-Bias-Term Fine-Tuning, known as BitFit, is a PETL method introduced by \cite{ben-zaken-etal-2022-bitfit} for NLP tasks. The main idea behind BitFit is to fine-tune only the bias terms and the task-specific classification layer while keeping the rest of the model frozen. This approach aims to achieve efficient fine-tuning with reduced computational requirements in a similar way as our partial fine-tuning experiments in chapter \ref{chap:e2e}. The fine-tuning of bias terms can be seen as introducing a task-specific shift to the token representations.
+Bias-Term Fine-Tuning, known as BitFit, is a PETL method introduced by \cite{ben-zaken-etal-2022-bitfit} for NLP tasks. The main idea behind BitFit is to fine-tune only the bias terms and the task-specific classification layer while keeping the rest of the model frozen. This approach aims to achieve efficient fine-tuning with reduced computational requirements in a similar way as our partial fine-tuning experiments in chapter \ref{chap:4}. The fine-tuning of bias terms can be seen as introducing a task-specific shift to the token representations.
 
 %Advantages of Bitfit
 The authors highlight three key properties of BitFit. Firstly, it matches of a fully fine-tuned model, showcasing its ability to maintain comparable results while significantly reducing the number of parameters to be trained. Secondly, BitFit is designed to adapt to tasks arriving sequentially, eliminating the need for simultaneous access to all datasets. This adaptability enhances the model's versatility in handling diverse tasks with varying data distributions over time. Thirdly, BitFit exhibits parameter efficiency by fine-tuning only a small subset of the model's parameters.
@@ -154,8 +154,7 @@ Moving to bias shift methods, including BitFit, SSF, and AdapterBias, these appr
 % Summary
 In summary, the traditional residual Adapter emerges as the most effective PETL approach for children's ASR. This finding aligns with recent research, as highlighted in studies such as \cite{li2023evaluating} and \cite{cappellazzo2023parameter}, which also affirm the superior performance of Adapters in PETL for ASR tasks. Moreover, our findings highlight a noticeable trade-off between the number of parameters and the WER. Specifically, approaches employing fewer than a million parameters do not exhibit comparable performances to entire model fine-tuning, as illustrated explicitly in Figure \ref{fig:adapter_compared_withoutWide}. This trade-off emphasises the need for more research on the development of PETL methods that can effectively use fewer parameters while simultaneously maintaining or enhancing performance in the domain of children's ASR.
 
-\section{New type of Adapter: The Shared Adapter}
-
+\section{Advancement in Adapters: Introducing Shared-Adapters}
 \subsection{Motivation}
 % Goal PETL- Good score, small |param|
 The primary objective of PETL is to either maintain or surpass the performance achieved through full fine-tuning of a pre-trained model, while minimising the number of parameters employed during training. In previous section, the efficiency of residual Adapters has been underscored. Remarkably, using only 10\% of the total number of parameters compared to the fine-tuning of the entire model, these residual Adapters exhibit superior performances in the context of children's ASR. In addition, our experiments highlighted the drawback of overparameterisation present in Transformer-based models.
@@ -180,19 +179,27 @@ In light of the success observed with the shared FFN in the encoder, we hypothes
 \end{equation}
 
 \subsection{Experimental setup}
-\begin{figure}
-    \begin{center}
-        \includegraphics[scale=0.3]{imgs/Shared_Adapters.png}
-        \caption{Shared-Adapter setup in a Conformer model}
-        \label{fig:Shared_adapter}
-    \end{center}
+\begin{figure}[t]
+    \centering
+    \subfigure[Shared-Adapter setup in a Conformer model]{\label{fig:Shared_adapter}\includegraphics[width=0.45\textwidth]{imgs/Shared_Adapters.png}}
+    \subfigure[Extremly Shared-Adapter setup in a Conformer model]{\label{fig:extrem_adapter}\includegraphics[width=0.48\textwidth]{imgs/Extreme_shared_adapter.png}}
+    \caption{Overview of the Shared Adapters configurations}
 \end{figure}
+
+
+%\begin{figure}
+%    \begin{center}
+%        \includegraphics[scale=0.7]{imgs/Shared_Adapters.png}
+%        \caption{Shared-Adapter setup in a Conformer model}
+%        \label{fig:Shared_adapter}
+%    \end{center}
+%\end{figure}
 In our analysis, we focus on evaluating the performance of the Shared-Adapter using the same setting as the TPA configuration for traditional Adapters. Specifically, we assess the Shared-Adapter within a Conformer ASR model, where the two Shared-Adapters are directly integrated into the two FFN modules at each layer as shown in Figure \ref{fig:Shared_adapter}.  The hidden dimension of the Shared-Adapters is set to 512. The Conformer model comprises 12 conformer layers followed by 6 Transformer layers, and for this experiment, we exclusively evaluate the Shared-Adapter in the Encoder.
 To quantify the reduction ofn umber of parameters used in the Shared-Adapter compared to the traditional Adapter, the following formula is used:
 \begin{equation}
     \text{Number of Parameters in Shared-Adapter} = \frac{\text{Number of Parameters of all traditional Adapters}}{\text{Number of Layers}}
 \end{equation}
-For our experimental setup, the traditional A,dapter use approximately 12.6 million of parameters. Therefore, the number of parameters trained for the Shared-Adapter transfer is about 1.1 million. This corresponds to a significant reduction, as the Shared-Adapter use only 11\% of the parameter count compared to the traditional Adapter, which already represented approximately 10\% of the total parameters used in the entire model fine-tuning, therefore, compare to the entire model finetuning, the shared-adapter configuration use 1\% of the amount of trainable parameters.
+For our experimental setup, the traditional Adapter use approximately 12.6 million of parameters. Therefore, the number of parameters trained for the Shared-Adapter transfer is about 1.1 million. This corresponds to a significant reduction, as the Shared-Adapter use only 11\% of the parameter count compared to the traditional Adapter, which already represented approximately 10\% of the total parameters used in the entire model fine-tuning, therefore, compare to the entire model finetuning, the shared-adapter configuration use 1\% of the amount of trainable parameters.
 For training the model, we use 30 epochs with a learning rate set to $8 \times 10^{-4}$. 
 
 \subsection{Results}
@@ -204,6 +211,22 @@ For training the model, we use 30 epochs with a learning rate set to $8 \times 1
         \label{fig:adapter_compared}
     \end{center}
 \end{figure}
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{l c c c}
+        \textbf{Config} & \textbf{WER} & \textbf{Parameters} \\
+        \hline
+        Extreme Shared-Adapter  512& 12.31\% & 526.3K \\ \hline
+        Shared-Adapter 128 & 12.74\% & 265.5K \\
+        Shared-Adapter 1024 & 11.90\% & 2.1M \\
+        Shared-Adapter 2048 & 11.86\% & 4.2M \\
+        Shared-Adapter 4096 & 11.83\% & 8.4M \\
+        Shared-Adapter 6144 & 11.88\% & 12.6M \\ \hline
+    \end{tabular}
+    \caption{WER and Parameters for Different Shared-Adapter Hidden dimension}
+    \label{tab:shared_adapter_results}
+\end{table}
+
 
 
 \section{Summary and discussion}
@@ -216,4 +239,4 @@ Crucially, the optimal balance was observed when PETL methods used approximately
 Additionally, we introduced a novel PETL approach, the Shared-Adapter. Leveraging the inherent redundancy of FFN modules in between in the different Transformer layers. Our experimental evaluations demonstrated that Shared-Adapters represent a breakthrough in parameter efficiency while maintaining high accuracy in children's ASR. Notably, while conventional PETL methods typically required around 10\% of the total model parameters, Shared-Adapters excelled by achieving comparable accuracy with only 1\% of the parameters. Pushing the boundaries even further, we explored the extreme scenario of using the Extreme Shared-Adapters configuration with a mere 0.5\% of the model's total parameters, yet still achieving performance levels similar to full-model fine-tuning. Our approach eliminates the need of the aforementioned tradeoff, offering a pathway to obtain superior parameter efficiency without compromising accuracy.
 
 % Discussion
-The remarkable success of the Shared-Adapter approach underscores the significant redundancy inherent in the FFN modules across different layers. This new understanding is pivotal for advancing the development of more efficient, computationally compact ASR models. Future research directions could explore the creation of a novel Transformer architecture designed to address the observed redundancy, providing an architecture that is inherently more easy to fine-tuning for children's ASR or even in speaker-specific tasks. Additionally, investigating a new approach that incorporates both Shared and non-Shared Adapters represents another avenue for potential advancements in the field. These avenues hold promise for enhancing the efficiency and robustness of ASR models, particularly in contexts with limited data, such as children's speech recognition.
+The remarkable success of the Shared-Adapter approach underscores the significant redundancy of the FFN modules across different layers. This new understanding is pivotal for advancing the development of more efficient, computationally compact ASR models. Future research directions could explore the creation of a novel Transformer architecture designed to address the observed redundancy, providing an architecture that is inherently more easy to fine-tuning for children's ASR or even in speaker-specific tasks. Additionally, investigating a new approach that incorporates both Shared and non-Shared Adapters represents another avenue for potential advancements in the field. These avenues hold promise for enhancing the efficiency and robustness of ASR models, particularly in contexts with limited data, such as children's speech recognition.

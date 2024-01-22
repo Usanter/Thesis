@@ -1,0 +1,154 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Context}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Problem statement}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contributions}{7}{section.1.3}
+\contentsline {section}{\numberline {1.4}Structure for the thesis}{8}{section.1.4}
+\contentsline {chapter}{\numberline {2}Background - Children automatic speech recognition}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Children speech recognition challenges}{14}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Speech variability}{14}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Language and phonetic knowledge}{17}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Data scarcity}{19}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Introduction to automatic speech recognition}{21}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}A brief history of Automatic Speech Recognition}{21}{subsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1.A}Early Days}{21}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.B}The Speech Understanding Research program}{22}{subsubsection.2.2.1.2}
+\contentsline {subsection}{\numberline {2.2.2}Traditional automatic speech recognition systems}{24}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.A}Feature extraction}{26}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.B}Acoustic model}{28}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.C}Pronunciation model}{29}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.D}Language model}{30}{subsubsection.2.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.2.E}Decoder}{32}{subsubsection.2.2.2.5}
+\contentsline {subsection}{\numberline {2.2.3}End-to-end automatic speech recognition}{33}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.A}Connectionist Temporal Classification}{34}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.B}Sequence to sequence}{35}{subsubsection.2.2.3.2}
+\contentsline {subsection}{\numberline {2.2.4}Automatic Speech Recognition metrics}{36}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Children automatic speech recognition}{37}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Feature extraction stage}{37}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Pronunciation and language model}{39}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Design of acoustic models}{40}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}End-to-end models}{40}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Data augmentation}{41}{subsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.5.A}Using external data}{41}{subsubsection.2.3.5.1}
+\contentsline {subsubsection}{\numberline {2.3.5.B}Using available data}{42}{subsubsection.2.3.5.2}
+\contentsline {subsection}{\numberline {2.3.6}Training procedure for children speech recognition}{43}{subsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.6.A}Transfer learning}{43}{subsubsection.2.3.6.1}
+\contentsline {subsubsection}{\numberline {2.3.6.B}Multi-task learning}{46}{subsubsection.2.3.6.2}
+\contentsline {subsubsection}{\numberline {2.3.6.C}Self-supervised Learning}{47}{subsubsection.2.3.6.3}
+\contentsline {section}{\numberline {2.4}Children Corpora}{48}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}LETSREAD}{50}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}PFSTAR\_SWEDISH}{50}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}ETLTDE}{50}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}CMU\_KIDS}{50}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}CHOREC}{51}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}MyST}{51}{subsection.2.4.6}
+\contentsline {section}{\numberline {2.5}Summary}{51}{section.2.5}
+\contentsline {chapter}{\numberline {3}Hybrid models for children automatic speech recognition}{53}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{55}{section.3.1}
+\contentsline {section}{\numberline {3.2}Factorised Time Delay Neural Network for children ASR}{56}{section.3.2}
+\contentsline {section}{\numberline {3.3}Assessing the efficacy of multi-task and transfer learning from adult to children}{57}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Methodology}{57}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Corpus}{58}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Experimental setup}{59}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Results}{59}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Summary and discussion}{60}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Combining multi-task and transfer learning using multilingual children data}{61}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Motivation}{61}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}The Multilingual-transfer learning approach}{61}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Experimental Setup}{63}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Multilingual-transfer learning experiment}{63}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Cross-lingual validation}{65}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Summary and discussion}{66}{section.3.5}
+\contentsline {chapter}{\numberline {4}End-to-End children automatic speech recognition}{69}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{71}{section.4.1}
+\contentsline {section}{\numberline {4.2}Transformer model}{72}{section.4.2}
+\contentsline {section}{\numberline {4.3}Conformer model}{74}{section.4.3}
+\contentsline {section}{\numberline {4.4}Understand transfer learning efficacy for transformer based models}{76}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Partial Transfer learning}{77}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Experimental setup}{78}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Corpus}{78}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Implementation details}{78}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Encoder-Decoder Transfer learning}{79}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.4.6}Modules Transfer learning}{81}{subsection.4.4.6}
+\contentsline {section}{\numberline {4.5}Summary and discussion}{84}{section.4.5}
+\contentsline {chapter}{\numberline {5}Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{87}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{89}{section.5.1}
+\contentsline {section}{\numberline {5.2}Adapter tuning}{90}{section.5.2}
+\contentsline {section}{\numberline {5.3}Investigating Adapters for Children's ASR}{92}{section.5.3}
+\contentsline {section}{\numberline {5.4}Implementation details}{94}{section.5.4}
+\contentsline {section}{\numberline {5.5}Results}{95}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Configurations}{95}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Effect of the Adapter hidden dimension}{96}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Unsupervised clustering for grouped-speaker Adapters}{97}{subsection.5.5.3}
+\contentsline {section}{\numberline {5.6}Summary and discussion}{98}{section.5.6}
+\contentsline {chapter}{\numberline {6}Integration of synthetic speech for data augmentation}{101}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{103}{section.6.1}
+\contentsline {section}{\numberline {6.2}Enhancing ASR Performance through TTS Data Augmentation}{104}{section.6.2}
+\contentsline {section}{\numberline {6.3}Closing the synthetic and real mismatch gap with Adapters}{105}{section.6.3}
+\contentsline {section}{\numberline {6.4}Overview of the automatic speech recognition and text-to-speechs systems}{107}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{107}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{107}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Experimental setup}{109}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Real speech corpus}{109}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Synthetic data}{109}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Experiments}{110}{subsection.6.5.3}
+\contentsline {section}{\numberline {6.6}Results and discussion}{111}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{111}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Influence of synthetic number of hours}{112}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Impact of DWAT different hyper-parameters}{113}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{113}{subsection.6.6.4}
+\contentsline {section}{\numberline {6.7}Summary and discussion}{115}{section.6.7}
+\contentsline {chapter}{\numberline {7}Alternative approaches to parameter-efficient transfer learning}{117}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{119}{section.7.1}
+\contentsline {section}{\numberline {7.2}Exploring PETL literature alternatives}{119}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Scaled Adapters}{119}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Convolution based Adapters}{120}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}BitFit}{121}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Scale and Shift features}{122}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.5}AdapterBias}{123}{subsection.7.2.5}
+\contentsline {subsection}{\numberline {7.2.6}Results of the different PETL methods}{124}{subsection.7.2.6}
+\contentsline {section}{\numberline {7.3}Advancement in Adapters: Introducing Shared-Adapters}{126}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Motivation}{126}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Experimental setup}{127}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Results}{128}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.4}Summary and discussion}{129}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusions}{131}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{133}{section.8.1}
+\contentsline {section}{\numberline {8.2}Perspectives}{135}{section.8.2}
+\contentsline {chapter}{Bibliography}{137}{section*.57}
+\contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{167}{appendix.A}
+\contentsline {section}{\numberline {A.1}Introduction}{167}{section.A.1}
+\contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{168}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Introduction}{168}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Speaker embeddings: i-vector and x-vector}{168}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Experimental setup}{169}{subsection.A.2.3}
+\contentsline {subsubsection}{\numberline {A.2.3.A}Corpora}{169}{subsubsection.A.2.3.1}
+\contentsline {subsubsection}{\numberline {A.2.3.B}Knowledge based features}{170}{subsubsection.A.2.3.2}
+\contentsline {subsubsection}{\numberline {A.2.3.C}Speaker embeddings}{170}{subsubsection.A.2.3.3}
+\contentsline {subsection}{\numberline {A.2.4}Results}{171}{subsection.A.2.4}
+\contentsline {section}{\numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{172}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Introduction}{172}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Corpus}{173}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.3.3}Proposed system}{173}{subsection.A.3.3}
+\contentsline {subsubsection}{\numberline {A.3.3.A}Acoustics modality}{173}{subsubsection.A.3.3.1}
+\contentsline {subsubsection}{\numberline {A.3.3.B}Linguistic modality}{174}{subsubsection.A.3.3.2}
+\contentsline {subsection}{\numberline {A.3.4}Results}{175}{subsection.A.3.4}
+\contentsline {section}{\numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{177}{section.A.4}
+\contentsline {subsection}{\numberline {A.4.1}Introduction}{177}{subsection.A.4.1}
+\contentsline {subsection}{\numberline {A.4.2}Corpora}{178}{subsection.A.4.2}
+\contentsline {subsection}{\numberline {A.4.3}Proposed system}{178}{subsection.A.4.3}
+\contentsline {subsubsection}{\numberline {A.4.3.A}TDNN-F embedddings}{178}{subsubsection.A.4.3.1}
+\contentsline {subsubsection}{\numberline {A.4.3.B}CNN embedddings}{179}{subsubsection.A.4.3.2}
+\contentsline {subsubsection}{\numberline {A.4.3.C}PASE+ embedddings}{179}{subsubsection.A.4.3.3}
+\contentsline {subsubsection}{\numberline {A.4.3.D}COVID-19 condition classification}{180}{subsubsection.A.4.3.4}
+\contentsline {subsection}{\numberline {A.4.4}Results}{180}{subsection.A.4.4}
+\contentsline {section}{\numberline {A.5}Conclusion and future work}{181}{section.A.5}
+\contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's ASR}{183}{appendix.B}
+\contentsline {section}{\numberline {B.1}Introduction}{183}{section.B.1}
+\contentsline {section}{\numberline {B.2}Self-supervised pre-trained models}{184}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{184}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Discriminative modeling}{185}{subsection.B.2.2}
+\contentsline {section}{\numberline {B.3}Experimental setup}{186}{section.B.3}
+\contentsline {section}{\numberline {B.4}Results}{187}{section.B.4}
+\contentsline {section}{\numberline {B.5}Analysis of the extracted features}{187}{section.B.5}
+\contentsline {section}{\numberline {B.6}Conclusions and future work}{189}{section.B.6}

@@ -1205,6 +1205,12 @@ J.~P. Neto, C.~A. Martins, H.~Meinedo, and L.~B. Almeida, ``The design of a
 K.~Paliwal, ``Spectral subband centroid features for speech recognition,'' in
   \emph{ICASSP}, vol.~2, 1998, pp. 617--620 vol.2.
 
+\bibitem{babu2021xlsr}
+A.~Babu, C.~Wang, A.~Tjandra, K.~Lakhotia, Q.~Xu, N.~Goyal, K.~Singh, P.~von
+  Platen, Y.~Saraf, J.~Pino, A.~Baevski, A.~Conneau, and M.~Auli, ``Xls-r:
+  Self-supervised cross-lingual speech representation learning at scale,''
+  \emph{arXiv}, vol. abs/2111.09296, 2021.
+
 \bibitem{zeyer2019comparison}
 A.~Zeyer, P.~Bahar, K.~Irie, R.~Schl{\"u}ter, and H.~Ney, ``A comparison of
   transformer and lstm encoder decoder models for asr,'' in \emph{2019 IEEE
@@ -1438,7 +1444,7 @@ K.~Tomanek, V.~Zayats, D.~Padfield, K.~Vaillancourt, and F.~Biadsy, ``Residual
   adapters for parameter-efficient asr adaptation to atypical and accented
   speech,'' \emph{arXiv preprint arXiv:2109.06952}, 2021.
 
-\bibitem{he2021towards}
+\bibitem{he2022towards}
 \BIBentryALTinterwordspacing
 J.~He, C.~Zhou, X.~Ma, T.~Berg-Kirkpatrick, and G.~Neubig, ``Towards a unified
   view of parameter-efficient transfer learning,'' in \emph{International
@@ -1540,14 +1546,6 @@ E.~Casanova, A.~C. Junior, C.~Shulby, F.~S.~d. Oliveira, J.~P. Teixeira, M.~A.
 {Munich Artificial Intelligence Laboratories GmbH}, ``The mailabs speech
   dataset – caito,'' 2017, accessed January 15, 2024.
   \url{https://www.caito.de/2019/01/03/the-m-ailabs-speech-dataset/}.
-
-\bibitem{he2022towards}
-\BIBentryALTinterwordspacing
-J.~He, C.~Zhou, X.~Ma, T.~Berg-Kirkpatrick, and G.~Neubig, ``Towards a unified
-  view of parameter-efficient transfer learning,'' in \emph{International
-  Conference on Learning Representations}, 2022. [Online]. Available:
-  \url{https://openreview.net/forum?id=0RDcd5Axok}
-\BIBentrySTDinterwordspacing
 
 \bibitem{yang23p_interspeech}
 L.-J. Yang, C.-H.~H. Yang, and J.-T. Chien, ``{Parameter-Efficient Learning for
@@ -1889,6 +1887,36 @@ X.~Chang, T.~Maekaku, P.~Guo, J.~Shi, Y.-J. Lu, A.~S. Subramanian, T.~Wang,
   Understanding Workshop (ASRU)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2021, pp. 228--235.
 
+\bibitem{mockingjay}
+\BIBentryALTinterwordspacing
+A.~T. Liu, S.-w. Yang, P.-H. Chi, P.-c. Hsu, and H.-y. Lee, ``Mockingjay:
+  Unsupervised speech representation learning with deep bidirectional
+  transformer encoders,'' \emph{ICASSP 2020 - 2020 IEEE International
+  Conference on Acoustics, Speech and Signal Processing (ICASSP)}, May 2020.
+  [Online]. Available: \url{http://dx.doi.org/10.1109/ICASSP40776.2020.9054458}
+\BIBentrySTDinterwordspacing
+
+\bibitem{chi2021audio}
+P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
+  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
+  representation,'' in \emph{2021 IEEE Spoken Language Technology Workshop
+  (SLT)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2021, pp. 344--350.
+
+\bibitem{liu21l_interspeech}
+A.~H. Liu, Y.-A. Chung, and J.~Glass, ``{Non-Autoregressive Predictive Coding
+  for Learning Speech Representations from Local Dependencies},'' in
+  \emph{Proc. Interspeech 2021}, 2021, pp. 3730--3734.
+
+\bibitem{chung19_interspeech}
+Y.-A. Chung, W.-N. Hsu, H.~Tang, and J.~Glass, ``{An Unsupervised
+  Autoregressive Model for Speech Representation Learning},'' in \emph{Proc.
+  Interspeech 2019}, 2019, pp. 146--150.
+
+\bibitem{liu2021tera}
+A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
+  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
+  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
+
 \bibitem{librilight}
 J.~{Kahn}, M.~{Rivière}, W.~{Zheng}, E.~{Kharitonov}, Q.~{Xu}, P.~E.
   {Mazaré}, J.~{Karadayi}, V.~{Liptchinsky}, R.~{Collobert}, C.~{Fuegen},
@@ -1897,19 +1925,6 @@ J.~{Kahn}, M.~{Rivière}, W.~{Zheng}, E.~{Kharitonov}, Q.~{Xu}, P.~E.
   \emph{ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech
   and Signal Processing (ICASSP)}, 2020, pp. 7669--7673,
   \url{https://github.com/facebookresearch/libri-light}.
-
-\bibitem{tera}
-A.~T. Liu, S.-W. Li, and H.-y. Lee, ``Tera: Self-supervised learning of
-  transformer encoder representation for speech,'' \emph{IEEE/ACM Transactions
-  on Audio, Speech, and Language Processing}, vol.~29, pp. 2351--2366, 2021.
-
-\bibitem{chi2021audio}
-\BIBentryALTinterwordspacing
-P.-H. Chi, P.-H. Chung, T.-H. Wu, C.-C. Hsieh, Y.-H. Chen, S.-W. Li, and H.-y.
-  Lee, ``Audio albert: A lite bert for self-supervised learning of audio
-  representation,'' 2020. [Online]. Available:
-  \url{https://arxiv.org/abs/2005.08575}
-\BIBentrySTDinterwordspacing
 
 \bibitem{mcauliffe2017montreal}
 M.~McAuliffe, M.~Socolof, S.~Mihuc, M.~Wagner, and M.~Sonderegger, ``Montreal
@@ -1920,11 +1935,5 @@ M.~McAuliffe, M.~Socolof, S.~Mihuc, M.~Wagner, and M.~Sonderegger, ``Montreal
 L.~Gelin, ``Reconnaissance automatique de la parole d'enfants apprenant·e·s
   lecteur·ice·s en salle de classe : modélisation acoustique de phonèmes,''
   Ph.D. dissertation, 02 2022.
-
-\bibitem{babu2021xlsr}
-A.~Babu, C.~Wang, A.~Tjandra, K.~Lakhotia, Q.~Xu, N.~Goyal, K.~Singh, P.~von
-  Platen, Y.~Saraf, J.~Pino, A.~Baevski, A.~Conneau, and M.~Auli, ``Xls-r:
-  Self-supervised cross-lingual speech representation learning at scale,''
-  \emph{arXiv}, vol. abs/2111.09296, 2021.
 
 \end{thebibliography}
