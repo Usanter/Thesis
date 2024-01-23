@@ -33,13 +33,13 @@
 \contentsline {subsubsection}{\numberline {2.3.5.B}Using available data}{42}{subsubsection.2.3.5.2}
 \contentsline {subsection}{\numberline {2.3.6}Training procedure for children speech recognition}{43}{subsection.2.3.6}
 \contentsline {subsubsection}{\numberline {2.3.6.A}Transfer learning}{43}{subsubsection.2.3.6.1}
-\contentsline {subsubsection}{\numberline {2.3.6.B}Multi-task learning}{46}{subsubsection.2.3.6.2}
+\contentsline {subsubsection}{\numberline {2.3.6.B}Multi-task learning}{47}{subsubsection.2.3.6.2}
 \contentsline {subsubsection}{\numberline {2.3.6.C}Self-supervised Learning}{47}{subsubsection.2.3.6.3}
 \contentsline {section}{\numberline {2.4}Children Corpora}{48}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}LETSREAD}{50}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}PFSTAR\_SWEDISH}{50}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}ETLTDE}{50}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}CMU\_KIDS}{50}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.1}LETSREAD}{49}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}PFSTAR\_SWEDISH}{49}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}ETLTDE}{49}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}CMU\_KIDS}{51}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}CHOREC}{51}{subsection.2.4.5}
 \contentsline {subsection}{\numberline {2.4.6}MyST}{51}{subsection.2.4.6}
 \contentsline {section}{\numberline {2.5}Summary}{51}{section.2.5}
@@ -63,7 +63,7 @@
 \contentsline {section}{\numberline {4.1}Introduction}{71}{section.4.1}
 \contentsline {section}{\numberline {4.2}Transformer model}{72}{section.4.2}
 \contentsline {section}{\numberline {4.3}Conformer model}{74}{section.4.3}
-\contentsline {section}{\numberline {4.4}Understand transfer learning efficacy for transformer based models}{76}{section.4.4}
+\contentsline {section}{\numberline {4.4}Understand transfer learning efficacy for Transformer based models}{76}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Partial Transfer learning}{77}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Experimental setup}{78}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Corpus}{78}{subsection.4.4.3}
@@ -115,7 +115,7 @@
 \contentsline {chapter}{\numberline {8}Conclusions}{131}{chapter.8}
 \contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{133}{section.8.1}
 \contentsline {section}{\numberline {8.2}Perspectives}{135}{section.8.2}
-\contentsline {chapter}{Bibliography}{137}{section*.57}
+\contentsline {chapter}{Bibliography}{137}{section*.125}
 \contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{167}{appendix.A}
 \contentsline {section}{\numberline {A.1}Introduction}{167}{section.A.1}
 \contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{168}{section.A.2}

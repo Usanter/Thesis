@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 20410 items from 5000.
+Reallocated field_info (elt_size=4) to 20456 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
@@ -24,45 +24,45 @@ Warning--empty journal in veaux2016superseded
 Warning--missing school in phdthesis
 
 Done.
-You've used 335 entries,
+You've used 336 entries,
             4087 wiz_defined-function locations,
-            2479 strings with 82963 characters,
-and the built_in function-call counts, 268568 in all, are:
-= -- 20165
-> -- 8372
-< -- 1908
-+ -- 4459
-- -- 1647
-* -- 12759
-:= -- 37918
-add.period$ -- 742
-call.type$ -- 335
-change.case$ -- 349
+            2486 strings with 83153 characters,
+and the built_in function-call counts, 269081 in all, are:
+= -- 20210
+> -- 8385
+< -- 1909
++ -- 4465
+- -- 1650
+* -- 12787
+:= -- 38016
+add.period$ -- 744
+call.type$ -- 336
+change.case$ -- 350
 chr.to.int$ -- 4668
-cite$ -- 344
-duplicate$ -- 19346
-empty$ -- 22542
-format.name$ -- 1950
-if$ -- 63461
+cite$ -- 345
+duplicate$ -- 19387
+empty$ -- 22582
+format.name$ -- 1954
+if$ -- 63573
 int.to.chr$ -- 0
-int.to.str$ -- 335
-missing$ -- 3717
-newline$ -- 1080
-num.names$ -- 349
-pop$ -- 9584
+int.to.str$ -- 336
+missing$ -- 3725
+newline$ -- 1085
+num.names$ -- 350
+pop$ -- 9602
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 20543
+skip$ -- 20583
 stack$ -- 0
-substring$ -- 11482
-swap$ -- 15285
-text.length$ -- 352
+substring$ -- 11483
+swap$ -- 15312
+text.length$ -- 353
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 335
+type$ -- 336
 warning$ -- 9
-while$ -- 1061
-width$ -- 338
-write$ -- 3125
+while$ -- 1062
+width$ -- 339
+write$ -- 3137
 (There were 9 warnings)

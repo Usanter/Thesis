@@ -1217,7 +1217,7 @@ A.~Zeyer, P.~Bahar, K.~Irie, R.~Schl{\"u}ter, and H.~Ney, ``A comparison of
   Automatic Speech Recognition and Understanding Workshop (ASRU)}.\hskip 1em
   plus 0.5em minus 0.4em\relax IEEE, 2019, pp. 8--15.
 
-\bibitem{zeineldeen2022conformer}
+\bibitem{zeineldeen2022Conformer}
 M.~Zeineldeen, J.~Xu, C.~L{\"u}scher, W.~Michel, A.~Gerstenberger,
   R.~Schl{\"u}ter, and H.~Ney, ``Conformer-based hybrid asr system for
   switchboard dataset,'' in \emph{ICASSP 2022-2022 IEEE International
@@ -1287,6 +1287,13 @@ Z.~Wu, Z.~Liu, J.~Lin, Y.~Lin, and S.~Han, ``Lite transformer with long-short
 Y.~N. Dauphin, A.~Fan, M.~Auli, and D.~Grangier, ``Language modeling with gated
   convolutional networks,'' in \emph{International conference on machine
   learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2017, pp. 933--941.
+
+\bibitem{Prajit2017Searching}
+\BIBentryALTinterwordspacing
+P.~Ramachandran, B.~Zoph, and Q.~V. Le, ``Searching for activation functions,''
+  \emph{CoRR}, vol. abs/1710.05941, 2017. [Online]. Available:
+  \url{http://arxiv.org/abs/1710.05941}
+\BIBentrySTDinterwordspacing
 
 \bibitem{kovaleva-etal-2019-revealing}
 \BIBentryALTinterwordspacing
