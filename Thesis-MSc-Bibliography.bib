@@ -3262,3 +3262,51 @@ year = {2015},
   biburl       = {https://dblp.org/rec/journals/corr/abs-1710-05941.bib},
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
+
+@inproceedings{
+hu2022lora,
+title={Lo{RA}: Low-Rank Adaptation of Large Language Models},
+author={Edward J Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},
+booktitle={International Conference on Learning Representations},
+year={2022},
+url={https://openreview.net/forum?id=nZeVKeeFYf9}
+}
+
+@inproceedings{li-liang-2021-prefix,
+    title = "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+    author = "Li, Xiang Lisa  and
+      Liang, Percy",
+    editor = "Zong, Chengqing  and
+      Xia, Fei  and
+      Li, Wenjie  and
+      Navigli, Roberto",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.353",
+    doi = "10.18653/v1/2021.acl-long.353",
+    pages = "4582--4597",
+    abstract = "Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of continuous task-specific vectors, which we call the prefix. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were {``}virtual tokens{''}. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by learning only 0.1{\%} of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training.",
+}
+
+@inproceedings{lester-etal-2021-power,
+    title = "The Power of Scale for Parameter-Efficient Prompt Tuning",
+    author = "Lester, Brian  and
+      Al-Rfou, Rami  and
+      Constant, Noah",
+    editor = "Moens, Marie-Francine  and
+      Huang, Xuanjing  and
+      Specia, Lucia  and
+      Yih, Scott Wen-tau",
+    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2021",
+    address = "Online and Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.emnlp-main.243",
+    doi = "10.18653/v1/2021.emnlp-main.243",
+    pages = "3045--3059",
+    abstract = "In this work, we explore {``}prompt tuning,{''} a simple yet effective mechanism for learning {``}soft prompts{''} to condition frozen language models to perform specific downstream tasks. Unlike the discrete text prompts used by GPT-3, soft prompts are learned through backpropagation and can be tuned to incorporate signals from any number of labeled examples. Our end-to-end learned approach outperforms GPT-3{'}s few-shot learning by a large margin. More remarkably, through ablations on model size using T5, we show that prompt tuning becomes more competitive with scale: as models exceed billions of parameters, our method {``}closes the gap{''} and matches the strong performance of model tuning (where all model weights are tuned). This finding is especially relevant because large models are costly to share and serve and the ability to reuse one frozen model for multiple downstream tasks can ease this burden. Our method can be seen as a simplification of the recently proposed {``}prefix tuning{''} of Li and Liang (2021) and we provide a comparison to this and other similar approaches. Finally, we show that conditioning a frozen model with soft prompts confers benefits in robustness to domain transfer and enables efficient {``}prompt ensembling.{''} We release code and model checkpoints to reproduce our experiments.",
+}

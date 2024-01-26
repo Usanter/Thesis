@@ -1,8 +1,8 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.1}Introduction}{\reset@font\mtcSfont 183}{section.B.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.2}Self-supervised pre-trained models}{\reset@font\mtcSfont 184}{section.B.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.2.1}Generative modeling}{\reset@font\mtcSSfont 184}{subsection.B.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.2.2}Discriminative modeling}{\reset@font\mtcSSfont 185}{subsection.B.2.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.3}Experimental setup}{\reset@font\mtcSfont 186}{section.B.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.4}Results}{\reset@font\mtcSfont 187}{section.B.4}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.5}Analysis of the extracted features}{\reset@font\mtcSfont 187}{section.B.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.6}Conclusions and future work}{\reset@font\mtcSfont 189}{section.B.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.1}Introduction}{\reset@font\mtcSfont 187}{section.B.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.2}Self-supervised pre-trained models}{\reset@font\mtcSfont 188}{section.B.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.2.1}Generative modeling}{\reset@font\mtcSSfont 188}{subsection.B.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {B.2.2}Discriminative modeling}{\reset@font\mtcSSfont 189}{subsection.B.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.3}Experimental setup}{\reset@font\mtcSfont 190}{section.B.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.4}Results}{\reset@font\mtcSfont 191}{section.B.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.5}Analysis of the extracted features}{\reset@font\mtcSfont 191}{section.B.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {B.6}Conclusions and future work}{\reset@font\mtcSfont 193}{section.B.6}}

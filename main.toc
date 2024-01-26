@@ -78,7 +78,7 @@
 \contentsline {section}{\numberline {5.4}Implementation details}{94}{section.5.4}
 \contentsline {section}{\numberline {5.5}Results}{95}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1}Configurations}{95}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Effect of the Adapter hidden dimension}{96}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.2}Effect of the Adapters hidden dimension}{96}{subsection.5.5.2}
 \contentsline {subsection}{\numberline {5.5.3}Unsupervised clustering for grouped-speaker Adapters}{97}{subsection.5.5.3}
 \contentsline {section}{\numberline {5.6}Summary and discussion}{98}{section.5.6}
 \contentsline {chapter}{\numberline {6}Integration of synthetic speech for data augmentation}{101}{chapter.6}
@@ -96,8 +96,8 @@
 \contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{111}{subsection.6.6.1}
 \contentsline {subsection}{\numberline {6.6.2}Influence of synthetic number of hours}{112}{subsection.6.6.2}
 \contentsline {subsection}{\numberline {6.6.3}Impact of DWAT different hyper-parameters}{113}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{113}{subsection.6.6.4}
-\contentsline {section}{\numberline {6.7}Summary and discussion}{115}{section.6.7}
+\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{114}{subsection.6.6.4}
+\contentsline {section}{\numberline {6.7}Summary and discussion}{116}{section.6.7}
 \contentsline {chapter}{\numberline {7}Alternative approaches to parameter-efficient transfer learning}{117}{chapter.7}
 \contentsline {section}{\numberline {7.1}Introduction}{119}{section.7.1}
 \contentsline {section}{\numberline {7.2}Exploring PETL literature alternatives}{119}{section.7.2}
@@ -111,44 +111,47 @@
 \contentsline {subsection}{\numberline {7.3.1}Motivation}{126}{subsection.7.3.1}
 \contentsline {subsection}{\numberline {7.3.2}Experimental setup}{127}{subsection.7.3.2}
 \contentsline {subsection}{\numberline {7.3.3}Results}{128}{subsection.7.3.3}
-\contentsline {section}{\numberline {7.4}Summary and discussion}{129}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusions}{131}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{133}{section.8.1}
-\contentsline {section}{\numberline {8.2}Perspectives}{135}{section.8.2}
-\contentsline {chapter}{Bibliography}{137}{section*.125}
-\contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{167}{appendix.A}
-\contentsline {section}{\numberline {A.1}Introduction}{167}{section.A.1}
-\contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{168}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Introduction}{168}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Speaker embeddings: i-vector and x-vector}{168}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Experimental setup}{169}{subsection.A.2.3}
-\contentsline {subsubsection}{\numberline {A.2.3.A}Corpora}{169}{subsubsection.A.2.3.1}
-\contentsline {subsubsection}{\numberline {A.2.3.B}Knowledge based features}{170}{subsubsection.A.2.3.2}
-\contentsline {subsubsection}{\numberline {A.2.3.C}Speaker embeddings}{170}{subsubsection.A.2.3.3}
-\contentsline {subsection}{\numberline {A.2.4}Results}{171}{subsection.A.2.4}
-\contentsline {section}{\numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{172}{section.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Introduction}{172}{subsection.A.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Corpus}{173}{subsection.A.3.2}
-\contentsline {subsection}{\numberline {A.3.3}Proposed system}{173}{subsection.A.3.3}
-\contentsline {subsubsection}{\numberline {A.3.3.A}Acoustics modality}{173}{subsubsection.A.3.3.1}
-\contentsline {subsubsection}{\numberline {A.3.3.B}Linguistic modality}{174}{subsubsection.A.3.3.2}
-\contentsline {subsection}{\numberline {A.3.4}Results}{175}{subsection.A.3.4}
-\contentsline {section}{\numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{177}{section.A.4}
-\contentsline {subsection}{\numberline {A.4.1}Introduction}{177}{subsection.A.4.1}
-\contentsline {subsection}{\numberline {A.4.2}Corpora}{178}{subsection.A.4.2}
-\contentsline {subsection}{\numberline {A.4.3}Proposed system}{178}{subsection.A.4.3}
-\contentsline {subsubsection}{\numberline {A.4.3.A}TDNN-F embedddings}{178}{subsubsection.A.4.3.1}
-\contentsline {subsubsection}{\numberline {A.4.3.B}CNN embedddings}{179}{subsubsection.A.4.3.2}
-\contentsline {subsubsection}{\numberline {A.4.3.C}PASE+ embedddings}{179}{subsubsection.A.4.3.3}
-\contentsline {subsubsection}{\numberline {A.4.3.D}COVID-19 condition classification}{180}{subsubsection.A.4.3.4}
-\contentsline {subsection}{\numberline {A.4.4}Results}{180}{subsection.A.4.4}
-\contentsline {section}{\numberline {A.5}Conclusion and future work}{181}{section.A.5}
-\contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's ASR}{183}{appendix.B}
-\contentsline {section}{\numberline {B.1}Introduction}{183}{section.B.1}
-\contentsline {section}{\numberline {B.2}Self-supervised pre-trained models}{184}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{184}{subsection.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Discriminative modeling}{185}{subsection.B.2.2}
-\contentsline {section}{\numberline {B.3}Experimental setup}{186}{section.B.3}
-\contentsline {section}{\numberline {B.4}Results}{187}{section.B.4}
-\contentsline {section}{\numberline {B.5}Analysis of the extracted features}{187}{section.B.5}
-\contentsline {section}{\numberline {B.6}Conclusions and future work}{189}{section.B.6}
+\contentsline {subsubsection}{\numberline {7.3.3.A}Shared-Adapter compared to other PETL methodologies}{128}{subsubsection.7.3.3.1}
+\contentsline {subsubsection}{\numberline {7.3.3.B}Evaluating the parameter influence on Shared-Adapter}{129}{subsubsection.7.3.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3.C}Low resource and extremly low resource scenarios robustness}{130}{subsubsection.7.3.3.3}
+\contentsline {section}{\numberline {7.4}Summary and discussion}{131}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusions}{133}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{135}{section.8.1}
+\contentsline {section}{\numberline {8.2}Perspectives}{137}{section.8.2}
+\contentsline {chapter}{Bibliography}{139}{section*.136}
+\contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{171}{appendix.A}
+\contentsline {section}{\numberline {A.1}Introduction}{171}{section.A.1}
+\contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{172}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Introduction}{172}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Speaker embeddings: i-vector and x-vector}{172}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Experimental setup}{173}{subsection.A.2.3}
+\contentsline {subsubsection}{\numberline {A.2.3.A}Corpora}{173}{subsubsection.A.2.3.1}
+\contentsline {subsubsection}{\numberline {A.2.3.B}Knowledge based features}{174}{subsubsection.A.2.3.2}
+\contentsline {subsubsection}{\numberline {A.2.3.C}Speaker embeddings}{174}{subsubsection.A.2.3.3}
+\contentsline {subsection}{\numberline {A.2.4}Results}{175}{subsection.A.2.4}
+\contentsline {section}{\numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{176}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Introduction}{176}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Corpus}{177}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.3.3}Proposed system}{177}{subsection.A.3.3}
+\contentsline {subsubsection}{\numberline {A.3.3.A}Acoustics modality}{177}{subsubsection.A.3.3.1}
+\contentsline {subsubsection}{\numberline {A.3.3.B}Linguistic modality}{178}{subsubsection.A.3.3.2}
+\contentsline {subsection}{\numberline {A.3.4}Results}{179}{subsection.A.3.4}
+\contentsline {section}{\numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{181}{section.A.4}
+\contentsline {subsection}{\numberline {A.4.1}Introduction}{181}{subsection.A.4.1}
+\contentsline {subsection}{\numberline {A.4.2}Corpora}{182}{subsection.A.4.2}
+\contentsline {subsection}{\numberline {A.4.3}Proposed system}{182}{subsection.A.4.3}
+\contentsline {subsubsection}{\numberline {A.4.3.A}TDNN-F embedddings}{182}{subsubsection.A.4.3.1}
+\contentsline {subsubsection}{\numberline {A.4.3.B}CNN embedddings}{183}{subsubsection.A.4.3.2}
+\contentsline {subsubsection}{\numberline {A.4.3.C}PASE+ embedddings}{183}{subsubsection.A.4.3.3}
+\contentsline {subsubsection}{\numberline {A.4.3.D}COVID-19 condition classification}{184}{subsubsection.A.4.3.4}
+\contentsline {subsection}{\numberline {A.4.4}Results}{184}{subsection.A.4.4}
+\contentsline {section}{\numberline {A.5}Conclusion and future work}{185}{section.A.5}
+\contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's \ac {ASR}}{187}{appendix.B}
+\contentsline {section}{\numberline {B.1}Introduction}{187}{section.B.1}
+\contentsline {section}{\numberline {B.2}Self-supervised pre-trained models}{188}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{188}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Discriminative modeling}{189}{subsection.B.2.2}
+\contentsline {section}{\numberline {B.3}Experimental setup}{190}{section.B.3}
+\contentsline {section}{\numberline {B.4}Results}{191}{section.B.4}
+\contentsline {section}{\numberline {B.5}Analysis of the extracted features}{191}{section.B.5}
+\contentsline {section}{\numberline {B.6}Conclusions and future work}{193}{section.B.6}

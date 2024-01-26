@@ -10,4 +10,7 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.1}Motivation}{\reset@font\mtcSSfont 126}{subsection.7.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.2}Experimental setup}{\reset@font\mtcSSfont 127}{subsection.7.3.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.3}Results}{\reset@font\mtcSSfont 128}{subsection.7.3.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Summary and discussion}{\reset@font\mtcSfont 129}{section.7.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.A}Shared-Adapter compared to other PETL methodologies}{\reset@font\mtcSSSfont 128}{subsubsection.7.3.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.B}Evaluating the parameter influence on Shared-Adapter}{\reset@font\mtcSSSfont 129}{subsubsection.7.3.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.C}Low resource and extremly low resource scenarios robustness}{\reset@font\mtcSSSfont 130}{subsubsection.7.3.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Summary and discussion}{\reset@font\mtcSfont 131}{section.7.4}}

@@ -719,6 +719,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acronyms.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acronyms.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pbk.fd
@@ -752,8 +754,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/bookman/pbkd8r.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/exampleSLT.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/exampleSLT.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/exampleSLT.png
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_2.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_2.tex
@@ -882,9 +882,9 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_Transformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HiddenDimEXP.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HiddenDimEXP.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/HiddenDimEXP.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_6.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_6.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc6
@@ -898,9 +898,9 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc6
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/yourtts.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/yourtts.png
-INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/yourtts.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/YourTTS.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/YourTTS.png
+INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/YourTTS.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png

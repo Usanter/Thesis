@@ -1554,6 +1554,36 @@ E.~Casanova, A.~C. Junior, C.~Shulby, F.~S.~d. Oliveira, J.~P. Teixeira, M.~A.
   dataset – caito,'' 2017, accessed January 15, 2024.
   \url{https://www.caito.de/2019/01/03/the-m-ailabs-speech-dataset/}.
 
+\bibitem{hu2022lora}
+\BIBentryALTinterwordspacing
+E.~J. Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, and
+  W.~Chen, ``Lo{RA}: Low-rank adaptation of large language models,'' in
+  \emph{International Conference on Learning Representations}, 2022. [Online].
+  Available: \url{https://openreview.net/forum?id=nZeVKeeFYf9}
+\BIBentrySTDinterwordspacing
+
+\bibitem{lester-etal-2021-power}
+\BIBentryALTinterwordspacing
+B.~Lester, R.~Al-Rfou, and N.~Constant, ``The power of scale for
+  parameter-efficient prompt tuning,'' in \emph{Proceedings of the 2021
+  Conference on Empirical Methods in Natural Language Processing}, M.-F. Moens,
+  X.~Huang, L.~Specia, and S.~W.-t. Yih, Eds.\hskip 1em plus 0.5em minus
+  0.4em\relax Online and Punta Cana, Dominican Republic: Association for
+  Computational Linguistics, Nov. 2021, pp. 3045--3059. [Online]. Available:
+  \url{https://aclanthology.org/2021.emnlp-main.243}
+\BIBentrySTDinterwordspacing
+
+\bibitem{li-liang-2021-prefix}
+\BIBentryALTinterwordspacing
+X.~L. Li and P.~Liang, ``Prefix-tuning: Optimizing continuous prompts for
+  generation,'' in \emph{Proceedings of the 59th Annual Meeting of the
+  Association for Computational Linguistics and the 11th International Joint
+  Conference on Natural Language Processing (Volume 1: Long Papers)}, C.~Zong,
+  F.~Xia, W.~Li, and R.~Navigli, Eds.\hskip 1em plus 0.5em minus 0.4em\relax
+  Online: Association for Computational Linguistics, Aug. 2021, pp. 4582--4597.
+  [Online]. Available: \url{https://aclanthology.org/2021.acl-long.353}
+\BIBentrySTDinterwordspacing
+
 \bibitem{yang23p_interspeech}
 L.-J. Yang, C.-H.~H. Yang, and J.-T. Chien, ``{Parameter-Efficient Learning for
   Text-to-Speech Accent Adaptation},'' in \emph{Proc. INTERSPEECH 2023}, 2023,
