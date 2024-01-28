@@ -118,7 +118,7 @@
 \contentsline {chapter}{\numberline {8}Conclusions}{133}{chapter.8}
 \contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{135}{section.8.1}
 \contentsline {section}{\numberline {8.2}Perspectives}{137}{section.8.2}
-\contentsline {chapter}{Bibliography}{139}{section*.136}
+\contentsline {chapter}{Bibliography}{139}{section*.135}
 \contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{171}{appendix.A}
 \contentsline {section}{\numberline {A.1}Introduction}{171}{section.A.1}
 \contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{172}{section.A.2}
