@@ -13,25 +13,25 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis et al. 1952\relax }}{22}{figure.caption.18}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph in the Harpy system for the sentence "GIVE ME" from \cite {klatt1977review}\relax }}{23}{figure.caption.23}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{24}{figure.caption.24}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Principal block scheme of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite {kiktova2013comparison}\relax }}{27}{figure.caption.28}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Principal block scheme of extraction of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite {kiktova2013comparison}\relax }}{27}{figure.caption.28}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Three-state Hidden Markov Model for modelling phones\relax }}{28}{figure.caption.35}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Phoneme set and examples of CMU dictionary using 39 phonemes from \cite {weide1998carnegie}\relax }}{30}{figure.caption.41}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{33}{figure.caption.47}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{44}{figure.caption.68}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{44}{figure.caption.68}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{44}{figure.caption.68}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{46}{figure.caption.69}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{44}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{44}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{44}{figure.caption.69}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{46}{figure.caption.70}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Hybrid models for children automatic speech recognition}{53}{chapter.3}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces TDDN and TDNN-F taken from \cite {tdnnf-children}\relax }}{56}{figure.caption.76}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {TDNN with sub-sampling}}}{56}{figure.caption.76}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Factorised TDNN layer}}}{56}{figure.caption.76}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialised for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{62}{figure.caption.83}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces TDDN and TDNN-F taken from \cite {tdnnf-children}\relax }}{56}{figure.caption.77}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {TDNN with sub-sampling}}}{56}{figure.caption.77}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Factorised TDNN layer}}}{56}{figure.caption.77}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialised for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{62}{figure.caption.84}
 \addvspace {10\p@ }
 \contentsline {xchapter}{End-to-End children automatic speech recognition}{69}{chapter.4}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-Encoder, d) Transformer-Decoder.\relax }}{72}{figure.caption.88}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{75}{figure.caption.93}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a Conformer layer\relax }}{75}{figure.caption.94}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-Encoder, d) Transformer-Decoder.\relax }}{72}{figure.caption.89}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{75}{figure.caption.94}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a Conformer layer\relax }}{75}{figure.caption.95}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{80}{figure.caption.99}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer wise for the Transformer model}}}{80}{figure.caption.99}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer wise for the Conformer model}}}{80}{figure.caption.99}

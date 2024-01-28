@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Traditional automatic speech recognition systems}{24}{subsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.2.A}Feature extraction}{26}{subsubsection.2.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2.B}Acoustic model}{28}{subsubsection.2.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.C}Pronunciation model}{29}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.C}Pronunciation model}{30}{subsubsection.2.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.2.D}Language model}{30}{subsubsection.2.2.2.4}
 \contentsline {subsubsection}{\numberline {2.2.2.E}Decoder}{32}{subsubsection.2.2.2.5}
 \contentsline {subsection}{\numberline {2.2.3}End-to-end automatic speech recognition}{33}{subsection.2.2.3}

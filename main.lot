@@ -3,16 +3,16 @@
 \contentsline {xchapter}{Introduction}{1}{chapter.1}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Background - Children automatic speech recognition}{11}{chapter.2}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Non-exhaustive comparison of children's speech corpora. This table has been sorted by age range. Blanks indicate unavailable information. Entries highlighted in bold correspond to the corpora used in the experiments presented in this thesis. K: Kindergarden. G: Grade\relax }}{50}{table.caption.73}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Non-exhaustive comparison of children's speech corpora. This table has been sorted by age range. Blanks indicate unavailable information. Entries highlighted in bold correspond to the corpora used in the experiments presented in this thesis. K: Kindergarden. G: Grade\relax }}{50}{table.caption.74}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Hybrid models for children automatic speech recognition}{53}{chapter.3}
-\contentsline {table}{\numberline {3.1}{\ignorespaces Number of utterances and duration of the different corpora for multi-task and transfer learning experiments using adult and children data\relax }}{58}{table.caption.78}
-\contentsline {table}{\numberline {3.2}{\ignorespaces WER results using adult data for knowledge transfer methods\relax }}{59}{table.caption.82}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Statistics on the different corpora of children's speech.\relax }}{63}{table.caption.84}
-\contentsline {table}{\numberline {3.4}{\ignorespaces WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out\relax }}{64}{table.caption.85}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Number of utterances and duration of the different corpora for multi-task and transfer learning experiments using adult and children data\relax }}{58}{table.caption.79}
+\contentsline {table}{\numberline {3.2}{\ignorespaces WER results using adult data for knowledge transfer methods\relax }}{59}{table.caption.83}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Statistics on the different corpora of children's speech.\relax }}{63}{table.caption.85}
+\contentsline {table}{\numberline {3.4}{\ignorespaces WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out\relax }}{64}{table.caption.86}
 \addvspace {10\p@ }
 \contentsline {xchapter}{End-to-End children automatic speech recognition}{69}{chapter.4}
-\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{78}{table.caption.96}
+\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{78}{table.caption.97}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{79}{table.caption.98}
 \contentsline {table}{\numberline {4.3}{\ignorespaces Modules fine-tuning experiment\relax }}{82}{table.caption.100}
 \addvspace {10\p@ }
