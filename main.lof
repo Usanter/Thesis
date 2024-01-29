@@ -11,7 +11,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Averaged-vowel duration across all vowels and subjects in each age group}}}{17}{figure.caption.16}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Within- and between-subject variations. The between-subject variation is reduced by a factor of 2.0}}}{17}{figure.caption.16}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis et al. 1952\relax }}{22}{figure.caption.18}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph in the Harpy system for the sentence "GIVE ME" from \cite {klatt1977review}\relax }}{23}{figure.caption.23}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph in the Harpy system for the sentence ``GIVE ME" from \cite {klatt1977review}\relax }}{23}{figure.caption.23}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{24}{figure.caption.24}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Principal block scheme of extraction of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite {kiktova2013comparison}\relax }}{27}{figure.caption.28}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Three-state Hidden Markov Model for modelling phones\relax }}{28}{figure.caption.35}
