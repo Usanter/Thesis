@@ -4,12 +4,11 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Methodology}{\reset@font\mtcSSfont 57}{subsection.3.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Corpus}{\reset@font\mtcSSfont 58}{subsection.3.3.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Experimental setup}{\reset@font\mtcSSfont 59}{subsection.3.3.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.4}Results}{\reset@font\mtcSSfont 59}{subsection.3.3.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.5}Summary and discussion}{\reset@font\mtcSSfont 60}{subsection.3.3.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Combining multi-task and transfer learning using multilingual children data}{\reset@font\mtcSfont 61}{section.3.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.1}Motivation}{\reset@font\mtcSSfont 61}{subsection.3.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.2}The Multilingual-transfer learning approach}{\reset@font\mtcSSfont 61}{subsection.3.4.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.3}Experimental Setup}{\reset@font\mtcSSfont 63}{subsection.3.4.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.4}Multilingual-transfer learning experiment}{\reset@font\mtcSSfont 63}{subsection.3.4.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.5}Cross-lingual validation}{\reset@font\mtcSSfont 65}{subsection.3.4.5}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Summary and discussion}{\reset@font\mtcSfont 66}{section.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.4}Results}{\reset@font\mtcSSfont 60}{subsection.3.3.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Combining multi-task and transfer learning using multilingual children data}{\reset@font\mtcSfont 62}{section.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.1}Motivation}{\reset@font\mtcSSfont 62}{subsection.3.4.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.2}The Multilingual-transfer learning approach}{\reset@font\mtcSSfont 62}{subsection.3.4.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.3}Experimental Setup}{\reset@font\mtcSSfont 64}{subsection.3.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.4}Multilingual-transfer learning experiment}{\reset@font\mtcSSfont 65}{subsection.3.4.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.5}Cross-lingual validation}{\reset@font\mtcSSfont 67}{subsection.3.4.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Summary and discussion}{\reset@font\mtcSfont 67}{section.3.5}}
