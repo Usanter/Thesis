@@ -32,9 +32,9 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-Encoder, d) Transformer-Decoder.\relax }}{74}{figure.caption.89}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{77}{figure.caption.94}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a Conformer layer\relax }}{77}{figure.caption.95}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{82}{figure.caption.99}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer wise for the Transformer model}}}{82}{figure.caption.99}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer wise for the Conformer model}}}{82}{figure.caption.99}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{83}{figure.caption.99}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer wise for the Transformer model}}}{83}{figure.caption.99}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer wise for the Conformer model}}}{83}{figure.caption.99}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{89}{chapter.5}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{92}{figure.caption.102}

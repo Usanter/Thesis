@@ -63,12 +63,12 @@
 \contentsline {section}{\numberline {4.2}Transformer model}{74}{section.4.2}
 \contentsline {section}{\numberline {4.3}Conformer model}{76}{section.4.3}
 \contentsline {section}{\numberline {4.4}Understand transfer learning efficacy for Transformer based models}{78}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Partial Transfer learning}{79}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.1}Partial Transfer learning}{80}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Experimental setup}{80}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Corpus}{80}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Implementation details}{80}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.4}Implementation details}{81}{subsection.4.4.4}
 \contentsline {subsection}{\numberline {4.4.5}Encoder-Decoder Transfer learning}{81}{subsection.4.4.5}
-\contentsline {subsection}{\numberline {4.4.6}Modules Transfer learning}{83}{subsection.4.4.6}
+\contentsline {subsection}{\numberline {4.4.6}Modules Transfer learning}{84}{subsection.4.4.6}
 \contentsline {section}{\numberline {4.5}Summary and discussion}{86}{section.4.5}
 \contentsline {chapter}{\numberline {5}Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{89}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{91}{section.5.1}

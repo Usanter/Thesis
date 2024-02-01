@@ -1324,11 +1324,6 @@ V.~Sanh, L.~Debut, J.~Chaumond, and T.~Wolf, ``Distilbert, a distilled version
   of bert: smaller, faster, cheaper and lighter,'' \emph{arXiv preprint
   arXiv:1910.01108}, 2019.
 
-\bibitem{zheng22d_interspeech}
-W.~Zheng, A.~Xiao, G.~Keren, D.~Le, F.~Zhang, C.~Fuegen, O.~Kalinli, Y.~Saraf,
-  and A.~Mohamed, ``{Scaling ASR Improves Zero and Few Shot Learning},'' in
-  \emph{Proc. Interspeech 2022}, 2022, pp. 5135--5139.
-
 \bibitem{shen2021partial}
 Z.~Shen, Z.~Liu, J.~Qin, M.~Savvides, and K.-T. Cheng, ``Partial is better than
   all: revisiting fine-tuning strategy for few-shot learning,'' in
@@ -1379,6 +1374,11 @@ J.~Kaplan, S.~McCandlish, T.~J. Henighan, T.~B. Brown, B.~Chess, R.~Child,
   models,'' \emph{ArXiv}, vol. abs/2001.08361, 2020. [Online]. Available:
   \url{https://api.semanticscholar.org/CorpusID:210861095}
 \BIBentrySTDinterwordspacing
+
+\bibitem{zheng22d_interspeech}
+W.~Zheng, A.~Xiao, G.~Keren, D.~Le, F.~Zhang, C.~Fuegen, O.~Kalinli, Y.~Saraf,
+  and A.~Mohamed, ``{Scaling ASR Improves Zero and Few Shot Learning},'' in
+  \emph{Proc. Interspeech 2022}, 2022, pp. 5135--5139.
 
 \bibitem{houlsby}
 N.~Houlsby, A.~Giurgiu, S.~Jastrzebski, B.~Morrone, Q.~De~Laroussilhe,

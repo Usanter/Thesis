@@ -12,8 +12,8 @@
 \contentsline {table}{\numberline {3.4}{\ignorespaces WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out\relax }}{66}{table.caption.86}
 \addvspace {10\p@ }
 \contentsline {xchapter}{End-to-End children automatic speech recognition}{71}{chapter.4}
-\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{80}{table.caption.97}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{81}{table.caption.98}
+\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{81}{table.caption.97}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{82}{table.caption.98}
 \contentsline {table}{\numberline {4.3}{\ignorespaces Modules fine-tuning experiment\relax }}{84}{table.caption.100}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{89}{chapter.5}
