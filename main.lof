@@ -33,14 +33,14 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{77}{figure.caption.94}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a Conformer layer\relax }}{77}{figure.caption.95}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{83}{figure.caption.99}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer wise for the Transformer model}}}{83}{figure.caption.99}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer wise for the Conformer model}}}{83}{figure.caption.99}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer-wise for the Transformer model}}}{83}{figure.caption.99}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer-wise for the Conformer model}}}{83}{figure.caption.99}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{89}{chapter.5}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{92}{figure.caption.102}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Transformer block with various residual adapter configurations. Normalisation layers are not display in this figure\relax }}{94}{figure.caption.103}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual Adapter configurations. Normalisation layers are not display in this figure\relax }}{94}{figure.caption.104}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension size within the Conformer architecture \relax }}{99}{figure.caption.108}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Transformer block with various residual adapter configurations (Normalisation layers are not shown in this picture for simplicity in plotting.) \relax }}{94}{figure.caption.103}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual Adapter configurations (Normalisation layers are not shown in this picture for simplicity in plotting.) \relax }}{94}{figure.caption.104}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension sizes within the Conformer architecture \relax }}{98}{figure.caption.108}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Integration of synthetic speech for data augmentation}{103}{chapter.6}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Transformer model\relax }}{108}{figure.caption.111}

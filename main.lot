@@ -18,7 +18,7 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{89}{chapter.5}
 \contentsline {table}{\numberline {5.1}{\ignorespaces Results of the different Adapters configurations in both Transformer and Conformer.\relax }}{97}{table.caption.107}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Results of the unsupervised clustered Adapters approach.\relax }}{100}{table.caption.109}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Results of the unsupervised clustered Adapters approach.\relax }}{99}{table.caption.109}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Integration of synthetic speech for data augmentation}{103}{chapter.6}
 \contentsline {table}{\numberline {6.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{111}{table.caption.116}
