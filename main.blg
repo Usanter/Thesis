@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 20594 items from 5000.
+Reallocated field_info (elt_size=4) to 20640 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
@@ -24,45 +24,45 @@ Warning--empty journal in veaux2016superseded
 Warning--missing school in phdthesis
 
 Done.
-You've used 339 entries,
+You've used 340 entries,
             4087 wiz_defined-function locations,
-            2502 strings with 83977 characters,
-and the built_in function-call counts, 272253 in all, are:
-= -- 20441
-> -- 8494
+            2508 strings with 84277 characters,
+and the built_in function-call counts, 272807 in all, are:
+= -- 20480
+> -- 8507
 < -- 1931
-+ -- 4521
-- -- 1671
-* -- 12957
-:= -- 38458
-add.period$ -- 752
-call.type$ -- 339
-change.case$ -- 357
++ -- 4527
+- -- 1674
+* -- 12985
+:= -- 38550
+add.period$ -- 755
+call.type$ -- 340
+change.case$ -- 358
 chr.to.int$ -- 4728
-cite$ -- 348
-duplicate$ -- 19601
-empty$ -- 22848
-format.name$ -- 1980
-if$ -- 64316
+cite$ -- 349
+duplicate$ -- 19647
+empty$ -- 22910
+format.name$ -- 1984
+if$ -- 64444
 int.to.chr$ -- 0
-int.to.str$ -- 339
-missing$ -- 3770
-newline$ -- 1100
-num.names$ -- 357
-pop$ -- 9721
+int.to.str$ -- 340
+missing$ -- 3780
+newline$ -- 1105
+num.names$ -- 358
+pop$ -- 9749
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 20807
+skip$ -- 20849
 stack$ -- 0
-substring$ -- 11626
-swap$ -- 15489
+substring$ -- 11627
+swap$ -- 15514
 text.length$ -- 355
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 339
+type$ -- 340
 warning$ -- 9
-while$ -- 1075
-width$ -- 342
-write$ -- 3174
+while$ -- 1076
+width$ -- 343
+write$ -- 3185
 (There were 9 warnings)

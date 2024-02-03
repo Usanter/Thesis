@@ -107,6 +107,9 @@ For all experiments, we used the same pre-trained Transformer and Conformer mode
 
 The decision to use a hidden dimension size ($d_{hidden}$) equal to $d_{model}$ instead of employing a bottleneck was influenced by prior research on hidden dimension size. Previous studies consistently demonstrated that larger dimensions tend to result in improved performance scores \cite{chen2023efficient}. All models underwent training of 30 epochs, with a learning rate of $8 \times 10^{-4}$ for training the Adapters and $8 \times 10^{-5}$ for fine-tuning the entire model. In the clustering experiments, we applied the k-means clustering algorithm to the speaker embeddings of each utterance. The speaker embeddings were extracted using a publicly pre-trained ECAPA-TDNN model, trained on adult speech\footnote{https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb}.
 
+For training, we use the My Science Tutor (MyST) Children Speech Corpus, as children dataset. The Myst dataset is the same as it was employed in prior experiments conducted on this dataset within the context of this thesis, as detailed in Table \ref{tab:statistics_myst}. For a more comprehensive understanding of the MyST corpora, additional details are provided in Section \ref{section:children_corpora}.
+
+
 \section{Results}
 \label{sec:results_adapters}
 

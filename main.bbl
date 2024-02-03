@@ -69,18 +69,6 @@ A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,''
   \emph{Advances in neural information processing systems}, vol.~30, 2017.
 
-\bibitem{casanova2022yourtts}
-\BIBentryALTinterwordspacing
-E.~Casanova, J.~Weber, C.~D. Shulby, A.~C. Junior, E.~G{\"o}lge, and M.~A.
-  Ponti, ``{Y}our{TTS}: Towards zero-shot multi-speaker {TTS} and zero-shot
-  voice conversion for everyone,'' in \emph{Proceedings of the 39th
-  International Conference on Machine Learning}, ser. Proceedings of Machine
-  Learning Research, K.~Chaudhuri, S.~Jegelka, L.~Song, C.~Szepesvari, G.~Niu,
-  and S.~Sabato, Eds., vol. 162.\hskip 1em plus 0.5em minus 0.4em\relax PMLR,
-  17--23 Jul 2022, pp. 2709--2720. [Online]. Available:
-  \url{https://proceedings.mlr.press/v162/casanova22a.html}
-\BIBentrySTDinterwordspacing
-
 \bibitem{levelt1993speaking}
 W.~J. Levelt, \emph{Speaking: From intention to articulation}.\hskip 1em plus
   0.5em minus 0.4em\relax MIT press, 1993.
@@ -1495,6 +1483,15 @@ S.~Ueno, M.~Mimura, S.~Sakai, and T.~Kawahara, ``Data augmentation for asr
   using tts via a discrete representation,'' in \emph{2021 IEEE Automatic
   Speech Recognition and Understanding Workshop (ASRU)}, 2021, pp. 68--75.
 
+\bibitem{vqwav2vec}
+\BIBentryALTinterwordspacing
+A.~Baevski, S.~Schneider, and M.~Auli, ``vq-wav2vec: Self-supervised learning
+  of discrete speech representations,'' in \emph{8th International Conference
+  on Learning Representations, {ICLR} 2020, Addis Ababa, Ethiopia, April 26-30,
+  2020}.\hskip 1em plus 0.5em minus 0.4em\relax OpenReview.net, 2020. [Online].
+  Available: \url{https://openreview.net/forum?id=rylwJxrYDS}
+\BIBentrySTDinterwordspacing
+
 \bibitem{philip2020monolingual}
 J.~Philip, A.~Berard, M.~Gall{\'e}, and L.~Besacier, ``Monolingual adapters for
   zero-shot neural machine translation,'' in \emph{Proceedings of the 2020
@@ -1510,6 +1507,18 @@ Y.~Mao, L.~Mathias, R.~Hou, A.~Almahairi, H.~Ma, J.~Han, S.~Yih, and M.~Khabsa,
   and A.~Villavicencio, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Dublin,
   Ireland: Association for Computational Linguistics, May 2022, pp. 6253--6264.
   [Online]. Available: \url{https://aclanthology.org/2022.acl-long.433}
+\BIBentrySTDinterwordspacing
+
+\bibitem{casanova2022yourtts}
+\BIBentryALTinterwordspacing
+E.~Casanova, J.~Weber, C.~D. Shulby, A.~C. Junior, E.~G{\"o}lge, and M.~A.
+  Ponti, ``{Y}our{TTS}: Towards zero-shot multi-speaker {TTS} and zero-shot
+  voice conversion for everyone,'' in \emph{Proceedings of the 39th
+  International Conference on Machine Learning}, ser. Proceedings of Machine
+  Learning Research, K.~Chaudhuri, S.~Jegelka, L.~Song, C.~Szepesvari, G.~Niu,
+  and S.~Sabato, Eds., vol. 162.\hskip 1em plus 0.5em minus 0.4em\relax PMLR,
+  17--23 Jul 2022, pp. 2709--2720. [Online]. Available:
+  \url{https://proceedings.mlr.press/v162/casanova22a.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{45819}

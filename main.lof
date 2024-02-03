@@ -44,7 +44,7 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Integration of synthetic speech for data augmentation}{103}{chapter.6}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Transformer model\relax }}{108}{figure.caption.111}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Architecture of the YourTTS model taken from \cite {casanova2022yourtts}\relax }}{110}{figure.caption.113}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Architecture of the YourTTS model\footnotemark \relax }}{110}{figure.caption.113}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Conformer architecture\relax }}{116}{figure.caption.120}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{119}{chapter.7}

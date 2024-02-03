@@ -88,15 +88,14 @@
 \contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{109}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{109}{subsection.6.4.2}
 \contentsline {section}{\numberline {6.5}Experimental setup}{111}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Real speech corpus}{111}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Synthetic data}{111}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Experiments}{112}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.1}Synthetic data}{111}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Experiments}{112}{subsection.6.5.2}
 \contentsline {section}{\numberline {6.6}Results and discussion}{113}{section.6.6}
 \contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{113}{subsection.6.6.1}
 \contentsline {subsection}{\numberline {6.6.2}Influence of synthetic number of hours}{114}{subsection.6.6.2}
 \contentsline {subsection}{\numberline {6.6.3}Impact of DWAT different hyper-parameters}{115}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{116}{subsection.6.6.4}
-\contentsline {section}{\numberline {6.7}Summary and discussion}{118}{section.6.7}
+\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{115}{subsection.6.6.4}
+\contentsline {section}{\numberline {6.7}Summary and discussion}{117}{section.6.7}
 \contentsline {chapter}{\numberline {7}Alternative approaches to parameter-efficient transfer learning}{119}{chapter.7}
 \contentsline {section}{\numberline {7.1}Introduction}{121}{section.7.1}
 \contentsline {section}{\numberline {7.2}Exploring PETL literature alternatives}{121}{section.7.2}
