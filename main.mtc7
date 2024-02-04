@@ -1,16 +1,17 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Introduction}{\reset@font\mtcSfont 121}{section.7.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Exploring PETL literature alternatives}{\reset@font\mtcSfont 121}{section.7.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.1}Scaled Adapters}{\reset@font\mtcSSfont 121}{subsection.7.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.2}Convolution based Adapters}{\reset@font\mtcSSfont 122}{subsection.7.2.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.3}BitFit}{\reset@font\mtcSSfont 123}{subsection.7.2.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.4}Scale and Shift features}{\reset@font\mtcSSfont 124}{subsection.7.2.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.5}AdapterBias}{\reset@font\mtcSSfont 125}{subsection.7.2.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.6}Results of the different PETL methods}{\reset@font\mtcSSfont 126}{subsection.7.2.6}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Advancement in Adapters: Introducing Shared-Adapters}{\reset@font\mtcSfont 128}{section.7.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.1}Motivation}{\reset@font\mtcSSfont 128}{subsection.7.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.2}Experimental setup}{\reset@font\mtcSSfont 129}{subsection.7.3.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.3}Results}{\reset@font\mtcSSfont 130}{subsection.7.3.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.A}Shared-Adapter compared to other PETL methodologies}{\reset@font\mtcSSSfont 130}{subsubsection.7.3.3.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.B}Evaluating the parameter influence on Shared-Adapter}{\reset@font\mtcSSSfont 131}{subsubsection.7.3.3.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.C}Low resource and extremly low resource scenarios robustness}{\reset@font\mtcSSSfont 132}{subsubsection.7.3.3.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Summary and discussion}{\reset@font\mtcSfont 133}{section.7.4}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Introduction}{\reset@font\mtcSfont 123}{section.7.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Exploring PETL literature alternatives}{\reset@font\mtcSfont 123}{section.7.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.1}Scaled Adapters}{\reset@font\mtcSSfont 123}{subsection.7.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.2}Convolution based Adapters}{\reset@font\mtcSSfont 124}{subsection.7.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.3}BitFit}{\reset@font\mtcSSfont 125}{subsection.7.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.4}Scale and Shift features}{\reset@font\mtcSSfont 126}{subsection.7.2.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.5}AdapterBias}{\reset@font\mtcSSfont 127}{subsection.7.2.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.6}Experimental setup}{\reset@font\mtcSSfont 128}{subsection.7.2.6}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.7}Results of the different PETL methods}{\reset@font\mtcSSfont 128}{subsection.7.2.7}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Enhancing Parameter Efficiency through Transformer-based model Redundancy}{\reset@font\mtcSfont 130}{section.7.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.1}Shared-Adapter}{\reset@font\mtcSSfont 130}{subsection.7.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.2}Experimental setup}{\reset@font\mtcSSfont 131}{subsection.7.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.3}Results}{\reset@font\mtcSSfont 132}{subsection.7.3.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.A}Shared-Adapter compared to other PETL methodologies}{\reset@font\mtcSSSfont 132}{subsubsection.7.3.3.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.B}Evaluating the hidden dimension and parameter influence on Shared-Adapter performances}{\reset@font\mtcSSSfont 133}{subsubsection.7.3.3.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {7.3.3.C}Low resource and extremely low resource scenarios robustness}{\reset@font\mtcSSSfont 134}{subsubsection.7.3.3.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.4}Summary and discussion}{\reset@font\mtcSfont 135}{section.7.4}}

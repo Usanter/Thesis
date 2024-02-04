@@ -1563,6 +1563,11 @@ E.~Casanova, A.~C. Junior, C.~Shulby, F.~S.~d. Oliveira, J.~P. Teixeira, M.~A.
   dataset – caito,'' 2017, accessed January 15, 2024.
   \url{https://www.caito.de/2019/01/03/the-m-ailabs-speech-dataset/}.
 
+\bibitem{desplanques20_interspeech}
+B.~Desplanques, J.~Thienpondt, and K.~Demuynck, ``{ECAPA-TDNN: Emphasized
+  Channel Attention, Propagation and Aggregation in TDNN Based Speaker
+  Verification},'' in \emph{Proc. Interspeech 2020}, 2020, pp. 3830--3834.
+
 \bibitem{hu2022lora}
 \BIBentryALTinterwordspacing
 E.~J. Hu, Y.~Shen, P.~Wallis, Z.~Allen-Zhu, Y.~Li, S.~Wang, L.~Wang, and
@@ -1592,6 +1597,11 @@ X.~L. Li and P.~Liang, ``Prefix-tuning: Optimizing continuous prompts for
   Online: Association for Computational Linguistics, Aug. 2021, pp. 4582--4597.
   [Online]. Available: \url{https://aclanthology.org/2021.acl-long.353}
 \BIBentrySTDinterwordspacing
+
+\bibitem{9879745}
+Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet
+  for the 2020s,'' in \emph{2022 IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR)}, 2022, pp. 11\,966--11\,976.
 
 \bibitem{yang23p_interspeech}
 L.-J. Yang, C.-H.~H. Yang, and J.-T. Chien, ``{Parameter-Efficient Learning for

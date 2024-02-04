@@ -83,8 +83,8 @@
 \contentsline {chapter}{\numberline {6}Integration of synthetic speech for data augmentation}{103}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{105}{section.6.1}
 \contentsline {section}{\numberline {6.2}Enhancing ASR Performance through TTS Data Augmentation}{106}{section.6.2}
-\contentsline {section}{\numberline {6.3}Closing the synthetic and real mismatch gap with Adapters}{107}{section.6.3}
-\contentsline {section}{\numberline {6.4}Overview of the automatic speech recognition and text-to-speechs systems}{109}{section.6.4}
+\contentsline {section}{\numberline {6.3}Closing the synthetic and real mismatch gap with Adapters: The Double Way Adapter Tunning approach}{107}{section.6.3}
+\contentsline {section}{\numberline {6.4}Overview of the automatic speech recognition and text-to-speech systems}{109}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Transformer architecture for ASR}{109}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Multi-speaker text-to-speech: YourTTS}{109}{subsection.6.4.2}
 \contentsline {section}{\numberline {6.5}Experimental setup}{111}{section.6.5}
@@ -92,64 +92,65 @@
 \contentsline {subsection}{\numberline {6.5.2}Experiments}{112}{subsection.6.5.2}
 \contentsline {section}{\numberline {6.6}Results and discussion}{113}{section.6.6}
 \contentsline {subsection}{\numberline {6.6.1}Comparison with existing approaches}{113}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Influence of synthetic number of hours}{114}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}Impact of DWAT different hyper-parameters}{115}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{115}{subsection.6.6.4}
-\contentsline {section}{\numberline {6.7}Summary and discussion}{117}{section.6.7}
-\contentsline {chapter}{\numberline {7}Alternative approaches to parameter-efficient transfer learning}{119}{chapter.7}
-\contentsline {section}{\numberline {7.1}Introduction}{121}{section.7.1}
-\contentsline {section}{\numberline {7.2}Exploring PETL literature alternatives}{121}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Scaled Adapters}{121}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Convolution based Adapters}{122}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}BitFit}{123}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Scale and Shift features}{124}{subsection.7.2.4}
-\contentsline {subsection}{\numberline {7.2.5}AdapterBias}{125}{subsection.7.2.5}
-\contentsline {subsection}{\numberline {7.2.6}Results of the different PETL methods}{126}{subsection.7.2.6}
-\contentsline {section}{\numberline {7.3}Advancement in Adapters: Introducing Shared-Adapters}{128}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Motivation}{128}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Experimental setup}{129}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Results}{130}{subsection.7.3.3}
-\contentsline {subsubsection}{\numberline {7.3.3.A}Shared-Adapter compared to other PETL methodologies}{130}{subsubsection.7.3.3.1}
-\contentsline {subsubsection}{\numberline {7.3.3.B}Evaluating the parameter influence on Shared-Adapter}{131}{subsubsection.7.3.3.2}
-\contentsline {subsubsection}{\numberline {7.3.3.C}Low resource and extremly low resource scenarios robustness}{132}{subsubsection.7.3.3.3}
-\contentsline {section}{\numberline {7.4}Summary and discussion}{133}{section.7.4}
-\contentsline {chapter}{\numberline {8}Conclusions}{135}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{137}{section.8.1}
-\contentsline {section}{\numberline {8.2}Perspectives}{139}{section.8.2}
-\contentsline {chapter}{Bibliography}{141}{section*.135}
-\contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{173}{appendix.A}
-\contentsline {section}{\numberline {A.1}Introduction}{173}{section.A.1}
-\contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{174}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Introduction}{174}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Speaker embeddings: i-vector and x-vector}{174}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Experimental setup}{175}{subsection.A.2.3}
-\contentsline {subsubsection}{\numberline {A.2.3.A}Corpora}{175}{subsubsection.A.2.3.1}
-\contentsline {subsubsection}{\numberline {A.2.3.B}Knowledge based features}{176}{subsubsection.A.2.3.2}
-\contentsline {subsubsection}{\numberline {A.2.3.C}Speaker embeddings}{176}{subsubsection.A.2.3.3}
-\contentsline {subsection}{\numberline {A.2.4}Results}{177}{subsection.A.2.4}
-\contentsline {section}{\numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{178}{section.A.3}
-\contentsline {subsection}{\numberline {A.3.1}Introduction}{178}{subsection.A.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Corpus}{179}{subsection.A.3.2}
-\contentsline {subsection}{\numberline {A.3.3}Proposed system}{179}{subsection.A.3.3}
-\contentsline {subsubsection}{\numberline {A.3.3.A}Acoustics modality}{179}{subsubsection.A.3.3.1}
-\contentsline {subsubsection}{\numberline {A.3.3.B}Linguistic modality}{180}{subsubsection.A.3.3.2}
-\contentsline {subsection}{\numberline {A.3.4}Results}{181}{subsection.A.3.4}
-\contentsline {section}{\numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{183}{section.A.4}
-\contentsline {subsection}{\numberline {A.4.1}Introduction}{183}{subsection.A.4.1}
-\contentsline {subsection}{\numberline {A.4.2}Corpora}{184}{subsection.A.4.2}
-\contentsline {subsection}{\numberline {A.4.3}Proposed system}{184}{subsection.A.4.3}
-\contentsline {subsubsection}{\numberline {A.4.3.A}TDNN-F embedddings}{184}{subsubsection.A.4.3.1}
-\contentsline {subsubsection}{\numberline {A.4.3.B}CNN embedddings}{185}{subsubsection.A.4.3.2}
-\contentsline {subsubsection}{\numberline {A.4.3.C}PASE+ embedddings}{185}{subsubsection.A.4.3.3}
-\contentsline {subsubsection}{\numberline {A.4.3.D}COVID-19 condition classification}{186}{subsubsection.A.4.3.4}
-\contentsline {subsection}{\numberline {A.4.4}Results}{186}{subsection.A.4.4}
-\contentsline {section}{\numberline {A.5}Conclusion and future work}{187}{section.A.5}
-\contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's \ac {ASR}}{189}{appendix.B}
-\contentsline {section}{\numberline {B.1}Introduction}{189}{section.B.1}
-\contentsline {section}{\numberline {B.2}Self-supervised pre-trained models}{190}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{190}{subsection.B.2.1}
-\contentsline {subsection}{\numberline {B.2.2}Discriminative modeling}{191}{subsection.B.2.2}
-\contentsline {section}{\numberline {B.3}Experimental setup}{192}{section.B.3}
-\contentsline {section}{\numberline {B.4}Results}{193}{section.B.4}
-\contentsline {section}{\numberline {B.5}Analysis of the extracted features}{193}{section.B.5}
-\contentsline {section}{\numberline {B.6}Conclusions and future work}{195}{section.B.6}
+\contentsline {subsection}{\numberline {6.6.2}Influence of synthetic number of hours}{115}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Impact of DWAT different hyperparameter configurations}{115}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}Extension DWAT to the Conformer architecture}{116}{subsection.6.6.4}
+\contentsline {section}{\numberline {6.7}Summary and discussion}{118}{section.6.7}
+\contentsline {chapter}{\numberline {7}Alternative approaches to parameter-efficient transfer learning}{121}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{123}{section.7.1}
+\contentsline {section}{\numberline {7.2}Exploring PETL literature alternatives}{123}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Scaled Adapters}{123}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Convolution based Adapters}{124}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}BitFit}{125}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Scale and Shift features}{126}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.5}AdapterBias}{127}{subsection.7.2.5}
+\contentsline {subsection}{\numberline {7.2.6}Experimental setup}{128}{subsection.7.2.6}
+\contentsline {subsection}{\numberline {7.2.7}Results of the different PETL methods}{128}{subsection.7.2.7}
+\contentsline {section}{\numberline {7.3}Enhancing Parameter Efficiency through Transformer-based model Redundancy}{130}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Shared-Adapter}{130}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Experimental setup}{131}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Results}{132}{subsection.7.3.3}
+\contentsline {subsubsection}{\numberline {7.3.3.A}Shared-Adapter compared to other PETL methodologies}{132}{subsubsection.7.3.3.1}
+\contentsline {subsubsection}{\numberline {7.3.3.B}Evaluating the hidden dimension and parameter influence on Shared-Adapter performances}{133}{subsubsection.7.3.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3.C}Low resource and extremely low resource scenarios robustness}{134}{subsubsection.7.3.3.3}
+\contentsline {section}{\numberline {7.4}Summary and discussion}{135}{section.7.4}
+\contentsline {chapter}{\numberline {8}Conclusions}{137}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{139}{section.8.1}
+\contentsline {section}{\numberline {8.2}Perspectives}{141}{section.8.2}
+\contentsline {chapter}{Bibliography}{143}{section*.135}
+\contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{175}{appendix.A}
+\contentsline {section}{\numberline {A.1}Introduction}{175}{section.A.1}
+\contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{176}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Introduction}{176}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Speaker embeddings: i-vector and x-vector}{176}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Experimental setup}{177}{subsection.A.2.3}
+\contentsline {subsubsection}{\numberline {A.2.3.A}Corpora}{177}{subsubsection.A.2.3.1}
+\contentsline {subsubsection}{\numberline {A.2.3.B}Knowledge based features}{178}{subsubsection.A.2.3.2}
+\contentsline {subsubsection}{\numberline {A.2.3.C}Speaker embeddings}{178}{subsubsection.A.2.3.3}
+\contentsline {subsection}{\numberline {A.2.4}Results}{179}{subsection.A.2.4}
+\contentsline {section}{\numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{180}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Introduction}{180}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}Corpus}{181}{subsection.A.3.2}
+\contentsline {subsection}{\numberline {A.3.3}Proposed system}{181}{subsection.A.3.3}
+\contentsline {subsubsection}{\numberline {A.3.3.A}Acoustics modality}{181}{subsubsection.A.3.3.1}
+\contentsline {subsubsection}{\numberline {A.3.3.B}Linguistic modality}{182}{subsubsection.A.3.3.2}
+\contentsline {subsection}{\numberline {A.3.4}Results}{183}{subsection.A.3.4}
+\contentsline {section}{\numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{185}{section.A.4}
+\contentsline {subsection}{\numberline {A.4.1}Introduction}{185}{subsection.A.4.1}
+\contentsline {subsection}{\numberline {A.4.2}Corpora}{186}{subsection.A.4.2}
+\contentsline {subsection}{\numberline {A.4.3}Proposed system}{186}{subsection.A.4.3}
+\contentsline {subsubsection}{\numberline {A.4.3.A}TDNN-F embedddings}{186}{subsubsection.A.4.3.1}
+\contentsline {subsubsection}{\numberline {A.4.3.B}CNN embedddings}{187}{subsubsection.A.4.3.2}
+\contentsline {subsubsection}{\numberline {A.4.3.C}PASE+ embedddings}{187}{subsubsection.A.4.3.3}
+\contentsline {subsubsection}{\numberline {A.4.3.D}COVID-19 condition classification}{188}{subsubsection.A.4.3.4}
+\contentsline {subsection}{\numberline {A.4.4}Results}{188}{subsection.A.4.4}
+\contentsline {section}{\numberline {A.5}Conclusion and future work}{189}{section.A.5}
+\contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's \ac {ASR}}{191}{appendix.B}
+\contentsline {section}{\numberline {B.1}Introduction}{191}{section.B.1}
+\contentsline {section}{\numberline {B.2}Self-supervised pre-trained models}{192}{section.B.2}
+\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{192}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Discriminative modeling}{193}{subsection.B.2.2}
+\contentsline {section}{\numberline {B.3}Experimental setup}{194}{section.B.3}
+\contentsline {section}{\numberline {B.4}Results}{195}{section.B.4}
+\contentsline {section}{\numberline {B.5}Analysis of the extracted features}{195}{section.B.5}
+\contentsline {section}{\numberline {B.6}Conclusions and future work}{197}{section.B.6}

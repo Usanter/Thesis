@@ -43,30 +43,30 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension sizes within the Conformer architecture \relax }}{98}{figure.caption.108}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Integration of synthetic speech for data augmentation}{103}{chapter.6}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Transformer model\relax }}{108}{figure.caption.111}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within the context of a Transformer model\relax }}{108}{figure.caption.111}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Architecture of the YourTTS model\footnotemark \relax }}{110}{figure.caption.113}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within th context of an Conformer architecture\relax }}{116}{figure.caption.120}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within the context of a Conformer architecture\relax }}{116}{figure.caption.120}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{119}{chapter.7}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Th architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convoluation are depth-wise convolution.\relax }}{123}{figure.caption.122}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{125}{figure.caption.125}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Different paramter efficent procedure for children ASR in Conformer model\relax }}{126}{figure.caption.126}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Overview of the Shared Adapters configurations\relax }}{129}{figure.caption.128}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shared-Adapter setup in a Conformer model}}}{129}{figure.caption.128}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Extremly Shared-Adapter setup in a Conformer model}}}{129}{figure.caption.128}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Different paramter efficent procedure for children ASR in conformer model with shared-Adapters\relax }}{131}{figure.caption.129}
+\contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{121}{chapter.7}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces The architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convolutions are depth-wise convolutions.\relax }}{125}{figure.caption.122}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{127}{figure.caption.125}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Different parameter efficient procedure for children ASR in Conformer model\relax }}{128}{figure.caption.126}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Overview of the Shared Adapters configurations\relax }}{131}{figure.caption.128}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shared-Adapter setup in a Conformer model}}}{131}{figure.caption.128}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Extremly Shared-Adapter setup in a Conformer model}}}{131}{figure.caption.128}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Different parameter efficient procedures for children ASR in Conformer model compared to the Shared-Adapters and Extremly Shared-Adapters\relax }}{133}{figure.caption.129}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusions}{135}{chapter.8}
+\contentsline {xchapter}{Conclusions}{137}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathological speech detection through pre-trained models}{173}{appendix.A}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Overview of the multimodal system based on embeddding appraoches\relax }}{180}{figure.caption.148}
+\contentsline {xchapter}{Pathological speech detection through pre-trained models}{175}{appendix.A}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Overview of the multimodal system based on embeddding appraoches\relax }}{182}{figure.caption.148}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's \ac {ASR}}{189}{appendix.B}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBERT models\relax }}{191}{figure.caption.156}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{191}{figure.caption.156}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBERT architecture taken from \cite {hsu2021hubert}}}}{191}{figure.caption.156}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces (a) Fbanks (b) TERA (c) Wav2Vec2 (d) HuBERT T-SNE plot of the different extracted features using the same speech data using phoneme labels\relax }}{194}{figure.caption.160}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{194}{figure.caption.160}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{194}{figure.caption.160}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{194}{figure.caption.160}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{194}{figure.caption.160}
+\contentsline {xchapter}{Sefl-supervised learning as feature extractor for children's \ac {ASR}}{191}{appendix.B}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBERT models\relax }}{193}{figure.caption.156}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{193}{figure.caption.156}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBERT architecture taken from \cite {hsu2021hubert}}}}{193}{figure.caption.156}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces (a) Fbanks (b) TERA (c) Wav2Vec2 (d) HuBERT T-SNE plot of the different extracted features using the same speech data using phoneme labels\relax }}{196}{figure.caption.160}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{196}{figure.caption.160}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{196}{figure.caption.160}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{196}{figure.caption.160}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{196}{figure.caption.160}
