@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 20732 items from 5000.
+Reallocated field_info (elt_size=4) to 20778 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
@@ -24,45 +24,45 @@ Warning--empty journal in veaux2016superseded
 Warning--missing school in phdthesis
 
 Done.
-You've used 342 entries,
+You've used 343 entries,
             4087 wiz_defined-function locations,
-            2518 strings with 84723 characters,
-and the built_in function-call counts, 275024 in all, are:
-= -- 20644
-> -- 8566
-< -- 1954
-+ -- 4567
-- -- 1689
-* -- 13093
-:= -- 38826
-add.period$ -- 759
-call.type$ -- 342
-change.case$ -- 360
-chr.to.int$ -- 4791
-cite$ -- 351
-duplicate$ -- 19790
-empty$ -- 23096
-format.name$ -- 1995
-if$ -- 64976
+            2522 strings with 84940 characters,
+and the built_in function-call counts, 276126 in all, are:
+= -- 20724
+> -- 8601
+< -- 1965
++ -- 4587
+- -- 1695
+* -- 13144
+:= -- 38963
+add.period$ -- 761
+call.type$ -- 343
+change.case$ -- 361
+chr.to.int$ -- 4821
+cite$ -- 352
+duplicate$ -- 19862
+empty$ -- 23188
+format.name$ -- 2002
+if$ -- 65242
 int.to.chr$ -- 0
-int.to.str$ -- 342
-missing$ -- 3803
-newline$ -- 1111
-num.names$ -- 360
-pop$ -- 9810
+int.to.str$ -- 343
+missing$ -- 3816
+newline$ -- 1114
+num.names$ -- 361
+pop$ -- 9845
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 21016
+skip$ -- 21102
 stack$ -- 0
-substring$ -- 11792
-swap$ -- 15642
-text.length$ -- 357
+substring$ -- 11863
+swap$ -- 15705
+text.length$ -- 358
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 342
+type$ -- 343
 warning$ -- 9
-while$ -- 1085
-width$ -- 345
-write$ -- 3203
+while$ -- 1090
+width$ -- 346
+write$ -- 3212
 (There were 9 warnings)

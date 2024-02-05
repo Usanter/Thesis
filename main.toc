@@ -117,7 +117,7 @@
 \contentsline {chapter}{\numberline {8}Conclusions}{137}{chapter.8}
 \contentsline {section}{\numberline {8.1}Summary of the work carried out during the thesis}{139}{section.8.1}
 \contentsline {section}{\numberline {8.2}Perspectives}{141}{section.8.2}
-\contentsline {chapter}{Bibliography}{143}{section*.135}
+\contentsline {chapter}{Bibliography}{143}{section*.136}
 \contentsline {chapter}{\numberline {A}Pathological speech detection through pre-trained models}{175}{appendix.A}
 \contentsline {section}{\numberline {A.1}Introduction}{175}{section.A.1}
 \contentsline {section}{\numberline {A.2}Pathological speech detection using x-vector embeddings}{176}{section.A.2}
@@ -126,31 +126,31 @@
 \contentsline {subsection}{\numberline {A.2.3}Experimental setup}{177}{subsection.A.2.3}
 \contentsline {subsubsection}{\numberline {A.2.3.A}Corpora}{177}{subsubsection.A.2.3.1}
 \contentsline {subsubsection}{\numberline {A.2.3.B}Knowledge based features}{178}{subsubsection.A.2.3.2}
-\contentsline {subsubsection}{\numberline {A.2.3.C}Speaker embeddings}{178}{subsubsection.A.2.3.3}
+\contentsline {subsubsection}{\numberline {A.2.3.C}Speaker embeddings}{179}{subsubsection.A.2.3.3}
 \contentsline {subsection}{\numberline {A.2.4}Results}{179}{subsection.A.2.4}
 \contentsline {section}{\numberline {A.3}The INESC-ID Multi-Modal System for the ADReSS 2020 Challenge}{180}{section.A.3}
 \contentsline {subsection}{\numberline {A.3.1}Introduction}{180}{subsection.A.3.1}
 \contentsline {subsection}{\numberline {A.3.2}Corpus}{181}{subsection.A.3.2}
-\contentsline {subsection}{\numberline {A.3.3}Proposed system}{181}{subsection.A.3.3}
-\contentsline {subsubsection}{\numberline {A.3.3.A}Acoustics modality}{181}{subsubsection.A.3.3.1}
-\contentsline {subsubsection}{\numberline {A.3.3.B}Linguistic modality}{182}{subsubsection.A.3.3.2}
+\contentsline {subsection}{\numberline {A.3.3}Proposed system}{182}{subsection.A.3.3}
+\contentsline {subsubsection}{\numberline {A.3.3.A}Acoustics modality}{182}{subsubsection.A.3.3.1}
+\contentsline {subsubsection}{\numberline {A.3.3.B}Linguistic modality}{183}{subsubsection.A.3.3.2}
 \contentsline {subsection}{\numberline {A.3.4}Results}{183}{subsection.A.3.4}
 \contentsline {section}{\numberline {A.4}Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19}{185}{section.A.4}
 \contentsline {subsection}{\numberline {A.4.1}Introduction}{185}{subsection.A.4.1}
 \contentsline {subsection}{\numberline {A.4.2}Corpora}{186}{subsection.A.4.2}
-\contentsline {subsection}{\numberline {A.4.3}Proposed system}{186}{subsection.A.4.3}
-\contentsline {subsubsection}{\numberline {A.4.3.A}TDNN-F embedddings}{186}{subsubsection.A.4.3.1}
+\contentsline {subsection}{\numberline {A.4.3}Proposed system}{187}{subsection.A.4.3}
+\contentsline {subsubsection}{\numberline {A.4.3.A}TDNN-F embedddings}{187}{subsubsection.A.4.3.1}
 \contentsline {subsubsection}{\numberline {A.4.3.B}CNN embedddings}{187}{subsubsection.A.4.3.2}
-\contentsline {subsubsection}{\numberline {A.4.3.C}PASE+ embedddings}{187}{subsubsection.A.4.3.3}
+\contentsline {subsubsection}{\numberline {A.4.3.C}PASE+ embedddings}{188}{subsubsection.A.4.3.3}
 \contentsline {subsubsection}{\numberline {A.4.3.D}COVID-19 condition classification}{188}{subsubsection.A.4.3.4}
 \contentsline {subsection}{\numberline {A.4.4}Results}{188}{subsection.A.4.4}
-\contentsline {section}{\numberline {A.5}Conclusion and future work}{189}{section.A.5}
-\contentsline {chapter}{\numberline {B}Sefl-supervised learning as feature extractor for children's \ac {ASR}}{191}{appendix.B}
+\contentsline {section}{\numberline {A.5}Conclusion and future work}{190}{section.A.5}
+\contentsline {chapter}{\numberline {B}Sefl-supervised learning models as feature extractor for children's \ac {ASR}}{191}{appendix.B}
 \contentsline {section}{\numberline {B.1}Introduction}{191}{section.B.1}
 \contentsline {section}{\numberline {B.2}Self-supervised pre-trained models}{192}{section.B.2}
-\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{192}{subsection.B.2.1}
+\contentsline {subsection}{\numberline {B.2.1}Generative modeling}{193}{subsection.B.2.1}
 \contentsline {subsection}{\numberline {B.2.2}Discriminative modeling}{193}{subsection.B.2.2}
 \contentsline {section}{\numberline {B.3}Experimental setup}{194}{section.B.3}
-\contentsline {section}{\numberline {B.4}Results}{195}{section.B.4}
-\contentsline {section}{\numberline {B.5}Analysis of the extracted features}{195}{section.B.5}
-\contentsline {section}{\numberline {B.6}Conclusions and future work}{197}{section.B.6}
+\contentsline {section}{\numberline {B.4}Results}{194}{section.B.4}
+\contentsline {section}{\numberline {B.5}Analysis of the extracted features}{196}{section.B.5}
+\contentsline {section}{\numberline {B.6}Conclusions and future work}{196}{section.B.6}
