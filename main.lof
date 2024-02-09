@@ -1,7 +1,7 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Introduction}{1}{chapter.1}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Illustrated herein are some examples of children's Speech and Language Technology applications that were developed during the course of this thesis. On the left is a running platformer game, where the user's voice controls the character. Pitch dictates running and jumping actions, while energy modulates the velocity of these actions. On the right, a reading task game is depicted, wherein a robot instructs the user to read designated words.\relax }}{5}{figure.caption.10}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Illustrated herein are some examples of children's Speech and Language Technology applications that were developed during the course of this thesis. On the left, it is a running platformer game, where the user's voice controls the character. Pitch dictates running and jumping actions, while energy modulates the velocity of these actions. On the right, a reading task game is depicted, wherein a robot instructs the user to read designated words.\relax }}{5}{figure.caption.10}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Background - Children automatic speech recognition}{11}{chapter.2}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Formant and cepstral variability. Figures taken from \cite {reviewASRchildren}\relax }}{16}{figure.caption.16}
@@ -10,63 +10,63 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Segmental duration variability. Figures taken from \cite {Acoustic_change_children}\relax }}{17}{figure.caption.17}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Averaged-vowel duration across all vowels and subjects in each age group}}}{17}{figure.caption.17}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Within- and between-subject variations. The between-subject variation is reduced by a factor of 2.0}}}{17}{figure.caption.17}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis et al. 1952\relax }}{22}{figure.caption.19}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph in the Harpy system for the sentence ``GIVE ME" from \cite {klatt1977review}\relax }}{23}{figure.caption.24}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{24}{figure.caption.25}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Principal block scheme of extraction of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite {kiktova2013comparison}\relax }}{27}{figure.caption.29}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a standard digit pattern from Davis \textit {et al.} 1952\relax }}{21}{figure.caption.20}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of a decoding graph in the Harpy system for the sentence ``GIVE ME" from \cite {klatt1977review}\relax }}{23}{figure.caption.25}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Architecture of a HMM-based speech recognition system\relax }}{24}{figure.caption.26}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Principal block scheme of extraction of main speech features for ASR: Melspec, fbanks and MFCC coefficients from \cite {kiktova2013comparison}.\relax }}{27}{figure.caption.29}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Three-state Hidden Markov Model for modelling phones\relax }}{28}{figure.caption.36}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Phoneme set and examples of CMU dictionary using 39 phonemes from \cite {weide1998carnegie}\relax }}{30}{figure.caption.42}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{33}{figure.caption.48}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{45}{figure.caption.69}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{45}{figure.caption.69}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{45}{figure.caption.69}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{46}{figure.caption.70}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Architecture of an end-to-end speech recognition system\relax }}{32}{figure.caption.48}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Transfer learning approaches. Figures from \cite {TFchildren}\relax }}{44}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Acoustic adaptation}}}{44}{figure.caption.69}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Pronunciation adaptation}}}{44}{figure.caption.69}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Multilingual approach using each language as a task in a multi-task learning context.\relax }}{45}{figure.caption.70}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Hybrid models for children automatic speech recognition}{53}{chapter.3}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces TDDN and TDNN-F taken from \cite {tdnnf-children}\relax }}{56}{figure.caption.77}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {TDNN with sub-sampling}}}{56}{figure.caption.77}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Factorised TDNN layer}}}{56}{figure.caption.77}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Multilingual transfer learning approach. Language-specific layers can be randomly initialised for a language not present during the MTL phase or use the corresponding pre-trained layers in case the target language was present during the MTL phase. Grey blocks are pre-trained during MTL phase.\relax }}{64}{figure.caption.85}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of the second step of the Multilingual transfer learning approach. Grey blocks are pre-trained during the multilingual first step. Language-specific layers can be randomly initialized, as indicated by the color white, for a language not present during the multilingual phase or use the corresponding pre-trained layers in case the target language was present during the multilingual training, as indicated by the color grey.\relax }}{64}{figure.caption.85}
 \addvspace {10\p@ }
-\contentsline {xchapter}{End-to-End children automatic speech recognition}{71}{chapter.4}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-Encoder, d) Transformer-Decoder.\relax }}{74}{figure.caption.90}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{77}{figure.caption.95}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a Conformer layer\relax }}{77}{figure.caption.96}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{83}{figure.caption.100}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer-wise for the Transformer model}}}{83}{figure.caption.100}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer-wise for the Conformer model}}}{83}{figure.caption.100}
+\contentsline {xchapter}{End-to-End children automatic speech recognition}{69}{chapter.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture of the standard Transformer \cite {vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-Encoder, d) Transformer-Decoder.\relax }}{72}{figure.caption.90}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture of a Conformer layer\relax }}{75}{figure.caption.95}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Convolution module in the context of a Conformer layer\relax }}{75}{figure.caption.96}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture\relax }}{81}{figure.caption.100}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Results of the transfer learning layer-wise for the Transformer model}}}{81}{figure.caption.100}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Results of the transfer learning layer-wise for the Conformer model}}}{81}{figure.caption.100}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{89}{chapter.5}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{92}{figure.caption.103}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Transformer block with various residual adapter configurations (Normalisation layers are not shown in this picture for simplicity in plotting.) \relax }}{94}{figure.caption.104}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual Adapter configurations (Normalisation layers are not shown in this picture for simplicity in plotting.) \relax }}{94}{figure.caption.105}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension sizes within the Conformer architecture \relax }}{98}{figure.caption.109}
+\contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{87}{chapter.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{90}{figure.caption.103}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Transformer block with various residual adapter configurations (Normalisation layers are not shown in this picture for clarity). The fire icon denotes trainable components, whereas the snow icon indicates frozen components. \relax }}{92}{figure.caption.104}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual Adapter configurations (Normalisation layers are not shown in this picture for clarity). The fire icon denotes trainable components, whereas the snow icon indicates frozen components. \relax }}{92}{figure.caption.105}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension sizes within the Conformer architecture.\relax }}{97}{figure.caption.109}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Integration of synthetic speech for data augmentation}{103}{chapter.6}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within the context of a Transformer model\relax }}{108}{figure.caption.112}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Architecture of the YourTTS model\footnotemark \relax }}{110}{figure.caption.114}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within the context of a Conformer architecture\relax }}{116}{figure.caption.121}
+\contentsline {xchapter}{Integration of synthetic speech for data augmentation}{101}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within the context of a Transformer model. The fire icon denotes trainable components, whereas the snow icon indicates frozen components.\relax }}{106}{figure.caption.112}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Architecture of the YourTTS model\footnotemark \relax }}{108}{figure.caption.114}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within the context of a Conformer architecture. The fire icon denotes trainable components, whereas the snow icon indicates frozen components.\relax }}{114}{figure.caption.121}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{121}{chapter.7}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces The architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convolutions are depth-wise convolutions.\relax }}{125}{figure.caption.123}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module.\relax }}{127}{figure.caption.126}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Different parameter efficient procedure for children ASR in Conformer model\relax }}{128}{figure.caption.127}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Overview of the Shared Adapters configurations\relax }}{131}{figure.caption.129}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shared-Adapter setup in a Conformer model}}}{131}{figure.caption.129}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Extremly Shared-Adapter setup in a Conformer model}}}{131}{figure.caption.129}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Different parameter efficient procedures for children ASR in Conformer model compared to the Shared-Adapters and Extremly Shared-Adapters\relax }}{133}{figure.caption.130}
+\contentsline {xchapter}{Enhanced parameter-efficient transfer learning with Shared-Adapters}{119}{chapter.7}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces The architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convolutions are depth-wise convolutions.\relax }}{123}{figure.caption.123}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces AdapterBias, consisting of a linear layer $L_\alpha $ and a vector $\mathcal {V}$, is added after the second feed-forward layer only in each FFN module. The fire icon denotes trainable components, whereas the snow icon indicates frozen components.\relax }}{125}{figure.caption.126}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Different parameter efficient procedure for children ASR in Conformer model\relax }}{127}{figure.caption.127}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Overview of the Shared Adapters configurations. The fire icon denotes trainable components, whereas the snow icon indicates frozen components.\relax }}{130}{figure.caption.129}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Shared-Adapter setup in a Conformer model}}}{130}{figure.caption.129}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Light Shared-Adapter setup in a Conformer model}}}{130}{figure.caption.129}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Different parameter efficient procedures for children ASR in Conformer model compared to the Shared-Adapters and Extremly Shared-Adapters\relax }}{132}{figure.caption.130}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusions}{137}{chapter.8}
+\contentsline {xchapter}{Conclusions}{135}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathological speech detection through pre-trained models}{175}{appendix.A}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Overview of the multimodal system based on embedding approaches\relax }}{182}{figure.caption.149}
+\contentsline {xchapter}{Pathological speech detection through pre-trained models}{173}{appendix.A}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Overview of the multimodal system based on embedding approaches\relax }}{180}{figure.caption.150}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Sefl-supervised learning models as feature extractor for children's \ac {ASR}}{191}{appendix.B}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBERT models\relax }}{193}{figure.caption.157}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{193}{figure.caption.157}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBERT architecture taken from \cite {hsu2021hubert}}}}{193}{figure.caption.157}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces (a) Fbanks (b) TERA (c) Wav2Vec2 (d) HuBERT. T-SNE plot of the different extracted features using the same speech data and their corresponding phoneme labels\relax }}{197}{figure.caption.161}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{197}{figure.caption.161}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{197}{figure.caption.161}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{197}{figure.caption.161}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{197}{figure.caption.161}
+\contentsline {xchapter}{Sefl-supervised learning models as feature extractor for children's \ac {ASR}}{189}{appendix.B}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBERT models\relax }}{191}{figure.caption.161}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{191}{figure.caption.161}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBERT architecture taken from \cite {hsu2021hubert}}}}{191}{figure.caption.161}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces T-SNE plot of the different extracted features using the same speech data and their corresponding phoneme labels for: (a) Fbanks (b) TERA (c) Wav2Vec2 (d) HuBERT.\relax }}{195}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{195}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{195}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{195}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{195}{figure.caption.165}

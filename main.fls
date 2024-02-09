@@ -329,6 +329,14 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/truncate/truncate.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/truncate/truncate.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/setspace/setspace.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/svg/svg.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/svg/svg.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/shellesc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/transparent.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/transparent.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/paralist/paralist.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/paralist/paralist.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/cite/cite.sty
@@ -344,8 +352,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.st
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -638,11 +644,13 @@ INPUT ./imgs/INESC-ID.png
 INPUT ./imgs/INESC-ID.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-0.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-0.def
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-0.def
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-0.def
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Thesis-MSc-copyright.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Thesis-MSc-copyright.tex
@@ -651,8 +659,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acknowledgments.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acknowledgments.tex
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-Abstract.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-Abstract.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-KeyWords.tex
@@ -712,10 +718,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.toc
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lof
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lof
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lof
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acronyms.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acronyms.tex
@@ -780,6 +786,7 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Intra_inter_duration.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/bell.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/bell.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/bell.png
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti9.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png
@@ -831,7 +838,6 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/TDNNF.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Ours_final.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Ours_final.png
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/imgs/Ours_final.png
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti9.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_4.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_4.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.mtc4

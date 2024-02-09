@@ -23,7 +23,7 @@
 
 \bibitem{reviewASRchildren}
 \BIBentryALTinterwordspacing
-M.~Gerosa, D.~Giuliani, S.~Narayanan, and A.~Potamianos, ``A review of asr
+M.~Gerosa, D.~Giuliani, S.~Narayanan, and A.~Potamianos, ``A review of {ASR}
   technologies for children's speech,'' in \emph{Proceedings of the 2nd
   Workshop on Child, Computer and Interaction}, ser. WOCCI '09.\hskip 1em plus
   0.5em minus 0.4em\relax New York, NY, USA: Association for Computing
@@ -40,7 +40,7 @@ S.~Lee, A.~Potamianos, and S.~Narayanan, ``Acoustics of children’s speech:
 \BIBentrySTDinterwordspacing
 
 \bibitem{klatt1977review}
-D.~H. Klatt, ``Review of the arpa speech understanding project,'' \emph{The
+D.~H. Klatt, ``Review of the {ARPA} speech understanding project,'' \emph{The
   Journal of the Acoustical Society of America}, vol.~62, no.~6, pp.
   1345--1366, 1977.
 
@@ -56,8 +56,13 @@ R.~Weide \emph{et~al.}, ``The carnegie mellon pronouncing dictionary,''
   \emph{release 0.6, www. cs. cmu. edu}, 1998.
 
 \bibitem{TFchildren}
-P.~G. Shivakumar and P.~Georgiou, ``Transfer learning from adult to children
-  for speech recognition: Evaluation, analysis and recommendations,'' 2018.
+\BIBentryALTinterwordspacing
+P.~{Gurunath Shivakumar} and P.~Georgiou, ``Transfer learning from adult to
+  children for speech recognition: Evaluation, analysis and recommendations,''
+  \emph{Computer Speech \& Language}, vol.~63, p. 101077, 2020. [Online].
+  Available:
+  \url{https://www.sciencedirect.com/science/article/pii/S0885230820300103}
+\BIBentrySTDinterwordspacing
 
 \bibitem{tdnnf-children}
 F.~Wu, L.~P. Garc{\'\i}a-Perera, D.~Povey, and S.~Khudanpur, ``Advances in
@@ -70,8 +75,11 @@ A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
   \emph{Advances in neural information processing systems}, vol.~30, 2017.
 
 \bibitem{levelt1993speaking}
-W.~J. Levelt, \emph{Speaking: From intention to articulation}.\hskip 1em plus
-  0.5em minus 0.4em\relax MIT press, 1993.
+\BIBentryALTinterwordspacing
+W.~J.~M. Levelt, \emph{{Speaking: From Intention to Articulation}}.\hskip 1em
+  plus 0.5em minus 0.4em\relax The MIT Press, 08 1993. [Online]. Available:
+  \url{https://doi.org/10.7551/mitpress/6393.001.0001}
+\BIBentrySTDinterwordspacing
 
 \bibitem{black2015communication}
 L.~Black, A.~Vahratian, and H.~Hoffman, ``Communication disorders and use of
@@ -119,9 +127,9 @@ A.~Potamianos and S.~Narayanan, ``Robust recognition of children's speech,''
   603--616, 2003.
 
 \bibitem{li2023asr}
-Y.~Li, Z.~Zhao, O.~Klejch, P.~Bell, and C.~Lai, ``Asr and emotional speech: A
-  word-level investigation of the mutual impact of speech and emotion
-  recognition,'' \emph{arXiv preprint arXiv:2305.16065}, 2023.
+Y.~Li, Z.~Zhao, O.~Klejch, P.~Bell, and C.~Lai, ``{ASR and Emotional Speech: A
+  Word-Level Investigation of the Mutual Impact of Speech and Emotion
+  Recognition},'' in \emph{Proc. INTERSPEECH 2023}, 2023, pp. 1449--1453.
 
 \bibitem{li2014overview}
 J.~Li, L.~Deng, Y.~Gong, and R.~Haeb-Umbach, ``An overview of noise-robust
@@ -130,8 +138,13 @@ J.~Li, L.~Deng, Y.~Gong, and R.~Haeb-Umbach, ``An overview of noise-robust
 
 \bibitem{king2017robust}
 B.~King, I.-F. Chen, Y.~Vaizman, Y.~Liu, R.~Maas, S.~H.~K. Parthasarathi, and
-  B.~Hoffmeister, ``Robust speech recognition via anchor word
-  representations,'' 2017.
+  B.~Hoffmeister, ``{Robust Speech Recognition via Anchor Word
+  Representations},'' in \emph{Proc. Interspeech 2017}, 2017, pp. 2471--2475.
+
+\bibitem{lee97b_eurospeech}
+S.~Lee, A.~Potamianos, and S.~Narayanan, ``{Analysis of children's speech:
+  duration, pitch and formants},'' in \emph{Proc. 5th European Conference on
+  Speech Communication and Technology (Eurospeech 1997)}, 1997, pp. 473--476.
 
 \bibitem{first_vowel_study}
 \BIBentryALTinterwordspacing
@@ -147,9 +160,8 @@ Q.~Li and M.~J. Russell, ``{Why is automatic recognition of children's speech
   and Technology (Eurospeech 2001)}, 2001, pp. 2671--2674.
 
 \bibitem{segment_definition}
-D.~CRYSTAL, ``A dictionary of linguistics and phonetics (5th edn.). oxford:
-  Blackwell publishing, 2003. pp. 508. isbn 0 631 22664 8,'' \emph{Journal of
-  the International Phonetic Association}, vol.~34, pp. 100 -- 101, 01 2004.
+D.~CRYSTAL, ``A dictionary of linguistics and phonetics,'' \emph{Journal of the
+  International Phonetic Association}, vol.~34, pp. 100 -- 101, 01 2004.
 
 \bibitem{moats2000speech}
 L.~C. Moats and S.~Brady, \emph{Speech to print: Language essentials for
@@ -162,7 +174,8 @@ H.~Tulsiani, P.~Swarup, and P.~Rao, ``Acoustic and language modeling for
   IEEE, 2017, pp. 1--6.
 
 \bibitem{clark1977psychology}
-H.~H. Clark and E.~V. Clark, ``Psychology and language,'' 1977.
+H.~H. Clark and E.~V. Clark, ``Psychology and language,'' \emph{Journal of
+  Child Language}, vol.~4, p. b1–b3, 1977.
 
 \bibitem{language_children2}
 A.~Potamianos and S.~Narayanan, ``Spoken dialog systems for children,'' in
@@ -191,10 +204,11 @@ V.~Panayotov, G.~Chen, D.~Povey, and S.~Khudanpur, ``Librispeech: An asr corpus
   based on public domain audio books,'' in \emph{ICASSP}, 2015, pp. 5206--5210.
 
 \bibitem{chen2021gigaspeech}
-G.~Chen, S.~Chai, G.~Wang, J.~Du, W.-Q. Zhang, C.~Weng, D.~Su, D.~Povey,
-  J.~Trmal, J.~Zhang \emph{et~al.}, ``Gigaspeech: An evolving, multi-domain asr
-  corpus with 10,000 hours of transcribed audio,'' \emph{arXiv preprint
-  arXiv:2106.06909}, 2021.
+G.~Chen, S.~Chai, G.-B. Wang, J.~Du, W.-Q. Zhang, C.~Weng, D.~Su, D.~Povey,
+  J.~Trmal, J.~Zhang, M.~Jin, S.~Khudanpur, S.~Watanabe, S.~Zhao, W.~Zou,
+  X.~Li, X.~Yao, Y.~Wang, Z.~You, and Z.~Yan, ``{GigaSpeech: An Evolving,
+  Multi-Domain ASR Corpus with 10,000 Hours of Transcribed Audio},'' in
+  \emph{Proc. Interspeech 2021}, 2021, pp. 3670--3674.
 
 \bibitem{MyST}
 W.~Ward, R.~Cole, D.~Bola{\~n}os, C.~Buchenroth-Martin, E.~Svirsky, and T.~B.
@@ -224,8 +238,9 @@ M.~Eskenazi, J.~Mostow, and D.~Graff, ``The cmu kids speech corpus,''
 K.~Shobaki, J.-P. Hosom, and R.~Cole, ``The ogi kids’ speech corpus and
   recognizers,'' in \emph{Proc. of ICSLP}, 2000, pp. 564--567.
 
-\bibitem{pf-star-british}
-M.~Russell, ``The pf-star british english children’s speech corpus,'' 2006.
+\bibitem{pfstar}
+M.~Russell, S.~D'Arcy, M.~Wong, A.~Batliner, M.~Blomberg, and M.~Gerosa, ``The
+  pf-star children's speech corpus,'' in \emph{Interspeech 2005}, 2005.
 
 \bibitem{asr-google}
 H.~Liao, G.~Pundak, O.~Siohan, M.~Carroll, N.~Coccaro, Q.-M. Jiang, T.~N.
@@ -258,13 +273,18 @@ K.~H. Davis, R.~Biddulph, and S.~Balashek, ``Automatic recognition of spoken
 
 \bibitem{htk_book}
 S.~Young, G.~Evermann, M.~Gales, T.~Hain, D.~Kershaw, X.~Liu, G.~Moore,
-  J.~Odell, D.~Ollason, D.~Povey \emph{et~al.}, ``The htk book,''
+  J.~Odell, D.~Ollason, D.~Povey \emph{et~al.}, ``The {HTK} book,''
   \emph{Cambridge university engineering department}, vol.~3, no. 175, p.~12,
   2002.
 
 \bibitem{darpa1992}
-P.~C. Woodland and S.~J. Young, ``The htk tied-state continuous speech
+P.~C. Woodland and S.~J. Young, ``The {HTK} tied-state continuous speech
   recogniser.'' in \emph{Eurospeech}, 1993.
+
+\bibitem{virkkunen2023finnish}
+A.~Virkkunen, A.~Rouhe, N.~Phan, and M.~Kurimo, ``Finnish parliament asr
+  corpus: Analysis, benchmarks and statistics,'' \emph{Language Resources and
+  Evaluation}, pp. 1--26, 2023.
 
 \bibitem{hmm-dnn}
 G.~Hinton, L.~Deng, D.~Yu, G.~E. Dahl, A.-r. Mohamed, N.~Jaitly, A.~Senior,
@@ -280,7 +300,7 @@ S.~Davis and P.~Mermelstein, ``Comparison of parametric representations for
   pp. 357--366, 1980.
 
 \bibitem{Dragon_system}
-J.~Baker, ``The dragon system--an overview,'' \emph{IEEE Transactions on
+J.~Baker, ``The {DRAGON} system--an overview,'' \emph{IEEE Transactions on
   Acoustics, Speech, and Signal Processing}, vol.~23, no.~1, pp. 24--29, 1975.
 
 \bibitem{bizzocchi2017many}
@@ -318,8 +338,9 @@ K.~J. Lang, A.~H. Waibel, and G.~E. Hinton, ``A time-delay neural network
   no.~1, pp. 23--43, 1990.
 
 \bibitem{sak2014long}
-H.~Sak, A.~W. Senior, and F.~Beaufays, ``Long short-term memory recurrent
-  neural network architectures for large scale acoustic modeling,'' 2014.
+H.~Sak, A.~Senior, and F.~Beaufays, ``{Long short-term memory recurrent neural
+  network architectures for large scale acoustic modeling},'' in \emph{Proc.
+  Interspeech 2014}, 2014, pp. 338--342.
 
 \bibitem{waibel2013phoneme}
 A.~Waibel, T.~Hanazawa, G.~Hinton, K.~Shikano, and K.~J. Lang, ``Phoneme
@@ -328,9 +349,9 @@ A.~Waibel, T.~Hanazawa, G.~Hinton, K.~Shikano, and K.~J. Lang, ``Phoneme
   Press, 2013, pp. 35--61.
 
 \bibitem{g2p}
-K.~Yao and G.~Zweig, ``Sequence-to-sequence neural net models for
-  grapheme-to-phoneme conversion,'' \emph{arXiv preprint arXiv:1506.00196},
-  2015.
+K.~Yao and G.~Zweig, ``{Sequence-to-sequence neural net models for
+  grapheme-to-phoneme conversion},'' in \emph{Proc. Interspeech 2015}, 2015,
+  pp. 3330--3334.
 
 \bibitem{n-grams-NLP}
 G.~Sidorov, F.~Velasquez, E.~Stamatatos, A.~Gelbukh, and
@@ -361,8 +382,16 @@ S.~Chen and R.~Rosenfeld, ``A survey of smoothing techniques for me models,''
   37--50, 2000.
 
 \bibitem{Bert}
-J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova, ``Bert: Pre-training of deep
-  bidirectional transformers for language understanding,'' 2019.
+\BIBentryALTinterwordspacing
+J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova, ``{BERT}: Pre-training of
+  deep bidirectional transformers for language understanding,'' in
+  \emph{Proceedings of the 2019 Conference of the North {A}merican Chapter of
+  the Association for Computational Linguistics: Human Language Technologies,
+  Volume 1 (Long and Short Papers)}, J.~Burstein, C.~Doran, and T.~Solorio,
+  Eds.\hskip 1em plus 0.5em minus 0.4em\relax Minneapolis, Minnesota:
+  Association for Computational Linguistics, Jun. 2019, pp. 4171--4186.
+  [Online]. Available: \url{https://aclanthology.org/N19-1423}
+\BIBentrySTDinterwordspacing
 
 \bibitem{brown2020language}
 T.~Brown, B.~Mann, N.~Ryder, M.~Subbiah, J.~D. Kaplan, P.~Dhariwal,
@@ -390,16 +419,16 @@ M.~Mohri, ``Finite-state transducers in language and speech processing,''
   \emph{Computational linguistics}, vol.~23, no.~2, pp. 269--311, 1997.
 
 \bibitem{caseiro2002using}
-D.~Caseiro and I.~Trancoso, ``Using dynamic wfst composition for recognizing
+D.~Caseiro and I.~Trancoso, ``Using dynamic {WFST} composition for recognizing
   broadcast news,'' in \emph{Seventh International Conference on Spoken
   Language Processing}, 2002.
 
 \bibitem{kaldi}
 D.~Povey, A.~Ghoshal, G.~Boulianne, L.~Burget, O.~Glembek, N.~Goel,
-  M.~Hannemann, P.~Motlicek, Y.~Qian, P.~Schwarz \emph{et~al.}, ``The kaldi
+  M.~Hannemann, P.~Motlicek, Y.~Qian, P.~Schwarz \emph{et~al.}, ``The {Kaldi}
   speech recognition toolkit,'' in \emph{IEEE 2011 workshop on automatic speech
-  recognition and understanding}, no. CONF.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE Signal Processing Society, 2011.
+  recognition and understanding}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE
+  Signal Processing Society, 2011.
 
 \bibitem{richardson1995lattice}
 F.~Richardson, M.~Ostendorf, and J.~R. Rohlicek, ``Lattice-based search
@@ -440,8 +469,8 @@ I.~Sutskever, O.~Vinyals, and Q.~V. Le, ``Sequence to sequence learning with
 
 \bibitem{bahdanau2014neural}
 D.~Bahdanau, K.~Cho, and Y.~Bengio, ``Neural machine translation by jointly
-  learning to align and translate,'' \emph{arXiv preprint arXiv:1409.0473},
-  2014.
+  learning to align and translate,'' in \emph{3rd International Conference on
+  Learning Representations, ICLR 2015}, 2015.
 
 \bibitem{seq2seq_imagecaption}
 O.~Vinyals, A.~Toshev, S.~Bengio, and D.~Erhan, ``Show and tell: A neural image
@@ -453,9 +482,14 @@ O.~Vinyals and Q.~Le, ``A neural conversational model,'' \emph{arXiv preprint
   arXiv:1506.05869}, 2015.
 
 \bibitem{nallapati2016abstractive}
+\BIBentryALTinterwordspacing
 R.~Nallapati, B.~Zhou, C.~Gulcehre, B.~Xiang \emph{et~al.}, ``Abstractive text
-  summarization using sequence-to-sequence rnns and beyond,'' \emph{arXiv
-  preprint arXiv:1602.06023}, 2016.
+  summarization using sequence-to-sequence {RNN}s and beyond,'' in
+  \emph{Proceedings of the 20th {SIGNLL} Conference on Computational Natural
+  Language Learning}.\hskip 1em plus 0.5em minus 0.4em\relax Berlin, Germany:
+  Association for Computational Linguistics, 2016, pp. 280--290. [Online].
+  Available: \url{https://aclanthology.org/K16-1028}
+\BIBentrySTDinterwordspacing
 
 \bibitem{dong2018speech}
 L.~Dong, S.~Xu, and B.~Xu, ``Speech-transformer: a no-recurrence
@@ -464,9 +498,9 @@ L.~Dong, S.~Xu, and B.~Xu, ``Speech-transformer: a no-recurrence
   (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 5884--5888.
 
 \bibitem{tuske2021limit}
-Z.~T{\"u}ske, G.~Saon, and B.~Kingsbury, ``On the limit of english
-  conversational speech recognition,'' \emph{arXiv preprint arXiv:2105.00982},
-  2021.
+Z.~Tüske, G.~Saon, and B.~Kingsbury, ``{On the Limit of English Conversational
+  Speech Recognition},'' in \emph{Proc. Interspeech 2021}, 2021, pp.
+  2062--2066.
 
 \bibitem{bermuth2021scribosermo}
 D.~Bermuth, A.~Poeppel, and W.~Reif, ``Scribosermo: fast speech-to-text models
@@ -485,7 +519,8 @@ S.~Ghai and R.~Sinha, ``Exploring the role of spectral smoothing in context of
 
 \bibitem{ghai2011addressing}
 S.~Ghai, ``Addressing pitch mismatch for children's automatic speech
-  recognition,'' Ph.D. dissertation, 2011.
+  recognition,'' Ph.D. dissertation, Indian Institute of technology Guwahati,
+  2011.
 
 \bibitem{Hermansky1990PerceptualLP}
 H.~Hermansky, ``Perceptual linear predictive (plp) analysis of speech.''
@@ -504,14 +539,15 @@ S.~P. Dubagunta, S.~Hande~Kabil, and M.~Magimai.-Doss, ``Improving children
   \emph{ICASSP 2019 - 2019 IEEE International Conference on Acoustics, Speech
   and Signal Processing (ICASSP)}, 2019, pp. 5736--5740.
 
+\bibitem{Sincnet}
+M.~Ravanelli and Y.~Bengio, ``Speaker recognition from raw waveform with
+  sincnet,'' in \emph{2018 IEEE spoken language technology workshop
+  (SLT)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 1021--1028.
+
 \bibitem{sincnet_adapt}
 J.~Fainberg, O.~Klejch, E.~Loweimi, P.~Bell, and S.~Renals, ``Acoustic model
   adaptation from raw waveforms with sincnet,'' in \emph{2019 IEEE Automatic
   Speech Recognition and Understanding Workshop (ASRU)}, 2019, pp. 897--904.
-
-\bibitem{Sincnet}
-M.~Ravanelli and Y.~Bengio, ``Speaker recognition from raw waveform with
-  sincnet,'' 2019.
 
 \bibitem{VTLN}
 L.~Lee and R.~C. Rose, ``Speaker normalization using efficient frequency
@@ -668,18 +704,20 @@ P.~{Gurunath Shivakumar} and S.~Narayanan, ``End-to-end neural systems for
 
 \bibitem{chen2020data}
 G.~Chen, X.~Na, Y.~Wang, Z.~Yan, J.~Zhang, S.~Ma, and Y.~Wang, ``Data
-  augmentation for children's speech recognition--the" ethiopian" system for
+  augmentation for children's speech recognition--the ``ethiopian" system for
   the slt 2021 children speech recognition challenge,'' \emph{arXiv preprint
   arXiv:2011.04547}, 2020.
 
 \bibitem{ng2020cuhk}
 S.-I. Ng, W.~Liu, Z.~Peng, S.~Feng, H.-P. Huang, O.~Scharenborg, and T.~Lee,
-  ``The cuhk-tudelft system for the slt 2021 children speech recognition
+  ``The {CUHK-TUDELFT} system for the {SLT} 2021 children speech recognition
   challenge,'' \emph{arXiv preprint arXiv:2011.06239}, 2020.
 
 \bibitem{chan2015listen}
-W.~Chan, N.~Jaitly, Q.~V. Le, and O.~Vinyals, ``Listen, attend and spell,''
-  \emph{arXiv preprint arXiv:1508.01211}, 2015.
+W.~Chan, N.~Jaitly, Q.~Le, and O.~Vinyals, ``Listen, attend and spell: A neural
+  network for large vocabulary conversational speech recognition,'' in
+  \emph{2016 IEEE International Conference on Acoustics, Speech and Signal
+  Processing (ICASSP)}, 2016, pp. 4960--4964.
 
 \bibitem{targ2016resnet}
 S.~Targ, D.~Almeida, and K.~Lyman, ``Resnet in resnet: Generalizing residual
@@ -687,7 +725,8 @@ S.~Targ, D.~Almeida, and K.~Lyman, ``Resnet in resnet: Generalizing residual
 
 \bibitem{Transformer}
 A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
-  L.~Kaiser, and I.~Polosukhin, ``Attention is all you need,'' 2017.
+  {\L}.~Kaiser, and I.~Polosukhin, ``Attention is all you need,''
+  \emph{Advances in neural information processing systems}, vol.~30, 2017.
 
 \bibitem{adultAUGMENT1}
 M.~Qian, I.~McLoughlin, W.~Quo, and L.~Dai, ``Mismatched training data
@@ -725,9 +764,9 @@ M.~Dua, V.~Kadyan, N.~Banthia, A.~Bansal, and T.~Agarwal, ``Spectral warping
   conditions,'' \emph{Applied Acoustics}, vol. 190, p. 108643, 2022.
 
 \bibitem{shuyangdata}
-Z.~Shuyang, M.~Singh, A.~Woubie, and R.~Karhila, ``Data augmentation for
-  children asr and child-adult speaker classification using voice conversion
-  methods.''
+S.~Zhao, M.~Singh, A.~Woubie, and R.~Karhila, ``{Data augmentation for children
+  ASR and child-adult speaker classification using voice conversion methods},''
+  in \emph{Proc. INTERSPEECH 2023}, 2023, pp. 4593--4597.
 
 \bibitem{GANS}
 P.~Sheng, Z.~Yang, and Y.~Qian, ``Gans for children: A generative data
@@ -758,8 +797,8 @@ A.~Laptev, R.~Korostik, A.~Svischev, A.~Andrusenko, I.~Medennikov, and
 
 \bibitem{wang2021towards}
 W.~Wang, Z.~Zhou, Y.~Lu, H.~Wang, C.~Du, and Y.~Qian, ``Towards data selection
-  on tts data for children’s speech recognition,'' in \emph{ICASSP 2021-2021
-  IEEE International Conference on Acoustics, Speech and Signal Processing
+  on {TTS} data for children’s speech recognition,'' in \emph{2021 IEEE
+  International Conference on Acoustics, Speech and Signal Processing
   (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2021, pp. 6888--6892.
 
 \bibitem{liu2003noise}
@@ -793,14 +832,15 @@ J.~Malek, J.~Zdansky, and P.~Cerva, ``Robust automatic recognition of speech
   0.4em\relax IEEE, 2017, pp. 5210--5214.
 
 \bibitem{lo2020ntnu}
-T.-H. Lo, F.-A. Chao, S.-Y. Weng, and B.~Chen, ``The ntnu system at the
-  interspeech 2020 non-native children's speech asr challenge,'' \emph{arXiv
-  preprint arXiv:2005.08433}, 2020.
+T.-H. Lo, F.-A. Chao, S.-Y. Weng, and B.~Chen, ``{The NTNU System at the
+  Interspeech 2020 Non-Native Children’s Speech ASR Challenge},'' in
+  \emph{Proc. Interspeech 2020}, 2020, pp. 250--254.
 
 \bibitem{singh2022spectral}
-V.~P. Singh, H.~Sailor, S.~Bhattacharya, and A.~Pandey, ``Spectral modification
-  based data augmentation for improving end-to-end asr for children's speech,''
-  \emph{arXiv preprint arXiv:2203.06600}, 2022.
+V.~P. Singh, H.~Sailor, S.~Bhattacharya, and A.~Pandey, ``{Spectral
+  Modification Based Data Augmentation For Improving End-to-End ASR For
+  Children’s Speech},'' in \emph{Proc. Interspeech 2022}, 2022, pp.
+  3213--3217.
 
 \bibitem{VTLP}
 N.~Jaitly and G.~E. Hinton, ``Vocal tract length perturbation (vtlp) improves
@@ -829,8 +869,14 @@ Y.~Bengio, A.~Courville, and P.~Vincent, ``Representation learning: A review
   Machine Intelligence}, vol.~35, no.~8, pp. 1798--1828, 2013.
 
 \bibitem{yosinski2014transferable}
+\BIBentryALTinterwordspacing
 J.~Yosinski, J.~Clune, Y.~Bengio, and H.~Lipson, ``How transferable are
-  features in deep neural networks?'' 2014.
+  features in deep neural networks?'' in \emph{Advances in Neural Information
+  Processing Systems}, Z.~Ghahramani, M.~Welling, C.~Cortes, N.~Lawrence, and
+  K.~Weinberger, Eds., vol.~27.\hskip 1em plus 0.5em minus 0.4em\relax Curran
+  Associates, Inc., 2014. [Online]. Available:
+  \url{https://proceedings.neurips.cc/paper_files/paper/2014/file/375c71349b295fbe2dcdca9206f20a06-Paper.pdf}
+\BIBentrySTDinterwordspacing
 
 \bibitem{tfcharacter}
 D.~C. Cireşan, U.~Meier, and J.~Schmidhuber, ``Transfer learning for latin and
@@ -860,7 +906,7 @@ R.~Collobert and J.~Weston, ``A unified architecture for natural language
 \BIBentrySTDinterwordspacing
 
 \bibitem{mtl_computervision}
-R.~Girshick, ``Fast r-cnn,'' in \emph{Proceedings of the IEEE international
+R.~Girshick, ``{Fast R-CNN},'' in \emph{Proceedings of the IEEE international
   conference on computer vision}, 2015, pp. 1440--1448.
 
 \bibitem{bioinfo}
@@ -886,9 +932,9 @@ L.~Wei, W.~Dong, B.~Lin, and J.~Zhang, ``Multi-task based mispronunciation
   1791--1794.
 
 \bibitem{zavaliagkos1998utilizing}
-G.~Zavaliagkos and T.~Colthurst, ``Utilizing untranscribed training data to
-  improve perfomance.'' in \emph{LREC}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Citeseer, 1998, pp. 317--322.
+G.~Zavaliagkos, M.-H. Siu, T.~Colthurst, and J.~Billa, ``{Using untranscribed
+  training data to improve performance},'' in \emph{Proc. 5th International
+  Conference on Spoken Language Processing (ICSLP 1998)}, 1998, p. paper 1007.
 
 \bibitem{ma2006unsupervised}
 J.~Ma, S.~Matsoukas, O.~Kimball, and R.~Schwartz, ``Unsupervised training on
@@ -907,6 +953,18 @@ O.~Henaff, ``Data-efficient image recognition with contrastive predictive
   coding,'' in \emph{International conference on machine learning}.\hskip 1em
   plus 0.5em minus 0.4em\relax PMLR, 2020, pp. 4182--4192.
 
+\bibitem{Pascual2019}
+S.~Pascual, M.~Ravanelli, J.~Serrà, A.~Bonafonte, and Y.~Bengio, ``{Learning
+  Problem-Agnostic Speech Representations from Multiple Self-Supervised
+  Tasks},'' in \emph{Proceedings of Interspeech 2019}, Graz, Austria, 2019, pp.
+  161--165.
+
+\bibitem{Ravanelli2020}
+M.~Ravanelli, J.~Zhong, S.~Pascual, P.~Swietojanski, J.~Monteiro, J.~Trmal, and
+  Y.~Bengio, ``{Multi-Task Self-Supervised Learning for Robust Speech
+  Recognition},'' in \emph{{2020 IEEE International Conference on Acoustics,
+  Speech and Signal Processing (ICASSP)}}, 2020, pp. 6989--6993.
+
 \bibitem{baevski2020wav2vec}
 A.~Baevski, Y.~Zhou, A.~Mohamed, and M.~Auli, ``wav2vec 2.0: A framework for
   self-supervised learning of speech representations,'' \emph{Advances in
@@ -920,15 +978,15 @@ W.-N. Hsu, B.~Bolte, Y.-H.~H. Tsai, K.~Lakhotia, R.~Salakhutdinov, and
 
 \bibitem{riviere2020unsupervised}
 M.~Riviere, A.~Joulin, P.-E. Mazar{\'e}, and E.~Dupoux, ``Unsupervised
-  pretraining transfers well across languages,'' in \emph{ICASSP 2020-2020 IEEE
-  International Conference on Acoustics, Speech and Signal Processing
-  (ICASSP)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2020, pp. 7414--7418.
+  pretraining transfers well across languages,'' in \emph{IEEE International
+  Conference on Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, 2020, pp. 7414--7418.
 
 \bibitem{wang2022wav2vec}
 Y.~Wang, J.~Li, H.~Wang, Y.~Qian, C.~Wang, and Y.~Wu, ``Wav2vec-switch:
   Contrastive learning from original-noisy speech pairs for robust speech
-  recognition,'' in \emph{ICASSP 2022-2022 IEEE International Conference on
-  Acoustics, Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
+  recognition,'' in \emph{2022 IEEE International Conference on Acoustics,
+  Speech and Signal Processing (ICASSP)}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE, 2022, pp. 7097--7101.
 
 \bibitem{li2021accent}
@@ -938,24 +996,25 @@ J.~Li, V.~Manohar, P.~Chitkara, A.~Tjandra, M.~Picheny, F.~Zhang, X.~Zhang, and
   2021.
 
 \bibitem{xu2021tal}
-G.~Xu, S.~Yang, L.~Ma, C.~Li, and Z.~Wu, ``The tal system for the
-  interspeech2021 shared task on automatic speech recognition for non-native
-  childrens speech.'' in \emph{Interspeech}, 2021, pp. 1294--1298.
+G.~Xu, S.~Yang, L.~Ma, C.~Li, and Z.~Wu, ``{The TAL System for the
+  INTERSPEECH2021 Shared Task on Automatic Speech Recognition for Non-Native
+  Childrens Speech.}'' in \emph{Interspeech}, 2021, pp. 1294--1298.
 
 \bibitem{jain2023wav2vec2}
-R.~Jain, A.~Barcovschi, M.~Yiwere, D.~Bigioi, P.~Corcoran, and H.~Cucu, ``A
-  wav2vec2-based experimental study on self-supervised learning methods to
-  improve child speech recognition.'' \emph{IEEE Access}, 2023.
+R.~Jain, A.~Barcovschi, M.~Y. Yiwere, D.~Bigioi, P.~Corcoran, and H.~Cucu, ``{A
+  WAV2VEC2-Based Experimental Study on Self-Supervised Learning Methods to
+  Improve Child Speech Recognition},'' \emph{IEEE Access}, vol.~11, pp.
+  46\,938--46\,948, 2023.
 
 \bibitem{jain2023adaptation}
-R.~Jain, A.~Barcovschi, M.~Yiwere, P.~Corcoran, and H.~Cucu, ``Adaptation of
-  whisper models to child speech recognition,'' \emph{arXiv preprint
-  arXiv:2307.13008}, 2023.
+R.~Jain, A.~Barcovschi, M.~Yiwere, P.~Corcoran, and H.~Cucu, ``{Adaptation of
+  Whisper models to child speech recognition},'' in \emph{Proc. INTERSPEECH
+  2023}, 2023, pp. 5242--5246.
 
 \bibitem{fan2022draft}
-R.~Fan and A.~Alwan, ``Draft: A novel framework to reduce domain shifting in
-  self-supervised learning and its application to children's asr,'' \emph{arXiv
-  preprint arXiv:2206.07931}, 2022.
+R.~Fan and A.~Alwan, ``{DRAFT: A Novel Framework to Reduce Domain Shifting in
+  Self-supervised Learning and Its Application to Children’s ASR},'' in
+  \emph{Proc. Interspeech 2022}, 2022, pp. 4900--4904.
 
 \bibitem{providence}
 K.~Demuth, J.~Culbertson, and J.~Alter, ``Word-minimality, epenthesis and coda
@@ -978,8 +1037,9 @@ K.~Demuth, ``The acquisition of sesotho,'' in \emph{The crosslinguistic study
   Press, 1992, pp. 557--638.
 
 \bibitem{nitk}
-P.~B. Ramteke, S.~Supanekar, P.~Hegde, H.~Nelson, V.~Aithal, and S.~Koolagudi,
-  ``Nitk kids’ speech corpus,'' \emph{emotion}, vol. 491, pp. 4--15, 2019.
+P.~B. Ramteke, S.~Supanekar, P.~Hegde, H.~Nelson, V.~Aithal, and S.~G.
+  Koolagudi, ``{NITK Kids’ Speech Corpus},'' in \emph{Proc. Interspeech
+  2019}, 2019, pp. 331--335.
 
 \bibitem{chiede}
 M.~Garrote and A.~Moreno~Sandoval, ``Chiede, a spontaneous child language
@@ -988,8 +1048,9 @@ M.~Garrote and A.~Moreno~Sandoval, ``Chiede, a spontaneous child language
 
 \bibitem{cuchild}
 S.-I. Ng, C.~W.-Y. Ng, J.~Wang, T.~Lee, K.~Y.-S. Lee, and M.~C.-F. Tong,
-  ``Cuchild: A large-scale cantonese corpus of child speech for phonology and
-  articulation assessment,'' \emph{arXiv preprint arXiv:2008.03188}, 2020.
+  ``{CUCHILD: A Large-Scale Cantonese Corpus of Child Speech for Phonology and
+  Articulation Assessment},'' in \emph{Proc. Interspeech 2020}, 2020, pp.
+  424--428.
 
 \bibitem{emochildru}
 E.~Lyakso, O.~Frolova, E.~Dmitrieva, A.~Grigorev, H.~Kaya, A.~A. Salah, and
@@ -999,8 +1060,8 @@ E.~Lyakso, O.~Frolova, E.~Dmitrieva, A.~Grigorev, H.~Kaya, A.~A. Salah, and
 
 \bibitem{hamalainen2013cng}
 A.~H{\"a}m{\"a}l{\"a}inen, S.~Rodrigues, A.~J{\'u}dice, S.~M. Silva, A.~Calado,
-  F.~M. Pinto, and M.~S. Dias, ``The cng corpus of european portuguese
-  children’s speech,'' in \emph{International Conference on Text, Speech and
+  F.~M. Pinto, and M.~S. Dias, ``{The CNG corpus of European Portuguese
+  children’s speech},'' in \emph{International Conference on Text, Speech and
   Dialogue}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2013, pp.
   544--551.
 
@@ -1010,24 +1071,16 @@ G.~Yeung, A.~L. Bailey, A.~Afshan, M.~Tinkler, M.~Q. P{\'e}rez, A.~Martin,
   interface for the administration of language, literacy, and speech pathology
   assessments for children.'' in \emph{SLaTE}, 2019, pp. 41--42.
 
-\bibitem{pfstar}
-M.~Russell, S.~D'Arcy, M.~Wong, A.~Batliner, M.~Blomberg, and M.~Gerosa, ``The
-  pf-star children's speech corpus,'' in \emph{Interspeech 2005}, 2005.
-
 \bibitem{yu2021slt}
-F.~Yu, Z.~Yao, X.~Wang, K.~An, L.~Xie, Z.~Ou, B.~Liu, X.~Li, and G.~Miao, ``The
-  slt 2021 children speech recognition challenge: Open datasets, rules and
-  baselines,'' in \emph{2021 IEEE Spoken Language Technology Workshop
+F.~Yu, Z.~Yao, X.~Wang, K.~An, L.~Xie, Z.~Ou, B.~Liu, X.~Li, and G.~Miao,
+  ``{The SLT 2021 children speech recognition challenge: Open datasets, rules
+  and baselines},'' in \emph{2021 IEEE Spoken Language Technology Workshop
   (SLT)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2021, pp. 1117--1123.
-
-\bibitem{russell2006pf}
-M.~Russell, ``The pf-star british english childrens speech corpus,'' \emph{The
-  Speech Ark Limited}, 2006.
 
 \bibitem{ad-child_ru}
 E.~Lyakso, O.~Frolova, A.~Kaliyev, V.~Gorodnyi, A.~Grigorev, and Y.~Matveev,
-  ``Ad-child. ru: Speech corpus for russian children with atypical
-  development,'' in \emph{International Conference on Speech and
+  ``{AD-Child RU: Speech corpus for Russian children with atypical
+  development},'' in \emph{International Conference on Speech and
   Computer}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2019, pp.
   299--308.
 
@@ -1038,21 +1091,15 @@ A.~Kazemzadeh, H.~You, M.~Iseli, B.~Jones, X.~Cui, M.~Heritage, P.~Price,
   Speech Communication and Technology}, 2005.
 
 \bibitem{speco}
-F.~Csat{\'a}ri, Z.~Bakcsi, and K.~Vicsi, ``A hungarian child database for
-  speech processing applications,'' in \emph{Sixth European Conference on
+F.~Csat{\'a}ri, Z.~Bakcsi, and K.~Vicsi, ``{A Hungarian child database for
+  speech processing applications},'' in \emph{Sixth European Conference on
   Speech Communication and Technology}, 1999.
 
 \bibitem{eshky2019ultrasuite}
-A.~Eshky, M.~S. Ribeiro, J.~Cleland, K.~Richmond, Z.~Roxburgh, J.~Scobbie, and
-  A.~Wrench, ``Ultrasuite: a repository of ultrasound and acoustic data from
-  child speech therapy sessions,'' \emph{arXiv preprint arXiv:1907.00835},
-  2019.
-
-\bibitem{lee1999acoustics}
-S.~Lee, A.~Potamianos, and S.~Narayanan, ``Acoustics of children’s speech:
-  Developmental changes of temporal and spectral parameters,'' \emph{The
-  Journal of the Acoustical Society of America}, vol. 105, no.~3, pp.
-  1455--1468, 1999.
+A.~Eshky, M.~S. Ribeiro, J.~Cleland, K.~Richmond, Z.~Roxburgh, J.~M. Scobbie,
+  and A.~Wrench, ``{UltraSuite: A Repository of Ultrasound and Acoustic Data
+  from Child Speech Therapy Sessions},'' in \emph{Proc. Interspeech 2018},
+  2018, pp. 1888--1892.
 
 \bibitem{khanzadi2022persian}
 M.~Khanzadi, H.~Veisi, R.~Alinaghizade, and Z.~Soleymani, ``Persian phoneme and
@@ -1062,8 +1109,8 @@ M.~Khanzadi, H.~Veisi, R.~Alinaghizade, and Z.~Soleymani, ``Persian phoneme and
 
 \bibitem{letsread}
 J.~Proen{\c{c}}a, D.~Celorico, S.~Candeias, C.~Lopes, and F.~Perdig{\~a}o,
-  ``The letsread corpus of portuguese children reading aloud for performance
-  evaluation,'' in \emph{Proceedings of the Tenth International Conference on
+  ``{The LetsRead corpus of Portuguese children reading aloud for performance
+  evaluation},'' in \emph{Proceedings of the Tenth International Conference on
   Language Resources and Evaluation (LREC'16)}, 2016, pp. 781--785.
 
 \bibitem{CFSC}
@@ -1076,7 +1123,7 @@ R.~M. Pascual and R.~C.~L. Guevara, ``Developing a children's filipino speech
 \BIBentryALTinterwordspacing
 H.~Pérez-Espinosa, J.~Martínez-Miranda, I.~Espinosa-Curiel,
   J.~Rodríguez-Jacobo, L.~Villaseñor-Pineda, and H.~Avila-George,
-  ``Iesc-child: An interactive emotional children’s speech corpus,''
+  ``{IESC-Child: An Interactive Emotional Children’s Speech Corpus},''
   \emph{Computer Speech \& Language}, vol.~59, pp. 55--74, 2020. [Online].
   Available:
   \url{https://www.sciencedirect.com/science/article/pii/S0885230817301547}
@@ -1089,17 +1136,18 @@ A.~Hagen, B.~Pellom, and R.~Cole, ``Children's speech recognition with
   03EX721)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2003, pp. 186--191.
 
 \bibitem{chorec}
-L.~Cleuren, J.~Duchateau, P.~Ghesquiere \emph{et~al.}, ``Children’s oral
-  reading corpus (chorec): description and assessment of annotator agreement,''
-  \emph{LREC 2008 Proceedings}, pp. 998--1005, 2008.
+L.~Cleuren, J.~Duchateau, P.~Ghesquiere \emph{et~al.}, ``{Children’s oral
+  reading corpus (CHOREC): description and assessment of annotator
+  agreement},'' \emph{LREC 2008 Proceedings}, pp. 998--1005, 2008.
 
 \bibitem{childit2}
-P.~COSI, G.~PACI, G.~SOMMAVILLA, and F.~TESSER, ``Childit2--a new children read
-  speech corpus.''
+P.~Cosi, G.~Paci, G.~Sommavilla, and F.~Tesser, ``Childit2--a new children read
+  speech corpus,'' \emph{Book series Studi AISV}, vol.~2, pp. 269--273, 2016.
 
 \bibitem{leonard1993tidigits}
-R.~G. Leonard and G.~Doddington, ``Tidigits speech corpus,'' \emph{Texas
-  Instruments, Inc}, 1993.
+R.~Leonard, ``A database for speaker-independent digit recognition,'' in
+  \emph{ICASSP '84. IEEE International Conference on Acoustics, Speech, and
+  Signal Processing}, vol.~9, 1984, pp. 328--331.
 
 \bibitem{gerosa2006acoustic}
 M.~Gerosa, ``Acoustic modeling for automatic recognition of children’s
@@ -1136,8 +1184,15 @@ D.~J. Iskra, B.~Grosskopf, K.~Marasek, H.~van~den Heuvel, F.~Diehl, and
   specification and validation,'' in \emph{LREC}, 2002.
 
 \bibitem{etlt}
-R.~Gretter, M.~Matassoni, S.~Bannò, and D.~Falavigna, ``Tlt-school: a corpus
-  of non native children speech,'' 2020.
+\BIBentryALTinterwordspacing
+R.~Gretter, M.~Matassoni, S.~Bann{\`o}, and F.~Daniele,
+  ``\BIBforeignlanguage{English}{{TLT}-school: a corpus of non native children
+  speech},'' in \emph{\BIBforeignlanguage{English}{Proceedings of the Twelfth
+  Language Resources and Evaluation Conference - LREC}}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Marseille, France: European Language Resources Association,
+  May 2020, pp. 378--385. [Online]. Available:
+  \url{https://aclanthology.org/2020.lrec-1.47}
+\BIBentrySTDinterwordspacing
 
 \bibitem{grissemann2000zurcher}
 H.~Grissemann and M.~Linder, ``Z{\"u}rcher lesetest,'' \emph{Bern: Huber
@@ -1149,10 +1204,10 @@ S.~Steidl, \emph{Automatic classification of emotion related user states in
   Logos-Verlag Berlin, Germany, 2009.
 
 \bibitem{bell2003child}
-L.~Bell and J.~Gustafson, ``Child and adult speaker adaptation during error
-  resolution in a publicly available spoken dialogue system,'' in \emph{Eighth
-  European Conference on Speech Communication and Technology}.\hskip 1em plus
-  0.5em minus 0.4em\relax Citeseer, 2003.
+L.~Bell and J.~Gustafson, ``{Child and adult speaker adaptation during error
+  resolution in a publicly available spoken dialogue system},'' in \emph{Proc.
+  8th European Conference on Speech Communication and Technology (Eurospeech
+  2003)}, 2003, pp. 613--616.
 
 \bibitem{takemaru}
 R.~Nisimura, A.~Lee, H.~Saruwatari, and K.~Shikano, ``Public speech-oriented
@@ -1177,8 +1232,9 @@ X.~Huang, F.~Alleva, M.-Y. Hwang, and R.~Rosenfeld, ``An overview of the
 
 \bibitem{big_review_childASR}
 V.~Bhardwaj, V.~Kukreja, Y.~Belkhier, M.~Bajaj, S.~G. .B, A.~Rehman, H.~Hamam,
-  and M.~Othman, ``Automatic speech recognition (asr) system for children’s:
-  A systematic literature review,'' \emph{Applied Sciences}, 04 2022.
+  and M.~Othman, ``Automatic speech recognition ({ASR}) system for
+  children’s: A systematic literature review,'' \emph{Applied Sciences}, 04
+  2022.
 
 \bibitem{tribus}
 C.~F. Carvalho and A.~Abad, ``Tribus: An end-to-end automatic speech
@@ -1194,10 +1250,10 @@ K.~Paliwal, ``Spectral subband centroid features for speech recognition,'' in
   \emph{ICASSP}, vol.~2, 1998, pp. 617--620 vol.2.
 
 \bibitem{babu2021xlsr}
-A.~Babu, C.~Wang, A.~Tjandra, K.~Lakhotia, Q.~Xu, N.~Goyal, K.~Singh, P.~von
-  Platen, Y.~Saraf, J.~Pino, A.~Baevski, A.~Conneau, and M.~Auli, ``Xls-r:
-  Self-supervised cross-lingual speech representation learning at scale,''
-  \emph{arXiv}, vol. abs/2111.09296, 2021.
+A.~Babu, C.~Wang, A.~Tjandra, K.~Lakhotia, Q.~Xu, N.~Goyal, K.~Singh, P.~{von
+  Platen}, Y.~Saraf, J.~Pino, A.~Baevski, A.~Conneau, and M.~Auli, ``{XLS-R:
+  Self-supervised Cross-lingual Speech Representation Learning at Scale},'' in
+  \emph{Proc. Interspeech 2022}, 2022, pp. 2278--2282.
 
 \bibitem{zeyer2019comparison}
 A.~Zeyer, P.~Bahar, K.~Irie, R.~Schl{\"u}ter, and H.~Ney, ``A comparison of
@@ -1213,15 +1269,14 @@ M.~Zeineldeen, J.~Xu, C.~L{\"u}scher, W.~Michel, A.~Gerstenberger,
   plus 0.5em minus 0.4em\relax IEEE, 2022, pp. 7437--7441.
 
 \bibitem{luscher2019rwth}
-C.~L{\"u}scher, E.~Beck, K.~Irie, M.~Kitza, W.~Michel, A.~Zeyer,
-  R.~Schl{\"u}ter, and H.~Ney, ``Rwth asr systems for librispeech: Hybrid vs
-  attention--w/o data augmentation,'' \emph{arXiv preprint arXiv:1905.03072},
-  2019.
+C.~Lüscher, E.~Beck, K.~Irie, M.~Kitza, W.~Michel, A.~Zeyer, R.~Schlüter, and
+  H.~Ney, ``{RWTH ASR Systems for LibriSpeech: Hybrid vs Attention},'' in
+  \emph{Proc. Interspeech 2019}, 2019, pp. 231--235.
 
 \bibitem{soltau2016neural}
-H.~Soltau, H.~Liao, and H.~Sak, ``Neural speech recognizer: Acoustic-to-word
-  lstm model for large vocabulary speech recognition,'' \emph{arXiv preprint
-  arXiv:1610.09975}, 2016.
+H.~Soltau, H.~Liao, and H.~Sak, ``{Neural Speech Recognizer: Acoustic-to-Word
+  LSTM Model for Large Vocabulary Speech Recognition},'' in \emph{Proc.
+  Interspeech 2017}, 2017, pp. 3707--3711.
 
 \bibitem{battenberg2017exploring}
 E.~Battenberg, J.~Chen, R.~Child, A.~Coates, Y.~G.~Y. Li, H.~Liu, S.~Satheesh,
@@ -1231,10 +1286,14 @@ E.~Battenberg, J.~Chen, R.~Child, A.~Coates, Y.~G.~Y. Li, H.~Liu, S.~Satheesh,
   2017, pp. 206--213.
 
 \bibitem{dosovitskiy2020image}
+\BIBentryALTinterwordspacing
 A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai,
-  T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly \emph{et~al.},
-  ``An image is worth 16x16 words: Transformers for image recognition at
-  scale,'' \emph{arXiv preprint arXiv:2010.11929}, 2020.
+  T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly, J.~Uszkoreit,
+  and N.~Houlsby, ``An image is worth 16x16 words: Transformers for image
+  recognition at scale,'' in \emph{International Conference on Learning
+  Representations}, 2021. [Online]. Available:
+  \url{https://openreview.net/forum?id=YicbFdNTTy}
+\BIBentrySTDinterwordspacing
 
 \bibitem{bahrini2023chatgpt}
 A.~Bahrini, M.~Khamoshifar, H.~Abbasimehr, R.~J. Riggs, M.~Esmaeili, R.~M.
@@ -1254,13 +1313,21 @@ I.~Bello, B.~Zoph, A.~Vaswani, J.~Shlens, and Q.~V. Le, ``Attention augmented
   conference on computer vision}, 2019, pp. 3286--3295.
 
 \bibitem{yang2019convolutional}
-B.~Yang, L.~Wang, D.~Wong, L.~S. Chao, and Z.~Tu, ``Convolutional
-  self-attention networks,'' \emph{arXiv preprint arXiv:1904.03107}, 2019.
+\BIBentryALTinterwordspacing
+B.~Yang, L.~Wang, D.~F. Wong, L.~S. Chao, and Z.~Tu, ``Convolutional
+  self-attention networks,'' in \emph{Proceedings of the 2019 Conference of the
+  North {A}merican Chapter of the Association for Computational Linguistics:
+  Human Language Technologies, Volume 1 (Long and Short Papers)}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Minneapolis, Minnesota: Association for
+  Computational Linguistics, Jun. 2019, pp. 4040--4045. [Online]. Available:
+  \url{https://aclanthology.org/N19-1407}
+\BIBentrySTDinterwordspacing
 
 \bibitem{gulati2020conformer}
 A.~Gulati, J.~Qin, C.-C. Chiu, N.~Parmar, Y.~Zhang, J.~Yu, W.~Han, S.~Wang,
-  Z.~Zhang, Y.~Wu \emph{et~al.}, ``Conformer: Convolution-augmented transformer
-  for speech recognition,'' \emph{arXiv preprint arXiv:2005.08100}, 2020.
+  Z.~Zhang, Y.~Wu, and R.~Pang, ``{Conformer: Convolution-augmented Transformer
+  for Speech Recognition},'' in \emph{Proc. Interspeech 2020}, 2020, pp.
+  5036--5040.
 
 \bibitem{lu2019understanding}
 Y.~Lu, Z.~Li, D.~He, Z.~Sun, B.~Dong, T.~Qin, L.~Wang, and T.-Y. Liu,
@@ -1268,8 +1335,13 @@ Y.~Lu, Z.~Li, D.~He, Z.~Sun, B.~Dong, T.~Qin, L.~Wang, and T.-Y. Liu,
   system point of view,'' \emph{arXiv preprint arXiv:1906.02762}, 2019.
 
 \bibitem{wu2020lite}
+\BIBentryALTinterwordspacing
 Z.~Wu, Z.~Liu, J.~Lin, Y.~Lin, and S.~Han, ``Lite transformer with long-short
-  range attention,'' \emph{arXiv preprint arXiv:2004.11886}, 2020.
+  range attention,'' in \emph{8th International Conference on Learning
+  Representations, {ICLR} 2020, Addis Ababa, Ethiopia, April 26-30,
+  2020}.\hskip 1em plus 0.5em minus 0.4em\relax OpenReview.net, 2020. [Online].
+  Available: \url{https://openreview.net/forum?id=ByeMPlHKPH}
+\BIBentrySTDinterwordspacing
 
 \bibitem{dauphin2017language}
 Y.~N. Dauphin, A.~Fan, M.~Auli, and D.~Grangier, ``Language modeling with gated
@@ -1279,8 +1351,10 @@ Y.~N. Dauphin, A.~Fan, M.~Auli, and D.~Grangier, ``Language modeling with gated
 \bibitem{Prajit2017Searching}
 \BIBentryALTinterwordspacing
 P.~Ramachandran, B.~Zoph, and Q.~V. Le, ``Searching for activation functions,''
-  \emph{CoRR}, vol. abs/1710.05941, 2017. [Online]. Available:
-  \url{http://arxiv.org/abs/1710.05941}
+  in \emph{6th International Conference on Learning Representations, {ICLR}
+  2018, Vancouver, BC, Canada, April 30 - May 3, 2018, Workshop Track
+  Proceedings}.\hskip 1em plus 0.5em minus 0.4em\relax OpenReview.net, 2018.
+  [Online]. Available: \url{https://openreview.net/forum?id=Hkuq2EkPf}
 \BIBentrySTDinterwordspacing
 
 \bibitem{kovaleva-etal-2019-revealing}
@@ -1301,7 +1375,8 @@ P.~Michel, O.~Levy, and G.~Neubig, ``Are sixteen heads really better than
 
 \bibitem{ye2023partial}
 P.~Ye, Y.~Huang, C.~Tu, M.~Li, T.~Chen, T.~He, and W.~Ouyang, ``Partial
-  fine-tuning: A successor to full fine-tuning for vision transformers,'' 2023.
+  fine-tuning: A successor to full fine-tuning for vision transformers,''
+  \emph{arXiv preprint arXiv:2312.15681}, 2023.
 
 \bibitem{mccarley2019structured}
 J.~McCarley, R.~Chakravarti, and A.~Sil, ``Structured pruning of a bert-based
@@ -1324,12 +1399,17 @@ Y.~Wang, A.~Boumadane, and A.~Heba, ``A fine-tuned wav2vec 2.0/hubert benchmark
   understanding,'' \emph{arXiv preprint arXiv:2111.02735}, 2021.
 
 \bibitem{frankle2018lottery}
+\BIBentryALTinterwordspacing
 J.~Frankle and M.~Carbin, ``The lottery ticket hypothesis: Finding sparse,
-  trainable neural networks,'' \emph{arXiv preprint arXiv:1803.03635}, 2018.
+  trainable neural networks,'' in \emph{International Conference on Learning
+  Representations}, 2019. [Online]. Available:
+  \url{https://openreview.net/forum?id=rJl-b3RcF7}
+\BIBentrySTDinterwordspacing
 
 \bibitem{gandhi2023distilwhisper}
 S.~Gandhi, P.~von Platen, and A.~M. Rush, ``Distil-whisper: Robust knowledge
-  distillation via large-scale pseudo labelling,'' 2023.
+  distillation via large-scale pseudo labelling,'' \emph{arXiv preprint
+  arXiv:2311.00430}, 2023.
 
 \bibitem{chang2022distilhubert}
 H.-J. Chang, S.-w. Yang, and H.-y. Lee, ``Distilhubert: Speech representation
@@ -1412,9 +1492,9 @@ S.~V. Eeckt and H.~Van~Hamme, ``Using adapters to overcome catastrophic
 
 \bibitem{kannan2019large}
 A.~Kannan, A.~Datta, T.~N. Sainath, E.~Weinstein, B.~Ramabhadran, Y.~Wu,
-  A.~Bapna, Z.~Chen, and S.~Lee, ``Large-scale multilingual speech recognition
-  with a streaming end-to-end model,'' \emph{arXiv preprint arXiv:1909.05330},
-  2019.
+  A.~Bapna, Z.~Chen, and S.~Lee, ``{Large-Scale Multilingual Speech Recognition
+  with a Streaming End-to-End Model},'' in \emph{Proc. Interspeech 2019}, 2019,
+  pp. 2130--2134.
 
 \bibitem{hou2021exploiting}
 W.~Hou, H.~Zhu, Y.~Wang, J.~Wang, T.~Qin, R.~Xu, and T.~Shinozaki, ``Exploiting
@@ -1435,9 +1515,15 @@ B.~Thomas, S.~Kessler, and S.~Karout, ``Efficient adapter transfer of
   2022, pp. 7102--7106.
 
 \bibitem{tomanek2021residual}
+\BIBentryALTinterwordspacing
 K.~Tomanek, V.~Zayats, D.~Padfield, K.~Vaillancourt, and F.~Biadsy, ``Residual
-  adapters for parameter-efficient asr adaptation to atypical and accented
-  speech,'' \emph{arXiv preprint arXiv:2109.06952}, 2021.
+  adapters for parameter-efficient {ASR} adaptation to atypical and accented
+  speech,'' in \emph{Proceedings of the 2021 Conference on Empirical Methods in
+  Natural Language Processing}.\hskip 1em plus 0.5em minus 0.4em\relax Online
+  and Punta Cana, Dominican Republic: Association for Computational
+  Linguistics, Nov. 2021, pp. 6751--6760. [Online]. Available:
+  \url{https://aclanthology.org/2021.emnlp-main.541}
+\BIBentrySTDinterwordspacing
 
 \bibitem{he2022towards}
 \BIBentryALTinterwordspacing
@@ -1523,17 +1609,18 @@ E.~Casanova, J.~Weber, C.~D. Shulby, A.~C. Junior, E.~G{\"o}lge, and M.~A.
 
 \bibitem{45819}
 \BIBentryALTinterwordspacing
-L.~Dinh, J.~Sohl-Dickstein, and S.~Bengio, ``Density estimation using real
-  nvp,'' 2017. [Online]. Available: \url{https://arxiv.org/abs/1605.08803}
+L.~Dinh, J.~Sohl{-}Dickstein, and S.~Bengio, ``Density estimation using real
+  {NVP},'' in \emph{5th International Conference on Learning Representations,
+  {ICLR} 2017, Toulon, France, April 24-26, 2017, Conference Track
+  Proceedings}.\hskip 1em plus 0.5em minus 0.4em\relax OpenReview.net, 2017.
+  [Online]. Available: \url{https://openreview.net/forum?id=HkpbnH9lx}
 \BIBentrySTDinterwordspacing
 
 \bibitem{45774}
-\BIBentryALTinterwordspacing
-A.~van~den Oord, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves,
-  N.~Kalchbrenner, A.~Senior, and K.~Kavukcuoglu, ``Wavenet: A generative model
-  for raw audio,'' in \emph{Arxiv}, 2016. [Online]. Available:
-  \url{https://arxiv.org/abs/1609.03499}
-\BIBentrySTDinterwordspacing
+A.~{van den Oord}, S.~Dieleman, H.~Zen, K.~Simonyan, O.~Vinyals, A.~Graves,
+  N.~Kalchbrenner, A.~Senior, and K.~Kavukcuoglu, ``{WaveNet: A Generative
+  Model for Raw Audio},'' in \emph{Proc. 9th ISCA Workshop on Speech Synthesis
+  Workshop (SSW 9)}, 2016, p. 125.
 
 \bibitem{kong2020hifi}
 J.~Kong, J.~Kim, and J.~Bae, ``Hifi-gan: Generative adversarial networks for
@@ -1541,16 +1628,24 @@ J.~Kong, J.~Kim, and J.~Bae, ``Hifi-gan: Generative adversarial networks for
   Information Processing Systems}, vol.~33, pp. 17\,022--17\,033, 2020.
 
 \bibitem{VAE}
-D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' \emph{CoRR},
-  vol. abs/1312.6114, 2014.
+\BIBentryALTinterwordspacing
+D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' in \emph{2nd
+  International Conference on Learning Representations, {ICLR} 2014, Banff, AB,
+  Canada, April 14-16, 2014, Conference Track Proceedings}, Y.~Bengio and
+  Y.~LeCun, Eds., 2014. [Online]. Available:
+  \url{http://arxiv.org/abs/1312.6114}
+\BIBentrySTDinterwordspacing
 
 \bibitem{heo2020clova}
-H.~S. Heo, B.-J. Lee, J.~Huh, and J.~S. Chung, ``Clova baseline system for the
-  voxceleb speaker recognition challenge 2020,'' 2020.
+H.~S. Heo, B.-J. Lee, J.~Huh, and J.~S. Chung, ``{Clova baseline system for the
+  voxceleb speaker recognition challenge 2020},'' \emph{arXiv preprint
+  arXiv:2009.14153}, 2020.
 
 \bibitem{veaux2016superseded}
-C.~Veaux, J.~Yamagishi, K.~MacDonald \emph{et~al.}, ``Superseded-cstr vctk
-  corpus: English multi-speaker corpus for cstr voice cloning toolkit,'' 2016.
+{Christophe Veaux and Junichi Yamagishi and Kirsten MacDonald }, ``{SUPERSEDED
+  - CSTR VCTK Corpus: English Multi-speaker Corpus for CSTR Voice Cloning
+  Toolkit},'' 2016, accessed Febuary 08, 2024.
+  \url{https://datashare.ed.ac.uk/handle/10283/2119}.
 
 \bibitem{casanova2022tts}
 E.~Casanova, A.~C. Junior, C.~Shulby, F.~S.~d. Oliveira, J.~P. Teixeira, M.~A.
@@ -1567,6 +1662,12 @@ E.~Casanova, A.~C. Junior, C.~Shulby, F.~S.~d. Oliveira, J.~P. Teixeira, M.~A.
 B.~Desplanques, J.~Thienpondt, and K.~Demuynck, ``{ECAPA-TDNN: Emphasized
   Channel Attention, Propagation and Aggregation in TDNN Based Speaker
   Verification},'' in \emph{Proc. Interspeech 2020}, 2020, pp. 3830--3834.
+
+\bibitem{chen2023exploring}
+Z.-C. Chen, C.-L. Fu, C.-Y. Liu, S.-W.~D. Li, and H.-y. Lee, ``Exploring
+  efficient-tuning methods in self-supervised speech models,'' in \emph{2022
+  IEEE Spoken Language Technology Workshop (SLT)}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2023, pp. 1120--1127.
 
 \bibitem{hu2022lora}
 \BIBentryALTinterwordspacing
@@ -1597,6 +1698,18 @@ X.~L. Li and P.~Liang, ``Prefix-tuning: Optimizing continuous prompts for
   Online: Association for Computational Linguistics, Aug. 2021, pp. 4582--4597.
   [Online]. Available: \url{https://aclanthology.org/2021.acl-long.353}
 \BIBentrySTDinterwordspacing
+
+\bibitem{pires2023one}
+\BIBentryALTinterwordspacing
+T.~P. Pires, A.~V. Lopes, Y.~Assogba, and H.~Setiawan, ``One wide feedforward
+  is all you need,'' in \emph{EMNLP Workshop}, 2024. [Online]. Available:
+  \url{https://arxiv.org/abs/2309.01826}
+\BIBentrySTDinterwordspacing
+
+\bibitem{gong2022layer}
+Y.~Qian, X.~Gong, and H.~Huang, ``Layer-wise fast adaptation for end-to-end
+  multi-accent speech recognition,'' \emph{IEEE/ACM Transactions on Audio,
+  Speech, and Language Processing}, vol.~30, pp. 2842--2853, 2022.
 
 \bibitem{9879745}
 Z.~Liu, H.~Mao, C.-Y. Wu, C.~Feichtenhofer, T.~Darrell, and S.~Xie, ``A convnet
@@ -1639,6 +1752,17 @@ E.~Ben~Zaken, Y.~Goldberg, and S.~Ravfogel, ``{B}it{F}it: Simple
   \url{https://aclanthology.org/2022.acl-short.1}
 \BIBentrySTDinterwordspacing
 
+\bibitem{hsieh23_interspeech}
+C.-P. Hsieh, S.~Ghosh, and B.~Ginsburg, ``{Adapter-Based Extension of
+  Multi-Speaker Text-To-Speech Model for New Speakers},'' in \emph{Proc.
+  INTERSPEECH 2023}, 2023, pp. 3028--3032.
+
+\bibitem{ng23c_interspeech2}
+D.~Ng, C.~Zhang, R.~Zhang, Y.~Ma, T.~H. Nguyen, C.~Ni, S.~Zhao, Q.~Chen,
+  W.~Wang, E.~S. Chng, and B.~Ma, ``{Adapter-tuning with Effective
+  Token-dependent Representation Shift for Automatic Speech Recognition},'' in
+  \emph{Proc. INTERSPEECH 2023}, 2023, pp. 1319--1323.
+
 \bibitem{lian2022scaling}
 D.~Lian, D.~Zhou, J.~Feng, and X.~Wang, ``Scaling \& shifting your features: A
   new baseline for efficient model tuning,'' \emph{Advances in Neural
@@ -1668,10 +1792,6 @@ C.-L. Fu, Z.-C. Chen, Y.-R. Lee, and H.-y. Lee, ``{A}dapter{B}ias:
   Association for Computational Linguistics, Jul. 2022, pp. 2608--2621.
   [Online]. Available: \url{https://aclanthology.org/2022.findings-naacl.199}
 \BIBentrySTDinterwordspacing
-
-\bibitem{pires2023one}
-T.~P. Pires, A.~V. Lopes, Y.~Assogba, and H.~Setiawan, ``One wide feedforward
-  is all you need,'' \emph{arXiv preprint arXiv:2309.01826}, 2023.
 
 \bibitem{hauptman2019identifying}
 Y.~Hauptman, R.~Aloni-Lavi, I.~Lapidot, T.~Gurevich, Y.~Manor, S.~Naor,
@@ -1737,9 +1857,9 @@ N.~Dehak, P.~J. Kenny, R.~Dehak, P.~Dumouchel, and P.~Ouellet, ``Front-end
 
 \bibitem{hamalainen2014easr}
 A.~H{\"a}m{\"a}l{\"a}inen, J.~Avelar, S.~Rodrigues, J.~Dias, A.~Kolesinski,
-  T.~Fegy{\'o}, G.~N{\'e}meth, P.~Csob{\'a}nka, K.~Ting, and D.~Hewson, ``The
-  easr corpora of european portuguese, french, hungarian and polish elderly
-  speech,'' \emph{The EASR Corpora of European Portuguese, French, Hungarian
+  T.~Fegy{\'o}, G.~N{\'e}meth, P.~Csob{\'a}nka, K.~Ting, and D.~Hewson, ``{The
+  EASR Corpora of European Portuguese, French, Hungarian and Polish Elderly
+  Speech},'' \emph{The EASR Corpora of European Portuguese, French, Hungarian
   and Polish elderly speech}, pp. 1458--1464, 2014.
 
 \bibitem{pinto2016dysarthria}
@@ -1777,9 +1897,16 @@ F.~Eyben, F.~Weninger, F.~Gross, and B.~Schuller, ``Recent developments in
   \emph{Proceedings of the 21st ACM international conference on Multimedia},
   2013, pp. 835--838.
 
+\bibitem{paszke2019pytorch}
+A.~Paszke, S.~Gross, F.~Massa, A.~Lerer, J.~Bradbury, G.~Chanan, T.~Killeen,
+  Z.~Lin, N.~Gimelshein, L.~Antiga \emph{et~al.}, ``Pytorch: An imperative
+  style, high-performance deep learning library,'' \emph{Advances in neural
+  information processing systems}, vol.~32, 2019.
+
 \bibitem{pompili2020inesc}
-A.~Pompili, T.~Rolland, and A.~Abad, ``The inesc-id multi-modal system for the
-  adress 2020 challenge,'' \emph{arXiv preprint arXiv:2005.14646}, 2020.
+A.~Pompili, T.~Rolland, and A.~Abad, ``{The INESC-ID Multi-Modal System for the
+  ADReSS 2020 Challenge},'' in \emph{Proc. Interspeech 2020}, 2020, pp.
+  2202--2206.
 
 \bibitem{konig2015automatic}
 A.~K{\"o}nig, A.~Satt, A.~Sorin, R.~Hoory, O.~Toledo-Ronen, A.~Derreumaux,
@@ -1822,9 +1949,12 @@ H.~Goodglass, E.~Kaplan, and S.~Weintraub, \emph{BDAE: The Boston diagnostic
   Williams \& Wilkins Philadelphia, PA, 2001.
 
 \bibitem{luz2020alzheimer}
-S.~Luz, F.~Haider, S.~de~la Fuente, D.~Fromm, and B.~MacWhinney, ``Alzheimer's
-  dementia recognition through spontaneous speech: The adress challenge,''
-  \emph{arXiv preprint arXiv:2004.06833}, 2020.
+\BIBentryALTinterwordspacing
+S.~Luz, F.~Haider, S.~de~la Fuente, D.~Fromm, and B.~MacWhinney,
+  ``{Alzheimer's} dementia recognition through spontaneous speech: The {ADReSS
+  Challenge},'' in \emph{Proceedings of INTERSPEECH 2020}, Shanghai, China,
+  2020. [Online]. Available: \url{https://arxiv.org/abs/2004.06833}
+\BIBentrySTDinterwordspacing
 
 \bibitem{nagrani17_interspeech}
 A.~Nagrani, J.~S. Chung, and A.~Zisserman, ``{VoxCeleb: A Large-Scale Speaker
@@ -1904,9 +2034,9 @@ J.~Han, C.~Brown, J.~Chauhan, A.~Grammenos, A.~Hasthanasombat, D.~Spathis,
   (ICASSP)}, 2021, pp. 8328--8332.
 
 \bibitem{Orlandic2020}
-L.~Orlandic, T.~Teijeiro, and D.~Atienza, ``{The COUGHVID crowdsourcing
-  dataset: A corpus for the study of large-scale cough analysis algorithms},''
-  \emph{preprint arXiv:2009.11644}, 2020.
+L.~Orlandic, T.~Teijeiro, and D.~Atienza, ``The coughvid crowdsourcing dataset,
+  a corpus for the study of large-scale cough analysis algorithms,''
+  \emph{Scientific Data}, vol.~8, no.~1, p. 156, 2021.
 
 \bibitem{villalbaSRE182020}
 J.~Villalba, N.~Chen, D.~Snyder, D.~Garcia-Romero, A.~McCree, G.~Sell,
@@ -1920,18 +2050,6 @@ J.~Villalba, N.~Chen, D.~Snyder, D.~Garcia-Romero, A.~McCree, G.~Sell,
 K.~Simonyan and A.~Zisserman, ``{Very Deep Convolutional Networks for
   Large-Scale Image Recognition},'' in \emph{{3rd International Conference on
   Learning Representations, ICLR 2015}}, San Diego, CA, USA, 2015.
-
-\bibitem{Pascual2019}
-S.~Pascual, M.~Ravanelli, J.~Serrà, A.~Bonafonte, and Y.~Bengio, ``{Learning
-  Problem-Agnostic Speech Representations from Multiple Self-Supervised
-  Tasks},'' in \emph{Proceedings of Interspeech 2019}, Graz, Austria, 2019, pp.
-  161--165.
-
-\bibitem{Ravanelli2020}
-M.~Ravanelli, J.~Zhong, S.~Pascual, P.~Swietojanski, J.~Monteiro, J.~Trmal, and
-  Y.~Bengio, ``{Multi-Task Self-Supervised Learning for Robust Speech
-  Recognition},'' in \emph{{2020 IEEE International Conference on Acoustics,
-  Speech and Signal Processing (ICASSP)}}, 2020, pp. 6989--6993.
 
 \bibitem{yang21c_interspeech}
 S.~wen Yang, P.-H. Chi, Y.-S. Chuang, C.-I.~J. Lai, K.~Lakhotia, Y.~Y. Lin,
@@ -1995,6 +2113,6 @@ M.~McAuliffe, M.~Socolof, S.~Mihuc, M.~Wagner, and M.~Sonderegger, ``Montreal
 \bibitem{phdthesis}
 L.~Gelin, ``Reconnaissance automatique de la parole d'enfants apprenant·e·s
   lecteur·ice·s en salle de classe : modélisation acoustique de phonèmes,''
-  Ph.D. dissertation, 02 2022.
+  Ph.D. dissertation, Toulouse III - Paul Sabatier University, 02 2022.
 
 \end{thebibliography}

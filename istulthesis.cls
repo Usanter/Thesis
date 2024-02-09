@@ -199,6 +199,16 @@
 		You must specify the degree you are applying}
 	{Use the \protect\degree{} command in the preamble.}
 }
+
+\newcommand*{\univname}[1]{\th@StoreIn{\th@univname}{#1}}
+\newcommand*{\th@univname}{ % command is required
+	\ClassError{istulthesis}{
+		You must specify the university you are applying}
+	{Use the \protect\univname{} command in the preamble.}
+}
+\newcommand*{\draft}[1]{\th@StoreIn{\th@draft}{#1}}
+
+
 %
 % DEFINE COMMAND FOR: supervisor -> NAME OF THESIS SCIENTIFIC SUPERVISOR
 \newcommand*{\supervisor}[1]{\th@StoreIn{\th@supervisor}{#1}}

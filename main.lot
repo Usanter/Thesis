@@ -3,7 +3,7 @@
 \contentsline {xchapter}{Introduction}{1}{chapter.1}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Background - Children automatic speech recognition}{11}{chapter.2}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Non-exhaustive comparison of children's speech corpora. This table has been sorted by age range. Blanks indicate unavailable information. Entries highlighted in bold correspond to the corpora used in the experiments presented in this thesis. K: Kindergarden. G: Grade\relax }}{49}{table.caption.74}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Non-exhaustive comparison of children's speech corpora. This table has been sorted by age range. Blanks indicate unavailable information. Entries highlighted in bold correspond to the corpora used in the experiments presented in this thesis. K: Kindergarden. G: Grade\relax }}{48}{table.caption.74}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Hybrid models for children automatic speech recognition}{53}{chapter.3}
 \contentsline {table}{\numberline {3.1}{\ignorespaces Number of utterances, number of speakers, and the duration of training and testing sets for both English and Portuguese corpora, encompassing both adult and children training and test sets\relax }}{58}{table.caption.79}
@@ -11,39 +11,40 @@
 \contentsline {table}{\numberline {3.3}{\ignorespaces Statistics on the different corpora of children's speech.\relax }}{65}{table.caption.86}
 \contentsline {table}{\numberline {3.4}{\ignorespaces WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out\relax }}{66}{table.caption.87}
 \addvspace {10\p@ }
-\contentsline {xchapter}{End-to-End children automatic speech recognition}{71}{chapter.4}
-\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{81}{table.caption.98}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Encoder-Decoder experiment\relax }}{82}{table.caption.99}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Modules fine-tuning experiment\relax }}{84}{table.caption.101}
+\contentsline {xchapter}{End-to-End children automatic speech recognition}{69}{chapter.4}
+\contentsline {table}{\numberline {4.1}{\ignorespaces My Science Tutor Children Speech Corpus statistics\relax }}{78}{table.caption.98}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Fine-tuning in isolation of the Encoder and Decoder for Transformer and Conformer architecture\relax }}{79}{table.caption.99}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Modules fine-tuning experiment\relax }}{82}{table.caption.101}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{89}{chapter.5}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Results of the different Adapters configurations in both Transformer and Conformer.\relax }}{97}{table.caption.108}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Results of the unsupervised clustered Adapters approach.\relax }}{99}{table.caption.110}
+\contentsline {xchapter}{Exploring Parameter-Efficient Strategies in Transfer Learning for Children-Focused ASR Systems}{87}{chapter.5}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Results of the different Adapters configurations in both Transformer and Conformer.\relax }}{95}{table.caption.108}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Results of the unsupervised clustered Adapters approach.\relax }}{97}{table.caption.110}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Integration of synthetic speech for data augmentation}{103}{chapter.6}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Results of the different use of synthetic data augmentation approaches in WER. Collomn TTS$_1$ and TTS$_2$ correspond to the respective model used to generate the synthetic data.\relax }}{113}{table.caption.118}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Results of the different number of hours influence in our DWAT approach with \textit {Large Synth$_2$} data\relax }}{114}{table.caption.119}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Results of the different configurations of Adapter double-way approach on 300h of \textit {Synth$_2$}\relax }}{115}{table.caption.120}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Scores for the different methods of synthetic data augmentation within the Conformer architecture\relax }}{117}{table.caption.122}
+\contentsline {xchapter}{Integration of synthetic speech for data augmentation}{101}{chapter.6}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Results of the different use of synthetic data augmentation approaches in WER. Collomn TTS$_1$ and TTS$_2$ correspond to the respective model used to generate the synthetic data.\relax }}{111}{table.caption.118}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Results of the different number of hours influence in our DWAT approach with \textit {Large Synth$_2$} data\relax }}{112}{table.caption.119}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Results of the different configurations of Adapter double-way approach on 300h of \textit {Synth$_2$}\relax }}{113}{table.caption.120}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Scores for the different methods of synthetic data augmentation within the Conformer architecture\relax }}{115}{table.caption.122}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Alternative approaches to parameter-efficient transfer learning}{121}{chapter.7}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Performances of the different PETL alternatives on children ASR.\relax }}{129}{table.caption.128}
-\contentsline {table}{\numberline {7.2}{\ignorespaces WER and Parameters for different Shared-Adapter hidden dimension\relax }}{134}{table.caption.131}
-\contentsline {table}{\numberline {7.3}{\ignorespaces WER for different training durations for the full model fine-tune, TPA Adapter, and Shared-Adapter\relax }}{134}{table.caption.132}
+\contentsline {xchapter}{Enhanced parameter-efficient transfer learning with Shared-Adapters}{119}{chapter.7}
+\contentsline {table}{\numberline {7.1}{\ignorespaces WER performances and number of parameters of the different PETL alternatives on children ASR.\relax }}{128}{table.caption.128}
+\contentsline {table}{\numberline {7.2}{\ignorespaces WER and Parameters for the Shared-Adapter and Light Shared-Adapter compared to traditional Adapter and full model fine-tunning.\relax }}{131}{table.caption.131}
+\contentsline {table}{\numberline {7.3}{\ignorespaces WER and Parameters for different Shared-Adapter hidden dimension.\relax }}{132}{table.caption.132}
+\contentsline {table}{\numberline {7.4}{\ignorespaces WER for different training durations for the full model fine-tune, TPA Adapter, and Shared-Adapter.\relax }}{133}{table.caption.133}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusions}{137}{chapter.8}
+\contentsline {xchapter}{Conclusions}{135}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathological speech detection through pre-trained models}{175}{appendix.A}
-\contentsline {table}{\numberline {A.1}{\ignorespaces Detailed description of the different datasets used for pathology detection with speakers, segments and number hours information\relax }}{178}{table.caption.143}
-\contentsline {table}{\numberline {A.2}{\ignorespaces X-vector network architecture, used to train the x-vector embedding extractor with the PT-EASR dataset\relax }}{179}{table.caption.144}
-\contentsline {table}{\numberline {A.3}{\ignorespaces Precision, recall and F1 score results of the different pathologies detection with KB and speaker embeddings\relax }}{179}{table.caption.146}
-\contentsline {table}{\numberline {A.4}{\ignorespaces Statistical information on the ADReSS corpus\relax }}{181}{table.caption.148}
-\contentsline {table}{\numberline {A.5}{\ignorespaces Results of different acoustic approaches on the development set\relax }}{183}{table.caption.150}
-\contentsline {table}{\numberline {A.6}{\ignorespaces Results of different linguistic approaches on the development set\relax }}{184}{table.caption.151}
-\contentsline {table}{\numberline {A.7}{\ignorespaces Results of different acoustic and linguistic approaches on the test set\relax }}{185}{table.caption.152}
-\contentsline {table}{\numberline {A.8}{\ignorespaces Performance results (unweighted average recall-UAR) on the COVID-19 COUGH (C19C) corpus\relax }}{189}{table.caption.154}
+\contentsline {xchapter}{Pathological speech detection through pre-trained models}{173}{appendix.A}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Detailed description of the different datasets used for pathology detection with speakers, segments and number hours information\relax }}{176}{table.caption.144}
+\contentsline {table}{\numberline {A.2}{\ignorespaces X-vector network architecture, used to train the x-vector embedding extractor with the PT-EASR dataset\relax }}{177}{table.caption.145}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Precision, recall and F1 score results of the different pathologies detection with KB and speaker embeddings\relax }}{177}{table.caption.147}
+\contentsline {table}{\numberline {A.4}{\ignorespaces Statistical information on the ADReSS corpus\relax }}{179}{table.caption.149}
+\contentsline {table}{\numberline {A.5}{\ignorespaces Results of different acoustic approaches on the development set\relax }}{181}{table.caption.151}
+\contentsline {table}{\numberline {A.6}{\ignorespaces Results of different linguistic approaches on the development set\relax }}{182}{table.caption.152}
+\contentsline {table}{\numberline {A.7}{\ignorespaces Results of different acoustic and linguistic approaches on the test set\relax }}{182}{table.caption.153}
+\contentsline {table}{\numberline {A.8}{\ignorespaces Performance results (unweighted average recall-UAR) on the COVID-19 COUGH (C19C) corpus\relax }}{187}{table.caption.155}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Sefl-supervised learning models as feature extractor for children's \ac {ASR}}{191}{appendix.B}
-\contentsline {table}{\numberline {B.1}{\ignorespaces Overview of different SSL architectures used as frozen feature extractors\relax }}{192}{table.caption.156}
-\contentsline {table}{\numberline {B.2}{\ignorespaces FilteredMy Science Tutor Children Speech Subset Corpus statistics used in the \ac {SSL} feature extraction experiment\relax }}{195}{table.caption.158}
-\contentsline {table}{\numberline {B.3}{\ignorespaces Results without language model of different Self-supervised models as feature extractors\relax }}{195}{table.caption.159}
+\contentsline {xchapter}{Sefl-supervised learning models as feature extractor for children's \ac {ASR}}{189}{appendix.B}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Overview of different SSL architectures used as frozen feature extractors\relax }}{190}{table.caption.157}
+\contentsline {table}{\numberline {B.2}{\ignorespaces FilteredMy Science Tutor Children Speech Subset Corpus statistics used in the \ac {SSL} feature extraction experiment\relax }}{193}{table.caption.162}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Results without language model of different Self-supervised models as feature extractors\relax }}{193}{table.caption.163}

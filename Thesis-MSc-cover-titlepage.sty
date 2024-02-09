@@ -33,37 +33,60 @@
 \textblockorigin{0pt}{0pt}
 % printing THESIS LOGO Optional
     \ifthenelse{\equal{\th@thesislogo}{\relax}}{\relax}{
-    	\begin{textblock*}{16cm}(\th@thesislogopsx,\th@thesislogopsy)
-    		\centering
-    		\includegraphics{\th@thesislogo}
+    	\begin{textblock*}{7cm}(\th@thesislogopsx,\th@thesislogopsy)
+    		%\centering
+    		\includegraphics[width=5cm]{\th@thesislogo}
     	\end{textblock*}
     }
 % ############################################################################# 
     {
 % ############################################################################# 
 % printing thesis TITLE
+\begin{textblock*}{16cm}(2.5cm, 5.0cm)
+	\centering
+	\baselineskip=24pt
+	\begin{setfont}{19}
+		\bfseries\th@univname
+	\end{setfont}
+\end{textblock*}
+% ############################################################################# 
+% printing thesis TITLE
     \begin{textblock*}{16cm}(2.5cm, 11.0cm)
     	\centering
     	\baselineskip=24pt
-		\begin{setfont}{16}
+		\begin{setfont}{24}
 			\bfseries\@title
 		\end{setfont}
     \end{textblock*}
 % ############################################################################# 		
 % printing thesis SUB-TITLE (if any)
     \ifthenelse{\equal{\th@subtitle}{\relax}}{\relax}{
-        \begin{textblock*}{16cm}(2.5cm,13.2cm)
+        \begin{textblock*}{16cm}(2.5cm,17cm)
     		\centering
     		\begin{setfont}{14}
     			\th@subtitle
     		\end{setfont}
     	\end{textblock*}
     }
+% ############################################################################# 
+% printing SUPERVISORS
+\begin{textblock*}{16cm}(2.5cm,18cm)
+	\centering
+	\begin{setfont}{14}
+		\ifthenelse{\equal{\th@othersupervisor}{\relax}}{
+		   \tlangComSupervisor \th@supervisor
+		   }{
+			 \tlangSupervisors \th@supervisor
+			 
+			 \th@othersupervisor
+		   }
+	\end{setfont}
+\end{textblock*}
 % ############################################################################# 		
 % printing AUTHOR NAME AND CURRENT DEGREE (IF ANY)
-    \begin{textblock*}{16cm}(2.5cm,15.4cm)
+    \begin{textblock*}{16cm}(2.5cm,17cm)
         \centering
-        \begin{setfont}{14}
+        \begin{setfont}{16}
             \bfseries\@author
         \end{setfont}
     \end{textblock*}
@@ -75,28 +98,22 @@
 			\thesistypelang
 		\end{setfont}
 	\end{textblock*}
+
 % ############################################################################# 	
 % printing applying DEGREE
-    \begin{textblock*}{16cm}(2.5cm,19.0cm)
+    \begin{textblock*}{16cm}(2.5cm,21.0cm)
 		\centering
 		\begin{setfont}{16}
 			\bfseries\th@degree
 		\end{setfont}
 	\end{textblock*}
-% ############################################################################# 
-% printing SUPERVISORS
-    \begin{textblock*}{16cm}(2.5cm,20.5cm)
-		\centering
-		\begin{setfont}{12}
-			\ifthenelse{\equal{\th@othersupervisor}{\relax}}{
-               \tlangComSupervisor \th@supervisor
-               }{
-                 \tlangSupervisors \th@supervisor
-                 
-                 \th@othersupervisor
-               }
-		\end{setfont}
-	\end{textblock*}
+% PRinting Draft
+\begin{textblock*}{16cm}(2.5cm,22.5cm)
+	\centering
+	\begin{setfont}{14}
+		\th@draft
+	\end{setfont}
+\end{textblock*}
 % ############################################################################# 
 % printing JURI/Committee if FINAL THESIS = true
 	\ifthenelse{\boolean{\th@finalthesis}{\relax}}{
@@ -169,8 +186,10 @@
   \global\let\@author\@empty
   \global\let\@date\@empty
   \global\let\@title\@empty
+  \global\let\@univname\@empty
   \global\let\title\relax
   \global\let\author\relax
+  \global\let\univname\relax
   \global\let\date\relax
   \global\let\and\relax
 }

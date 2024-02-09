@@ -1,11 +1,10 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Introduction}{\reset@font\mtcSfont 73}{section.4.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Transformer model}{\reset@font\mtcSfont 74}{section.4.2}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Conformer model}{\reset@font\mtcSfont 76}{section.4.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Understand transfer learning efficacy for Transformer-based models}{\reset@font\mtcSfont 78}{section.4.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.1}Partial Transfer learning}{\reset@font\mtcSSfont 80}{subsection.4.4.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.2}Experimental setup}{\reset@font\mtcSSfont 80}{subsection.4.4.2}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.3}Corpus}{\reset@font\mtcSSfont 80}{subsection.4.4.3}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.4}Implementation details}{\reset@font\mtcSSfont 81}{subsection.4.4.4}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.5}Encoder-Decoder Transfer learning}{\reset@font\mtcSSfont 81}{subsection.4.4.5}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.4.6}Modules Transfer learning}{\reset@font\mtcSSfont 84}{subsection.4.4.6}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.5}Summary and discussion}{\reset@font\mtcSfont 86}{section.4.5}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.1}Transformer model}{\reset@font\mtcSfont 71}{section.4.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.2}Conformer model}{\reset@font\mtcSfont 74}{section.4.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.3}Exploring transfer learning efficacy for Transformer-based models}{\reset@font\mtcSfont 76}{section.4.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.1}Partial Transfer learning}{\reset@font\mtcSSfont 77}{subsection.4.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.2}Experimental setup}{\reset@font\mtcSSfont 78}{subsection.4.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.3}Corpus}{\reset@font\mtcSSfont 78}{subsection.4.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.4}Implementation details}{\reset@font\mtcSSfont 79}{subsection.4.3.4}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.5}Encoder-Decoder Transfer learning}{\reset@font\mtcSSfont 79}{subsection.4.3.5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {4.3.6}Modules Transfer learning}{\reset@font\mtcSSfont 80}{subsection.4.3.6}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {4.4}Summary and discussion}{\reset@font\mtcSfont 84}{section.4.4}}
