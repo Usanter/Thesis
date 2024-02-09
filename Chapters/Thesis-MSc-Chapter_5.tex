@@ -115,17 +115,16 @@ For training, we use the My Science Tutor (MyST) Children Speech Corpus, as chil
 
 \subsection{Adapter Configurations}
 \begin{table}[t]
-\caption{Results of the different Adapters configurations in both Transformer and Conformer.}
 \begin{center}    
 \begin{tabular}{ccc}
 \hline
  Method & WER $\downarrow$     & Trained params    \\ \hline \hline
-\multicolumn{3}{c}{Transformer} \\ \hline
+\multicolumn{3}{c}{\textbf{Transformer}} \\ \hline
 \multicolumn{1}{l}{\textit{Frozen}} & 25.04\%   & - \\
 \multicolumn{1}{l}{\textit{Full fine-tuning}} & 12.99\% & 71.5M \\ \hline
 \multicolumn{1}{l}{Serial}  &   12.78\% & 6.3M  \\ 
 \multicolumn{1}{l}{Parallel}  &     \textbf{12.62\%} & 6.3M  \\ \hline\hline
-\multicolumn{3}{c}{Conformer} \\ \hline
+\multicolumn{3}{c}{\textbf{Conformer}} \\ \hline
 \multicolumn{1}{l}{\textit{Frozen}} & 21.75\%   & - \\ 
 \multicolumn{1}{l}{\textit{Full fine-tuning}} & 12.28\% & 109.1M \\ \hline
 \multicolumn{1}{l}{Serial}  &   11.76\% & 6.3M  \\ %11.84 
@@ -142,7 +141,7 @@ For training, we use the My Science Tutor (MyST) Children Speech Corpus, as chil
 
 \end{tabular}
 \end{center}
-
+\caption{Results of the different Adapters configurations in both Transformer and Conformer.}
 \label{tab:res_config}
 \end{table}
 
@@ -172,7 +171,7 @@ These results collectively illustrate the versatility and effectiveness of diffe
 
 In this section, our objective is to assess the influence of different hidden dimension values for the Adapter ($d_{hidden}$) on the model's performance. In our previous experiments, we maintained a fixed hidden dimension, where $d_{model} = d_{hidden} = 512$. Now, we aim to explore various hidden dimension values within the Conformer architecture, focusing on the \textit{\ac{TPA}} in the Encoder-only configuration. This investigation aims to assess how variations in the hidden dimension may impact the performance of the Adapter transfer, offering valuable insights into the parameter tuning process for Adapter modules.
 
-In Figure \ref{fig:HiddenDim}, the relative \ac{WER} delta compare to the full model fine-tuning performances of the Adapter transfer are presented in relation to the hidden dimension size ($d_{hidden}$), and therefore the relative amount of parameters compared to the entire model. Notably, a trade-off is observed, emphasising the importance of choosing an optimal hidden dimension size. Configurations with dimensions that are either too small or too large result in a degradation of overall performance. The best-performing configuration aligns with the choices made in all previous experiments, with $d_{hidden} = d_{model} = 512$. We hypothesise that the parallel Adapter functions as an extension of the key-value memory of the \ac{FFN}. Opting for an extremely large hidden dimension makes training more complex due to a large number of parameters, while an excessively small size drastically limits the potential information learned from the Adapters. 
+In Figure \ref{fig:HiddenDim}, the relative \ac{WER} delta compared to the full model fine-tuning performances of the Adapter transfer are presented in relation to the hidden dimension size ($d_{hidden}$), and therefore the relative amount of parameters compared to the entire model. Notably, a trade-off is observed, emphasising the importance of choosing an optimal hidden dimension size. Configurations with dimensions that are either too small or too large result in a degradation of overall performance. The best-performing configuration aligns with the choices made in all previous experiments, with $d_{hidden} = d_{model} = 512$. We hypothesise that the parallel Adapter functions as an extension of the key-value memory of the \ac{FFN}. Opting for an extremely large hidden dimension makes training more complex due to a large number of parameters, while an excessively small size drastically limits the potential information learned from the Adapters. 
 
 \subsection{Unsupervised clustering for grouped-speaker Adapters}
 \label{sec:clustering_emb}

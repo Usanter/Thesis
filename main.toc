@@ -97,7 +97,7 @@
 \contentsline {subsection}{\numberline {7.1.2}Convolution based Adapters}{122}{subsection.7.1.2}
 \contentsline {subsection}{\numberline {7.1.3}BitFit}{124}{subsection.7.1.3}
 \contentsline {subsection}{\numberline {7.1.4}Scale and Shift features}{124}{subsection.7.1.4}
-\contentsline {subsection}{\numberline {7.1.5}AdapterBias}{126}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.5}AdapterBias}{125}{subsection.7.1.5}
 \contentsline {subsection}{\numberline {7.1.6}Experimental setup}{126}{subsection.7.1.6}
 \contentsline {subsection}{\numberline {7.1.7}Results of the different PETL methods}{127}{subsection.7.1.7}
 \contentsline {section}{\numberline {7.2}Leveraging Transformer-based model redundancy for Shared-Adapter}{128}{section.7.2}

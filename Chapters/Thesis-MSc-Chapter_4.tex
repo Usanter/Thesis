@@ -203,8 +203,8 @@ Turning to the Conformer model, the full model achieves a \ac{WER} of 12.28\% wi
 % Layers wise
 \begin{figure}
     \centering
-    \subfigure[Results of the transfer learning layer-wise for the Transformer model]{\label{fig:transferTLTransformer}\includegraphics[width=0.7\textwidth]{imgs/layerTL_Transformer.png}}
-    \subfigure[Results of the transfer learning layer-wise for the Conformer model]{\label{fig:transferTLConformer}\includegraphics[width=0.7\textwidth]{imgs/layerTL_Conformer.png}}
+    \subfigure[Results of the transfer learning layer-wise for the Transformer model]{\label{fig:transferTLTransformer}\includegraphics[width=\textwidth]{imgs/layerTL_Transformer.png}}
+    \subfigure[Results of the transfer learning layer-wise for the Conformer model]{\label{fig:transferTLConformer}\includegraphics[width=\textwidth]{imgs/layerTL_Conformer.png}}
     \caption{Layers-wise up-way and down-way transfer learning experiment for Transformer and Conformer architecture}
     \label{fig:layerWISE}
 \end{figure}
@@ -224,6 +224,7 @@ In both the Transformer and Conformer scenarios, a consistent pattern emerged. T
             Normalisation & 17.00\% & 57.9K  \\
             Attention & 12.19\% & 25.2M  \\
             FFN    & \textbf{11.84\%}     &  37.8M \\ \hline
+            Normalisation$_{Encoder}$ & 17.75\% & 25.6K \\ 
             Attention$_{Encoder}$ & 12.83\% & 12.6M \\ 
             FFN$_{Encoder}$ & 12.20\% & 25.2M \\ \hline 
             Attention + FFN & 12.39\% & 63.0M \\
@@ -240,6 +241,7 @@ In both the Transformer and Conformer scenarios, a consistent pattern emerged. T
             \quad $\hookrightarrow$ Module 2    & 11.48\%     &  25.2M \\
             \quad $\hookrightarrow$ Up-linear ($W_1$)    & 11.47\%     &  31.5M \\
             \quad $\hookrightarrow$ Down-linear ($W_2$)    & 11.40\%     &  31.5M \\ \hline
+            Normalisation$_{Encoder}$ & 15.88\% & 37.9K \\ 
             Attention$_{Encoder}$ & 11.91\% & 15.7M \\ 
             FFN$_{Encoder}$ & 11.17\% & 50.4M \\ \hline
             FFN + Attention & 11.20\% & 91.4M \\
@@ -270,7 +272,8 @@ Fine-tuning specific Conformer modules offers further granularity. First, the no
 As the \ac{FFN} modules consistently proved to be the most relevant component to fine-tune for children's \ac{ASR}, irrespective of the configuration, we opted to delve deeper into the \ac{FFN} submodule. We identify two ways to subdivide the \ac{FFN} components of a Conformer model. The first split is along the macaron-style of a Conformer \ac{FFN} layer, which includes two modules—one before the \ac{MHSA} and one after the convolution module, referred to as Module 1 and Module 2, respectively. The second subdivision of a \ac{FFN} module involves focusing solely on the up-linear and down-linear components, denoted as $W_1$ and $W_2$ in Equation \ref{equation:FFN}. Using the first splitting, Module 1 and Module 2 achieve \acp{WER} of 11.44\% and 11.48\%, respectively, each by fine-tuning 25.2 million parameters. While the Up-linear and Down-linear submodules exhibit \acp{WER} of 11.47\% and 11.40\%, respectively, with parameter counts of 31.5 million. The subdivision of the \ac{FFN} modules did not result in better performance than their coupled usage. This underscores the significance of fine-tuning the full \ac{FFN} modules in Transformer-based end-to-end models.
 
 % Encoder only
-TODO
+Based on the findings outlined of Section \ref{sec:ED_partial}, where the significance of fine-tuning the Encoder module for children's \ac{ASR} was highlighted, we investigated whether fine-tuning various components of Transformer and Conformer layers would yield better results when focused solely on the Encoder. It is important to note that for this experiment, we excluded the fine-tuning of Convolution modules, as they are already exclusively present in the Encoder within the Conformer architecture, in other words, $Convolution modules_{Encoder} = Convolution modules$. Our findings revealed that isolating the fine-tuning of Normalisation$_{Encoder}$, Attention$_{Encoder}$, and FFN$_{Encoder}$ modules solely within the Encoder resulted in minimal performance degradation compared to fine-tuning these modules in both the Encoder and Decoder. This slight discrepancy can be attributed to the unique linguistic traits of children compared to adults that is modelled in the Decoder. Nevertheless, this approach offers the advantage of reducing the number of parameters used during training while maintaining consistent performance levels.
+
 %Combination of different components
 Furthermore, our investigation delved into the impact of combining different components within both the Transformer and Conformer architectures. In the case of the Transformer model, the results consistently showed that while all combinations improved upon the 12.99\% \ac{WER} achieved through full model fine-tuning, they consistently fell short of the score achieved by fine-tuning the \ac{FFN} components alone, which was 11.84\% \ac{WER}. The most promising combination attained a \ac{WER} score of 12.19\%, by using normalisation layers and \ac{FFN} modules in combination.
 Similarly, within the Conformer architecture, a comparable trend emerged. While all combinations exhibited improvements compared to the full model fine-tuning score of 12.28\%, they still lagged behind the performance achieved with the \ac{FFN}-only scenario of 11.10\%. A noteworthy result was the observation that the combination of the \ac{FFN} and convolution modules proved to be as effective as the \ac{FFN} in isolation, yielding a \ac{WER} score of 11.11\%. This particular experiment accentuates the notion that employing a single component is more advantageous than utilising combinations, thereby suggesting the benefits of a more parsimonious use of parameters while fine-tuning on a small dataset.

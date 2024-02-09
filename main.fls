@@ -661,6 +661,8 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acknowledg
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-Abstract.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-Abstract.tex
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-KeyWords.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-KeyWords.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-PT-Resumo.tex
@@ -725,8 +727,6 @@ INPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
 OUTPUT /Users/thomasrolland/Documents/PhD/Thesis/main.lot
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acronyms.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acronyms.tex
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
 INPUT /Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pbk.fd

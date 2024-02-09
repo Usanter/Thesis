@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  8 FEB 2024 23:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  9 FEB 2024 17:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2392,26 +2392,23 @@ TextBlockOrigin set to 0pt x 0pt
 
 
 
-] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acknowledgments.tex) [1] [2
+] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acknowledgments.tex [1]) [2] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-Abstract.tex (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+) [3
 
 
-] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-Abstract.tex [3pdfTeX warning (ext4): destination with the same identifier (name{Abstract.0}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{Abstract.0}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.38 \newpage
+l.36 \newpage
              
 
 ]) (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-EN-KeyWords.tex) [4] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-PT-Resumo.tex [5
 
 
 
-]) (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-PT-PalavrasChave.tex)
-Overfull \hbox (1.53458pt too wide) in paragraph at lines 9--93
-\OT1/cmr/m/n/10 Reconhecimento au-tom^^Satico da fala, fala in-fan-til, trans-fer^encia de con-hec-i-men-tos, texto para voz, efici^encia
- []
-
-[6]
+]) (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Abstract-PT-PalavrasChave.tex) [6]
 Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM main.toc on input line 102.
 Package minitoc Info: I0033
@@ -2588,9 +2585,7 @@ although it is yet undefined on input line 49.
  [18] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Acronyms.tex [19
 
 
-] [20] (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [21]) [22] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
+] [20] [21]) [22] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_1.tex
 Chapter 1.
 LaTeX Font Info:    Try loading font information for T1+pbk on input line 1.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pbk.fd
@@ -3007,12 +3002,12 @@ Underfull \vbox (badness 1325) has occurred while \output is active []
 File: imgs/layerTL_Transformer.png Graphic file (type png)
 <use imgs/layerTL_Transformer.png>
 Package pdftex.def Info: imgs/layerTL_Transformer.png  used on input line 206.
-(pdftex.def)             Requested size: 318.66946pt x 180.26762pt.
-<imgs/layerTL_Conformer.png, id=2975, 910.40125pt x 522.95375pt>
+(pdftex.def)             Requested size: 455.24408pt x 257.52632pt.
+<imgs/layerTL_Conformer.png, id=2975, 893.3375pt x 429.605pt>
 File: imgs/layerTL_Conformer.png Graphic file (type png)
 <use imgs/layerTL_Conformer.png>
 Package pdftex.def Info: imgs/layerTL_Conformer.png  used on input line 207.
-(pdftex.def)             Requested size: 318.66946pt x 183.0525pt.
+(pdftex.def)             Requested size: 455.24408pt x 218.93176pt.
  [80] [81 </Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL_Transformer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL_Conformer.png>] [82]
 Underfull \vbox (badness 2884) has occurred while \output is active []
 
@@ -3033,18 +3028,18 @@ although it is yet undefined on input line 15.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [89]
-<imgs/Adapter_alone.png, id=3125, 360.34625pt x 424.58624pt>
+<imgs/Adapter_alone.png, id=3127, 360.34625pt x 424.58624pt>
 File: imgs/Adapter_alone.png Graphic file (type png)
 <use imgs/Adapter_alone.png>
 Package pdftex.def Info: imgs/Adapter_alone.png  used on input line 24.
 (pdftex.def)             Requested size: 108.1047pt x 127.37685pt.
  [90 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png>] [91]
-<imgs/Adapter_Transformer.png, id=3172, 573.14125pt x 374.39874pt>
+<imgs/Adapter_Transformer.png, id=3174, 573.14125pt x 374.39874pt>
 File: imgs/Adapter_Transformer.png Graphic file (type png)
 <use imgs/Adapter_Transformer.png>
 Package pdftex.def Info: imgs/Adapter_Transformer.png  used on input line 60.
 (pdftex.def)             Requested size: 229.25243pt x 149.75684pt.
-<imgs/Adapter_conformer.png, id=3173, 1665.22125pt x 546.04pt>
+<imgs/Adapter_conformer.png, id=3175, 1665.22125pt x 546.04pt>
 File: imgs/Adapter_conformer.png Graphic file (type png)
 <use imgs/Adapter_conformer.png>
 Package pdftex.def Info: imgs/Adapter_conformer.png  used on input line 68.
@@ -3060,14 +3055,11 @@ Underfull \vbox (badness 1048) has occurred while \output is active []
  [93]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94]
-Underfull \vbox (badness 1389) has occurred while \output is active []
-
- [95]
-<imgs/HiddenDimEXP.png, id=3256, 662.475pt x 372.39125pt>
+ [94] [95]
+<imgs/HiddenDimEXP.png, id=3258, 662.475pt x 372.39125pt>
 File: imgs/HiddenDimEXP.png Graphic file (type png)
 <use imgs/HiddenDimEXP.png>
-Package pdftex.def Info: imgs/HiddenDimEXP.png  used on input line 166.
+Package pdftex.def Info: imgs/HiddenDimEXP.png  used on input line 165.
 (pdftex.def)             Requested size: 331.2367pt x 186.19516pt.
  [96] [97 </Users/thomasrolland/Documents/PhD/Thesis/imgs/HiddenDimEXP.png>] [98]) [99] [100
 
@@ -3088,7 +3080,7 @@ although it is yet undefined on input line 22.
 Underfull \vbox (badness 5637) has occurred while \output is active []
 
  [103] [104]
-<imgs/TTS_Transformer.png, id=3392, 1120.185pt x 649.42625pt>
+<imgs/TTS_Transformer.png, id=3394, 1120.185pt x 649.42625pt>
 File: imgs/TTS_Transformer.png Graphic file (type png)
 <use imgs/TTS_Transformer.png>
 Package pdftex.def Info: imgs/TTS_Transformer.png  used on input line 48.
@@ -3096,7 +3088,7 @@ Package pdftex.def Info: imgs/TTS_Transformer.png  used on input line 48.
 Package acronym Info: Label `acro:DRAFT' newly defined as it shall be overridden
 although it is yet undefined on input line 55.
  [105] [106 </Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png>]
-<imgs/YourTTS.png, id=3446, 1003.75pt x 626.34pt>
+<imgs/YourTTS.png, id=3448, 1003.75pt x 626.34pt>
 File: imgs/YourTTS.png Graphic file (type png)
 <use imgs/YourTTS.png>
 Package pdftex.def Info: imgs/YourTTS.png  used on input line 92.
@@ -3125,7 +3117,7 @@ Overfull \hbox (1.9777pt too wide) in paragraph at lines 133--134
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [112] [113]
-<imgs/Overall_system.png, id=3573, 1114.1625pt x 648.4225pt>
+<imgs/Overall_system.png, id=3575, 1114.1625pt x 648.4225pt>
 File: imgs/Overall_system.png Graphic file (type png)
 <use imgs/Overall_system.png>
 Package pdftex.def Info: imgs/Overall_system.png  used on input line 258.
@@ -3151,7 +3143,7 @@ Overfull \hbox (6.92331pt too wide) in paragraph at lines 10--12
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [121] [122]
-<imgs/ConvPass.png, id=3721, 360.34625pt x 464.73625pt>
+<imgs/ConvPass.png, id=3723, 360.34625pt x 464.73625pt>
 File: imgs/ConvPass.png Graphic file (type png)
 <use imgs/ConvPass.png>
 Package pdftex.def Info: imgs/ConvPass.png  used on input line 54.
@@ -3162,21 +3154,21 @@ although it is yet undefined on input line 61.
 Package acronym Info: Label `acro:SSF' newly defined as it shall be overridden
 although it is yet undefined on input line 82.
  [124]
-<imgs/AdapterBias.png, id=3789, 502.87875pt x 339.2675pt>
+<imgs/AdapterBias.png, id=3790, 502.87875pt x 339.2675pt>
 File: imgs/AdapterBias.png Graphic file (type png)
 <use imgs/AdapterBias.png>
 Package pdftex.def Info: imgs/AdapterBias.png  used on input line 100.
 (pdftex.def)             Requested size: 201.14793pt x 135.70459pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [125 </Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png>] [126]
-<imgs/Adapter_compare_withoutWide.png, id=3821, 722.7pt x 526.8483pt>
+ [125 </Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png>]
+<imgs/Adapter_compare_withoutWide.png, id=3816, 722.7pt x 526.8483pt>
 File: imgs/Adapter_compare_withoutWide.png Graphic file (type png)
 <use imgs/Adapter_compare_withoutWide.png>
 Package pdftex.def Info: imgs/Adapter_compare_withoutWide.png  used on input line 134.
 (pdftex.def)             Requested size: 455.24408pt x 331.87599pt.
- [127 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png>]
+
+Underfull \vbox (badness 2197) has occurred while \output is active []
+
+ [126] [127 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png>]
 Overfull \hbox (8.01877pt too wide) in paragraph at lines 173--173
 []\OT1/cmr/bx/n/14.4 Leveraging Transformer-based model re-dun-dancy for Shared-
  []
@@ -3185,21 +3177,18 @@ Overfull \hbox (8.01877pt too wide) in paragraph at lines 173--173
 Underfull \vbox (badness 1048) has occurred while \output is active []
 
  [129]
-<imgs/Shared_Adapters.png, id=3883, 508.90125pt x 579.16376pt>
+<imgs/Shared_Adapters.png, id=3884, 508.90125pt x 579.16376pt>
 File: imgs/Shared_Adapters.png Graphic file (type png)
 <use imgs/Shared_Adapters.png>
 Package pdftex.def Info: imgs/Shared_Adapters.png  used on input line 203.
 (pdftex.def)             Requested size: 204.85844pt x 233.14606pt.
-<imgs/Extreme_shared_adapter.png, id=3884, 560.0925pt x 576.1525pt>
+<imgs/Extreme_shared_adapter.png, id=3885, 560.0925pt x 576.1525pt>
 File: imgs/Extreme_shared_adapter.png Graphic file (type png)
 <use imgs/Extreme_shared_adapter.png>
 Package pdftex.def Info: imgs/Extreme_shared_adapter.png  used on input line 204.
 (pdftex.def)             Requested size: 218.51521pt x 224.77768pt.
-
-Underfull \vbox (badness 2401) has occurred while \output is active []
-
  [130 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Shared_Adapters.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Extreme_shared_adapter.png>]
-<imgs/Adapters_compare.png, id=3905, 722.7pt x 433.62pt>
+<imgs/Adapters_compare.png, id=3907, 722.7pt x 433.62pt>
 File: imgs/Adapters_compare.png Graphic file (type png)
 <use imgs/Adapters_compare.png>
 Package pdftex.def Info: imgs/Adapters_compare.png  used on input line 224.
@@ -3263,7 +3252,7 @@ although it is yet undefined on input line 127.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 137.
 
-<imgs/ADReSS.png, id=4413, 1192.455pt x 566.115pt>
+<imgs/ADReSS.png, id=4414, 1192.455pt x 566.115pt>
 File: imgs/ADReSS.png Graphic file (type png)
 <use imgs/ADReSS.png>
 Package pdftex.def Info: imgs/ADReSS.png  used on input line 155.
@@ -3300,12 +3289,12 @@ although it is yet undefined on input line 51.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [190]
-<imgs/wav2vec2.png, id=4629, 1120.185pt x 615.29875pt>
+<imgs/wav2vec2.png, id=4630, 1120.185pt x 615.29875pt>
 File: imgs/wav2vec2.png Graphic file (type png)
 <use imgs/wav2vec2.png>
 Package pdftex.def Info: imgs/wav2vec2.png  used on input line 56.
 (pdftex.def)             Requested size: 218.51521pt x 120.02501pt.
-<imgs/Hubert.png, id=4632, 1627.07875pt x 1497.595pt>
+<imgs/Hubert.png, id=4633, 1627.07875pt x 1497.595pt>
 File: imgs/Hubert.png Graphic file (type png)
 <use imgs/Hubert.png>
 Package pdftex.def Info: imgs/Hubert.png  used on input line 57.
@@ -3392,10 +3381,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 43808 strings out of 492649
- 794211 string characters out of 6129622
+ 43810 strings out of 492649
+ 794227 string characters out of 6129622
  981591 words of memory out of 5000000
- 45610 multiletter control sequences out of 15000+600000
+ 45612 multiletter control sequences out of 15000+600000
  547267 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,77p,10542b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3404,7 +3393,7 @@ pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb>
-Output written on /Users/thomasrolland/Documents/PhD/Thesis/main.pdf (220 pages, 5518344 bytes).
+Output written on /Users/thomasrolland/Documents/PhD/Thesis/main.pdf (220 pages, 5514426 bytes).
 PDF statistics:
  5074 PDF objects out of 5155 (max. 8388607)
  4679 compressed objects within 47 object streams
