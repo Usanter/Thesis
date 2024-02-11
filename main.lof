@@ -40,7 +40,7 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Residual Adapter architecture\relax }}{90}{figure.caption.103}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Transformer block with various residual adapter configurations (Normalisation layers are not shown in this picture for clarity). The fire icon denotes trainable components, whereas the snow icon indicates frozen components. \relax }}{92}{figure.caption.104}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Conformer block with various residual Adapter configurations (Normalisation layers are not shown in this picture for clarity). The fire icon denotes trainable components, whereas the snow icon indicates frozen components. \relax }}{92}{figure.caption.105}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension sizes within the Conformer architecture.\relax }}{97}{figure.caption.109}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Experimental Adapter transfer using different hidden dimension sizes within the Conformer architecture.\relax }}{96}{figure.caption.109}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Integration of synthetic speech for data augmentation}{101}{chapter.6}
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Overview of ``Double way Adapter fine-tuning" within the context of a Transformer model. The fire icon denotes trainable components, whereas the snow icon indicates frozen components.\relax }}{106}{figure.caption.112}
@@ -58,15 +58,15 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Conclusions}{135}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Pathological speech detection through pre-trained models}{173}{appendix.A}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Overview of the multimodal system based on embedding approaches\relax }}{180}{figure.caption.150}
+\contentsline {xchapter}{Pathological speech detection through pre-trained models}{175}{appendix.A}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Overview of the multimodal system based on embedding approaches\relax }}{182}{figure.caption.150}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Sefl-supervised learning models as feature extractor for children's \ac {ASR}}{189}{appendix.B}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBERT models\relax }}{191}{figure.caption.161}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{191}{figure.caption.161}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBERT architecture taken from \cite {hsu2021hubert}}}}{191}{figure.caption.161}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces T-SNE plot of the different extracted features using the same speech data and their corresponding phoneme labels for: (a) Fbanks (b) TERA (c) Wav2Vec2 (d) HuBERT.\relax }}{195}{figure.caption.165}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{195}{figure.caption.165}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{195}{figure.caption.165}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{195}{figure.caption.165}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{195}{figure.caption.165}
+\contentsline {xchapter}{Sefl-supervised learning models as feature extractor for children's \ac {ASR}}{191}{appendix.B}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Overview of the discriminative SSL Wav2vec2 and HuBERT models\relax }}{193}{figure.caption.161}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Illustration of the Wav2vec2 architecture taken from \cite {baevski2020wav2vec}}}}{193}{figure.caption.161}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Illustration of the HuBERT architecture taken from \cite {hsu2021hubert}}}}{193}{figure.caption.161}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces T-SNE plot of the different extracted features using the same speech data and their corresponding phoneme labels for: (a) Fbanks (b) TERA (c) Wav2Vec2 (d) HuBERT.\relax }}{197}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{197}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{197}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{197}{figure.caption.165}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{197}{figure.caption.165}

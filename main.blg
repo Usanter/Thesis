@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 20962 items from 5000.
+Reallocated field_info (elt_size=4) to 21008 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
@@ -15,44 +15,44 @@ Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 347 entries,
+You've used 348 entries,
             4087 wiz_defined-function locations,
-            2589 strings with 88320 characters,
-and the built_in function-call counts, 300851 in all, are:
-= -- 22689
-> -- 9142
+            2594 strings with 88495 characters,
+and the built_in function-call counts, 301222 in all, are:
+= -- 22719
+> -- 9146
 < -- 2327
-+ -- 4948
-- -- 1754
-* -- 14412
-:= -- 41717
-add.period$ -- 778
-call.type$ -- 347
-change.case$ -- 372
++ -- 4950
+- -- 1755
+* -- 14423
+:= -- 41783
+add.period$ -- 780
+call.type$ -- 348
+change.case$ -- 374
 chr.to.int$ -- 5778
-cite$ -- 347
-duplicate$ -- 21236
-empty$ -- 25222
-format.name$ -- 2062
-if$ -- 71435
+cite$ -- 348
+duplicate$ -- 21269
+empty$ -- 25259
+format.name$ -- 2063
+if$ -- 71518
 int.to.chr$ -- 0
-int.to.str$ -- 347
-missing$ -- 4006
-newline$ -- 1152
-num.names$ -- 371
-pop$ -- 10227
+int.to.str$ -- 348
+missing$ -- 4014
+newline$ -- 1155
+num.names$ -- 372
+pop$ -- 10249
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 23075
+skip$ -- 23105
 stack$ -- 0
-substring$ -- 14176
-swap$ -- 17240
+substring$ -- 14179
+swap$ -- 17258
 text.length$ -- 401
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 347
+type$ -- 348
 warning$ -- 0
-while$ -- 1235
-width$ -- 350
-write$ -- 3350
+while$ -- 1236
+width$ -- 351
+write$ -- 3358

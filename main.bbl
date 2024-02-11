@@ -1430,6 +1430,11 @@ M.~Ravanelli, T.~Parcollet, P.~Plantinga, A.~Rouhe, S.~Cornell, L.~Lugosch,
   Mori, and Y.~Bengio, ``{SpeechBrain}: A general-purpose speech toolkit,''
   2021, arXiv:2106.04624.
 
+\bibitem{SCTK_nist}
+{National Institute of Standards and technology}, ``{SCTK, the NIST Scoring
+  Toolkit},'' 2021, accessed Febuary 11th, 2024.
+  \url{https://www.yale.edu/about-yale/yale-facts}.
+
 \bibitem{geva2020transformer}
 M.~Geva, R.~Schuster, J.~Berant, and O.~Levy, ``Transformer feed-forward layers
   are key-value memories,'' in \emph{Empirical Methods in Natural Language
