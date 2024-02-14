@@ -3,15 +3,15 @@
 \label{chapter:1}
 
 %\section{Context}
-% What is language and speech
+% What are language and speech
 The faculty of expressing or describing thoughts, feelings and needs by using language is a fundamental capability in our daily lives. As per by the Oxford dictionary,  \textit{language is defined as the system of communication in speech and writing that is used by people of a particular country or area}. Consequently, language can be conceptualised as an intricate and rule-governed system that empowers individuals to convey abstract concepts, share experiences, and take part in nuanced forms of communication. Effective communication through language begins with the conceptualisation of the message to be transmitted (\textit{conceptualisation}), followed by the selection of appropriate lexical items and subsequent grammatical encoding, culminating in their meaningful organisation (\textit{formulation}). Subsequently, the linguistic representation is transformed into sound through the transmission of this representation from the brain to the muscles of the complex speech system including lips, larynx, glottis, lungs, jaw and tongue (\textit{articulation}) \cite{levelt1993speaking}. Unlike language, which encompasses both spoken and written forms, speech specifically refers to the spoken manifestation of language.
 
 
-% Children speech and language acquisition
+% Children's speech and language acquisition
 The capability to speak and comprehend language is not inherently present but rather develops gradually over time with experience. Babies instinctively engage in pre-linguistic communication, using gestures, facial expressions, and vocalisations to articulate their basic needs. As language acquisition progresses, children transition to the babbling stage, experimenting with sound patterns. Eventually, speech emerges, marking a crucial milestone in communication development, and typically, children reach specific language milestones at particular ages. For example, around 12 to 18 months, a child usually utters their first words and starts imitating sounds. By the age of 4 to 5, children tend to formulate sentences and grasp more intricate concepts. Regarding speech sounds, younger children, approximately 1 year old, can produce basic speech sounds like \textit{/p/}, \textit{/b/}, \textit{/m/} while older children, around 5 years old, can articulate more complex sounds such as \textit{/r/} and \textit{/th/}. This developmental stage is referred to as language acquisition, and it plays a crucial role in a child's overall development. Indeed, our daily dependence on social and communication skills endures throughout our entire lives. Consequently, it is imperative for children to develop the capacity to interact effectively with others to achieve seamless integration into society across all aspects of their lives.
 
 % But pathology exists, need for therapy/assessment
-Regrettably, a subset of children experience speech disorders stemming from congenital conditions such as cleft palate, cerebral palsy, and prelingual deafness. Alternatively, certain individuals may acquire speech-related issues during childhood, encompassing cognitive developmental delays, breathing-feeding-swallowing disorders and traumatic brain injuries. Notably, in 2012, empirical data highlighted that 7.7\% of children aged 3 to 17 in the United States of America exhibited communication disorders, with 5.0\% of this cohort specifically presenting speech-related problems \cite{black2015communication} .
+Regrettably, a subset of children experience speech disorders stemming from congenital conditions such as cleft palate, cerebral palsy, and prelingual deafness. Alternatively, certain individuals may acquire speech-related issues during childhood, encompassing cognitive developmental delays, breathing-feeding-swallowing disorders and traumatic brain injuries. Notably, in 2012, empirical data highlighted that 7.7\% of children aged 3 to 17 in the United States of America exhibited communication disorders, with 5.0\% of this cohort specifically presenting speech-related problems \cite{black2015communication}.
 
 Furthermore, findings suggest that individuals with childhood speech disorders may confront an increased prevalence of mental health challenges, diminished social well-being, and reduced academic accomplishments in comparison to their healthy peers \cite{langbecker2020long}. This highlights the complex nature of speech disorders in children, the consequences of which extend into adolescence and adulthood. Hence, early identification and intervention play a pivotal role in mitigating the enduring effects on these children's social interactions, society integration, communication skills, educational progress, and overall well-being.
 
@@ -31,7 +31,7 @@ Another obstacle pertains to the continuity and consistency of therapy. Children
 
 \end{figure}
 
-% SLT could be the beginning of the answer and is already used in real life
+% SLT could be the beginning of the answer and is already used in real-life
 In this context, \ac{SLT} have emerged as highly pertinent within the domain of speech therapy \cite{mendoza2022added}. These technologies encompass a spectrum of computational tools designed to analyse, understand and provide objective and precise automated assessments. Another benefit lies in their potential integration into gamification frameworks, thereby augmenting children's involvement during therapy \cite{brewer2013using}. Moreover, the ability to record speech utter by the patient during a session using \ac{SLT} enables post-session thorough analysis and long-term monitoring by the therapist. Due to the aforementioned reasons, the development of such tools has gained considerable attention, empowering patients to engage in exercises beyond therapy sessions, notably in a home setting. Some \ac{SLT} examples developed within the scope of the first stages of this thesis are illustrated in Figure \ref{fig:exSLT}.
 
 \section{Problem statement}
@@ -44,9 +44,9 @@ Children represent a promising target audience for \ac{SLT} due to the inherent 
 % Automatic tools for speech therapy
 As previously mentioned, \ac{SLT} applications are gradually making their way into the field of atypical speech, particularly for children. While these automatic tools are currently in their early stages and have limitations, there is indeed a rising interest in implementing atypical speech and language therapy systems with a focus on assisting \acp{SLP}. In this context, systems capable of automatically recognising speech content, assessing pronunciation quality and automatically detecting speech pathologies could be highly valuable in supporting pediatric \acp{SLP} and patients.
 
-All of these objectives require the implementation of a robust \ac{ASR} system specifically tailored for healthy children, serving as a foundational model. Nevertheless, while speech recognition technologies for adult speakers have made substantial advancements, leading to increased accuracy, the performance of \ac{ASR} systems for children remains underperforming in comparison. This discrepancy results in unreliable systems for children and, by extension, their use in \ac{SLT} applications. This diminished performances can be attributed to a combination of factors, including intra- and inter-speaker variability, limited linguistic and phonetic knowledge, and the scarcity of available data.
+All of these objectives require the implementation of a robust \ac{ASR} system specifically tailored for healthy children, serving as a foundational model. Nevertheless, while speech recognition technologies for adult speakers have made substantial advancements, leading to increased accuracy, the performance of \ac{ASR} systems for children remains underperforming in comparison. This discrepancy results in unreliable systems for children and, by extension, their use in \ac{SLT} applications. This diminished performance can be attributed to a combination of factors, including intra- and inter-speaker variability, limited linguistic and phonetic knowledge, and the scarcity of available data.
 
-% In this work we propose....
+% In this work we propose...
 In this thesis, we will undertake a comprehensive investigation into the intricacies of children's speech, closely examining the inherent differences between children and adults in the domain of \ac{ASR}. Through this examination, the objective is to analyse the constraints associated with the application of adult-based systems to children's speech and, subsequently, to outline the methodologies present in the literature for enhancing \ac{ASR} systems. The overarching goal of this thesis is to establish a robust foundational system that effectively addresses the recognition of children's speech.
 
 % Explain that there is no Pathological speech dataset
@@ -58,10 +58,10 @@ The shift in focus towards improving \ac{ASR} for healthy children was motivated
 Our work toward improving automatic speech recognition for children specifically aims to answer the following research questions:
 \begin{enumerate} 
 \item Which knowledge transfer approach is best for efficiently modelling and improving traditional automatic recognition of children's speech? Can these approaches be used to efficiently exploit low-resource children's speech data from multiple languages?
-\item  Can we furhter improve full end-to-end model fine-tuning of children \ac{ASR} by adapting part of the model? Particularly, what are the most important components to fine-tune?
+\item  Can we further improve the full end-to-end model fine-tuning of children \ac{ASR} by adapting part of the model? Particularly, what are the most important components to fine-tune?
 %\item Is it possible to develop a parameter-efficient automatic speech recognition model for children? Can we further improve the parameter efficiency with other architectures? 
 
-\item Does parameter efficient transfer improve children \ac{ASR} compared to full model fine-tuning? Which is the best approach for children parameter efficient \ac{ASR}? Can we propose a novel method that achieve state-of-the-art with fewer parameters? 
+\item Does parameter efficient transfer improve children \ac{ASR} compared to full model fine-tuning? Which is the best approach for children parameter efficient \ac{ASR}? Can we propose a novel method that achieves state-of-the-art with fewer parameters? 
 
 \item What is the impact of using children's synthetic speech to extend the amount of real children's data during training? How can we reduce the mismatch between real and synthetic data? Can we control the quality and speakers’ variability of the synthetic utterances?
 \end{enumerate}
@@ -91,18 +91,18 @@ The identification of the most relevant components allowed the development of sp
 \end{itemize}
 
 % TTS contribution
-In response to the scarcity of large children's speech datasets, we delved into the exploration of leveraging synthetic speech to augment the existing dataset. However, our investigation revealed that a mismatch between real and synthetic data hindered the results. To address this challenge, we introduced additional processing steps to efficiently incorporate synthetic data. We proposed a double-way approach, wherein the synthetic data underwent an additional set of parameters. More detailed about this approach will be presented in Chapter \ref{chap:6}. This innovative methodology contributed to an enhanced \ac{ASR} system tailored for children and was published at ICASSP 2024:
+In response to the scarcity of large children's speech datasets, we delved into the exploration of leveraging synthetic speech to augment the existing dataset. However, our investigation revealed that a mismatch between real and synthetic data hindered the results. To address this challenge, we introduced additional processing steps to efficiently incorporate synthetic data. We proposed a double-way approach, wherein the synthetic data underwent an additional set of parameters. More details about this approach will be presented in Chapter \ref{chap:6}. This innovative methodology contributed to an enhanced \ac{ASR} system tailored for children and was published at ICASSP 2024:
 
 \begin{itemize}
     \item \textbf{Thomas Rolland} and Alberto Abad. "Improved children’s automatic speech recognition combining adapters and synthetic data augmentation." \textit{International Conference on Acoustics, Speech and Signal Processing} (2024).
 \end{itemize}
 
-Finally, with the different successes achieved by parameter efficient strategies presented thorough this thesis, we evaluated Adapters to alternative approaches present in the literature. Furthermore, we introduced a novel parameter efficient transfer learning leveraging the redundancy present in Transformer-based architecture to significantly reduce the amount of parameters needed during training while preserving the accuracy, the ``Shared-Adapter". This work is detailed in Chapter \ref{chap:7} of this thesis and is currently in preparation for submission:
+Finally, with the different successes achieved by parameter-efficient strategies presented through this thesis, we evaluated Adapters to alternative approaches present in the literature. Furthermore, we introduced a novel parameter-efficient transfer learning leveraging the redundancy present in Transformer-based architecture to significantly reduce the amount of parameters needed during training while preserving the accuracy, the ``Shared-Adapter". This work is detailed in Chapter \ref{chap:7} of this thesis and is currently in preparation for submission:
 \begin{itemize}
     \item \textbf{Rolland Thomas} and Alberto Abad. "Shared-Adapter, leveraging Transformer-based redundancy for better parameter efficiency for children automatic speech recognition" \textit{In preparation for submission} (2024).
 \end{itemize}
 
-% Pathology dectection contributation
+% Pathology detection contribution
 In tandem with the primary focus of enhancing children's \ac{ASR}, this thesis extends its scope to the detection of pathologies directly from speech. This secondary investigation retains relevance within the broader context of the thesis, particularly as we initially aimed to address the specific needs of children with pathological speech. We explored the use of embedding extracted from pre-trained models for the detection of different pathologies such as Alzheimer's disease, Parkinson's disease, obstructive sleep apnea and COVID-19, all presented in Annexe \ref{chapter:appendixA}:
 
 \begin{itemize}
