@@ -7,7 +7,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 21008 items from 5000.
+Reallocated field_info (elt_size=4) to 21468 items from 5000.
 Database file #1: ./Thesis-MSc-Bibliography.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
@@ -15,44 +15,44 @@ Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 348 entries,
+You've used 358 entries,
             4087 wiz_defined-function locations,
-            2594 strings with 88495 characters,
-and the built_in function-call counts, 301222 in all, are:
-= -- 22719
-> -- 9146
-< -- 2327
-+ -- 4950
-- -- 1755
-* -- 14423
-:= -- 41783
-add.period$ -- 780
-call.type$ -- 348
-change.case$ -- 374
-chr.to.int$ -- 5778
-cite$ -- 348
-duplicate$ -- 21269
-empty$ -- 25259
-format.name$ -- 2063
-if$ -- 71518
+            2650 strings with 90984 characters,
+and the built_in function-call counts, 310610 in all, are:
+= -- 23464
+> -- 9394
+< -- 2415
++ -- 5087
+- -- 1797
+* -- 14877
+:= -- 43095
+add.period$ -- 806
+call.type$ -- 358
+change.case$ -- 385
+chr.to.int$ -- 5988
+cite$ -- 358
+duplicate$ -- 21918
+empty$ -- 26016
+format.name$ -- 2115
+if$ -- 73749
 int.to.chr$ -- 0
-int.to.str$ -- 348
-missing$ -- 4014
-newline$ -- 1155
-num.names$ -- 372
-pop$ -- 10249
+int.to.str$ -- 358
+missing$ -- 4126
+newline$ -- 1187
+num.names$ -- 382
+pop$ -- 10513
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 23105
+skip$ -- 23830
 stack$ -- 0
-substring$ -- 14179
-swap$ -- 17258
-text.length$ -- 401
+substring$ -- 14688
+swap$ -- 17816
+text.length$ -- 419
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 348
+type$ -- 358
 warning$ -- 0
-while$ -- 1236
-width$ -- 351
-write$ -- 3358
+while$ -- 1282
+width$ -- 361
+write$ -- 3460

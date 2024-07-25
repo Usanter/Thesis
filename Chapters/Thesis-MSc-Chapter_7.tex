@@ -49,7 +49,7 @@ We also investigated, the Conv-Adapter where the \ac{CNN} is integrated in-betwe
     \text{Conv-adapter}_{Middle}(x) = x + W_{up}(\text{CNN}_{1D}(W_{down}(x)+ b_{down})+ b_{up})
 \end{equation}
 
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
         \includegraphics[scale=0.4]{imgs/ConvPass.png}
         \caption{The architecture of the ConvPass adapter. $k$ is the kernel size of the 1D convolution. All Convolutions are depth-wise convolutions.}
@@ -95,7 +95,7 @@ In practice, the \ac{SSF} modulations are introduced after each module of the Co
 
 
 \subsection{AdapterBias}
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
         \includegraphics[scale=0.4]{imgs/AdapterBias.png}
         \caption{ AdapterBias, consisting of a linear layer $L_\alpha$ and a vector $\mathcal{V}$, is added after the second feed-forward layer only in each FFN module. The fire icon denotes trainable components, whereas the snow icon indicates frozen components.}
@@ -129,32 +129,32 @@ In all experiments to assess the efficiency of \ac{PETL} alternatives, we employ
 
 \subsection{Results of the different PETL methods}
 
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
         \includegraphics[width=\textwidth]{imgs/Adapter_compare_withoutWide.png}
         \caption{Different parameter efficient procedure for children ASR in Conformer model}
         \label{fig:adapter_compared_withoutWide}
     \end{center}
 \end{figure}
-\begin{table}
+\begin{table}[h]
     \centering
     \begin{tabular}{lccc}
         \toprule
         \textbf{PETL Method} & \textbf{WER $\downarrow$} & \textbf{Trained Parameters} \\
         \midrule
-        Full fine-tuning & 12.28\% & 109.1M \\ \hline
-        Adapter & \textbf{11.58\%} & 12.6M \\
-        Scaled Adapter & 11.74\% & 12.6M \\
-        ConvAdapter(Down) & 12.03\% & 6.4M \\
-        ConvAdapter (Middle) & 11.62\% & 12.7M \\
-        ConvAdapter (Up) & 11.78\% & 6.4M \\
-        ConvPass & 15.13\% & 946.2K \\
-        BitFit & 15.04\% & 192K \\
-        SSF & 15.55\% & 73.7K \\
-        AdapterBias & 14.81\% & 159.8K \\
+        Full fine-tuning & 12.28 & 109.1M \\ \hline
+        Adapter & \textbf{11.58} & 12.6M \\
+        Scaled Adapter & 11.74 & 12.6M \\
+        ConvAdapter(Down) & 12.03 & 6.4M \\
+        ConvAdapter (Middle) & 11.62 & 12.7M \\
+        ConvAdapter (Up) & 11.78 & 6.4M \\
+        ConvPass & 15.13 & 946.2K \\
+        BitFit & 15.04 & 192K \\
+        SSF & 15.55 & 73.7K \\
+        AdapterBias & 14.81 & 159.8K \\
         \bottomrule
     \end{tabular}
-    \caption{WER performances and number of parameters of the different PETL alternatives on children ASR.}
+    \caption{WER performances and number of parameters of the different PETL alternatives on children ASR. WER expressed in terms of percentage.}
     \label{tab:PETL_alternatives}
 \end{table}
 % Adapter and Scaled Adapter
@@ -198,7 +198,7 @@ In light of the success observed with the shared \ac{FFN} in the Encoder, we hyp
 In order to evaluate our proposed approach, our initial focus is on comparing the Shared-Adapter configuration with full fine-tuning and the Traditional Adapter. Subsequently, we vary the hidden dimension of the Shared-Adapter to assess how the number of parameters and the hidden dimension influence the performance. This comprehensive analysis aims to provide insights into the effectiveness of Shared-Adapters across various scenarios and configurations. Finally, we assess the robustness of both Traditional and Shared-Adapters by examining their performance under different amounts of training data, simulating low and extremely low resource scenarios.
 
 \subsection{Experimental setup}
-\begin{figure}[t]
+\begin{figure}[h]
     \centering
     \subfigure[Shared-Adapter setup in a Conformer model]{\label{fig:Shared_adapter}\includegraphics[width=0.45\textwidth]{imgs/Shared_Adapters.png}}
     \subfigure[Light Shared-Adapter setup in a Conformer model]{\label{fig:extrem_adapter}\includegraphics[width=0.48\textwidth]{imgs/Extreme_shared_adapter.png}}
@@ -219,48 +219,48 @@ In terms of the number of parameters, while the traditional Adapter uses approxi
 
 \subsection{Results}
 \subsubsection{Shared-Adapter compared to other PETL methodologies}
-\begin{figure}[t]
+\begin{figure}[h]
     \begin{center}
         \includegraphics[width=\textwidth]{imgs/Adapters_compare.png}
-        \caption{Different parameter efficient procedures for children ASR in Conformer model compared to the Shared-Adapters and Extremly Shared-Adapters}
+        \caption{Different parameter efficient procedures for children ASR in Conformer model compared to the Shared-Adapters and Light Shared-Adapters}
         \label{fig:adapter_compared}
     \end{center}
 \end{figure}
 
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \begin{tabular}{l c c c}
         \hline
         \textbf{Configuration} & \textbf{WER $\downarrow$} & \textbf{Trained Params} \\
         \hline
-        Full Fine-tuning & 12.28\% & 109.1M \\ \hline
-        Traditional Adapter & \textbf{11.58\%} & 12.6M \\
-        Shared-Adapter & 11.92\% & 1.1M \\
-        Light Shared-Adapter & 12.31\% & 526.3K \\ \hline
+        Full Fine-tuning & 12.28 & 109.1M \\ \hline
+        Traditional Adapter & \textbf{11.58} & 12.6M \\
+        Shared-Adapter & 11.92 & 1.1M \\
+        Light Shared-Adapter & 12.31 & 526.3K \\ \hline
     \end{tabular}
-    \caption{WER and Parameters for the Shared-Adapter and Light Shared-Adapter compared to traditional Adapter and full model fine-tunning.}
+    \caption{WER and Parameters for the Shared-Adapter and Light Shared-Adapter compared to traditional Adapter and full model fine-tunning. WER expressed in terms of percentage.}
     \label{tab:shared_adapter_results1}
 \end{table}
 
 In our comprehensive analysis, we systematically evaluated the efficacy of our proposed Shared-Adapter configuration against established \ac{PETL} methods mentioned in Section \ref{section:petl_alt}. The comparison, illustrated in Figure \ref{fig:adapter_compared} and presented in Table \ref{tab:shared_adapter_results1}, highlights the remarkable performance of the Shared-Adapter, particularly in achieving a notable balance between parameter efficiency and accuracy. Notably, the Shared-Adapter outperforms full-model fine-tuning while using only 1\% of the entire model's number of parameters, a significant reduction compared to the 10\% used by the Adapters. Although the Light Shared-Adapter exhibits a marginal degradation, surpassing the \ac{WER} of the entire model fine-tuning, it still outperforms alternative methods such as ConvPass, BitFit, AdapterBias, and \ac{SSF} by a considerable margin. These findings emphasise the efficiency of the Shared-Adapter as a novel parameter-efficient strategy, demonstrating a superior balance compared to existing methodologies. 
 
 \subsubsection{Evaluating the hidden dimension and parameter influence on Shared-Adapter}
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \begin{tabular}{l c c c}
         \hline
         \textbf{Configuration} & \textbf{WER $\downarrow$} & \textbf{Trained Params} \\
         \hline
-        Traditional Adapter 512 & \textbf{11.58\%} & 12.6M \\ \hline
-        Shared-Adapter 128 & 12.74\% & 265.5K \\
-        Shared-Adapter 256 & 12.34\% & 527.9K \\
-        Shared-Adapter 512 & 11.92\% & 1.1M \\
-        Shared-Adapter 1024 & 11.90\% & 2.1M \\
-        Shared-Adapter 2048 & 11.86\% & 4.2M \\
-        Shared-Adapter 4096 & \textbf{11.83\%} & 8.4M \\
-        Shared-Adapter 6144 & 11.88\% & 12.6M \\ \hline
+        Traditional Adapter 512 & \textbf{11.58} & 12.6M \\ \hline
+        Shared-Adapter 128 & 12.74 & 265.5K \\
+        Shared-Adapter 256 & 12.34 & 527.9K \\
+        Shared-Adapter 512 & 11.92 & 1.1M \\
+        Shared-Adapter 1024 & 11.90 & 2.1M \\
+        Shared-Adapter 2048 & 11.86 & 4.2M \\
+        Shared-Adapter 4096 & \textbf{11.83} & 8.4M \\
+        Shared-Adapter 6144 & 11.88 & 12.6M \\ \hline
     \end{tabular}
-    \caption{WER and Parameters for different Shared-Adapter hidden dimension.}
+    \caption{WER and Parameters for different Shared-Adapter hidden dimension. WER expressed in terms of percentage.}
     \label{tab:shared_adapter_results}
 \end{table}
 
@@ -272,20 +272,20 @@ However, as we push the hidden dimension further to 6144, giving an equivalent n
 
 \subsubsection{Low resource and extremely low resource scenarios robustness}
 \label{sec:hours_PETL}
-\begin{table}[ht]
+\begin{table}[h]
     \centering
     \begin{tabular}{l c c c}
         \hline
         Number of hours & Fine-tune (109.1M) & TPA Adapter (12.6M) & Shared-Adapter (1.1M) \\
         \hline
-        1h & 16.24\% & 16.51\% & 17.20\% \\
-        10h & 14.00\% & 14.05\% & 14.28\% \\
-        20h & 13.43\% & 13.30\% & 13.52\% \\
-        50h & 12.94\% & 12.40\% & 12.57\% \\
-        All (\~113h) & 12.28\% & 11.58\% & 11.92\% \\
+        1h & 16.24 & 16.51 & 17.20 \\
+        10h & 14.00 & 14.05 & 14.28 \\
+        20h & 13.43 & 13.30 & 13.52 \\
+        50h & 12.94 & 12.40 & 12.57 \\
+        All (\~113h) & 12.28 & 11.58 & 11.92 \\
         \hline
     \end{tabular}
-    \caption{WER for different training durations for the full model fine-tune, TPA Adapter, and Shared-Adapter.}
+    \caption{WER for different training durations for the full model fine-tune, TPA Adapter, and Shared-Adapter. WER expressed in terms of percentage.}
     \label{tab:training_duration_results}
 \end{table}
 

@@ -20,7 +20,7 @@ Finally, as part of our contribution, we introduce a novel approach called ``mul
 
 \section{Factorised Time Delay Neural Network for children ASR}
 \label{sec:TDNNF}
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \subfigure[TDNN with sub-sampling]{\label{fig:tdnn}\includegraphics[width=0.49\textwidth]{imgs/TDNN.png}}
     \subfigure[Factorised TDNN layer]{\label{fig:tdnnf}\includegraphics[width=0.49\textwidth]{imgs/TDNNF.png}}
@@ -103,7 +103,7 @@ In our experiments, we utilised a subset of the LibriSpeech corpus for English a
     \multirow{6}{*}{Portuguese} & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}BD-PUBLICO\\ \textit{Adult}\end{tabular}}  & 8085 utterances   & 412 utterances  \\
                                 &                                                                              & 100 speakers      & 10 speakers     \\
                                 &                                                                              & 22 hours          & 1 hour          \\ \cline{2-4} 
-                                & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}LetRead\\ \textit{Children}\end{tabular}}  & 3590 utterances   & 1039 utterances \\
+                                & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}LETSREAD\\ \textit{Children}\end{tabular}}  & 3590 utterances   & 1039 utterances \\
                                 &                                                                              & 180 speakers      & 52 speakers     \\
                                 &                                                                              & 12 hours          & 2 hours         \\ \hline
     \end{tabular}
@@ -143,12 +143,12 @@ For all experiments, the same \ac{HMM-DNN} acoustic model architecture was emplo
     \hline
                       & \multicolumn{2}{c}{\textit{English}} & \multicolumn{2}{|c}{\textit{Portuguese}} \\ \hline
     Method            & Adult WER  $\downarrow$  & Children WER $\downarrow$  & Adult WER  $\downarrow$   & Children WER  $\downarrow$   \\ \hline
-    Adult model       & \textbf{6.53\%}      & 43.87\%       & \textbf{3.82\%}       & 102.83\%        \\
-    Children model    & 15.78\%     & 25.53\%       & 45.56\%      & 25.88\%         \\
-    Multi-task model  & 6.74\%      & 30.56\%       & 4.59\%       & 27.65\%         \\
-    Transfer learning & -           & \textbf{21.53\%}       & -            & \textbf{25.36\%}         \\ \hline
+    Adult model       & \textbf{6.53}      & 43.87       & \textbf{3.82}       & 102.83        \\
+    Children model    & 15.78     & 25.53       & 45.56      & 25.88         \\
+    Multi-task model  & 6.74      & 30.56       & 4.59       & 27.65         \\
+    Transfer learning & -           & \textbf{21.53}       & -            & \textbf{25.36}         \\ \hline
     \end{tabular}
-    \caption{WER results using adult data for knowledge transfer methods}
+    \caption{WER results using adult data for knowledge transfer methods. WER expressed in terms of percentage.}
 \label{tab:res_exp1}
 
     \end{table}
@@ -213,7 +213,7 @@ Although the \ac{MTL} and \ac{TL} approaches adopted in this work have been used
 %Although the approaches adopted in this work have been used previously in other studies, for instance \cite{TransferLF} and \cite{2019multi} where they successfully applied \ac{MTL} using children speaking  Mandarin and English, obtaining a relative improvement of 16.96\% \ac{WER} in the English children case, it is clear that successful performance of this approach in the case of English cannot be expected to generalise to other contexts and languages.  
 %Indeed, English is a large-size, resource-rich pluricentric language which should be seen more as an exceptional case, rather than an average representative. It is important to emphasise that there is a need for research that investigates whether these methods that have already been tested for English also work in new scenarios such as low to medium-resource languages with fewer resources than English, like Dutch, Portuguese, Swedish and German. 
 
-\begin{figure}[t]
+\begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.7]{imgs/Ours_final.png}
 \caption{Overview of the second step of the Multilingual transfer learning approach. Grey blocks are pre-trained during the multilingual first step. Language-specific layers can be randomly initialized, as indicated by the colour white, for a language not present during the multilingual phase or use the corresponding pre-trained layers in case the target language was present during the multilingual training, as indicated by the colour grey.}
@@ -252,7 +252,7 @@ It is important to note that, in this work, we deliberately focused on utilising
 %\end{table}
 
 
-\begin{table}[]
+\begin{table}[h]
     \begin{center}
 
     \begin{tabular}{llcc}
@@ -294,23 +294,23 @@ For all experiments in this study, we used the same toolkit, architecture, loss 
 \hline
  & PFSTAR\_SWE & ETLTDE & CMU &  LETSREAD & CHOREC   \\  \hline
  \multicolumn{1}{c|}{Language} & \textit{Swedish} & \textit{L2 German}  &  \textit{English}  & \textit{Portuguese} & \textit{Dutch}   \\ \hline
-\multicolumn{1}{c|}{Single language} & 54.36\% & 44.69\%  &  21.26\%  & 26.88\% & 25.15\%    \\ \hline
-\multicolumn{1}{c|}{MTL} & 54.95\% & 42.46\% & 23.01\% & 27.45\% & 25.10\%   \\ \hline
-\multicolumn{1}{c|}{TL from PFSTAR\_SWE} & - & 42.23\% & 20.62\% & 26.47\% & 24.65\%   \\ 
-\multicolumn{1}{c|}{TL from  ETLTDE}  & 53.60\% & -  &  20.90\% & 26.61\%  & 25.42\%        \\ 
-\multicolumn{1}{c|}{TL from CMU}  & 52.83\%   & 41.54\%    & - & 26.49\% & 24.58\%   \\ 
-\multicolumn{1}{c|}{TL from LETSREAD} & 52.50\% & 41.77\%  & 20.41\% & - & 24.60\%   \\ 
-\multicolumn{1}{c|}{TL from CHOREC} & 52.20\% & 40.28\%    & 19.77\%    & 26.05\%   & -     \\ \hline
-\multicolumn{1}{c|}{TL Average} & 52.78\% & 41.46\% & 20.43\% & 26.41\% & 24.81\%    \\ \hline
-\multicolumn{1}{c|}{TL Best} & 52.20\% & 40.28\% & 19.77\% & 26.05\% & 24.58\%    \\ \hline \hline
-\multicolumn{1}{c|}{MLTL} & 51.67\% & \textbf{38.04\%} & \textbf{19.33\%} & \textbf{25.75\%} & \textbf{23.78\%}    \\ \hline \hline
-\multicolumn{1}{c|}{MLTL-olo}  & \textbf{51.58\%} & 40.05\% & 19.67\% & 26.20\% & 24.57\% \\ \hline
+\multicolumn{1}{c|}{Single language} & 54.36 & 44.69  &  21.26  & 26.88 & 25.15    \\ \hline
+\multicolumn{1}{c|}{MTL} & 54.95 & 42.46 & 23.01 & 27.45 & 25.10   \\ \hline
+\multicolumn{1}{c|}{TL from PFSTAR\_SWE} & - & 42.23 & 20.62 & 26.47 & 24.65   \\ 
+\multicolumn{1}{c|}{TL from  ETLTDE}  & 53.60 & -  &  20.90 & 26.61  & 25.42        \\ 
+\multicolumn{1}{c|}{TL from CMU}  & 52.83   & 41.54    & - & 26.49 & 24.58   \\ 
+\multicolumn{1}{c|}{TL from LETSREAD} & 52.50 & 41.77  & 20.41 & - & 24.60   \\ 
+\multicolumn{1}{c|}{TL from CHOREC} & 52.20 & 40.28    & 19.77    & 26.05   & -     \\ \hline
+\multicolumn{1}{c|}{TL Average} & 52.78 & 41.46 & 20.43 & 26.41 & 24.81    \\ \hline
+\multicolumn{1}{c|}{TL Best} & 52.20 & 40.28 & 19.77 & 26.05 & 24.58    \\ \hline \hline
+\multicolumn{1}{c|}{MLTL} & 51.67 & \textbf{38.04} & \textbf{19.33} & \textbf{25.75} & \textbf{23.78}    \\ \hline \hline
+\multicolumn{1}{c|}{MLTL-olo}  & \textbf{51.58} & 40.05 & 19.67 & 26.20 & 24.57 \\ \hline
 
 
 \end{tabular}
 \end{small}
 \end{center}
-\caption{WER results of multilingual-transfer learning and cross-lingual experiments. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out}
+\caption{WER results of multilingual-transfer learning and cross-lingual experiments. WER expressed in terms of percentage. MTL: Multi-Task Learning, TL: Transfer Learning, MLTL: Multilingual Transfer Learning, MLTL-olo: Multilingual Transfer Learning one-language-out}
 \label{tab:result-TL4epoch}
 \end{table*}
 

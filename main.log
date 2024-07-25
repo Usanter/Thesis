@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  14 FEB 2024 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.31)  25 JUL 2024 13:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2352,11 +2352,6 @@ File: ./imgs/IST_A_RGB_POS.png Graphic file (type png)
 Package pdftex.def Info: ./imgs/IST_A_RGB_POS.png  used on input line 53.
 (pdftex.def)             Requested size: 142.26378pt x 55.4504pt.
 TextBlockOrigin set to 0pt x 0pt
-<./imgs/INESC-ID.png, id=646, 767.9892pt x 512.1534pt>
-File: ./imgs/INESC-ID.png Graphic file (type png)
-<use ./imgs/INESC-ID.png>
-Package pdftex.def Info: ./imgs/INESC-ID.png  used on input line 53.
-(pdftex.def)             Requested size: 142.26378pt x 94.87193pt.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <19> not available
 (Font)              size <17.28> substituted on input line 53.
@@ -2386,7 +2381,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <16> not available
 
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./imgs/IST_A_RGB_POS.png> <./imgs/INESC-ID.png>]
+ <./imgs/IST_A_RGB_POS.png>]
 TextBlockOrigin set to 0pt x 0pt
 (/Users/thomasrolland/Documents/PhD/Thesis/./Thesis-MSc-copyright.tex) [2
 
@@ -2622,11 +2617,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [3]
 Package acronym Info: Label `acro:SLP' newly defined as it shall be overridden
 although it is yet undefined on input line 19.
-<imgs/exampleSLT.png, id=1225, 1134.2375pt x 307.1475pt>
+<imgs/exampleSLT.png, id=1230, 1134.2375pt x 307.1475pt>
 File: imgs/exampleSLT.png Graphic file (type png)
 <use imgs/exampleSLT.png>
 Package pdftex.def Info: imgs/exampleSLT.png  used on input line 28.
 (pdftex.def)             Requested size: 455.24408pt x 123.27861pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package acronym Info: Label `acro:SLT' newly defined as it shall be overridden
 although it is yet undefined on input line 35.
 
@@ -2659,322 +2658,342 @@ although it is yet undefined on input line 5.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
-Package acronym Info: Label `acro:Hz' newly defined as it shall be overridden
-although it is yet undefined on input line 29.
- [14]
-Underfull \vbox (badness 5637) has occurred while \output is active []
-
- [15]
-<imgs/f1f2children.png, id=1394, 684.5575pt x 542.025pt>
-File: imgs/f1f2children.png Graphic file (type png)
-<use imgs/f1f2children.png>
-Package pdftex.def Info: imgs/f1f2children.png  used on input line 48.
-(pdftex.def)             Requested size: 218.51521pt x 173.0132pt.
-<imgs/intraspeakervariability.png, id=1395, 681.54625pt x 530.98375pt>
-File: imgs/intraspeakervariability.png Graphic file (type png)
-<use imgs/intraspeakervariability.png>
-Package pdftex.def Info: imgs/intraspeakervariability.png  used on input line 49.
-(pdftex.def)             Requested size: 218.51521pt x 170.24234pt.
-<imgs/children_vowel_duration.png, id=1398, 460.72125pt x 423.5825pt>
-File: imgs/children_vowel_duration.png Graphic file (type png)
-<use imgs/children_vowel_duration.png>
-Package pdftex.def Info: imgs/children_vowel_duration.png  used on input line 55.
-(pdftex.def)             Requested size: 218.51521pt x 200.9pt.
-<imgs/Intra_inter_duration.png, id=1399, 460.72125pt x 423.5825pt>
-File: imgs/Intra_inter_duration.png Graphic file (type png)
-<use imgs/Intra_inter_duration.png>
-Package pdftex.def Info: imgs/Intra_inter_duration.png  used on input line 56.
-(pdftex.def)             Requested size: 218.51521pt x 200.9pt.
- [16 </Users/thomasrolland/Documents/PhD/Thesis/imgs/f1f2children.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/intraspeakervariability.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17 </Users/thomasrolland/Documents/PhD/Thesis/imgs/children_vowel_duration.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Intra_inter_duration.png>] [18]
-Package acronym Info: Label `acro:DNN' newly defined as it shall be overridden
-although it is yet undefined on input line 99.
- [19]
 Package acronym Info: Label `acro:HMM' newly defined as it shall be overridden
-although it is yet undefined on input line 117.
-
-Underfull \vbox (badness 5726) has occurred while \output is active []
-
- [20]
-<imgs/bell.png, id=1497, 997.7275pt x 450.68375pt>
+although it is yet undefined on input line 21.
+Package acronym Info: Label `acro:Hz' newly defined as it shall be overridden
+although it is yet undefined on input line 27.
+<imgs/bell.png, id=1408, 997.7275pt x 450.68375pt>
 File: imgs/bell.png Graphic file (type png)
 <use imgs/bell.png>
-Package pdftex.def Info: imgs/bell.png  used on input line 127.
+Package pdftex.def Info: imgs/bell.png  used on input line 31.
 (pdftex.def)             Requested size: 455.24408pt x 205.63907pt.
- [21 </Users/thomasrolland/Documents/PhD/Thesis/imgs/bell.png>]
+ [14]
 Package acronym Info: Label `acro:SUR' newly defined as it shall be overridden
-although it is yet undefined on input line 142.
+although it is yet undefined on input line 46.
 Package acronym Info: Label `acro:CMU' newly defined as it shall be overridden
-although it is yet undefined on input line 142.
+although it is yet undefined on input line 46.
 Package acronym Info: Label `acro:SDC' newly defined as it shall be overridden
-although it is yet undefined on input line 142.
+although it is yet undefined on input line 46.
 Package acronym Info: Label `acro:WER' newly defined as it shall be overridden
-although it is yet undefined on input line 142.
- [22]
-<imgs/harpy.png, id=1521, 1460.45625pt x 685.56125pt>
+although it is yet undefined on input line 46.
+ [15 </Users/thomasrolland/Documents/PhD/Thesis/imgs/bell.png>]
+<imgs/harpy.png, id=1435, 1460.45625pt x 685.56125pt>
 File: imgs/harpy.png Graphic file (type png)
 <use imgs/harpy.png>
-Package pdftex.def Info: imgs/harpy.png  used on input line 153.
+Package pdftex.def Info: imgs/harpy.png  used on input line 57.
 (pdftex.def)             Requested size: 455.24408pt x 213.69339pt.
-<imgs/HMM-GMM_architecture.png, id=1525, 936.49875pt x 380.42125pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 5637) has occurred while \output is active []
+
+ [16]
+<imgs/HMM-GMM_architecture.png, id=1444, 936.49875pt x 380.42125pt>
 File: imgs/HMM-GMM_architecture.png Graphic file (type png)
 <use imgs/HMM-GMM_architecture.png>
-Package pdftex.def Info: imgs/HMM-GMM_architecture.png  used on input line 164.
+Package pdftex.def Info: imgs/HMM-GMM_architecture.png  used on input line 68.
 (pdftex.def)             Requested size: 455.24408pt x 184.92783pt.
-
-Underfull \vbox (badness 1009) has occurred while \output is active []
-
- [23 </Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png>]
+ [17 </Users/thomasrolland/Documents/PhD/Thesis/imgs/harpy.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png>]
 Package acronym Info: Label `acro:GMM' newly defined as it shall be overridden
-although it is yet undefined on input line 173.
+although it is yet undefined on input line 77.
 Package acronym Info: Label `acro:HMM-GMM' newly defined as it shall be overridden
-although it is yet undefined on input line 174.
+although it is yet undefined on input line 78.
+Package acronym Info: Label `acro:DNN' newly defined as it shall be overridden
+although it is yet undefined on input line 84.
 
-Underfull \vbox (badness 4229) has occurred while \output is active []
-
- [24 </Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM-GMM_architecture.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-<imgs/features.png, id=1598, 635.37375pt x 847.165pt>
+ [18]
+<imgs/features.png, id=1511, 635.37375pt x 847.165pt>
 File: imgs/features.png Graphic file (type png)
 <use imgs/features.png>
-Package pdftex.def Info: imgs/features.png  used on input line 205.
+Package pdftex.def Info: imgs/features.png  used on input line 109.
 (pdftex.def)             Requested size: 190.61359pt x 254.15146pt.
+ [19]
 Package acronym Info: Label `acro:PLP' newly defined as it shall be overridden
-although it is yet undefined on input line 212.
+although it is yet undefined on input line 116.
 Package acronym Info: Label `acro:fbanks' newly defined as it shall be overridden
-although it is yet undefined on input line 212.
+although it is yet undefined on input line 116.
 Package acronym Info: Label `acro:MFCC' newly defined as it shall be overridden
-although it is yet undefined on input line 212.
+although it is yet undefined on input line 116.
 Package acronym Info: Label `acro:FFT' newly defined as it shall be overridden
-although it is yet undefined on input line 213.
+although it is yet undefined on input line 117.
 Package acronym Info: Label `acro:DCT' newly defined as it shall be overridden
-although it is yet undefined on input line 214.
- [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27 </Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png>]
+although it is yet undefined on input line 118.
+ [20 </Users/thomasrolland/Documents/PhD/Thesis/imgs/features.png>]
 Package acronym Info: Label `acro:AM' newly defined as it shall be overridden
-although it is yet undefined on input line 234.
-<imgs/HMM_monophone.png, id=1645, 734.745pt x 371.3875pt>
+although it is yet undefined on input line 138.
+<imgs/HMM_monophone.png, id=1557, 734.745pt x 371.3875pt>
 File: imgs/HMM_monophone.png Graphic file (type png)
 <use imgs/HMM_monophone.png>
-Package pdftex.def Info: imgs/HMM_monophone.png  used on input line 239.
+Package pdftex.def Info: imgs/HMM_monophone.png  used on input line 143.
 (pdftex.def)             Requested size: 220.42519pt x 111.4171pt.
- [28 </Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM_monophone.png>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21]
 Package acronym Info: Label `acro:MLP' newly defined as it shall be overridden
-although it is yet undefined on input line 248.
+although it is yet undefined on input line 152.
 Package acronym Info: Label `acro:CNN' newly defined as it shall be overridden
-although it is yet undefined on input line 250.
+although it is yet undefined on input line 154.
 Package acronym Info: Label `acro:LSTM' newly defined as it shall be overridden
-although it is yet undefined on input line 250.
+although it is yet undefined on input line 154.
 Package acronym Info: Label `acro:TDNN' newly defined as it shall be overridden
-although it is yet undefined on input line 250.
- [29]
+although it is yet undefined on input line 154.
+
+Underfull \vbox (badness 5189) has occurred while \output is active []
+
+ [22 </Users/thomasrolland/Documents/PhD/Thesis/imgs/HMM_monophone.png>]
 Package acronym Info: Label `acro:G2P' newly defined as it shall be overridden
-although it is yet undefined on input line 255.
+although it is yet undefined on input line 159.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package acronym Info: Label `acro:LM' newly defined as it shall be overridden
-although it is yet undefined on input line 322.
+although it is yet undefined on input line 226.
 Package acronym Info: Label `acro:NLP' newly defined as it shall be overridden
-although it is yet undefined on input line 322.
- [30]
+although it is yet undefined on input line 226.
+[23]
 Package acronym Info: Label `acro:BERT' newly defined as it shall be overridden
-although it is yet undefined on input line 339.
+although it is yet undefined on input line 243.
 Package acronym Info: Label `acro:GPT' newly defined as it shall be overridden
-although it is yet undefined on input line 339.
- [31]
+although it is yet undefined on input line 243.
+
+Underfull \vbox (badness 1199) has occurred while \output is active []
+
+ [24]
 Package acronym Info: Label `acro:WFST' newly defined as it shall be overridden
-although it is yet undefined on input line 349.
-<imgs/End2End_architeccture.png, id=1767, 929.4725pt x 218.8175pt>
+although it is yet undefined on input line 253.
+ [25]
+<imgs/End2End_architeccture.png, id=1694, 929.4725pt x 218.8175pt>
 File: imgs/End2End_architeccture.png Graphic file (type png)
 <use imgs/End2End_architeccture.png>
-Package pdftex.def Info: imgs/End2End_architeccture.png  used on input line 360.
+Package pdftex.def Info: imgs/End2End_architeccture.png  used on input line 264.
 (pdftex.def)             Requested size: 455.24408pt x 107.17142pt.
- [32 </Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End_architeccture.png>]
+ [26 </Users/thomasrolland/Documents/PhD/Thesis/imgs/End2End_architeccture.png>]
 Package acronym Info: Label `acro:CTC' newly defined as it shall be overridden
-although it is yet undefined on input line 379.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
+although it is yet undefined on input line 284.
+ [27]
 Package acronym Info: Label `acro:Seq2Seq' newly defined as it shall be overridden
-although it is yet undefined on input line 397.
- [34]
+although it is yet undefined on input line 302.
 Package acronym Info: Label `acro:NLL' newly defined as it shall be overridden
-although it is yet undefined on input line 403.
+although it is yet undefined on input line 308.
 Package acronym Info: Label `acro:CE' newly defined as it shall be overridden
-although it is yet undefined on input line 403.
+although it is yet undefined on input line 308.
+ [28]
 Package acronym Info: Label `acro:S' newly defined as it shall be overridden
-although it is yet undefined on input line 410.
+although it is yet undefined on input line 315.
 Package acronym Info: Label `acro:D' newly defined as it shall be overridden
-although it is yet undefined on input line 410.
+although it is yet undefined on input line 315.
 Package acronym Info: Label `acro:I' newly defined as it shall be overridden
-although it is yet undefined on input line 410.
- [35]
+although it is yet undefined on input line 315.
 Package acronym Info: Label `acro:PER' newly defined as it shall be overridden
-although it is yet undefined on input line 419.
+although it is yet undefined on input line 324.
 Package acronym Info: Label `acro:CER' newly defined as it shall be overridden
-although it is yet undefined on input line 419.
- [36]
+although it is yet undefined on input line 324.
+ [29] [30]
+<imgs/f1f2children.png, id=1830, 684.5575pt x 542.025pt>
+File: imgs/f1f2children.png Graphic file (type png)
+<use imgs/f1f2children.png>
+Package pdftex.def Info: imgs/f1f2children.png  used on input line 356.
+(pdftex.def)             Requested size: 218.51521pt x 173.0132pt.
+<imgs/intraspeakervariability.png, id=1831, 681.54625pt x 530.98375pt>
+File: imgs/intraspeakervariability.png Graphic file (type png)
+<use imgs/intraspeakervariability.png>
+Package pdftex.def Info: imgs/intraspeakervariability.png  used on input line 357.
+(pdftex.def)             Requested size: 218.51521pt x 170.24234pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imgs/children_vowel_duration.png, id=1834, 460.72125pt x 423.5825pt>
+File: imgs/children_vowel_duration.png Graphic file (type png)
+<use imgs/children_vowel_duration.png>
+Package pdftex.def Info: imgs/children_vowel_duration.png  used on input line 363.
+(pdftex.def)             Requested size: 218.51521pt x 200.9pt.
+<imgs/Intra_inter_duration.png, id=1835, 460.72125pt x 423.5825pt>
+File: imgs/Intra_inter_duration.png Graphic file (type png)
+<use imgs/Intra_inter_duration.png>
+Package pdftex.def Info: imgs/Intra_inter_duration.png  used on input line 364.
+(pdftex.def)             Requested size: 218.51521pt x 200.9pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 5637) has occurred while \output is active []
+
+ [31] [32 </Users/thomasrolland/Documents/PhD/Thesis/imgs/f1f2children.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/intraspeakervariability.png>] [33 </Users/thomasrolland/Documents/PhD/Thesis/imgs/children_vowel_duration.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Intra_inter_duration.png>] [34]
+Underfull \vbox (badness 1215) has occurred while \output is active []
+
+ [35] [36]
 Package acronym Info: Label `acro:VTLN' newly defined as it shall be overridden
-although it is yet undefined on input line 447.
+although it is yet undefined on input line 454.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38]
+ [37] [38]
 Package acronym Info: Label `acro:TDNN-F' newly defined as it shall be overridden
-although it is yet undefined on input line 475.
+although it is yet undefined on input line 482.
 Package acronym Info: Label `acro:SVD' newly defined as it shall be overridden
-although it is yet undefined on input line 475.
+although it is yet undefined on input line 482.
  [39]
 Package acronym Info: Label `acro:RNN' newly defined as it shall be overridden
-although it is yet undefined on input line 482.
+although it is yet undefined on input line 489.
  [40]
 Package acronym Info: Label `acro:GAN' newly defined as it shall be overridden
-although it is yet undefined on input line 497.
+although it is yet undefined on input line 504.
 Package acronym Info: Label `acro:TTS' newly defined as it shall be overridden
-although it is yet undefined on input line 500.
+although it is yet undefined on input line 507.
 Package acronym Info: Label `acro:VITS' newly defined as it shall be overridden
-although it is yet undefined on input line 500.
+although it is yet undefined on input line 507.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [41]
 Package acronym Info: Label `acro:MLLR' newly defined as it shall be overridden
-although it is yet undefined on input line 515.
+although it is yet undefined on input line 522.
 Package acronym Info: Label `acro:MAP' newly defined as it shall be overridden
-although it is yet undefined on input line 515.
+although it is yet undefined on input line 522.
 Package acronym Info: Label `acro:SAT' newly defined as it shall be overridden
-although it is yet undefined on input line 515.
+although it is yet undefined on input line 522.
  [42]
 Package acronym Info: Label `acro:TL' newly defined as it shall be overridden
-although it is yet undefined on input line 525.
- [43]
-<imgs/tf_children.png, id=2158, 1055.945pt x 744.7825pt>
+although it is yet undefined on input line 532.
+<imgs/tf_children.png, id=2190, 1055.945pt x 744.7825pt>
 File: imgs/tf_children.png Graphic file (type png)
 <use imgs/tf_children.png>
-Package pdftex.def Info: imgs/tf_children.png  used on input line 536.
+Package pdftex.def Info: imgs/tf_children.png  used on input line 543.
 (pdftex.def)             Requested size: 218.51521pt x 154.11331pt.
-<imgs/pronunciation_adapt.png, id=2159, 1055.945pt x 744.7825pt>
+<imgs/pronunciation_adapt.png, id=2191, 1055.945pt x 744.7825pt>
 File: imgs/pronunciation_adapt.png Graphic file (type png)
 <use imgs/pronunciation_adapt.png>
-Package pdftex.def Info: imgs/pronunciation_adapt.png  used on input line 537.
+Package pdftex.def Info: imgs/pronunciation_adapt.png  used on input line 544.
 (pdftex.def)             Requested size: 218.51521pt x 154.11331pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43]
 Underfull \vbox (badness 4072) has occurred while \output is active []
 
  [44 </Users/thomasrolland/Documents/PhD/Thesis/imgs/tf_children.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/pronunciation_adapt.png>]
-<imgs/MTL.png, id=2192, 364.36125pt x 256.96pt>
+<imgs/MTL.png, id=2230, 364.36125pt x 256.96pt>
 File: imgs/MTL.png Graphic file (type png)
 <use imgs/MTL.png>
-Package pdftex.def Info: imgs/MTL.png  used on input line 555.
+Package pdftex.def Info: imgs/MTL.png  used on input line 562.
 (pdftex.def)             Requested size: 318.66946pt x 224.74533pt.
 Package acronym Info: Label `acro:MTL' newly defined as it shall be overridden
-although it is yet undefined on input line 561.
+although it is yet undefined on input line 568.
  [45 </Users/thomasrolland/Documents/PhD/Thesis/imgs/MTL.png>]
-Package acronym Info: Label `acro:SSL' overridden on input line 576.
+Package acronym Info: Label `acro:SSL' overridden on input line 583.
 Package acronym Info: Label `acro:PASE' newly defined as it shall be overridden
-although it is yet undefined on input line 581.
+although it is yet undefined on input line 588.
  [46]
-Overfull \hbox (10.3459pt too wide) in paragraph at lines 597--701
+Overfull \hbox (10.3459pt too wide) in paragraph at lines 604--708
 [][] 
  []
 
 [47] [48]
 Package acronym Info: Label `acro:ETLT' newly defined as it shall be overridden
-although it is yet undefined on input line 717.
+although it is yet undefined on input line 724.
  [49]
 Package acronym Info: Label `acro:MyST' newly defined as it shall be overridden
-although it is yet undefined on input line 726.
- [50]) [51] [52
-
-] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_3.tex
+although it is yet undefined on input line 733.
+) [50] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_3.tex
 Chapter 3.
 \openout5 = `main.mtc'.
 
 \openout5 = `main.mtc'.
 
-(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc3) [53
+(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc3) [51
 
-] [54
+
+] [52
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
-<imgs/TDNN.png, id=2469, 578.16pt x 335.2525pt>
+ [53]
+<imgs/TDNN.png, id=2497, 578.16pt x 335.2525pt>
 File: imgs/TDNN.png Graphic file (type png)
 <use imgs/TDNN.png>
 Package pdftex.def Info: imgs/TDNN.png  used on input line 25.
 (pdftex.def)             Requested size: 223.0721pt x 129.34628pt.
-<imgs/TDNNF.png, id=2470, 617.30624pt x 335.2525pt>
+<imgs/TDNNF.png, id=2498, 617.30624pt x 335.2525pt>
 File: imgs/TDNNF.png Graphic file (type png)
 <use imgs/TDNNF.png>
 Package pdftex.def Info: imgs/TDNNF.png  used on input line 26.
 (pdftex.def)             Requested size: 223.0721pt x 121.14609pt.
- [56 </Users/thomasrolland/Documents/PhD/Thesis/imgs/TDNN.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/TDNNF.png>]
+ [54 </Users/thomasrolland/Documents/PhD/Thesis/imgs/TDNN.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/TDNNF.png>]
 Package acronym Info: Label `acro:SGD' newly defined as it shall be overridden
 although it is yet undefined on input line 43.
- [57] [58]
+ [55] [56]
 Package acronym Info: Label `acro:SSC' newly defined as it shall be overridden
 although it is yet undefined on input line 132.
- [59]
+ [57]
 Package acronym Info: Label `acro:LF-MMI' newly defined as it shall be overridden
 although it is yet undefined on input line 136.
- [60]
+ [58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [61] [62]
-<imgs/Ours_final.png, id=2641, 417.56pt x 269.005pt>
+ [59] [60]
+<imgs/Ours_final.png, id=2669, 417.56pt x 269.005pt>
 File: imgs/Ours_final.png Graphic file (type png)
 <use imgs/Ours_final.png>
 Package pdftex.def Info: imgs/Ours_final.png  used on input line 218.
 (pdftex.def)             Requested size: 292.29pt x 188.3022pt.
- [63]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 255.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[61]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package acronym Info: Label `acro:MLTL' newly defined as it shall be overridden
 although it is yet undefined on input line 317.
-[64 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Ours_final.png>] [65]
+[62 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Ours_final.png>] [63]
 Package acronym Info: Label `acro:MLTL-olo' newly defined as it shall be overridden
 although it is yet undefined on input line 346.
- [66] [67]) [68] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_4.tex
+ [64] [65]) [66] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_4.tex
 Chapter 4.
 \openout5 = `main.mtc'.
 
 \openout5 = `main.mtc'.
 
-(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc4) [69
+(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc4) [67
 
 
-] [70
+] [68
 
 ]
 Overfull \hbox (3.20116pt too wide) in paragraph at lines 11--15
 []\OT1/cmr/m/n/10 The ef-fi-cacy demon-strated in in-cor-po-rat-ing [][] within [][] se-tups has mo-ti-vated a widespread
  []
 
-<imgs/Transformer_archi.png, id=2771, 1286.8075pt x 796.9775pt>
+<imgs/Transformer_archi.png, id=2802, 1286.8075pt x 796.9775pt>
 File: imgs/Transformer_archi.png Graphic file (type png)
 <use imgs/Transformer_archi.png>
 Package pdftex.def Info: imgs/Transformer_archi.png  used on input line 28.
 (pdftex.def)             Requested size: 455.24408pt x 281.95003pt.
-[71] [72 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Transformer_archi.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[69] [70 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Transformer_archi.png>]
 Package acronym Info: Label `acro:MHSA' newly defined as it shall be overridden
 although it is yet undefined on input line 49.
 Package acronym Info: Label `acro:FFN' newly defined as it shall be overridden
 although it is yet undefined on input line 49.
 Package acronym Info: Label `acro:MHA' newly defined as it shall be overridden
 although it is yet undefined on input line 52.
- [73]
+ [71]
 Package acronym Info: Label `acro:ReLU' newly defined as it shall be overridden
 although it is yet undefined on input line 78.
-<imgs/ConformerLayer.png, id=2831, 265.99374pt x 653.44125pt>
+<imgs/ConformerLayer.png, id=2861, 265.99374pt x 653.44125pt>
 File: imgs/ConformerLayer.png Graphic file (type png)
 <use imgs/ConformerLayer.png>
 Package pdftex.def Info: imgs/ConformerLayer.png  used on input line 90.
@@ -2983,7 +3002,7 @@ Package pdftex.def Info: imgs/ConformerLayer.png  used on input line 90.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imgs/ConvolutionModule.png, id=2832, 1021.8175pt x 147.55125pt>
+<imgs/ConvolutionModule.png, id=2862, 1021.8175pt x 147.55125pt>
 File: imgs/ConvolutionModule.png Graphic file (type png)
 <use imgs/ConvolutionModule.png>
 Package pdftex.def Info: imgs/ConvolutionModule.png  used on input line 97.
@@ -2991,38 +3010,42 @@ Package pdftex.def Info: imgs/ConvolutionModule.png  used on input line 97.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[74]
+[72]
 Package acronym Info: Label `acro:GLU' newly defined as it shall be overridden
 although it is yet undefined on input line 115.
 
 Underfull \vbox (badness 1325) has occurred while \output is active []
 
- [75 </Users/thomasrolland/Documents/PhD/Thesis/imgs/ConformerLayer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/ConvolutionModule.png>] [76] [77] [78] [79]
-<imgs/layerTL_Transformer.png, id=2974, 924.45375pt x 522.95375pt>
+ [73 </Users/thomasrolland/Documents/PhD/Thesis/imgs/ConformerLayer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/ConvolutionModule.png>] [74] [75] [76] [77]
+<imgs/layerTL_Transformer.png, id=3004, 924.45375pt x 522.95375pt>
 File: imgs/layerTL_Transformer.png Graphic file (type png)
 <use imgs/layerTL_Transformer.png>
 Package pdftex.def Info: imgs/layerTL_Transformer.png  used on input line 208.
 (pdftex.def)             Requested size: 455.24408pt x 257.52632pt.
-<imgs/layerTL_Conformer.png, id=2975, 893.3375pt x 429.605pt>
+<imgs/layerTL_Conformer.png, id=3005, 893.3375pt x 429.605pt>
 File: imgs/layerTL_Conformer.png Graphic file (type png)
 <use imgs/layerTL_Conformer.png>
 Package pdftex.def Info: imgs/layerTL_Conformer.png  used on input line 209.
 (pdftex.def)             Requested size: 455.24408pt x 218.93176pt.
- [80] [81 </Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL_Transformer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL_Conformer.png>] [82]
-Underfull \vbox (badness 2884) has occurred while \output is active []
 
- [83]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84]) (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_5.tex [85] [86]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[78] [79]
+Underfull \vbox (badness 5637) has occurred while \output is active []
+
+ [80] [81]) (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_5.tex [82] [83 </Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL_Transformer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/layerTL_Conformer.png>] [84
+
+]
 Chapter 5.
 \openout5 = `main.mtc'.
 
 \openout5 = `main.mtc'.
 
-(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc5) [87
-
-] [88
+(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc5) [85] [86
 
 ]
 Package acronym Info: Label `acro:PETL' newly defined as it shall be overridden
@@ -3030,24 +3053,24 @@ although it is yet undefined on input line 15.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [89]
-<imgs/Adapter_alone.png, id=3125, 360.34625pt x 424.58624pt>
+ [87]
+<imgs/Adapter_alone.png, id=3156, 360.34625pt x 424.58624pt>
 File: imgs/Adapter_alone.png Graphic file (type png)
 <use imgs/Adapter_alone.png>
 Package pdftex.def Info: imgs/Adapter_alone.png  used on input line 24.
 (pdftex.def)             Requested size: 108.1047pt x 127.37685pt.
- [90 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png>] [91]
-<imgs/Adapter_Transformer.png, id=3172, 573.14125pt x 374.39874pt>
+ [88 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_alone.png>] [89]
+<imgs/Adapter_Transformer.png, id=3202, 573.14125pt x 374.39874pt>
 File: imgs/Adapter_Transformer.png Graphic file (type png)
 <use imgs/Adapter_Transformer.png>
 Package pdftex.def Info: imgs/Adapter_Transformer.png  used on input line 60.
 (pdftex.def)             Requested size: 229.25243pt x 149.75684pt.
-<imgs/Adapter_conformer.png, id=3173, 1665.22125pt x 546.04pt>
+<imgs/Adapter_conformer.png, id=3203, 1665.22125pt x 546.04pt>
 File: imgs/Adapter_conformer.png Graphic file (type png)
 <use imgs/Adapter_conformer.png>
 Package pdftex.def Info: imgs/Adapter_conformer.png  used on input line 68.
 (pdftex.def)             Requested size: 449.61575pt x 147.43277pt.
- [92 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_Transformer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png>]
+ [90 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_Transformer.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_conformer.png>]
 Package acronym Info: Label `acro:TPA' newly defined as it shall be overridden
 although it is yet undefined on input line 77.
 Package acronym Info: Label `acro:TSA' newly defined as it shall be overridden
@@ -3055,19 +3078,20 @@ although it is yet undefined on input line 78.
 
 Underfull \vbox (badness 1048) has occurred while \output is active []
 
- [93]
+ [91]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [94] [95]
-<imgs/HiddenDimEXP.png, id=3256, 662.475pt x 372.39125pt>
+ [92] [93]
+<imgs/HiddenDimEXP.png, id=3287, 662.475pt x 372.39125pt>
 File: imgs/HiddenDimEXP.png Graphic file (type png)
 <use imgs/HiddenDimEXP.png>
 Package pdftex.def Info: imgs/HiddenDimEXP.png  used on input line 165.
 (pdftex.def)             Requested size: 331.2367pt x 186.19516pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [96 </Users/thomasrolland/Documents/PhD/Thesis/imgs/HiddenDimEXP.png>] [97] [98]) [99] [100
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[94] [95 </Users/thomasrolland/Documents/PhD/Thesis/imgs/HiddenDimEXP.png>] [96]) [97] [98
 
 ] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_6.tex
 Chapter 6.
@@ -3075,9 +3099,9 @@ Chapter 6.
 
 \openout5 = `main.mtc'.
 
-(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc6) [101
+(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc6) [99
 
-] [102
+] [100
 
 ]
 Package acronym Info: Label `acro:DWAT' newly defined as it shall be overridden
@@ -3085,23 +3109,31 @@ although it is yet undefined on input line 22.
 
 Underfull \vbox (badness 5637) has occurred while \output is active []
 
- [103] [104]
-<imgs/TTS_Transformer.png, id=3391, 1120.185pt x 649.42625pt>
+ [101] [102]
+<imgs/TTS_Transformer.png, id=3422, 1120.185pt x 649.42625pt>
 File: imgs/TTS_Transformer.png Graphic file (type png)
 <use imgs/TTS_Transformer.png>
 Package pdftex.def Info: imgs/TTS_Transformer.png  used on input line 48.
 (pdftex.def)             Requested size: 455.24408pt x 263.92786pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package acronym Info: Label `acro:DRAFT' newly defined as it shall be overridden
 although it is yet undefined on input line 55.
- [105] [106 </Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png>]
-<imgs/YourTTS.png, id=3445, 1003.75pt x 626.34pt>
+[103] [104 </Users/thomasrolland/Documents/PhD/Thesis/imgs/TTS_Transformer.png>]
+<imgs/YourTTS.png, id=3476, 1003.75pt x 626.34pt>
 File: imgs/YourTTS.png Graphic file (type png)
 <use imgs/YourTTS.png>
 Package pdftex.def Info: imgs/YourTTS.png  used on input line 92.
 (pdftex.def)             Requested size: 401.49289pt x 250.53156pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package acronym Info: Label `acro:VAE' newly defined as it shall be overridden
 although it is yet undefined on input line 100.
- [107]
+[105]
 Package acronym Info: Label `acro:H/ASP' newly defined as it shall be overridden
 although it is yet undefined on input line 104.
 Package acronym Info: Label `acro:SCL' newly defined as it shall be overridden
@@ -3109,23 +3141,27 @@ although it is yet undefined on input line 104.
 
 Underfull \vbox (badness 6859) has occurred while \output is active []
 
- [108pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.6}) has been already used, duplicate ignored
+ [106pdfTeX warning (ext4): destination with the same identifier (name{Hfootnote.6}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.108 \end{equation}
                      </Users/thomasrolland/Documents/PhD/Thesis/imgs/YourTTS.png>]
-Overfull \hbox (1.9777pt too wide) in paragraph at lines 133--134
+Overfull \hbox (1.9777pt too wide) in paragraph at lines 132--133
 \OT1/cmr/m/n/10 This ex-per-i-ment uses the My Sci-ence Tu-tor (MyST) Chil-dren Speech Cor-pus, as the "Real" chil-dren'speech
  []
 
-[109] [110] [111] [112] [113]
-<imgs/Overall_system.png, id=3574, 1114.1625pt x 648.4225pt>
+[107] [108] [109]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[110] [111]
+<imgs/Overall_system.png, id=3605, 1114.1625pt x 648.4225pt>
 File: imgs/Overall_system.png Graphic file (type png)
 <use imgs/Overall_system.png>
-Package pdftex.def Info: imgs/Overall_system.png  used on input line 258.
+Package pdftex.def Info: imgs/Overall_system.png  used on input line 257.
 (pdftex.def)             Requested size: 455.24408pt x 264.93478pt.
- [114 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png>] [115] [116]) [117] [118
+ [112 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Overall_system.png>] [113] [114]) [115] [116
 
 ] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_7.tex
 Chapter 7.
@@ -3133,9 +3169,9 @@ Chapter 7.
 
 \openout5 = `main.mtc'.
 
-(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc7) [119
+(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc7) [117
 
-] [120
+] [118
 
 ]
 Overfull \hbox (6.92331pt too wide) in paragraph at lines 10--12
@@ -3145,25 +3181,25 @@ Overfull \hbox (6.92331pt too wide) in paragraph at lines 10--12
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [121] [122]
-<imgs/ConvPass.png, id=3722, 360.34625pt x 464.73625pt>
+ [119] [120]
+<imgs/ConvPass.png, id=3752, 360.34625pt x 464.73625pt>
 File: imgs/ConvPass.png Graphic file (type png)
 <use imgs/ConvPass.png>
 Package pdftex.def Info: imgs/ConvPass.png  used on input line 54.
 (pdftex.def)             Requested size: 144.13594pt x 185.8912pt.
 Package acronym Info: Label `acro:GELU' newly defined as it shall be overridden
 although it is yet undefined on input line 61.
- [123 </Users/thomasrolland/Documents/PhD/Thesis/imgs/ConvPass.png>]
+ [121 </Users/thomasrolland/Documents/PhD/Thesis/imgs/ConvPass.png>]
 Package acronym Info: Label `acro:SSF' newly defined as it shall be overridden
 although it is yet undefined on input line 82.
- [124]
-<imgs/AdapterBias.png, id=3789, 502.87875pt x 339.2675pt>
+ [122]
+<imgs/AdapterBias.png, id=3819, 502.87875pt x 339.2675pt>
 File: imgs/AdapterBias.png Graphic file (type png)
 <use imgs/AdapterBias.png>
 Package pdftex.def Info: imgs/AdapterBias.png  used on input line 100.
 (pdftex.def)             Requested size: 201.14793pt x 135.70459pt.
- [125 </Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png>]
-<imgs/Adapter_compare_withoutWide.png, id=3815, 722.7pt x 526.8483pt>
+ [123 </Users/thomasrolland/Documents/PhD/Thesis/imgs/AdapterBias.png>]
+<imgs/Adapter_compare_withoutWide.png, id=3845, 722.7pt x 526.8483pt>
 File: imgs/Adapter_compare_withoutWide.png Graphic file (type png)
 <use imgs/Adapter_compare_withoutWide.png>
 Package pdftex.def Info: imgs/Adapter_compare_withoutWide.png  used on input line 134.
@@ -3171,65 +3207,72 @@ Package pdftex.def Info: imgs/Adapter_compare_withoutWide.png  used on input lin
 
 Underfull \vbox (badness 2197) has occurred while \output is active []
 
- [126] [127 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png>]
+ [124]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[125 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapter_compare_withoutWide.png>]
 Overfull \hbox (8.01877pt too wide) in paragraph at lines 173--173
 []\OT1/cmr/bx/n/14.4 Leveraging Transformer-based model re-dun-dancy for Shared-
  []
 
-[128]
+[126]
 Underfull \vbox (badness 1048) has occurred while \output is active []
 
- [129]
-<imgs/Shared_Adapters.png, id=3883, 508.90125pt x 579.16376pt>
+ [127]
+<imgs/Shared_Adapters.png, id=3913, 508.90125pt x 579.16376pt>
 File: imgs/Shared_Adapters.png Graphic file (type png)
 <use imgs/Shared_Adapters.png>
 Package pdftex.def Info: imgs/Shared_Adapters.png  used on input line 203.
 (pdftex.def)             Requested size: 204.85844pt x 233.14606pt.
-<imgs/Extreme_shared_adapter.png, id=3884, 560.0925pt x 576.1525pt>
+<imgs/Extreme_shared_adapter.png, id=3914, 560.0925pt x 576.1525pt>
 File: imgs/Extreme_shared_adapter.png Graphic file (type png)
 <use imgs/Extreme_shared_adapter.png>
 Package pdftex.def Info: imgs/Extreme_shared_adapter.png  used on input line 204.
 (pdftex.def)             Requested size: 218.51521pt x 224.77768pt.
- [130 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Shared_Adapters.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Extreme_shared_adapter.png>]
-<imgs/Adapters_compare.png, id=3906, 722.7pt x 433.62pt>
+ [128 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Shared_Adapters.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Extreme_shared_adapter.png>]
+<imgs/Adapters_compare.png, id=3936, 722.7pt x 433.62pt>
 File: imgs/Adapters_compare.png Graphic file (type png)
 <use imgs/Adapters_compare.png>
 Package pdftex.def Info: imgs/Adapters_compare.png  used on input line 224.
 (pdftex.def)             Requested size: 455.24408pt x 273.14896pt.
- [131] [132 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png>] [133]) [134] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_8.tex
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[129] [130 </Users/thomasrolland/Documents/PhD/Thesis/imgs/Adapters_compare.png>] [131]) [132] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-Chapter_8.tex
 Chapter 8.
 \openout5 = `main.mtc'.
 
 \openout5 = `main.mtc'.
 
-(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc8) [135
+(/Users/thomasrolland/Documents/PhD/Thesis/main.mtc8) [133
 
 
-] [136
+] [134
 
-] [137]
+] [135]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [138]
+ [136]
 Underfull \vbox (badness 8113) has occurred while \output is active []
 
- [139]) [140] (/Users/thomasrolland/Documents/PhD/Thesis/main.bbl [141
+ [137]) [138] (/Users/thomasrolland/Documents/PhD/Thesis/main.bbl [139
 
 
-] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-1.def
+] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] (/usr/local/texlive/2018/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-) [154] [155] [156] [157]
+) [153] [154] [155] [156]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-[158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172]) [173] [174
-
-] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixA.tex
+[157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171]) [172] (/Users/thomasrolland/Documents/PhD/Thesis/./Chapters/Thesis-MSc-AppendixA.tex
 Appendix A.
-[175
+[173
+
 
 ]
 Package acronym Info: Label `acro:KB' newly defined as it shall be overridden
@@ -3242,35 +3285,39 @@ Package acronym Info: Label `acro:OSA' newly defined as it shall be overridden
 although it is yet undefined on input line 18.
 Package acronym Info: Label `acro:GMM-UBM' newly defined as it shall be overridden
 although it is yet undefined on input line 21.
- [176] [177]
+ [174] [175]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package acronym Info: Label `acro:VAD' newly defined as it shall be overridden
 although it is yet undefined on input line 95.
-[178] [179]
+[176] [177]
 Package acronym Info: Label `acro:AD' newly defined as it shall be overridden
 although it is yet undefined on input line 127.
- [180]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 137.
-
-<imgs/ADReSS.png, id=4422, 1192.455pt x 566.115pt>
+ [178]
+<imgs/ADReSS.png, id=4452, 1192.455pt x 566.115pt>
 File: imgs/ADReSS.png Graphic file (type png)
 <use imgs/ADReSS.png>
 Package pdftex.def Info: imgs/ADReSS.png  used on input line 155.
 (pdftex.def)             Requested size: 417.36551pt x 198.14322pt.
-[181] [182 </Users/thomasrolland/Documents/PhD/Thesis/imgs/ADReSS.png>] [183] [184] [185]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [186]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[179] [180 </Users/thomasrolland/Documents/PhD/Thesis/imgs/ADReSS.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[181] [182] [183] [184] [185]
 Package acronym Info: Label `acro:LPC' newly defined as it shall be overridden
 although it is yet undefined on input line 274.
- [187]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package acronym Info: Label `acro:UAR' newly defined as it shall be overridden
 although it is yet undefined on input line 315.
- [188] [189]) [190]pdfTeX warning (ext4): destination with the same identifier (name{appendix.1}) has been already used, duplicate ignored
+[186] [187]) [188]pdfTeX warning (ext4): destination with the same identifier (name{appendix.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.261 \pdfbookmark[1]{Appendix B}{appendix}
@@ -3279,7 +3326,7 @@ Appendix B.
 
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
- [191
+ [189
 
 
 ]
@@ -3292,50 +3339,54 @@ although it is yet undefined on input line 51.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [192]
-<imgs/wav2vec2.png, id=4638, 1120.185pt x 615.29875pt>
+ [190]
+<imgs/wav2vec2.png, id=4668, 1120.185pt x 615.29875pt>
 File: imgs/wav2vec2.png Graphic file (type png)
 <use imgs/wav2vec2.png>
 Package pdftex.def Info: imgs/wav2vec2.png  used on input line 56.
 (pdftex.def)             Requested size: 218.51521pt x 120.02501pt.
-<imgs/Hubert.png, id=4641, 1627.07875pt x 1497.595pt>
+<imgs/Hubert.png, id=4671, 1627.07875pt x 1497.595pt>
 File: imgs/Hubert.png Graphic file (type png)
 <use imgs/Hubert.png>
 Package pdftex.def Info: imgs/Hubert.png  used on input line 57.
 (pdftex.def)             Requested size: 218.51521pt x 201.11543pt.
- [193 </Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec2.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Hubert.png>]
+ [191 </Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec2.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/Hubert.png>]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package acronym Info: Label `acro:UER' newly defined as it shall be overridden
 although it is yet undefined on input line 131.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [194] [195]
-<imgs/fbank_umap_plot.png, id=4721, 578.16pt x 433.62pt>
+ [192] [193]
+<imgs/fbank_umap_plot.png, id=4751, 578.16pt x 433.62pt>
 File: imgs/fbank_umap_plot.png Graphic file (type png)
 <use imgs/fbank_umap_plot.png>
 Package pdftex.def Info: imgs/fbank_umap_plot.png  used on input line 139.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
-<imgs/tera_umap_plot.png, id=4722, 578.16pt x 433.62pt>
+<imgs/tera_umap_plot.png, id=4752, 578.16pt x 433.62pt>
 File: imgs/tera_umap_plot.png Graphic file (type png)
 <use imgs/tera_umap_plot.png>
 Package pdftex.def Info: imgs/tera_umap_plot.png  used on input line 140.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
-<imgs/wav2vec_umap_plot.png, id=4723, 578.16pt x 433.62pt>
+<imgs/wav2vec_umap_plot.png, id=4753, 578.16pt x 433.62pt>
 File: imgs/wav2vec_umap_plot.png Graphic file (type png)
 <use imgs/wav2vec_umap_plot.png>
 Package pdftex.def Info: imgs/wav2vec_umap_plot.png  used on input line 141.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
-<imgs/hubert_umap_plot.png, id=4724, 578.16pt x 433.62pt>
+<imgs/hubert_umap_plot.png, id=4754, 578.16pt x 433.62pt>
 File: imgs/hubert_umap_plot.png Graphic file (type png)
 <use imgs/hubert_umap_plot.png>
 Package pdftex.def Info: imgs/hubert_umap_plot.png  used on input line 142.
 (pdftex.def)             Requested size: 223.0721pt x 167.29819pt.
+ [194 </Users/thomasrolland/Documents/PhD/Thesis/imgs/fbank_umap_plot.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/tera_umap_plot.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec_umap_plot.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/hubert_umap_plot.png>]
 Package acronym Info: Label `acro:t-SNE' newly defined as it shall be overridden
 although it is yet undefined on input line 151.
- [196] [197 </Users/thomasrolland/Documents/PhD/Thesis/imgs/fbank_umap_plot.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/tera_umap_plot.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/wav2vec_umap_plot.png> </Users/thomasrolland/Documents/PhD/Thesis/imgs/hubert_umap_plot.png>])
+ [195])
 \Changes@OutFile=\write10
 \openout10 = `main.soc'.
 
@@ -3365,7 +3416,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-[198]
+[196]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
  (/Users/thomasrolland/Documents/PhD/Thesis/main.aux
@@ -3374,7 +3425,7 @@ Package cleveref Info: loaded `english' language definitions on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 269.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 269.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 671CF07DBB059159465309DF8D61A8E8;13111.
+(rerunfilecheck)             Checksum: 8D8ABD7F5B400EFCFF650C1876C02B80;13110.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -3385,10 +3436,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 43813 strings out of 492649
- 794257 string characters out of 6129622
- 981626 words of memory out of 5000000
- 45613 multiletter control sequences out of 15000+600000
+ 43826 strings out of 492649
+ 794566 string characters out of 6129622
+ 983655 words of memory out of 5000000
+ 45619 multiletter control sequences out of 15000+600000
  547267 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,77p,10542b,869s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3397,10 +3448,10 @@ pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/bookman/ubkd8a.pfb>
-Output written on /Users/thomasrolland/Documents/PhD/Thesis/main.pdf (222 pages, 5516940 bytes).
+Output written on /Users/thomasrolland/Documents/PhD/Thesis/main.pdf (220 pages, 5488303 bytes).
 PDF statistics:
- 5082 PDF objects out of 5155 (max. 8388607)
- 4685 compressed objects within 47 object streams
- 1047 named destinations out of 1200 (max. 500000)
- 1505 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5114 PDF objects out of 5155 (max. 8388607)
+ 4720 compressed objects within 48 object streams
+ 1055 named destinations out of 1200 (max. 500000)
+ 1500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

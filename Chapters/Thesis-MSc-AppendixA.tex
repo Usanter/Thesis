@@ -134,7 +134,7 @@ More recently, a shift towards advanced architectures has been observed to overc
 Our work differs from previous studies in two aspects. First, by using contextual embedding vectors for text data, feeding into two systems: one employing Global Maximum pooling and bidirectional \ac{LSTM}-\acp{RNN} architectures, and the other based on statistical computation of sentence embeddings. Secondly, for audio, we use \ac{DNN} speaker embeddings extracted from pre-trained models. To the best of our knowledge, this is the first work which jointly uses automatically learned representations for both audio and textual data. Additionally, our approach is simpler and does not require training deep architectures.
 
 \subsection{Corpus}
-\begin{table}[]
+\begin{table}[h]
   \begin{center}
    \begin{tabular}{c|ccc}
     \hline
@@ -150,7 +150,7 @@ Our work differs from previous studies in two aspects. First, by using contextua
   \end{table}
 The ADReSS dataset comprises speech recordings and annotated transcriptions from 156 subjects, including 78 \ac{AD} patients and 78 healthy control speakers. The data is split into training (108 subjects) and test (48 subjects) sets. Participants provided descriptions of the Cookie Theft picture from the Boston Diagnostic Aphasia Examination \cite{goodglass2001bdae}. Speech recordings were segmentated using \ac{VAD} and normalised \cite{luz2020alzheimer}. The dataset contained both fully enhanced audio and normalised audio chunks. Our approach used both audio and transcriptions available. The transcriptions were annotated with disfluencies, filled pauses, repetitions and other complex events. The transcriptions contained 17,127 words, including 1,009 unique words. Additional details on the duration and size of the ADReSS dataset are provided in Table \ref{tab:adress_data}.
 \subsection{Proposed system}
-\begin{figure}
+\begin{figure}[h]
   \begin{center}
   \includegraphics[scale=0.35]{imgs/ADReSS.png}  
   \caption{Overview of the multimodal system based on embedding approaches}
@@ -171,7 +171,7 @@ For both approaches, the initial pipeline step involved normalising the text dat
 The second system does not require an additional training phase, as representations are extracted from a pre-trained model to directly characterise linguistic deficits in \ac{AD}. Contextual word embeddings obtained for each word were used to compute fixed-size embedding vectors for each sentence by averaging the second to twelfth hidden layers of each word.
 
 \subsection{Results}
-\begin{table}[t]
+\begin{table}[h]
   \begin{center}
   \begin{tabular}{lcccc}
   \hline
@@ -190,7 +190,7 @@ The second system does not require an additional training phase, as representati
 \end{table}
 
 The results obtained using the different acoustic feature embeddings are summarised in Table \ref{tab:adress_acoustics}. Different independent models were explored, and an early fusion of the best acoustic results was performed. The x-vectors Voxceleb model generally achieved lower classification accuracy. However, when combining i-vectors and x-vectors both trained with VoxCeleb, the accuracy was comparable to x-vectors only trained on the SRE corpus, which represents the best acoustic result on the development set. These outcomes are slightly lower than those reported in similar works in the literature \cite{warnita18_interspeech,zargarbashi2019multi}. However, our approach is distinct from these previous studies as we use a smaller dataset and do not rely on \ac{DNN} training. To validate these results on the test set, we select the acoustic feature embeddings extracted from the pre-trained x-vectors SRE model for evaluation.
-\begin{table}[t]
+\begin{table}[h]
   \begin{tabular}{lcccc}
   \hline
 & \multicolumn{1}{l}{\textbf{Accuracy}} & \multicolumn{1}{l}{\textbf{Precision}} & \multicolumn{1}{l}{\textbf{Recall}} & \multicolumn{1}{l}{\textbf{F1 Score}} \\ \hline
@@ -210,7 +210,7 @@ The results obtained using the different acoustic feature embeddings are summari
 
   For a comprehensive evaluation of speech and language impairments in \ac{AD}, we performed an early fusion of the best results from both the acoustic and linguistic systems. This involved merging x-vectors with linguistic feature sets from three neural models. However, the results of the development set using this extended feature set did not yield additional improvements. Despite this, we selected the combined system as our primary choice for evaluation.
 
-  \begin{table}[t]
+  \begin{table}[h]
     \begin{center}
     \begin{tabular}{llcccc}
     \hline
@@ -277,7 +277,7 @@ signal in an unsupervised manner. \ac{PASE}+ features are derived from a shared 
 The key aspect of our study is to employ transfer learning to address the limited COVID-19 data for training. For classification, three \acp{SVM} were used respectively on \ac{TDNN-F} embeddings, \ac{CNN} embeddings, and \ac{PASE}+ features. In practice, \ac{TDNN-F} embeddings are directly input to the \ac{SVM}. \ac{CNN}-based embeddings are derived from cough segments and subjected to majority voting for the final decision. \ac{PASE}+ features are averaged across the sequence and fed to the \ac{SVM} classifier. The \acp{SVM} are trained on both the C19C and $\text{C19C}_{fullband}$ datasets, exploring various kernels, data normalisations, and class balancing methods. Hyperparameters are optimised through grid-search on development subsets, and linear logistic regression is applied to combine system decisions with scaling factors. The regression approximates log-likelihood ratios, thus, a theoretically determined decision threshold can be used for making hard decisions.
 
 \subsection{Results}
-\begin{table}
+\begin{table}[h]
   \begin{center}
     
   \begin{tabular}{c|c|c|c}

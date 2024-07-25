@@ -23,7 +23,7 @@ Within this chapter, we will present the Transformer design, alongside the Confo
 \section{Transformer model}
 \label{sec:trans_archi}
 
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{imgs/Transformer_archi.png}
     \caption{Architecture of the standard Transformer \cite{vaswani2017attention}. a) scaled dot-product attention, b) multi-head self-attention, c) Transformer-Encoder, d) Transformer-Decoder.}
@@ -154,7 +154,7 @@ In contrast to previous work, where the entire model or entire layers are fine-t
 \label{section:methods_chapter4}
 
 \subsection{Corpus}
-\begin{table}[ht]
+\begin{table}[h]
 \centering
 \begin{tabular}{c|c|c}
 \hline
@@ -179,21 +179,21 @@ All experiments were conducted using the SpeechBrain toolkit \cite{speechbrain}.
 \subsection{Encoder-Decoder Transfer learning}
 \label{sec:ED_partial}
 % Encoder - Decoder
-\begin{table}
+\begin{table}[h]
     \begin{center}
         \begin{tabular}{lcc}\hline
             Transformer    &   \ac{WER} $\downarrow$    & Trained parameters  \\ \hline
-            Full model          & 12.99\% & 71.5M   \\
-            Encoder only & \textbf{12.55\%} & 37.8M  \\
-            Decoder only & 15.95\% & 25.2M  \\ \hline \hline
+            Full model          & 12.99 & 71.5M   \\
+            Encoder only & \textbf{12.55} & 37.8M  \\
+            Decoder only & 15.95 & 25.2M  \\ \hline \hline
             Conformer    &    & \\ \hline
-            Full model          & 12.28\% & 109M   \\
-            Encoder only & \textbf{11.24\%} & 75.9M  \\
-            Decoder only & 16.94\% & 25.2M  \\ \hline 
+            Full model          & 12.28 & 109M   \\
+            Encoder only & \textbf{11.24} & 75.9M  \\
+            Decoder only & 16.94 & 25.2M  \\ \hline 
 
         \end{tabular}
     \end{center}
-    \caption{Fine-tuning in isolation of the Encoder and Decoder for Transformer and Conformer architecture}
+    \caption{Fine-tuning in isolation of the Encoder and Decoder for Transformer and Conformer architecture. WER expressed in terms of percentage.}
     \label{tab:EncoderDecoder}
 \end{table}
 Table \ref{tab:EncoderDecoder} summarises the results of the impact of isolating fine-tuning of the Encoder and Decoder components within Transformer and Conformer \ac{ASR} models. For the Transformer model, fine-tuning the entire model exhibits a \ac{WER} of 12.99\% using 71.5 million parameters. Isolating the Encoder component leads to an improved \ac{WER}, with 12.55\% \ac{WER} with a reduced parameter count of 37.8 million. In parallel, fine-tuning only the Decoder underperformed compared to the full model and Encoder only fine-tuning strategies by achieving a \ac{WER} score of 15.95\% with 25.2 million parameters.
@@ -203,7 +203,7 @@ Turning to the Conformer model, the full model achieves a \ac{WER} of 12.28\% wi
 For both architectures, we performed statistical tests using SCTK, the NIST Scoring Toolkit \cite{SCTK_nist}, specifically Matched Pairs Sentence-Segment Word Error, which showed that the \textit{p}-value for fine-tuning the Encoder compared to the full model fine-tuning is less than or equal to 0.001. This result indicates statistical significance and provides evidence against the null hypothesis.
 
 % Layers wise
-\begin{figure}
+\begin{figure}[h]
     \centering
     \subfigure[Results of the transfer learning layer-wise for the Transformer model]{\label{fig:transferTLTransformer}\includegraphics[width=\textwidth]{imgs/layerTL_Transformer.png}}
     \subfigure[Results of the transfer learning layer-wise for the Conformer model]{\label{fig:transferTLConformer}\includegraphics[width=\textwidth]{imgs/layerTL_Conformer.png}}
@@ -211,50 +211,50 @@ For both architectures, we performed statistical tests using SCTK, the NIST Scor
     \label{fig:layerWISE}
 \end{figure}
 
-Recognising the pivotal role of the Encoder in the success of the fine-tuning process for children's \ac{ASR}, our investigation delves deeper to determine the specific layers that are the most important during this \ac{TL} process. To this end, we adopted a meticulous approach where we incrementally fine-tuned the Encoder by adding one layer at a time for each fine-tuning experiment. This layer-wise fine-tuning procedure is executed bidirectionally, encompassing both an up-ward trajectory, commencing from the input layer, and a down-ward trajectory, starting from the output layer of the Encoder. In other words, the up-ward trajectory involves progressively fine-tuning by adding one layer at a time for each experiment, starting from the input layer and systematically integrating subsequent layers towards the output layer of the Encoder. Conversely, the down-ward trajectory initiates fine-tuning from the output layer, systematically incorporating preceding layers towards the input layer at each experiment. The results of this layer-wise fine-tuning procedure for both the Transformer and Conformer architectures are presented in Figure \ref{fig:layerWISE}.
+Recognising the pivotal role of the Encoder in the success of the fine-tuning process for children's \ac{ASR}, our investigation delves deeper to determine the specific layers that are the most important during this \ac{TL} process. To this end, we adopted a meticulous approach where we incrementally fine-tuned the Encoder by adding one layer at a time for each fine-tuning experiment. This layer-wise fine-tuning procedure is executed bidirectionally, encompassing both an up-way trajectory, commencing from the input layer, and a down-ward trajectory, starting from the output layer of the Encoder. In other words, the up-way trajectory involves progressively fine-tuning by adding one layer at a time for each experiment, starting from the input layer and systematically integrating subsequent layers towards the output layer of the Encoder. Conversely, the down-ward trajectory initiates fine-tuning from the output layer, systematically incorporating preceding layers towards the input layer at each experiment. The results of this layer-wise fine-tuning procedure for both the Transformer and Conformer architectures are presented in Figure \ref{fig:layerWISE}.
 
-In both the Transformer and Conformer scenarios, a consistent pattern emerged. The addition of more layers was found to be consistently beneficial, with optimal performance stabilisation occurring when 10 layers out of the 12 are employed. We observed that it is more advantageous to use \ac{TL} from the top layers in the down-ward direction (i.e. those close to the output of the Encoder) compared to the bottom layers in the up-ward direction (i.e. those close to the input of the Encoder). The success of the up-ward trajectory, in contrast to the down-ward trajectory, indicates that the top layers of the Encoder are the most relevant to fine-tuning in the context of children's \ac{ASR}. This exploration of layer-wise fine-tuning sheds light on the dynamics of \ac{TL} within the Encoder, offering valuable insights into the targeted layers that significantly contribute to optimising the performance of children's \ac{ASR} models. 
+In both the Transformer and Conformer scenarios, a consistent pattern emerged. The addition of more layers was found to be consistently beneficial, with optimal performance stabilisation occurring when 10 layers out of the 12 are employed. We observed that it is more advantageous to use \ac{TL} from the top layers in the down-ward direction (i.e. those close to the output of the Encoder) compared to the bottom layers in the up-way direction (i.e. those close to the input of the Encoder). The success of the up-way trajectory, in contrast to the down-ward trajectory, indicates that the top layers of the Encoder are the most relevant to fine-tuning in the context of children's \ac{ASR}. This exploration of layer-wise fine-tuning sheds light on the dynamics of \ac{TL} within the Encoder, offering valuable insights into the targeted layers that significantly contribute to optimising the performance of children's \ac{ASR} models. 
 
 \subsection{Modules Transfer learning}
 % Block wise
-\begin{table}
+\begin{table}[h]
     \begin{center}
         \begin{tabular}{lcc}\hline
             \textbf{Transformer}    & WER  $\downarrow$   & Trained parameters \\ \hline
-            Frozen pretrained & 25.04\% & -   \\
-            Full model   & 12.99\% & 71.5M   \\ \hline
-            Normalisation & 17.00\% & 57.9K  \\
-            Attention & 12.19\% & 25.2M  \\
-            FFN    & \textbf{11.84\%}     &  37.8M \\ \hline
-            Normalisation$_{Encoder}$ & 17.75\% & 25.6K \\ 
-            Attention$_{Encoder}$ & 12.83\% & 12.6M \\ 
-            FFN$_{Encoder}$ & 12.20\% & 25.2M \\ \hline 
-            Attention + FFN & 12.39\% & 63.0M \\
-            Normalisation + FFN & 12.19\% & 37.9M \\
-            Normalisation + Attention & 12.29\% & 25.3M\\ \hline \hline
+            Frozen pretrained & 25.04 & -   \\
+            Full model   & 12.99 & 71.5M   \\ \hline
+            Normalisation & 17.00 & 57.9K  \\
+            Attention & 12.19 & 25.2M  \\
+            FFN    & \textbf{11.84}     &  37.8M \\ \hline
+            Normalisation$_{Encoder}$ & 17.75 & 25.6K \\ 
+            Attention$_{Encoder}$ & 12.83 & 12.6M \\ 
+            FFN$_{Encoder}$ & 12.20 & 25.2M \\ \hline 
+            Attention + FFN & 12.39 & 63.0M \\
+            Normalisation + FFN & 12.19 & 37.9M \\
+            Normalisation + Attention & 12.29 & 25.3M\\ \hline \hline
             \textbf{Conformer}    &     & \\ \hline
-            Frozen pretrained & 21.75\% & -   \\
-            Full model   & 12.28\% & 109M   \\ \hline
-            Normalisation & 15.61\% & 63.7K  \\
-            Attention & 11.74\% & 28.4M  \\
-            Convolution Module & 11.67\% & 9.7M \\
-            FFN    & \textbf{11.10\%}     &  63M \\
-            \quad $\hookrightarrow$ Module 1    & 11.44\%     &  25.2M \\
-            \quad $\hookrightarrow$ Module 2    & 11.48\%     &  25.2M \\
-            \quad $\hookrightarrow$ Up-linear ($W_1$)    & 11.47\%     &  31.5M \\
-            \quad $\hookrightarrow$ Down-linear ($W_2$)    & 11.40\%     &  31.5M \\ \hline
-            Normalisation$_{Encoder}$ & 15.88\% & 37.9K \\ 
-            Attention$_{Encoder}$ & 11.91\% & 15.7M \\ 
-            FFN$_{Encoder}$ & 11.17\% & 50.4M \\ \hline
-            FFN + Attention & 11.20\% & 91.4M \\
-            FFN + Convolution Module & 11.11\% & 72.7M \\
-            FFN + Normalisation & 11.15\% & 63.1M \\
-            Attention + Normalisation & 11.67\% & 28.4M \\
-            Attention + Convolution Module & 11.44\% & 38.0M \\
-            Convolution Module + Normalisation & 11.62\% & 9.7M\\ \hline
+            Frozen pretrained & 21.75 & -   \\
+            Full model   & 12.28 & 109M   \\ \hline
+            Normalisation & 15.61 & 63.7K  \\
+            Attention & 11.74 & 28.4M  \\
+            Convolution Module & 11.67 & 9.7M \\
+            FFN    & \textbf{11.10}     &  63M \\
+            \quad $\hookrightarrow$ Module 1    & 11.44     &  25.2M \\
+            \quad $\hookrightarrow$ Module 2    & 11.48     &  25.2M \\
+            \quad $\hookrightarrow$ Up-linear ($W_1$)    & 11.47     &  31.5M \\
+            \quad $\hookrightarrow$ Down-linear ($W_2$)    & 11.40     &  31.5M \\ \hline
+            Normalisation$_{Encoder}$ & 15.88 & 37.9K \\ 
+            Attention$_{Encoder}$ & 11.91 & 15.7M \\ 
+            FFN$_{Encoder}$ & 11.17 & 50.4M \\ \hline
+            FFN + Attention & 11.20 & 91.4M \\
+            FFN + Convolution Module & 11.11 & 72.7M \\
+            FFN + Normalisation & 11.15 & 63.1M \\
+            Attention + Normalisation & 11.67 & 28.4M \\
+            Attention + Convolution Module & 11.44 & 38.0M \\
+            Convolution Module + Normalisation & 11.62 & 9.7M\\ \hline
         \end{tabular}
     \end{center}
-    \caption{Modules fine-tuning experiment}
+    \caption{Modules fine-tuning experiment. WER expressed in terms of percentage.}
     \label{table:ModulesTL}
 \end{table}
 The results of our \textit{partial transfer learning} experiments, focusing on fine-tuning specific components of Transformer and Conformer \ac{ASR} models for children's speech, are presented in Table \ref{table:ModulesTL}. We decomposed our experiments into three parts. Firstly, we fine-tuned components in both the Encoder and Decoder. Secondly, we partially fine-tuned only the components present in the Encoder, motivated by the results of the Encoder fine-tuning in Section \ref{sec:ED_partial}. Finally, we investigated different combinations of fine-tuning components in both the Encoder and Decoder. In addition to the \ac{WER} evaluation metric, we also display the number of trained parameters to evaluate the parameter cost of the different components. 

@@ -114,34 +114,34 @@ For training, we use the My Science Tutor (MyST) Children Speech Corpus, as chil
 \label{sec:results_adapters}
 
 \subsection{Adapter Configurations}
-\begin{table}[t]
+\begin{table}[h]
 \begin{center}    
 \begin{tabular}{ccc}
 \hline
  Method & WER $\downarrow$     & Trained params    \\ \hline \hline
 \multicolumn{3}{c}{\textbf{Transformer}} \\ \hline
-\multicolumn{1}{l}{\textit{Frozen}} & 25.04\%   & - \\
-\multicolumn{1}{l}{\textit{Full fine-tuning}} & 12.99\% & 71.5M \\ \hline
-\multicolumn{1}{l}{Serial}  &   12.78\% & 6.3M  \\ 
-\multicolumn{1}{l}{Parallel}  &     \textbf{12.62\%} & 6.3M  \\ \hline\hline
+\multicolumn{1}{l}{\textit{Frozen}} & 25.04   & - \\
+\multicolumn{1}{l}{\textit{Full fine-tuning}} & 12.99 & 71.5M \\ \hline
+\multicolumn{1}{l}{Serial}  &   12.78 & 6.3M  \\ 
+\multicolumn{1}{l}{Parallel}  &     \textbf{12.62} & 6.3M  \\ \hline\hline
 \multicolumn{3}{c}{\textbf{Conformer}} \\ \hline
-\multicolumn{1}{l}{\textit{Frozen}} & 21.75\%   & - \\ 
-\multicolumn{1}{l}{\textit{Full fine-tuning}} & 12.28\% & 109.1M \\ \hline
-\multicolumn{1}{l}{Serial}  &   11.76\% & 6.3M  \\ %11.84 
-\multicolumn{1}{l}{Serial-Conv} & 11.78\%     & 6.3M  \\
-\multicolumn{1}{l}{Parallel}    & 11.72\% & 6.3M  \\ % 11.88 
-\multicolumn{1}{l}{Parallel-conv} & 11.79\%      & 6.3M  \\ %\hline
-\multicolumn{1}{l}{TPA} & \textbf{11.58\%}     & 12.6M  \\ %11.85
-\multicolumn{1}{l}{TSA} & 11.75\%     & 12.6M  \\ \hline %11.72
-\multicolumn{1}{l}{Serial (Decoder)} & 18.09\%     & 3.2M  \\ 
-\multicolumn{1}{l}{Parallel (Decoder)} &17.76\%     & 3.2M  \\ \hline
+\multicolumn{1}{l}{\textit{Frozen}} & 21.75   & - \\ 
+\multicolumn{1}{l}{\textit{Full fine-tuning}} & 12.28 & 109.1M \\ \hline
+\multicolumn{1}{l}{Serial}  &   11.76 & 6.3M  \\ %11.84 
+\multicolumn{1}{l}{Serial-Conv} & 11.78    & 6.3M  \\
+\multicolumn{1}{l}{Parallel}    & 11.72 & 6.3M  \\ % 11.88 
+\multicolumn{1}{l}{Parallel-conv} & 11.79      & 6.3M  \\ %\hline
+\multicolumn{1}{l}{TPA} & \textbf{11.58}     & 12.6M  \\ %11.85
+\multicolumn{1}{l}{TSA} & 11.75     & 12.6M  \\ \hline %11.72
+\multicolumn{1}{l}{Serial (Decoder)} & 18.09     & 3.2M  \\ 
+\multicolumn{1}{l}{Parallel (Decoder)} &17.76     & 3.2M  \\ \hline
 %\multicolumn{1}{l}{TPA + Serial (Decoder)} & 00.00(T)\%     & 15.8M  \\
 %\multicolumn{1}{l}{TPA + Serial (Decoder)} & 11.68\%     & 15.8M  \\ 
-\multicolumn{1}{l}{TPA + Parallel (Decoder)} & \textbf{11.47\%}     & 15.8M  \\ \hline
+\multicolumn{1}{l}{TPA + Parallel (Decoder)} & \textbf{11.47}     & 15.8M  \\ \hline
 
 \end{tabular}
 \end{center}
-\caption{Results of the different Adapters configurations in both Transformer and Conformer.}
+\caption{Results of the different Adapters configurations in both Transformer and Conformer. WER expressed in terms of percentage.}
 \label{tab:res_config}
 \end{table}
 
@@ -160,7 +160,7 @@ These results collectively illustrate the versatility and effectiveness of diffe
 
 \subsection{Effect of the Adapters hidden dimension}
 \label{sec:hidden_size_adapter}
-\begin{figure}
+\begin{figure}[h]
     \begin{center}
     \includegraphics[scale=0.5]{imgs/HiddenDimEXP.png}
     \caption{Experimental Adapter transfer using different hidden dimension sizes within the Conformer architecture.}
@@ -175,18 +175,18 @@ In Figure \ref{fig:HiddenDim}, the relative \ac{WER} delta compared to the full 
 
 \subsection{Unsupervised clustering for grouped-speaker Adapters}
 \label{sec:clustering_emb}
-\begin{table}[t]
+\begin{table}[h]
     \begin{center}    
     \begin{tabular}{cc}
     \hline
       \# of clusters & Average WER $\downarrow$    \\ \hline
-    \multicolumn{1}{c}{1} & 11.58\%  \\% OR 11.70%  If we consider 40 epochs instead of 30 here
-    \multicolumn{1}{c}{2} & \textbf{11.50\%}  \\
-    \multicolumn{1}{c}{3} & 11.57\%  \\
-    \multicolumn{1}{c}{4} & 11.51\%  \\ \hline 
+    \multicolumn{1}{c}{1} & 11.58  \\% OR 11.70%  If we consider 40 epochs instead of 30 here
+    \multicolumn{1}{c}{2} & \textbf{11.50}  \\
+    \multicolumn{1}{c}{3} & 11.57  \\
+    \multicolumn{1}{c}{4} & 11.51  \\ \hline 
     \end{tabular}
     \end{center}
-    \caption{Results of the unsupervised clustered Adapters approach.}
+    \caption{Results of the unsupervised clustered Adapters approach. WER expressed in terms of percentage.}
     \label{tab:res_clusters}
     \end{table}
 

@@ -15,7 +15,7 @@ In recent years, an increasing amount of research has focused on using \ac{SSL} 
 The observed successes of \ac{SSL} as an initialization for fine-tuning in the context of children's \ac{ASR} underscore its efficacy as a new training paradigm. However, the exploration of \ac{SSL} models as front-end feature extractors, in comparison to conventional hand-crafted features, remains unexplored for children's \ac{ASR}, despite its use and success for adult speech \cite{yang21c_interspeech,chang2021exploration}. Motivated by these considerations, this annexe undertakes a comprehensive review of various \ac{SSL} models, evaluating their potential as novel feature extractors in the domain of children's \ac{ASR}.
 \section{Self-supervised pre-trained models}
 
-\begin{table}[htbp]
+\begin{table}[h]
     \centering
     \begin{tabular}{ccccccc}
       \toprule
@@ -51,7 +51,7 @@ Generative modelling has emerged as a prevalent approach for learning speech rep
 The Mockingjay model \cite{mockingjay} takes inspiration from \ac{BERT}-like pretraining techniques by masking input acoustic features along the time axis and subsequently regenerating the masked frames while the Audio ALBERT represent a smaller version of it \cite{chi2021audio}. Expanding upon this concept, the \ac{TERA} model \cite{liu2021tera} introduces an additional layer of complexity by masking bins in the frequency axis alongside the temporal axis. Finally, the \ac{NPC} model \cite{liu21l_interspeech} combines elements from both \ac{APC} and Mockingjay by substituting the \ac{RNN} in \ac{APC} with a \ac{CNN} layers and modifying the future frames generation process into a masked reconstruction.
 
 \subsection{Discriminative modeling}
-\begin{figure}[t]
+\begin{figure}[h]
     \centering
     \subfigure[Illustration of the Wav2vec2 architecture taken from \cite{baevski2020wav2vec}]{\label{fig:wav2vec2}\includegraphics[width=0.48\textwidth]{imgs/wav2vec2.png}}
     \subfigure[Illustration of the HuBERT architecture taken from \cite{hsu2021hubert}]{\label{fig:Hubert}\includegraphics[width=0.48\textwidth]{imgs/Hubert.png}}
@@ -63,7 +63,7 @@ The success of discriminative modelling has been notably pronounced with the int
 \section{Experimental setup}
 In our experimental setup, we used the Self-Supervised Speech Pre-training and Representation Learning (s3prl) toolkit\footnote{https://github.com/s3prl/s3prl} \cite{yang21c_interspeech}. The s3prl toolkit allows the modular use of pre-trained \ac{SSL} models, called upstream, to perform various downstream tasks, including \ac{ASR}. In order to evaluate the efficiency of different \ac{SSL} models as features extractors for children's \ac{ASR}, we froze the pre-trained \ac{SSL} models's weights to extract embedding representation of the children's speech signal as new acoustic features. All the different \ac{SSL} upstream models used in our experiments are listed along with detailed information regarding their architectures in table \ref{tab:SSL_models}. Notably, each of these models underwent self-supervised pre-training on either 360 or 960 hours of LibriSpeech \cite{librispeech} (denoted as LS 360hr and LS 960hr, respectively) or on an extensive 60 thousand hours of LibriLight data \cite{librilight} (referred to as LL 60k hr). 
 The \ac{ASR} downstream task was conducted using a 2-layer Bidirectional \ac{LSTM} (BiLSTM) architecture with 1024 units, optimised with a \ac{CTC} loss. The training spanned 800 thousand iterations, with a learning rate set at $1.0\dot 10^{-4}$. Additionally, a dropout rate of $0.2$ was applied to the BiLSTM architecture to increase robustness. In these experiments, language models were not used. Additionally, limited by the large size of some \ac{SSL} model, we decided to use a subset of the Myst \cite{MyST} dataset, using 77 hours of speech for training, by removing the longest utterances in the train and validation sets. A detailed description of the filtered Myst data is provided in table \ref{tab:SSL_myst}.
-\begin{table}[h!]
+\begin{table}[h]
 
     
     \begin{center}
@@ -107,24 +107,24 @@ The \ac{ASR} downstream task was conducted using a 2-layer Bidirectional \ac{LST
 %\label{tab:\ac{SSL}}
 %\end{table}
 
-\begin{table}[ht]
+\begin{table}[h]
   \centering
   \begin{tabular}{clcc}
   \hline
   Model type                      &  SSL upstream    & UER$\downarrow$ & WER $\downarrow$ \\ \hline
-  Hand-crafted                    & Fbanks         & 12.29\%                                                           & 35.14            \\ \hline
-  \multirow{4}{*}{Generative}     & Mockingjay     & 12.49\%                                                           & 35.08\%          \\
-                                  & Audio Albert   & 12.28\%                                                           & 34.69\%          \\
-                                  & NPC   & 11.99\%                                                           & 33.07\%          \\
-                                  & APC            & 11.88\%                                                           & 32.84\%          \\
-                                  & TERA           & 11.31\%                                                           & 31.80\%          \\ \hline
-  \multirow{5}{*}{Discriminative} & Wav2Vec2 Base  & 7.37\%                                                            & 19.76\%          \\
-                                  & Wav2Vec2 Large & 7.00\%                                                            & 18.76\%          \\
-                                  & Distill HuBERT & 9.22\%                                                            & 25.75\%          \\
-                                  & HuBERT Base    & 7.40\%                                                            & 19.77\%          \\
-                                  & HuBERT Large   & \textbf{6.03\%}                                                   & \textbf{15.41\%} \\ \hline
+  Hand-crafted                    & Fbanks         & 12.29                                                           & 35.14            \\ \hline
+  \multirow{4}{*}{Generative}     & Mockingjay     & 12.49                                                           & 35.08          \\
+                                  & Audio Albert   & 12.28                                                           & 34.69          \\
+                                  & NPC   & 11.99                                                           & 33.07          \\
+                                  & APC            & 11.88                                                           & 32.84          \\
+                                  & TERA           & 11.31                                                           & 31.80          \\ \hline
+  \multirow{5}{*}{Discriminative} & Wav2Vec2 Base  & 7.37                                                            & 19.76          \\
+                                  & Wav2Vec2 Large & 7.00                                                            & 18.76          \\
+                                  & Distill HuBERT & 9.22                                                            & 25.75          \\
+                                  & HuBERT Base    & 7.40                                                            & 19.77          \\
+                                  & HuBERT Large   & \textbf{6.03}                                                   & \textbf{15.41} \\ \hline
   \end{tabular}
-  \caption{Results without language model of different Self-supervised models as feature extractors}
+  \caption{Results without language model of different Self-supervised models as feature extractors. WER expressed in terms of percentage.}
 \label{tab:SSL}
   \end{table}
 
@@ -133,7 +133,7 @@ Table \ref{tab:SSL} present the results of the comparison between various \ac{SS
 The results suggest that large discriminative models, particularly HuBERT Large, demonstrate superior performance compared to other \ac{SSL} models and \ac{fbanks} as a feature extractor for children \ac{ASR}. Notably, even though no language model where used in this experiment, the results are of the same order as those reported in the different chapters of the thesis obtained with a Transformer and a Transformer language model. Showing the benefit of using frozen pre-trained \ac{SSL} models as feature extractors for children \ac{ASR}.
 
 \section{Analysis of the extracted features}
-\begin{figure}
+\begin{figure}[h]
   \begin{center}
   \centering
   \subfigure[]{\includegraphics[width=0.49\textwidth]{imgs/fbank_umap_plot.png}} 
