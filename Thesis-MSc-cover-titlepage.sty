@@ -115,35 +115,9 @@
 	\end{setfont}
 \end{textblock*}
 % ############################################################################# 
-% printing JURI/Committee if FINAL THESIS = true
-	\ifthenelse{\boolean{\th@finalthesis}{\relax}}{
-        \begin{textblock*}{16cm}(2.5cm,22.2cm)
-		    \centering
-		    \begin{setfont}{14}
-			    \bfseries\textbf{\tlangCommittee}
-		    \end{setfont}
-	    \end{textblock*}
+
 % ############################################################################# 		
-% printing the COMMITEE members
-        \begin{textblock*}{16cm}(2.5cm,23.5cm)
-    		\centering
-    		\begin{setfont}{12}
-    			{\tlangChairperson \th@chairperson}
-    				
-                {\tlangComSupervisor \th@supervisor}
-                	
-                \ifthenelse{\equal{\th@vogaltwo}{\relax}}{
-                    \tlangMember \th@vogalone
-                    }{
-    				 \tlangMembers  \th@vogalone
-    					
-                     \th@vogaltwo
-                                       
-    				 \th@vogalthree
-                    }
-    		\end{setfont}
-    	\end{textblock*}
-	}
+
 % ############################################################################# 
 
 % printing the DATE
@@ -156,6 +130,163 @@
 }
 % ############################################################################# 
 \end{titlepage}
+
+
+\null\newpage
+
+
+\begin{titlepage}
+	\thispagestyle{empty} % this page without header or footer
+	% #############################################################################
+	% to show boxes uncomment the following command
+	%\TPshowboxestrue
+	% #############################################################################
+	% specification of TextBlocks
+	% \begin{textblock}{⟨hsize⟩}(⟨hpos⟩,⟨vpos⟩)
+	% hsize = horizontal size of the block
+	% hpos = abolute horizontal position relative to page origin
+	% vpos = abolute vertical position relative to page origin
+	% page origin is the TOP, LEFT corner
+	% ############################################################################# 
+	% printing UNIVERSITY LOGO
+		\textblockorigin{-5mm}{0mm}
+		\begin{textblock*}{7cm}(\th@univlogopsx,\th@univlogopsy)
+			\includegraphics[width=5cm]{\th@univlogo}
+		\end{textblock*}
+	% ############################################################################# 
+	\textblockorigin{0pt}{0pt}
+	% printing THESIS LOGO Optional
+		\ifthenelse{\equal{\th@thesislogo}{\relax}}{\relax}{
+			\begin{textblock*}{7cm}(\th@thesislogopsx,\th@thesislogopsy)
+				%\centering
+				\includegraphics[width=5cm]{\th@thesislogo}
+			\end{textblock*}
+		}
+	% ############################################################################# 
+		{
+	% ############################################################################# 
+	% printing thesis TITLE
+	\begin{textblock*}{16cm}(2.5cm, 5.0cm)
+		\centering
+		\baselineskip=24pt
+		\begin{setfont}{19}
+			\bfseries\th@univname
+		\end{setfont}
+	\end{textblock*}
+	% ############################################################################# 
+	% printing thesis TITLE
+		\begin{textblock*}{16cm}(2.5cm, 9.0cm)
+			\centering
+			\baselineskip=24pt
+			\begin{setfont}{24}
+				\bfseries\@title
+			\end{setfont}
+		\end{textblock*}
+	% ############################################################################# 		
+	% printing thesis SUB-TITLE (if any)
+		\ifthenelse{\equal{\th@subtitle}{\relax}}{\relax}{
+			\begin{textblock*}{16cm}(2.5cm,17cm)
+				\centering
+				\begin{setfont}{14}
+					\th@subtitle
+				\end{setfont}
+			\end{textblock*}
+		}
+	% ############################################################################# 
+	% printing SUPERVISORS
+	\begin{textblock*}{16cm}(2.5cm,13cm)
+		\centering
+		\begin{setfont}{14}
+			\ifthenelse{\equal{\th@othersupervisor}{\relax}}{
+			   \tlangComSupervisor \th@supervisor
+			   }{
+				 \tlangSupervisors \th@supervisor
+				 
+				 \th@othersupervisor
+			   }
+		\end{setfont}
+	\end{textblock*}
+	% ############################################################################# 		
+	% printing AUTHOR NAME AND CURRENT DEGREE (IF ANY)
+		\begin{textblock*}{16cm}(2.5cm,12cm)
+			\centering
+			\begin{setfont}{16}
+				\bfseries\@author
+			\end{setfont}
+		\end{textblock*}
+	% ############################################################################# 
+	% printing THESISTYPE
+		\begin{textblock*}{16cm}(2.5cm,17.5cm)
+			\centering
+			\begin{setfont}{12}
+				\thesistypelang
+			\end{setfont}
+		\end{textblock*}
+	
+	% ############################################################################# 	
+	% printing applying DEGREE
+		\begin{textblock*}{16cm}(2.5cm,17.0cm)
+			\centering
+			\begin{setfont}{16}
+				\bfseries\th@degree
+			\end{setfont}
+		\end{textblock*}
+	% PRinting Draft
+	\begin{textblock*}{16cm}(2.5cm,18.5cm)
+		\centering
+		\begin{setfont}{14}
+			\th@draft
+		\end{setfont}
+	\end{textblock*}
+	% ############################################################################# 
+	% printing JURI/Committee if FINAL THESIS = true
+		\ifthenelse{\boolean{\th@finalthesis}{\relax}}{
+			\begin{textblock*}{16cm}(2.5cm,20.2cm)
+				\centering
+				\begin{setfont}{14}
+					\bfseries\textbf{\tlangCommittee}
+				\end{setfont}
+			\end{textblock*}
+	% ############################################################################# 		
+	% printing the COMMITEE members
+			\begin{textblock*}{16cm}(2.5cm,21.5cm)
+				%\centering
+				\begin{setfont}{12}
+					{\textbf{\tlangChairperson} \th@chairperson}
+						
+					%{\tlangComSupervisor \th@supervisor}
+						
+					\ifthenelse{\equal{\th@vogaltwo}{\relax}}{
+						\tlangMember \th@vogalone
+						}{
+						 \textbf{\tlangMembers}  \newline \hspace*{1cm} \th@vogalone
+							
+						 \hspace*{0.5cm}\th@vogaltwo
+										   
+						 \hspace*{0.5cm}\th@vogalthree
+
+						 \hspace*{0.5cm}\th@vogalfour
+
+						 \hspace*{0.5cm}\th@vogalfive
+						}
+				\end{setfont}
+			\end{textblock*}
+		}
+	% ############################################################################# 
+	
+	% printing the DATE
+		\begin{textblock*}{16cm}(2.5cm,27.0cm)
+			\centering
+			\begin{setfont}{14}
+				{\bfseries\@date}
+			\end{setfont}
+		\end{textblock*}
+	}
+	% ############################################################################# 
+	\end{titlepage}
+
+
+
 % #############################################################################
 % END OF TITLE PAGE  
 % #############################################################################

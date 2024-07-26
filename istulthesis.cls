@@ -234,6 +234,12 @@
 % Vogal 3
 \newcommand*{\vogalthree}[1]{\th@StoreIn{\th@vogalthree}{#1}}
 \newcommand*{\th@vogalthree}{\relax} % command is optional
+% Vogal 4
+\newcommand*{\vogalfour}[1]{\th@StoreIn{\th@vogalfour}{#1}}
+\newcommand*{\th@vogalfour}{\relax} % command is optional
+% Vogal 5
+\newcommand*{\vogalfive}[1]{\th@StoreIn{\th@vogalfive}{#1}}
+\newcommand*{\th@vogalfive}{\relax} % command is optional
 %
 % DEFINE COMMAND FOR: finalthesis --> value 'true' prints
 % the full commiteee list
@@ -256,7 +262,7 @@
 \newcommand{\tlangComSupervisor}{\IfLanguageName{english}{Supervisor: }{Orientador: }}
 %
 % DEFINE COMMAND FOR: Examination Committee, depending on language
-\newcommand{\tlangCommittee}{\IfLanguageName{english}{Examination Committee}{J\'uri}}
+\newcommand{\tlangCommittee}{\IfLanguageName{english}{Jury}{J\'uri}}
 %
 % DEFINE COMMAND FOR: Chairperson prefix depending on language
 \newcommand{\tlangChairperson}{\IfLanguageName{english}{Chairperson: }{Presidente: }}

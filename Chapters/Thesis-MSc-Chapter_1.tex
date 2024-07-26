@@ -73,42 +73,42 @@ This thesis commenced with a comprehensive exploration of the current state-of-t
 %HMM-DNN contribution
 Subsequent to the literature review, we start our research by the implementation of \ac{HMM-DNN} models for children \ac{ASR}. We explored different strategies to reduce the gap observed between children and adults in the context of both English and European Portuguese speech. We identified the effectiveness of knowledge transfer methods, specifically, transfer learning and multi-task learning. Transfer learning adapts speech recognition adult models by fine-tuning their weights for children's speech. On the other hand, multi-task learning exposed models to both adult and children's speech datasets simultaneously during training. In an innovative approach, we proposed to combine transfer learning and multi-task learning into a unified approach, the multi-task transfer learning framework. We applied this approach to multiple low-resource children's datasets from diverse language sources, which resulted in a publication at LREC 2022 and will be presented in Chapter \ref{chap:Chapter3}:
 \begin{itemize}
-    \item \textbf{Thomas Rolland}, Alberto Abad, Catia Cucchiarini, and Helmer Strik. "Multilingual Transfer Learning for Children Automatic Speech Recognition." \textit{ Language Resources and Evaluation Conference} (2022).
+    \item \textbf{Thomas Rolland}, Alberto Abad, Catia Cucchiarini, and Helmer Strik. ``Multilingual Transfer Learning for Children Automatic Speech Recognition." \textit{ Language Resources and Evaluation Conference} (2022).
 \end{itemize}
 
 % End-to-End contribution
-Thereafter, our research turned into the end-to-end paradigm, motivated by the encouraging improvements observed in the end-to-end children's \ac{ASR} performance. We introduced a novel detailed transfer learning approach, called ``Partial fine-tuning", where our objective was to gain a thorough understanding of the specific components within the end-to-end architecture that significantly contributed to the remarkable improvements in recognition scores. The publication of the ``Partial fine-tunning" approach is still in preparation for submission and will be presented in Chapter \ref{chap:4}:
+Thereafter, our research turned into the end-to-end paradigm, motivated by the encouraging improvements observed in the end-to-end children's \ac{ASR} performance. We introduced a novel detailed transfer learning approach, called ``Partial fine-tuning", where our objective was to gain a thorough understanding of the specific components within the end-to-end architecture that significantly contributed to the remarkable improvements in recognition scores. The publication of the ``Partial fine-tunning" approach was accepted a Interspeech 2024 and will be presented in Chapter \ref{chap:4}:
 
 \begin{itemize}
-    \item \textbf{Thomas Rolland} and Alberto Abad. "Fine-tuning for children’s automatic speech recognition, are we doing it right? Introduction to Partial fine-tuning" \textit{In preparation for submission} (2024).
+    \item \textbf{Thomas Rolland} and Alberto Abad. ``Introduction To Partial Fine-tuning: A Comprehensive Evaluation Of  End-to-end Children’s Automatic Speech Recognition Adaptation" \textit{Interspeech} (2024).
 \end{itemize}
 
 
 The identification of the most relevant components allowed the development of specific algorithms aimed at further improving the model's recognition performances. Particularly, we explored the integration of an additional set of parameters, the Adapter modules, directly into the original \ac{ASR} model. This integration facilitated a parameter-efficient approach to adapt the model, accepted at ICASSP 2024 and presented in Chapter \ref{chap:4}:
 
 \begin{itemize}
-    \item \textbf{Thomas Rolland} and Alberto Abad. "Exploring adapters with conformers for children’s automatic speech recognition." \textit{ International Conference on Acoustics, Speech and Signal Processing} (2024).
+    \item \textbf{Thomas Rolland} and Alberto Abad. ``Exploring adapters with conformers for children’s automatic speech recognition." \textit{ International Conference on Acoustics, Speech and Signal Processing} (2024).
 \end{itemize}
 
 % TTS contribution
 In response to the scarcity of large children's speech datasets, we delved into the exploration of leveraging synthetic speech to augment the existing dataset. However, our investigation revealed that a mismatch between real and synthetic data hindered the results. To address this challenge, we introduced additional processing steps to efficiently incorporate synthetic data. We proposed a double-way approach, wherein the synthetic data underwent an additional set of parameters. More details about this approach will be presented in Chapter \ref{chap:6}. This innovative methodology contributed to an enhanced \ac{ASR} system tailored for children and was published at ICASSP 2024:
 
 \begin{itemize}
-    \item \textbf{Thomas Rolland} and Alberto Abad. "Improved children’s automatic speech recognition combining adapters and synthetic data augmentation." \textit{International Conference on Acoustics, Speech and Signal Processing} (2024).
+    \item \textbf{Thomas Rolland} and Alberto Abad. ``Improved children’s automatic speech recognition combining adapters and synthetic data augmentation." \textit{International Conference on Acoustics, Speech and Signal Processing} (2024).
 \end{itemize}
 
-Finally, with the different successes achieved by parameter-efficient strategies presented through this thesis, we evaluated Adapters to alternative approaches present in the literature. Furthermore, we introduced a novel parameter-efficient transfer learning leveraging the redundancy present in Transformer-based architecture to significantly reduce the amount of parameters needed during training while preserving the accuracy, the ``Shared-Adapter". This work is detailed in Chapter \ref{chap:7} of this thesis and is currently in preparation for submission:
+Finally, with the different successes achieved by parameter-efficient strategies presented through this thesis, we evaluated Adapters to alternative approaches present in the literature. Furthermore, we introduced a novel parameter-efficient transfer learning leveraging the redundancy present in Transformer-based architecture to significantly reduce the amount of parameters needed during training while preserving the accuracy, the ``Shared-Adapter". This work is detailed in Chapter \ref{chap:7} of this thesis and was accepted at Interspeech 2024:
 \begin{itemize}
-    \item \textbf{Rolland Thomas} and Alberto Abad. "Shared-Adapter, leveraging Transformer-based redundancy for better parameter efficiency for children automatic speech recognition" \textit{In preparation for submission} (2024).
+    \item \textbf{Rolland Thomas} and Alberto Abad. ``Shared-Adapters: A Novel Transformer-based Parameter Efficient Transfer Learning Approach For Children's Automatic Speech Recognition" \textit{Interspeech} (2024).
 \end{itemize}
 
 % Pathology detection contribution
 In tandem with the primary focus of enhancing children's \ac{ASR}, this thesis extends its scope to the detection of pathologies directly from speech. This secondary investigation retains relevance within the broader context of the thesis, particularly as we initially aimed to address the specific needs of children with pathological speech. We explored the use of embedding extracted from pre-trained models for the detection of different pathologies such as Alzheimer's disease, Parkinson's disease, obstructive sleep apnea and COVID-19, all presented in Annexe \ref{chapter:appendixA}:
 
 \begin{itemize}
-    \item Anna Pompili, \textbf{Thomas Rolland}, and Alberto Abad. "The INESC-ID multi-modal system for the ADReSS 2020 challenge." \textit{Interspeech} (2020).
-    \item Catarina Botelho, Francisco Teixeira, \textbf{Thomas Rolland}, Alberto Abad, and Isabel Trancoso. "Pathological speech detection using x-vector embeddings." \textit{arXiv preprint} arXiv:2003.00864 (2020).
-    \item Rubén Solera-Ureña, Catarina Botelho, Francisco Teixeira, \textbf{Thomas Rolland}, Alberto Abad, and Isabel Trancoso. "Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19." \textit{Interspeech} (2021).
+    \item Anna Pompili, \textbf{Thomas Rolland}, and Alberto Abad. ``The INESC-ID multi-modal system for the ADReSS 2020 challenge." \textit{Interspeech} (2020).
+    \item Catarina Botelho, Francisco Teixeira, \textbf{Thomas Rolland}, Alberto Abad, and Isabel Trancoso. ``Pathological speech detection using x-vector embeddings." \textit{arXiv preprint} arXiv:2003.00864 (2020).
+    \item Rubén Solera-Ureña, Catarina Botelho, Francisco Teixeira, \textbf{Thomas Rolland}, Alberto Abad, and Isabel Trancoso. ``Transfer Learning-Based Cough Representations for Automatic Detection of COVID-19." \textit{Interspeech} (2021).
 \end{itemize}
 
 
